@@ -1,0 +1,201 @@
+{
+  "origen": "LIBRO_Los_10_pasos_completo.docx",
+  "titulo": "Paso 5 · Los principios biomecánicos",
+  "numeroPaso": 5,
+  "bloques": [
+    {
+      "tipo": "parrafo",
+      "texto": "Los principios biomecánicos representados esquemáticamente."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "El principio biomecánico es la estrategia mecánica con la que se obtiene la estabilidad elegida en el Paso 3. No es todavía el implante (Paso 6), sino el modo en que ese implante trabajará. Una misma placa puede cumplir principios distintos según cómo se aplique; dominar los principios —y no las placas— es lo que permite improvisar con el material disponible."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "info",
+      "titulo": "Los principios, agrupados por la estabilidad que producen",
+      "lineas": [
+        "Estabilidad absoluta: compresión interfragmentaria · tornillo de tracción · placa de compresión · banda de tensión · sostén/contrafuerte.",
+        "Estabilidad relativa: ferulización/puenteo · neutralización (protección)."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "A. Principios de estabilidad absoluta"
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "A.1 La compresión interfragmentaria"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Es la esencia de la estabilidad absoluta: aproximar los fragmentos con tal fuerza que la fricción entre ellos neutralice las cargas funcionales y la deformación caiga casi a cero (consolidación directa). La compresión puede ser estática (mantenida por el implante) o dinámica (la carga fisiológica la incrementa, como en la banda de tensión)."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "A.2 El tornillo de tracción (lag screw)"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Mecanismo: la rosca agarra solo el fragmento lejano; el cercano queda como «agujero deslizante» (gliding hole), de modo que al apretar, los fragmentos se comprimen entre sí."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Técnica: agujero deslizante en la cortical próxima, agujero de rosca en la distal; idealmente perpendicular al plano de fractura para máxima compresión (o a mitad de camino entre la perpendicular a la cortical y al trazo si hay carga axial). Avellanar y, cuando aporta poca estabilidad por sí solo, proteger con placa."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Indicación: trazos simples (espiroideos, oblicuos largos) y fragmentos articulares. Es el principio máximo de compresión puntual."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "A.3 La placa de compresión"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Genera compresión axial del foco mediante el diseño de los agujeros (autocompresión, DCP/LC-DCP) o un tornillo excéntrico, y/o pretensando la placa (prebending) para comprimir también la cortical opuesta. Indicada en trazos transversos u oblicuos cortos simples donde no cabe un tornillo de tracción aislado."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "A.4 La banda de tensión (tension band)"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Mecanismo: convierte una fuerza de tracción en compresión en la cortical opuesta. Colocada en el lado de tensión de un hueso cargado excéntricamente, la carga funcional (p. ej., la tracción muscular) se transforma en compresión dinámica del foco."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Requisitos: una cortical opuesta intacta que resista la compresión (si está conminuta, la banda falla) y cargas predominantemente de tracción."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Ejemplos: olécranon, rótula, troquíter, maléolo; también la placa colocada en el lado de tensión de un hueso largo."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "error",
+      "titulo": "No confundir: banda de tensión ≠ cerclaje ≠ compresión interfragmentaria",
+      "lineas": [
+        "Banda de tensión (principio dinámico): convierte la TRACCIÓN en COMPRESIÓN en la cortical opuesta; requiere una cortical opuesta intacta que actúe de fulcro y carga funcional cíclica. La compresión aumenta con la función.",
+        "Cerclaje (estático): alambre circunferencial que solo APROXIMA o SOSTIENE fragmentos; por sí mismo NO genera compresión dinámica. Un alambre en «ocho» que no convierte tracción en compresión funciona como cerclaje, no como banda de tensión.",
+        "Compresión interfragmentaria (estática): la del tornillo de tracción o la placa de compresión; anula la brecha por fricción de forma mantenida, independiente del movimiento.",
+        "Matiz basado en evidencia: se ha cuestionado experimentalmente que el clásico montaje aguja + ocho del olécranon funcione realmente como banda de tensión dinámica (se comporta de forma más estática de lo que se enseña); sigue siendo eficaz en el trazo simple, pero conviene no equiparar el constructo con el principio."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "A.5 El sostén o contrafuerte (buttress / antiglide)"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Mecanismo: neutraliza fuerzas de cizallamiento y axiales que tienden a desplazar un fragmento metafisario que «desliza». La placa, fijada al fragmento principal, actúa como tope físico."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Ejemplos: fracturas articulares parciales por cizallamiento (Barton volar, maléolo posterior, meseta tibial); la placa antiglide en el peroné distal."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "B. Principios de estabilidad relativa"
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "B.1 Ferulización / puenteo (splinting, bridging)"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "El implante salva la zona fracturada manteniendo longitud, eje y rotación, y permite un micromovimiento que estimula el callo. Es el principio del clavo endomedular, del fijador externo y de la placa puente. La zona conminuta no se toca: se respeta su biología y se deja que consolide por callo. La cantidad de movimiento se dosifica con la longitud de trabajo (ver Paso 3)."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "B.2 Neutralización (protección)"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Una placa de neutralización protege un montaje de compresión (típicamente un tornillo de tracción) frente a las fuerzas de torsión, flexión y cizallamiento que este no resiste solo. El tornillo da la compresión; la placa la blinda. Frecuente en fracturas espiroideas de huesos largos reconstruidas anatómicamente."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "C. Combinar principios en una misma construcción"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Las fracturas reales suelen exigir varios principios a la vez: un tornillo de tracción que comprime un trazo articular, protegido por una placa de neutralización, que a su vez puentea una metáfisis conminuta. Reconocer qué principio gobierna cada zona de la fractura es lo que convierte el material genérico en una solución a medida."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "La pregunta de control del Paso 5",
+      "lineas": [
+        "«¿Qué fuerza quiero neutralizar en cada zona, y con qué estrategia mecánica?» Compresión donde quiero curación directa; puenteo donde quiero callo; contrafuerte donde hay cizallamiento; banda de tensión donde hay tracción. El implante (Paso 6) será solo el instrumento de esa estrategia."
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Definidos los principios, el siguiente paso elige el material concreto que los materializa con el mínimo coste biológico."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "Evidencia, autoevaluación y lecturas"
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "evidencia",
+      "titulo": "Evidencia (nivel indicativo)",
+      "lineas": [
+        "Compresión del tornillo de tracción (Nivel V, laboratorio): la compresión interfragmentaria es máxima con el tornillo perpendicular al plano de fractura; con carga axial se orienta a mitad de camino entre la perpendicular al trazo y a la cortical.",
+        "Banda de tensión (Nivel V): requiere una cortical opuesta intacta; en presencia de conminución, el principio falla y se debe pasar a placa."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Autoevaluación"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. ¿Qué condición anatómica es imprescindible para que funcione una banda de tensión?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. Una cortical opuesta intacta que resista la compresión; si está conminuta, la banda colapsa el foco."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. ¿Cómo puede una misma placa cumplir principios distintos?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. Según cómo se aplique: comprime (autocompresión/tornillo excéntrico), neutraliza (protege un tornillo de tracción), sostiene (contrafuerte) o puentea (bridging)."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Lecturas recomendadas"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Manual AO, capítulos de técnicas de estabilidad absoluta y relativa."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Essential Biomechanics for Orthopedic Trauma, caps. de placas y banda de tensión."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Los niveles de evidencia son orientativos y se ofrecen para guiar la lectura crítica, no como recomendación clínica cerrada."
+    }
+  ]
+}

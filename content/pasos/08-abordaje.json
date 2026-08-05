@@ -1,0 +1,1324 @@
+{
+  "id": "paso-08-abordaje",
+  "numero": 8,
+  "titulo": "El abordaje quirúrgico",
+  "subtitulo": "El abordaje sirve al principio biomecánico, no al revés",
+  "preguntaClave": "¿Este abordaje da acceso a lo que tengo que hacer, y es coherente con la biología que decidí preservar?",
+  "objetivos": [
+    "Elegir el abordaje por lo que se quiere lograr, no por costumbre",
+    "Comprobar que el abordaje es coherente con el principio del Paso 5",
+    "Manejar las partes blandas como determinante del resultado, no como un trámite",
+    "Conocer el plano internervioso y la estructura en riesgo de la vía elegida",
+    "Decidir incisión única o doble, y si la ventana de partes blandas está abierta"
+  ],
+  "decisiones": [
+    {
+      "id": "tipo-abordaje",
+      "pregunta": "¿Qué tipo de abordaje?",
+      "ayuda": "Es la decisión que tiene que casar con el principio del Paso 5. Un abordaje amplio sobre un foco que ibas a puentear traiciona la estrategia.",
+      "tipo": "opcionUnica",
+      "opciones": [
+        {
+          "id": "ab-extenso",
+          "etiqueta": "Extenso o directo",
+          "criterios": [
+            "Reducción anatómica directa: superficies articulares y trazos que se van a comprimir",
+            "Acepta más exposición a cambio de precisión",
+            "Es coherente cuando el plan es comprimir, no cuando el plan es puentear"
+          ]
+        },
+        {
+          "id": "ab-mipo",
+          "etiqueta": "Mínimamente invasivo (MIPO)",
+          "criterios": [
+            "Reducción indirecta y puenteo",
+            "Ventanas pequeñas, túnel submuscular, preserva el hematoma fracturario",
+            "Depende de radioscopia de calidad y de un plan muy claro"
+          ]
+        },
+        {
+          "id": "ab-combinado",
+          "etiqueta": "Combinado o extensible",
+          "criterios": [
+            "Fracturas complejas: acetábulo, pilón, meseta tibial",
+            "Accede a más de una columna o faceta",
+            "Planifica desde el principio dónde va cada ventana y qué puente cutáneo dejas"
+          ]
+        },
+        {
+          "id": "ab-percutaneo",
+          "etiqueta": "Percutáneo puro",
+          "criterios": [
+            "Tornillos canulados o agujas sobre aguja guía, sin exposición del foco",
+            "Cuello femoral, escafoides, sacroilíaco, algunos fragmentos articulares",
+            "Exige que la reducción ya esté conseguida por vía cerrada"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "via-nombrada",
+      "pregunta": "¿Qué abordaje concreto?",
+      "ayuda": "Se filtran por la región que clasificaste en el Paso 2. Cada uno explota un intervalo entre músculos de inervación distinta y tiene su estructura en riesgo.",
+      "tipo": "opcionUnica",
+      "opciones": [
+        {
+          "id": "vn-deltopectoral",
+          "etiqueta": "Deltopectoral",
+          "soloSi": {
+            "ctx": [
+              "reg-hombro"
+            ]
+          },
+          "criterios": [
+            "Intervalo deltoides–pectoral mayor, con la vena cefálica como referencia",
+            "Húmero proximal: es la vía extensible clásica"
+          ]
+        },
+        {
+          "id": "vn-deltoideo",
+          "etiqueta": "Transdeltoideo lateral (split)",
+          "soloSi": {
+            "ctx": [
+              "reg-hombro"
+            ]
+          },
+          "criterios": [
+            "Acceso directo al troquíter y a la cara lateral",
+            "Estructura en riesgo: nervio axilar, a unos 5 cm del acromion. No prolongar el split"
+          ]
+        },
+        {
+          "id": "vn-clavicula",
+          "etiqueta": "Directo sobre la clavícula",
+          "soloSi": {
+            "ctx": [
+              "reg-hombro"
+            ]
+          },
+          "criterios": [
+            "Incisión inferior al borde clavicular para no dejar la cicatriz sobre la placa",
+            "Estructura en riesgo: nervios supraclaviculares. Identificarlos y respetarlos"
+          ]
+        },
+        {
+          "id": "vn-escapula-post",
+          "etiqueta": "Posterior de escápula (Judet)",
+          "soloSi": {
+            "ctx": [
+              "reg-hombro"
+            ]
+          },
+          "criterios": [
+            "Cuello y borde lateral de la escápula",
+            "Estructura en riesgo: nervio supraescapular en la escotadura"
+          ]
+        },
+        {
+          "id": "vn-anterolateral-humero",
+          "etiqueta": "Anterolateral del húmero",
+          "soloSi": {
+            "ctx": [
+              "reg-humero"
+            ]
+          },
+          "criterios": [
+            "Intervalo bíceps–braquial anterior; extensible desde el deltopectoral",
+            "El radial cruza al perforar el tabique intermuscular lateral en el tercio distal"
+          ]
+        },
+        {
+          "id": "vn-posterior-humero",
+          "etiqueta": "Posterior del húmero",
+          "soloSi": {
+            "ctx": [
+              "reg-humero"
+            ]
+          },
+          "criterios": [
+            "Split del tríceps o intervalo entre sus cabezas",
+            "Estructura en riesgo: nervio radial en el surco. Identificarlo ANTES de aplicar la placa"
+          ]
+        },
+        {
+          "id": "vn-posterior-codo",
+          "etiqueta": "Posterior del codo, con o sin osteotomía del olécranon",
+          "soloSi": {
+            "ctx": [
+              "reg-codo"
+            ]
+          },
+          "criterios": [
+            "La osteotomía da la mejor visión de la superficie articular del húmero distal",
+            "Estructura en riesgo: nervio cubital. Identificarlo, protegerlo y decidir si se transpone"
+          ]
+        },
+        {
+          "id": "vn-kocher",
+          "etiqueta": "Lateral de Kocher o Kaplan",
+          "soloSi": {
+            "ctx": [
+              "reg-codo"
+            ]
+          },
+          "criterios": [
+            "Intervalo ancóneo–extensor cubital del carpo",
+            "Cabeza radial y cóndilo lateral",
+            "Pronar el antebrazo aleja el nervio interóseo posterior"
+          ]
+        },
+        {
+          "id": "vn-boyd",
+          "etiqueta": "Posterolateral de Boyd",
+          "soloSi": {
+            "ctx": [
+              "reg-codo"
+            ]
+          },
+          "criterios": [
+            "Acceso conjunto a olécranon proximal y cabeza radial",
+            "Cuidado con la sinostosis radiocubital proximal"
+          ]
+        },
+        {
+          "id": "vn-henry",
+          "etiqueta": "Henry (volar del radio)",
+          "soloSi": {
+            "ctx": [
+              "reg-antebrazo",
+              "reg-muneca"
+            ]
+          },
+          "criterios": [
+            "Intervalo braquiorradial–flexor radial del carpo",
+            "Extensible de codo a muñeca: es la vía más versátil del antebrazo",
+            "En el tercio proximal, el interóseo posterior está dentro del supinador"
+          ]
+        },
+        {
+          "id": "vn-thompson",
+          "etiqueta": "Thompson (dorsal del radio)",
+          "soloSi": {
+            "ctx": [
+              "reg-antebrazo"
+            ]
+          },
+          "criterios": [
+            "Intervalo extensor radial corto del carpo–extensor común de los dedos",
+            "Estructura en riesgo: nervio interóseo posterior al atravesar el supinador. Pronar para alejarlo"
+          ]
+        },
+        {
+          "id": "vn-cubital-directo",
+          "etiqueta": "Directo subcutáneo del cúbito",
+          "soloSi": {
+            "ctx": [
+              "reg-antebrazo",
+              "reg-muneca"
+            ]
+          },
+          "criterios": [
+            "Entre el cubital anterior y el cubital posterior",
+            "Incisión separada de la del radio: respeta el puente cutáneo"
+          ]
+        },
+        {
+          "id": "vn-volar-radio",
+          "etiqueta": "Volar del radio distal (Henry modificado)",
+          "soloSi": {
+            "ctx": [
+              "reg-muneca"
+            ]
+          },
+          "criterios": [
+            "Entre el flexor radial del carpo y la arteria radial",
+            "Pronador cuadrado desinsertado y reparado al cerrar"
+          ]
+        },
+        {
+          "id": "vn-dorsal-muneca",
+          "etiqueta": "Dorsal de muñeca",
+          "soloSi": {
+            "ctx": [
+              "reg-muneca",
+              "reg-mano"
+            ]
+          },
+          "criterios": [
+            "Tercer compartimento extensor, con transposición del extensor largo del pulgar",
+            "Da visión articular directa; el material dorsal irrita los tendones"
+          ]
+        },
+        {
+          "id": "vn-mano-dorsal",
+          "etiqueta": "Dorsal de metacarpianos y falanges",
+          "soloSi": {
+            "ctx": [
+              "reg-mano"
+            ]
+          },
+          "criterios": [
+            "Respetar el aparato extensor y las venas dorsales",
+            "La adherencia tendinosa es la complicación que decide el resultado funcional"
+          ]
+        },
+        {
+          "id": "vn-watson-jones",
+          "etiqueta": "Watson-Jones (anterolateral de cadera)",
+          "soloSi": {
+            "ctx": [
+              "reg-cadera"
+            ]
+          },
+          "criterios": [
+            "Intervalo glúteo medio–tensor de la fascia lata"
+          ]
+        },
+        {
+          "id": "vn-hardinge",
+          "etiqueta": "Hardinge (lateral directo)",
+          "soloSi": {
+            "ctx": [
+              "reg-cadera"
+            ]
+          },
+          "criterios": [
+            "Split del glúteo medio; riesgo de insuficiencia abductora si se prolonga proximalmente"
+          ]
+        },
+        {
+          "id": "vn-smith-petersen",
+          "etiqueta": "Smith-Petersen (anterior)",
+          "soloSi": {
+            "ctx": [
+              "reg-cadera"
+            ]
+          },
+          "criterios": [
+            "Intervalo sartorio–tensor de la fascia lata",
+            "Estructura en riesgo: nervio femorocutáneo lateral"
+          ]
+        },
+        {
+          "id": "vn-lateral-femur",
+          "etiqueta": "Lateral del fémur",
+          "soloSi": {
+            "ctx": [
+              "reg-femur",
+              "reg-rodilla"
+            ]
+          },
+          "criterios": [
+            "Entre vasto lateral y tabique intermuscular",
+            "Vía natural de la placa lateral y del túnel submuscular en MIPO"
+          ]
+        },
+        {
+          "id": "vn-entrada-clavo",
+          "etiqueta": "Portal de entrada para clavo endomedular",
+          "soloSi": {
+            "ctx": [
+              "reg-femur",
+              "reg-tibia",
+              "reg-humero",
+              "reg-cadera"
+            ]
+          },
+          "criterios": [
+            "Piriforme, trocánter mayor, suprapatelar o infrapatelar según el hueso y el clavo",
+            "El punto de entrada correcto es el que evita la deformidad: un portal excéntrico deforma en cuanto entra el clavo"
+          ]
+        },
+        {
+          "id": "vn-parapatelar",
+          "etiqueta": "Parapatelar medial o lateral",
+          "soloSi": {
+            "ctx": [
+              "reg-rodilla"
+            ]
+          },
+          "criterios": [
+            "Acceso articular y metafisario del fémur distal y de la meseta tibial",
+            "Extensible con osteotomía de la tuberosidad si hace falta más visión"
+          ]
+        },
+        {
+          "id": "vn-posteromedial-rodilla",
+          "etiqueta": "Posteromedial de rodilla",
+          "soloSi": {
+            "ctx": [
+              "reg-rodilla"
+            ]
+          },
+          "criterios": [
+            "Fragmento posteromedial de la meseta, que la placa lateral no controla",
+            "Permite colocar el contrafuerte donde de verdad empuja el fragmento"
+          ]
+        },
+        {
+          "id": "vn-anteromedial-tibia",
+          "etiqueta": "Anteromedial de la tibia",
+          "soloSi": {
+            "ctx": [
+              "reg-tibia",
+              "reg-tobillo"
+            ]
+          },
+          "criterios": [
+            "Cara subcutánea medial: acceso fácil y cobertura pobre",
+            "Es la región donde esperar la ventana de partes blandas es más determinante"
+          ]
+        },
+        {
+          "id": "vn-anterolateral-tobillo",
+          "etiqueta": "Anterolateral del tobillo",
+          "soloSi": {
+            "ctx": [
+              "reg-tobillo"
+            ]
+          },
+          "criterios": [
+            "Pilón y columna anterolateral",
+            "Estructura en riesgo: nervio peroneo superficial"
+          ]
+        },
+        {
+          "id": "vn-posterolateral-tobillo",
+          "etiqueta": "Posterolateral del tobillo",
+          "soloSi": {
+            "ctx": [
+              "reg-tobillo"
+            ]
+          },
+          "criterios": [
+            "Peroné y maléolo posterior por una sola incisión",
+            "Intervalo peroneos–flexor largo del dedo gordo; estructura en riesgo: nervio sural"
+          ]
+        },
+        {
+          "id": "vn-medial-tobillo",
+          "etiqueta": "Medial del tobillo",
+          "soloSi": {
+            "ctx": [
+              "reg-tobillo"
+            ]
+          },
+          "criterios": [
+            "Maléolo medial; cuidado con la vena y el nervio safenos"
+          ]
+        },
+        {
+          "id": "vn-lateral-calcaneo",
+          "etiqueta": "Lateral extensible del calcáneo",
+          "soloSi": {
+            "ctx": [
+              "reg-pie"
+            ]
+          },
+          "criterios": [
+            "Colgajo de grosor completo en L, elevado sin tocar el plano subcutáneo",
+            "Es el abordaje donde la necrosis de borde es más frecuente: esperar la ventana"
+          ]
+        },
+        {
+          "id": "vn-dorsal-pie",
+          "etiqueta": "Dorsal del pie",
+          "soloSi": {
+            "ctx": [
+              "reg-pie"
+            ]
+          },
+          "criterios": [
+            "Lisfranc y metatarsianos; incisiones separadas con puente cutáneo suficiente"
+          ]
+        },
+        {
+          "id": "vn-kocher-langenbeck",
+          "etiqueta": "Kocher-Langenbeck (posterior de acetábulo)",
+          "soloSi": {
+            "ctx": [
+              "reg-pelvis"
+            ]
+          },
+          "criterios": [
+            "Pared y columna posteriores",
+            "Estructura en riesgo: nervio ciático. Rodilla flexionada y cadera extendida para descargarlo"
+          ]
+        },
+        {
+          "id": "vn-ilioinguinal",
+          "etiqueta": "Ilioinguinal o anterior intrapélvico",
+          "soloSi": {
+            "ctx": [
+              "reg-pelvis"
+            ]
+          },
+          "criterios": [
+            "Columna anterior y pared cuadrilátera",
+            "Estructuras en riesgo: femoral, corona mortis, vejiga"
+          ]
+        },
+        {
+          "id": "vn-columna-post",
+          "etiqueta": "Posterior de columna",
+          "soloSi": {
+            "ctx": [
+              "reg-columna"
+            ]
+          },
+          "criterios": [
+            "Subperióstico en la línea media; abdomen libre para reducir el sangrado epidural"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "partes-blandas",
+      "pregunta": "¿Qué principios de partes blandas vas a aplicar?",
+      "ayuda": "La manipulación de las partes blandas determina el resultado tanto como la fijación. Marca lo que de verdad vas a hacer.",
+      "tipo": "opcionMultiple",
+      "opciones": [
+        {
+          "id": "pb-colgajo",
+          "etiqueta": "Colgajos de grosor completo",
+          "criterios": [
+            "Disecar hasta el plano profundo y manejar el tejido en bloque",
+            "No despegar capas: cada plano separado es perfusión cutánea perdida"
+          ]
+        },
+        {
+          "id": "pb-periostio",
+          "etiqueta": "Respetar el periostio",
+          "criterios": [
+            "Evitar el despegamiento perióstico circunferencial",
+            "Cada milímetro de periostio desvitalizado es biología perdida"
+          ]
+        },
+        {
+          "id": "pb-internervioso",
+          "etiqueta": "Trabajar por el plano internervioso",
+          "criterios": [
+            "Entrar entre territorios de nervios distintos evita denervar músculos",
+            "Es la razón de ser de los abordajes clásicos"
+          ]
+        },
+        {
+          "id": "pb-cierre",
+          "etiqueta": "Cerrar sin tensión",
+          "criterios": [
+            "La dehiscencia y la necrosis de borde abren la puerta a la infección",
+            "Si no cierra, no cerrar: mejor cierre diferido o cobertura"
+          ]
+        },
+        {
+          "id": "pb-hemostasia",
+          "etiqueta": "Hemostasia y manejo del torniquete",
+          "criterios": [
+            "El hematoma postoperatorio es un medio de cultivo",
+            "Soltar el torniquete antes de cerrar para comprobar el sangrado"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "herida",
+      "pregunta": "¿Una incisión o dos?",
+      "tipo": "opcionUnica",
+      "opciones": [
+        {
+          "id": "he-unica",
+          "etiqueta": "Incisión única",
+          "criterios": [
+            "Un solo hueso o una sola columna que abordar"
+          ]
+        },
+        {
+          "id": "he-doble",
+          "etiqueta": "Dos incisiones con puente cutáneo",
+          "criterios": [
+            "Fracturas de dos huesos: antebrazo, pilón con peroné, Lisfranc",
+            "Respetar el puente cutáneo evita la necrosis y, en el antebrazo, la sinostosis"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ventana",
+      "pregunta": "¿Está abierta la ventana de partes blandas?",
+      "ayuda": "Aquí se materializa la decisión de tiempos del Paso 1. En regiones críticas, la incisión se pospone hasta que el edema cede.",
+      "tipo": "opcionUnica",
+      "opciones": [
+        {
+          "id": "vt-si",
+          "etiqueta": "Sí: signo de las arrugas presente",
+          "criterios": [
+            "El edema ha cedido y la piel vuelve a plegarse",
+            "Es el momento de la osteosíntesis definitiva"
+          ]
+        },
+        {
+          "id": "vt-no",
+          "etiqueta": "No: edema, flictenas o piel tensa",
+          "criterios": [
+            "Incidir ahora es abrir la puerta a la necrosis de borde y a la infección",
+            "Fijador externo puente y esperar"
+          ]
+        },
+        {
+          "id": "vt-nc",
+          "etiqueta": "No aplica en esta región",
+          "criterios": [
+            "Cobertura de partes blandas amplia y sin compromiso"
+          ]
+        }
+      ]
+    }
+  ],
+  "derivados": [
+    {
+      "id": "en-riesgo",
+      "titulo": "La estructura en riesgo de esta vía",
+      "tipo": "reglas",
+      "modo": "todas",
+      "reglas": [
+        {
+          "si": {
+            "via-nombrada": [
+              "vn-posterior-humero"
+            ]
+          },
+          "texto": "Nervio RADIAL en el surco espiral. Identificarlo antes de aplicar la placa, no después. Es la lesión iatrogénica clásica de esta vía."
+        },
+        {
+          "si": {
+            "via-nombrada": [
+              "vn-anterolateral-humero"
+            ]
+          },
+          "texto": "Nervio RADIAL al perforar el tabique intermuscular lateral en el tercio distal, y nervio musculocutáneo dentro del braquial anterior."
+        },
+        {
+          "si": {
+            "via-nombrada": [
+              "vn-deltoideo"
+            ]
+          },
+          "texto": "Nervio AXILAR, a unos 5 cm del borde del acromion. No prolongar el split distalmente."
+        },
+        {
+          "si": {
+            "via-nombrada": [
+              "vn-clavicula"
+            ]
+          },
+          "texto": "Nervios SUPRACLAVICULARES. Identificarlos y respetarlos evita la hipoestesia del hombro, que es el motivo de queja más frecuente tras esta placa."
+        },
+        {
+          "si": {
+            "via-nombrada": [
+              "vn-escapula-post"
+            ]
+          },
+          "texto": "Nervio SUPRAESCAPULAR en la escotadura, y arteria circunfleja escapular."
+        },
+        {
+          "si": {
+            "via-nombrada": [
+              "vn-posterior-codo"
+            ]
+          },
+          "texto": "Nervio CUBITAL. Identificarlo y protegerlo en todo abordaje del codo, y decidir explícitamente si se transpone."
+        },
+        {
+          "si": {
+            "via-nombrada": [
+              "vn-kocher"
+            ]
+          },
+          "texto": "Nervio INTERÓSEO POSTERIOR dentro del supinador. Pronar el antebrazo lo aleja del campo."
+        },
+        {
+          "si": {
+            "via-nombrada": [
+              "vn-thompson"
+            ]
+          },
+          "texto": "Nervio INTERÓSEO POSTERIOR al atravesar el supinador en el tercio proximal. Pronar para alejarlo."
+        },
+        {
+          "si": {
+            "via-nombrada": [
+              "vn-henry"
+            ]
+          },
+          "texto": "Arteria RADIAL en el intervalo, y el interóseo posterior si extiendes proximalmente hacia el supinador. En la muñeca, el pronador cuadrado se desinserta y se repara."
+        },
+        {
+          "si": {
+            "via-nombrada": [
+              "vn-smith-petersen"
+            ]
+          },
+          "texto": "Nervio FEMOROCUTÁNEO LATERAL, y el paquete femoral en la profundidad del intervalo."
+        },
+        {
+          "si": {
+            "via-nombrada": [
+              "vn-hardinge"
+            ]
+          },
+          "texto": "Rama del nervio GLÚTEO SUPERIOR: no prolongar el split más de 3-5 cm sobre el trocánter o quedará insuficiencia abductora."
+        },
+        {
+          "si": {
+            "via-nombrada": [
+              "vn-kocher-langenbeck"
+            ]
+          },
+          "texto": "Nervio CIÁTICO. Rodilla flexionada y cadera extendida durante toda la cirugía para descargarlo, y arteria glútea superior en la escotadura."
+        },
+        {
+          "si": {
+            "via-nombrada": [
+              "vn-ilioinguinal"
+            ]
+          },
+          "texto": "Paquete FEMORAL, corona mortis y vejiga. La corona mortis es la anastomosis entre obturatriz y epigástrica: sangra mucho y no avisa."
+        },
+        {
+          "si": {
+            "via-nombrada": [
+              "vn-anterolateral-tobillo"
+            ]
+          },
+          "texto": "Nervio PERONEO SUPERFICIAL, que cruza el campo en el tercio distal de la pierna."
+        },
+        {
+          "si": {
+            "via-nombrada": [
+              "vn-posterolateral-tobillo"
+            ]
+          },
+          "texto": "Nervio SURAL, junto a la vena safena menor."
+        },
+        {
+          "si": {
+            "via-nombrada": [
+              "vn-medial-tobillo"
+            ]
+          },
+          "texto": "Vena y nervio SAFENOS, que discurren juntos por delante del maléolo medial."
+        },
+        {
+          "si": {
+            "via-nombrada": [
+              "vn-lateral-calcaneo"
+            ]
+          },
+          "texto": "Nervio SURAL y, sobre todo, la arteria peronea lateral que irriga el vértice del colgajo en L. La necrosis de borde es la complicación que decide el resultado."
+        },
+        {
+          "si": {
+            "via-nombrada": [
+              "vn-entrada-clavo"
+            ]
+          },
+          "texto": "Más que un nervio, el riesgo aquí es el propio punto de entrada: un portal excéntrico deforma el fragmento proximal en cuanto entra el clavo, y esa deformidad ya no se corrige."
+        }
+      ]
+    },
+    {
+      "id": "coherencia-principio",
+      "titulo": "El abordaje frente a tu principio",
+      "tipo": "reglas",
+      "modo": "todas",
+      "reglas": [
+        {
+          "si": {
+            "ctx": [
+              "usa-ferulaje"
+            ],
+            "tipo-abordaje": [
+              "ab-mipo"
+            ]
+          },
+          "texto": "Coherente. Vas a puentear y entras por ventanas pequeñas en túnel submuscular: la biología que el callo necesita se queda donde está."
+        },
+        {
+          "si": {
+            "ctx": [
+              "red-anatomica"
+            ],
+            "tipo-abordaje": [
+              "ab-extenso"
+            ]
+          },
+          "texto": "Coherente. La reducción anatómica se paga con exposición, y aquí esa exposición compra precisión milimétrica."
+        },
+        {
+          "si": {
+            "ctx": [
+              "zonas-dos"
+            ],
+            "tipo-abordaje": [
+              "ab-combinado"
+            ]
+          },
+          "texto": "Coherente. Dos zonas con exigencias distintas suelen pedir dos ventanas: la articular abierta para reconstruir, la metafisaria mínima para puentear."
+        },
+        {
+          "si": {
+            "ctx": [
+              "usa-compresion"
+            ],
+            "tipo-abordaje": [
+              "ab-mipo"
+            ]
+          },
+          "texto": "Revisa. Comprimir exige contacto cortical exacto y control del trazo. Por MIPO es posible con tornillo percutáneo o con la unidad dinámica de la placa, pero necesitas radioscopia de calidad y aceptar menos margen de corrección."
+        }
+      ]
+    }
+  ],
+  "esencial": [
+    {
+      "tipo": "parrafo",
+      "texto": "El abordaje se elige por lo que se quiere lograr, no por costumbre. Debe dar acceso suficiente al foco y a los puntos de fijación respetando al máximo la vascularización y los planos neurovasculares. El principio rector de la AO es nítido: la manipulación de las partes blandas determina el resultado tanto como la fijación."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "Los cuatro principios de partes blandas",
+      "texto": "Colgajos de grosor completo: disecar hasta el plano profundo y manejar el tejido en bloque, sin despegar capas, para preservar la perfusión cutánea. Respetar la vascularización ósea: evitar el despegamiento perióstico circunferencial, porque cada milímetro de periostio desvitalizado es biología perdida. Trabajar por planos internerviosos: entrar entre territorios de nervios distintos evita denervar músculos. Y no tensar el cierre: la dehiscencia y la necrosis de borde abren la puerta a la infección."
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Tipos de abordaje y coherencia con el principio",
+      "encabezados": [
+        "Tipo",
+        "Cuándo",
+        "Coherencia"
+      ],
+      "filas": [
+        [
+          "Extenso o directo",
+          "Reducción anatómica directa: articulares y trazos a comprimir.",
+          "Acepta más exposición a cambio de precisión."
+        ],
+        [
+          "Mínimamente invasivo (MIPO)",
+          "Reducción indirecta y puenteo.",
+          "Ventanas pequeñas, túnel submuscular, preserva el hematoma."
+        ],
+        [
+          "Combinado o extensible",
+          "Fracturas complejas: acetábulo, pilón, meseta.",
+          "Accede a más de una columna o faceta."
+        ]
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "info",
+      "titulo": "Abordaje y principio deben coincidir",
+      "texto": "Si el plan es puentear —estabilidad relativa, reducción funcional—, un abordaje amplio que desnuda el foco traiciona la estrategia. Si el plan es reconstruir una superficie articular, una ventana insuficiente impide la reducción anatómica. El abordaje sirve al principio biomecánico, no al revés."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "La estructura en riesgo se conoce antes, no se descubre dentro",
+      "texto": "Cada abordaje clásico explota un intervalo entre músculos de inervación distinta y mantiene una zona segura respecto a las estructuras nobles. Radial en el posterior del húmero y en el antebrazo proximal, axilar a 5 cm del acromion, cubital en todo abordaje del codo, supraclaviculares en la clavícula, supraescapular en la escápula posterior, ciático en el posterior de cadera y acetábulo. Saber cuál es la estructura en riesgo forma parte del plan, no es una sorpresa intraoperatoria."
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Abordajes nombrados por región",
+      "encabezados": [
+        "Región",
+        "Abordaje",
+        "Intervalo o nota"
+      ],
+      "filas": [
+        [
+          "Húmero proximal",
+          "Deltopectoral",
+          "Deltoides–pectoral mayor, con la vena cefálica."
+        ],
+        [
+          "Diáfisis humeral",
+          "Anterolateral o posterior",
+          "Posterior: identificar el radial antes de la placa."
+        ],
+        [
+          "Húmero distal",
+          "Posterior, con o sin osteotomía del olécranon",
+          "Transponer o proteger el cubital."
+        ],
+        [
+          "Codo lateral",
+          "Kocher o Kaplan",
+          "Ancóneo–extensor cubital del carpo; pronar protege el interóseo posterior."
+        ],
+        [
+          "Antebrazo (radio)",
+          "Henry volar o Thompson dorsal",
+          "Interóseo posterior dentro del supinador, en el tercio proximal."
+        ],
+        [
+          "Cadera",
+          "Watson-Jones, Hardinge o Smith-Petersen",
+          "Anterolateral, lateral y anterior."
+        ],
+        [
+          "Acetábulo",
+          "Kocher-Langenbeck o ilioinguinal",
+          "Posterior con el ciático; anterior con el femoral y la corona mortis."
+        ],
+        [
+          "Fémur distal y rodilla",
+          "Parapatelar medial o lateral",
+          "Acceso articular y metafisario."
+        ],
+        [
+          "Tobillo",
+          "Anterolateral, posterolateral y medial",
+          "Según la columna o el maléolo a fijar."
+        ]
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "Decisiones de herida",
+      "texto": "Incisión única o doble: en fracturas de dos huesos —antebrazo, pilón con peroné— usar incisiones separadas y respetar el puente cutáneo evita la necrosis y, en el antebrazo, la sinostosis. Y esperar la ventana de partes blandas: en regiones críticas, posponer la incisión hasta que el edema ceda y aparezca el signo de las arrugas. La decisión de tiempos que se tomó en el Paso 1 se materializa aquí, con el bisturí en la mano."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "sintesis",
+      "titulo": "Síntesis de los Pasos 7 y 8",
+      "texto": "Posición y abordaje preparan la ejecución. La posición se elige para que el abordaje, la reducción y la imagen sean posibles; el abordaje se elige para servir al principio biomecánico con el mínimo daño a las partes blandas. Ambos deben ser coherentes con todo lo decidido antes: de nada sirve el mejor implante a través de una vía incoherente o una posición que impide reducir."
+    }
+  ],
+  "alertas": [
+    {
+      "id": "partes-blandas-mandan",
+      "severidad": "media",
+      "titulo": "La manipulación de las partes blandas determina el resultado tanto como la fijación",
+      "texto": "Es el principio rector de la AO en este paso. Colgajos de grosor completo, periostio respetado, plano internervioso y cierre sin tensión.",
+      "mostrarSiempre": true
+    },
+    {
+      "id": "extenso-sobre-puenteo",
+      "severidad": "critica",
+      "titulo": "Vas a puentear y estás abriendo el foco",
+      "texto": "En el Paso 5 elegiste ferulaje, que cura por callo y vive de la biología intacta. Un abordaje extenso sobre esa zona destruye el hematoma fracturario y la vascularización perióstica que el callo necesita. El abordaje traiciona la estrategia: la vía coherente es MIPO.",
+      "mostrarSi": {
+        "ctx": [
+          "usa-ferulaje"
+        ],
+        "tipo-abordaje": [
+          "ab-extenso"
+        ]
+      }
+    },
+    {
+      "id": "mipo-sobre-articular",
+      "severidad": "alta",
+      "titulo": "Reconstrucción articular anatómica por vía mínimamente invasiva",
+      "texto": "Una superficie articular rara vez se reconstruye a ciegas. Si vas por MIPO, asegúrate de tener artroscopia, TC intraoperatoria o una ventana articular dedicada; si no, la ventana es insuficiente y el escalón se queda dentro.",
+      "mostrarSi": {
+        "ctxTodos": [
+          "red-anatomica",
+          "artic"
+        ],
+        "tipo-abordaje": [
+          "ab-mipo"
+        ]
+      }
+    },
+    {
+      "id": "percutaneo-sin-reduccion",
+      "severidad": "alta",
+      "titulo": "El abordaje percutáneo no reduce: solo fija",
+      "texto": "Presupone que la reducción ya está conseguida por vía cerrada. Si no lo está, vas a fijar una fractura mal reducida con la ventaja de no verla.",
+      "mostrarSi": {
+        "tipo-abordaje": [
+          "ab-percutaneo"
+        ]
+      }
+    },
+    {
+      "id": "ventana-cerrada",
+      "severidad": "critica",
+      "titulo": "La ventana de partes blandas no está abierta",
+      "texto": "Con edema, flictenas o piel tensa, incidir ahora lleva a necrosis de borde, dehiscencia e infección profunda. Fijador externo puente y esperar al signo de las arrugas. Esta es la decisión del Paso 1 materializándose.",
+      "mostrarSi": {
+        "ventana": [
+          "vt-no"
+        ]
+      },
+      "bloqueante": true
+    },
+    {
+      "id": "dos-huesos-una-incision",
+      "severidad": "alta",
+      "titulo": "Dos huesos y una sola incisión",
+      "texto": "En el antebrazo y en el pilón con peroné, la incisión única compromete el puente cutáneo. En el antebrazo añade además riesgo de sinostosis radiocubital. Usa incisiones separadas.",
+      "mostrarSiAlguno": [
+        {
+          "ctx": [
+            "reg-antebrazo"
+          ],
+          "herida": [
+            "he-unica"
+          ]
+        },
+        {
+          "ctx": [
+            "reg-tobillo"
+          ],
+          "herida": [
+            "he-unica"
+          ],
+          "tipo-abordaje": [
+            "ab-combinado"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "puente-cutaneo",
+      "severidad": "media",
+      "titulo": "Respeta el puente cutáneo",
+      "texto": "Cuanto más estrecho, mayor el riesgo de necrosis del colgajo intermedio. Planifica las dos incisiones antes de la primera, no después.",
+      "mostrarSi": {
+        "herida": [
+          "he-doble"
+        ]
+      }
+    },
+    {
+      "id": "cierre-tension",
+      "severidad": "alta",
+      "titulo": "No has previsto el cierre sin tensión",
+      "texto": "La dehiscencia y la necrosis de borde son la puerta de la infección profunda, y en las regiones subcutáneas —tibia, calcáneo, tobillo— deciden el resultado. Si al final no cierra sin tensión, no cierres: cierre diferido o cobertura.",
+      "mostrarSi": {
+        "tipo-abordaje": [
+          "ab-extenso"
+        ]
+      },
+      "noSi": {
+        "partes-blandas": [
+          "pb-cierre"
+        ]
+      }
+    },
+    {
+      "id": "periostio",
+      "severidad": "alta",
+      "titulo": "El despegamiento perióstico circunferencial es biología perdida",
+      "texto": "Abrir ampliamente y además desperiostizar en toda la circunferencia deja el fragmento sin ninguna fuente de vascularización. Es el mecanismo por el que una osteosíntesis técnicamente correcta acaba en no unión.",
+      "mostrarSi": {
+        "tipo-abordaje": [
+          "ab-extenso"
+        ]
+      },
+      "noSi": {
+        "partes-blandas": [
+          "pb-periostio"
+        ]
+      }
+    },
+    {
+      "id": "colgajo-calcaneo",
+      "severidad": "alta",
+      "titulo": "El colgajo en L del calcáneo no perdona",
+      "texto": "Se eleva de grosor completo, sin tocar el plano subcutáneo, y no se retrae con separadores: se sujeta con agujas de Kirschner dobladas. La necrosis del vértice es la complicación que decide el resultado de esta cirugía.",
+      "mostrarSi": {
+        "via-nombrada": [
+          "vn-lateral-calcaneo"
+        ]
+      }
+    },
+    {
+      "id": "radial-posterior",
+      "severidad": "alta",
+      "titulo": "Identifica el radial antes de poner la placa",
+      "texto": "En el abordaje posterior del húmero el nervio cruza el campo en el surco espiral. Encontrarlo primero y protegerlo es más rápido que buscarlo cuando ya hay una placa encima.",
+      "mostrarSi": {
+        "via-nombrada": [
+          "vn-posterior-humero"
+        ]
+      }
+    },
+    {
+      "id": "ciatico-kl",
+      "severidad": "alta",
+      "titulo": "Ciático descargado durante toda la cirugía",
+      "texto": "En el Kocher-Langenbeck, rodilla flexionada y cadera extendida de principio a fin. La lesión del ciático en este abordaje es casi siempre por tracción sostenida del separador, no por sección.",
+      "mostrarSi": {
+        "via-nombrada": [
+          "vn-kocher-langenbeck"
+        ]
+      }
+    },
+    {
+      "id": "portal-excentrico",
+      "severidad": "alta",
+      "titulo": "El punto de entrada del clavo decide la deformidad",
+      "texto": "Un portal excéntrico deforma el fragmento proximal en cuanto entra el clavo, y esa deformidad ya no se corrige después. Compruébalo en dos planos antes de fresar.",
+      "mostrarSi": {
+        "via-nombrada": [
+          "vn-entrada-clavo"
+        ]
+      }
+    },
+    {
+      "id": "internervioso",
+      "severidad": "media",
+      "titulo": "Trabaja por el plano internervioso",
+      "texto": "Es la razón de ser de los abordajes clásicos: entrar entre territorios de nervios distintos permite separar músculos sin denervarlos. Si te sales del intervalo, el músculo que atraviesas se queda sin inervación.",
+      "mostrarSiempre": true,
+      "noSi": {
+        "partes-blandas": [
+          "pb-internervioso"
+        ]
+      }
+    },
+    {
+      "id": "rg-placa-lateral-insuficiente",
+      "severidad": "critica",
+      "titulo": "La placa lateral no controla el fragmento medial",
+      "texto": "Un Schatzker IV o una columna medial o posteromedial afectada necesitan su propio contrafuerte por su propio abordaje. Sujetarlos con tornillos largos desde una placa lateral es el mecanismo por el que estas fracturas colapsan en varo a las pocas semanas.",
+      "mostrarSiAlguno": [
+        {
+          "ctx": [
+            "sch-medial"
+          ]
+        },
+        {
+          "ctx": [
+            "col-medial"
+          ]
+        },
+        {
+          "ctx": [
+            "col-posterior"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rg-acetabulo-abordaje",
+      "severidad": "alta",
+      "titulo": "En el acetábulo el abordaje es la operación",
+      "texto": "El patrón de Letournel no describe: prescribe. Elegir la vía equivocada no se corrige ampliando la incisión, y el abordaje combinado o extensible tiene un coste de partes blandas que hay que aceptar antes de empezar.",
+      "mostrarSiAlguno": [
+        {
+          "ctx": [
+            "acet-posterior"
+          ]
+        },
+        {
+          "ctx": [
+            "acet-anterior"
+          ]
+        },
+        {
+          "ctx": [
+            "acet-ambas"
+          ]
+        }
+      ]
+    }
+  ],
+  "reglasCoherencia": [
+    {
+      "id": "r8-abordaje-sin-via",
+      "titulo": "Coherencia — falta el abordaje concreto",
+      "si": {
+        "tipo-abordaje": [
+          "ab-extenso",
+          "ab-combinado"
+        ]
+      },
+      "severidad": "advertencia",
+      "mensaje": "Has definido el tipo de abordaje pero no la vía concreta. El plano internervioso y la estructura en riesgo dependen de esa elección, y son parte del plan, no una sorpresa intraoperatoria.",
+      "noSi": {
+        "via-nombrada": [
+          "vn-deltopectoral",
+          "vn-deltoideo",
+          "vn-clavicula",
+          "vn-escapula-post",
+          "vn-anterolateral-humero",
+          "vn-posterior-humero",
+          "vn-posterior-codo",
+          "vn-kocher",
+          "vn-boyd",
+          "vn-henry",
+          "vn-thompson",
+          "vn-cubital-directo",
+          "vn-volar-radio",
+          "vn-dorsal-muneca",
+          "vn-mano-dorsal",
+          "vn-watson-jones",
+          "vn-hardinge",
+          "vn-smith-petersen",
+          "vn-lateral-femur",
+          "vn-entrada-clavo",
+          "vn-parapatelar",
+          "vn-posteromedial-rodilla",
+          "vn-anteromedial-tibia",
+          "vn-anterolateral-tobillo",
+          "vn-posterolateral-tobillo",
+          "vn-medial-tobillo",
+          "vn-lateral-calcaneo",
+          "vn-dorsal-pie",
+          "vn-kocher-langenbeck",
+          "vn-ilioinguinal",
+          "vn-columna-post"
+        ]
+      }
+    },
+    {
+      "id": "r8-mipo-sin-imagen",
+      "titulo": "Coherencia — MIPO exige radioscopia de calidad",
+      "si": {
+        "tipo-abordaje": [
+          "ab-mipo"
+        ]
+      },
+      "severidad": "advertencia",
+      "mensaje": "La osteosíntesis mínimamente invasiva sustituye la visión directa por la imagen. Comprueba que en el Paso 7 dejaste resuelto el acceso del arco en C a todas las proyecciones que vas a necesitar."
+    },
+    {
+      "id": "r8-ventana-abierta-tarde",
+      "titulo": "Coherencia — abordaje extenso con ventana dudosa",
+      "si": {
+        "tipo-abordaje": [
+          "ab-extenso"
+        ],
+        "ventana": [
+          "vt-no"
+        ]
+      },
+      "severidad": "critica",
+      "bloqueante": true,
+      "mensaje": "Abordaje extenso sobre partes blandas que no están listas. Es la combinación que produce necrosis de borde e infección profunda. Fijador externo puente y esperar al signo de las arrugas."
+    }
+  ],
+  "evidencia": [
+    {
+      "nivel": "2",
+      "afirmacion": "En fracturas distales de tibia y fémur, la osteosíntesis mínimamente invasiva logra una consolidación comparable a la reducción abierta con menos complicaciones de partes blandas e infección.",
+      "refs": [
+        "ref-mipo-meta"
+      ]
+    },
+    {
+      "nivel": "referencia",
+      "afirmacion": "Cada abordaje clásico explota un intervalo internervioso y define una zona segura respecto a las estructuras nobles.",
+      "refs": [
+        "ref-hoppenfeld",
+        "ref-schemitsch-mckee"
+      ]
+    }
+  ],
+  "autoevaluacion": [
+    {
+      "pregunta": "¿Por qué un abordaje amplio puede traicionar el plan?",
+      "opciones": [
+        "Porque aumenta el tiempo quirúrgico",
+        "Porque si el principio es puentear —estabilidad relativa, que prospera con biología intacta—, desnudar el foco destruye la vascularización que el callo necesita",
+        "Porque impide colocar la placa",
+        "Porque exige más ayudantes"
+      ],
+      "correcta": 1,
+      "explicacion": "El abordaje sirve al principio biomecánico, no al revés. Si vas a puentear, entra por ventanas pequeñas.",
+      "origen": "libro"
+    },
+    {
+      "pregunta": "Cita la estructura en riesgo del abordaje posterior del húmero.",
+      "opciones": [
+        "Nervio cubital",
+        "Nervio axilar",
+        "Nervio radial en el surco espiral",
+        "Nervio musculocutáneo"
+      ],
+      "correcta": 2,
+      "explicacion": "Debe identificarse ANTES de aplicar la placa, no cuando ya hay material encima.",
+      "origen": "libro"
+    },
+    {
+      "pregunta": "¿Qué maniobra aleja el nervio interóseo posterior del campo en el abordaje lateral del codo?",
+      "opciones": [
+        "Supinar el antebrazo",
+        "Pronar el antebrazo",
+        "Flexionar el codo",
+        "Extender la muñeca"
+      ],
+      "correcta": 1,
+      "explicacion": "La pronación desplaza el nervio, que discurre dentro del supinador, hacia lateral y lejos de la disección.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "En una fractura de los dos huesos del antebrazo, ¿por qué dos incisiones separadas?",
+      "opciones": [
+        "Porque el material no cabe por una sola",
+        "Para respetar el puente cutáneo y reducir el riesgo de necrosis y de sinostosis radiocubital",
+        "Porque lo exige el plano internervioso",
+        "Para acortar el tiempo quirúrgico"
+      ],
+      "correcta": 1,
+      "explicacion": "El mismo criterio vale para el pilón con peroné: incisiones separadas y puente cutáneo respetado.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Qué significa el signo de las arrugas?",
+      "opciones": [
+        "Que la fractura está consolidando",
+        "Que el edema ha cedido y la piel vuelve a plegarse: la ventana de partes blandas está abierta",
+        "Que hay síndrome compartimental",
+        "Que la piel está isquémica"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el criterio clínico para pasar del fijador puente a la osteosíntesis definitiva en regiones críticas.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Por qué se disecan colgajos de grosor completo?",
+      "opciones": [
+        "Para ver mejor el hueso",
+        "Porque manejar el tejido en bloque, sin despegar capas, preserva la perfusión cutánea",
+        "Para facilitar el cierre",
+        "Porque acelera la disección"
+      ],
+      "correcta": 1,
+      "explicacion": "Cada plano que se separa es un aporte vascular que se pierde. Es lo que decide la viabilidad del borde de la herida.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "En el Kocher-Langenbeck, ¿cómo se protege el ciático?",
+      "opciones": [
+        "Transponiéndolo",
+        "Con rodilla flexionada y cadera extendida durante toda la cirugía",
+        "Con cadera flexionada y rodilla extendida",
+        "No se puede proteger"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa posición lo descarga. La lesión en este abordaje es casi siempre por tracción sostenida del separador, no por sección.",
+      "origen": "app"
+    }
+  ],
+  "sintesis": "El abordaje se elige por lo que se quiere lograr y debe casar con el principio del Paso 5: extenso para reconstruir y comprimir, mínimamente invasivo para puentear, combinado cuando hay dos zonas. Las partes blandas determinan el resultado tanto como la fijación: colgajos de grosor completo, periostio respetado, plano internervioso y cierre sin tensión. Y la estructura en riesgo de cada vía forma parte del plan, no es una sorpresa intraoperatoria.",
+  "lecturas": [
+    "Hoppenfeld S., deBoer P., Buckley R. — Surgical Exposures in Orthopaedics: The Anatomic Approach.",
+    "Schemitsch EH, McKee MD — Operative Techniques: Orthopaedic Trauma Surgery.",
+    "Bavonratanavech S. — MIPO: Minimally Invasive Plate Osteosynthesis."
+  ],
+  "refs": [
+    "ref-hoppenfeld",
+    "ref-schemitsch-mckee",
+    "ref-mipo-meta",
+    "ref-perren-2002"
+  ]
+}

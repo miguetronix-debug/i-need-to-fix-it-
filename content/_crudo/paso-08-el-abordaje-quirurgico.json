@@ -1,0 +1,227 @@
+{
+  "origen": "LIBRO_Los_10_pasos_completo.docx",
+  "titulo": "Paso 8 · El abordaje quirúrgico",
+  "numeroPaso": 8,
+  "bloques": [
+    {
+      "tipo": "parrafo",
+      "texto": "El abordaje se elige por lo que se quiere lograr, no por costumbre. Debe dar acceso suficiente al foco y a los puntos de fijación respetando al máximo la vascularización y los planos neurovasculares. El principio rector de la AO es nítido: la manipulación de las partes blandas determina el resultado tanto como la fijación."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "mapa",
+      "titulo": "Mapa del Paso 8",
+      "lineas": [
+        "A. Principios del manejo de partes blandas.",
+        "B. Tipos de abordaje y su coherencia con el principio.",
+        "C. Planos internerviosos y zonas seguras.",
+        "D. Abordajes nombrados por región.",
+        "E. Decisiones de herida."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "A. Principios del manejo de partes blandas"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Colgajos de grosor completo: disecar hasta el plano profundo y manejar el tejido en bloque, sin despegar capas, para preservar la perfusión cutánea."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Respetar la vascularización ósea: evitar el despegamiento perióstico circunferencial; cada milímetro de periostio desvitalizado es biología perdida."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Trabajar por planos internerviosos: entrar entre territorios de nervios distintos evita denervar músculos."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "No tensar el cierre: la dehiscencia y la necrosis de borde abren la puerta a la infección, sobre todo en regiones críticas."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "B. Tipos de abordaje y coherencia con el principio"
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Tipo",
+        "Cuándo",
+        "Coherencia"
+      ],
+      "filas": [
+        [
+          "Extenso / directo",
+          "Reducción anatómica directa (articulares, trazos a comprimir).",
+          "Acepta más exposición a cambio de precisión."
+        ],
+        [
+          "Mínimamente invasivo (MIPO)",
+          "Reducción indirecta y puenteo.",
+          "Ventanas pequeñas, túnel submuscular, preserva el hematoma."
+        ],
+        [
+          "Combinado / extensible",
+          "Fracturas complejas (acetábulo, pilón, meseta).",
+          "Accede a más de una columna o faceta."
+        ]
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "info",
+      "titulo": "Abordaje y principio deben coincidir",
+      "lineas": [
+        "Si el plan es puentear (estabilidad relativa, reducción funcional), un abordaje amplio que desnuda el foco traiciona la estrategia. Si el plan es reconstruir una superficie articular, una ventana insuficiente impide la reducción anatómica. El abordaje sirve al principio biomecánico, no al revés."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "C. Planos internerviosos y zonas seguras"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Cada abordaje clásico explota un intervalo entre músculos de inervación distinta y mantiene una «zona segura» respecto a las estructuras nobles. Conocer la estructura en riesgo de cada vía es parte del plan, no una sorpresa intraoperatoria."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Ejemplos de estructura en riesgo: nervio radial (abordaje posterior del húmero y antebrazo proximal: pronar para alejar el PIN), nervio axilar (deltoides, ~5 cm del acromion), nervio cubital (todo abordaje del codo), nervios supraclaviculares (clavícula), nervio supraescapular (escápula posterior), ciático (abordaje posterior de cadera/acetábulo)."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "D. Abordajes nombrados por región"
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Región",
+        "Abordaje",
+        "Intervalo / nota"
+      ],
+      "filas": [
+        [
+          "Húmero proximal",
+          "Deltopectoral",
+          "Deltoides–pectoral mayor (vena cefálica)."
+        ],
+        [
+          "Húmero diáfisis",
+          "Anterolateral / posterior",
+          "Posterior: identificar el radial antes de la placa."
+        ],
+        [
+          "Húmero distal",
+          "Posterior (± osteotomía olécranon)",
+          "Transponer/proteger el cubital."
+        ],
+        [
+          "Codo lateral",
+          "Kocher / Kaplan",
+          "Ancóneo–ECU; pronar protege el PIN."
+        ],
+        [
+          "Antebrazo (radio)",
+          "Henry (volar) / Thompson (dorsal)",
+          "PIN en el supinador (proximal)."
+        ],
+        [
+          "Cadera",
+          "Watson-Jones / Hardinge / Smith-Petersen",
+          "Anterolateral, lateral, anterior."
+        ],
+        [
+          "Acetábulo",
+          "Kocher-Langenbeck / ilioinguinal",
+          "Posterior (ciático) / anterior."
+        ],
+        [
+          "Fémur distal / rodilla",
+          "Parapatelar medial / lateral",
+          "Acceso articular y metafisario."
+        ],
+        [
+          "Tobillo",
+          "Anterolateral, posterolateral, medial",
+          "Según columna/maléolo."
+        ]
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "E. Decisiones de herida"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Incisión única vs doble: en fracturas de dos huesos (antebrazo, pilón) usar incisiones separadas y respetar el puente cutáneo para evitar necrosis y sinostosis."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Esperar la ventana de partes blandas: en regiones críticas, posponer la incisión hasta que el edema ceda (signo de las arrugas) — la decisión del timing (Paso 1) se materializa aquí."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "sintesis",
+      "titulo": "Síntesis de los Pasos 7 y 8",
+      "lineas": [
+        "Posición y abordaje preparan la ejecución. La posición se elige para que el abordaje, la reducción y la imagen sean posibles; el abordaje se elige para servir al principio biomecánico con el mínimo daño a las partes blandas. Ambos deben ser coherentes con todo lo decidido antes: de nada sirve el mejor implante a través de una vía incoherente o una posición que impide reducir."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "Evidencia, autoevaluación y lecturas"
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "evidencia",
+      "titulo": "Evidencia (nivel indicativo)",
+      "lineas": [
+        "MIPO vs ORIF abierta (Nivel II): en fracturas distales de tibia y fémur, la osteosíntesis mínimamente invasiva logra una consolidación comparable con menos complicaciones de partes blandas e infección (varios RCT y metaanálisis)."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Autoevaluación"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. ¿Por qué un abordaje amplio puede «traicionar» el plan?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. Si el principio es puentear (estabilidad relativa, que prospera con biología intacta), desnudar el foco con un abordaje extenso destruye la vascularización que el callo necesita."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. Cita la estructura en riesgo del abordaje posterior del húmero."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. El nervio radial en el surco; debe identificarse antes de aplicar la placa."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Lecturas recomendadas"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Hoppenfeld — Surgical Exposures in Orthopaedics: The Anatomic Approach."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Operative Techniques: Orthopaedic Trauma Surgery (Schemitsch, McKee)."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Los niveles de evidencia son orientativos y se ofrecen para guiar la lectura crítica, no como recomendación clínica cerrada."
+    }
+  ]
+}

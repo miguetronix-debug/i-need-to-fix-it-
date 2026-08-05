@@ -1,0 +1,903 @@
+{
+  "id": "paso-07-posicion",
+  "numero": 7,
+  "titulo": "La posición del paciente",
+  "subtitulo": "Es una decisión quirúrgica, no un trámite logístico",
+  "preguntaClave": "¿Esta posición me permite abordar, reducir y radiografiar sin recolocar al paciente, y es segura durante toda la cirugía?",
+  "objetivos": [
+    "Elegir la posición en función del abordaje, de la reducción y de la imagen que vas a necesitar",
+    "Conocer la mesa que exige cada posición y sus complicaciones específicas",
+    "Anticipar la protección de puntos de presión, plexos y extremidad contralateral",
+    "Resolver las cinco preguntas de la lista de verificación antes de pintar el campo"
+  ],
+  "decisiones": [
+    {
+      "id": "posicion",
+      "pregunta": "¿En qué posición vas a colocar al paciente?",
+      "ayuda": "La posición es barata de cambiar antes de empezar e imposible después. Elígela por lo que necesitas hacer, no por costumbre del servicio.",
+      "tipo": "opcionUnica",
+      "opciones": [
+        {
+          "id": "pos-supino",
+          "etiqueta": "Supino",
+          "criterios": [
+            "Fémur, tibia, tobillo y miembro superior",
+            "Mesa radiotransparente; mesa de mano para el miembro superior",
+            "Es la posición más versátil y la más tolerable para la anestesia"
+          ]
+        },
+        {
+          "id": "pos-mesa-traccion",
+          "etiqueta": "Supino en mesa ortopédica de tracción",
+          "criterios": [
+            "Enclavado de fémur y de tibia",
+            "Mantiene la tracción sin ayudante y libera las manos del cirujano",
+            "Riesgos propios: nervio pudendo por el poste perineal y compartimental de la pierna contralateral"
+          ]
+        },
+        {
+          "id": "pos-prono",
+          "etiqueta": "Prono",
+          "criterios": [
+            "Abordajes posteriores: pilar posterior acetabular, húmero distal, tibia posterior, sacro",
+            "Apoyos torácicos y pélvicos que dejen libre el abdomen",
+            "Proteger ojos, mamas y genitales"
+          ]
+        },
+        {
+          "id": "pos-lateral",
+          "etiqueta": "Lateral o semilateral",
+          "criterios": [
+            "Cadera, acetábulo posterior, algunos húmero y tobillo",
+            "Soportes anterior y posterior estables",
+            "Rodillo axilar para descargar la axila contralateral"
+          ]
+        },
+        {
+          "id": "pos-beach",
+          "etiqueta": "Silla de playa (beach-chair)",
+          "criterios": [
+            "Hombro, húmero proximal y clavícula",
+            "Cabeza firmemente fijada",
+            "Vigilar la hipotensión cerebral en sedestación"
+          ]
+        },
+        {
+          "id": "pos-flotante",
+          "etiqueta": "Flotante (lateral convertible a supino)",
+          "criterios": [
+            "Permite pasar de un abordaje a otro sin volver a preparar el campo",
+            "Útil cuando hay que atacar dos columnas o dos huesos",
+            "Exige un campo amplio y sujeción fiable en las dos posiciones"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "traccion",
+      "pregunta": "¿Cómo vas a conseguir la tracción que necesita la reducción?",
+      "ayuda": "Es la conexión entre este paso y el 9. Si vas a reducir por ligamentotaxis o a recuperar longitud, decide ahora quién la mantiene.",
+      "tipo": "opcionUnica",
+      "opciones": [
+        {
+          "id": "tr-mesa",
+          "etiqueta": "Mesa ortopédica de tracción",
+          "criterios": [
+            "Tracción mantenida y reproducible sin ayudante",
+            "Minimiza el tiempo y la fuerza: el poste perineal y la pierna contralateral cobran factura"
+          ]
+        },
+        {
+          "id": "tr-distractor",
+          "etiqueta": "Distractor o fijador externo como reductor",
+          "criterios": [
+            "Recupera longitud y eje sin mesa de tracción",
+            "Permite colocar al paciente en la posición que convenga al abordaje"
+          ]
+        },
+        {
+          "id": "tr-manual",
+          "etiqueta": "Tracción manual del ayudante",
+          "criterios": [
+            "Suficiente para procedimientos cortos",
+            "Se agota: si la cirugía se alarga, la reducción se pierde"
+          ]
+        },
+        {
+          "id": "tr-gravedad",
+          "etiqueta": "Gravedad y posición del miembro",
+          "criterios": [
+            "El codo colgando en prono, el brazo en mesa de mano, el pie en equino relajado",
+            "La posición hace parte del trabajo de reducción: aprovecharlo es gratis"
+          ]
+        },
+        {
+          "id": "tr-ninguna",
+          "etiqueta": "No necesito tracción",
+          "criterios": [
+            "Trazo estable o reducción por manipulación directa del fragmento"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "imagen",
+      "pregunta": "¿Qué imagen intraoperatoria vas a necesitar?",
+      "ayuda": "El arco en C suele entrar por el lado opuesto al cirujano. Si una proyección obliga a recolocar al paciente, la posición está mal elegida.",
+      "tipo": "opcionMultiple",
+      "opciones": [
+        {
+          "id": "im-dos-planos",
+          "etiqueta": "Dos planos ortogonales sin recolocar",
+          "criterios": [
+            "Es el mínimo exigible en cualquier osteosíntesis"
+          ]
+        },
+        {
+          "id": "im-oblicuas",
+          "etiqueta": "Proyecciones oblicuas específicas",
+          "criterios": [
+            "Alares y obturatrices en acetábulo, inlet y outlet en pelvis, mortaja en tobillo",
+            "Comprueba que la mesa y los soportes no las bloqueen"
+          ]
+        },
+        {
+          "id": "im-lado-sano",
+          "etiqueta": "Comparación con el lado sano",
+          "criterios": [
+            "Es como se verifica longitud y rotación",
+            "Obliga a dejar el lado contralateral accesible al arco"
+          ]
+        },
+        {
+          "id": "im-tc-artro",
+          "etiqueta": "TC intraoperatoria o artroscopia",
+          "criterios": [
+            "Superficies articulares: confirma la reducción antes de cerrar",
+            "Condiciona la mesa y el espacio alrededor del paciente"
+          ]
+        },
+        {
+          "id": "im-nav",
+          "etiqueta": "Navegación o guía electromagnética",
+          "criterios": [
+            "Pelvis y columna; exige referencia estable y campo despejado"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "proteccion",
+      "pregunta": "¿Qué vas a proteger?",
+      "ayuda": "Marca todo lo que corresponda a tu posición. Lo que no se protege antes de pintar ya no se protege.",
+      "tipo": "opcionMultiple",
+      "opciones": [
+        {
+          "id": "pt-presion",
+          "etiqueta": "Puntos de presión y prominencias óseas",
+          "criterios": [
+            "Talones, sacro, trocánteres, codos, rodillas"
+          ]
+        },
+        {
+          "id": "pt-plexo",
+          "etiqueta": "Plexo braquial y axila contralateral",
+          "criterios": [
+            "En lateral, rodillo axilar",
+            "Brazos sin abducción forzada por encima de 90°"
+          ]
+        },
+        {
+          "id": "pt-ojos",
+          "etiqueta": "Ojos, mamas y genitales",
+          "criterios": [
+            "Específico del prono: revisarlos tras cada cambio de mesa"
+          ]
+        },
+        {
+          "id": "pt-contralateral",
+          "etiqueta": "Extremidad contralateral",
+          "criterios": [
+            "En mesa de tracción, la pierna contralateral en posición de litotomía puede desarrollar síndrome compartimental",
+            "Bajarla, acolcharla y limitar el tiempo"
+          ]
+        },
+        {
+          "id": "pt-perineal",
+          "etiqueta": "Poste perineal bien acolchado y descentrado",
+          "criterios": [
+            "Reduce el riesgo de neuroapraxia del pudendo",
+            "Minimizar la fuerza y el tiempo de tracción"
+          ]
+        },
+        {
+          "id": "pt-via",
+          "etiqueta": "Vía aérea, accesos y cabeza fijada",
+          "criterios": [
+            "Especialmente en beach-chair y prono, donde el acceso a la cabeza queda lejos"
+          ]
+        },
+        {
+          "id": "pt-termico",
+          "etiqueta": "Normotermia y superficie expuesta",
+          "criterios": [
+            "Cirugías largas en politraumatizados: la hipotermia agrava la coagulopatía del Paso 1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "checklist",
+      "pregunta": "La posición que escogiste, ¿cuáles de las siguientes te permite? Selecciónalas.",
+      "ayuda": "Son las cinco cosas que la posición tiene que permitir, y se comprueban con el paciente ya colocado y todavía sin pintar. Lo que no marques aquí es lo que vas a descubrir con el campo montado.",
+      "tipo": "opcionMultiple",
+      "opciones": [
+        {
+          "id": "ck-abordaje",
+          "etiqueta": "Abordar por donde planifiqué",
+          "criterios": [
+            "Acceso cómodo al plano de incisión previsto en el Paso 8"
+          ]
+        },
+        {
+          "id": "ck-reduccion",
+          "etiqueta": "Reducir la fractura",
+          "criterios": [
+            "Tracción disponible y gravedad a favor, sin tener que recolocar"
+          ]
+        },
+        {
+          "id": "ck-imagen",
+          "etiqueta": "Obtener todas las proyecciones sin recolocar",
+          "criterios": [
+            "Comprobado con el arco en C antes de pintar, no después"
+          ]
+        },
+        {
+          "id": "ck-seguridad",
+          "etiqueta": "Proteger puntos de presión, plexos y la extremidad contralateral",
+          "criterios": [
+            "Revisado con el equipo de enfermería antes de cubrir al paciente"
+          ]
+        },
+        {
+          "id": "ck-anestesia",
+          "etiqueta": "Mantenerla toda la cirugía sin comprometer la anestesia",
+          "criterios": [
+            "Consensuado con el anestesiólogo, incluida la duración prevista"
+          ]
+        }
+      ]
+    }
+  ],
+  "derivados": [
+    {
+      "id": "sugerida",
+      "titulo": "Lo que suele pedir esta región",
+      "tipo": "reglas",
+      "modo": "primera",
+      "reglas": [
+        {
+          "si": {
+            "ctx": [
+              "reg-hombro"
+            ]
+          },
+          "texto": "Hombro, húmero proximal y clavícula → silla de playa. Cabeza fija y vigilancia de la presión de perfusión cerebral en sedestación."
+        },
+        {
+          "si": {
+            "ctx": [
+              "reg-humero"
+            ]
+          },
+          "texto": "Diáfisis humeral → supino con mesa de mano para el abordaje anterolateral; lateral o prono si vas por detrás. En el abordaje posterior, identifica el nervio radial antes de aplicar la placa."
+        },
+        {
+          "si": {
+            "ctx": [
+              "reg-codo"
+            ]
+          },
+          "texto": "Codo y húmero distal → prono o lateral con el codo colgando flexionado: da acceso posterior y fluoroscopia cómoda. También supino con el brazo cruzado sobre el tórax."
+        },
+        {
+          "si": {
+            "ctx": [
+              "reg-antebrazo"
+            ]
+          },
+          "texto": "Antebrazo → supino con mesa de mano. Recuerda que radio y cúbito piden incisiones separadas con puente cutáneo (Paso 8)."
+        },
+        {
+          "si": {
+            "ctx": [
+              "reg-muneca"
+            ]
+          },
+          "texto": "Radio y cúbito distales → supino con mesa de mano y arco en C horizontal, que permite proyecciones sin mover el antebrazo."
+        },
+        {
+          "si": {
+            "ctx": [
+              "reg-cadera"
+            ]
+          },
+          "texto": "Fémur proximal → supino en mesa ortopédica de tracción para el enclavado, o lateral si el abordaje lo exige. Vigila el poste perineal y la pierna contralateral."
+        },
+        {
+          "si": {
+            "ctx": [
+              "reg-femur"
+            ]
+          },
+          "texto": "Diáfisis femoral → supino en mesa de tracción, o supino sobre mesa radiotransparente con distractor. La segunda opción evita las complicaciones de la tracción prolongada."
+        },
+        {
+          "si": {
+            "ctx": [
+              "reg-rodilla"
+            ]
+          },
+          "texto": "Fémur distal, rótula y meseta tibial → supino con la rodilla en flexión sobre un realce: relaja el gemelo y corrige el recurvatum del fragmento distal."
+        },
+        {
+          "si": {
+            "ctx": [
+              "reg-tibia"
+            ]
+          },
+          "texto": "Diáfisis tibial → supino con la rodilla flexionada sobre soporte radiotransparente, o mesa de tracción. Deja el lado sano accesible para comparar longitud y rotación."
+        },
+        {
+          "si": {
+            "ctx": [
+              "reg-tobillo"
+            ]
+          },
+          "texto": "Tobillo y pilón → supino con realce bajo la cadera ipsilateral para llevar el pie a posición neutra. Prono si el objetivo principal es el maléolo posterior."
+        },
+        {
+          "si": {
+            "ctx": [
+              "reg-pie"
+            ]
+          },
+          "texto": "Pie → supino con realce ipsilateral, o lateral para el abordaje lateral extensible del calcáneo."
+        },
+        {
+          "si": {
+            "ctx": [
+              "reg-pelvis"
+            ]
+          },
+          "texto": "Acetábulo → la posición decide qué columna es accesible: supino para el ilioinguinal o anterior intrapélvico, prono o lateral para el Kocher-Langenbeck posterior. Anillo pélvico: supino."
+        },
+        {
+          "si": {
+            "ctx": [
+              "reg-columna"
+            ]
+          },
+          "texto": "Columna → prono sobre apoyos torácicos y pélvicos que dejen libre el abdomen, para reducir el sangrado epidural. Protección ocular obligatoria."
+        }
+      ]
+    },
+    {
+      "id": "riesgos",
+      "titulo": "Lo que tienes que vigilar en esta posición",
+      "tipo": "reglas",
+      "modo": "todas",
+      "reglas": [
+        {
+          "si": {
+            "posicion": [
+              "pos-mesa-traccion"
+            ]
+          },
+          "texto": "Mesa de tracción: neuroapraxia del nervio pudendo por el poste perineal, y síndrome compartimental de la pierna contralateral en litotomía. Minimiza la fuerza y el tiempo de tracción y acolcha bien el poste."
+        },
+        {
+          "si": {
+            "posicion": [
+              "pos-prono"
+            ]
+          },
+          "texto": "Prono: presión ocular, mamas y genitales; abdomen libre entre los apoyos para no aumentar la presión intraabdominal ni el sangrado epidural. Revisa la vía aérea tras cada movilización."
+        },
+        {
+          "si": {
+            "posicion": [
+              "pos-lateral"
+            ]
+          },
+          "texto": "Lateral: rodillo axilar para descargar el plexo braquial contralateral, soportes anterior y posterior estables, y comprobar que la pelvis no bascula durante la reducción."
+        },
+        {
+          "si": {
+            "posicion": [
+              "pos-beach"
+            ]
+          },
+          "texto": "Silla de playa: hipotensión cerebral en sedestación. La presión medida en el brazo sobreestima la perfusión cerebral; consensúa el objetivo tensional con anestesia y fija bien la cabeza."
+        },
+        {
+          "si": {
+            "posicion": [
+              "pos-flotante"
+            ]
+          },
+          "texto": "Flotante: la ventaja es cambiar de abordaje sin volver a preparar; el riesgo es la sujeción. Comprueba estabilidad y accesibilidad del arco en las dos posiciones antes de pintar."
+        }
+      ]
+    }
+  ],
+  "esencial": [
+    {
+      "tipo": "parrafo",
+      "texto": "La posición es una decisión quirúrgica, no un trámite logístico. Una mala posición compromete el abordaje, la reducción, el control radiológico y la seguridad del paciente, y a menudo no tiene arreglo una vez montado el campo. Se elige en función del hueso, del abordaje previsto, de la estrategia de reducción y de la necesidad de imagen intraoperatoria."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "Los cuatro determinantes",
+      "texto": "El abordaje previsto: la posición debe dar acceso cómodo al plano de incisión planificado. La estrategia de reducción: ¿necesito tracción mantenida?, ¿juega la gravedad a favor? La imagen: ¿puedo obtener todas las proyecciones sin recolocar al paciente? Y la seguridad: protección de puntos de presión, plexos y vía aérea, más la tolerancia anestésica de la posición durante todo el tiempo previsto."
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Las posiciones y sus mesas",
+      "encabezados": [
+        "Posición",
+        "Indicaciones típicas",
+        "Mesa y detalles"
+      ],
+      "filas": [
+        [
+          "Supino",
+          "Fémur, tibia, tobillo, miembro superior.",
+          "Radiotransparente o de tracción; mesa de mano para el miembro superior."
+        ],
+        [
+          "Supino en mesa ortopédica",
+          "Enclavado de fémur y tibia.",
+          "Tracción mantenida; vigilar el pudendo y el compartimental de la pierna contralateral."
+        ],
+        [
+          "Prono",
+          "Abordajes posteriores: pilar posterior acetabular, húmero distal, tibia posterior, sacro.",
+          "Apoyos torácicos y pélvicos; proteger ojos, mamas y genitales."
+        ],
+        [
+          "Lateral o semilateral",
+          "Cadera, acetábulo posterior, algunos húmero y tobillo.",
+          "Soportes anterior y posterior; rodillo en la axila contralateral."
+        ],
+        [
+          "Silla de playa",
+          "Hombro, húmero proximal, clavícula.",
+          "Cabeza fija; vigilar hipotensión cerebral en sedestación."
+        ]
+      ]
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Implicaciones por región",
+      "encabezados": [
+        "Región",
+        "Posición y motivo"
+      ],
+      "filas": [
+        [
+          "Húmero distal",
+          "Prono o lateral con el codo colgando flexionado: acceso posterior y fluoroscopia."
+        ],
+        [
+          "Acetábulo",
+          "Supino para el ilioinguinal o anterior; prono o lateral para el Kocher-Langenbeck. La posición decide qué columna es accesible."
+        ],
+        [
+          "Tobillo y pilón",
+          "Supino con realce bajo la cadera ipsilateral para llevar el pie a posición neutra."
+        ],
+        [
+          "Fémur distal y meseta",
+          "Supino con la rodilla flexionada sobre realce: relaja el gemelo y corrige el recurvatum."
+        ]
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "info",
+      "titulo": "Resolver antes de pintar el campo",
+      "texto": "1. ¿Permite el abordaje planificado? 2. ¿Permite reducir, con tracción disponible y gravedad a favor? 3. ¿Permite todas las proyecciones de fluoroscopia sin recolocar? 4. ¿Protege puntos de presión, plexos y la extremidad contralateral? 5. ¿Es tolerable para la anestesia durante toda la cirugía? Resolver estas cinco preguntas antes de pintar evita el peor escenario: descubrir, con el campo ya montado, que no se puede reducir, fijar o radiografiar."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "Barata antes, imposible después",
+      "texto": "Cambiar la posición antes de empezar cuesta quince minutos. Cambiarla con el campo montado significa desmontar, volver a preparar, volver a pintar y sumar tiempo de anestesia y riesgo de contaminación. Por eso la lista de verificación se contesta antes de la incisión, y no se firma de memoria."
+    }
+  ],
+  "alertas": [
+    {
+      "id": "pos-decision",
+      "severidad": "media",
+      "titulo": "La posición es una decisión quirúrgica",
+      "texto": "Compromete el abordaje, la reducción, el control radiológico y la seguridad. Y a menudo no tiene arreglo una vez montado el campo.",
+      "mostrarSiempre": true
+    },
+    {
+      "id": "mesa-pudendo",
+      "severidad": "alta",
+      "titulo": "Mesa de tracción: pudendo y pierna contralateral",
+      "texto": "El poste perineal puede producir neuroapraxia del nervio pudendo, y la pierna contralateral en litotomía prolongada puede desarrollar síndrome compartimental. Acolcha y descentra el poste, baja la pierna sana y minimiza la fuerza y el tiempo de tracción.",
+      "mostrarSiAlguno": [
+        {
+          "posicion": [
+            "pos-mesa-traccion"
+          ]
+        },
+        {
+          "traccion": [
+            "tr-mesa"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mesa-sin-proteger",
+      "severidad": "critica",
+      "titulo": "Mesa de tracción sin protección declarada",
+      "texto": "Estás usando tracción mecánica mantenida y no has marcado ni el poste perineal ni la extremidad contralateral. Son exactamente las dos complicaciones descritas de esta mesa, y las dos son evitables antes de empezar.",
+      "mostrarSiAlguno": [
+        {
+          "posicion": [
+            "pos-mesa-traccion"
+          ]
+        },
+        {
+          "traccion": [
+            "tr-mesa"
+          ]
+        }
+      ],
+      "noSiAlguno": [
+        {
+          "proteccion": [
+            "pt-perineal"
+          ]
+        },
+        {
+          "proteccion": [
+            "pt-contralateral"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prono-ojos",
+      "severidad": "alta",
+      "titulo": "Prono: revisa ojos, apoyos y abdomen libre",
+      "texto": "La presión ocular en prono puede producir pérdida visual. Los apoyos torácicos y pélvicos deben dejar el abdomen libre: si comprime, sube la presión intraabdominal y el sangrado epidural.",
+      "mostrarSi": {
+        "posicion": [
+          "pos-prono"
+        ]
+      }
+    },
+    {
+      "id": "prono-sin-proteccion",
+      "severidad": "critica",
+      "titulo": "Prono sin protección ocular declarada",
+      "texto": "Es la complicación evitable más grave de esta posición. Márcala y revísala tras cada movilización de la mesa.",
+      "mostrarSi": {
+        "posicion": [
+          "pos-prono"
+        ]
+      },
+      "noSi": {
+        "proteccion": [
+          "pt-ojos"
+        ]
+      }
+    },
+    {
+      "id": "beach-perfusion",
+      "severidad": "alta",
+      "titulo": "Silla de playa: perfusión cerebral",
+      "texto": "En sedestación, la presión medida en el brazo sobreestima la presión de perfusión cerebral. Consensúa el objetivo tensional con anestesia y comprueba la fijación de la cabeza antes de pintar.",
+      "mostrarSi": {
+        "posicion": [
+          "pos-beach"
+        ]
+      }
+    },
+    {
+      "id": "lateral-axila",
+      "severidad": "media",
+      "titulo": "Lateral: rodillo axilar",
+      "texto": "Sin rodillo, el peso del tórax comprime el plexo braquial contralateral. Comprueba también que la pelvis no bascule durante las maniobras de reducción.",
+      "mostrarSi": {
+        "posicion": [
+          "pos-lateral"
+        ]
+      },
+      "noSi": {
+        "proteccion": [
+          "pt-plexo"
+        ]
+      }
+    },
+    {
+      "id": "checklist-incompleta",
+      "severidad": "critica",
+      "titulo": "Esta posición todavía no te permite todo lo que hace falta",
+      "texto": "Hay cosas sin marcar. O las resuelves ahora —cambiando la mesa, los soportes o la propia posición—, o las vas a descubrir con el campo ya montado, que es cuando ya no se pueden resolver.",
+      "mostrarSiempre": true,
+      "noSiTodo": {
+        "checklist": [
+          "ck-abordaje",
+          "ck-reduccion",
+          "ck-imagen",
+          "ck-seguridad",
+          "ck-anestesia"
+        ]
+      },
+      "bloqueante": true
+    },
+    {
+      "id": "imagen-sin-comprobar",
+      "severidad": "alta",
+      "titulo": "Vas a necesitar oblicuas: compruébalas antes de pintar",
+      "texto": "Las proyecciones alares y obturatrices, el inlet y el outlet o la mortaja se bloquean con facilidad por la mesa o los soportes. Hazlas con el arco en C con el paciente ya colocado y aún sin pintar.",
+      "mostrarSi": {
+        "imagen": [
+          "im-oblicuas"
+        ]
+      },
+      "noSi": {
+        "checklist": [
+          "ck-imagen"
+        ]
+      }
+    },
+    {
+      "id": "lado-sano-accesible",
+      "severidad": "media",
+      "titulo": "Vas a comparar con el lado sano: déjalo accesible",
+      "texto": "Es como se verifica longitud y rotación. Si el lado contralateral queda tapado por soportes o fuera del alcance del arco, la comparación no se puede hacer y la rotación se decide a ojo.",
+      "mostrarSi": {
+        "imagen": [
+          "im-lado-sano"
+        ]
+      }
+    },
+    {
+      "id": "traccion-manual-larga",
+      "severidad": "media",
+      "titulo": "La tracción manual se agota",
+      "texto": "Sirve para procedimientos cortos. Si la reducción hay que mantenerla mientras se coloca el implante, el ayudante se cansa y la reducción se pierde. Considera distractor o mesa.",
+      "mostrarSi": {
+        "traccion": [
+          "tr-manual"
+        ]
+      }
+    },
+    {
+      "id": "distractor-libera",
+      "severidad": "info",
+      "titulo": "El distractor te libera de la mesa de tracción",
+      "texto": "Recupera longitud y eje sin poste perineal y sin pierna contralateral en litotomía, y te deja elegir la posición que convenga al abordaje. Es la herramienta predilecta de Mast, Jakob y Ganz.",
+      "mostrarSi": {
+        "traccion": [
+          "tr-distractor"
+        ]
+      }
+    },
+    {
+      "id": "politrauma-tiempo",
+      "severidad": "alta",
+      "titulo": "Posición y tiempo en el paciente comprometido",
+      "texto": "En el paciente que en el Paso 1 no era estable, la posición debe permitir el procedimiento más corto posible y facilitar el acceso del equipo de anestesia. Vigila la normotermia: la hipotermia agrava la coagulopatía.",
+      "mostrarSiAlguno": [
+        {
+          "posicion": [
+            "pos-prono"
+          ]
+        },
+        {
+          "posicion": [
+            "pos-beach"
+          ]
+        },
+        {
+          "posicion": [
+            "pos-flotante"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rg-acetabulo-supino-posterior",
+      "severidad": "critica",
+      "titulo": "Un patrón posterior no se alcanza en supino",
+      "texto": "La pared y la columna posteriores se abordan por Kocher-Langenbeck, y eso exige prono o lateral. En supino no hay forma de llegar, y descubrirlo con el campo montado obliga a desmontar, volver a preparar y volver a pintar. Si el patrón afecta además a la columna anterior, la salida es una posición flotante o dos tiempos.",
+      "mostrarSi": {
+        "ctx": [
+          "acet-posterior"
+        ],
+        "posicion": [
+          "pos-supino"
+        ]
+      }
+    },
+    {
+      "id": "rg-acetabulo-posicion",
+      "severidad": "alta",
+      "titulo": "El patrón acetabular decide la posición, no al revés",
+      "texto": "Los patrones posteriores se abordan en prono o lateral por Kocher-Langenbeck; los anteriores, en supino por ilioinguinal o anterior intrapélvico. Si el patrón afecta a las dos columnas, decide antes si vas a necesitar una posición flotante o dos tiempos.",
+      "mostrarSiAlguno": [
+        {
+          "ctx": [
+            "acet-posterior"
+          ]
+        },
+        {
+          "ctx": [
+            "acet-anterior"
+          ]
+        },
+        {
+          "ctx": [
+            "acet-ambas"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rg-columna-posterior-pos",
+      "severidad": "media",
+      "titulo": "Fragmento posteromedial: la posición tiene que permitir llegar por detrás",
+      "texto": "Con una columna posteromedial afectada, el supino puro no da acceso. Valora decúbito flotante, prono, o una posición que permita flexionar la rodilla y rotar la cadera para abrir el intervalo posteromedial.",
+      "mostrarSi": {
+        "ctx": [
+          "col-posterior"
+        ]
+      }
+    }
+  ],
+  "reglasCoherencia": [
+    {
+      "id": "r7-tc-sin-espacio",
+      "titulo": "Coherencia — imagen avanzada sin comprobar la posición",
+      "si": {
+        "imagen": [
+          "im-tc-artro"
+        ]
+      },
+      "noSi": {
+        "checklist": [
+          "ck-imagen"
+        ]
+      },
+      "severidad": "advertencia",
+      "mensaje": "La TC intraoperatoria y la artroscopia condicionan la mesa y el espacio alrededor del paciente. Confirma que la posición elegida las permite antes de pintar."
+    },
+    {
+      "id": "r7-beach-anestesia",
+      "titulo": "Coherencia — silla de playa sin consenso anestésico",
+      "si": {
+        "posicion": [
+          "pos-beach"
+        ]
+      },
+      "noSi": {
+        "checklist": [
+          "ck-anestesia"
+        ]
+      },
+      "severidad": "advertencia",
+      "mensaje": "La sedestación exige un objetivo tensional pactado con anestesia. Es la posición donde el desacuerdo sale más caro."
+    }
+  ],
+  "evidencia": [
+    {
+      "nivel": "4",
+      "afirmacion": "La mesa ortopédica de tracción se asocia a neuroapraxia del nervio pudendo por el poste perineal y a síndrome compartimental de la extremidad contralateral; minimizar el tiempo y la fuerza de tracción reduce ambos riesgos.",
+      "refs": [
+        "ref-mesa-traccion"
+      ]
+    },
+    {
+      "nivel": "referencia",
+      "afirmacion": "La posición se planifica a partir del abordaje anatómico previsto, no al revés.",
+      "refs": [
+        "ref-hoppenfeld"
+      ]
+    }
+  ],
+  "autoevaluacion": [
+    {
+      "pregunta": "Cita dos riesgos específicos de la mesa ortopédica de tracción.",
+      "opciones": [
+        "Hipotensión cerebral y lesión ocular",
+        "Lesión del nervio pudendo por el poste perineal y síndrome compartimental de la extremidad contralateral",
+        "Lesión del plexo braquial y neumotórax",
+        "Rabdomiólisis y trombosis venosa"
+      ],
+      "correcta": 1,
+      "explicacion": "Ambos dependen del tiempo y de la fuerza de tracción: minimizarlos es la prevención más eficaz.",
+      "origen": "libro"
+    },
+    {
+      "pregunta": "¿Qué cinco preguntas deben resolverse antes de pintar el campo?",
+      "opciones": [
+        "Diagnóstico, clasificación, estabilidad, reducción y principio",
+        "Que la posición permita el abordaje, la reducción, todas las proyecciones de fluoroscopia, la protección de puntos de presión y plexos, y la tolerancia anestésica",
+        "Implante, material, tamaño, longitud y número de tornillos",
+        "Antibiótico, profilaxis, consentimiento, ayuno y alergia"
+      ],
+      "correcta": 1,
+      "explicacion": "Contestarlas cuesta minutos antes de la incisión. Después, con el campo montado, ya no hay margen.",
+      "origen": "libro"
+    },
+    {
+      "pregunta": "¿Por qué el acetábulo obliga a decidir la posición con especial cuidado?",
+      "opciones": [
+        "Porque el paciente suele ser politraumatizado",
+        "Porque la posición decide qué columna es accesible: supino para el abordaje anterior, prono o lateral para el Kocher-Langenbeck",
+        "Porque exige mesa de tracción siempre",
+        "Porque la fluoroscopia no sirve en pelvis"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el ejemplo más claro de que la posición y el abordaje son una sola decisión, no dos.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "En silla de playa, ¿por qué la presión arterial medida en el brazo puede engañar?",
+      "opciones": [
+        "Porque el manguito queda flojo",
+        "Porque en sedestación sobreestima la presión de perfusión cerebral, que está por encima del punto de medida",
+        "Porque la cabeza está fijada",
+        "Porque el hombro operado altera el flujo"
+      ],
+      "correcta": 1,
+      "explicacion": "Por eso el objetivo tensional se consensúa con anestesia antes de empezar.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Qué ventaja tiene reducir con distractor en lugar de con mesa de tracción?",
+      "opciones": [
+        "Es más rápido de montar",
+        "Recupera longitud y eje sin poste perineal ni pierna contralateral en litotomía, y deja elegir la posición según el abordaje",
+        "No requiere fluoroscopia",
+        "Permite prescindir del bloqueo del clavo"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la herramienta predilecta de Mast, Jakob y Ganz, y evita de raíz las dos complicaciones clásicas de la mesa.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "El arco en C, ¿por dónde suele entrar?",
+      "opciones": [
+        "Por los pies",
+        "Por el lado opuesto al cirujano",
+        "Por el lado del cirujano",
+        "Por la cabecera"
+      ],
+      "correcta": 1,
+      "explicacion": "Deja libre el campo de trabajo del cirujano y permite el ir y venir del intensificador sin romper la esterilidad.",
+      "origen": "app"
+    }
+  ],
+  "sintesis": "La posición se elige para que el abordaje, la reducción y la imagen sean posibles, y para que el paciente esté seguro durante todo el tiempo previsto. Cinco preguntas antes de pintar —abordaje, reducción, proyecciones, protección y tolerancia anestésica— evitan el peor escenario, que es descubrir con el campo montado que no se puede reducir, fijar o radiografiar.",
+  "lecturas": [
+    "Hoppenfeld S. — Surgical Exposures in Orthopaedics: The Anatomic Approach.",
+    "Manual AO, principios de colocación e imagen intraoperatoria."
+  ],
+  "refs": [
+    "ref-hoppenfeld",
+    "ref-mesa-traccion",
+    "ref-mast-1989"
+  ]
+}

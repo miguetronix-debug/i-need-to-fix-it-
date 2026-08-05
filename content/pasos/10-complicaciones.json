@@ -1,0 +1,950 @@
+{
+  "id": "paso-10-complicaciones",
+  "numero": 10,
+  "titulo": "Las complicaciones",
+  "subtitulo": "Anticiparlas no es pesimismo: es tener el plan B antes de necesitarlo",
+  "preguntaClave": "¿Qué puede salir mal en este caso, qué necesito tener en la sala, y en qué paso previo se previene?",
+  "objetivos": [
+    "Anticipar lo que puede fallar en el quirófano y tener el plan B decidido antes de incidir",
+    "Prevenir «hacia atrás»: cada complicación diferida nace en un paso concreto del método",
+    "Reconocer las complicaciones propias de la región y del huésped de este caso",
+    "Distinguir la no unión mecánica de la biológica, porque el tratamiento es distinto",
+    "Revisar el caso a la luz de los nueve pasos cuando algo falla, para encontrar dónde se perdió"
+  ],
+  "decisiones": [
+    {
+      "id": "plan-b",
+      "pregunta": "¿Qué plan B tienes decidido antes de incidir?",
+      "ayuda": "El momento de resolver esto es ahora, no con el campo abierto. Marca lo que de verdad tienes previsto.",
+      "tipo": "opcionMultiple",
+      "opciones": [
+        {
+          "id": "pb-reduccion",
+          "etiqueta": "Plan B de reducción",
+          "criterios": [
+            "Si la maniobra prevista no consigue la reducción, ¿qué haces?",
+            "Distractor, fijador como reductor, joysticks, ampliar la ventana"
+          ]
+        },
+        {
+          "id": "pb-abordaje",
+          "etiqueta": "Abordaje ampliable previsto",
+          "criterios": [
+            "Saber por dónde se extiende la incisión antes de trazarla",
+            "Una vía que no se puede ampliar obliga a improvisar una segunda"
+          ]
+        },
+        {
+          "id": "pb-implante",
+          "etiqueta": "Implante alternativo en la sala",
+          "criterios": [
+            "Tamaños y longitudes alternativas, y la placa del plan B",
+            "El implante que no está no existe, aunque esté en el catálogo"
+          ]
+        },
+        {
+          "id": "pb-extraccion",
+          "etiqueta": "Set de extracción y material de rescate",
+          "criterios": [
+            "Extractor de tornillos rotos, brocas de rescate, alicates de corte",
+            "Se pide antes de empezar: pedirlo a mitad de la cirugía cuesta una hora"
+          ]
+        },
+        {
+          "id": "pb-injerto",
+          "etiqueta": "Injerto o sustituto disponible",
+          "criterios": [
+            "Si el hueso es peor de lo previsto o el defecto mayor",
+            "Decidir de dónde sale el autoinjerto forma parte del plan, no del imprevisto"
+          ]
+        },
+        {
+          "id": "pb-aumentacion",
+          "etiqueta": "Aumentación con cemento",
+          "criterios": [
+            "Hueso osteoporótico: mejora el anclaje del tornillo",
+            "Exige decidirlo antes, porque cambia el implante y la secuencia"
+          ]
+        },
+        {
+          "id": "pb-conversion",
+          "etiqueta": "Conversión a artroplastia",
+          "criterios": [
+            "Cuello femoral, húmero proximal, calcáneo: si al abrir la reconstrucción no es viable",
+            "El equipo y el implante tienen que estar disponibles, no solo la idea"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vigilancia",
+      "pregunta": "¿Qué vas a vigilar en el postoperatorio de ESTE caso?",
+      "ayuda": "No es una lista genérica: se marca lo que este paciente y esta fractura hacen probable.",
+      "tipo": "opcionMultiple",
+      "opciones": [
+        {
+          "id": "vg-nounion",
+          "etiqueta": "Retardo o no unión",
+          "criterios": [
+            "Radiografías seriadas buscando callo, y a los tres meses una decisión",
+            "Se previno o se condenó en los Pasos 3, 5 y 8"
+          ]
+        },
+        {
+          "id": "vg-infeccion",
+          "etiqueta": "Infección",
+          "criterios": [
+            "Dolor que no cede, herida que supura, marcadores que no bajan",
+            "Se previno en el Paso 1 (tiempos y partes blandas) y en el Paso 8 (técnica)"
+          ]
+        },
+        {
+          "id": "vg-malaunion",
+          "etiqueta": "Mala unión: eje o rotación",
+          "criterios": [
+            "El defecto rotacional no aparece en la radiografía: aparece al caminar",
+            "Se previno verificando en el Paso 9, no después"
+          ]
+        },
+        {
+          "id": "vg-artrosis",
+          "etiqueta": "Artrosis postraumática",
+          "criterios": [
+            "Escalón articular residual: el reloj empieza el día de la cirugía",
+            "Se previno en el Paso 4, con la reducción anatómica del bloque"
+          ]
+        },
+        {
+          "id": "vg-fallo",
+          "etiqueta": "Fallo del implante por fatiga",
+          "criterios": [
+            "El implante es un puente temporal: si el hueso no cura, acaba rompiéndose",
+            "Se previno eligiendo bien la estabilidad en los Pasos 3 y 5"
+          ]
+        },
+        {
+          "id": "vg-rigidez",
+          "etiqueta": "Rigidez articular",
+          "criterios": [
+            "Fijación insuficiente para movilizar precozmente",
+            "La estabilidad se elige para poder mover, no solo para que aguante"
+          ]
+        },
+        {
+          "id": "vg-necrosis",
+          "etiqueta": "Necrosis avascular",
+          "criterios": [
+            "Cuello femoral, escafoides, cabeza humeral y astrágalo",
+            "Se anticipa desde la clasificación, no se descubre a los seis meses"
+          ]
+        },
+        {
+          "id": "vg-compartimental",
+          "etiqueta": "Síndrome compartimental",
+          "criterios": [
+            "Antebrazo y pierna, sobre todo tras alta energía o tracción prolongada",
+            "Dolor desproporcionado y dolor al estiramiento pasivo: no esperes al pulso"
+          ]
+        },
+        {
+          "id": "vg-sdrc",
+          "etiqueta": "Síndrome doloroso regional complejo",
+          "criterios": [
+            "Clásico del radio distal; dolor, cambios tróficos y rigidez desproporcionados",
+            "Movilización precoz y vitamina C según el protocolo del centro"
+          ]
+        },
+        {
+          "id": "vg-ho",
+          "etiqueta": "Osificación heterotópica",
+          "criterios": [
+            "Codo, cadera y acetábulo, sobre todo tras abordajes extensos o traumatismo craneal asociado",
+            "Valorar profilaxis según el riesgo del paciente"
+          ]
+        },
+        {
+          "id": "vg-material",
+          "etiqueta": "Irritación o migración del material",
+          "criterios": [
+            "Zonas subcutáneas: tobillo, cúbito, clavícula, olécranon",
+            "Las agujas del cerclaje en ocho migran; avísale al paciente antes, no después"
+          ]
+        },
+        {
+          "id": "vg-tromboembolica",
+          "etiqueta": "Enfermedad tromboembólica",
+          "criterios": [
+            "Miembro inferior, inmovilización y cirugía prolongada",
+            "Tromboprofilaxis balanceada con el riesgo hemorrágico individual"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tipo-nounion",
+      "pregunta": "Si esto no consolida, ¿de qué tipo será la no unión?",
+      "ayuda": "Es la pregunta que ordena el rescate. Mecánica y biológica se tratan al revés la una de la otra.",
+      "tipo": "opcionUnica",
+      "mostrarSi": {
+        "vigilancia": [
+          "vg-nounion"
+        ]
+      },
+      "opciones": [
+        {
+          "id": "nu-mecanica",
+          "etiqueta": "Mecánica · hipertrófica",
+          "criterios": [
+            "Hay callo abundante pero no puentea: el hueso quiere curar y el montaje no le deja",
+            "Callo en pata de elefante en la radiografía",
+            "El tratamiento es mecánico: comprimir, rigidizar el montaje o cambiarlo"
+          ]
+        },
+        {
+          "id": "nu-biologica",
+          "etiqueta": "Biológica · atrófica",
+          "criterios": [
+            "No hay callo: extremos afilados y esclerosos, la biología no responde",
+            "Foco desvitalizado, o huésped que no ayuda",
+            "El tratamiento es biológico: injerto, decorticación y optimizar al paciente"
+          ]
+        },
+        {
+          "id": "nu-septica",
+          "etiqueta": "Séptica",
+          "criterios": [
+            "Toda no unión es infecciosa hasta que se demuestre lo contrario",
+            "Cultivos de varias muestras profundas antes de decidir nada",
+            "Un foco estable puede consolidar pese a la infección: la estabilidad se mantiene"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "huesped",
+      "pregunta": "¿Qué del huésped juega en contra?",
+      "ayuda": "Son factores que no cambian el implante pero sí la probabilidad de que funcione, y algunos son modificables.",
+      "tipo": "opcionMultiple",
+      "opciones": [
+        {
+          "id": "hu-tabaco",
+          "etiqueta": "Tabaquismo",
+          "criterios": [
+            "Es el factor modificable con más peso sobre la consolidación",
+            "Merece una conversación explícita, no una nota en la historia"
+          ]
+        },
+        {
+          "id": "hu-diabetes",
+          "etiqueta": "Diabetes mal controlada",
+          "criterios": [
+            "Más infección, más retardo de consolidación, peor cicatrización"
+          ]
+        },
+        {
+          "id": "hu-nutricion",
+          "etiqueta": "Desnutrición o déficit de vitamina D",
+          "criterios": [
+            "Frecuente y poco buscado en el paciente frágil"
+          ]
+        },
+        {
+          "id": "hu-aines",
+          "etiqueta": "AINE o corticoides prolongados",
+          "criterios": [
+            "Interfieren con la fase inflamatoria inicial de la consolidación"
+          ]
+        },
+        {
+          "id": "hu-vascular",
+          "etiqueta": "Enfermedad vascular periférica",
+          "criterios": [
+            "Compromete la biología del foco y la cicatrización de la herida"
+          ]
+        },
+        {
+          "id": "hu-ninguno",
+          "etiqueta": "Nada relevante",
+          "criterios": [
+            "Huésped sin factores en contra: la mecánica manda"
+          ]
+        }
+      ]
+    }
+  ],
+  "derivados": [
+    {
+      "id": "hacia-atras",
+      "titulo": "Dónde se previene lo que estás vigilando",
+      "tipo": "reglas",
+      "modo": "todas",
+      "reglas": [
+        {
+          "si": {
+            "vigilancia": [
+              "vg-nounion"
+            ]
+          },
+          "texto": "No unión → Pasos 3 y 5: la estabilidad y el principio. Y Paso 8: la biología que dejaste intacta. Si no consolida, empieza por revisar esas tres decisiones antes que el implante."
+        },
+        {
+          "si": {
+            "vigilancia": [
+              "vg-infeccion"
+            ]
+          },
+          "texto": "Infección → Paso 1, con los tiempos y el estado de las partes blandas, y Paso 8, con la técnica y el cierre sin tensión. La ventana de partes blandas no se salta."
+        },
+        {
+          "si": {
+            "vigilancia": [
+              "vg-malaunion"
+            ]
+          },
+          "texto": "Mala unión → Paso 4 y la verificación del Paso 9. La rotación es la que más se olvida y la que peor se tolera: se comprueba contra el lado sano antes de la fijación definitiva."
+        },
+        {
+          "si": {
+            "vigilancia": [
+              "vg-artrosis"
+            ]
+          },
+          "texto": "Artrosis postraumática → Paso 4: la reducción anatómica del bloque articular. El escalón residual es artrosis en potencia y el reloj empieza el día de la cirugía."
+        },
+        {
+          "si": {
+            "vigilancia": [
+              "vg-fallo"
+            ]
+          },
+          "texto": "Fallo del implante → Pasos 3 y 5. El material no falla por malo: falla porque el hueso nunca curó y el puente temporal tuvo que aguantar más de lo que debía."
+        },
+        {
+          "si": {
+            "vigilancia": [
+              "vg-rigidez"
+            ]
+          },
+          "texto": "Rigidez → Pasos 3 y 5. La estabilidad no se elige solo para que aguante: se elige para poder mover pronto."
+        },
+        {
+          "si": {
+            "vigilancia": [
+              "vg-compartimental"
+            ]
+          },
+          "texto": "Compartimental → Paso 1, donde se evalúa, y Paso 7 si hay tracción prolongada o la pierna contralateral en litotomía."
+        }
+      ]
+    },
+    {
+      "id": "rescate",
+      "titulo": "Cómo se rescataría",
+      "tipo": "reglas",
+      "modo": "todas",
+      "reglas": [
+        {
+          "si": {
+            "tipo-nounion": [
+              "nu-mecanica"
+            ]
+          },
+          "texto": "No unión hipertrófica: el problema es el montaje, no la biología. Hay callo y no puentea porque el movimiento es excesivo. La respuesta es mecánica: comprimir el foco, rigidizar o cambiar el constructo. El injerto aquí sobra."
+        },
+        {
+          "si": {
+            "tipo-nounion": [
+              "nu-biologica"
+            ]
+          },
+          "texto": "No unión atrófica: el problema es la biología. La respuesta es aportarla —injerto, decorticación— y optimizar al huésped. Rigidizar más un foco que no responde no lo cura."
+        },
+        {
+          "si": {
+            "tipo-nounion": [
+              "nu-septica"
+            ]
+          },
+          "texto": "No unión séptica: desbridamiento, cultivos de varias muestras profundas y antibiótico dirigido. Y una regla que sorprende: la estabilidad se mantiene. Un foco estable puede consolidar pese a la infección; uno inestable no consolida ni estéril."
+        },
+        {
+          "si": {
+            "vigilancia": [
+              "vg-fallo"
+            ]
+          },
+          "texto": "Antes de recambiar un implante roto, entiende por qué el hueso no curó. Poner el mismo montaje otra vez repite el mismo fallo con seis meses de retraso."
+        }
+      ]
+    },
+    {
+      "id": "pronostico-regional",
+      "titulo": "Lo que anticipa la clasificación de este caso",
+      "tipo": "reglas",
+      "modo": "todas",
+      "reglas": [
+        {
+          "si": {
+            "ctx": [
+              "riesgo-necrosis-humeral"
+            ]
+          },
+          "texto": "Predictores de isquemia de la cabeza humeral presentes: vigila la necrosis con radiografías seriadas durante al menos dos años, y advierte al paciente de que el colapso puede aparecer tarde."
+        },
+        {
+          "si": {
+            "ctx": [
+              "riesgo-necrosis-astragalo"
+            ]
+          },
+          "texto": "Astrágalo con luxación asociada: el riesgo de necrosis escala con el tipo de Hawkins, del 20-50 % en el II a más del 80 % en el III. El signo de Hawkins —radiolucencia subcondral hacia las 6-8 semanas— es señal de que la vascularización se conserva."
+        },
+        {
+          "si": {
+            "ctx": [
+              "garden-desplazada"
+            ]
+          },
+          "texto": "Cuello femoral desplazado: necrosis y no unión son las dos complicaciones que definen el resultado. Si se optó por fijar, el seguimiento tiene que ser largo y la conversación sobre una eventual artroplastia empieza ahora."
+        },
+        {
+          "si": {
+            "ctx": [
+              "valorar-artrodesis"
+            ]
+          },
+          "texto": "Calcáneo con faceta posterior conminuta: el dolor subastragalino residual es la norma más que la excepción. Si no se hizo artrodesis primaria, conviene tenerla en el horizonte."
+        },
+        {
+          "si": {
+            "ctx": [
+              "periprotesica"
+            ]
+          },
+          "texto": "Periprotésica: vigila el aflojamiento del vástago además de la consolidación. Y recuerda que la zona entre implantes es un concentrador de tensión: solapa siempre placa y vástago."
+        },
+        {
+          "si": {
+            "ctx": [
+              "acet-posterior"
+            ]
+          },
+          "texto": "Acetábulo posterior: osificación heterotópica y lesión del ciático son las dos propias de esta vía. Valora profilaxis de la osificación según el riesgo."
+        },
+        {
+          "si": {
+            "ctx": [
+              "pelvis-hemorragia"
+            ]
+          },
+          "texto": "Patrón pélvico de alta energía: lesión genitourinaria, neurológica lumbosacra y trombosis venosa son complicaciones asociadas frecuentes, y ninguna de las tres se busca sola."
+        },
+        {
+          "si": {
+            "ctx": [
+              "mason-compleja"
+            ]
+          },
+          "texto": "Codo complejo: la rigidez es la complicación que decide el resultado funcional. La fijación tiene que permitir movilizar en la primera semana, y la osificación heterotópica es frecuente."
+        },
+        {
+          "si": {
+            "ctx": [
+              "riesgo-sindesmosis"
+            ]
+          },
+          "texto": "Sindesmosis lesionada: la malreducción sindesmótica es la causa más frecuente de mal resultado del tobillo. Comprueba la reducción con TC si tienes dudas, porque en la radiografía no se ve."
+        }
+      ]
+    }
+  ],
+  "esencial": [
+    {
+      "tipo": "parrafo",
+      "texto": "Planificar las complicaciones no es pesimismo: es la diferencia entre resolver un problema en el acto y descubrir, con el campo abierto, que falta el implante, el instrumento o el plan B. El Paso 10 obliga a anticipar qué puede salir mal y a tener a mano lo necesario para solucionarlo, sin perder tiempo."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "Las tres preguntas de la anticipación intraoperatoria",
+      "texto": "¿Y si la reducción no se logra como esperaba? Entonces hace falta un plan B de reducción y un abordaje ampliable, previstos de antemano. ¿Y si el hueso es peor de lo previsto? Entonces hacen falta tornillos bloqueados, aumentación, injerto o sustituto, disponibles en la sala y no en el catálogo. ¿Tengo el inventario? Implantes de tamaño alternativo, set de extracción e instrumental de rescate, verificados antes de incidir. Las tres se contestan antes de la incisión o no se contestan."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "idea",
+      "titulo": "Las complicaciones se previenen hacia atrás",
+      "texto": "La mayoría de las complicaciones de la osteosíntesis no nacen en el quirófano, sino en una decisión equivocada de los pasos previos: una estabilidad mal elegida, una reducción que traicionó la biología, un abordaje que desvitalizó el foco. Por eso la prevención no está en este paso: está en los nueve anteriores. Y por eso, cuando algo falla, revisar el caso a la luz de los nueve pasos suele revelar exactamente dónde se perdió la fractura."
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Cada complicación tiene su paso",
+      "encabezados": [
+        "Complicación",
+        "Origen habitual",
+        "Se previene en"
+      ],
+      "filas": [
+        [
+          "Retardo o no unión",
+          "Error mecánico —montaje demasiado rígido o demasiado laxo— o biológico —foco desvitalizado—.",
+          "Pasos 3, 5 y 8"
+        ],
+        [
+          "Infección",
+          "Partes blandas comprometidas, tiempos mal elegidos, técnica traumática.",
+          "Pasos 1 y 8"
+        ],
+        [
+          "Mala unión: eje o rotación",
+          "Reducción funcional no verificada.",
+          "Paso 4 y verificación del 9"
+        ],
+        [
+          "Artrosis postraumática",
+          "Escalón articular residual.",
+          "Paso 4"
+        ],
+        [
+          "Fallo del implante por fatiga",
+          "El foco nunca consolidó.",
+          "Pasos 3 y 5"
+        ],
+        [
+          "Rigidez",
+          "Fijación insuficiente para movilizar precozmente.",
+          "Pasos 3 y 5"
+        ]
+      ]
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Las regionales que hay que anticipar",
+      "encabezados": [
+        "Complicación",
+        "Dónde"
+      ],
+      "filas": [
+        [
+          "Necrosis avascular",
+          "Cuello femoral, escafoides, cabeza humeral, astrágalo."
+        ],
+        [
+          "Síndrome compartimental",
+          "Antebrazo y pierna."
+        ],
+        [
+          "Síndrome doloroso regional complejo",
+          "Radio distal, sobre todo."
+        ],
+        [
+          "Osificación heterotópica",
+          "Codo, cadera y acetábulo."
+        ],
+        [
+          "Irritación o migración del material",
+          "Zonas subcutáneas: tobillo, cúbito, clavícula, olécranon."
+        ]
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "La no unión se trata al revés según de qué tipo sea",
+      "texto": "La pregunta no es cómo se trata una no unión, sino de qué tipo es. La hipertrófica tiene callo abundante que no llega a puentear: el hueso quiere curar y el montaje no le deja, así que la respuesta es mecánica —comprimir, rigidizar, cambiar el constructo— y el injerto sobra. La atrófica no tiene callo: extremos afilados y esclerosos, biología que no responde, y entonces la respuesta es biológica —injerto, decorticación, optimizar al huésped— y rigidizar más no cura nada. Confundirlas es tratar cada una con el remedio de la otra."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "error",
+      "titulo": "Toda no unión es séptica hasta que se demuestre lo contrario",
+      "texto": "Antes de decidir entre mecánica y biológica hay que descartar la infección, con cultivos de varias muestras profundas y no de un frotis. Y aquí hay una regla que sorprende a quien la oye por primera vez: ante un foco infectado, la estabilidad se mantiene. Un foco estable puede consolidar pese a la infección; uno inestable no consolida ni estando estéril. Retirar el material de un foco no consolidado por miedo a la infección suele empeorar las dos cosas."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "Antes de recambiar, entiende por qué no curó",
+      "texto": "El implante es un puente temporal. Cuando se rompe por fatiga, no se rompió porque fuera malo: se rompió porque el hueso no consolidó y tuvo que aguantar más tiempo del previsto. Poner el mismo montaje otra vez es repetir el mismo fallo con seis meses de retraso. Primero se identifica la causa —mecánica o biológica—, y solo entonces se elige el rescate."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Lo que el huésped aporta, y que sí se puede cambiar",
+      "items": [
+        "Tabaquismo: es el factor modificable con más peso sobre la consolidación, y merece una conversación explícita.",
+        "Diabetes mal controlada: más infección, más retardo, peor cicatrización.",
+        "Desnutrición y déficit de vitamina D: frecuentes y poco buscados en el paciente frágil.",
+        "AINE y corticoides prolongados: interfieren con la fase inflamatoria inicial.",
+        "Enfermedad vascular periférica: compromete el foco y la herida a la vez."
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "sintesis",
+      "titulo": "El método como un todo",
+      "texto": "Recorridos los diez pasos —del huésped y la clasificación hasta la anticipación de las complicaciones— queda claro por qué no hay fractura que no se pueda resolver si se planifica. Cada paso encadena con el siguiente: clasificar define la estabilidad; la estabilidad define la reducción y el principio; el principio define el implante; y la fractura, el implante y la biología definen juntos la posición, el abordaje y las técnicas. Quien domina esta cadena no necesita una receta para cada hueso: tiene un método para cualquiera."
+    }
+  ],
+  "alertas": [
+    {
+      "id": "prevencion-hacia-atras",
+      "severidad": "media",
+      "titulo": "Las complicaciones se previenen en los pasos anteriores",
+      "texto": "La mayoría no nacen en el quirófano sino en una decisión previa. Este paso sirve para anticiparlas y tener el plan B; prevenirlas fue trabajo de los nueve pasos anteriores.",
+      "mostrarSiempre": true
+    },
+    {
+      "id": "sin-plan-b",
+      "severidad": "alta",
+      "titulo": "No has decidido ningún plan B",
+      "texto": "Las tres preguntas de la anticipación —qué haces si no reduces, qué haces si el hueso es peor de lo previsto, y si tienes el inventario— se contestan antes de la incisión. Después ya no son preguntas: son problemas.",
+      "mostrarSiempre": true,
+      "noSiAlguno": [
+        {
+          "plan-b": [
+            "pb-reduccion"
+          ]
+        },
+        {
+          "plan-b": [
+            "pb-abordaje"
+          ]
+        },
+        {
+          "plan-b": [
+            "pb-implante"
+          ]
+        },
+        {
+          "plan-b": [
+            "pb-extraccion"
+          ]
+        },
+        {
+          "plan-b": [
+            "pb-injerto"
+          ]
+        },
+        {
+          "plan-b": [
+            "pb-aumentacion"
+          ]
+        },
+        {
+          "plan-b": [
+            "pb-conversion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osteoporotico-sin-recurso",
+      "severidad": "alta",
+      "titulo": "Hueso osteoporótico sin recurso de rescate previsto",
+      "texto": "En el Paso 6 dijiste que el hueso es osteoporótico. Si al colocar el primer tornillo el agarre resulta peor de lo esperado, necesitas la salida ya decidida: aumentación con cemento, tornillos de mayor anclaje o un montaje más largo. Improvisarlo con el campo abierto sale caro.",
+      "mostrarSi": {
+        "ctx": [
+          "hueso-osteoporotico"
+        ]
+      },
+      "noSiAlguno": [
+        {
+          "plan-b": [
+            "pb-aumentacion"
+          ]
+        },
+        {
+          "plan-b": [
+            "pb-implante"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "articular-sin-conversion",
+      "severidad": "media",
+      "titulo": "Articular compleja: ¿y si al abrir no es reconstruible?",
+      "texto": "En algunas superficies —cuello femoral, húmero proximal de cuatro partes, calcáneo Sanders IV— la reconstrucción puede resultar inviable al verla. Tener decidido si se convierte a artroplastia o artrodesis, y tener el implante en la sala, es lo que evita cerrar y volver otro día.",
+      "mostrarSi": {
+        "ctx": [
+          "artic-C"
+        ]
+      },
+      "noSi": {
+        "plan-b": [
+          "pb-conversion"
+        ]
+      }
+    },
+    {
+      "id": "nounion-sin-tipo",
+      "severidad": "alta",
+      "titulo": "Vigilas la no unión pero no has previsto de qué tipo sería",
+      "texto": "Mecánica y biológica se tratan al revés la una de la otra. Anticipar cuál es la más probable en este caso —por el montaje que elegiste y por la biología que dejaste— orienta el seguimiento y evita perder meses.",
+      "mostrarSi": {
+        "vigilancia": [
+          "vg-nounion"
+        ]
+      },
+      "noSiAlguno": [
+        {
+          "tipo-nounion": [
+            "nu-mecanica"
+          ]
+        },
+        {
+          "tipo-nounion": [
+            "nu-biologica"
+          ]
+        },
+        {
+          "tipo-nounion": [
+            "nu-septica"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "septica-primero",
+      "severidad": "critica",
+      "titulo": "Descarta la infección antes de decidir el rescate",
+      "texto": "Toda no unión es séptica hasta que se demuestre lo contrario. Cultivos de varias muestras profundas, no un frotis. Y si está infectada, la estabilidad se mantiene: un foco estable puede consolidar pese a la infección, uno inestable no consolida ni estéril.",
+      "mostrarSi": {
+        "vigilancia": [
+          "vg-nounion"
+        ]
+      }
+    },
+    {
+      "id": "tabaco",
+      "severidad": "alta",
+      "titulo": "El tabaco es el factor modificable con más peso",
+      "texto": "Sobre la consolidación pesa más que casi cualquier otra cosa que puedas cambiar. Merece una conversación explícita con el paciente y un registro en la historia, no una nota al margen.",
+      "mostrarSi": {
+        "huesped": [
+          "hu-tabaco"
+        ]
+      }
+    },
+    {
+      "id": "puente-fatiga",
+      "severidad": "alta",
+      "titulo": "Montaje de carga soportada: la fatiga es cuestión de tiempo",
+      "texto": "Elegiste una placa que puentea, así que el implante aguanta toda la carga hasta que el hueso cure. Si a los tres meses no hay callo, la decisión es entonces y no cuando la placa se rompa. Define ya el calendario de radiografías y el umbral para intervenir.",
+      "mostrarSi": {
+        "ctx": [
+          "carga-soportada"
+        ]
+      }
+    },
+    {
+      "id": "compartimental-alerta",
+      "severidad": "critica",
+      "titulo": "El compartimental se diagnostica antes de que falte el pulso",
+      "texto": "Dolor desproporcionado y dolor al estiramiento pasivo son los signos precoces. Cuando desaparece el pulso ya es tarde. En el paciente sedado o intubado, la sospecha se mide: presión compartimental.",
+      "mostrarSi": {
+        "vigilancia": [
+          "vg-compartimental"
+        ]
+      }
+    },
+    {
+      "id": "rotacion-postop",
+      "severidad": "media",
+      "titulo": "El defecto rotacional no aparece en la radiografía",
+      "texto": "Aparece cuando el paciente camina, y entonces ya está consolidado. Si vigilas la mala unión, la comprobación útil era intraoperatoria: contra el lado sano, antes de la fijación definitiva.",
+      "mostrarSi": {
+        "vigilancia": [
+          "vg-malaunion"
+        ]
+      }
+    }
+  ],
+  "reglasCoherencia": [
+    {
+      "id": "r10-relativa-sin-vigilar",
+      "titulo": "Coherencia — estabilidad relativa sin vigilar la consolidación",
+      "si": {
+        "ctx": [
+          "est-relativa"
+        ]
+      },
+      "noSi": {
+        "vigilancia": [
+          "vg-nounion"
+        ]
+      },
+      "severidad": "advertencia",
+      "mensaje": "Elegiste estabilidad relativa, que cura por callo y depende de que la dosis de movimiento sea la correcta. Es justo el escenario donde hay que vigilar activamente la consolidación: si a los tres meses no hay callo, la decisión se toma entonces."
+    },
+    {
+      "id": "r10-articular-sin-artrosis",
+      "titulo": "Coherencia — fractura articular sin contar con la artrosis",
+      "si": {
+        "ctx": [
+          "artic"
+        ]
+      },
+      "noSi": {
+        "vigilancia": [
+          "vg-artrosis"
+        ]
+      },
+      "severidad": "advertencia",
+      "mensaje": "Toda fractura articular lleva un riesgo de artrosis postraumática que se decidió en el Paso 4, con la calidad de la reducción. Forma parte de lo que hay que explicar al paciente antes de operar, no después."
+    },
+    {
+      "id": "r10-abierta-sin-infeccion",
+      "titulo": "Coherencia — fractura abierta sin vigilar la infección",
+      "si": {
+        "ctx": [
+          "fractura-abierta"
+        ]
+      },
+      "noSi": {
+        "vigilancia": [
+          "vg-infeccion"
+        ]
+      },
+      "severidad": "advertencia",
+      "mensaje": "En el Paso 1 clasificaste una fractura abierta. La tasa de infección escala con el grado de Gustilo, y en los grados III el seguimiento estrecho no es opcional."
+    }
+  ],
+  "evidencia": [
+    {
+      "nivel": "1",
+      "afirmacion": "La tromboprofilaxis en el trauma de miembro inferior reduce la enfermedad tromboembólica venosa; la indicación se balancea con el riesgo hemorrágico individual.",
+      "refs": [
+        "ref-boast"
+      ]
+    },
+    {
+      "nivel": "2-3",
+      "afirmacion": "La tasa de infección de la fractura abierta aumenta con el grado de Gustilo: mínima en el grado I y elevada en los IIIB y IIIC.",
+      "refs": [
+        "ref-gosselin-2004",
+        "ref-boast"
+      ]
+    },
+    {
+      "nivel": "5",
+      "afirmacion": "Distinguir la no unión mecánica —hipertrófica, con callo que no puentea— de la biológica —atrófica, sin respuesta— orienta el tratamiento en sentidos opuestos: estabilizar frente a aportar biología.",
+      "refs": [
+        "ref-perren-2002"
+      ]
+    },
+    {
+      "nivel": "3",
+      "afirmacion": "El defecto rotacional del antebrazo compromete la pronosupinación y el resultado funcional, y no se detecta en la radiografía convencional.",
+      "refs": [
+        "ref-schemitsch-1992"
+      ]
+    }
+  ],
+  "autoevaluacion": [
+    {
+      "pregunta": "El implante falla por fatiga a los cuatro meses y no hay signos de consolidación. ¿Qué indica eso?",
+      "opciones": [
+        "Que el implante era defectuoso",
+        "Que el hueso nunca curó: el implante es un puente temporal y hay que tratar la causa, no recambiar el material",
+        "Que el paciente cargó antes de tiempo",
+        "Que hacía falta un implante más grande"
+      ],
+      "correcta": 1,
+      "explicacion": "Poner el mismo montaje otra vez repite el mismo fallo con seis meses de retraso. Primero se identifica si la causa fue mecánica o biológica.",
+      "origen": "libro"
+    },
+    {
+      "pregunta": "¿En qué pasos se previene la mayoría de las no uniones?",
+      "opciones": [
+        "En el Paso 10, anticipándolas",
+        "En los Pasos 3 y 5 —estabilidad y principio correctos— y en el Paso 8, preservando la biología",
+        "En el Paso 6, eligiendo el implante",
+        "En el Paso 1, con el antibiótico"
+      ],
+      "correcta": 1,
+      "explicacion": "Las complicaciones se previenen hacia atrás: casi ninguna nace en el quirófano, sino en una decisión de los pasos previos.",
+      "origen": "libro"
+    },
+    {
+      "pregunta": "Una no unión hipertrófica, con callo abundante que no llega a puentear, ¿qué necesita?",
+      "opciones": [
+        "Injerto óseo",
+        "Estabilidad: comprimir, rigidizar o cambiar el montaje",
+        "Antibiótico prolongado",
+        "Esperar más tiempo"
+      ],
+      "correcta": 1,
+      "explicacion": "El hueso quiere curar y el montaje no le deja. El problema es mecánico y el injerto sobra. Al revés que en la atrófica, donde lo que falta es biología.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "Ante una no unión con sospecha de infección, ¿qué se hace con el material estable?",
+      "opciones": [
+        "Se retira siempre, la infección no cura con material dentro",
+        "Se mantiene: un foco estable puede consolidar pese a la infección; uno inestable no consolida ni estéril",
+        "Se recambia por material de titanio",
+        "Se retira solo si hay fístula"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la regla que más sorprende. Desbridamiento, cultivos profundos y antibiótico dirigido, manteniendo la estabilidad; la retirada se decide según la consolidación.",
+      "origen": "libro"
+    },
+    {
+      "pregunta": "¿Cuál es el factor del huésped modificable con más peso sobre la consolidación?",
+      "opciones": [
+        "La diabetes",
+        "El tabaquismo",
+        "El déficit de vitamina D",
+        "Los AINE"
+      ],
+      "correcta": 1,
+      "explicacion": "Merece una conversación explícita con el paciente. Los demás cuentan, pero ninguno tanto ni de forma tan directamente reversible.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "El síndrome compartimental, ¿cuándo se diagnostica?",
+      "opciones": [
+        "Cuando desaparece el pulso distal",
+        "Con dolor desproporcionado y dolor al estiramiento pasivo, mucho antes de que falte el pulso",
+        "Cuando aparece la parestesia",
+        "Con la radiografía de control"
+      ],
+      "correcta": 1,
+      "explicacion": "La ausencia de pulso es un signo tardío. En el paciente sedado o intubado la sospecha se mide con presión compartimental.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Cuáles son las tres preguntas de la anticipación intraoperatoria?",
+      "opciones": [
+        "Qué implante, qué abordaje y qué posición",
+        "Qué hago si no reduzco, qué hago si el hueso es peor de lo previsto, y si tengo el inventario verificado",
+        "Cuánto dura, cuánto sangra y cuánto cuesta",
+        "Qué antibiótico, qué profilaxis y qué analgesia"
+      ],
+      "correcta": 1,
+      "explicacion": "Las tres se contestan antes de la incisión. Después dejan de ser preguntas y pasan a ser problemas.",
+      "origen": "libro"
+    },
+    {
+      "pregunta": "¿Por qué se dice que las complicaciones «se previenen hacia atrás»?",
+      "opciones": [
+        "Porque se revisan al final del seguimiento",
+        "Porque casi ninguna nace en el quirófano: nacen en una decisión equivocada de los pasos previos",
+        "Porque hay que operar en orden inverso",
+        "Porque el pronóstico depende del paciente"
+      ],
+      "correcta": 1,
+      "explicacion": "Y por eso, cuando algo falla, revisar el caso a la luz de los diez pasos suele revelar exactamente dónde se perdió la fractura.",
+      "origen": "libro"
+    }
+  ],
+  "sintesis": "Anticipar es tener el plan B decidido antes de incidir: qué haces si no reduces, si el hueso es peor de lo previsto, y si el inventario está verificado. Las complicaciones diferidas se previenen hacia atrás, cada una en su paso. Y cuando algo falla, la pregunta no es qué material poner sino por qué el hueso no curó: la no unión mecánica se estabiliza, la biológica se injerta, y toda no unión es séptica hasta que se demuestre lo contrario.",
+  "lecturas": [
+    "AO — Learning from Failures in Orthopedic Trauma.",
+    "Contemporary Surgical Management of Fractures and Complications."
+  ],
+  "refs": [
+    "ref-perren-2002",
+    "ref-gosselin-2004",
+    "ref-boast",
+    "ref-schemitsch-1992"
+  ]
+}

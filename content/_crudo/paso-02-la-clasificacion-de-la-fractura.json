@@ -1,0 +1,352 @@
+{
+  "origen": "LIBRO_Los_10_pasos_completo.docx",
+  "titulo": "Paso 2 · La clasificación de la fractura",
+  "numeroPaso": 2,
+  "bloques": [
+    {
+      "tipo": "parrafo",
+      "texto": "Esquema de los tipos AO/OTA en diáfisis y en segmento articular."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Clasificar es el segundo acto de la planificación, no un trámite académico. Una buena clasificación es una hipótesis de tratamiento: cuando decimos «fractura articular completa multifragmentaria» ya hemos dicho, implícitamente, «necesitaré reducción anatómica, estabilidad absoluta de la superficie y, probablemente, puenteo de la metáfisis». La etiqueta contiene la indicación."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "mapa",
+      "titulo": "Mapa del Paso 2",
+      "lineas": [
+        "A. El sistema AO/OTA: lógica, estructura y código alfanumérico.",
+        "B. Las clasificaciones satélite y cuándo usarlas.",
+        "C. El valor pronóstico de clasificar.",
+        "D. Las trampas de la clasificación.",
+        "E. No operar también es una decisión del método."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "A. La lógica del sistema AO/OTA"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "El sistema AO/OTA (la antigua Clasificación Integral de Müller, hoy mantenida junto a la Orthopaedic Trauma Association) es el lenguaje común de la traumatología. Su objetivo es triple: comunicar sin ambigüedad, investigar comparando series homogéneas, y predecir el comportamiento de la fractura para orientar el tratamiento."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "A.1 Estructura jerárquica del código"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Hueso (1.er dígito): 1 húmero, 2 cúbito/radio, 3 fémur, 4 tibia/peroné… (mano, pie, pelvis y otros tienen sus propios números)."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Segmento (2.º dígito): 1 proximal, 2 diafisario, 3 distal (el tobillo y los maléolos reciben un segmento propio, el 4, en tibia/peroné)."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Tipo (letra A/B/C): la capa con más carga pronóstica; significa cosas distintas en diáfisis y en epífisis."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Grupo y subgrupo (números): detallan la morfología (1, 2, 3 y .1–.3), refinando la severidad dentro del tipo."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Calificadores universales: la revisión AO/OTA-2018 añadió calificadores comunes (afectación articular, fragmentación, localización) que estandarizan los matices entre huesos."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "A.2 Diáfisis: tipos A, B, C"
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Tipo",
+        "Diáfisis",
+        "Consecuencia"
+      ],
+      "filas": [
+        [
+          "A",
+          "Simple: un solo trazo (espiroideo, oblicuo o transverso). Dos fragmentos.",
+          "Reconstrucción y compresión posibles."
+        ],
+        [
+          "B",
+          "En cuña: tercer fragmento; tras reducir persiste contacto entre los principales.",
+          "Compresión o puenteo según la cuña."
+        ],
+        [
+          "C",
+          "Compleja/multifragmentaria: sin contacto reconstruible entre los principales.",
+          "Puenteo; estabilidad relativa."
+        ]
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "A.3 Epífisis y metáfisis articular: tipos A, B, C"
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Tipo",
+        "Segmento articular",
+        "Consecuencia"
+      ],
+      "filas": [
+        [
+          "A",
+          "Extraarticular (la línea no entra en la superficie).",
+          "La superficie está indemne."
+        ],
+        [
+          "B",
+          "Articular parcial: parte de la superficie sigue unida a la diáfisis.",
+          "Reconstruir la superficie; a menudo contrafuerte."
+        ],
+        [
+          "C",
+          "Articular completa: superficie separada por completo de la diáfisis.",
+          "Anatómica + absoluta de la superficie; puenteo metafisario."
+        ]
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "La misma letra dice cosas opuestas según el segmento: una B diafisaria es una cuña; una B articular es una fractura parcial de la superficie. Leer siempre la letra en su contexto."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "A.4 El mapa de huesos y segmentos"
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Nº",
+        "Hueso",
+        "Segmentos"
+      ],
+      "filas": [
+        [
+          "1",
+          "Húmero",
+          "11 proximal · 12 diáfisis · 13 distal"
+        ],
+        [
+          "2",
+          "Cúbito y radio",
+          "21 proximal · 22 diáfisis · 23 distal"
+        ],
+        [
+          "3",
+          "Fémur",
+          "31 proximal · 32 diáfisis · 33 distal"
+        ],
+        [
+          "4",
+          "Tibia y peroné",
+          "41 proximal · 42 diáfisis · 43 distal · 44 maléolos"
+        ]
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "B. Las clasificaciones satélite"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "La AO/OTA es el tronco; alrededor orbitan clasificaciones regionales que capturan matices que cambian el tratamiento de un hueso concreto. No son rivales del sistema AO: son satélites que lo complementan."
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Región",
+        "Clasificación satélite",
+        "Qué aporta"
+      ],
+      "filas": [
+        [
+          "Húmero proximal",
+          "Neer",
+          "Número de «partes» desplazadas; pronóstico vascular."
+        ],
+        [
+          "Cabeza radial",
+          "Mason (modif.)",
+          "Desplazamiento, bloqueo, conminución; ORIF vs prótesis."
+        ],
+        [
+          "Cuello femoral",
+          "Garden / Pauwels",
+          "Desplazamiento y verticalidad del trazo; riesgo de necrosis."
+        ],
+        [
+          "Meseta tibial",
+          "Schatzker",
+          "Patrón de hundimiento/separación; abordaje y soporte."
+        ],
+        [
+          "Tobillo",
+          "Weber / Lauge-Hansen",
+          "Nivel del peroné / mecanismo; estabilidad sindesmal."
+        ],
+        [
+          "Calcáneo",
+          "Sanders",
+          "Conminución articular en TC; pronóstico."
+        ],
+        [
+          "Escafoides",
+          "Herbert / Russe",
+          "Estabilidad y localización; riesgo de no unión."
+        ],
+        [
+          "Monteggia",
+          "Bado",
+          "Dirección de la luxación radial."
+        ],
+        [
+          "Pelvis",
+          "Young-Burgess / Tile",
+          "Mecanismo y estabilidad del anillo."
+        ],
+        [
+          "Acetábulo",
+          "Letournel-Judet",
+          "Columnas y paredes; abordaje."
+        ]
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "C. El valor pronóstico: la etiqueta contiene la indicación"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "La razón de fondo para clasificar bien es que la clasificación correcta ya esboza los pasos restantes. Dos ejemplos:"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Articular C (completa): anuncia reducción anatómica (Paso 4), estabilidad absoluta de la superficie (Paso 3), principio de compresión/contrafuerte y puenteo metafisario (Paso 5), abordaje que permita ver la articulación (Paso 8) y vigilancia de la rigidez y la artrosis (Paso 10)."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Diafisaria C (compleja): anuncia reducción funcional (Paso 4), estabilidad relativa (Paso 3), puenteo con clavo o placa puente (Pasos 5–6), reducción indirecta atraumática (Paso 9) y vigilancia de la no unión por exceso o defecto de rigidez (Paso 10)."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "idea",
+      "titulo": "Idea central",
+      "lineas": [
+        "Clasificar bien es haber empezado a planificar. Si la etiqueta no sugiere una conducta, probablemente no se ha clasificado bien o falta información. En las fracturas articulares y periarticulares, esa información que afina la clasificación suele aportarla la TC —que complementa la radiografía, sin sustituirla ni ser un requisito para clasificar."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "D. Las trampas de la clasificación"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Variabilidad inter e intra-observador: incluso sistemas validados muestran concordancia imperfecta, sobre todo en los subgrupos finos. Útil para la estrategia; menos fiable para distinciones milimétricas."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "La radiografía clasifica; la TC AFINA (no es indispensable): la clasificación se establece con radiografías bien hechas —incluida la mayoría de las fracturas articulares—. La TC NO es un requisito para poder clasificar; lo que hace es AÑADIR información y afinar la clasificación en las fracturas articulares y periarticulares (meseta, pilón, calcáneo, húmero distal, radio distal, acetábulo), donde con frecuencia reclasifica, revela fragmentos clave y guía el abordaje. Dicho de otro modo: sin TC se clasifica igual, pero en una articular conviene complementarla con TC para no subestimar la lesión."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Clasificar sobre una imagen mala: proyecciones insuficientes o mal centradas inducen error. Exigir las proyecciones correctas (y la contralateral cuando ayude)."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Clasificar sin evaluar al paciente: la trampa mayor. Una etiqueta ósea perfecta sobre un huésped o unas partes blandas mal valorados conduce al fracaso. Volver siempre al Paso 1 (la evaluación)."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "E. No operar también es una decisión del método"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "El título del libro habla de «resolver» cualquier fractura, no de «operar» cualquier fractura. El tratamiento no quirúrgico es un resultado legítimo del método, no su fracaso: muchas fracturas (gran parte de las del húmero proximal y diafisario, clavícula, costillas, fracturas estables del anillo pélvico, fracturas no desplazadas) consolidan mejor con ortesis y rehabilitación que con cirugía. El método se recorre igual: la clasificación y la evaluación del huésped pueden concluir, legítimamente, que la mejor estabilidad es la de una férula y que el mejor abordaje es ninguno."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "De forma simétrica, en ciertos escenarios la artroplastia es el tratamiento primario, no un plan de rescate: la fractura subcapital desplazada del cuello femoral en el anciano, la articular conminuta irreconstruible del húmero distal o proximal en hueso muy osteoporótico. Reconocerlo en el Paso 2 evita osteosíntesis condenadas de antemano."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "sintesis",
+      "titulo": "Síntesis del Paso 2",
+      "lineas": [
+        "La etiqueta contiene la indicación. Clasificar con AO/OTA (hueso-segmento-tipo-grupo) sobre buenas radiografías y apoyándose en los satélites regionales → en las articulares y periarticulares, afinar la clasificación con TC cuando esté disponible (complementa, no es requisito) → leer en la etiqueta la conducta que orientará los pasos 3–10 → desconfiar de la clasificación cuando falte la evaluación del paciente (Paso 1) o las proyecciones sean deficientes. Con los Pasos 1 y 2 bien hechos, la mitad de la operación está pensada."
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "En el siguiente capítulo desarrollamos el Paso 3: qué tipo de estabilidad exige cada fractura y por qué, con la teoría de la deformación de Perren y la biología de la consolidación como fundamento."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "Evidencia, autoevaluación y lecturas"
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "evidencia",
+      "titulo": "Evidencia (nivel indicativo)",
+      "lineas": [
+        "Fiabilidad de la clasificación AO/OTA (Nivel III): la concordancia inter-observador es buena para el tipo (A/B/C) y disminuye en los subgrupos finos; útil para la estrategia, no para distinciones milimétricas.",
+        "La TC reclasifica las articulares (Nivel III): en meseta, pilón, calcáneo y húmero distal la tomografía cambia con frecuencia el tipo y revela fragmentos clave que la radiografía simple no muestra."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Autoevaluación"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. ¿Por qué se dice que «clasificar bien es empezar a planificar»?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. Porque la etiqueta correcta ya anticipa la estabilidad, la reducción, el principio, el abordaje y las complicaciones; si la clasificación no sugiere conducta, falta clasificar bien o falta información (TC)."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. ¿Cuándo conviene complementar con TC una clasificación articular?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. La clasificación se hace con radiografía, pero en las fracturas articulares y periarticulares la TC afina y con frecuencia reclasifica, mostrando fragmentos y hundimientos que la radiografía subestima. No es que sin TC no se pueda clasificar: la TC añade detalle para planificar."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Lecturas recomendadas"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Lasanianos, Kanakaris, Giannoudis — Trauma and Orthopaedic Classifications."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "AO/OTA Fracture and Dislocation Compendium (revisión 2018)."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Los niveles de evidencia son orientativos y se ofrecen para guiar la lectura crítica, no como recomendación clínica cerrada."
+    }
+  ]
+}

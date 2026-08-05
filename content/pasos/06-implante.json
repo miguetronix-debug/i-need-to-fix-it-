@@ -1,0 +1,1363 @@
+{
+  "id": "paso-06-implante",
+  "numero": 6,
+  "titulo": "El implante o material",
+  "subtitulo": "Recién ahora se elige el hardware: es el medio, no el fin",
+  "preguntaClave": "¿Este implante cumple el principio que elegí, o me está obligando a cambiar de principio?",
+  "objetivos": [
+    "Elegir el implante porque materializa el principio del Paso 5, no por costumbre ni por inventario",
+    "Saber que la función de una placa la define el cirujano, no la forma de la placa",
+    "Distinguir el implante de carga compartida del de carga soportada y lo que eso implica en el postoperatorio",
+    "Adaptar el implante al hueso del huésped: osteoporótico o conminuto piden ángulo fijo",
+    "Reconocer cuándo hay que rellenar un defecto y con qué"
+  ],
+  "decisiones": [
+    {
+      "id": "implante",
+      "pregunta": "¿Qué implante va a materializar tu principio?",
+      "ayuda": "Puedes combinar varios: un constructo casi nunca es un solo implante. Elige por lo que el principio exige, no por lo que hay en la bandeja.",
+      "tipo": "opcionMultiple",
+      "opciones": [
+        {
+          "id": "i-tornillo",
+          "etiqueta": "Tornillos",
+          "criterios": [
+            "Convierte el giro en fuerza axial: es el implante que comprime",
+            "Su anatomía —núcleo, rosca, paso, cabeza— define lo que puede hacer"
+          ]
+        },
+        {
+          "id": "i-placa",
+          "etiqueta": "Placa",
+          "criterios": [
+            "El implante más versátil: la misma placa puede comprimir, proteger, sostener o puentear",
+            "Su función la define el cirujano, no su forma"
+          ]
+        },
+        {
+          "id": "i-clavo",
+          "etiqueta": "Clavo endomedular",
+          "criterios": [
+            "Feruliza la diáfisis desde dentro, con mínima agresión al foco",
+            "Implante de carga compartida: tolera bien el apoyo precoz"
+          ]
+        },
+        {
+          "id": "i-tutor",
+          "etiqueta": "Fijador externo",
+          "criterios": [
+            "Ferulaje fuera de la piel: control de daños, partes blandas no aptas, reconstrucción",
+            "La rigidez la gobierna la mecánica del pin: diámetro, número, separación y distancia barra-hueso"
+          ]
+        },
+        {
+          "id": "i-agujas",
+          "etiqueta": "Agujas de Kirschner y cerclaje en ocho",
+          "criterios": [
+            "Dos agujas paralelas más alambre en ocho: es el constructo clásico de la banda de tensión",
+            "Las agujas solas dan poca estabilidad: fijación provisional o fragmentos pequeños"
+          ]
+        },
+        {
+          "id": "i-cerclaje",
+          "etiqueta": "Cerclaje o cables",
+          "criterios": [
+            "Rodean el hueso para reducir y mantener trazos espiroideos largos o periprotésicos",
+            "Estáticos: aproximan o sostienen, pero no convierten tracción en compresión"
+          ]
+        },
+        {
+          "id": "i-anclaje",
+          "etiqueta": "Anclajes de sutura o tornillos intramedulares",
+          "criterios": [
+            "Fragmentos articulares pequeños y avulsiones tendinosas o ligamentosas"
+          ]
+        },
+        {
+          "id": "i-revision",
+          "etiqueta": "Vástago de revisión o megaprótesis",
+          "emite": [
+            "vastago-revision"
+          ],
+          "criterios": [
+            "Cuando el problema no es la fractura sino que el implante previo perdió su fijación",
+            "Vástago largo, no cementado y con anclaje distal, que puentee el foco",
+            "Es otra operación y otro instrumental: se decide antes, no en la mesa"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tipo-tornillo",
+      "pregunta": "¿Qué tornillos?",
+      "ayuda": "«De tracción» y «de posición» no son diseños: son funciones. Cualquier tornillo puede ser de tracción si se hace la técnica.",
+      "tipo": "opcionMultiple",
+      "mostrarSi": {
+        "implante": [
+          "i-tornillo"
+        ]
+      },
+      "opciones": [
+        {
+          "id": "tor-cortical",
+          "etiqueta": "Cortical",
+          "criterios": [
+            "Rosca fina y paso corto",
+            "Agarra hueso cortical denso"
+          ]
+        },
+        {
+          "id": "tor-esponjoso",
+          "etiqueta": "De esponjosa",
+          "criterios": [
+            "Rosca ancha y paso largo",
+            "Agarra hueso metafisario esponjoso"
+          ]
+        },
+        {
+          "id": "tor-parcial",
+          "etiqueta": "De rosca parcial",
+          "criterios": [
+            "Liso en un extremo y roscado en el otro",
+            "Comprime por diseño: el propio tornillo hace de barril de deslizamiento"
+          ]
+        },
+        {
+          "id": "tor-posicion",
+          "etiqueta": "De posición",
+          "criterios": [
+            "Mantiene dos fragmentos a distancia fija SIN comprimir",
+            "Sindesmosis: comprimirla sería el error"
+          ]
+        },
+        {
+          "id": "tor-bloqueado",
+          "etiqueta": "Bloqueado (locking)",
+          "criterios": [
+            "Rosca en la cabeza que se fija a la placa: ángulo fijo",
+            "No comprime la placa contra el hueso: no sirve para comprimir el foco",
+            "De elección en hueso osteoporótico o conminuto"
+          ]
+        },
+        {
+          "id": "tor-canulado",
+          "etiqueta": "Canulado",
+          "criterios": [
+            "Se coloca sobre aguja guía: permite comprobar la vía antes de comprometerse",
+            "Cuello femoral, escafoides, fragmentos articulares"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "funcion-placa",
+      "pregunta": "¿Qué función va a cumplir la placa?",
+      "ayuda": "Aquí es donde el implante se conecta con el principio del Paso 5. La misma placa cambia de función según cómo la uses.",
+      "tipo": "opcionMultiple",
+      "mostrarSi": {
+        "implante": [
+          "i-placa"
+        ]
+      },
+      "opciones": [
+        {
+          "id": "fp-compresion",
+          "etiqueta": "Compresión",
+          "produce": "absoluta",
+          "criterios": [
+            "Autocompresión de la DCP o LC-DCP, o tornillo excéntrico",
+            "Comprime el foco: exige trazo reconstruible y contacto cortical"
+          ]
+        },
+        {
+          "id": "fp-proteccion",
+          "etiqueta": "Protección (neutralización)",
+          "produce": "absoluta",
+          "criterios": [
+            "Blinda un tornillo de tracción frente a torsión, flexión y cizallamiento",
+            "La estabilidad la da el tornillo; la placa solo la protege"
+          ]
+        },
+        {
+          "id": "fp-sosten",
+          "etiqueta": "Sostén o contrafuerte",
+          "produce": "absoluta",
+          "criterios": [
+            "Tope físico contra el fragmento que desliza por cizallamiento",
+            "Se fija primero al fragmento estable y se apoya contra el que migra"
+          ]
+        },
+        {
+          "id": "fp-puente",
+          "etiqueta": "Puente (bridging)",
+          "produce": "relativa",
+          "criterios": [
+            "Salva la conminución fijándose solo a los fragmentos principales",
+            "Implante de carga soportada: aguanta todo hasta que el hueso cure"
+          ],
+          "emite": [
+            "carga-soportada"
+          ]
+        },
+        {
+          "id": "fp-banda",
+          "etiqueta": "Banda de tensión",
+          "produce": "absoluta",
+          "criterios": [
+            "Colocada en el lado de tensión, convierte tracción en compresión",
+            "Exige cortical opuesta intacta que actúe de fulcro"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "diseno-placa",
+      "pregunta": "¿Bloqueada o no bloqueada?",
+      "ayuda": "No es una cuestión de moda: cambia por completo cómo la placa transmite la carga y cuánta biología cuesta.",
+      "tipo": "opcionUnica",
+      "mostrarSi": {
+        "implante": [
+          "i-placa"
+        ]
+      },
+      "opciones": [
+        {
+          "id": "pl-no-bloqueada",
+          "etiqueta": "Convencional (no bloqueada)",
+          "criterios": [
+            "Estabiliza por fricción: la presiona contra el hueso",
+            "Exige buen contacto y buen agarre cortical",
+            "Comprime el periostio bajo la placa y compromete su vascularización"
+          ]
+        },
+        {
+          "id": "pl-bloqueada",
+          "etiqueta": "LCP o LISS · bloqueada de ángulo fijo",
+          "criterios": [
+            "Los tornillos se roscan a la placa: ángulo fijo, sin presionarla contra el hueso",
+            "El agujero combi es parte del diseño de la LCP: una mitad es unidad dinámica de compresión y la otra es rosca cónica",
+            "Por eso la MISMA placa puede comprimir con un tornillo convencional y después blindarse con uno bloqueado. La secuencia no se negocia: primero se comprime, después se bloquea",
+            "Preserva la vascularización perióstica, sostiene hueso osteoporótico y permite el puenteo biológico"
+          ]
+        },
+        {
+          "id": "pl-va",
+          "etiqueta": "VA-LCP · bloqueada de ángulo variable",
+          "criterios": [
+            "El tornillo bloquea aunque se angule hasta 15° en cualquier dirección: un cono de 30° alrededor del eje del agujero",
+            "Sirve donde el ángulo fijo no llega: rafting subcondral esquivando la superficie articular, metáfisis estrechas, y periprotésicas donde hay que rodear el vástago",
+            "Tiene precio mecánico: la resistencia a la rotación en la interfase tornillo-placa cae de forma casi lineal al angular, y a 15° la resistencia a flexión baja de forma medible",
+            "Angula solo lo que necesites, y nunca fuera del cono: pasarse arruina la rosca y el tornillo deja de bloquear"
+          ]
+        },
+        {
+          "id": "pl-angulo-fijo",
+          "etiqueta": "Ángulo fijo clásico (placa-lámina, DCS, DHS)",
+          "criterios": [
+            "Hoja u hoja-tornillo que fija la metáfisis con ángulo constante",
+            "Precursoras del concepto que hoy cumplen las placas bloqueadas"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clavo-config",
+      "pregunta": "¿Cómo configuras el clavo?",
+      "ayuda": "El clavo por sí solo no garantiza longitud ni rotación: eso lo dan los pernos de bloqueo.",
+      "tipo": "opcionMultiple",
+      "mostrarSi": {
+        "implante": [
+          "i-clavo"
+        ]
+      },
+      "opciones": [
+        {
+          "id": "cl-fresado",
+          "etiqueta": "Fresado",
+          "criterios": [
+            "Permite mayor diámetro y mejor contacto: montaje más rígido",
+            "La rigidez a flexión crece con la cuarta potencia del radio —en rigor, con r externo⁴ menos r interno⁴, porque el clavo es un tubo—",
+            "Coste: daña la vascularización endostal"
+          ]
+        },
+        {
+          "id": "cl-no-fresado",
+          "etiqueta": "No fresado",
+          "criterios": [
+            "Preserva el endostio",
+            "Clavo de menor diámetro: montaje menos rígido"
+          ]
+        },
+        {
+          "id": "cl-estatico",
+          "etiqueta": "Bloqueo estático",
+          "criterios": [
+            "Pernos proximales y distales: controla longitud y rotación",
+            "Es el bloqueo por defecto en trazos inestables"
+          ]
+        },
+        {
+          "id": "cl-dinamico",
+          "etiqueta": "Bloqueo dinámico",
+          "criterios": [
+            "Permite compresión axial controlada con la carga",
+            "Solo con trazo estable y contacto cortical suficiente"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tutor-tipo",
+      "pregunta": "¿Qué fijador externo?",
+      "tipo": "opcionUnica",
+      "mostrarSi": {
+        "implante": [
+          "i-tutor"
+        ]
+      },
+      "opciones": [
+        {
+          "id": "tu-monoplanar",
+          "etiqueta": "Monoplanar o uniplanar",
+          "criterios": [
+            "Control de daños y estabilización temporal rápida",
+            "Algunas indicaciones definitivas"
+          ]
+        },
+        {
+          "id": "tu-circular",
+          "etiqueta": "Circular (Ilizarov) o hexápodo",
+          "criterios": [
+            "Reconstrucción, corrección de deformidad, elongación y no uniones complejas"
+          ]
+        },
+        {
+          "id": "tu-hibrido",
+          "etiqueta": "Híbrido",
+          "criterios": [
+            "Anillo periarticular más barras",
+            "Metáfisis con partes blandas comprometidas"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hueso-huesped",
+      "pregunta": "¿Cómo es el hueso del huésped?",
+      "ayuda": "El mejor implante para un principio puede ser el peor para ese hueso. Es el tercer filtro de la elección.",
+      "tipo": "opcionUnica",
+      "opciones": [
+        {
+          "id": "hh-normal",
+          "etiqueta": "Hueso de calidad normal",
+          "criterios": [
+            "Agarre cortical fiable",
+            "Cualquier diseño es viable si cumple el principio"
+          ]
+        },
+        {
+          "id": "hh-osteoporotico",
+          "etiqueta": "Osteoporótico",
+          "criterios": [
+            "El tornillo convencional no agarra y la fricción placa-hueso no es fiable",
+            "Ángulo fijo, mayor anclaje, considerar aumentación"
+          ],
+          "emite": [
+            "hueso-osteoporotico"
+          ]
+        },
+        {
+          "id": "hh-patologico",
+          "etiqueta": "Patológico o periprotésico",
+          "criterios": [
+            "Hueso que puede no consolidar nunca: el implante tiene que aguantar solo",
+            "Montajes largos, ángulo fijo, considerar cemento o revisión protésica"
+          ],
+          "emite": [
+            "hueso-patologico"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "material",
+      "pregunta": "¿Acero o titanio?",
+      "ayuda": "Modula la rigidez del montaje, pero no sustituye a una estrategia mecánica correcta.",
+      "tipo": "opcionUnica",
+      "opciones": [
+        {
+          "id": "mat-acero",
+          "etiqueta": "Acero inoxidable",
+          "criterios": [
+            "Módulo elástico mayor: más rígido",
+            "Buena biocompatibilidad, más artefacto en TC y RM",
+            "Más sensible a las muescas"
+          ]
+        },
+        {
+          "id": "mat-titanio",
+          "etiqueta": "Titanio",
+          "criterios": [
+            "Módulo elástico más cercano al del hueso: montaje algo más elástico",
+            "Excelente biocompatibilidad y osteointegración, menos artefacto",
+            "Buena resistencia a fatiga; cuidado con el agarrotamiento de los tornillos bloqueados"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "defecto",
+      "pregunta": "¿Hay un defecto óseo que rellenar?",
+      "tipo": "opcionUnica",
+      "opciones": [
+        {
+          "id": "df-no",
+          "etiqueta": "No",
+          "criterios": [
+            "Contacto óseo suficiente tras la reducción"
+          ]
+        },
+        {
+          "id": "df-auto",
+          "etiqueta": "Autoinjerto (cresta ilíaca)",
+          "criterios": [
+            "Patrón oro: osteogénesis, osteoinducción y osteoconducción",
+            "Limitado por la morbilidad de la zona donante"
+          ]
+        },
+        {
+          "id": "df-alo",
+          "etiqueta": "Aloinjerto",
+          "criterios": [
+            "Osteoconductor y algo osteoinductor: volumen ilimitado, sin morbilidad donante",
+            "Sin células vivas y con riesgo teórico de transmisión"
+          ]
+        },
+        {
+          "id": "df-sintetico",
+          "etiqueta": "Sustituto sintético",
+          "criterios": [
+            "Fosfato o sulfato cálcico, hidroxiapatita: osteoconductores",
+            "Rellenan defectos metafisarios y dan soporte estructural temporal"
+          ]
+        },
+        {
+          "id": "df-bmp",
+          "etiqueta": "BMP (proteínas morfogenéticas)",
+          "criterios": [
+            "Osteoinductoras; uso selectivo por coste y por precauciones de indicación",
+            "Escenarios estudiados: tibia abierta y no uniones"
+          ]
+        }
+      ]
+    }
+  ],
+  "derivados": [
+    {
+      "id": "del-principio",
+      "titulo": "El implante que pide tu principio",
+      "tipo": "reglas",
+      "modo": "todas",
+      "reglas": [
+        {
+          "si": {
+            "ctx": [
+              "usa-compresion"
+            ]
+          },
+          "texto": "Compresión → tornillo de tracción, placa a compresión (DCP/LC-DCP), o ambos. Si eliges placa bloqueada pura, no comprimes: necesitas al menos un tornillo convencional o un agujero combi."
+        },
+        {
+          "si": {
+            "ctx": [
+              "usa-banda"
+            ]
+          },
+          "texto": "Banda de tensión → agujas de Kirschner con cerclaje en ocho, o placa colocada en el lado de tensión. Comprueba antes que la cortical opuesta esté intacta."
+        },
+        {
+          "si": {
+            "ctx": [
+              "usa-sosten"
+            ]
+          },
+          "texto": "Sostén → placa de contrafuerte. En fragmentos pequeños, spring plate o placa de un tercio de caña; antiglide en el peroné distal."
+        },
+        {
+          "si": {
+            "ctx": [
+              "fer-clavo"
+            ]
+          },
+          "texto": "Ferulaje con clavo → carga compartida. Bloquea proximal y distal: el clavo por sí solo no controla la rotación."
+        },
+        {
+          "si": {
+            "ctx": [
+              "fer-puente"
+            ]
+          },
+          "texto": "Ferulaje con placa puente → carga soportada. Elige bloqueada o combi y llévala por MIPO: si abres el foco que ibas a puentear, traicionas la estrategia."
+        },
+        {
+          "si": {
+            "ctx": [
+              "fer-tutor"
+            ]
+          },
+          "texto": "Ferulaje externo → fijador. La rigidez la gobierna la mecánica del pin: diámetro, número, separación y distancia barra-hueso."
+        },
+        {
+          "si": {
+            "ctx": [
+              "usa-neutralizacion"
+            ]
+          },
+          "texto": "Protección → placa de neutralización. Es el implante que blinda la compresión del tornillo, no el que la produce."
+        }
+      ]
+    },
+    {
+      "id": "carga",
+      "titulo": "Carga compartida o carga soportada",
+      "tipo": "reglas",
+      "modo": "primera",
+      "reglas": [
+        {
+          "si": {
+            "funcion-placa": [
+              "fp-puente"
+            ]
+          },
+          "texto": "CARGA SOPORTADA. La placa que puentea una zona sin contacto óseo aguanta toda la carga hasta que el hueso cure. Es vulnerable a la fatiga si la consolidación se retrasa: restringe el apoyo y vigila el montaje."
+        },
+        {
+          "si": {
+            "implante": [
+              "i-clavo"
+            ]
+          },
+          "texto": "CARGA COMPARTIDA. El clavo transmite parte de la carga a través del hueso, así que tolera mejor el apoyo precoz y la carga cíclica mientras consolida."
+        },
+        {
+          "si": {
+            "implante": [
+              "i-tutor"
+            ]
+          },
+          "texto": "CARGA SOPORTADA mientras el montaje sea el único soporte. Define desde ya si es temporal —control de daños, ventana de partes blandas— o definitivo, porque cambia el plan de apoyo."
+        },
+        {
+          "si": {
+            "funcion-placa": [
+              "fp-compresion"
+            ]
+          },
+          "texto": "CARGA COMPARTIDA si la reducción anatómica devuelve el contacto cortical: el hueso comprimido transmite carga con la placa. Sin ese contacto, la placa queda sola."
+        }
+      ]
+    },
+    {
+      "id": "huesped",
+      "titulo": "Lo que impone el hueso del huésped",
+      "tipo": "reglas",
+      "modo": "todas",
+      "reglas": [
+        {
+          "si": {
+            "hueso-huesped": [
+              "hh-osteoporotico"
+            ]
+          },
+          "texto": "Osteoporosis → ángulo fijo. La placa bloqueada no depende de la fricción placa-hueso ni del agarre cortical de cada tornillo: los tornillos y la placa trabajan como un bloque. Considera montajes más largos y aumentación."
+        },
+        {
+          "si": {
+            "hueso-huesped": [
+              "hh-patologico"
+            ]
+          },
+          "texto": "Hueso patológico o periprotésico → el implante puede tener que aguantar indefinidamente. Prioriza montajes largos, ángulo fijo y, si procede, cemento o revisión protésica."
+        }
+      ]
+    }
+  ],
+  "esencial": [
+    {
+      "tipo": "parrafo",
+      "texto": "Recién ahora se elige el hardware. El implante es el medio, no el fin: se selecciona porque materializa el principio biomecánico del Paso 5 con el mínimo coste biológico. El cirujano que domina los principios elige el material con libertad; el que solo conoce el material queda preso de su inventario."
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Tornillos: tipo y función",
+      "encabezados": [
+        "Tipo",
+        "Función"
+      ],
+      "filas": [
+        [
+          "Cortical",
+          "Rosca fina y paso corto; agarra hueso cortical denso."
+        ],
+        [
+          "De esponjosa",
+          "Rosca ancha y paso largo; agarra hueso metafisario esponjoso."
+        ],
+        [
+          "De tracción (lag)",
+          "Cualquier tornillo usado con agujero deslizante para comprimir. Es una función, no un diseño."
+        ],
+        [
+          "De posición",
+          "Mantiene dos fragmentos a distancia fija sin comprimir; sindesmosis."
+        ],
+        [
+          "Bloqueado (locking)",
+          "Rosca en la cabeza que se fija a la placa: ángulo fijo, no comprime placa-hueso; ideal en hueso osteoporótico o conminuto."
+        ]
+      ]
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Las cinco funciones de una placa",
+      "encabezados": [
+        "Función",
+        "Cómo trabaja la placa",
+        "Estabilidad"
+      ],
+      "filas": [
+        [
+          "Compresión",
+          "Autocompresión (DCP/LC-DCP) o tornillo excéntrico; comprime el foco.",
+          "Absoluta"
+        ],
+        [
+          "Protección / neutralización",
+          "Protege un tornillo de tracción frente a torsión y flexión.",
+          "Absoluta"
+        ],
+        [
+          "Sostén / contrafuerte",
+          "Tope contra el cizallamiento de un fragmento que desliza.",
+          "Absoluta"
+        ],
+        [
+          "Puente (bridging)",
+          "Salva la conminución fijada a los fragmentos principales; permite callo.",
+          "Relativa"
+        ],
+        [
+          "Banda de tensión",
+          "En el lado de tensión, convierte tracción en compresión.",
+          "Absoluta dinámica"
+        ]
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "La función de la placa la define el cirujano",
+      "texto": "La placa es el implante más versátil precisamente porque su función no está en su forma. La misma placa puede comprimir, proteger, sostener o puentear. Por eso el nombre comercial de la placa nunca contesta la pregunta del Paso 5: la contesta lo que decides hacer con ella."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "Bloqueada no es lo mismo que mejor",
+      "texto": "La placa convencional estabiliza por fricción: hay que presionarla contra el hueso, lo que exige buen contacto y compromete la vascularización perióstica bajo la placa. La bloqueada funciona como fijador interno: los tornillos se roscan a la placa con ángulo fijo sin presionarla contra el hueso, preserva la vascularización, sostiene hueso osteoporótico y conminuto y permite el puenteo biológico. Y conviene deshacer una confusión frecuente: el agujero combi no es un tipo de placa aparte, es el diseño del agujero de la propia LCP —una mitad unidad dinámica de compresión y la otra rosca cónica—, así que la misma placa comprime y bloquea. Lo que no cambia es la secuencia: primero se comprime con el tornillo convencional, después se bloquea. El bloqueado no comprime nunca: fija la placa donde está."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "idea",
+      "titulo": "El ángulo variable, y lo que cuesta",
+      "texto": "La VA-LCP añade una libertad que el ángulo fijo no da: el tornillo bloquea aunque se angule hasta 15° en cualquier dirección, dentro de un cono de 30°. Eso resuelve situaciones concretas —rafting subcondral esquivando la superficie articular, metáfisis estrechas donde los ángulos predeterminados no caben, periprotésicas donde hay que rodear el vástago—. El precio es mecánico y está medido: conforme se angula, la resistencia a la rotación en la interfase tornillo-placa cae de forma casi lineal, y a 15° la resistencia a flexión del conjunto es menor que a 0°. La regla práctica es angular solo lo que la anatomía obliga, y nunca salirse del cono."
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Acero frente a titanio",
+      "encabezados": [
+        "Propiedad",
+        "Acero inoxidable",
+        "Titanio"
+      ],
+      "filas": [
+        [
+          "Módulo elástico (rigidez)",
+          "Mayor: más rígido.",
+          "Menor, más cercano al hueso; montaje algo más elástico."
+        ],
+        [
+          "Biocompatibilidad",
+          "Buena.",
+          "Excelente; menos reacción y mejor osteointegración."
+        ],
+        [
+          "Imagen (TC/RM)",
+          "Más artefacto.",
+          "Menos artefacto."
+        ],
+        [
+          "Fatiga y muescas",
+          "Más sensible a muescas.",
+          "Buena resistencia; cuidado con el agarrotamiento de tornillos bloqueados."
+        ]
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "idea",
+      "titulo": "Carga compartida frente a carga soportada",
+      "texto": "Un implante de carga compartida —el clavo endomedular es el ejemplo— transmite parte de la carga a través del hueso, y por eso tolera mejor el apoyo precoz y la carga cíclica mientras consolida. Un implante de carga soportada —una placa que puentea una zona sin contacto óseo— aguanta toda la carga hasta que el hueso cure, y es más vulnerable a la fatiga si la consolidación se retrasa. La distinción no es académica: condiciona cuánto y cuándo se permite cargar."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "Rigidez no es resistencia",
+      "texto": "Es el mismo matiz del Paso 3. Un implante puede ser muy rígido y aun así fallar por fatiga si el hueso no consolida. Ningún material compensa una estrategia mecánica equivocada: el metal solo aguanta el tiempo que tarda la biología, y si la biología no llega, el metal se rompe."
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Injertos y sustitutos: qué aporta cada uno",
+      "encabezados": [
+        "Material",
+        "Propiedades"
+      ],
+      "filas": [
+        [
+          "Autoinjerto (cresta ilíaca)",
+          "Patrón oro: osteogénesis (células), osteoinducción (factores) y osteoconducción (andamiaje). Limitado por la morbilidad donante."
+        ],
+        [
+          "Aloinjerto",
+          "Osteoconductor y algo osteoinductor; volumen ilimitado y sin morbilidad donante, pero sin células vivas."
+        ],
+        [
+          "Sustitutos sintéticos",
+          "Fosfato o sulfato cálcico e hidroxiapatita: osteoconductores; rellenan defectos metafisarios y dan soporte temporal."
+        ],
+        [
+          "BMP",
+          "Osteoinductoras; uso selectivo por coste y por las precauciones de indicación."
+        ]
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "Los tres filtros para elegir",
+      "texto": "Primero, que cumpla el principio del Paso 5: compresión pide tornillo de tracción o placa a compresión; puenteo pide clavo, placa puente o fijador; cizallamiento pide contrafuerte; tracción pide banda de tensión. Segundo, que respete la biología: si el plan es puentear, elige material y técnica —MIPO, bloqueado— que no desvitalicen el foco. Y tercero, que se adapte al hueso del huésped: osteoporótico o conminuto piden ángulo fijo, mayor anclaje y, si hace falta, aumentación."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "La pregunta de control del Paso 6",
+      "texto": "¿Este implante cumple el principio que elegí, o me está obligando a cambiar de principio? Si para colocarlo hay que desvitalizar el foco que decidí puentear, el implante —o la técnica— es el equivocado."
+    },
+    {
+      "tipo": "enlace",
+      "titulo": "Casos de fallo de implante, simulados",
+      "texto": "La AO publica discusiones de casos reales que fallaron —longitud de trabajo corta, pérdida del apoyo cortical opuesto, brecha demasiado amplia— con el montaje simulado y la corrección al lado.",
+      "url": "https://osapp.aofoundation.org/learning/knowledge-hub/cases",
+      "fuente": "AO Research Institute · gratuito, en inglés"
+    }
+  ],
+  "alertas": [
+    {
+      "id": "implante-es-medio",
+      "severidad": "media",
+      "titulo": "El implante es el medio, no el fin",
+      "texto": "Se elige porque materializa el principio del Paso 5 con el mínimo coste biológico. Si para colocarlo hay que desvitalizar el foco que decidiste puentear, el implante o la técnica son los equivocados.",
+      "mostrarSiempre": true
+    },
+    {
+      "id": "bloqueada-no-comprime",
+      "severidad": "alta",
+      "titulo": "El tornillo bloqueado no comprime: comprime el convencional",
+      "texto": "Vas a comprimir con una placa bloqueada. La LCP puede hacerlo, porque su agujero combi tiene una mitad de unidad dinámica de compresión, pero eso lo hace el tornillo CONVENCIONAL, no el bloqueado. Coloca primero el cortical excéntrico o el tornillo interfragmentario a través de la placa, comprime, y solo después bloquea. Al revés no hay compresión: el bloqueado fija la placa donde está.",
+      "mostrarSiAlguno": [
+        {
+          "funcion-placa": [
+            "fp-compresion"
+          ],
+          "diseno-placa": [
+            "pl-bloqueada"
+          ]
+        },
+        {
+          "funcion-placa": [
+            "fp-compresion"
+          ],
+          "diseno-placa": [
+            "pl-va"
+          ]
+        }
+      ],
+      "noSiAlguno": [
+        {
+          "tipo-tornillo": [
+            "tor-cortical"
+          ]
+        },
+        {
+          "tipo-tornillo": [
+            "tor-esponjoso"
+          ]
+        },
+        {
+          "tipo-tornillo": [
+            "tor-parcial"
+          ]
+        },
+        {
+          "ctx": [
+            "comp-tornillo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "no-bloqueada-osteoporosis",
+      "severidad": "alta",
+      "titulo": "Placa convencional en hueso osteoporótico",
+      "texto": "La placa no bloqueada estabiliza por fricción y depende del agarre cortical de cada tornillo. En hueso osteoporótico ese agarre falla y los tornillos se aflojan de forma secuencial. Lo que corresponde es ángulo fijo.",
+      "mostrarSi": {
+        "diseno-placa": [
+          "pl-no-bloqueada"
+        ],
+        "hueso-huesped": [
+          "hh-osteoporotico"
+        ]
+      }
+    },
+    {
+      "id": "compresion-en-conminuta",
+      "severidad": "critica",
+      "titulo": "Placa a compresión sobre un foco multifragmentario",
+      "texto": "Clasificaste una fractura compleja y eliges comprimir con la placa. No hay contacto cortical que comprimir: la placa quedará sola soportando toda la carga y el precio biológico de exponer el foco no compra nada. La función correcta es puente.",
+      "mostrarSi": {
+        "ctx": [
+          "tipoC"
+        ],
+        "funcion-placa": [
+          "fp-compresion"
+        ]
+      }
+    },
+    {
+      "id": "puente-carga-soportada",
+      "severidad": "media",
+      "titulo": "La placa puente es carga soportada",
+      "texto": "Aguanta toda la carga hasta que el hueso cure. Si la consolidación se retrasa, falla por fatiga. Dosifica la longitud de trabajo como decidiste en el Paso 3 y ajusta el plan de apoyo.",
+      "mostrarSi": {
+        "funcion-placa": [
+          "fp-puente"
+        ]
+      }
+    },
+    {
+      "id": "puente-abierto",
+      "severidad": "alta",
+      "titulo": "Vas a puentear pero abriendo el foco",
+      "texto": "La placa puente vive de la biología que preserva. Si la colocas por vía directa sobre la zona conminuta, destruyes el hematoma y el periostio que el callo necesita. La vía coherente es percutánea o indirecta, en túnel submuscular.",
+      "mostrarSi": {
+        "funcion-placa": [
+          "fp-puente"
+        ],
+        "ctx": [
+          "via-directa"
+        ]
+      }
+    },
+    {
+      "id": "clavo-sin-bloqueo",
+      "severidad": "alta",
+      "titulo": "Un clavo sin bloquear no controla longitud ni rotación",
+      "texto": "El clavo alinea, pero por sí solo no impide que el fragmento acorte ni que rote. Los pernos proximales y distales son los que dan esas dos cosas. Define si el bloqueo es estático o dinámico.",
+      "mostrarSi": {
+        "implante": [
+          "i-clavo"
+        ]
+      },
+      "noSiAlguno": [
+        {
+          "clavo-config": [
+            "cl-estatico"
+          ]
+        },
+        {
+          "clavo-config": [
+            "cl-dinamico"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dinamico-inestable",
+      "severidad": "alta",
+      "titulo": "Bloqueo dinámico sobre un trazo que no lo tolera",
+      "texto": "La dinamización permite compresión axial con la carga, y eso exige contacto cortical suficiente. Sobre una fractura compleja o segmentaria, el resultado es acortamiento.",
+      "mostrarSi": {
+        "clavo-config": [
+          "cl-dinamico"
+        ],
+        "ctx": [
+          "tipoC"
+        ]
+      }
+    },
+    {
+      "id": "fresado-rigidez",
+      "severidad": "info",
+      "titulo": "El fresado sube la rigidez, no la baja",
+      "texto": "Un clavo de mayor diámetro es mucho más rígido: la rigidez a flexión crece con la cuarta potencia del radio. Si buscabas micromovimiento, ese es el sentido contrario. Compénsalo con la longitud de trabajo.",
+      "mostrarSi": {
+        "clavo-config": [
+          "cl-fresado"
+        ],
+        "ctx": [
+          "est-relativa"
+        ]
+      }
+    },
+    {
+      "id": "tutor-temporal",
+      "severidad": "media",
+      "titulo": "Define si el fijador es temporal o definitivo",
+      "texto": "Cambia todo lo que viene después: el plan de conversión, la ventana de partes blandas y el régimen de apoyo. Un fijador que se queda por inercia acaba en pin-track y rigidez.",
+      "mostrarSi": {
+        "implante": [
+          "i-tutor"
+        ]
+      }
+    },
+    {
+      "id": "cerclaje-estrangula",
+      "severidad": "alta",
+      "titulo": "El cerclaje puede estrangular la vascularización perióstica",
+      "texto": "Rodea el hueso por completo. Úsalo con criterio y en el número mínimo, sobre trazos espiroideos largos o periprotésicos. Y recuerda que es estático: aproxima y sostiene, pero no convierte tracción en compresión.",
+      "mostrarSi": {
+        "implante": [
+          "i-cerclaje"
+        ]
+      }
+    },
+    {
+      "id": "posicion-no-comprime",
+      "severidad": "media",
+      "titulo": "El tornillo de posición no comprime, y así debe ser",
+      "texto": "Mantiene los fragmentos a distancia fija. En la sindesmosis comprimirla sería el error: se busca restituir la relación, no cerrarla.",
+      "mostrarSi": {
+        "tipo-tornillo": [
+          "tor-posicion"
+        ]
+      }
+    },
+    {
+      "id": "titanio-galling",
+      "severidad": "info",
+      "titulo": "Titanio con tornillos bloqueados: cuidado con el agarrotamiento",
+      "texto": "El titanio contra titanio puede agarrotarse (cold welding) y dejar un tornillo bloqueado imposible de extraer. Usa el destornillador dinamométrico y no sobreaprietes.",
+      "mostrarSiAlguno": [
+        {
+          "material": [
+            "mat-titanio"
+          ],
+          "diseno-placa": [
+            "pl-bloqueada"
+          ]
+        },
+        {
+          "material": [
+            "mat-titanio"
+          ],
+          "diseno-placa": [
+            "pl-va"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bmp-indicacion",
+      "severidad": "media",
+      "titulo": "La BMP tiene indicaciones estrechas",
+      "texto": "Su uso está estudiado sobre todo en tibia abierta y no uniones. Fuera de esos escenarios, el coste y las precauciones de indicación pesan más que el beneficio esperable.",
+      "mostrarSi": {
+        "defecto": [
+          "df-bmp"
+        ]
+      }
+    },
+    {
+      "id": "hundido-sin-relleno",
+      "severidad": "alta",
+      "titulo": "Fragmento articular elevado sin rellenar el defecto",
+      "texto": "Elevar la superficie articular deja un vacío metafisario debajo. Si no se rellena con injerto o sustituto, el fragmento vuelve a colapsar en cuanto se carga.",
+      "mostrarSi": {
+        "ctx": [
+          "zonas-dos"
+        ],
+        "defecto": [
+          "df-no"
+        ]
+      }
+    },
+    {
+      "id": "va-angulacion",
+      "severidad": "media",
+      "titulo": "Angular tiene precio: no angules por comodidad",
+      "texto": "En la VA-LCP el tornillo bloquea dentro de un cono de 30° —hasta 15° a cada lado—, pero la resistencia a la rotación en la interfase tornillo-placa cae de forma casi lineal conforme angulas, y a 15° la resistencia a flexión ya es medible más baja. Angula lo justo para esquivar la superficie articular o el vástago, y no salgas del cono: fuera de él la rosca se arruina y el tornillo deja de bloquear.",
+      "mostrarSi": {
+        "diseno-placa": [
+          "pl-va"
+        ]
+      }
+    },
+    {
+      "id": "rg-vancouver-b2",
+      "severidad": "critica",
+      "titulo": "Vástago suelto: la operación es revisarlo, no fijar la fractura",
+      "texto": "En un Vancouver B2 o B3 el problema no es la fractura, es que la prótesis ha perdido su fijación. Colocar una placa sobre un vástago suelto falla siempre, porque el vástago sigue moviéndose dentro del hueso. Hay que revisar con vástago largo que puentee el foco, y en el B3 además reconstruir el hueso.",
+      "mostrarSi": {
+        "ctx": [
+          "revisar-vastago"
+        ]
+      },
+      "noSi": {
+        "ctx": [
+          "vastago-revision"
+        ]
+      }
+    },
+    {
+      "id": "rg-garden-desplazada",
+      "severidad": "alta",
+      "titulo": "Cuello desplazado: valora si la respuesta es una prótesis",
+      "texto": "Un Garden III-IV rompe el aporte cefálico y acumula tasas altas de necrosis y no unión. En el paciente mayor o con demandas bajas, la artroplastia evita la reintervención; la fijación se reserva al paciente joven, y entonces es urgente y anatómica.",
+      "mostrarSi": {
+        "ctx": [
+          "garden-desplazada"
+        ]
+      }
+    },
+    {
+      "id": "rg-necrosis-humeral",
+      "severidad": "alta",
+      "titulo": "Predictores de isquemia de la cabeza humeral",
+      "texto": "Calcar corto por debajo de 8 mm, bisagra medial rota o trazo basicervical: la cabeza probablemente está isquémica. Con varios presentes, en el paciente mayor la artroplastia invertida evita una fijación que va a colapsar.",
+      "mostrarSi": {
+        "ctx": [
+          "riesgo-necrosis-humeral"
+        ]
+      }
+    },
+    {
+      "id": "rg-sanders-iv",
+      "severidad": "media",
+      "titulo": "Faceta posterior conminuta: valora la artrodesis primaria",
+      "texto": "En un Sanders IV la superficie no es reconstruible y el resultado funcional de la osteosíntesis aislada es pobre. La artrodesis subastragalina primaria, con restauración de altura y anchura, es una alternativa legítima que hay que plantear antes de operar, no después.",
+      "mostrarSi": {
+        "ctx": [
+          "valorar-artrodesis"
+        ]
+      }
+    },
+    {
+      "id": "rg-pelvis-posterior",
+      "severidad": "alta",
+      "titulo": "Inestabilidad vertical: la fijación anterior no basta",
+      "texto": "Un Tile C significa que el complejo posterior está roto. La sínfisis o el fijador anterior no controlan el desplazamiento craneal: hace falta fijación posterior, con tornillos iliosacros o placa transilíaca.",
+      "mostrarSi": {
+        "ctx": [
+          "pelvis-fijacion-posterior"
+        ]
+      }
+    },
+    {
+      "id": "rg-sindesmosis-comprimida",
+      "severidad": "critica",
+      "titulo": "La sindesmosis no se comprime: se posiciona",
+      "texto": "Has elegido compresión interfragmentaria con la sindesmosis lesionada. Ese espacio no es un foco de fractura que haya que cerrar: es una articulación con movimiento fisiológico. Comprimirla estrecha la mortaja, bloquea la dorsiflexión y deja el tobillo rígido y doloroso. Lo que corresponde es un tornillo de POSICIÓN, colocado sin comprimir y con el tobillo en neutro.",
+      "mostrarSiAlguno": [
+        {
+          "ctxTodos": [
+            "riesgo-sindesmosis",
+            "usa-compresion"
+          ]
+        },
+        {
+          "ctx": [
+            "riesgo-sindesmosis"
+          ],
+          "tipo-tornillo": [
+            "tor-parcial"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rg-sindesmosis",
+      "severidad": "alta",
+      "titulo": "Peroné alto: comprueba la sindesmosis",
+      "texto": "En la pronación-rotación externa el trazo del peroné sube, y cuanto más sube más membrana interósea está rota. Palpa todo el peroné para descartar una Maisonneuve y haz la prueba de estrés intraoperatoria. Si hay que estabilizarla, es un tornillo de posición: comprimir la sindesmosis es el error.",
+      "mostrarSi": {
+        "ctx": [
+          "riesgo-sindesmosis"
+        ]
+      }
+    },
+    {
+      "id": "rg-codo-inestable",
+      "severidad": "alta",
+      "titulo": "La cabeza radial aquí es un estabilizador primario",
+      "texto": "Con luxación del codo asociada, resecar la cabeza radial sin sustituirla deja el codo inestable. Busca la tríada terrible —coronoides y ligamento colateral lateral— y planifica el orden de reparación desde dentro hacia fuera.",
+      "mostrarSi": {
+        "ctx": [
+          "inestabilidad-codo"
+        ]
+      }
+    },
+    {
+      "id": "rg-winquist-dinamizar",
+      "severidad": "alta",
+      "titulo": "No dinamices lo que no tiene contacto cortical",
+      "texto": "Con un Winquist III o IV no queda columna que comparta carga: la dinamización solo produce acortamiento. Bloqueo estático en ambos extremos.",
+      "mostrarSi": {
+        "ctx": [
+          "sin-contacto-cortical"
+        ],
+        "clavo-config": [
+          "cl-dinamico"
+        ]
+      }
+    }
+  ],
+  "reglasCoherencia": [
+    {
+      "id": "r6-ferulaje-sin-implante",
+      "titulo": "Coherencia — ferulaje sin implante que lo materialice",
+      "si": {
+        "ctx": [
+          "usa-ferulaje"
+        ]
+      },
+      "noSiAlguno": [
+        {
+          "implante": [
+            "i-clavo"
+          ]
+        },
+        {
+          "implante": [
+            "i-placa"
+          ]
+        },
+        {
+          "implante": [
+            "i-tutor"
+          ]
+        },
+        {
+          "implante": [
+            "i-revision"
+          ]
+        }
+      ],
+      "severidad": "advertencia",
+      "mensaje": "Elegiste ferulaje en el Paso 5, pero no has marcado ningún implante capaz de ferulizar: clavo, placa puente o fijador externo."
+    },
+    {
+      "id": "r6-compresion-sin-medio",
+      "titulo": "Coherencia — comprimir sin nada que comprima",
+      "si": {
+        "ctx": [
+          "usa-compresion"
+        ]
+      },
+      "noSiAlguno": [
+        {
+          "implante": [
+            "i-tornillo"
+          ]
+        },
+        {
+          "funcion-placa": [
+            "fp-compresion"
+          ]
+        }
+      ],
+      "severidad": "advertencia",
+      "mensaje": "Elegiste compresión interfragmentaria pero el constructo no incluye ni tornillos ni una placa en función de compresión. Revisa qué implante va a producirla."
+    },
+    {
+      "id": "r6-banda-sin-constructo",
+      "titulo": "Coherencia — banda de tensión sin constructo",
+      "si": {
+        "ctx": [
+          "usa-banda"
+        ]
+      },
+      "noSiAlguno": [
+        {
+          "implante": [
+            "i-agujas"
+          ]
+        },
+        {
+          "funcion-placa": [
+            "fp-banda"
+          ]
+        }
+      ],
+      "severidad": "advertencia",
+      "mensaje": "La banda de tensión se materializa con agujas más cerclaje en ocho, o con una placa en el lado de tensión. No has marcado ninguno de los dos."
+    },
+    {
+      "id": "r6-proteccion-sin-tornillo",
+      "titulo": "Coherencia — proteger una compresión que no existe",
+      "si": {
+        "funcion-placa": [
+          "fp-proteccion"
+        ]
+      },
+      "noSi": {
+        "implante": [
+          "i-tornillo"
+        ]
+      },
+      "severidad": "advertencia",
+      "mensaje": "La placa de protección no genera estabilidad propia: blinda la que da el tornillo interfragmentario. Sin ese tornillo en el constructo, la placa no está protegiendo nada."
+    }
+  ],
+  "evidencia": [
+    {
+      "nivel": "1",
+      "afirmacion": "En las fracturas cerradas de diáfisis tibial, el fresado del clavo redujo las reintervenciones; en las abiertas la diferencia no alcanzó significación.",
+      "refs": [
+        "ref-sprint-2008"
+      ]
+    },
+    {
+      "nivel": "1",
+      "afirmacion": "En la fractura abierta de tibia tratada con clavo, la rhBMP-2 redujo las reintervenciones y aceleró la consolidación frente al cuidado estándar.",
+      "refs": [
+        "ref-govender-2002"
+      ]
+    },
+    {
+      "nivel": "3",
+      "afirmacion": "El autoinjerto sigue siendo el patrón oro para defectos y no uniones por su triple acción osteogénica, osteoinductora y osteoconductora.",
+      "refs": [
+        "ref-biomec-trauma"
+      ]
+    }
+  ],
+  "autoevaluacion": [
+    {
+      "pregunta": "¿Qué significa que el clavo sea un implante de carga compartida?",
+      "opciones": [
+        "Que se reparte la carga con la placa que lo acompaña",
+        "Que transmite parte de la carga a través del hueso, y por eso tolera mejor el apoyo precoz y la fatiga",
+        "Que soporta toda la carga hasta que el hueso cure",
+        "Que solo puede usarse con apoyo diferido"
+      ],
+      "correcta": 1,
+      "explicacion": "La placa que puentea sin contacto óseo es lo contrario: carga soportada, y por tanto más vulnerable a la fatiga si la consolidación se retrasa.",
+      "origen": "libro"
+    },
+    {
+      "pregunta": "¿Por qué la placa bloqueada es de elección en hueso osteoporótico?",
+      "opciones": [
+        "Porque es más rígida",
+        "Porque es de ángulo fijo: no depende de la fricción placa-hueso ni del agarre cortical, y preserva la vascularización perióstica",
+        "Porque comprime mejor el foco",
+        "Porque permite tornillos más largos"
+      ],
+      "correcta": 1,
+      "explicacion": "Funciona como fijador interno: los tornillos y la placa trabajan como un bloque. Lo que no hace es comprimir el foco.",
+      "origen": "libro"
+    },
+    {
+      "pregunta": "Quieres comprimir un trazo simple con una placa. ¿Qué diseño NO te sirve solo?",
+      "opciones": [
+        "DCP",
+        "LC-DCP",
+        "Placa bloqueada pura",
+        "Placa con agujeros combi"
+      ],
+      "correcta": 2,
+      "explicacion": "El tornillo bloqueado fija con ángulo fijo sin presionar la placa contra el hueso, así que no comprime el foco. La combi sí sirve, pero respetando la secuencia: primero se comprime con el convencional, después se bloquea.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "«Tornillo de tracción», ¿qué es exactamente?",
+      "opciones": [
+        "Un diseño concreto de tornillo",
+        "Una función: cualquier tornillo usado con agujero deslizante para comprimir",
+        "Un tornillo de rosca parcial",
+        "Un tornillo canulado"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la misma distinción del Paso 5 entre principio, manera e implante. Un cortical de rosca completa hace de tornillo de tracción si se le crea el barril de deslizamiento.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Qué controla la rotación en un enclavado endomedular?",
+      "opciones": [
+        "El diámetro del clavo",
+        "El fresado",
+        "Los pernos de bloqueo",
+        "El contacto endostal"
+      ],
+      "correcta": 2,
+      "explicacion": "El clavo alinea pero no impide que el fragmento rote ni que acorte. Eso lo dan los pernos proximales y distales.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "El fresado de un clavo, ¿qué efecto tiene sobre la rigidez del montaje?",
+      "opciones": [
+        "La reduce",
+        "La aumenta, porque permite un clavo de mayor diámetro",
+        "No la modifica",
+        "Depende del material"
+      ],
+      "correcta": 1,
+      "explicacion": "La rigidez a flexión crece con la cuarta potencia del radio. El coste es la vascularización endostal.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Qué aporta el autoinjerto que no aporta el aloinjerto?",
+      "opciones": [
+        "Osteoconducción",
+        "Osteoinducción",
+        "Osteogénesis: células vivas",
+        "Volumen ilimitado"
+      ],
+      "correcta": 2,
+      "explicacion": "El aloinjerto es osteoconductor y algo osteoinductor, pero no lleva células vivas. A cambio, no tiene morbilidad de zona donante.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Cuál es la pregunta de control del Paso 6?",
+      "opciones": [
+        "¿Tengo este implante disponible?",
+        "¿Este implante cumple el principio que elegí, o me está obligando a cambiar de principio?",
+        "¿Es el implante más moderno?",
+        "¿Acero o titanio?"
+      ],
+      "correcta": 1,
+      "explicacion": "Si para colocarlo hay que desvitalizar el foco que decidiste puentear, el implante o la técnica son los equivocados.",
+      "origen": "libro"
+    }
+  ],
+  "sintesis": "El implante se elige al final, y por tres filtros en este orden: que cumpla el principio del Paso 5, que respete la biología y que se adapte al hueso del huésped. La función de una placa la define el cirujano, no su forma. La bloqueada preserva vascularización y sostiene hueso débil, pero no comprime. Y la distinción entre carga compartida y carga soportada gobierna cuánto se puede cargar después.",
+  "lecturas": [
+    "Manual AO, volumen de implantes.",
+    "Bavonratanavech S. — MIPO: Minimally Invasive Plate Osteosynthesis.",
+    "SPRINT Investigators, JBJS Am 2008; Govender S et al., JBJS Am 2002."
+  ],
+  "refs": [
+    "ref-sprint-2008",
+    "ref-govender-2002",
+    "ref-biomec-trauma",
+    "ref-perren-2002"
+  ]
+}

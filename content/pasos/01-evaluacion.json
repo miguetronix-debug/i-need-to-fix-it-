@@ -1,0 +1,1469 @@
+{
+  "id": "paso-01-evaluacion",
+  "numero": 1,
+  "titulo": "La evaluación inicial",
+  "subtitulo": "Primero el enfermo, no la radiografía",
+  "preguntaClave": "¿Está este paciente —y su piel— en condiciones de ser operado, y cuándo?",
+  "objetivos": [
+    "Clasificar al politraumatizado en estable, borderline, inestable o in extremis con variables fisiológicas objetivas",
+    "Elegir la estrategia quirúrgica que corresponde a cada categoría (ETC · EAC · DCO · SDS · MuST)",
+    "Graduar las partes blandas con Tscherne (cerradas) y Gustilo-Anderson (abiertas), incluido el desglose IIIA/IIIB/IIIC",
+    "Reconocer que la contaminación macroscópica o el contacto con material orgánico definen tipo III por sí solos",
+    "Reconocer el síndrome compartimental antes de que aparezcan los signos tardíos"
+  ],
+  "decisiones": [
+    {
+      "id": "estado-fisiologico",
+      "pregunta": "¿En qué categoría fisiológica está el paciente?",
+      "ayuda": "La fisiología del paciente —no el reloj— dicta la estrategia quirúrgica. Los valores se evalúan de forma dinámica y en conjunto, nunca como hallazgos puntuales aislados.",
+      "tipo": "opcionUnica",
+      "opciones": [
+        {
+          "id": "estable",
+          "etiqueta": "Estable",
+          "criterios": [
+            "PAS > 100 mmHg · índice de shock < 0,9 · FC < 100",
+            "Lactato < 2 mmol/L · déficit de base ≥ −5 · pH > 7,35",
+            "INR < 1,2 · plaquetas > 150 000 · fibrinógeno > 200",
+            "T° central > 36 °C · Hb > 10 · P/F > 300 · GCS 14–15",
+            "Sin vasopresores · 0–2 U de GRE"
+          ],
+          "consecuencias": {
+            "estrategia": "etc"
+          }
+        },
+        {
+          "id": "borderline",
+          "etiqueta": "Borderline",
+          "criterios": [
+            "PAS 90–100 · índice de shock 0,9–1,2 · FC 100–120",
+            "Lactato 2–4 · déficit de base −5 a −10 · pH 7,25–7,35",
+            "INR 1,2–1,5 · plaquetas 100–150 000 · fibrinógeno 150–200",
+            "T° central 33–36 °C · Hb 8–10 · P/F 200–300 · GCS 9–13",
+            "Vasopresores a dosis bajas · 3–10 U de GRE"
+          ],
+          "consecuencias": {
+            "estrategia": "eac"
+          }
+        },
+        {
+          "id": "inestable",
+          "etiqueta": "Inestable",
+          "criterios": [
+            "PAS < 90 · índice de shock > 1,2 · FC 120–140",
+            "Lactato > 4 · déficit de base < −10 · pH < 7,25",
+            "INR > 1,5 · plaquetas < 100 000 · fibrinógeno < 150",
+            "T° central < 33 °C · Hb < 8 · P/F < 200 · GCS 6–8",
+            "Vasopresores a dosis medias-altas · > 10 U de GRE"
+          ],
+          "consecuencias": {
+            "estrategia": "dco"
+          }
+        },
+        {
+          "id": "in-extremis",
+          "etiqueta": "In extremis",
+          "criterios": [
+            "≥ 5 de 7 criterios del score in extremis → mortalidad > 50 %",
+            "PAS < 90 sin respuesta · dependencia de vasopresores · protocolo de transfusión masiva",
+            "Lactato > 4 sin clearance · pH < 7,20 · déficit de base < −14",
+            "TP ≤ 25 % · plaquetas < 50 000 (CID) · coagulopatía refractaria",
+            "T° central < 32 °C · anuria refractaria"
+          ],
+          "consecuencias": {
+            "estrategia": "must"
+          }
+        }
+      ]
+    },
+    {
+      "id": "estrategia",
+      "pregunta": "¿Qué estrategia quirúrgica corresponde?",
+      "ayuda": "Se deduce de la categoría fisiológica. El motor la sugiere y avisa si eliges otra.",
+      "tipo": "opcionUnica",
+      "opciones": [
+        {
+          "id": "etc",
+          "etiqueta": "ETC · Early Total Care",
+          "criterios": [
+            "Paciente estable",
+            "Fijación definitiva de todas las fracturas < 24 h"
+          ],
+          "paraCategoria": [
+            "estable"
+          ]
+        },
+        {
+          "id": "eac",
+          "etiqueta": "EAC · Early Appropriate Care",
+          "criterios": [
+            "Borderline que responde a la reanimación",
+            "Fijación definitiva a las 24–36 h si los parámetros normalizan"
+          ],
+          "paraCategoria": [
+            "borderline"
+          ]
+        },
+        {
+          "id": "dco",
+          "etiqueta": "DCO · Damage Control Orthopedics",
+          "criterios": [
+            "Paciente inestable",
+            "Fase 1 < 24 h: fijador externo + UCI",
+            "Fase 2: conversión día 5–10"
+          ],
+          "paraCategoria": [
+            "inestable",
+            "borderline"
+          ]
+        },
+        {
+          "id": "must",
+          "etiqueta": "MuST · Musculoskeletal Temporary Surgery",
+          "criterios": [
+            "In extremis",
+            "Solo cirugía de sobrevida: control de hemorragia, fasciotomías, fijación provisional mínima",
+            "Sin enclavado intramedular ni cirugía definitiva"
+          ],
+          "paraCategoria": [
+            "in-extremis"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "partes-blandas",
+      "pregunta": "¿Cómo están las partes blandas?",
+      "ayuda": "La fractura abierta se grada TRAS el desbridamiento, no en urgencias: la herida cutánea infravalora la lesión profunda.",
+      "tipo": "opcionUnica",
+      "opciones": [
+        {
+          "id": "cerrada-tscherne-0-1",
+          "etiqueta": "Cerrada · Tscherne 0–I",
+          "criterios": [
+            "Baja energía",
+            "Lesión mínima o abrasión superficial por presión desde dentro"
+          ],
+          "consecuencias": {
+            "ventanaPartesBlandas": false
+          }
+        },
+        {
+          "id": "cerrada-tscherne-2-3",
+          "etiqueta": "Cerrada · Tscherne II–III",
+          "criterios": [
+            "Contusión muscular significativa",
+            "Degloving cerrado",
+            "Flictenas o edema a tensión",
+            "Disrupción arterial o compartimental establecido (III)"
+          ],
+          "consecuencias": {
+            "ventanaPartesBlandas": true
+          }
+        },
+        {
+          "id": "abierta-gustilo-1",
+          "etiqueta": "Abierta · Gustilo I",
+          "criterios": [
+            "Herida < 1 cm",
+            "Limpia, de dentro a fuera",
+            "Contusión muscular mínima · baja energía"
+          ],
+          "consecuencias": {
+            "antibioticoPrecoz": true,
+            "desbridamiento": true
+          },
+          "emite": [
+            "fractura-abierta"
+          ]
+        },
+        {
+          "id": "abierta-gustilo-2",
+          "etiqueta": "Abierta · Gustilo II",
+          "criterios": [
+            "Herida 1–10 cm",
+            "Daño moderado de partes blandas",
+            "Sin avulsión extensa ni colgajos"
+          ],
+          "consecuencias": {
+            "antibioticoPrecoz": true,
+            "desbridamiento": true
+          },
+          "emite": [
+            "fractura-abierta"
+          ]
+        },
+        {
+          "id": "abierta-gustilo-3a",
+          "etiqueta": "Abierta · Gustilo IIIA",
+          "criterios": [
+            "Daño extenso PERO con cobertura ósea adecuada por partes blandas",
+            "Segmentarias, proyectil de arma de fuego, alta energía — tipo III sea cual sea el tamaño de la herida",
+            "No requiere colgajo"
+          ],
+          "consecuencias": {
+            "antibioticoPrecoz": true,
+            "fijadorExterno": true
+          },
+          "emite": [
+            "abierta-grave",
+            "fractura-abierta"
+          ]
+        },
+        {
+          "id": "abierta-gustilo-3b",
+          "etiqueta": "Abierta · Gustilo IIIB",
+          "criterios": [
+            "Despegamiento perióstico y exposición ósea",
+            "REQUIERE colgajo para cobertura",
+            "Suele haber contaminación masiva"
+          ],
+          "consecuencias": {
+            "antibioticoPrecoz": true,
+            "fijadorExterno": true,
+            "coberturaPrecoz": true
+          },
+          "emite": [
+            "abierta-grave",
+            "fractura-abierta"
+          ]
+        },
+        {
+          "id": "abierta-gustilo-3c",
+          "etiqueta": "Abierta · Gustilo IIIC",
+          "criterios": [
+            "Lesión arterial que REQUIERE reparación para salvar el miembro",
+            "Cualquier tamaño de herida",
+            "Urgencia vascular"
+          ],
+          "consecuencias": {
+            "antibioticoPrecoz": true,
+            "fijadorExterno": true,
+            "urgenciaVascular": true
+          },
+          "emite": [
+            "abierta-grave",
+            "fractura-abierta"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compartimental",
+      "pregunta": "¿Hay datos de síndrome compartimental?",
+      "ayuda": "Se pregunta SIEMPRE, junto al grado de partes blandas y con independencia de él: una fractura abierta no descomprime los compartimentos. La sospecha es clínica; la presión solo se mide cuando la clínica no es valorable.",
+      "bloque": "partes-blandas",
+      "prioridad": "maxima",
+      "tipo": "opcionUnica",
+      "opciones": [
+        {
+          "id": "sin-datos",
+          "etiqueta": "Sin datos",
+          "criterios": [
+            "Dolor proporcional a la lesión y controlado con analgesia habitual",
+            "Compartimentos depresibles",
+            "Sin dolor al estiramiento pasivo",
+            "Paciente valorable clínicamente"
+          ],
+          "consecuencias": {
+            "vigilanciaSeriada": true
+          }
+        },
+        {
+          "id": "datos-sugestivos",
+          "etiqueta": "Datos sugestivos (sospecha clínica)",
+          "criterios": [
+            "Dolor desproporcionado o creciente pese a la analgesia",
+            "Dolor con el estiramiento pasivo de los dedos",
+            "Compartimento tenso y a tensión a la palpación",
+            "Requerimiento analgésico en aumento (opioides escalados)",
+            "Paciente no valorable (obnubilado, intubado, bloqueo regional): medir presiones — ΔP = PAD − presión compartimental < 30 mmHg es indicación"
+          ],
+          "consecuencias": {
+            "fasciotomiaInmediata": true,
+            "contraindicaDefinitivo": true
+          }
+        },
+        {
+          "id": "evidente-establecido",
+          "etiqueta": "Evidente / establecido",
+          "criterios": [
+            "Compartimento leñoso con déficit neurológico instaurado",
+            "Parestesia, paresia o palidez presentes (signos TARDÍOS)",
+            "ΔP < 30 mmHg confirmado",
+            "No esperar más estudios: el diagnóstico ya está hecho"
+          ],
+          "consecuencias": {
+            "fasciotomiaInmediata": true,
+            "contraindicaDefinitivo": true,
+            "urgenciaAbsoluta": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "contaminacion",
+      "pregunta": "¿Qué grado de contaminación tiene la herida?",
+      "ayuda": "La contaminación reclasifica: ciertos mecanismos son tipo III por definición, sea cual sea el tamaño de la herida.",
+      "tipo": "opcionUnica",
+      "mostrarSi": {
+        "partes-blandas": [
+          "abierta-gustilo-1",
+          "abierta-gustilo-2",
+          "abierta-gustilo-3a",
+          "abierta-gustilo-3b",
+          "abierta-gustilo-3c"
+        ]
+      },
+      "opciones": [
+        {
+          "id": "limpia",
+          "etiqueta": "Limpia",
+          "criterios": [
+            "Herida de dentro a fuera",
+            "Sin cuerpos extraños ni tierra",
+            "Entorno urbano, baja energía"
+          ]
+        },
+        {
+          "id": "proyectil-arma-fuego",
+          "etiqueta": "Herida por proyectil de arma de fuego",
+          "criterios": [
+            "Tipo III por definición, sea cual sea el tamaño de la herida de entrada",
+            "Cavitación y desvitalización profunda por disipación de energía cinética",
+            "Arrastre de ropa y contaminantes al trayecto",
+            "Explorar el trayecto completo, no solo los orificios"
+          ],
+          "consecuencias": {
+            "reclasificaTipoIII": true,
+            "desbridamientoSeriado": true,
+            "explorarTrayecto": true
+          }
+        },
+        {
+          "id": "contaminacion-macroscopica",
+          "etiqueta": "Contaminación macroscópica",
+          "criterios": [
+            "Tierra, arena, gravilla o cuerpos extraños visibles",
+            "Requiere desbridamiento seriado",
+            "Considerar antibiótico local"
+          ],
+          "consecuencias": {
+            "reclasificaTipoIII": true,
+            "desbridamientoSeriado": true
+          }
+        },
+        {
+          "id": "material-organico",
+          "etiqueta": "Contacto con material orgánico",
+          "criterios": [
+            "Medio agrícola, establo, estiércol o materia fecal",
+            "Agua estancada, dulce o salada",
+            "Mordedura o material vegetal"
+          ],
+          "consecuencias": {
+            "reclasificaTipoIII": true,
+            "desbridamientoSeriado": true,
+            "coberturaAmpliada": true,
+            "riesgoClostridios": true
+          }
+        }
+      ]
+    }
+  ],
+  "esencial": [
+    {
+      "tipo": "parrafo",
+      "texto": "La fractura nunca existe en el vacío. El método empieza por el enfermo: en qué estado fisiológico está, cómo están las partes blandas y cuándo conviene operar. Es el terreno donde más fracturas técnicamente bien fijadas terminan en fracaso."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "Regla del Paso 1",
+      "texto": "Si la piel o el paciente no están listos, el mejor implante es el equivocado. La fisiología del paciente —no el reloj— dicta la estrategia quirúrgica."
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Variables fisiológicas · A. Hemodinámico",
+      "encabezados": [
+        "Parámetro",
+        "Estable",
+        "Borderline",
+        "Inestable",
+        "In extremis"
+      ],
+      "filas": [
+        [
+          "PAS (mmHg)",
+          "> 100",
+          "90–100",
+          "< 90",
+          "< 90 sin respuesta"
+        ],
+        [
+          "Índice de shock (FC/PAS)",
+          "< 0,9",
+          "0,9–1,2",
+          "> 1,2",
+          "> 1,0 + multiparamétrico"
+        ],
+        [
+          "Frecuencia cardíaca (lpm)",
+          "< 100",
+          "100–120",
+          "120–140",
+          "> 140 o bradicardia"
+        ],
+        [
+          "Vasopresores",
+          "No requiere",
+          "Dosis bajas",
+          "Dosis medias-altas",
+          "Dependencia"
+        ],
+        [
+          "GRE transfundidos (24 h)",
+          "0–2 U",
+          "3–10 U",
+          "> 10 U",
+          "Protocolo de transfusión masiva"
+        ],
+        [
+          "Diuresis (mL/kg/h)",
+          "> 0,5",
+          "0,3–0,5",
+          "< 0,3",
+          "Anuria / oliguria refractaria"
+        ]
+      ]
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Variables fisiológicas · B. Metabólico / gasométrico",
+      "encabezados": [
+        "Parámetro",
+        "Estable",
+        "Borderline",
+        "Inestable",
+        "In extremis"
+      ],
+      "filas": [
+        [
+          "Lactato (mmol/L)",
+          "< 2",
+          "2–4",
+          "> 4",
+          "> 4 sin clearance"
+        ],
+        [
+          "Clearance de lactato (%/h)",
+          "Ya normal",
+          "> 10–20 %/h → responde",
+          "< 10 %/h",
+          "Sin descenso o en ascenso"
+        ],
+        [
+          "Déficit de base (mmol/L)",
+          "≥ −5",
+          "−5 a −10",
+          "< −10",
+          "< −14"
+        ],
+        [
+          "pH arterial",
+          "> 7,35",
+          "7,25–7,35",
+          "< 7,25",
+          "< 7,20"
+        ],
+        [
+          "PaCO₂ (mmHg)",
+          "35–45",
+          "45–50",
+          "> 50",
+          "> 50 (criterio IE)"
+        ],
+        [
+          "PaO₂/FiO₂ (Horowitz)",
+          "> 300",
+          "200–300",
+          "< 200",
+          "< 300 (criterio IE)"
+        ]
+      ]
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Variables fisiológicas · C. Coagulación",
+      "encabezados": [
+        "Parámetro",
+        "Estable",
+        "Borderline",
+        "Inestable",
+        "In extremis"
+      ],
+      "filas": [
+        [
+          "INR",
+          "< 1,2",
+          "1,2–1,5",
+          "> 1,5",
+          "> 1,5 + consumo"
+        ],
+        [
+          "TP / actividad de protrombina",
+          "> 70 %",
+          "50–70 %",
+          "< 50 %",
+          "≤ 25 % → mortalidad > 50 %"
+        ],
+        [
+          "Plaquetas (× 10³/µL)",
+          "> 150",
+          "100–150",
+          "< 100",
+          "< 50 (CID)"
+        ],
+        [
+          "Fibrinógeno (mg/dL)",
+          "> 200",
+          "150–200",
+          "< 150",
+          "< 100"
+        ],
+        [
+          "ROTEM / TEG",
+          "Normal",
+          "Alteración leve-moderada",
+          "Hipofibrinólisis / CID",
+          "Coagulopatía refractaria"
+        ]
+      ]
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Variables fisiológicas · D–F. Temperatura, oxigenación y neurológico",
+      "encabezados": [
+        "Parámetro",
+        "Estable",
+        "Borderline",
+        "Inestable",
+        "In extremis"
+      ],
+      "filas": [
+        [
+          "T° central (°C)",
+          "> 36",
+          "33–36",
+          "< 33",
+          "< 32"
+        ],
+        [
+          "Hemoglobina (g/dL)",
+          "> 10",
+          "8–10",
+          "< 8",
+          "< 9,5 + multiparamétrico"
+        ],
+        [
+          "SaO₂ arterial (%)",
+          "> 95",
+          "90–95",
+          "< 90",
+          "< 90 refractaria"
+        ],
+        [
+          "GCS",
+          "14–15",
+          "9–13",
+          "6–8",
+          "≤ 8 + lesión no resoluble"
+        ]
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "Score in extremis — 7 criterios",
+      "texto": "PaCO₂ > 50 · Hb < 9,5 · pH < 7,2 · lactato > 4 · exceso de base < −6 · índice de shock > 1 · P/F < 300. Con ≥ 5 de 7 positivos, la mortalidad supera el 50 %."
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Endpoints de reanimación — autorización para cirugía definitiva",
+      "encabezados": [
+        "Situación",
+        "Criterios y conducta"
+      ],
+      "filas": [
+        [
+          "Autorizado ETC / EAC",
+          "Lactato ≤ 4 (ideal < 2) · déficit de base ≥ −5,5 · INR < 1,5 · T° > 35 °C · PAS > 90 sin vasopresores · clearance de lactato > 10 %/h · plaquetas > 100 000 · Hb > 8. Evaluar dentro de las 24–36 h. No hay ventana temporal fija: la normalización fisiológica es el único criterio válido."
+        ],
+        [
+          "Borderline → EAC / SDS / DCO",
+          "Si los parámetros mejoran progresivamente, fijación definitiva con monitorización estrecha. Si se estancan o empeoran, escalar a DCO. Agravantes independientes: TEC grave (GCS ≤ 8), contusión pulmonar bilateral (P/F < 200), fractura femoral bilateral, ISS > 40, vasopresores, edad > 65, fragilidad."
+        ],
+        [
+          "In extremis → MuST / DCO mínimo",
+          "Solo cirugía de sobrevida: control de hemorragia, fasciotomías si hay compartimental, fijación provisional mínima. Sin enclavado intramedular ni cirugía definitiva. Conversión diferida al día 5–10 si sobrevive y normaliza."
+        ]
+      ]
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Clearance de lactato — dinámica de respuesta",
+      "encabezados": [
+        "Clearance",
+        "Interpretación",
+        "Decisión"
+      ],
+      "filas": [
+        [
+          "> 20 %/h",
+          "Respuesta excelente a la reanimación",
+          "Progresar a ETC/EAC con seguridad"
+        ],
+        [
+          "10–20 %/h",
+          "Respuesta parcial — borderline respondedor",
+          "EAC individualizado, monitorización estrecha"
+        ],
+        [
+          "< 10 %/h",
+          "Sin respuesta adecuada",
+          "DCO — diferir la cirugía definitiva"
+        ],
+        [
+          "Sin descenso o en ascenso",
+          "Fracaso de reanimación / sangrado activo",
+          "MuST — control urgente de hemorragia"
+        ]
+      ]
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Estrategias quirúrgicas — a quién y cuándo",
+      "encabezados": [
+        "Estrategia",
+        "Paciente",
+        "Concepto central",
+        "Timing"
+      ],
+      "filas": [
+        [
+          "ETC · Early Total Care",
+          "Estable",
+          "Fijación definitiva de todas las fracturas",
+          "< 24 h, todo definitivo"
+        ],
+        [
+          "EAC · Early Appropriate Care",
+          "Borderline que responde",
+          "Fijación definitiva temprana si la fisiología lo permite",
+          "24–36 h si los parámetros normalizan"
+        ],
+        [
+          "DCO · Damage Control",
+          "Inestable / in extremis",
+          "Cirugía mínima (fijador externo) + UCI + conversión diferida",
+          "Fase 1 < 24 h · Fase 2 día 5–10"
+        ],
+        [
+          "SDS · Safe Definitive Surgery",
+          "Cualquier categoría",
+          "Cirugía definitiva solo cuando es segura; integra recursos y experiencia del equipo",
+          "Sin ventana fija"
+        ],
+        [
+          "MuST · Musculoskeletal Temporary Surgery",
+          "In extremis / inestable sin respuesta",
+          "Solo cirugía de sobrevida; sin fijación definitiva",
+          "Fase 1 inmediata mínima · definitivo día 5–10+"
+        ]
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "idea",
+      "titulo": "El segundo golpe (second hit)",
+      "texto": "El trauma libera DAMPs y activa el complemento: SIRS proporcional a la magnitud del daño, más la tríada letal (coagulopatía + hipotermia + acidosis). Operar de forma definitiva a un paciente fisiológicamente comprometido amplifica el SIRS hacia SDRA y fallo multiorgánico. El enclavado intramedular fresado genera el mayor segundo golpe (EPOFF, Pape 2003)."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "error",
+      "titulo": "La tríada letal",
+      "texto": "Coagulopatía (INR > 1,5 · plaquetas < 100 000 · fibrinógeno < 150) + hipotermia (T° < 33 °C, potencia la coagulopatía y produce disritmias) + acidosis (pH < 7,25 · déficit de base < −10 · lactato > 4, que inhibe las enzimas de la coagulación). Prevención activa: mantas calefactoras, fluidos tibios, quirófano cálido."
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Tscherne — fracturas cerradas",
+      "encabezados": [
+        "Grado",
+        "Lesión de partes blandas"
+      ],
+      "filas": [
+        [
+          "0",
+          "Energía baja; lesión mínima o ausente. Trazo simple."
+        ],
+        [
+          "I",
+          "Abrasión o contusión superficial por presión de un fragmento desde dentro."
+        ],
+        [
+          "II",
+          "Contusión muscular significativa; abrasión profunda contaminada; energía moderada-alta."
+        ],
+        [
+          "III",
+          "Aplastamiento extenso, degloving cerrado, disrupción arterial o síndrome compartimental."
+        ]
+      ]
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Gustilo-Anderson — fracturas abiertas (graduar TRAS el desbridamiento)",
+      "encabezados": [
+        "Tipo",
+        "Herida",
+        "Características",
+        "Implicación"
+      ],
+      "filas": [
+        [
+          "I",
+          "< 1 cm",
+          "Limpia, de dentro a fuera; contusión mínima; baja energía",
+          "Antibiótico + desbridamiento; fijación según la fractura"
+        ],
+        [
+          "II",
+          "1–10 cm",
+          "Daño moderado; sin avulsión extensa ni colgajos",
+          "Antibiótico + desbridamiento; valorar fijación definitiva"
+        ],
+        [
+          "IIIA",
+          "> 10 cm",
+          "Daño extenso PERO cobertura ósea adecuada; segmentarias, arma de fuego",
+          "No requiere colgajo; fijación según fisiología"
+        ],
+        [
+          "IIIB",
+          "> 10 cm",
+          "Despegamiento perióstico y exposición ósea; contaminación masiva",
+          "REQUIERE colgajo; fix and flap precoz"
+        ],
+        [
+          "IIIC",
+          "Cualquiera",
+          "Lesión arterial que requiere reparación para salvar el miembro",
+          "Urgencia vascular; equipo conjunto"
+        ]
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "error",
+      "titulo": "El mecanismo y la contaminación reclasifican: tipo III por definición",
+      "texto": "Independientemente del tamaño de la herida, son tipo III: las heridas por proyectil de arma de fuego, la contaminación macroscópica (tierra, arena, cuerpos extraños), el contacto con material orgánico (medio agrícola, establo, estiércol, materia fecal), el agua estancada, las fracturas segmentarias y las de evolución prolongada. Una herida de entrada de 5 mm no es una Gustilo I si la causó un proyectil: la energía cinética se disipa en el trayecto y el daño real es profundo. El medio agrícola y el estiércol añaden riesgo de clostridios: desbridamiento seriado y cobertura antibiótica ampliada."
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Mecanismos que definen tipo III con independencia del tamaño de la herida",
+      "encabezados": [
+        "Mecanismo",
+        "Por qué reclasifica"
+      ],
+      "filas": [
+        [
+          "Proyectil de arma de fuego",
+          "La energía cinética se disipa en el trayecto: cavitación, desvitalización profunda y arrastre de contaminantes. La herida cutánea no refleja el daño."
+        ],
+        [
+          "Fractura segmentaria",
+          "Alta energía y desvascularización del fragmento intermedio."
+        ],
+        [
+          "Medio agrícola, establo, estiércol",
+          "Contaminación orgánica masiva; riesgo de clostridios."
+        ],
+        [
+          "Agua estancada, dulce o salada",
+          "Flora atípica (Aeromonas, Vibrio); cobertura antibiótica ampliada."
+        ],
+        [
+          "Contaminación macroscópica (tierra, arena, cuerpos extraños)",
+          "Exige desbridamiento seriado; el lecho no queda limpio en un solo tiempo."
+        ],
+        [
+          "Aplastamiento o degloving",
+          "Desvitalización extensa aunque la piel parezca íntegra."
+        ],
+        [
+          "Evolución prolongada antes de la atención",
+          "Colonización establecida."
+        ]
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Fractura abierta — los cinco gestos",
+      "items": [
+        "Antibiótico precoz: el tiempo hasta el antibiótico pesa más que el tiempo hasta el quirófano.",
+        "Desbridamiento y lavado: la viabilidad del lecho define el resultado; seriado si hay contaminación macroscópica u orgánica.",
+        "Estabilizar y cubrir (fix and flap): colgajo precoz en las IIIB.",
+        "Profilaxis antitetánica según estado vacunal y grado de contaminación.",
+        "Antibiótico local (perlas, esponjas, cemento impregnado) como complemento del sistémico."
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "error",
+      "titulo": "Síndrome compartimental — el diagnóstico es clínico y la conducta es una sola",
+      "texto": "Datos sugestivos o evidentes obligan a fasciotomía descompresiva inmediata. No hay conducta intermedia: ni observar, ni elevar el miembro, ni esperar a la resonancia. Retirar todo vendaje circular y el yeso hasta la piel mientras se prepara el quirófano. En el paciente no valorable, ΔP (presión diastólica menos presión compartimental) < 30 mmHg confirma la indicación; en el paciente valorable, la clínica basta y medir presiones no debe retrasar la cirugía."
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Síndrome compartimental — cronología de los signos",
+      "encabezados": [
+        "Momento",
+        "Signo",
+        "Valor diagnóstico"
+      ],
+      "filas": [
+        [
+          "Precoz",
+          "Dolor desproporcionado y creciente pese a la analgesia",
+          "El más precoz y sensible"
+        ],
+        [
+          "Precoz",
+          "Dolor con el estiramiento pasivo de los dedos",
+          "El más fiable en el paciente consciente"
+        ],
+        [
+          "Precoz",
+          "Compartimento tenso a la palpación",
+          "Apoya la sospecha; no la descarta si es blando"
+        ],
+        [
+          "Precoz",
+          "Escalada del requerimiento de opioides",
+          "Señal de alarma frecuentemente ignorada"
+        ],
+        [
+          "Tardío",
+          "Parestesia",
+          "El daño nervioso ya empezó"
+        ],
+        [
+          "Tardío",
+          "Palidez y frialdad",
+          "Perfusión comprometida"
+        ],
+        [
+          "Tardío",
+          "Parálisis",
+          "Daño muscular establecido"
+        ],
+        [
+          "Tardío",
+          "Ausencia de pulso",
+          "El último en aparecer: el miembro suele estar perdido"
+        ]
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Fasciotomía — principios de ejecución",
+      "items": [
+        "Descomprimir TODOS los compartimentos del segmento: en la pierna, cuatro por doble incisión (anterolateral y posteromedial).",
+        "Incisiones amplias: la fasciotomía corta es una fasciotomía incompleta.",
+        "Valorar la viabilidad muscular con las 4 C — color, consistencia, contractilidad y capacidad de sangrado.",
+        "No cerrar de forma primaria: cierre diferido progresivo o injerto una vez cede el edema.",
+        "La osteosíntesis definitiva se supedita a la descompresión: estabilización temporal si hace falta.",
+        "Vigilar rabdomiólisis y función renal tras la reperfusión."
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "idea",
+      "titulo": "La ventana de las partes blandas",
+      "texto": "En pilón, calcáneo, meseta tibial y tobillo, la cirugía definitiva se difiere hasta que el edema cede. La reaparición de las arrugas cutáneas (wrinkle sign) y la resolución de las flictenas señalan que la piel tolerará la incisión. Mientras tanto: fijador externo puente o tracción."
+    }
+  ],
+  "alertas": [
+    {
+      "id": "compartimental-vigilancia",
+      "severidad": "media",
+      "titulo": "Vigilancia continua del síndrome compartimental",
+      "texto": "La sospecha es clínica y puede aparecer en cualquier momento de la evolución: dolor desproporcionado y dolor con el estiramiento pasivo son los signos precoces y fiables. Parestesia, palidez, parálisis y ausencia de pulso son tardíos. En el paciente no valorable, medir presiones. Reevaluar de forma seriada.",
+      "mostrarSi": {
+        "compartimental": [
+          "sin-datos"
+        ]
+      }
+    },
+    {
+      "id": "in-extremis-mortalidad",
+      "severidad": "critica",
+      "titulo": "In extremis — mortalidad > 50 %",
+      "texto": "Con ≥ 5 de 7 criterios positivos, solo cirugía de sobrevida: control de hemorragia, fasciotomías si hay compartimental y fijación provisional mínima. Ningún enclavado intramedular. La conversión definitiva se difiere al día 5–10 si el paciente sobrevive y normaliza.",
+      "mostrarSi": {
+        "estado-fisiologico": [
+          "in-extremis"
+        ]
+      }
+    },
+    {
+      "id": "borderline-reevaluar",
+      "severidad": "alta",
+      "titulo": "Borderline: la decisión se toma con la tendencia, no con un valor puntual",
+      "texto": "Si los parámetros mejoran progresivamente, fijación definitiva con monitorización estrecha. Si se estancan o empeoran, escalar a DCO. Un clearance de lactato < 10 %/h obliga a diferir.",
+      "mostrarSi": {
+        "estado-fisiologico": [
+          "borderline"
+        ]
+      }
+    },
+    {
+      "id": "clavo-fresado-second-hit",
+      "severidad": "alta",
+      "titulo": "El enclavado fresado es el mayor segundo golpe",
+      "texto": "En el paciente inestable o in extremis, el enclavado intramedular fresado amplifica la respuesta inflamatoria hacia SDRA y fallo multiorgánico (EPOFF, Pape 2003). Fijador externo y conversión diferida.",
+      "mostrarSi": {
+        "estado-fisiologico": [
+          "inestable",
+          "in-extremis"
+        ]
+      }
+    },
+    {
+      "id": "fasciotomia-inmediata",
+      "severidad": "critica",
+      "titulo": "Fasciotomía descompresiva inmediata",
+      "texto": "Hay datos de síndrome compartimental. La descompresión precede a cualquier otro gesto del plan: retirar vendajes y yeso circular hasta la piel, quirófano sin demora, descomprimir todos los compartimentos del segmento con incisiones amplias. La osteosíntesis definitiva se supedita a la fasciotomía; si hace falta, estabilización temporal.",
+      "mostrarSi": {
+        "compartimental": [
+          "datos-sugestivos",
+          "evidente-establecido"
+        ]
+      },
+      "bloqueante": true
+    },
+    {
+      "id": "abierta-no-descomprime",
+      "severidad": "alta",
+      "titulo": "Abierta no excluye compartimental",
+      "texto": "Una fractura abierta NO descomprime necesariamente los compartimentos y NO descarta un síndrome compartimental. Mantener la vigilancia.",
+      "mostrarSi": {
+        "partes-blandas": [
+          "abierta-gustilo-1",
+          "abierta-gustilo-2",
+          "abierta-gustilo-3a",
+          "abierta-gustilo-3b",
+          "abierta-gustilo-3c"
+        ]
+      }
+    },
+    {
+      "id": "iiic-vascular",
+      "severidad": "critica",
+      "titulo": "Gustilo IIIC — urgencia vascular",
+      "texto": "La reparación arterial manda sobre la osteosíntesis definitiva. Estabilización rápida (fijador externo) para proteger la reparación, equipo vascular conjunto y vigilancia estrecha del compartimental tras la reperfusión.",
+      "mostrarSi": {
+        "partes-blandas": [
+          "abierta-gustilo-3c"
+        ]
+      }
+    },
+    {
+      "id": "proyectil-tipo-iii",
+      "severidad": "alta",
+      "titulo": "Proyectil de arma de fuego — tipo III por definición",
+      "texto": "No clasificar por el tamaño del orificio. Explorar el trayecto completo, no solo los orificios de entrada y salida; buscar arrastre de ropa y fragmentos. Desbridamiento del trayecto, antibiótico precoz y vigilancia estrecha del compartimental. La proximidad del trayecto a un eje vascular obliga a descartar lesión arterial.",
+      "mostrarSi": {
+        "contaminacion": [
+          "proyectil-arma-fuego"
+        ]
+      }
+    },
+    {
+      "id": "contaminacion-organica",
+      "severidad": "alta",
+      "titulo": "Material orgánico — riesgo de clostridios",
+      "texto": "El medio agrícola, el estiércol y la materia fecal exigen desbridamiento seriado, cobertura antibiótica ampliada y umbral bajo para reintervenir. No cerrar de forma primaria.",
+      "mostrarSi": {
+        "contaminacion": [
+          "material-organico"
+        ]
+      }
+    },
+    {
+      "id": "lactato-poco-fiable",
+      "severidad": "media",
+      "titulo": "El lactato no siempre es fiable",
+      "texto": "Su valor pierde fiabilidad en el paciente alcoholizado, diabético, con insuficiencia renal crónica o anciano. En esos casos, apoyarse en el déficit de base y en la tendencia, no en un valor aislado.",
+      "mostrarSi": {
+        "estado-fisiologico": [
+          "borderline",
+          "inestable",
+          "in-extremis"
+        ]
+      }
+    },
+    {
+      "id": "fragilidad-centinela",
+      "severidad": "media",
+      "titulo": "La fractura por fragilidad es un evento centinela",
+      "texto": "Anuncia la siguiente. Exige estrategias de anclaje específicas (ángulo fijo, aumentación) y prevención secundaria.",
+      "mostrarSi": {
+        "partes-blandas": [
+          "cerrada-tscherne-0-1"
+        ]
+      }
+    },
+    {
+      "id": "rg-astragalo-urgente",
+      "severidad": "critica",
+      "titulo": "Luxación del astrágalo: la reducción no espera",
+      "texto": "Un Hawkins III o IV mantiene el cuerpo del astrágalo extruido, tensando la piel desde dentro y con el aporte vascular interrumpido. La reducción urgente es lo único que puede salvar esa piel y algo de vascularización, aunque la osteosíntesis definitiva se difiera.",
+      "mostrarSi": {
+        "ctx": [
+          "urgencia-reduccion"
+        ]
+      }
+    },
+    {
+      "id": "rg-pelvis-sangrado",
+      "severidad": "critica",
+      "titulo": "Este patrón de pelvis es el que sangra",
+      "texto": "La apertura en libro y el cizallamiento vertical aumentan el volumen pélvico y rompen el plexo venoso presacro. Faja pélvica o fijador externo de entrada, protocolo de transfusión masiva y decisión precoz sobre empaquetamiento o angioembolización. La osteosíntesis definitiva viene después.",
+      "mostrarSi": {
+        "ctx": [
+          "pelvis-hemorragia"
+        ]
+      }
+    }
+  ],
+  "reglasCoherencia": [
+    {
+      "id": "r-inestable-no-definitivo",
+      "si": {
+        "estado-fisiologico": [
+          "inestable"
+        ],
+        "estrategia": [
+          "etc",
+          "eac"
+        ]
+      },
+      "severidad": "advertencia",
+      "mensaje": "Elegiste una estrategia de fijación definitiva en un paciente inestable. La fisiología no lo autoriza: control de daños (DCO) y conversión diferida al día 5–10.",
+      "titulo": "Coherencia — estrategia definitiva en paciente inestable"
+    },
+    {
+      "id": "r-estrategia-categoria",
+      "si": {
+        "estrategiaDistintaDeSugerida": true
+      },
+      "severidad": "info",
+      "mensaje": "La estrategia elegida no es la que corresponde a la categoría fisiológica seleccionada. Revisa si hay un factor agravante que lo justifique.",
+      "titulo": "Coherencia — estrategia frente a categoría"
+    },
+    {
+      "id": "r-in-extremis-clavo",
+      "si": {
+        "estado-fisiologico": [
+          "in-extremis"
+        ],
+        "estrategia": [
+          "etc",
+          "eac"
+        ]
+      },
+      "severidad": "critica",
+      "mensaje": "In extremis con estrategia definitiva: mortalidad > 50 %. Solo MuST — cirugía de sobrevida.",
+      "titulo": "Coherencia — cirugía definitiva en in extremis"
+    },
+    {
+      "id": "r-compartimental-precede",
+      "si": {
+        "compartimental": [
+          "datos-sugestivos",
+          "evidente-establecido"
+        ]
+      },
+      "severidad": "critica",
+      "mensaje": "Síndrome compartimental: la fasciotomía descompresiva precede a todo el plan. Ningún paso posterior se ejecuta antes de descomprimir.",
+      "bloqueante": true,
+      "titulo": "Prioridad — la fasciotomía va primero"
+    },
+    {
+      "id": "r-compartimental-in-extremis",
+      "si": {
+        "compartimental": [
+          "datos-sugestivos",
+          "evidente-establecido"
+        ],
+        "estado-fisiologico": [
+          "in-extremis"
+        ]
+      },
+      "severidad": "media",
+      "mensaje": "La fasciotomía es una de las pocas cirugías autorizadas en el paciente in extremis: forma parte de la cirugía de sobrevida (MuST).",
+      "titulo": "Matiz — fasciotomía autorizada en MuST"
+    }
+  ],
+  "evidencia": [
+    {
+      "nivel": "1-2",
+      "afirmacion": "La clasificación en cuatro categorías fisiológicas (estable, borderline, inestable, in extremis) y sus umbrales proceden de una revisión sistemática PRISMA de 1 550 publicaciones.",
+      "refs": [
+        "ref-pfeifer-2023"
+      ]
+    },
+    {
+      "nivel": "1",
+      "afirmacion": "El enclavado intramedular fresado en el politraumatizado de riesgo amplifica los parámetros inmunoinflamatorios frente al control de daños (EPOFF).",
+      "refs": [
+        "ref-pape-2003",
+        "ref-pape-2007"
+      ]
+    },
+    {
+      "nivel": "2",
+      "afirmacion": "Protocolo EAC: lactato ≤ 4 mmol/L o déficit de base ≥ −5,5 tras la reanimación autoriza la fijación definitiva temprana (n = 1 239).",
+      "refs": [
+        "ref-vallier-2013"
+      ]
+    },
+    {
+      "nivel": "3",
+      "afirmacion": "Score in extremis de 7 criterios: con ≥ 5 positivos la mortalidad supera el 50 %.",
+      "refs": [
+        "ref-probst-2009"
+      ]
+    },
+    {
+      "nivel": "1-2",
+      "afirmacion": "La administración precoz de antibiótico intravenoso reduce la infección en la fractura abierta; el clásico límite de «6 horas» para el desbridamiento no está bien sustentado.",
+      "refs": [
+        "ref-gosselin-2004",
+        "ref-boast"
+      ]
+    },
+    {
+      "nivel": "2",
+      "afirmacion": "Salvamento vs amputación (LEAP): resultados funcionales similares a 2 y 7 años; el MESS no predice con fiabilidad la necesidad de amputar.",
+      "refs": [
+        "ref-bosse-2002"
+      ]
+    }
+  ],
+  "autoevaluacion": [
+    {
+      "pregunta": "¿Por qué se grada la fractura abierta después del desbridamiento y no en urgencias?",
+      "opciones": [
+        "Porque en urgencias no hay tiempo suficiente",
+        "Porque la herida cutánea infravalora la lesión profunda",
+        "Porque el grado solo importa para el informe quirúrgico",
+        "Porque la clasificación exige radiografías previas"
+      ],
+      "correcta": 1,
+      "explicacion": "El verdadero grado —sobre todo IIIB/IIIC— solo se conoce al ver el lecho desbridado. La piel miente sobre lo que hay debajo.",
+      "origen": "libro"
+    },
+    {
+      "pregunta": "Fractura cerrada de tibia de alta energía con flictenas y edema a tensión. ¿Operar hoy de forma definitiva?",
+      "opciones": [
+        "Sí, cuanto antes mejor para la consolidación",
+        "Sí, si el paciente está hemodinámicamente estable",
+        "No: estabilizar temporalmente y esperar la ventana de partes blandas",
+        "No: indicar tratamiento conservador definitivo"
+      ],
+      "correcta": 2,
+      "explicacion": "El Paso 1 manda sobre la radiografía. Fijador o yeso y esperar el signo de las arrugas.",
+      "origen": "libro"
+    },
+    {
+      "pregunta": "¿Cuál es el signo más precoz y fiable del síndrome compartimental?",
+      "opciones": [
+        "Ausencia de pulso distal",
+        "Palidez y frialdad del miembro",
+        "Dolor desproporcionado y dolor con el estiramiento pasivo",
+        "Parálisis de la musculatura del compartimento"
+      ],
+      "correcta": 2,
+      "explicacion": "Las cuatro P clásicas (palidez, parestesia, parálisis, ausencia de pulso) son signos TARDÍOS. Esperarlas es llegar tarde.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "Paciente con lactato 3,2 mmol/L que desciende un 15 %/hora tras la reanimación. ¿Categoría y conducta?",
+      "opciones": [
+        "Estable — ETC, fijación definitiva de todo < 24 h",
+        "Borderline respondedor — EAC individualizado con monitorización estrecha",
+        "Inestable — DCO obligado",
+        "In extremis — solo cirugía de sobrevida"
+      ],
+      "correcta": 1,
+      "explicacion": "Lactato 2–4 con clearance de 10–20 %/h define al borderline que responde. La decisión se toma con la tendencia, no con el valor puntual.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Cuántos de los 7 criterios del score in extremis se necesitan para predecir una mortalidad superior al 50 %?",
+      "opciones": [
+        "3 de 7",
+        "4 de 7",
+        "5 de 7",
+        "7 de 7"
+      ],
+      "correcta": 2,
+      "explicacion": "Los 7 criterios son PaCO₂ > 50, Hb < 9,5, pH < 7,2, lactato > 4, exceso de base < −6, índice de shock > 1 y P/F < 300. Con ≥ 5 positivos la mortalidad supera el 50 %.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "Politraumatizado inestable con fractura de fémur diafisario. ¿Qué gesto está expresamente contraindicado?",
+      "opciones": [
+        "Fijador externo de fémur",
+        "Enclavado intramedular fresado",
+        "Tracción esquelética transitoria",
+        "Fasciotomía si hay compartimental"
+      ],
+      "correcta": 1,
+      "explicacion": "El enclavado fresado genera el mayor segundo golpe (EPOFF, Pape 2003): amplifica el SIRS hacia SDRA y fallo multiorgánico. Fijador externo y conversión al día 5–10.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "Herida de 2 cm en un accidente de tractor, con estiércol en el lecho. ¿Qué tipo de Gustilo es?",
+      "opciones": [
+        "Tipo I, porque la herida mide menos de 10 cm",
+        "Tipo II, por el tamaño y el daño moderado",
+        "Tipo III, porque el medio agrícola y la contaminación orgánica reclasifican por definición",
+        "No clasificable hasta que consolide"
+      ],
+      "correcta": 2,
+      "explicacion": "El tamaño de la herida no manda cuando hay contaminación macroscópica o material orgánico. El medio agrícola es tipo III por definición, con riesgo añadido de clostridios: desbridamiento seriado y cobertura ampliada.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Qué distingue una Gustilo IIIA de una IIIB?",
+      "opciones": [
+        "El tamaño de la herida cutánea",
+        "La presencia de lesión arterial",
+        "Que la IIIB requiere colgajo para cubrir el hueso expuesto",
+        "El mecanismo de alta energía"
+      ],
+      "correcta": 2,
+      "explicacion": "Ambas son de alta energía y > 10 cm. La IIIA conserva cobertura ósea adecuada por partes blandas; la IIIB tiene despegamiento perióstico y exposición ósea que exige colgajo (fix and flap). La lesión arterial define la IIIC.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "En una fractura abierta, ¿qué pesa más sobre el riesgo de infección?",
+      "opciones": [
+        "El tiempo transcurrido hasta el quirófano",
+        "El tiempo transcurrido hasta el antibiótico",
+        "El tipo de implante elegido",
+        "La posición del paciente en la mesa"
+      ],
+      "correcta": 1,
+      "explicacion": "La evidencia sostiene el antibiótico precoz; el límite clásico de 6 horas hasta el desbridamiento no está bien sustentado.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Cuáles son los componentes de la tríada letal?",
+      "opciones": [
+        "Hipotensión, taquicardia y oliguria",
+        "Coagulopatía, hipotermia y acidosis",
+        "SIRS, SDRA y fallo multiorgánico",
+        "Anemia, hipoxemia e hipercapnia"
+      ],
+      "correcta": 1,
+      "explicacion": "Coagulopatía (INR > 1,5, plaquetas < 100 000, fibrinógeno < 150), hipotermia (< 33 °C, que la potencia) y acidosis (pH < 7,25, que inhibe las enzimas de la coagulación). Se retroalimentan entre sí.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "Fractura de tibia con dolor creciente pese a opioides escalados y dolor intenso al estirar pasivamente los dedos. ¿Conducta?",
+      "opciones": [
+        "Elevar el miembro, hielo y reevaluar en 6 horas",
+        "Solicitar resonancia magnética urgente para confirmar",
+        "Fasciotomía descompresiva inmediata",
+        "Aumentar la analgesia y vigilar los pulsos distales"
+      ],
+      "correcta": 2,
+      "explicacion": "Dolor desproporcionado y dolor al estiramiento pasivo son los signos precoces y fiables. En el paciente valorable la clínica basta: no hay conducta intermedia ni estudio que deba retrasar la descompresión. Elevar el miembro incluso reduce la presión de perfusión.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "Paciente intubado y sedado con fractura de pierna. La presión diastólica es 70 mmHg y la presión compartimental medida, 45 mmHg. ¿Qué indica?",
+      "opciones": [
+        "Normal: la presión compartimental está por debajo de 50 mmHg",
+        "ΔP = 25 mmHg — indicación de fasciotomía",
+        "Repetir la medición en 4 horas",
+        "No es valorable sin la presión sistólica"
+      ],
+      "correcta": 1,
+      "explicacion": "ΔP = presión diastólica − presión compartimental = 70 − 45 = 25 mmHg. Por debajo de 30 mmHg es indicación de fasciotomía. En el paciente no valorable la medición sustituye a la clínica.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "Herida de entrada de 5 mm por proyectil de arma de fuego en la pierna, con fractura de tibia. ¿Qué tipo de Gustilo?",
+      "opciones": [
+        "Tipo I, porque la herida mide menos de 1 cm",
+        "Tipo II, por tratarse de una fractura diafisaria",
+        "Tipo III, porque el proyectil reclasifica por definición",
+        "Depende del calibre del proyectil"
+      ],
+      "correcta": 2,
+      "explicacion": "El orificio cutáneo no refleja el daño: la energía cinética se disipa en el trayecto produciendo cavitación, desvitalización profunda y arrastre de ropa y contaminantes. Hay que explorar el trayecto completo, no solo los orificios.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Cuál de estos gestos NO forma parte de una fasciotomía correcta?",
+      "opciones": [
+        "Descomprimir los cuatro compartimentos de la pierna por doble incisión",
+        "Valorar la viabilidad muscular con las 4 C",
+        "Cerrar la piel de forma primaria para reducir el riesgo de infección",
+        "Vigilar la rabdomiólisis y la función renal tras la reperfusión"
+      ],
+      "correcta": 2,
+      "explicacion": "No se cierra de forma primaria: el cierre es diferido y progresivo, o con injerto, una vez cede el edema. Cerrar de entrada anula la descompresión. Además, la fasciotomía corta es una fasciotomía incompleta.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "Paciente de 82 años, fractura de baja energía. ¿Qué implica para el plan además de la fijación?",
+      "opciones": [
+        "Nada distinto: el trazo dicta el tratamiento",
+        "Es un evento centinela: exige anclaje adaptado y prevención secundaria",
+        "Contraindica la cirugía por la edad cronológica",
+        "Obliga siempre a artroplastia"
+      ],
+      "correcta": 1,
+      "explicacion": "La fractura por fragilidad anuncia la siguiente. Importa la edad fisiológica, no la cronológica, y el hueso osteoporótico exige estrategias de anclaje específicas.",
+      "origen": "app"
+    }
+  ],
+  "sintesis": "Primero el enfermo. La categoría fisiológica (estable, borderline, inestable, in extremis) determina la estrategia quirúrgica (ETC, EAC, DCO, MuST); las partes blandas (Tscherne/Gustilo, con el mecanismo y la contaminación como reclasificadores) determinan qué se puede hacer y por dónde. Por encima de todo ello, el síndrome compartimental: si hay datos sugestivos o evidentes, la fasciotomía descompresiva precede a cualquier otro gesto del plan. El resto de los pasos se ejecuta sobre esa base.",
+  "lecturas": [
+    "Pfeifer R, Klingebiel FK, Halvachizadeh S, Kalbas Y, Pape HC. How to clear polytrauma patients for fracture fixation: results of a systematic review of the literature. Injury. 2023;54(2):292–317.",
+    "Vallier HA et al. Timing of orthopaedic surgery in multiple trauma patients: development of a protocol for early appropriate care. J Orthop Trauma. 2013;27(10):543–551.",
+    "Lasanianos, Kanakaris, Giannoudis — Trauma and Orthopaedic Classifications (Springer).",
+    "Egol — Handbook of Fractures, capítulos de fracturas abiertas y politraumatismo.",
+    "Bosse MJ et al. NEJM 2002 (LEAP)."
+  ],
+  "refs": [
+    "ref-pfeifer-2023",
+    "ref-pape-2007",
+    "ref-vallier-2013",
+    "ref-volpin-2020",
+    "ref-pape-2003",
+    "ref-hatz-2025",
+    "ref-probst-2009",
+    "ref-lehmann-2024",
+    "ref-pape-leenen-2020",
+    "ref-halvachizadeh-2015",
+    "ref-gosselin-2004",
+    "ref-boast",
+    "ref-bosse-2002"
+  ],
+  "fuenteAdicional": {
+    "titulo": "Politrauma — Reanimación y Decisión Quirúrgica",
+    "autor": "Dr. Michael David Kushner Shrem",
+    "nota": "Documento propio del autor (junio 2026). Los umbrales fisiológicos, el score in extremis, los endpoints de reanimación y la comparativa ETC/DCO/EAC/SDS/MuST de este paso proceden de él."
+  },
+  "derivados": [
+    {
+      "id": "momento",
+      "titulo": "Momento de la cirugía definitiva",
+      "tipo": "reglas",
+      "modo": "todas",
+      "reglas": [
+        {
+          "si": {
+            "estrategia": [
+              "etc"
+            ]
+          },
+          "texto": "Fijación definitiva de todas las fracturas en menos de 24 h.",
+          "prioridad": -1
+        },
+        {
+          "si": {
+            "estrategia": [
+              "eac"
+            ]
+          },
+          "texto": "Fijación definitiva a las 24–36 h si los parámetros normalizan. Si se estancan o empeoran, escalar a DCO.",
+          "prioridad": -1
+        },
+        {
+          "si": {
+            "estrategia": [
+              "dco"
+            ]
+          },
+          "texto": "Fase 1 en menos de 24 h: fijador externo y UCI. Conversión definitiva entre el día 5 y el 10.",
+          "prioridad": -1
+        },
+        {
+          "si": {
+            "estrategia": [
+              "must"
+            ]
+          },
+          "texto": "Solo cirugía de sobrevida. Conversión definitiva diferida al día 5–10 o más, si el paciente sobrevive y normaliza.",
+          "prioridad": -1
+        },
+        {
+          "si": {
+            "compartimental": [
+              "datos-sugestivos",
+              "evidente-establecido"
+            ]
+          },
+          "texto": "La fasciotomía descompresiva precede a todo lo anterior; la osteosíntesis definitiva se supedita a ella.",
+          "prioridad": 0
+        },
+        {
+          "si": {
+            "partes-blandas": [
+              "abierta-gustilo-3c"
+            ]
+          },
+          "texto": "La reparación arterial manda: estabilización rápida para protegerla y vigilancia del compartimental tras la reperfusión.",
+          "prioridad": 1
+        },
+        {
+          "si": {
+            "partes-blandas": [
+              "abierta-gustilo-3b"
+            ]
+          },
+          "texto": "Cobertura con colgajo precoz (fix and flap); la definitiva se planifica junto con el equipo de plástica.",
+          "prioridad": 2
+        },
+        {
+          "si": {
+            "contaminacion": [
+              "proyectil-arma-fuego",
+              "contaminacion-macroscopica",
+              "material-organico"
+            ]
+          },
+          "texto": "Desbridamiento seriado antes de cualquier gesto definitivo; no cerrar en primaria.",
+          "prioridad": 3
+        },
+        {
+          "si": {
+            "partes-blandas": [
+              "cerrada-tscherne-2-3"
+            ]
+          },
+          "texto": "Condicionado además a la ventana de partes blandas: esperar el signo de las arrugas y la resolución de las flictenas.",
+          "prioridad": 4
+        }
+      ]
+    }
+  ]
+}

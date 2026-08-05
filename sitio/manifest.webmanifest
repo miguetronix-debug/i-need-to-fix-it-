@@ -1,0 +1,24 @@
+{
+  "name": "I Need To Fix It — Los 10 pasos para resolver cualquier fractura",
+  "short_name": "Fix It",
+  "description": "Asistente metodológico de planificación quirúrgica en ortopedia y traumatología.",
+  "start_url": "./prototipo.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#faf9f7",
+  "theme_color": "#185fa5",
+  "lang": "es",
+  "categories": [
+    "medical",
+    "education"
+  ],
+  "icons": [
+    {
+      "src": "./icono.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

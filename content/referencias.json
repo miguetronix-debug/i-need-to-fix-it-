@@ -1,0 +1,276 @@
+{
+  "formato": "Vancouver",
+  "nota": "URL derivada automáticamente: PMID → PubMed, PMC → NCBI, DOI → doi.org. Mismo criterio que la bibliografía del libro.",
+  "referencias": {
+    "ref-pfeifer-2023": {
+      "cita": "Pfeifer R, Klingebiel FK, Halvachizadeh S, Kalbas Y, Pape HC. How to clear polytrauma patients for fracture fixation: results of a systematic review of the literature. Injury. 2023;54(2):292–317.",
+      "nivel": "1-2",
+      "tipo": "Revisión sistemática PRISMA (n = 1 550 publicaciones)",
+      "doi": "10.1016/j.injury.2022.11.008"
+    },
+    "ref-pape-2007": {
+      "cita": "Pape HC, Rixen D, Morley J, et al.; EPOFF Study Group. Impact of the method of initial stabilization for femoral shaft fractures in patients with multiple injuries at risk for complications. J Bone Joint Surg Am. 2007;89(11):2341–2351.",
+      "nivel": "1",
+      "tipo": "Ensayo clínico aleatorizado prospectivo",
+      "pmid": "17974874"
+    },
+    "ref-vallier-2013": {
+      "cita": "Vallier HA, Wang X, Moore TA, Wilber JH, Como JJ. Timing of orthopaedic surgery in multiple trauma patients: development of a protocol for early appropriate care. J Orthop Trauma. 2013;27(10):543–551.",
+      "nivel": "2",
+      "tipo": "Estudio prospectivo (n = 1 239)",
+      "pmid": "23287766"
+    },
+    "ref-volpin-2020": {
+      "cita": "Volpin G, Pfeifer R, Saveski J, Hasani I, Cohen M, Pape HC. Damage control orthopaedics in polytraumatized patients — current concepts. J Clin Orthop Trauma. 2020.",
+      "nivel": "3",
+      "tipo": "Revisión"
+    },
+    "ref-pape-2003": {
+      "cita": "Pape HC, Grimme K, Van Griensven M, et al.; EPOFF Study Group. Impact of intramedullary instrumentation versus damage control for femoral fractures on immunoinflammatory parameters: prospective randomized analysis. J Trauma. 2003;55(1):7–13.",
+      "nivel": "1",
+      "tipo": "Ensayo clínico aleatorizado",
+      "pmid": "12855874"
+    },
+    "ref-hatz-2025": {
+      "cita": "Hatz BA, Klingebiel FK, Kalbas Y, Halvachizadeh S, Pfeifer R, Schemitsch EH, Pape HC; IMPACT group. Early major fracture care in polytrauma — priorities in the context of concomitant injuries: a Delphi consensus process and systematic review. Injury. 2025;56(3):112182.",
+      "nivel": "2",
+      "tipo": "Consenso Delphi + revisión sistemática"
+    },
+    "ref-probst-2009": {
+      "cita": "Probst C, Pape HC, Hildebrand F, et al. A novel approach to identify polytraumatized patients in extremis. Injury. 2009;40(1):32–37.",
+      "nivel": "3",
+      "tipo": "Serie prospectiva",
+      "pmc": "PMC5932503"
+    },
+    "ref-lehmann-2024": {
+      "cita": "Lehmann W, Rupprecht M, Nuechtern J, et al. Fracture fixation in polytraumatized patients — from an interdisciplinary early total/appropriate care to the safe definitive surgery concept. Front Med. 2024;11:1362986.",
+      "nivel": "3-4",
+      "tipo": "Revisión narrativa",
+      "doi": "10.3389/fmed.2024.1362986"
+    },
+    "ref-pape-leenen-2020": {
+      "cita": "Pape HC, Leenen L. Polytrauma management — what is new and what is true in 2020? J Clin Orthop Trauma. 2020.",
+      "nivel": "4",
+      "tipo": "Revisión"
+    },
+    "ref-halvachizadeh-2015": {
+      "cita": "Halvachizadeh S, Pfeifer R, Pape HC. Development of a scoring system based on conventional parameters to assess polytrauma patients: PolyTrauma Grading Score (PTGS). Injury. 2015;46(10):1999–2003.",
+      "nivel": "2",
+      "tipo": "Estudio de cohorte"
+    },
+    "ref-bosse-2002": {
+      "cita": "Bosse MJ, MacKenzie EJ, Kellam JF, et al. An analysis of outcomes of reconstruction or amputation after leg-threatening injuries (LEAP). N Engl J Med. 2002;347(24):1924–1931.",
+      "nivel": "2",
+      "tipo": "Estudio prospectivo multicéntrico",
+      "pmid": "12477942"
+    },
+    "ref-gosselin-2004": {
+      "cita": "Gosselin RA, Roberts I, Gillespie WJ. Antibiotics for preventing infection in open limb fractures. Cochrane Database Syst Rev. 2004;(1):CD003764.",
+      "nivel": "1",
+      "tipo": "Revisión Cochrane",
+      "pmid": "14974035"
+    },
+    "ref-boast": {
+      "cita": "British Orthopaedic Association / BAPRAS. BOAST — Open Fractures. British Orthopaedic Association Standards for Trauma.",
+      "nivel": "guía",
+      "tipo": "Guía de práctica clínica",
+      "url": "https://www.boa.ac.uk/standards-guidance/boasts.html"
+    },
+    "ref-kushner-politrauma-2026": {
+      "cita": "Kushner Shrem MD. Politrauma — Reanimación y Decisión Quirúrgica: variables fisiológicas, umbrales y estrategias ETC/EAC/DCO/SDS/MuST. COMEDSA / CSS-CIDELA, Panamá; junio 2026.",
+      "nivel": "documento propio",
+      "tipo": "Material docente del autor basado en Pape, Pfeifer (Injury 2023) y Vallier (2013)"
+    },
+    "ref-aoota-2018": {
+      "cita": "Meinberg EG, Agel J, Roberts CS, Karam MD, Kellam JF. Fracture and Dislocation Classification Compendium — 2018. J Orthop Trauma. 2018;32(Suppl 1):S1–S170.",
+      "nivel": "referencia",
+      "tipo": "Compendio de clasificación AO/OTA",
+      "pmid": "29256945"
+    },
+    "ref-giannoudis-clasif": {
+      "cita": "Lasanianos NG, Kanakaris NK, Giannoudis PV (eds.). Trauma and Orthopaedic Classifications: A Comprehensive Overview. Springer, 2015.",
+      "nivel": "referencia",
+      "tipo": "Obra de referencia"
+    },
+    "ref-perren-2002": {
+      "cita": "Perren SM. Evolution of the internal fixation of long bone fractures. The scientific basis of biological internal fixation: choosing a new balance between stability and biology. J Bone Joint Surg Br. 2002;84(8):1093–1110.",
+      "nivel": "5",
+      "tipo": "Artículo conceptual de referencia",
+      "pmid": "12463652"
+    },
+    "ref-biomec-trauma": {
+      "cita": "Essential Biomechanics for Orthopedic Trauma. Springer.",
+      "nivel": "referencia",
+      "tipo": "Obra de referencia"
+    },
+    "ref-matta-1996": {
+      "cita": "Matta JM. Fractures of the acetabulum: accuracy of reduction and clinical results in patients managed operatively within three weeks after the injury. J Bone Joint Surg Am. 1996;78(11):1632–1645.",
+      "nivel": "3",
+      "tipo": "Serie clínica de referencia",
+      "pmid": "8934477"
+    },
+    "ref-schemitsch-1992": {
+      "cita": "Schemitsch EH, Richards RR. The effect of malunion on functional outcome after plate fixation of fractures of both bones of the forearm in adults. J Bone Joint Surg Am. 1992;74(7):1068–1078.",
+      "nivel": "3",
+      "tipo": "Serie clínica",
+      "pmid": "1522093"
+    },
+    "ref-mast-1989": {
+      "cita": "Mast J, Jakob R, Ganz R. Planning and Reduction Technique in Fracture Surgery. Springer-Verlag, 1989.",
+      "nivel": "5",
+      "tipo": "Obra de referencia"
+    },
+    "ref-schatzker-1979": {
+      "cita": "Schatzker J, McBroom R, Bruce D. The tibial plateau fracture: the Toronto experience 1968–1975. Clin Orthop Relat Res. 1979;(138):94–104.",
+      "nivel": "referencia",
+      "tipo": "Serie clínica original",
+      "pmid": "445923"
+    },
+    "ref-kfuri-2018": {
+      "cita": "Kfuri M, Schatzker J. Revisiting the Schatzker classification of tibial plateau fractures. Injury. 2018;49(12):2252–2263.",
+      "nivel": "5",
+      "tipo": "Revisión conceptual (modificación por columnas)",
+      "pmid": "30526924"
+    },
+    "ref-garden-1961": {
+      "cita": "Garden RS. Low-angle fixation in fractures of the femoral neck. J Bone Joint Surg Br. 1961;43-B(4):647–663. Sobre su fiabilidad: la versión de cuatro grados no es reproducible; dicotomizada en desplazada frente a no desplazada, sí.",
+      "nivel": "referencia",
+      "tipo": "Artículo original más estudios de reproducibilidad"
+    },
+    "ref-pauwels-fiab": {
+      "cita": "Estudios de reproducibilidad de la clasificación de Pauwels para fracturas intracapsulares de cadera: concordancia interobservador pobre, con el ángulo condicionado por la rotación y la tracción del miembro en la proyección.",
+      "nivel": "3",
+      "tipo": "Estudios de fiabilidad"
+    },
+    "ref-neer-fiab": {
+      "cita": "Estudios de fiabilidad de la clasificación de Neer para fracturas del húmero proximal: kappa interobservador entre 0,07 y 0,48; en una encuesta a 138 cirujanos de hombro, kappa 0,296. Sidor ML et al., J Bone Joint Surg Am 1993; Papakonstantinou MK et al., ANZ J Surg 2016.",
+      "nivel": "3",
+      "tipo": "Estudios de fiabilidad interobservador"
+    },
+    "ref-hertel-2004": {
+      "cita": "Hertel R, Hempfing A, Stiehler M, Leunig M. Predictors of humeral head ischemia after intracapsular fracture of the proximal humerus. J Shoulder Elbow Surg. 2004;13(4):427–433.",
+      "nivel": "3",
+      "tipo": "Estudio prospectivo con evaluación intraoperatoria de la perfusión",
+      "pmid": "15220884"
+    },
+    "ref-hawkins-1970": {
+      "cita": "Hawkins LG. Fractures of the neck of the talus. J Bone Joint Surg Am. 1970;52(5):991–1002.",
+      "nivel": "referencia",
+      "tipo": "Serie clínica original",
+      "pmid": "5479486"
+    },
+    "ref-sanders-fiab": {
+      "cita": "Estudios de reproducibilidad de la clasificación de Sanders para fracturas de calcáneo: concordancia interobservador justa entre observadores experimentados (kappa 0,289) y moderada entre menos experimentados (0,527); mejora con reconstrucción e impresión tridimensional.",
+      "nivel": "3",
+      "tipo": "Estudios de fiabilidad"
+    },
+    "ref-letournel": {
+      "cita": "Letournel E, Judet R. Fractures of the Acetabulum. 2.ª ed. Springer, 1993.",
+      "nivel": "referencia",
+      "tipo": "Obra de referencia"
+    },
+    "ref-young-burgess": {
+      "cita": "Burgess AR, Eastridge BJ, Young JW, et al. Pelvic ring disruptions: effective classification system and treatment protocols. J Trauma. 1990;30(7):848–856.",
+      "nivel": "3",
+      "tipo": "Serie clínica con protocolo de tratamiento",
+      "pmid": "2381002"
+    },
+    "ref-tile": {
+      "cita": "Tile M. Acute pelvic fractures: I. Causation and classification. J Am Acad Orthop Surg. 1996;4(3):143–151.",
+      "nivel": "referencia",
+      "tipo": "Revisión conceptual",
+      "pmid": "10795049"
+    },
+    "ref-vancouver-fiab": {
+      "cita": "Estudios de fiabilidad de la clasificación de Vancouver en fracturas periprotésicas alrededor de vástagos no cementados: kappa interobservador de 0,45, con acuerdo completo entre evaluadores en el 43 % de las radiografías. J Arthroplasty. 2019.",
+      "nivel": "3",
+      "tipo": "Estudio de fiabilidad y validez",
+      "pmid": "30922672"
+    },
+    "ref-winquist-1984": {
+      "cita": "Winquist RA, Hansen ST Jr, Clawson DK. Closed intramedullary nailing of femoral fractures: a report of five hundred and twenty cases. J Bone Joint Surg Am. 1984;66(4):529–539.",
+      "nivel": "3",
+      "tipo": "Serie clínica amplia",
+      "pmid": "6707031"
+    },
+    "ref-mason": {
+      "cita": "Mason ML. Some observations on fractures of the head of the radius with a review of one hundred cases. Br J Surg. 1954;42(172):123–132. Modificación de Johnston y de Hotchkiss.",
+      "nivel": "referencia",
+      "tipo": "Serie clínica original con modificaciones posteriores",
+      "pmid": "13209035"
+    },
+    "ref-lauge-hansen": {
+      "cita": "Lauge-Hansen N. Fractures of the ankle II: combined experimental-surgical and experimental-roentgenologic investigations. Arch Surg. 1950;60(5):957–985.",
+      "nivel": "referencia",
+      "tipo": "Estudio experimental de mecanismos",
+      "pmid": "15411319"
+    },
+    "ref-gautier-2003": {
+      "cita": "Gautier E, Sommer C. Guidelines for the clinical application of the LCP. Injury. 2003;34(Suppl 2):B63–B76.",
+      "nivel": "5",
+      "tipo": "Guía técnica de referencia (relación de cobertura y densidad de tornillos)",
+      "pmid": "14580987"
+    },
+    "ref-stoffel-2003": {
+      "cita": "Stoffel K, Dieter U, Stachowiak G, Gächter A, Kuster MS. Biomechanical testing of the LCP — how can stability in locked internal fixators be controlled? Injury. 2003;34(Suppl 2):B11–B19.",
+      "nivel": "5",
+      "tipo": "Estudio biomecánico y de elementos finitos",
+      "pmid": "14580982"
+    },
+    "ref-bottlang-2011": {
+      "cita": "Bottlang M, Doornink J, Byrd GD, Fitzpatrick DC, Madey SM. Biomechanics of far cortical locking. J Orthop Trauma. 2011;25(Suppl 1):S21–S28.",
+      "nivel": "5",
+      "tipo": "Estudio biomecánico",
+      "pmid": "21248556"
+    },
+    "ref-lujan-2010": {
+      "cita": "Lujan TJ, Henderson CE, Madey SM, Fitzpatrick DC, Marsh JL, Bottlang M. Locked plating of distal femur fractures leads to inconsistent and asymmetric callus formation. J Orthop Trauma. 2010;24(3):156–162.",
+      "nivel": "3",
+      "tipo": "Serie clínica con análisis radiográfico cuantitativo",
+      "pmid": "20182250"
+    },
+    "ref-sprint-2008": {
+      "cita": "SPRINT Investigators; Bhandari M, Guyatt G, Tornetta P 3rd, et al. Randomized trial of reamed and unreamed intramedullary nailing of tibial shaft fractures. J Bone Joint Surg Am. 2008;90(12):2567–2578.",
+      "nivel": "1",
+      "tipo": "Ensayo clínico aleatorizado multicéntrico (n = 1 319)",
+      "pmid": "19047701"
+    },
+    "ref-govender-2002": {
+      "cita": "Govender S, Csimma C, Genant HK, et al.; BESTT Study Group. Recombinant human bone morphogenetic protein-2 for treatment of open tibial fractures: a prospective, controlled, randomized study of four hundred and fifty patients. J Bone Joint Surg Am. 2002;84(12):2123–2134.",
+      "nivel": "1",
+      "tipo": "Ensayo clínico aleatorizado (n = 450)",
+      "pmid": "12473698"
+    },
+    "ref-hoppenfeld": {
+      "cita": "Hoppenfeld S, deBoer P, Buckley R. Surgical Exposures in Orthopaedics: The Anatomic Approach. 5.ª ed. Wolters Kluwer.",
+      "nivel": "referencia",
+      "tipo": "Obra de referencia de abordajes"
+    },
+    "ref-mipo-meta": {
+      "cita": "Metaanálisis y ensayos comparativos de osteosíntesis mínimamente invasiva frente a reducción abierta y fijación interna en fracturas distales de tibia y fémur.",
+      "nivel": "2",
+      "tipo": "Metaanálisis de ensayos clínicos"
+    },
+    "ref-schemitsch-mckee": {
+      "cita": "Schemitsch EH, McKee MD (eds.). Operative Techniques: Orthopaedic Trauma Surgery. Elsevier.",
+      "nivel": "referencia",
+      "tipo": "Obra de referencia de técnica quirúrgica"
+    },
+    "ref-giannoudis-reduccion": {
+      "cita": "Giannoudis PV (ed.). Fracture Reduction and Fixation Techniques. Springer.",
+      "nivel": "referencia",
+      "tipo": "Obra de referencia de técnicas de reducción"
+    },
+    "ref-mesa-traccion": {
+      "cita": "Series y revisiones sobre complicaciones de la mesa ortopédica de tracción: neuroapraxia del pudendo por el poste perineal y síndrome compartimental de la extremidad contralateral («well-leg»).",
+      "nivel": "4",
+      "tipo": "Series de casos y revisiones"
+    },
+    "ref-brink-2013": {
+      "cita": "Brink PRG, de Boer P, Hoogendoorn JM, et al. Is the olecranon tension band wiring technique really a tension band? Injury. 2013;44(4):518–522.",
+      "nivel": "3",
+      "tipo": "Estudio experimental",
+      "pmid": "23062670"
+    }
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "origen": "LIBRO_Los_10_pasos_completo.docx",
+  "titulo": "Paso 4 · El tipo de reducción",
+  "numeroPaso": 4,
+  "bloques": [
+    {
+      "tipo": "parrafo",
+      "texto": "Parámetros de la reducción funcional: longitud, eje y rotación."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Reducir es restaurar la relación espacial de los fragmentos. Pero «reducir» no significa lo mismo en una superficie articular que en una diáfisis. El Paso 4 responde a dos preguntas: ¿cuán perfecta debe ser la reducción? (anatómica o funcional) y ¿cómo se logra? (directa o indirecta). La primera es una decisión estratégica que se toma aquí; la segunda —las técnicas concretas— se desarrolla en el Paso 9."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "mapa",
+      "titulo": "Mapa del Paso 4",
+      "lineas": [
+        "A. Reducción anatómica vs funcional.",
+        "B. Los tres parámetros de la reducción funcional: longitud, eje, rotación.",
+        "C. Reducción directa vs indirecta y su coste biológico.",
+        "D. Criterios y tolerancias por región.",
+        "E. Control de calidad y consecuencias de la mala reducción."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "A. Reducción anatómica vs funcional"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "La elección deriva directamente del Paso 3: la estabilidad que necesita la fractura determina la precisión de reducción exigible."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Reducción anatómica"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Cuándo: superficie articular (todo escalón es artrosis en potencia) y trazos simples que se van a comprimir (la compresión exige contacto cortical exacto)."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Implica: restituir la anatomía fragmento a fragmento; suele requerir reducción directa y, por tanto, cierta exposición del foco."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Reducción funcional (o indirecta)"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Cuándo: diáfisis y metáfisis multifragmentaria no articular."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Implica: no se reconstruye cada fragmento; se restauran los parámetros que determinan la función del miembro, respetando la biología de la zona conminuta."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Mast, Jakob y Ganz lo expresaron con claridad: la reducción anatómica de los fragmentos intercalares diafisarios no es importante mientras no interfieran con la función; esos fragmentos permanecen viables precisamente porque no se los manipula."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "B. Los tres parámetros de la reducción funcional"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "La reducción funcional consiste en restaurar tres cosas —y vigilar especialmente la tercera:"
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Parámetro",
+        "Qué restaurar",
+        "Notas"
+      ],
+      "filas": [
+        [
+          "Longitud",
+          "Evitar acortamiento o distracción.",
+          "La distracción retrasa la consolidación; el acortamiento altera la biomecánica y la longitud relativa de huesos pareados (antebrazo)."
+        ],
+        [
+          "Eje (alineación)",
+          "Corregir angulación en los planos frontal y sagital.",
+          "En el clavo endomedular la posición del implante restaura el eje automáticamente."
+        ],
+        [
+          "Rotación",
+          "Restaurar la rotación correcta (plano horizontal).",
+          "El error más fácil de pasar por alto y el más difícil de corregir; el implante NO la corrige solo: es responsabilidad del cirujano en el acto."
+        ]
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "info",
+      "titulo": "La advertencia de Mast-Jakob-Ganz sobre el clavo",
+      "lineas": [
+        "En el enclavado, el alineamiento frontal y sagital lo restablece el implante por su posición en el canal, pero la rotación y la longitud son responsabilidad del cirujano durante la operación. El clavo no las corrige por sí mismo."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "C. Reducción directa vs indirecta"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Es la dimensión biológica de la reducción:"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Directa: se manipula el foco bajo visión; máxima precisión, a costa de exponer y desvitalizar. Indicada cuando se necesita reconstrucción anatómica (articular, trazo simple a comprimir)."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Indirecta: se reduce a distancia (tracción, distractor, ligamentotaxis, la placa como herramienta) sin abrir el foco; preserva el hematoma fracturario y la vascularización perióstica. Indicada cuando se busca reducción funcional y puenteo."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Coherencia obligatoria: la precisión de reducción y su método deben alinearse con el principio biomecánico. No tiene sentido desnudar el foco (reducción directa) para luego puentearlo (estabilidad relativa que prospera con biología intacta). Y al revés: una superficie articular no se reconstruye «a ciegas»."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "D. Criterios y tolerancias por región"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "La tolerancia al desplazamiento residual depende de si la zona es articular o no, y de la articulación concreta. Valores orientativos de uso común:"
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Zona",
+        "Tolerancia orientativa"
+      ],
+      "filas": [
+        [
+          "Superficie articular (general)",
+          "Escalón < 2 mm; cuanto más congruente, mejor pronóstico."
+        ],
+        [
+          "Radio distal",
+          "Escalón articular < 2 mm; acortamiento ≤ 2–3 mm; inclinación volar al menos neutra."
+        ],
+        [
+          "Diáfisis humeral",
+          "Tolera angulación ~20° y cierto acortamiento sin déficit funcional (ortesis)."
+        ],
+        [
+          "Diáfisis de antebrazo",
+          "Exige reducción casi anatómica y restaurar el radial bow (rota como articulación)."
+        ],
+        [
+          "Diáfisis femoral/tibial",
+          "Restaurar longitud, eje (<5° en cada plano deseable) y rotación; fragmentos intercalares no requieren anatomía."
+        ]
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Las cifras son guías, no dogmas: la edad, la demanda y la articulación implicada modulan lo aceptable. Pero la regla cualitativa es constante: articular, precisión milimétrica; metáfiso-diáfisis, longitud-eje-rotación."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "E. Control de calidad y consecuencias de la mala reducción"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Verificar en quirófano: longitud (comparar con el lado sano), eje (vistas alineadas, regla del cable/cortical), y rotación (la más difícil: signos del córtex, perfil de trocánter/cóndilos, prueba clínica de rotación)."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Consecuencias de fallar: la mala unión articular conduce a artrosis postraumática; la malrotación y la malalineación diafisaria producen disfunción y sobrecarga articular adyacente. Son errores que se previenen en este paso y se verifican antes de cerrar."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "sintesis",
+      "titulo": "Síntesis del Paso 4",
+      "lineas": [
+        "Articular: anatómica y directa. Metáfiso-diáfisis: funcional e indirecta. La superficie se reconstruye con precisión milimétrica; el resto se restaura en longitud, eje y rotación sin desvitalizar el hueso. La precisión y el método de reducción deben ser coherentes con la estabilidad (Paso 3) y el principio biomecánico (Paso 5)."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "Evidencia, autoevaluación y lecturas"
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "evidencia",
+      "titulo": "Evidencia (nivel indicativo)",
+      "lineas": [
+        "Reducción articular anatómica y artrosis (Nivel III–IV): en acetábulo, la reducción anatómica (<1 mm) mejora el resultado clínico (Matta JM, J Bone Joint Surg Am 1996). En meseta y pilón, el escalón residual se asocia a artrosis postraumática.",
+        "Radial bow del antebrazo (Nivel III): restaurar la curvatura radial se correlaciona con mejor pronosupinación (Schemitsch EH, Richards RR, JBJS 1992)."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Autoevaluación"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. En una fractura diafisaria conminuta, ¿es importante reducir cada fragmento intercalar?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. No: basta restaurar longitud, eje y rotación; manipular los fragmentos intercalares los desvitaliza sin beneficio (Mast-Jakob-Ganz)."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. ¿Qué parámetro de la reducción funcional se pasa por alto con más frecuencia?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. La rotación; el implante (clavo) no la corrige por sí solo y debe verificarse de forma activa en quirófano."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Lecturas recomendadas"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Mast, Jakob, Ganz — Planning and Reduction Technique in Fracture Surgery."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Matta JM, JBJS Am 1996 (acetábulo)."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Los niveles de evidencia son orientativos y se ofrecen para guiar la lectura crítica, no como recomendación clínica cerrada."
+    }
+  ]
+}

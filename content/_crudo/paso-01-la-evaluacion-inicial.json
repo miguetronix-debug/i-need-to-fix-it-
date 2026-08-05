@@ -1,0 +1,290 @@
+{
+  "origen": "LIBRO_Los_10_pasos_completo.docx",
+  "titulo": "Paso 1 · La evaluación inicial",
+  "numeroPaso": 1,
+  "bloques": [
+    {
+      "tipo": "parrafo",
+      "texto": "La fractura nunca existe en el vacío: ocurre en un paciente con una fisiología, una piel y un momento determinados. Por eso el método empieza por el enfermo, no por la radiografía. El Paso 1 responde a tres preguntas en orden —¿cómo está el huésped?, ¿cómo están las partes blandas? y ¿cuándo conviene operar?— y es el terreno donde más fracturas técnicamente bien fijadas terminan en fracaso."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "mapa",
+      "titulo": "Mapa del Paso 1",
+      "lineas": [
+        "1.1 El huésped: edad fisiológica, calidad ósea, comorbilidades, politraumatismo.",
+        "1.2 Las partes blandas: Tscherne (cerradas), Gustilo (abiertas), síndrome compartimental.",
+        "1.3 El timing: tratamiento definitivo precoz vs control de daños; ventana de partes blandas."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "1.1 El huésped"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "El mismo trazo radiográfico exige decisiones distintas en un joven sano y en un anciano frágil. Conviene valorar de forma sistemática:"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Edad fisiológica, no cronológica: la reserva funcional, la masa muscular y la capacidad de rehabilitación importan más que la fecha de nacimiento."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Calidad ósea: la osteoporosis convierte una fractura de baja energía en «fractura por fragilidad» y obliga a estrategias de anclaje específicas (ángulo fijo, aumentación) y a prevención secundaria. Una fractura por fragilidad es un evento centinela: anuncia la siguiente."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Comorbilidades y biología: diabetes, tabaquismo, vasculopatía periférica, desnutrición, corticoides e inmunosupresión retrasan la consolidación y aumentan la infección. Modifican el riesgo más que cualquier detalle técnico."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Demanda funcional y expectativas: el objetivo no es la radiografía perfecta, sino la función que ese paciente concreto necesita."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "El paciente politraumatizado"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Cuando la fractura es parte de un politraumatismo, la prioridad deja de ser el hueso y pasa a ser la fisiología. La evaluación sigue el esquema ATLS y se apoya en marcadores de resucitación —lactato, exceso de base, temperatura, coagulación— que definen si el paciente tolera o no una cirugía definitiva. Un tercio de los pacientes con fractura abierta están poli-lesionados."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "1.2 Las partes blandas"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Principio rector: el hueso consolida si su envoltura blanda está viva. La radiografía muestra el hueso, pero el pronóstico lo escribe la piel, el músculo y el periostio. La lesión de partes blandas —no la línea de fractura— suele marcar el ritmo del tratamiento."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Fracturas cerradas: clasificación de Tscherne"
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Grado",
+        "Lesión de partes blandas (cerrada)"
+      ],
+      "filas": [
+        [
+          "0",
+          "Energía baja; lesión de partes blandas mínima o ausente. Trazo simple."
+        ],
+        [
+          "I",
+          "Abrasión o contusión superficial por presión de un fragmento desde dentro."
+        ],
+        [
+          "II",
+          "Contusión muscular significativa; abrasión cutánea profunda y contaminada; energía moderada-alta."
+        ],
+        [
+          "III",
+          "Aplastamiento extenso, avulsión subcutánea (degloving cerrado), disrupción arterial o síndrome compartimental establecido."
+        ]
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "La clasificación de Tscherne recuerda que una fractura «cerrada» puede esconder una catástrofe de partes blandas que contraindique la osteosíntesis inmediata."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Fracturas abiertas: clasificación de Gustilo-Anderson"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Se grada tras el desbridamiento (no en urgencias), porque la herida cutánea infravalora la lesión profunda. Mecanismos de alta energía —segmentarias, por arma de fuego de alta velocidad, agrícolas, con contaminación grosera— son tipo III por definición, sea cual sea el tamaño de la herida."
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Tipo",
+        "Herida",
+        "Características"
+      ],
+      "filas": [
+        [
+          "I",
+          "<1 cm",
+          "Limpia, «de dentro a fuera»; contusión muscular mínima; baja energía."
+        ],
+        [
+          "II",
+          "1–10 cm",
+          "Daño moderado de partes blandas; sin avulsión extensa ni colgajos."
+        ],
+        [
+          "IIIA",
+          ">10 cm",
+          "Daño extenso pero con cobertura ósea adecuada por partes blandas; segmentarias, arma de fuego."
+        ],
+        [
+          "IIIB",
+          ">10 cm",
+          "Despegamiento perióstico y exposición ósea; requiere colgajo para cobertura; suele haber contaminación masiva."
+        ],
+        [
+          "IIIC",
+          "Cualquiera",
+          "Lesión arterial que requiere reparación para salvar el miembro."
+        ]
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Principios de manejo de la fractura abierta"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Antibióticos precoces: cuanto antes; el tiempo hasta el antibiótico pesa más que el tiempo hasta el quirófano."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Desbridamiento y lavado: retirar todo tejido desvitalizado y contaminado; la viabilidad del lecho define el resultado."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Estabilización y cobertura («fix and flap»): estabilizar el esqueleto (a menudo fijador externo de entrada) y planificar la cobertura con colgajo precoz en las IIIB; la cobertura temprana de partes blandas reduce la infección."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Profilaxis antitetánica: comprobar el estado vacunal y administrar toxoide ± inmunoglobulina según la pauta y el grado de contaminación."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Antibiótico local: perlas o esponjas de antibiótico, o el cemento impregnado, aportan concentración local elevada en lechos contaminados o con pérdida ósea, como complemento del antibiótico sistémico."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "error",
+      "titulo": "Atención: abierta no excluye compartimental",
+      "lineas": [
+        "Una fractura abierta NO descomprime necesariamente los compartimentos y NO descarta un síndrome compartimental. Mantener la vigilancia."
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "El síndrome compartimental"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Es la urgencia que no admite demora. La sospecha es clínica: dolor desproporcionado y dolor con el estiramiento pasivo son los signos más precoces y fiables; la parestesia, la palidez, la parálisis y la ausencia de pulso son tardíos (cuando aparecen, el daño ya está hecho). En el paciente obnubilado o no colaborador, medir presiones intracompartimentales. No esperar: la fasciotomía a tiempo salva el miembro."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "1.3 El timing"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "La tercera pregunta es cuándo. Dos filosofías y un criterio fisiológico para elegir entre ellas:"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Tratamiento definitivo precoz (early total care): fijación definitiva temprana en el paciente fisiológicamente estable. Reduce complicaciones del encamamiento."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Control de daños ortopédico (damage control): estabilización temporal rápida (fijador externo, tracción) en el paciente inestable o «borderline», difiriendo la cirugía definitiva hasta que la fisiología y las partes blandas lo permitan."
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Estado fisiológico",
+        "Conducta"
+      ],
+      "filas": [
+        [
+          "Estable",
+          "Tratamiento definitivo precoz si las partes blandas lo permiten."
+        ],
+        [
+          "Borderline",
+          "Vigilar; tender al control de daños ante cualquier deterioro."
+        ],
+        [
+          "Inestable / in extremis",
+          "Control de daños: salvar la vida, estabilizar de forma temporal, diferir lo definitivo."
+        ]
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "La «ventana» de las partes blandas"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "En regiones críticas (pilón, calcáneo, meseta tibial, tobillo) la cirugía definitiva se difiere hasta que el edema cede: la reaparición de las arrugas cutáneas (wrinkle sign) y la resolución de las flictenas señalan que la piel tolerará la incisión. Operar a través de partes blandas tumefactas es invitar a la dehiscencia y la infección. Mientras tanto, fijador externo puente o tracción."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "sintesis",
+      "titulo": "Síntesis del Paso 1",
+      "lineas": [
+        "Primero el enfermo. Si la piel o el paciente no están listos, el mejor implante es el equivocado. La evaluación del huésped, de las partes blandas (Tscherne/Gustilo) y del timing (control de daños vs definitivo) decide cuándo y cómo de agresivo puede ser el plan; el resto de los pasos se ejecuta sobre esa base."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "Evidencia, autoevaluación y lecturas"
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "evidencia",
+      "titulo": "Evidencia (nivel indicativo)",
+      "lineas": [
+        "Antibiótico precoz en fractura abierta (Nivel I–II): la administración precoz de antibiótico intravenoso reduce la infección; el clásico límite de «6 horas» para el desbridamiento no está bien sustentado (datos del proyecto LEAP). Gosselin RA, Cochrane 2004; guías BOAST.",
+        "Salvamento vs amputación — estudio LEAP (Nivel II): Bosse MJ et al., N Engl J Med 2002: resultados funcionales similares a 2 y 7 años; índices como el MESS no predicen con fiabilidad la necesidad de amputar.",
+        "Control de daños vs tratamiento definitivo precoz (Nivel II): Pape HC et al.: en el paciente «borderline», el control de daños reduce la respuesta inflamatoria y las complicaciones pulmonares."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Autoevaluación"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. ¿Por qué se grada la fractura abierta después del desbridamiento y no en urgencias?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. Porque la herida cutánea infravalora la lesión profunda; el verdadero grado (sobre todo IIIB/IIIC) solo se conoce al ver el lecho desbridado."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. Una fractura cerrada de tibia de alta energía con flictenas y tensión: ¿operar hoy?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. No de forma definitiva: estabilizar de forma temporal (fijador/yeso) y esperar la ventana de partes blandas (signo de las arrugas). El Paso 1 manda sobre la radiografía."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Lecturas recomendadas"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Lasanianos, Kanakaris, Giannoudis — Trauma and Orthopaedic Classifications (Springer)."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Egol — Handbook of Fractures, caps. de fracturas abiertas y politraumatismo."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Bosse MJ et al. NEJM 2002 (LEAP)."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Los niveles de evidencia son orientativos y se ofrecen para guiar la lectura crítica, no como recomendación clínica cerrada."
+    }
+  ]
+}

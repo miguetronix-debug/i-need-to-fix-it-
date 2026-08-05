@@ -1,0 +1,361 @@
+{
+  "origen": "LIBRO_Los_10_pasos_completo.docx",
+  "titulo": "Paso 6 · El implante o material",
+  "numeroPaso": 6,
+  "bloques": [
+    {
+      "tipo": "parrafo",
+      "texto": "Recién ahora se elige el hardware. El implante es el medio, no el fin: se selecciona porque materializa el principio biomecánico del Paso 5 con el mínimo coste biológico. El cirujano que domina los principios elige el material con libertad; el que solo conoce el material queda preso de su inventario."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "mapa",
+      "titulo": "Mapa del Paso 6",
+      "lineas": [
+        "A. Tornillos.",
+        "B. Placas y sus funciones.",
+        "C. Clavos endomedulares.",
+        "D. Fijadores externos.",
+        "E. Banda de tensión y agujas.",
+        "F. Ciencia del material: acero vs titanio.",
+        "G. Injertos, cerclajes y otros; carga compartida vs soportada.",
+        "H. Cómo elegir."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "A. Tornillos"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "El tornillo es el implante fundamental: convierte el giro en fuerza axial. Su anatomía —núcleo, rosca, paso (pitch), cabeza— define su función."
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Tipo",
+        "Función"
+      ],
+      "filas": [
+        [
+          "Cortical",
+          "Rosca fina, paso corto; agarra hueso cortical denso."
+        ],
+        [
+          "Esponjoso",
+          "Rosca ancha, paso largo; agarra hueso metafisario esponjoso."
+        ],
+        [
+          "De tracción (lag)",
+          "Cualquier tornillo usado con agujero deslizante para comprimir (función, no diseño)."
+        ],
+        [
+          "De posición",
+          "Mantiene dos fragmentos a distancia fija sin comprimir (p. ej., sindesmosis)."
+        ],
+        [
+          "Bloqueado (locking)",
+          "Rosca en la cabeza que se fija a la placa: ángulo fijo, no comprime placa-hueso; ideal en hueso osteoporótico o conminuto."
+        ]
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "B. Placas y sus funciones"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "La placa es el implante más versátil precisamente porque su función la define el cirujano, no su forma. La misma placa puede comprimir, neutralizar, sostener o puentear."
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Función",
+        "Cómo trabaja la placa",
+        "Estabilidad"
+      ],
+      "filas": [
+        [
+          "Compresión",
+          "Autocompresión (DCP/LC-DCP) o tornillo excéntrico; comprime el foco.",
+          "Absoluta"
+        ],
+        [
+          "Neutralización",
+          "Protege un tornillo de tracción frente a torsión/flexión.",
+          "Absoluta"
+        ],
+        [
+          "Sostén/contrafuerte",
+          "Tope contra el cizallamiento de un fragmento que desliza.",
+          "Absoluta"
+        ],
+        [
+          "Puente (bridging)",
+          "Salva la conminución fijada a los fragmentos principales; permite callo.",
+          "Relativa"
+        ],
+        [
+          "Banda de tensión",
+          "Colocada en el lado de tensión, convierte tracción en compresión.",
+          "Absoluta dinámica"
+        ]
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Bloqueada vs no bloqueada"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "No bloqueada (convencional): estabiliza por fricción placa-hueso (la presiona contra el hueso); exige buen contacto y compromete la vascularización perióstica bajo la placa."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Bloqueada (LCP/LISS, fijador interno): los tornillos se fijan a la placa (ángulo fijo) sin presionarla al hueso; preserva la vascularización, sostiene hueso osteoporótico y conminuto, y permite el puenteo biológico. Los agujeros «combi» admiten ambos tipos de tornillo."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "La osteosíntesis mínimamente invasiva (MIPO) lleva la placa puente a su expresión moderna: incisiones pequeñas, túnel submuscular, reducción indirecta y preservación del hematoma."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "C. Clavos endomedulares"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "El clavo feruliza la diáfisis desde dentro, con mínima agresión al foco. Es un implante de carga compartida (load-sharing): comparte la carga con el hueso, lo que tolera bien mientras consolida por callo."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Fresado vs no fresado: el fresado permite un clavo de mayor diámetro (más rígido: la rigidez a flexión crece aproximadamente con la 4.ª potencia del radio —matiz: el clavo es un tubo, así que en rigor depende de rₑₓₜ⁴−rᵢₙₜ⁴) y mejora el contacto, a costa de dañar la vascularización endostal; el no fresado preserva el endostio."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Bloqueo (interlocking): los pernos proximales y distales controlan longitud y rotación (que el clavo no garantiza por sí solo). Estático (ambos extremos) o dinámico (permite compresión axial controlada)."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Indicaciones predilectas: diáfisis de huesos largos, fracturas segmentarias y patológicas."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "D. Fijadores externos"
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Tipo",
+        "Uso principal"
+      ],
+      "filas": [
+        [
+          "Monoplanar / uniplanar",
+          "Control de daños, estabilización temporal rápida; algunas definitivas."
+        ],
+        [
+          "Circular (Ilizarov) / hexápodo",
+          "Reconstrucción, corrección de deformidad, elongación, no uniones complejas."
+        ],
+        [
+          "Híbrido",
+          "Combina anillo periarticular con barras; metáfisis con partes blandas comprometidas."
+        ]
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Indicaciones transversales: control de daños en el politraumatizado, fractura abierta con partes blandas no aptas para implante interno, y reconstrucción/elongación. La mecánica del pin (diámetro, número, separación, distancia barra-hueso) gobierna la rigidez del montaje."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "E. Banda de tensión y agujas"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Construcción de banda de tensión: dos agujas de Kirschner paralelas + cerclaje en ocho; materializa el principio de tracción-compresión en olécranon, rótula y maléolos no conminutos."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Agujas de Kirschner: fijación provisional o definitiva de fragmentos pequeños (mano, pie, pediátrico); baratas y versátiles, pero de baja estabilidad aislada."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "F. Ciencia del material: acero vs titanio"
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Propiedad",
+        "Acero inoxidable",
+        "Titanio"
+      ],
+      "filas": [
+        [
+          "Módulo elástico (rigidez)",
+          "Mayor (más rígido).",
+          "Menor, más cercano al hueso (montaje algo más elástico)."
+        ],
+        [
+          "Biocompatibilidad",
+          "Buena.",
+          "Excelente; menos reacción y mejor osteointegración."
+        ],
+        [
+          "Imagen (TC/RM)",
+          "Más artefacto.",
+          "Menos artefacto."
+        ],
+        [
+          "Comportamiento a fatiga/muescas",
+          "Más sensible a muescas.",
+          "Buena resistencia; cuidado con el galled/agarrotamiento de tornillos bloqueados."
+        ]
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Recordar la distinción del Paso 3: rigidez no es resistencia. Un implante puede ser muy rígido y, aun así, fallar por fatiga si el hueso no consolida. La elección del material modula la rigidez del montaje, pero no sustituye a una estrategia mecánica correcta."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "G. Injertos, cerclajes y otros implantes"
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Injertos y sustitutos óseos"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Autoinjerto (cresta ilíaca): patrón oro; aporta osteogénesis (células), osteoinducción (factores) y osteoconducción (andamiaje). Limitado por morbilidad de la zona donante."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Aloinjerto: osteoconductor (y algo osteoinductor); volumen ilimitado, sin morbilidad donante, pero sin células vivas y con riesgo teórico de transmisión."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Sustitutos sintéticos (fosfato/sulfato cálcico, hidroxiapatita): osteoconductores; rellenan defectos metafisarios y dan soporte estructural temporal."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "BMP (proteínas morfogenéticas): osteoinductoras; uso selectivo (p. ej., tibia abierta, no uniones) por coste y por las precauciones de indicación."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Cerclajes, placa-lámina y otros"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Cerclaje / cables: rodean el hueso para reducir y mantener fragmentos largos espiroideos o periprotésicos; deben usarse con criterio para no estrangular la vascularización perióstica."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Placa-lámina (blade plate) y placa de ángulo fijo (DCS/DHS): hoja u hoja-tornillo que fija con ángulo constante la región metafisaria; precursoras del concepto de ángulo fijo que hoy cumplen las placas bloqueadas."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Tornillos intramedulares y anclajes de sutura: para fragmentos articulares pequeños o avulsiones tendinosas/ligamentosas."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Carga compartida vs carga soportada"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Un concepto que ordena la elección y el postoperatorio: implante de carga compartida (load-sharing) —típicamente el clavo endomedular— transmite parte de la carga a través del hueso, por lo que tolera mejor el apoyo precoz y la carga cíclica mientras consolida; implante de carga soportada (load-bearing) —una placa que puentea una zona sin contacto óseo— soporta toda la carga hasta que el hueso cure, y por eso es más vulnerable a la fatiga si la consolidación se retrasa. Esta distinción condiciona cuánto y cuándo se permite cargar (ver el capítulo de postoperatorio y rehabilitación)."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "H. Cómo elegir el implante"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "1. Que cumpla el principio (Paso 5): compresión → tornillo de tracción/placa de compresión; puenteo → clavo, placa puente o fijador; contrafuerte → placa de sostén; tracción → banda de tensión."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "2. Que respete la biología: si el plan es puentear, elegir material y técnica (MIPO, bloqueado) que no desvitalicen el foco."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "3. Que se adapte al hueso del huésped: hueso osteoporótico o conminuto → bloqueado/ángulo fijo, aumentación, mayor anclaje."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "La pregunta de control del Paso 6",
+      "lineas": [
+        "«¿Este implante cumple el principio que elegí, o me está obligando a cambiar de principio?» Si para colocarlo hay que desvitalizar el foco que decidí puentear, el implante —o la técnica— es el equivocado."
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Elegido el material, los tres pasos siguientes preparan su colocación: la posición del paciente, el abordaje y las técnicas de reducción."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "Evidencia, autoevaluación y lecturas"
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "evidencia",
+      "titulo": "Evidencia (nivel indicativo)",
+      "lineas": [
+        "Fresado en clavo de tibia — SPRINT (Nivel I): SPRINT Investigators, J Bone Joint Surg Am 2008: el fresado reduce reintervenciones en fracturas cerradas; en abiertas la diferencia no fue significativa.",
+        "rhBMP-2 en tibia abierta — BESTT (Nivel I): Govender S et al., JBJS Am 2002: la BMP-2 redujo reintervenciones y aceleró la consolidación frente al cuidado estándar.",
+        "Autoinjerto (Nivel III): sigue siendo el patrón oro para defectos y no uniones por su triple acción osteogénica, osteoinductora y osteoconductora."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Autoevaluación"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. ¿Qué significa que el clavo sea un implante de «carga compartida»?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. Que transmite parte de la carga a través del hueso; tolera mejor el apoyo precoz y la fatiga que una placa que puentea (carga soportada)."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. ¿Por qué la placa bloqueada es de elección en hueso osteoporótico?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. Porque es de ángulo fijo (fijador interno): no depende de la fricción placa-hueso ni del agarre cortical, sostiene mejor el hueso débil y preserva la vascularización perióstica."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Lecturas recomendadas"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Manual AO, vol. de implantes; MIPO (Bavonratanavech)."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "SPRINT, JBJS Am 2008; Govender S et al., JBJS Am 2002."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Los niveles de evidencia son orientativos y se ofrecen para guiar la lectura crítica, no como recomendación clínica cerrada."
+    }
+  ]
+}

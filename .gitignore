@@ -1,0 +1,7 @@
+# artefactos de trabajo
+__pycache__/
+*.pyc
+.DS_Store
+
+# el prototipo se genera; lo que se publica es sitio/
+prototipo.html

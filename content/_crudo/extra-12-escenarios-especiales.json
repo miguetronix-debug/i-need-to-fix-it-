@@ -1,0 +1,150 @@
+{
+  "origen": "LIBRO_Los_10_pasos_completo.docx",
+  "titulo": "Escenarios especiales",
+  "numeroPaso": null,
+  "bloques": [
+    {
+      "tipo": "parrafo",
+      "texto": "Los diez pasos se aplican igual en contextos especiales, pero con matices que cambian decisiones clave. Tres escenarios merecen mención propia."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "A. Fractura periprotésica"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "La presencia de un implante articular cambia la clasificación (Paso 2) y, sobre todo, la decisión entre osteosíntesis y revisión. La clasificación de Vancouver (para el fémur) lo resume:"
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Tipo Vancouver",
+        "Localización / vástago",
+        "Conducta"
+      ],
+      "filas": [
+        [
+          "A",
+          "Trocánter (AG mayor, AL menor).",
+          "Habitualmente conservadora o fijación selectiva."
+        ],
+        [
+          "B1",
+          "Alrededor del vástago, vástago estable.",
+          "Osteosíntesis (placa/cerclaje, a menudo bloqueada)."
+        ],
+        [
+          "B2",
+          "Alrededor del vástago, vástago inestable.",
+          "Revisión del vástago (± osteosíntesis)."
+        ],
+        [
+          "B3",
+          "Vástago inestable + mal stock óseo.",
+          "Revisión compleja / reconstrucción."
+        ],
+        [
+          "C",
+          "Lejos del vástago.",
+          "Osteosíntesis como una fractura nativa."
+        ]
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "La clave de los Pasos 3–6 aquí es la estabilidad del vástago: si está suelto (B2/B3), ninguna placa resuelve el problema —hay que revisar el implante—; si está fijo (B1/C), se trata como una fractura más, con cerclajes y placas bloqueadas que respetan el cemento o el vástago."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "B. Fractura pediátrica"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "La fisis manda: la clasificación de Salter-Harris ocupa el lugar de la AO; atravesar o lesionar el cartílago de crecimiento puede causar deformidad o detención del crecimiento."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Gran capacidad de remodelación: amplía la tolerancia a cierta angulación —sobre todo en el plano del movimiento articular y cuanto más joven el niño—, de modo que la reducción aceptable es más generosa que en el adulto."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Consolidación rápida y patrones propios: rodete (torus), tallo verde (greenstick); implantes menos agresivos (clavos elásticos endomedulares, agujas), preservando la fisis."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "C. Fractura por fragilidad y fractura patológica"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Fragilidad (osteoporosis): el Paso 1 incluye la prevención secundaria (unidad de fractura/FLS); el Paso 6 favorece el ángulo fijo, la aumentación con cemento y montajes que repartan la carga."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Patológica / fractura inminente: valorar el riesgo (p. ej., escala de Mirels), estabilizar todo el hueso anticipándose, y coordinar con oncología; el objetivo es paliar y permitir función, no necesariamente consolidar."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "idea",
+      "titulo": "Idea de los escenarios especiales",
+      "lineas": [
+        "El método no cambia; cambian las respuestas. La pregunta de los Pasos 1 y 2 «¿quién es el huésped y qué hay en este hueso?» es la que reorienta todo: una prótesis, una fisis o un tumor transforman la estrategia sin abandonar la cadena de los diez pasos."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "Evidencia, autoevaluación y lecturas"
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "evidencia",
+      "titulo": "Evidencia (nivel indicativo)",
+      "lineas": [
+        "Cuello femoral desplazado en el activo — HEALTH (Nivel I): HEALTH Investigators, N Engl J Med 2019: la artroplastia total ofrece una ventaja funcional modesta sobre la hemiartroplastia. FAITH (Lancet 2017): tornillos vs tornillo-placa deslizante, resultados globalmente similares.",
+        "Radio distal en el anciano de baja demanda (Nivel I–II): la placa volar mejora los parámetros radiográficos, pero el resultado funcional es similar al del tratamiento con yeso en pacientes mayores poco demandantes.",
+        "Periprotésica de fémur — Vancouver (Nivel IV): B1 (vástago estable) → osteosíntesis; B2/B3 (vástago inestable/mal stock óseo) → revisión del vástago."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Autoevaluación"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. ¿Qué define la conducta en una fractura periprotésica tipo B de Vancouver?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. La estabilidad del vástago: si está estable (B1) se hace osteosíntesis; si está suelto (B2) o con mal stock óseo (B3) se revisa el implante."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. En la fractura pediátrica, ¿qué dos particularidades cambian el plan?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. La fisis (no atravesarla de forma lesiva) y la gran capacidad de remodelación, que amplía la tolerancia a cierta deformidad, sobre todo en el plano del movimiento articular."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Lecturas recomendadas"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Schuetz, Perka — Periprosthetic Fracture Management (Thieme/AO)."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "HEALTH Investigators, NEJM 2019; FAITH Investigators, Lancet 2017."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Los niveles de evidencia son orientativos y se ofrecen para guiar la lectura crítica, no como recomendación clínica cerrada."
+    }
+  ]
+}

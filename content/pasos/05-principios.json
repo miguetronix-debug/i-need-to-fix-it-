@@ -1,0 +1,1011 @@
+{
+  "id": "paso-05-principios",
+  "numero": 5,
+  "titulo": "Los principios biomecánicos",
+  "subtitulo": "Cuatro principios; lo demás son maneras de conseguirlos",
+  "preguntaClave": "¿Qué fuerza quiero neutralizar en cada zona, con qué principio, y de qué manera lo materializo?",
+  "objetivos": [
+    "Separar el PRINCIPIO de la MANERA de conseguirlo y del IMPLANTE que lo ejecuta",
+    "Reconocer que solo hay cuatro principios: compresión interfragmentaria, banda de tensión, sostén y ferulaje",
+    "Conocer las cinco maneras de dar compresión interfragmentaria",
+    "Entender que la neutralización no es un principio sino un accesorio del tornillo que comprime",
+    "Distinguir el ferulaje como principio de sus formas: tutor externo, clavo o placa puente"
+  ],
+  "decisiones": [
+    {
+      "id": "fuerza",
+      "pregunta": "¿Qué fuerza tienes que neutralizar?",
+      "ayuda": "Es la pregunta de control del paso. Identificar la fuerza dominante lleva casi solo al principio que la contrarresta.",
+      "tipo": "opcionMultiple",
+      "opciones": [
+        {
+          "id": "f-axial",
+          "etiqueta": "Carga axial",
+          "criterios": [
+            "Compresión longitudinal del hueso",
+            "Tiende a acortar y colapsar el foco"
+          ]
+        },
+        {
+          "id": "f-traccion",
+          "etiqueta": "Tracción",
+          "criterios": [
+            "Tracción muscular sobre un fragmento excéntrico",
+            "Olécranon, rótula, troquíter, maléolo"
+          ]
+        },
+        {
+          "id": "f-cizallamiento",
+          "etiqueta": "Cizallamiento",
+          "criterios": [
+            "Un fragmento tiende a deslizar sobre el otro",
+            "Barton volar, maléolo posterior, meseta tibial"
+          ]
+        },
+        {
+          "id": "f-flexion",
+          "etiqueta": "Flexión",
+          "criterios": [
+            "Angulación del foco bajo carga",
+            "Manda en las diáfisis de huesos largos"
+          ]
+        },
+        {
+          "id": "f-torsion",
+          "etiqueta": "Torsión",
+          "criterios": [
+            "Rotación de un fragmento respecto al otro",
+            "Es la que el tornillo interfragmentario NO resiste"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "principio",
+      "pregunta": "¿Qué principio o principios vas a aplicar?",
+      "ayuda": "Solo hay cuatro. Todo lo demás —tornillo de tracción, placa a compresión, placa puente, tutor— son maneras de materializarlos.",
+      "tipo": "opcionMultiple",
+      "mostrarSi": {
+        "ctx": [
+          "zonas-una"
+        ]
+      },
+      "opciones": [
+        {
+          "id": "pr-compresion",
+          "etiqueta": "Compresión interfragmentaria",
+          "produce": "absoluta",
+          "criterios": [
+            "Aproximar los fragmentos hasta que la fricción neutralice las cargas y la deformación caiga casi a cero",
+            "Se puede conseguir de varias maneras: con tornillo, con placa, o combinando ambos",
+            "Es la esencia de la estabilidad absoluta"
+          ]
+        },
+        {
+          "id": "pr-banda",
+          "etiqueta": "Banda de tensión",
+          "produce": "absoluta",
+          "criterios": [
+            "Convierte la TRACCIÓN en COMPRESIÓN en la cortical opuesta",
+            "Principio dinámico: la compresión aumenta con la función",
+            "Indicaciones muy concretas y una condición anatómica que no se negocia"
+          ]
+        },
+        {
+          "id": "pr-sosten",
+          "etiqueta": "Sostén (buttress / contrafuerte)",
+          "produce": "absoluta",
+          "criterios": [
+            "Neutraliza el cizallamiento haciendo de tope físico del fragmento que desliza",
+            "No sujeta por fricción: sujeta por apoyo",
+            "Articulares parciales por cizallamiento; antiglide en el peroné distal"
+          ]
+        },
+        {
+          "id": "pr-ferulaje",
+          "etiqueta": "Ferulaje (interno o externo)",
+          "produce": "relativa",
+          "criterios": [
+            "El implante feruliza el segmento manteniendo longitud, eje y rotación",
+            "Permite el micromovimiento que estimula el callo",
+            "Es el principio; el tutor externo, el clavo y la placa puente son sus formas"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "principio-articular",
+      "pregunta": "Bloque articular: ¿qué principio?",
+      "ayuda": "La superficie articular pide compresión; el fragmento que desliza pide sostén.",
+      "tipo": "opcionMultiple",
+      "mostrarSi": {
+        "ctx": [
+          "zonas-dos"
+        ]
+      },
+      "opciones": [
+        {
+          "id": "pa-compresion",
+          "etiqueta": "Compresión interfragmentaria",
+          "criterios": [
+            "Anular la brecha de la superficie articular por fricción"
+          ]
+        },
+        {
+          "id": "pa-banda",
+          "etiqueta": "Banda de tensión",
+          "criterios": [
+            "Cuando la fuerza dominante sobre el fragmento es la tracción muscular"
+          ]
+        },
+        {
+          "id": "pa-sosten",
+          "etiqueta": "Sostén o contrafuerte",
+          "criterios": [
+            "Fragmento articular parcial que desliza por cizallamiento",
+            "Spring plate o placa de un tercio de caña en fragmentos pequeños"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "principio-meta",
+      "pregunta": "Componente metafisario o diafisario: ¿qué principio?",
+      "ayuda": "El componente conminuto se feruliza. No hay nada que comprimir sin desvitalizar.",
+      "tipo": "opcionMultiple",
+      "mostrarSi": {
+        "ctx": [
+          "zonas-dos"
+        ]
+      },
+      "opciones": [
+        {
+          "id": "pm-ferulaje",
+          "etiqueta": "Ferulaje",
+          "criterios": [
+            "Mantener longitud, eje y rotación y dejar que consolide por callo"
+          ]
+        },
+        {
+          "id": "pm-compresion",
+          "etiqueta": "Compresión interfragmentaria",
+          "criterios": [
+            "Solo si ese componente es un trazo simple y reconstruible"
+          ]
+        },
+        {
+          "id": "pm-sosten",
+          "etiqueta": "Sostén",
+          "criterios": [
+            "Si hay un fragmento metafisario que desliza y hay que topar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modo-compresion",
+      "pregunta": "¿De qué manera vas a dar la compresión?",
+      "ayuda": "La compresión interfragmentaria admite varias ejecuciones. Puedes combinar más de una.",
+      "tipo": "opcionMultiple",
+      "mostrarSiAlguno": [
+        {
+          "principio": [
+            "pr-compresion"
+          ]
+        },
+        {
+          "principio-articular": [
+            "pa-compresion"
+          ]
+        },
+        {
+          "principio-meta": [
+            "pm-compresion"
+          ]
+        }
+      ],
+      "opciones": [
+        {
+          "id": "mc-tornillo-tecnica",
+          "etiqueta": "Tornillo, por técnica",
+          "criterios": [
+            "Barril de deslizamiento en la cortical próxima y barril de tracción en la distal",
+            "La rosca solo agarra el fragmento lejano, así que al apretar los fragmentos se comprimen",
+            "Cualquier tornillo cortical de rosca completa sirve si se hace la técnica"
+          ]
+        },
+        {
+          "id": "mc-tornillo-diseno",
+          "etiqueta": "Tornillo, por diseño",
+          "criterios": [
+            "Tornillo de rosca parcial: liso en un extremo y roscado en el otro",
+            "El propio diseño hace de barril de deslizamiento, sin necesidad de sobreperforar",
+            "Tornillos de esponjosa de rosca parcial, canulados de compresión"
+          ]
+        },
+        {
+          "id": "mc-tornillo-por-placa",
+          "etiqueta": "Tornillo interfragmentario a través de la placa",
+          "criterios": [
+            "El tornillo se coloca por un agujero de la placa, con técnica de compresión",
+            "Suma la compresión puntual del tornillo al montaje de la placa"
+          ]
+        },
+        {
+          "id": "mc-placa-dcp",
+          "etiqueta": "Placa, por su unidad dinámica de compresión",
+          "criterios": [
+            "DCP o LCP: un tornillo neutral y otro excéntrico",
+            "Al apretar el excéntrico, la cabeza desliza por la rampa del agujero y desplaza la placa comprimiendo el foco"
+          ]
+        },
+        {
+          "id": "mc-prebending",
+          "etiqueta": "Pretensado de la placa (prebending)",
+          "criterios": [
+            "Curvar ligeramente la placa sobre el foco para comprimir también la cortical opuesta",
+            "Sin él, la compresión se concentra en la cortical de la placa y la opuesta puede quedar abierta"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "neutralizacion",
+      "pregunta": "¿Vas a proteger esa compresión?",
+      "ayuda": "La neutralización no es un principio: es un accesorio del tornillo que comprime. Protege las fuerzas que ese tornillo no puede contrarrestar por sí solo.",
+      "tipo": "opcionUnica",
+      "mostrarSiAlguno": [
+        {
+          "modo-compresion": [
+            "mc-tornillo-tecnica"
+          ]
+        },
+        {
+          "modo-compresion": [
+            "mc-tornillo-diseno"
+          ]
+        }
+      ],
+      "opciones": [
+        {
+          "id": "n-si",
+          "etiqueta": "Sí, con placa de protección",
+          "criterios": [
+            "Blinda la compresión frente a torsión, flexión y cizallamiento",
+            "El tornillo da la compresión; la placa solo la protege"
+          ]
+        },
+        {
+          "id": "n-no",
+          "etiqueta": "No hace falta",
+          "criterios": [
+            "Fragmento articular bien contenido, o varios tornillos que ya controlan la rotación",
+            "Justifícalo: la torsión es lo que el tornillo interfragmentario no resiste"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modo-ferulaje",
+      "pregunta": "¿Cómo vas a materializar el ferulaje?",
+      "ayuda": "Todas son formas del mismo principio: describen cómo se usa el implante, no un principio distinto.",
+      "tipo": "opcionMultiple",
+      "mostrarSiAlguno": [
+        {
+          "principio": [
+            "pr-ferulaje"
+          ]
+        },
+        {
+          "principio-meta": [
+            "pm-ferulaje"
+          ]
+        }
+      ],
+      "opciones": [
+        {
+          "id": "mf-clavo",
+          "etiqueta": "Ferulaje interno con clavo endomedular",
+          "criterios": [
+            "Férula intramedular alineada con el eje mecánico",
+            "Carga compartida; la rigidez depende del diámetro y del fresado"
+          ]
+        },
+        {
+          "id": "mf-placa-puente",
+          "etiqueta": "Ferulaje interno con placa puente",
+          "criterios": [
+            "La placa salva la zona conminuta sin tocarla",
+            "«Placa puente» describe cómo se usa la placa, no un principio distinto"
+          ]
+        },
+        {
+          "id": "mf-tutor",
+          "etiqueta": "Ferulaje externo con tutor",
+          "criterios": [
+            "Fijador externo: férula fuera de la piel",
+            "De elección cuando las partes blandas o la fisiología no permiten lo definitivo"
+          ]
+        }
+      ]
+    }
+  ],
+  "derivados": [
+    {
+      "id": "de-la-fuerza",
+      "titulo": "La fuerza que señalaste pide este principio",
+      "tipo": "reglas",
+      "modo": "todas",
+      "reglas": [
+        {
+          "si": {
+            "fuerza": [
+              "f-traccion"
+            ]
+          },
+          "texto": "Tracción → BANDA DE TENSIÓN, que la convierte en compresión en la cortical opuesta. Condición imprescindible: esa cortical debe estar intacta y actuar de fulcro."
+        },
+        {
+          "si": {
+            "fuerza": [
+              "f-cizallamiento"
+            ]
+          },
+          "texto": "Cizallamiento → SOSTÉN o contrafuerte. El implante hace de tope físico del fragmento que desliza; no lo sujeta por fricción."
+        },
+        {
+          "si": {
+            "fuerza": [
+              "f-torsion"
+            ]
+          },
+          "texto": "Torsión → es justo lo que el tornillo interfragmentario NO resiste. Si estás comprimiendo con tornillo, añade una placa de protección: neutralización."
+        },
+        {
+          "si": {
+            "fuerza": [
+              "f-flexion"
+            ]
+          },
+          "texto": "Flexión → placa en el lado de tensión si el trazo es reconstruible, o ferulaje con longitud de trabajo suficiente si el foco es conminuto."
+        },
+        {
+          "si": {
+            "fuerza": [
+              "f-axial"
+            ]
+          },
+          "texto": "Carga axial → compresión si el trazo es reconstruible; si no lo es, ferulaje y, en su caso, relleno del defecto."
+        }
+      ]
+    },
+    {
+      "id": "jerarquia",
+      "titulo": "Lo que has definido, ordenado",
+      "tipo": "reglas",
+      "modo": "todas",
+      "reglas": [
+        {
+          "si": {
+            "modo-compresion": [
+              "mc-tornillo-tecnica"
+            ]
+          },
+          "texto": "Principio: compresión interfragmentaria. Manera: tornillo por técnica —barril de deslizamiento próximo, barril de tracción distal—. Implante: cualquier tornillo cortical de rosca completa."
+        },
+        {
+          "si": {
+            "modo-compresion": [
+              "mc-tornillo-diseno"
+            ]
+          },
+          "texto": "Principio: compresión interfragmentaria. Manera: tornillo por diseño, liso en un extremo y roscado en el otro. Implante: tornillo de rosca parcial o canulado de compresión."
+        },
+        {
+          "si": {
+            "modo-compresion": [
+              "mc-placa-dcp"
+            ]
+          },
+          "texto": "Principio: compresión interfragmentaria. Manera: unidad dinámica de compresión de la placa, con un tornillo neutral y otro excéntrico. Implante: DCP, LC-DCP o LCP."
+        },
+        {
+          "si": {
+            "modo-compresion": [
+              "mc-tornillo-por-placa"
+            ]
+          },
+          "texto": "Principio: compresión interfragmentaria. Manera: tornillo interfragmentario colocado a través de un agujero de la placa. Suma compresión puntual al montaje."
+        },
+        {
+          "si": {
+            "modo-compresion": [
+              "mc-prebending"
+            ]
+          },
+          "texto": "Pretensado: sin él, la compresión se concentra en la cortical de la placa y la opuesta puede quedar abierta."
+        },
+        {
+          "si": {
+            "neutralizacion": [
+              "n-si"
+            ]
+          },
+          "texto": "Neutralización: accesorio del tornillo que comprime, no un principio. La placa no aporta estabilidad propia aquí; protege la que da el tornillo frente a torsión, flexión y cizallamiento."
+        },
+        {
+          "si": {
+            "modo-ferulaje": [
+              "mf-placa-puente"
+            ]
+          },
+          "texto": "Principio: ferulaje interno. Manera: placa puente. «Placa puente» es la descripción de cómo se usa el implante, no un principio aparte."
+        },
+        {
+          "si": {
+            "modo-ferulaje": [
+              "mf-tutor"
+            ]
+          },
+          "texto": "Principio: ferulaje externo. Manera: tutor. Mismo principio que el clavo o la placa puente, ejecutado fuera de la piel."
+        },
+        {
+          "si": {
+            "modo-ferulaje": [
+              "mf-clavo"
+            ]
+          },
+          "texto": "Principio: ferulaje interno. Manera: clavo endomedular. La longitud de trabajo del Paso 3 define cuánta deformación permites."
+        }
+      ]
+    },
+    {
+      "id": "coherente",
+      "titulo": "Principios que corresponden a tu estabilidad",
+      "tipo": "reglas",
+      "modo": "todas",
+      "reglas": [
+        {
+          "si": {
+            "ctx": [
+              "est-absoluta"
+            ]
+          },
+          "texto": "Estabilidad absoluta → compresión interfragmentaria, banda de tensión o sostén. La neutralización acompaña al tornillo que comprime, pero no genera estabilidad por sí misma."
+        },
+        {
+          "si": {
+            "ctx": [
+              "est-relativa"
+            ]
+          },
+          "texto": "Estabilidad relativa → ferulaje, interno o externo. La cantidad de movimiento se dosifica con la longitud de trabajo, como decidiste en el Paso 3."
+        },
+        {
+          "si": {
+            "ctx": [
+              "art-absoluta"
+            ]
+          },
+          "texto": "Bloque articular con estabilidad absoluta → compresión interfragmentaria y, si el fragmento desliza, sostén."
+        },
+        {
+          "si": {
+            "ctx": [
+              "meta-relativa"
+            ]
+          },
+          "texto": "Componente metafisario con estabilidad relativa → ferulaje. Un mismo implante puede comprimir arriba y ferulizar abajo: son dos principios en un constructo, no dos implantes."
+        }
+      ]
+    }
+  ],
+  "esencial": [
+    {
+      "tipo": "parrafo",
+      "texto": "El principio biomecánico es la estrategia mecánica con la que se obtiene la estabilidad elegida en el Paso 3. No es el implante, y tampoco es la técnica con la que se ejecuta. Distinguir esos tres niveles —principio, manera e implante— es lo que permite improvisar con el material disponible en vez de depender de una bandeja concreta."
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Los tres niveles, que no hay que mezclar",
+      "encabezados": [
+        "Nivel",
+        "Qué es",
+        "Ejemplo"
+      ],
+      "filas": [
+        [
+          "Principio",
+          "La estrategia mecánica: qué fuerza se neutraliza y cómo",
+          "Compresión interfragmentaria"
+        ],
+        [
+          "Manera",
+          "Cómo se ejecuta ese principio",
+          "Tornillo por técnica · tornillo por diseño · unidad dinámica de la placa"
+        ],
+        [
+          "Implante",
+          "El material concreto que lo materializa (Paso 6)",
+          "Tornillo cortical de 3,5 · DCP · LCP"
+        ]
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "Solo hay cuatro principios",
+      "texto": "Compresión interfragmentaria, banda de tensión y sostén producen estabilidad absoluta. El ferulaje —interno o externo— produce estabilidad relativa. Todo lo demás que se enseña como si fuera un principio es, en realidad, una manera de conseguir uno de estos cuatro o una descripción de cómo se usa el implante."
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Las cinco maneras de dar compresión interfragmentaria",
+      "encabezados": [
+        "Manera",
+        "En qué consiste"
+      ],
+      "filas": [
+        [
+          "Tornillo, por técnica",
+          "Barril de deslizamiento en la cortical próxima y barril de tracción en la distal. La rosca solo agarra el fragmento lejano, así que al apretar los fragmentos se comprimen. Cualquier tornillo de rosca completa sirve si se hace bien la técnica."
+        ],
+        [
+          "Tornillo, por diseño",
+          "Tornillo de rosca parcial: liso en un extremo, roscado en el otro. El propio diseño hace de barril de deslizamiento, sin sobreperforar."
+        ],
+        [
+          "Tornillo interfragmentario a través de la placa",
+          "El tornillo se coloca por un agujero de la placa con técnica de compresión, sumando compresión puntual al montaje."
+        ],
+        [
+          "Unidad dinámica de compresión de la placa",
+          "DCP o LCP con un tornillo neutral y otro excéntrico: al apretar el excéntrico, la cabeza desliza por la rampa del agujero y desplaza la placa, comprimiendo el foco."
+        ],
+        [
+          "Pretensado o prebending",
+          "Curvar ligeramente la placa sobre el foco para que la compresión alcance también la cortical opuesta."
+        ]
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "error",
+      "titulo": "La neutralización NO es un principio",
+      "texto": "Es un accesorio del tornillo que da la compresión interfragmentaria. Protege las fuerzas que ese tornillo no puede contrarrestar por sí solo: torsión, flexión y cizallamiento. No genera estabilidad propia y no tiene sentido sin un montaje que comprima. Tratarla como principio induce a pensar que una placa de neutralización estabiliza el foco, y no lo hace: lo estabiliza el tornillo."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "error",
+      "titulo": "«Placa puente» no es un principio",
+      "texto": "Describe la forma en que se utiliza el implante. El principio es el FERULAJE, y admite tres formas: ferulaje interno con clavo endomedular, ferulaje interno con placa puente, y ferulaje externo con tutor. Los tres hacen lo mismo —mantener longitud, eje y rotación permitiendo micromovimiento—, y solo cambian en dónde se coloca la férula."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "error",
+      "titulo": "No confundir: banda de tensión ≠ cerclaje ≠ compresión interfragmentaria",
+      "texto": "La BANDA DE TENSIÓN es un principio dinámico: convierte la tracción en compresión en la cortical opuesta, y exige una cortical opuesta intacta que actúe de fulcro más carga funcional cíclica. La compresión aumenta con la función. El CERCLAJE es estático: un alambre circunferencial que solo aproxima o sostiene fragmentos. Un alambre en ocho que no convierte tracción en compresión funciona como cerclaje, no como banda de tensión. Y la COMPRESIÓN INTERFRAGMENTARIA es estática: anula la brecha por fricción de forma mantenida, con independencia del movimiento."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "idea",
+      "titulo": "Un matiz honesto sobre el ocho del olécranon",
+      "texto": "Se ha cuestionado experimentalmente que el clásico montaje de agujas más alambre en ocho funcione realmente como banda de tensión dinámica: se comporta de forma más estática de lo que se enseña. Sigue siendo eficaz en el trazo simple, pero conviene no equiparar el constructo con el principio."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "La banda de tensión tiene indicaciones muy concretas",
+      "texto": "Hacen falta tres cosas: un fragmento sometido a tracción excéntrica, una cortical opuesta intacta que resista la compresión, y carga funcional cíclica que active el mecanismo. Olécranon, rótula, troquíter y maléolo son los escenarios clásicos. Si falta cualquiera de las tres condiciones —sobre todo la cortical opuesta— el principio no funciona y hay que pasar a placa."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "El sostén sujeta por apoyo, no por fricción",
+      "texto": "El contrafuerte neutraliza cizallamiento haciendo de tope físico contra el fragmento que desliza. Por eso se fija primero al fragmento estable y se apoya contra el que migra. Si se intenta sujetar ese fragmento con tornillos a fricción, los tornillos trabajan a cizallamiento y acaban cediendo."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "La pregunta de control del Paso 5",
+      "texto": "¿Qué fuerza quiero neutralizar en cada zona, con qué principio, y de qué manera lo materializo? Compresión donde busco curación directa; ferulaje donde busco callo; sostén donde hay cizallamiento; banda de tensión donde hay tracción y existe cortical opuesta. El implante del Paso 6 será solo el instrumento."
+    },
+    {
+      "tipo": "enlace",
+      "titulo": "Ver el principio en movimiento",
+      "texto": "En el configurador de OSapp puedes contrastar dos montajes lado a lado y ver dónde se concentra el estrés en cada uno. Es la forma más rápida de entender por qué un tornillo aislado no resiste torsión.",
+      "url": "https://osapp.aofoundation.org/free_configurator",
+      "fuente": "AO Research Institute · gratuito, en inglés"
+    }
+  ],
+  "alertas": [
+    {
+      "id": "tres-niveles",
+      "severidad": "media",
+      "titulo": "Principio, manera e implante son tres cosas distintas",
+      "texto": "El principio es la estrategia; la manera es cómo se ejecuta; el implante es el material. La placa de reconstrucción es el implante que materializa una protección, no el principio. Mantén los tres niveles separados.",
+      "mostrarSiempre": true
+    },
+    {
+      "id": "neutralizacion-accesorio",
+      "severidad": "media",
+      "titulo": "La neutralización es un accesorio, no un principio",
+      "texto": "Protege las fuerzas que el tornillo interfragmentario no contrarresta. La estabilidad la da el tornillo; la placa solo la blinda.",
+      "mostrarSi": {
+        "neutralizacion": [
+          "n-si"
+        ]
+      }
+    },
+    {
+      "id": "compresion-sin-manera",
+      "severidad": "alta",
+      "titulo": "Define cómo vas a comprimir",
+      "texto": "Has elegido compresión interfragmentaria pero no la manera. No es lo mismo un tornillo por técnica que la unidad dinámica de la placa: cambian el instrumental, la secuencia y el resultado mecánico.",
+      "mostrarSiAlguno": [
+        {
+          "principio": [
+            "pr-compresion"
+          ]
+        },
+        {
+          "principio-articular": [
+            "pa-compresion"
+          ]
+        }
+      ],
+      "noSiAlguno": [
+        {
+          "modo-compresion": [
+            "mc-tornillo-tecnica"
+          ]
+        },
+        {
+          "modo-compresion": [
+            "mc-tornillo-diseno"
+          ]
+        },
+        {
+          "modo-compresion": [
+            "mc-tornillo-por-placa"
+          ]
+        },
+        {
+          "modo-compresion": [
+            "mc-placa-dcp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tornillo-sin-proteger",
+      "severidad": "alta",
+      "titulo": "Un tornillo interfragmentario aislado no resiste torsión",
+      "texto": "Estás comprimiendo con tornillo y has decidido no proteger. Salvo en fragmentos articulares bien contenidos, la compresión puntual necesita una placa que la blinde frente a torsión, flexión y cizallamiento.",
+      "mostrarSi": {
+        "neutralizacion": [
+          "n-no"
+        ],
+        "fuerza": [
+          "f-torsion"
+        ]
+      }
+    },
+    {
+      "id": "placa-sin-prebending",
+      "severidad": "media",
+      "titulo": "Sin pretensado, la cortical opuesta puede quedar abierta",
+      "texto": "La unidad dinámica de compresión concentra la fuerza en la cortical de la placa. Curvar ligeramente la placa sobre el foco reparte la compresión también a la cortical opuesta.",
+      "mostrarSi": {
+        "modo-compresion": [
+          "mc-placa-dcp"
+        ]
+      },
+      "noSi": {
+        "modo-compresion": [
+          "mc-prebending"
+        ]
+      }
+    },
+    {
+      "id": "banda-cortical",
+      "severidad": "alta",
+      "titulo": "Comprueba las tres condiciones de la banda de tensión",
+      "texto": "Fragmento sometido a tracción excéntrica, cortical opuesta intacta que actúe de fulcro, y carga funcional cíclica. Si falta alguna, el principio no convierte tracción en compresión y hay que pasar a placa. Y recuerda: un alambre en ocho que no convierte tracción en compresión es un cerclaje.",
+      "mostrarSiAlguno": [
+        {
+          "principio": [
+            "pr-banda"
+          ]
+        },
+        {
+          "principio-articular": [
+            "pa-banda"
+          ]
+        }
+      ],
+      "noSi": {
+        "ctx": [
+          "tipoC"
+        ]
+      }
+    },
+    {
+      "id": "banda-conminuta",
+      "severidad": "critica",
+      "titulo": "Banda de tensión sobre una fractura multifragmentaria",
+      "texto": "Clasificaste una fractura compleja y eliges banda de tensión. Con la cortical opuesta conminuta no hay fulcro y el principio falla por definición: el foco colapsa. La respuesta es placa.",
+      "mostrarSiAlguno": [
+        {
+          "ctx": [
+            "tipoC"
+          ],
+          "principio": [
+            "pr-banda"
+          ]
+        },
+        {
+          "ctx": [
+            "tipoC"
+          ],
+          "principio-articular": [
+            "pa-banda"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compresion-en-relativa",
+      "severidad": "critica",
+      "titulo": "Estás comprimiendo donde decidiste estabilidad relativa",
+      "texto": "En el Paso 3 elegiste estabilidad relativa, que cura por callo. La compresión anula el micromovimiento que ese callo necesita y, sobre un foco conminuto, deja brechas de deformación altísima. El principio que corresponde es el ferulaje.",
+      "mostrarSi": {
+        "ctx": [
+          "est-relativa"
+        ],
+        "principio": [
+          "pr-compresion"
+        ]
+      }
+    },
+    {
+      "id": "ferulaje-en-absoluta",
+      "severidad": "critica",
+      "titulo": "Estás ferulizando donde decidiste estabilidad absoluta",
+      "texto": "El ferulaje produce estabilidad relativa y consolidación por callo. Si buscabas consolidación directa, el principio tiene que comprimir.",
+      "mostrarSi": {
+        "ctx": [
+          "est-absoluta"
+        ],
+        "principio": [
+          "pr-ferulaje"
+        ]
+      }
+    },
+    {
+      "id": "cizallamiento-sin-sosten",
+      "severidad": "alta",
+      "titulo": "Hay cizallamiento y no has puesto sostén",
+      "texto": "Un fragmento que desliza no se sujeta por fricción: necesita un tope físico. Sin contrafuerte, los tornillos trabajan a cizallamiento y el fragmento migra.",
+      "mostrarSi": {
+        "fuerza": [
+          "f-cizallamiento"
+        ]
+      },
+      "noSiAlguno": [
+        {
+          "principio": [
+            "pr-sosten"
+          ]
+        },
+        {
+          "principio-articular": [
+            "pa-sosten"
+          ]
+        },
+        {
+          "principio-meta": [
+            "pm-sosten"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rg-pauwels",
+      "severidad": "alta",
+      "titulo": "Trazo vertical del cuello: eso es cizallamiento, no compresión",
+      "texto": "Con un Pauwels III la carga no comprime el foco: lo cizalla. Tres tornillos paralelos trabajan entonces a cizallamiento y ceden en varo. Lo que corresponde es ángulo fijo —tornillo deslizante con placa, o clavo cefalomedular—, o añadir un tornillo antirrotatorio con una placa de sostén que haga de contrafuerte.",
+      "mostrarSi": {
+        "ctx": [
+          "pauwels-vertical"
+        ]
+      }
+    },
+    {
+      "id": "rg-sa-medial",
+      "severidad": "alta",
+      "titulo": "Maléolo medial vertical: tornillos a fricción no lo sujetan",
+      "texto": "En la supinación-aducción el trazo medial es vertical, así que los tornillos horizontales trabajan a cizallamiento. Ese fragmento pide una placa de contrafuerte antideslizante.",
+      "mostrarSi": {
+        "ctx": [
+          "lh-aduccion"
+        ]
+      }
+    }
+  ],
+  "reglasCoherencia": [
+    {
+      "id": "r5-meta-comprimida",
+      "titulo": "Coherencia — comprimir el componente conminuto",
+      "si": {
+        "ctx": [
+          "meta-relativa"
+        ],
+        "principio-meta": [
+          "pm-compresion"
+        ]
+      },
+      "severidad": "critica",
+      "mensaje": "Decidiste estabilidad relativa para ese componente y ahora eliges comprimirlo. No hay nada que comprimir sin desvitalizar: el principio que corresponde es el ferulaje."
+    },
+    {
+      "id": "r5-articular-sin-principio",
+      "titulo": "Coherencia — bloque articular sin principio que lo estabilice",
+      "si": {
+        "ctx": [
+          "art-absoluta"
+        ]
+      },
+      "noSiAlguno": [
+        {
+          "principio-articular": [
+            "pa-compresion"
+          ]
+        },
+        {
+          "principio-articular": [
+            "pa-sosten"
+          ]
+        },
+        {
+          "principio-articular": [
+            "pa-banda"
+          ]
+        }
+      ],
+      "severidad": "advertencia",
+      "mensaje": "Elegiste estabilidad absoluta para el bloque articular pero no has marcado ningún principio que la produzca: compresión, sostén o banda de tensión."
+    }
+  ],
+  "evidencia": [
+    {
+      "nivel": "5",
+      "afirmacion": "La compresión del tornillo interfragmentario es máxima con el tornillo perpendicular al plano de fractura; en presencia de carga axial se orienta a mitad de camino entre la perpendicular al trazo y la perpendicular a la cortical.",
+      "refs": [
+        "ref-biomec-trauma"
+      ]
+    },
+    {
+      "nivel": "5",
+      "afirmacion": "La banda de tensión requiere una cortical opuesta intacta; con conminución el principio falla y hay que pasar a placa.",
+      "refs": [
+        "ref-biomec-trauma"
+      ]
+    },
+    {
+      "nivel": "3",
+      "afirmacion": "Se ha cuestionado experimentalmente que el montaje clásico de agujas y alambre en ocho del olécranon funcione como banda de tensión dinámica: se comporta de forma más estática de lo que se enseña.",
+      "refs": [
+        "ref-brink-2013"
+      ]
+    }
+  ],
+  "autoevaluacion": [
+    {
+      "pregunta": "¿Cuántos principios biomecánicos hay, y cuáles?",
+      "opciones": [
+        "Siete: compresión, tornillo de tracción, placa de compresión, banda de tensión, sostén, neutralización y puenteo",
+        "Cuatro: compresión interfragmentaria, banda de tensión, sostén y ferulaje",
+        "Dos: absoluta y relativa",
+        "Depende del implante disponible"
+      ],
+      "correcta": 1,
+      "explicacion": "El tornillo de tracción y la placa a compresión son MANERAS de dar compresión interfragmentaria; la neutralización es un accesorio; la placa puente es una forma de ferulaje. Solo hay cuatro principios.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Qué es la neutralización?",
+      "opciones": [
+        "Un principio de estabilidad absoluta",
+        "Un accesorio del tornillo que comprime, que protege las fuerzas que ese tornillo no contrarresta",
+        "Una forma de ferulaje",
+        "Un tipo de placa"
+      ],
+      "correcta": 1,
+      "explicacion": "No genera estabilidad propia y no tiene sentido sin un montaje que comprima. La estabilidad la da el tornillo; la placa solo la blinda frente a torsión, flexión y cizallamiento.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "Un tornillo de rosca parcial, liso en un extremo y roscado en el otro, ¿qué manera de comprimir representa?",
+      "opciones": [
+        "Compresión por técnica",
+        "Compresión por diseño del propio tornillo",
+        "Unidad dinámica de compresión",
+        "Banda de tensión"
+      ],
+      "correcta": 1,
+      "explicacion": "El diseño hace de barril de deslizamiento sin necesidad de sobreperforar. Si en cambio usas un tornillo de rosca completa y creas tú el barril de deslizamiento, eso es compresión por técnica.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Cómo comprime la unidad dinámica de compresión de una DCP?",
+      "opciones": [
+        "Curvando la placa antes de colocarla",
+        "Con un tornillo neutral y otro excéntrico: al apretar el excéntrico la cabeza desliza por la rampa y desplaza la placa",
+        "Apretando todos los tornillos a la vez",
+        "Con tornillos bloqueados de ángulo fijo"
+      ],
+      "correcta": 1,
+      "explicacion": "El diseño del agujero convierte el descenso de la cabeza en desplazamiento horizontal de la placa, y ese desplazamiento comprime el foco. El pretensado es otra cosa: sirve para que la compresión llegue también a la cortical opuesta.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "«Placa puente», ¿qué es?",
+      "opciones": [
+        "Un principio biomecánico propio",
+        "Una forma de ferulaje interno: describe cómo se usa el implante",
+        "Un tipo de placa de diseño específico",
+        "Lo mismo que una placa de neutralización"
+      ],
+      "correcta": 1,
+      "explicacion": "El principio es el ferulaje, y admite tres formas: clavo endomedular, placa puente y tutor externo. Los tres mantienen longitud, eje y rotación permitiendo micromovimiento.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Qué condición anatómica es imprescindible para que funcione una banda de tensión?",
+      "opciones": [
+        "Un hueso de buena calidad",
+        "Una cortical opuesta intacta que actúe de fulcro",
+        "Un trazo transverso",
+        "Ausencia de carga funcional"
+      ],
+      "correcta": 1,
+      "explicacion": "Sin fulcro no hay conversión de tracción en compresión y el foco colapsa. Si esa cortical está conminuta, hay que pasar a placa.",
+      "origen": "libro"
+    },
+    {
+      "pregunta": "Un alambre en ocho que no convierte tracción en compresión, ¿qué es?",
+      "opciones": [
+        "Una banda de tensión mal colocada",
+        "Un cerclaje",
+        "Una compresión interfragmentaria",
+        "Una neutralización"
+      ],
+      "correcta": 1,
+      "explicacion": "El cerclaje es estático: solo aproxima o sostiene. La banda de tensión es un principio dinámico que exige fulcro y carga cíclica. El constructo no define el principio.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Por qué el sostén no sujeta por fricción?",
+      "opciones": [
+        "Porque la placa no se aprieta contra el hueso",
+        "Porque actúa como tope físico contra el fragmento que desliza",
+        "Porque usa tornillos bloqueados",
+        "Porque se coloca en el lado de tensión"
+      ],
+      "correcta": 1,
+      "explicacion": "Se fija primero al fragmento estable y se apoya contra el que migra. Si se intentara sujetar ese fragmento a fricción, los tornillos trabajarían a cizallamiento y cederían.",
+      "origen": "app"
+    }
+  ],
+  "sintesis": "Solo hay cuatro principios: compresión interfragmentaria, banda de tensión y sostén producen estabilidad absoluta; el ferulaje, interno o externo, produce estabilidad relativa. La compresión admite cinco maneras —tornillo por técnica, tornillo por diseño, tornillo a través de la placa, unidad dinámica de la placa y pretensado—. La neutralización no es un principio sino un accesorio del tornillo que comprime, y «placa puente» no es un principio sino una forma de ferulaje.",
+  "lecturas": [
+    "Manual AO, capítulos de técnicas de estabilidad absoluta y relativa.",
+    "Essential Biomechanics for Orthopedic Trauma, capítulos de tornillos, placas y banda de tensión.",
+    "Brink PRG, de Boer P, et al. Is the olecranon tension band wiring technique really a tension band? Injury. 2013."
+  ],
+  "refs": [
+    "ref-biomec-trauma",
+    "ref-brink-2013",
+    "ref-perren-2002"
+  ]
+}

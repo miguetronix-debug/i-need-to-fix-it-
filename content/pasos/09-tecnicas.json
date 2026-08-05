@@ -1,0 +1,866 @@
+{
+  "id": "paso-09-tecnicas",
+  "numero": 9,
+  "titulo": "Las técnicas de reducción",
+  "subtitulo": "Un arsenal escalonado: empezar por lo simple y reservar lo avanzado",
+  "preguntaClave": "¿Con qué instrumento consigo esta reducción haciendo el menor daño posible?",
+  "objetivos": [
+    "Escalonar el arsenal: lo básico primero, lo avanzado cuando lo básico no basta",
+    "Elegir técnicas coherentes con la vía y el principio decididos en los Pasos 4 y 5",
+    "Reconstruir el bloque articular como unidad antes de unirlo a la diáfisis",
+    "Elevar y rellenar el fragmento hundido para que no vuelva a colapsar",
+    "Verificar longitud, eje y rotación de forma activa antes de la fijación definitiva"
+  ],
+  "decisiones": [
+    {
+      "id": "basicas",
+      "pregunta": "¿Qué técnicas básicas vas a usar?",
+      "ayuda": "Se empieza siempre por aquí. Muchas reducciones se resuelven en este escalón y todo lo que se consigue sin abrir es biología que no se paga.",
+      "tipo": "opcionMultiple",
+      "opciones": [
+        {
+          "id": "tb-traccion",
+          "etiqueta": "Tracción, contratracción y gravedad",
+          "criterios": [
+            "Alinean por ligamentotaxis cuando los ligamentos están intactos",
+            "La gravedad es gratis: el codo colgando, el pie en equino relajado"
+          ]
+        },
+        {
+          "id": "tb-maniobras",
+          "etiqueta": "Maniobras de reducción cerrada",
+          "criterios": [
+            "Desimpactar, alinear y rotar según el patrón",
+            "El Colles se reduce con tracción, desviación cubital y flexión palmar: cada patrón tiene su maniobra"
+          ]
+        },
+        {
+          "id": "tb-pinzas",
+          "etiqueta": "Pinzas de reducción",
+          "criterios": [
+            "Puntiagudas, de Weber, dentadas",
+            "Colocarlas perpendiculares al trazo: mal orientadas desplazan en vez de reducir"
+          ]
+        },
+        {
+          "id": "tb-gancho",
+          "etiqueta": "Gancho de hueso",
+          "criterios": [
+            "Tracción directa sobre un fragmento sin necesidad de agarrarlo por completo"
+          ]
+        },
+        {
+          "id": "tb-joystick",
+          "etiqueta": "Aguja de Kirschner como joystick",
+          "criterios": [
+            "Clavada en el fragmento, lo convierte en algo manipulable",
+            "Es la técnica que da control casi directo con incisión mínima"
+          ]
+        },
+        {
+          "id": "tb-ballspike",
+          "etiqueta": "Empujador de bola (ball-spike)",
+          "criterios": [
+            "Empuja el fragmento percutáneamente sin abrir el foco"
+          ]
+        },
+        {
+          "id": "tb-schanz",
+          "etiqueta": "Tornillo de Schanz percutáneo como palanca",
+          "criterios": [
+            "Palanca larga sobre el fragmento proximal o distal",
+            "Corrige lo que la tracción sola no corrige: la rotación y el varo-valgo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avanzadas",
+      "pregunta": "¿Necesitas técnicas avanzadas?",
+      "ayuda": "Se reservan para cuando lo básico no basta: acortamiento establecido, conminución, fracturas segmentarias o superficies articulares profundas.",
+      "tipo": "opcionMultiple",
+      "opciones": [
+        {
+          "id": "ta-distractor",
+          "etiqueta": "Distractor AO o femoral",
+          "criterios": [
+            "Restaura longitud y eje sin mesa de tracción",
+            "Herramienta predilecta de Mast, Jakob y Ganz: reducir antes de fijar",
+            "Permite reducir fracturas segmentarias, acortadas o conminutas sin tracción externa continua"
+          ]
+        },
+        {
+          "id": "ta-placa-reductor",
+          "etiqueta": "La placa como instrumento de reducción",
+          "criterios": [
+            "Fijada primero a un fragmento, tracciona y alinea el otro",
+            "Tornillos de empuje-tracción (push-pull)",
+            "La placa precontorneada atrae el hueso a su forma: es reducción indirecta pura"
+          ]
+        },
+        {
+          "id": "ta-fijador-reductor",
+          "etiqueta": "Fijador externo como reductor temporal",
+          "criterios": [
+            "Mantiene longitud y eje mientras se coloca el implante definitivo",
+            "Los tornillos de Schanz funcionan como palancas largas"
+          ]
+        },
+        {
+          "id": "ta-colineal",
+          "etiqueta": "Pinza colineal (collinear clamp)",
+          "criterios": [
+            "Comprime en el eje del trazo sin desplazar los fragmentos lateralmente",
+            "Entra por dos incisiones mínimas: reducción de fuerza con acceso percutáneo"
+          ]
+        },
+        {
+          "id": "ta-laminares",
+          "etiqueta": "Separadores laminares",
+          "criterios": [
+            "Abren el foco de forma controlada para ver una superficie articular profunda",
+            "También sirven para desimpactar por apertura progresiva"
+          ]
+        },
+        {
+          "id": "ta-ninguna",
+          "etiqueta": "No hacen falta",
+          "criterios": [
+            "Lo básico resuelve esta reducción"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "secuencia-articular",
+      "pregunta": "¿En qué orden reconstruyes?",
+      "ayuda": "La regla clásica: primero el bloque articular como unidad, después el bloque a la diáfisis.",
+      "tipo": "opcionUnica",
+      "mostrarSi": {
+        "ctx": [
+          "zonas-dos"
+        ]
+      },
+      "opciones": [
+        {
+          "id": "sa-articular-primero",
+          "etiqueta": "Bloque articular primero, luego a la diáfisis",
+          "criterios": [
+            "Se reconstruye la superficie como unidad, usando una zona indemne o el hueso vecino como plantilla",
+            "Después se une ese bloque ya reconstruido al eje diafisario",
+            "Es la secuencia que permite dar estabilidad absoluta arriba y relativa abajo"
+          ]
+        },
+        {
+          "id": "sa-diafisis-primero",
+          "etiqueta": "Eje y longitud primero, luego la superficie",
+          "criterios": [
+            "Útil cuando la conminución metafisaria impide referenciar el bloque",
+            "Se restaura longitud, eje y rotación con distractor o fijador y después se reconstruye la superficie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hundido",
+      "pregunta": "¿Hay un fragmento articular hundido?",
+      "ayuda": "El fragmento deprimido (die-punch) no lo levanta la ligamentotaxis: no tiene inserción ligamentosa que lo arrastre.",
+      "tipo": "opcionUnica",
+      "mostrarSiAlguno": [
+        {
+          "ctx": [
+            "artic"
+          ]
+        },
+        {
+          "ctx": [
+            "zonas-dos"
+          ]
+        }
+      ],
+      "opciones": [
+        {
+          "id": "hu-si",
+          "etiqueta": "Sí: elevar y rellenar",
+          "criterios": [
+            "Elevarlo hasta restaurar la congruencia, por ventana metafisaria",
+            "Rellenar el defecto subyacente con injerto o sustituto para que no vuelva a colapsar",
+            "Sostenerlo con una placa o tornillos subcondrales de rafting"
+          ]
+        },
+        {
+          "id": "hu-no",
+          "etiqueta": "No hay hundimiento",
+          "criterios": [
+            "Trazo articular sin depresión: la ligamentotaxis puede bastar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "provisional",
+      "pregunta": "¿Cómo mantienes la reducción mientras fijas?",
+      "ayuda": "La fijación provisional es lo que permite verificar antes de comprometerse. Saltársela obliga a decidir con el implante ya puesto.",
+      "tipo": "opcionMultiple",
+      "opciones": [
+        {
+          "id": "pv-agujas",
+          "etiqueta": "Agujas de Kirschner",
+          "criterios": [
+            "Mantienen la reducción mientras se coloca el implante definitivo",
+            "Colócalas fuera de la trayectoria de los tornillos previstos"
+          ]
+        },
+        {
+          "id": "pv-pinzas",
+          "etiqueta": "Pinzas mantenidas",
+          "criterios": [
+            "Rápido y reversible, pero ocupan el campo donde va la placa"
+          ]
+        },
+        {
+          "id": "pv-fijador",
+          "etiqueta": "Fijador externo o distractor mantenido",
+          "criterios": [
+            "Sostiene longitud y eje durante toda la fijación sin ocupar el foco"
+          ]
+        },
+        {
+          "id": "pv-tornillo",
+          "etiqueta": "Tornillo interfragmentario provisional",
+          "criterios": [
+            "Fija el bloque articular como unidad antes de unirlo a la diáfisis"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "control",
+      "pregunta": "¿Qué vas a verificar antes de la fijación definitiva?",
+      "ayuda": "Las tres cosas que no se corrigen solas: longitud, eje y rotación. La rotación es la que más se olvida y la que peor se tolera.",
+      "tipo": "opcionMultiple",
+      "opciones": [
+        {
+          "id": "cn-proyecciones",
+          "etiqueta": "Fluoroscopia en todas las proyecciones",
+          "criterios": [
+            "Dos planos ortogonales como mínimo, más las oblicuas propias de la región"
+          ]
+        },
+        {
+          "id": "cn-longitud",
+          "etiqueta": "Longitud comparada con el lado sano",
+          "criterios": [
+            "Es la única referencia fiable cuando el hueso está conminuto"
+          ]
+        },
+        {
+          "id": "cn-eje",
+          "etiqueta": "Eje en los dos planos",
+          "criterios": [
+            "Varo-valgo y ante-recurvatum; el cable electrocauterio como plomada del eje mecánico"
+          ]
+        },
+        {
+          "id": "cn-rotacion",
+          "etiqueta": "Rotación",
+          "criterios": [
+            "Signo del córtex, perfil del trocánter menor, rotación clínica comparada",
+            "Ningún implante la corrige solo: si no se comprueba, no se corrige"
+          ]
+        },
+        {
+          "id": "cn-articular",
+          "etiqueta": "Congruencia articular",
+          "criterios": [
+            "Escalón por debajo de 2 mm como referencia general; artroscopia o TC si hay duda"
+          ]
+        }
+      ]
+    }
+  ],
+  "derivados": [
+    {
+      "id": "arsenal",
+      "titulo": "El arsenal que corresponde a tu vía",
+      "tipo": "reglas",
+      "modo": "todas",
+      "reglas": [
+        {
+          "si": {
+            "ctx": [
+              "via-directa"
+            ]
+          },
+          "texto": "Vía directa → pinzas de reducción bien orientadas, ganchos de hueso, separadores laminares. Manipulas el foco bajo visión: máxima precisión y máximo coste biológico. Justifica cada milímetro de exposición."
+        },
+        {
+          "si": {
+            "ctx": [
+              "via-percutanea"
+            ]
+          },
+          "texto": "Vía percutánea → joysticks con agujas, pinzas percutáneas, empujador de bola, tornillos de Schanz como palanca, elevador por ventana ósea. Control del fragmento casi como en la abierta, con coste biológico mucho menor."
+        },
+        {
+          "si": {
+            "ctx": [
+              "via-indirecta"
+            ]
+          },
+          "texto": "Vía indirecta → distractor AO o femoral, fijador externo como reductor, ligamentotaxis por tracción, la propia placa como instrumento con tornillos push-pull. No tocas el foco: el hematoma fracturario y el periostio se quedan donde están."
+        }
+      ]
+    },
+    {
+      "id": "coherencia",
+      "titulo": "La técnica frente a tu principio",
+      "tipo": "reglas",
+      "modo": "todas",
+      "reglas": [
+        {
+          "si": {
+            "ctx": [
+              "red-anatomica"
+            ]
+          },
+          "texto": "Reducción anatómica → técnica directa y precisa. Es lo que exige una superficie articular o un trazo simple que vas a comprimir: la compresión necesita contacto cortical exacto."
+        },
+        {
+          "si": {
+            "ctx": [
+              "red-funcional"
+            ]
+          },
+          "texto": "Reducción funcional → técnica indirecta y atraumática. No reconstruyes fragmento a fragmento: restauras longitud, eje y rotación y dejas vivos los fragmentos intercalares."
+        },
+        {
+          "si": {
+            "ctx": [
+              "usa-ferulaje"
+            ]
+          },
+          "texto": "Vas a ferulizar. Reduce sin tocar el foco: distractor, tracción, la placa deslizada como reductor. Forzar el foco con maniobras agresivas para mejorar la radiografía arruina la biología que sostiene la consolidación."
+        },
+        {
+          "si": {
+            "ctx": [
+              "usa-compresion"
+            ]
+          },
+          "texto": "Vas a comprimir. Necesitas contacto cortical exacto: la reducción tiene que ser anatómica y estar mantenida cuando aprietes. Fija provisionalmente antes de comprimir."
+        }
+      ]
+    },
+    {
+      "id": "regla-final",
+      "titulo": "La regla del Paso 9",
+      "tipo": "plantilla",
+      "texto": "La técnica de reducción debe respetar el principio biológico. Reducción indirecta y atraumática para lo que se va a puentear; reducción directa y precisa para lo que se va a comprimir. Forzar el foco con maniobras agresivas para mejorar una radiografía puede arruinar la biología que sostiene la consolidación. La mejor reducción es la que logra el objetivo con el menor daño."
+    }
+  ],
+  "esencial": [
+    {
+      "tipo": "parrafo",
+      "texto": "La reducción es, a menudo, la parte más difícil de la operación. Conviene tener un arsenal escalonado: empezar por lo simple y reservar lo avanzado para cuando lo simple no basta. Toda técnica se inscribe en una de dos categorías —directa o indirecta— que deben ser coherentes con el principio biológico de los Pasos 4 y 5."
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Directa frente a indirecta",
+      "encabezados": [
+        "Categoría",
+        "En qué consiste",
+        "Indicación"
+      ],
+      "filas": [
+        [
+          "Directa",
+          "Se manipula el foco bajo visión y se fija con instrumental aplicado a los fragmentos.",
+          "Reconstrucción anatómica: articular o trazo simple a comprimir."
+        ],
+        [
+          "Indirecta",
+          "Se reduce a distancia —tracción, distractor, ligamentotaxis, la propia placa— sin exponer el foco.",
+          "Reducción funcional y puenteo; preserva la biología."
+        ]
+      ]
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "El arsenal escalonado",
+      "encabezados": [
+        "Nivel",
+        "Herramientas"
+      ],
+      "filas": [
+        [
+          "Básico",
+          "Tracción, contratracción y gravedad; maniobras de reducción cerrada según el patrón; pinzas puntiagudas, de Weber y dentadas; gancho de hueso; aguja de Kirschner como joystick."
+        ],
+        [
+          "Percutáneo",
+          "Empujador de bola (ball-spike); tornillos de Schanz percutáneos como palanca; elevador por ventana ósea."
+        ],
+        [
+          "Avanzado",
+          "Distractor AO o femoral; la placa como instrumento de reducción con tornillos push-pull; fijador externo como reductor temporal; pinza colineal; separadores laminares."
+        ]
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "idea",
+      "titulo": "La filosofía de Mast, Jakob y Ganz",
+      "texto": "Es explícita: con la técnica adecuada —y el distractor— pueden reducirse fracturas segmentarias, con acortamiento o conminución, sin tracción externa continua ni radioscopia permanente. Esto simplifica la osteosíntesis incluso en quirófanos poco equipados, y desplaza el peso del resultado desde el equipamiento hacia la planificación."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "La secuencia articular",
+      "texto": "Reconstruir primero el bloque articular como unidad, usando una superficie indemne o el hueso vecino como plantilla, y unirlo después a la diáfisis. Es la secuencia que permite dar estabilidad absoluta al bloque y relativa al componente metafisario, combinando los dos principios en un solo constructo."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "El fragmento hundido no lo levanta la ligamentotaxis",
+      "texto": "El die-punch está deprimido y no tiene inserción ligamentosa que lo arrastre: por eso la tracción no lo sube. Hay que elevarlo hasta restaurar la congruencia, y rellenar después el defecto metafisario que queda debajo con injerto o sustituto óseo. Si no se rellena, el fragmento vuelve a colapsar en cuanto se carga."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "Verificar antes de comprometerse",
+      "texto": "La fijación provisional con agujas de Kirschner existe precisamente para esto: mantener la reducción mientras se comprueba, y poder rehacerla si no convence. Después hay que verificar longitud contra el lado sano, eje en los dos planos y rotación de forma activa. La rotación es la que más se olvida y la que peor se tolera funcionalmente, y ningún implante la corrige solo."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "La regla del Paso 9",
+      "texto": "La técnica de reducción debe respetar el principio biológico. Reducción indirecta y atraumática para lo que se va a puentear; reducción directa y precisa para lo que se va a comprimir. Forzar el foco con maniobras agresivas para mejorar una radiografía puede arruinar la biología que sostiene la consolidación. La mejor reducción es la que logra el objetivo con el menor daño."
+    }
+  ],
+  "alertas": [
+    {
+      "id": "menor-dano",
+      "severidad": "media",
+      "titulo": "La mejor reducción es la que logra el objetivo con el menor daño",
+      "texto": "Forzar el foco con maniobras agresivas para mejorar una radiografía puede arruinar la biología que sostiene la consolidación.",
+      "mostrarSiempre": true
+    },
+    {
+      "id": "rotacion-no-se-corrige",
+      "severidad": "alta",
+      "titulo": "La rotación no se corrige sola",
+      "texto": "Ningún implante la restaura por sí mismo, y es el defecto peor tolerado funcionalmente. Compruébala de forma activa: signo del córtex, perfil del trocánter menor, comparación clínica con el lado sano.",
+      "mostrarSiempre": true,
+      "noSi": {
+        "control": [
+          "cn-rotacion"
+        ]
+      }
+    },
+    {
+      "id": "directa-sobre-puenteo",
+      "severidad": "critica",
+      "titulo": "Técnica directa sobre el foco que ibas a puentear",
+      "texto": "Elegiste ferulaje y vía indirecta, y ahora manipulas el foco con instrumental aplicado a los fragmentos. Cada pinza sobre la zona conminuta cuesta periostio. Reduce a distancia: distractor, tracción, la placa como reductor.",
+      "mostrarSiAlguno": [
+        {
+          "ctx": [
+            "usa-ferulaje"
+          ],
+          "basicas": [
+            "tb-pinzas"
+          ]
+        },
+        {
+          "ctx": [
+            "usa-ferulaje"
+          ],
+          "basicas": [
+            "tb-gancho"
+          ]
+        },
+        {
+          "ctx": [
+            "via-indirecta"
+          ],
+          "avanzadas": [
+            "ta-laminares"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hundido-sin-elevar",
+      "severidad": "critica",
+      "titulo": "El hundimiento articular no se reduce con tracción",
+      "texto": "El fragmento deprimido no tiene inserción ligamentosa que lo arrastre: la ligamentotaxis no lo levanta. Hay que elevarlo por ventana metafisaria y rellenar el defecto que queda debajo.",
+      "mostrarSi": {
+        "hundido": [
+          "hu-si"
+        ]
+      },
+      "noSiAlguno": [
+        {
+          "avanzadas": [
+            "ta-laminares"
+          ]
+        },
+        {
+          "basicas": [
+            "tb-joystick"
+          ]
+        },
+        {
+          "basicas": [
+            "tb-ballspike"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sin-provisional",
+      "severidad": "alta",
+      "titulo": "Sin fijación provisional decides con el implante ya puesto",
+      "texto": "Las agujas de Kirschner mantienen la reducción mientras compruebas, y permiten rehacerla si no convence. Sin ellas, cada verificación llega tarde.",
+      "mostrarSiempre": true,
+      "noSiAlguno": [
+        {
+          "provisional": [
+            "pv-agujas"
+          ]
+        },
+        {
+          "provisional": [
+            "pv-pinzas"
+          ]
+        },
+        {
+          "provisional": [
+            "pv-fijador"
+          ]
+        },
+        {
+          "provisional": [
+            "pv-tornillo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agujas-en-trayecto",
+      "severidad": "media",
+      "titulo": "Coloca las agujas fuera del trayecto de los tornillos",
+      "texto": "Una aguja provisional en la trayectoria prevista obliga a retirarla justo cuando más falta hace, y la reducción se pierde en ese momento. Planifica dónde va cada una antes de clavarla.",
+      "mostrarSi": {
+        "provisional": [
+          "pv-agujas"
+        ]
+      }
+    },
+    {
+      "id": "pinza-mal-orientada",
+      "severidad": "media",
+      "titulo": "La pinza mal orientada desplaza en vez de reducir",
+      "texto": "Se coloca perpendicular al plano de fractura. Si el vector no es perpendicular, cada apretón desliza los fragmentos en vez de aproximarlos.",
+      "mostrarSi": {
+        "basicas": [
+          "tb-pinzas"
+        ]
+      }
+    },
+    {
+      "id": "ligamentotaxis-limite",
+      "severidad": "media",
+      "titulo": "La ligamentotaxis reduce lo que el ligamento arrastra",
+      "texto": "Funciona solo con ligamentos y cápsula intactos, y no levanta un fragmento deprimido ni reduce lo que no tiene inserción. Es su límite estructural, no una cuestión de fuerza.",
+      "mostrarSi": {
+        "basicas": [
+          "tb-traccion"
+        ]
+      }
+    },
+    {
+      "id": "distractor-recomendado",
+      "severidad": "info",
+      "titulo": "Aquí el distractor te ahorra mucho",
+      "texto": "Recupera longitud y eje en fracturas segmentarias o conminutas sin mesa de tracción y sin radioscopia permanente. Es la herramienta predilecta de Mast, Jakob y Ganz: reducir primero, fijar después.",
+      "mostrarSi": {
+        "ctxTodos": [
+          "tipoC",
+          "via-indirecta"
+        ]
+      },
+      "noSi": {
+        "avanzadas": [
+          "ta-distractor"
+        ]
+      }
+    },
+    {
+      "id": "articular-a-ciegas",
+      "severidad": "alta",
+      "titulo": "Una superficie articular rara vez se reconstruye a ciegas",
+      "texto": "Vas a reducir de forma anatómica un bloque articular. Necesitas visión: artrotomía, ventana dedicada, artroscopia o TC intraoperatoria. Sin ninguna de ellas, el escalón se queda dentro.",
+      "mostrarSi": {
+        "ctxTodos": [
+          "artic",
+          "red-anatomica"
+        ]
+      },
+      "noSi": {
+        "control": [
+          "cn-articular"
+        ]
+      }
+    },
+    {
+      "id": "secuencia-invertida",
+      "severidad": "media",
+      "titulo": "Has invertido la secuencia clásica",
+      "texto": "Fijar la diáfisis primero es válido cuando la conminución metafisaria impide referenciar el bloque, pero entonces la superficie articular pierde su plantilla. Justifícalo: la regla general es reconstruir el bloque como unidad y unirlo después.",
+      "mostrarSi": {
+        "secuencia-articular": [
+          "sa-diafisis-primero"
+        ]
+      }
+    },
+    {
+      "id": "longitud-sin-referencia",
+      "severidad": "alta",
+      "titulo": "Con el hueso conminuto, la longitud solo la da el lado sano",
+      "texto": "Sin contacto cortical no hay referencia interna: si no comparas con el contralateral, la longitud se decide a ojo y el acortamiento se descubre en la consulta.",
+      "mostrarSi": {
+        "ctx": [
+          "tipoC"
+        ]
+      },
+      "noSi": {
+        "control": [
+          "cn-longitud"
+        ]
+      }
+    },
+    {
+      "id": "placa-reductora",
+      "severidad": "info",
+      "titulo": "La placa precontorneada atrae el hueso a su forma",
+      "texto": "Fijada primero a un fragmento, con tornillos de empuje-tracción alinea el otro sin tocar el foco. Es reducción indirecta pura, y el mejor aliado de la MIPO.",
+      "mostrarSi": {
+        "avanzadas": [
+          "ta-placa-reductor"
+        ]
+      }
+    },
+    {
+      "id": "rg-lauge-maniobra",
+      "severidad": "info",
+      "titulo": "El mecanismo se deshace al revés",
+      "texto": "Lauge-Hansen sirve justo para esto: la maniobra de reducción es la inversa de la que produjo la lesión. En la rotación externa se reduce rotando internamente; en la aducción, abduciendo. Aplicarlo ahorra intentos y ahorra manipulación sobre el foco.",
+      "mostrarSiAlguno": [
+        {
+          "ctx": [
+            "lh-rotacion"
+          ]
+        },
+        {
+          "ctx": [
+            "lh-aduccion"
+          ]
+        },
+        {
+          "ctx": [
+            "lh-abduccion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rg-hundimiento-meseta",
+      "severidad": "alta",
+      "titulo": "Hundimiento de meseta: la ligamentotaxis no lo levanta",
+      "texto": "En un Schatzker II o III hay un fragmento deprimido sin inserción ligamentosa que lo arrastre. Hay que elevarlo por ventana metafisaria y rellenar el defecto, o vuelve a hundirse en cuanto se carga.",
+      "mostrarSi": {
+        "ctx": [
+          "sch-hundido"
+        ]
+      },
+      "noSi": {
+        "hundido": [
+          "hu-si"
+        ]
+      }
+    }
+  ],
+  "reglasCoherencia": [
+    {
+      "id": "r9-tecnica-vs-via",
+      "titulo": "Coherencia — técnica abierta con vía indirecta",
+      "si": {
+        "ctx": [
+          "via-indirecta"
+        ],
+        "avanzadas": [
+          "ta-laminares"
+        ]
+      },
+      "severidad": "advertencia",
+      "mensaje": "Decidiste reducir sin exponer el foco y ahora usas separadores laminares, que exigen abrirlo. O la vía era otra, o esta técnica sobra."
+    },
+    {
+      "id": "r9-sin-control",
+      "titulo": "Coherencia — fijar sin verificar",
+      "si": {
+        "control": [
+          "cn-proyecciones",
+          "cn-longitud",
+          "cn-eje",
+          "cn-rotacion",
+          "cn-articular"
+        ]
+      },
+      "noSiTodo": {
+        "control": [
+          "cn-proyecciones",
+          "cn-longitud",
+          "cn-eje",
+          "cn-rotacion"
+        ]
+      },
+      "severidad": "advertencia",
+      "mensaje": "Faltan comprobaciones antes de la fijación definitiva. Longitud, eje y rotación son las tres cosas que no se corrigen solas, y las tres se verifican con el implante todavía provisional."
+    },
+    {
+      "id": "r9-hundido-sin-relleno",
+      "titulo": "Coherencia — elevar sin rellenar",
+      "si": {
+        "hundido": [
+          "hu-si"
+        ]
+      },
+      "severidad": "advertencia",
+      "mensaje": "Elevar el fragmento deja un vacío metafisario debajo. Comprueba que en el Paso 6 marcaste injerto o sustituto óseo: sin relleno, el fragmento vuelve a colapsar en cuanto se carga."
+    }
+  ],
+  "evidencia": [
+    {
+      "nivel": "3",
+      "afirmacion": "Preservar el hematoma y la vascularización mediante reducción indirecta —distractor, ligamentotaxis, la placa como reductor— se asocia a menor tasa de no unión en fracturas conminutas que la reducción directa agresiva.",
+      "refs": [
+        "ref-perren-2002",
+        "ref-mast-1989"
+      ]
+    },
+    {
+      "nivel": "referencia",
+      "afirmacion": "Con distractor y técnica adecuada pueden reducirse fracturas segmentarias, acortadas o conminutas sin tracción externa continua ni radioscopia permanente.",
+      "refs": [
+        "ref-mast-1989"
+      ]
+    },
+    {
+      "nivel": "3",
+      "afirmacion": "El defecto rotacional del antebrazo compromete la pronosupinación y el resultado funcional, lo que obliga a verificar la rotación de forma activa.",
+      "refs": [
+        "ref-schemitsch-1992"
+      ]
+    }
+  ],
+  "autoevaluacion": [
+    {
+      "pregunta": "¿Cuándo está indicada la reducción directa pese a su coste biológico?",
+      "opciones": [
+        "Siempre que sea posible",
+        "Cuando se necesita reconstrucción anatómica: superficie articular o trazo simple que se va a comprimir",
+        "En fracturas conminutas",
+        "Cuando no hay radioscopia"
+      ],
+      "correcta": 1,
+      "explicacion": "La compresión exige contacto cortical exacto, y una superficie articular exige precisión milimétrica. Fuera de esos dos casos, el coste no compra nada.",
+      "origen": "libro"
+    },
+    {
+      "pregunta": "¿Qué instrumento permite recuperar longitud y eje sin mesa de tracción?",
+      "opciones": [
+        "La pinza colineal",
+        "El distractor AO o femoral",
+        "El gancho de hueso",
+        "El separador laminar"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la herramienta predilecta de Mast, Jakob y Ganz, y evita las complicaciones de la tracción prolongada.",
+      "origen": "libro"
+    },
+    {
+      "pregunta": "¿Por qué la ligamentotaxis no levanta un fragmento articular hundido?",
+      "opciones": [
+        "Porque hace falta más fuerza de tracción",
+        "Porque el fragmento deprimido no tiene inserción ligamentosa que lo arrastre",
+        "Porque los ligamentos están rotos",
+        "Porque la tracción actúa solo en el eje longitudinal"
+      ],
+      "correcta": 1,
+      "explicacion": "Es un límite estructural, no de fuerza. Hay que elevarlo por ventana metafisaria y rellenar el defecto que queda debajo.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Cuál es la secuencia clásica en una fractura articular con componente metafisario?",
+      "opciones": [
+        "Fijar la diáfisis y después la superficie",
+        "Reconstruir el bloque articular como unidad y unirlo después a la diáfisis",
+        "Fijar todo a la vez con una placa larga",
+        "Reducir solo la diáfisis"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la secuencia que permite dar estabilidad absoluta al bloque y relativa al componente metafisario, combinando los dos principios en un solo constructo.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Cómo debe orientarse una pinza de reducción respecto al trazo?",
+      "opciones": [
+        "Paralela",
+        "Perpendicular al plano de fractura",
+        "Oblicua a 45°",
+        "Da igual si comprime"
+      ],
+      "correcta": 1,
+      "explicacion": "Si el vector no es perpendicular, cada apretón desliza los fragmentos en vez de aproximarlos.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Para qué sirve la fijación provisional con agujas de Kirschner?",
+      "opciones": [
+        "Para sustituir al implante definitivo",
+        "Para mantener la reducción mientras se verifica, permitiendo rehacerla antes de comprometerse",
+        "Para comprimir el foco",
+        "Para marcar el trayecto de los tornillos"
+      ],
+      "correcta": 1,
+      "explicacion": "Y por eso conviene colocarlas fuera del trayecto de los tornillos previstos: si hay que retirarlas justo al fijar, la reducción se pierde en ese momento.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "En una fractura conminuta, ¿contra qué se comprueba la longitud?",
+      "opciones": [
+        "Contra la radiografía preoperatoria",
+        "Contra el lado sano",
+        "Contra la longitud del implante",
+        "Contra la talla del paciente"
+      ],
+      "correcta": 1,
+      "explicacion": "Sin contacto cortical no hay referencia interna. Por eso en el Paso 7 hay que dejar el lado contralateral accesible al arco en C.",
+      "origen": "app"
+    }
+  ],
+  "sintesis": "El arsenal se escalona: tracción, maniobras, pinzas y joysticks primero; distractor, placa como reductor, fijador y pinza colineal cuando lo básico no basta. La técnica tiene que respetar el principio biológico —indirecta para lo que se va a puentear, directa para lo que se va a comprimir—. El bloque articular se reconstruye como unidad antes de unirlo a la diáfisis, el fragmento hundido se eleva y se rellena, y longitud, eje y rotación se verifican de forma activa con la fijación todavía provisional.",
+  "lecturas": [
+    "Mast J., Jakob R., Ganz R. — Planning and Reduction Technique in Fracture Surgery.",
+    "Giannoudis PV — Fracture Reduction and Fixation Techniques."
+  ],
+  "refs": [
+    "ref-mast-1989",
+    "ref-giannoudis-reduccion",
+    "ref-perren-2002",
+    "ref-schemitsch-1992"
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "origen": "LIBRO_Los_10_pasos_completo.docx",
+  "titulo": "Paso 9 · Las técnicas de reducción",
+  "numeroPaso": 9,
+  "bloques": [
+    {
+      "tipo": "parrafo",
+      "texto": "La reducción es, a menudo, la parte más difícil de la operación. Conviene tener un arsenal escalonado: empezar por lo simple y reservar lo avanzado para cuando lo simple no basta. Toda técnica se inscribe en una de dos categorías —directa o indirecta— que deben ser coherentes con el principio biológico (Pasos 4 y 5)."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "mapa",
+      "titulo": "Mapa del Paso 9",
+      "lineas": [
+        "A. Directa vs indirecta: la dimensión biológica.",
+        "B. Técnicas básicas.",
+        "C. Técnicas intermedias y avanzadas.",
+        "D. La reducción articular.",
+        "E. Fijación provisional y control.",
+        "F. El principio que gobierna la técnica."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "A. Directa vs indirecta"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Directa: se manipula el foco bajo visión y se fija con instrumental aplicado a los fragmentos. Precisión máxima; indicada para reconstrucción anatómica (articular, trazo simple a comprimir)."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Indirecta: se reduce a distancia (tracción, distractor, ligamentotaxis, la propia placa) sin exponer el foco; preserva la biología. Indicada para reducción funcional y puenteo."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "B. Técnicas básicas"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Tracción y contratracción, gravedad: alinean por ligamentotaxis cuando los ligamentos están intactos."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Maniobras de reducción cerrada: desimpactar, alinear y rotar según el patrón (p. ej., tracción + desviación cubital + flexión palmar en el Colles)."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Instrumental manual: pinzas de reducción (puntiagudas, de Weber, dentadas), ganchos de hueso, y la aguja de Kirschner usada como «joystick» para manipular un fragmento."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Reducción percutánea: empujadores de bola (ball-spike), tornillos de Schanz percutáneos como palanca."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "C. Técnicas intermedias y avanzadas"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Distractor AO / femoral: restaura longitud y eje en fracturas segmentarias o conminutas sin mesa de tracción; herramienta predilecta de Mast-Jakob-Ganz para reducir antes de fijar."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "La placa como instrumento de reducción: fijada primero a un fragmento, se usa para traccionar y alinear el otro (tornillos de empuje-tracción, push-pull); la placa precontorneada «atrae» el hueso a su forma."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Fijador externo como reductor temporal; tornillos de Schanz como palancas largas."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Pinza colineal (collinear clamp) y separadores laminares para fragmentos profundos y superficies articulares."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "La filosofía de Mast, Jakob y Ganz es explícita: con la técnica adecuada —y el distractor— pueden reducirse fracturas segmentarias, con acortamiento o conminución, sin tracción externa continua ni radioscopia permanente, simplificando la osteosíntesis incluso en quirófanos poco equipados."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "D. La reducción articular"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Secuencia: reconstruir primero el bloque articular como unidad (usando una superficie indemne o el hueso vecino como plantilla) y unirlo después a la diáfisis."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Fragmento hundido (die-punch): elevarlo hasta restaurar la congruencia y rellenar el defecto metafisario subyacente (injerto o sustituto óseo) para que no vuelva a colapsar."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "E. Fijación provisional y control"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Provisional: agujas de Kirschner mantienen la reducción mientras se coloca el implante definitivo; permiten verificar antes de comprometerse."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Control: fluoroscopia en todas las proyecciones; verificar longitud (lado sano), eje y rotación antes de la fijación definitiva."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "F. El principio que gobierna la técnica"
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "Regla del Paso 9",
+      "lineas": [
+        "La técnica de reducción debe respetar el principio biológico. Reducción indirecta y atraumática para lo que se va a puentear; reducción directa y precisa para lo que se va a comprimir. Forzar el foco con maniobras agresivas para «mejorar» una radiografía puede arruinar la biología que sostiene la consolidación. La mejor reducción es la que logra el objetivo con el menor daño."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "Evidencia, autoevaluación y lecturas"
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "evidencia",
+      "titulo": "Evidencia (nivel indicativo)",
+      "lineas": [
+        "Reducción indirecta y biología (Nivel III): preservar el hematoma y la vascularización (distractor, ligamentotaxis, la placa como reductor) se asocia a menor tasa de no unión en fracturas conminutas que la reducción directa agresiva."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Autoevaluación"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. ¿Cuándo está indicada la reducción directa pese a su coste biológico?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. Cuando se necesita reconstrucción anatómica: superficie articular o trazo simple que se va a comprimir."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. ¿Qué instrumento permite recuperar longitud y eje sin mesa de tracción?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. El distractor (AO/femoral), herramienta predilecta de Mast-Jakob-Ganz."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Lecturas recomendadas"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Giannoudis — Fracture Reduction and Fixation Techniques."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Mast, Jakob, Ganz — Planning and Reduction Technique."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Los niveles de evidencia son orientativos y se ofrecen para guiar la lectura crítica, no como recomendación clínica cerrada."
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "origen": "LIBRO_Los_10_pasos_completo.docx",
+  "titulo": "Paso 7 · La posición del paciente",
+  "numeroPaso": 7,
+  "bloques": [
+    {
+      "tipo": "parrafo",
+      "texto": "La posición es una decisión quirúrgica, no un trámite logístico. Una mala posición compromete el abordaje, la reducción, el control radiológico y la seguridad del paciente, y a menudo no tiene arreglo una vez montado el campo. Se elige en función del hueso, del abordaje previsto (Paso 8), de la estrategia de reducción (Paso 9) y de la necesidad de imagen intraoperatoria."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "mapa",
+      "titulo": "Mapa del Paso 7",
+      "lineas": [
+        "A. Los determinantes de la posición.",
+        "B. Las posiciones y sus mesas.",
+        "C. Implicaciones por región.",
+        "D. La lista de verificación de posición."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "A. Los determinantes de la posición"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "El abordaje previsto: la posición debe dar acceso cómodo al plano de incisión planificado."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "La estrategia de reducción: ¿necesito tracción (mesa ortopédica)? ¿La gravedad juega a favor (decúbito que «cuelga» el fragmento en posición)?"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "La imagen: ¿puedo obtener todas las proyecciones de fluoroscopia sin recolocar al paciente? El arco en C suele entrar por el lado opuesto al cirujano."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "La seguridad: protección de puntos de presión, plexos y vía aérea; tolerancia anestésica de la posición."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "B. Las posiciones y sus mesas"
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Posición",
+        "Indicaciones típicas",
+        "Mesa / detalles"
+      ],
+      "filas": [
+        [
+          "Supino",
+          "Fémur, tibia, tobillo, miembro superior.",
+          "Radiotransparente o de tracción; mesa de mano para el miembro superior."
+        ],
+        [
+          "Supino en mesa ortopédica",
+          "Enclavado de fémur y tibia.",
+          "Tracción mantenida; vigilar lesión del pudendo y compartimental de la pierna contralateral."
+        ],
+        [
+          "Prono",
+          "Abordajes posteriores: pilar posterior acetabular, húmero distal, tibia posterior, sacro.",
+          "Apoyos torácicos y pélvicos; proteger ojos y mamas/genitales."
+        ],
+        [
+          "Lateral / semilateral",
+          "Cadera, algunos húmero y tobillo, acetábulo posterior.",
+          "Soportes anterior y posterior; axila contralateral protegida (rodillo)."
+        ],
+        [
+          "Silla de playa (beach-chair)",
+          "Hombro, húmero proximal, clavícula.",
+          "Cabeza fija; vigilar hipotensión cerebral en sedestación."
+        ]
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "C. Implicaciones por región (ejemplos)"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Húmero distal: prono o lateral con el codo colgando flexionado → acceso posterior y fluoroscopia."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Acetábulo: supino para el abordaje ilioinguinal/anterior; prono o lateral para el Kocher-Langenbeck posterior. La posición decide qué columna es accesible."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Tobillo/pilón: supino con realce bajo la cadera ipsilateral para llevar el pie a posición neutra."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "D. La lista de verificación de posición"
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "info",
+      "titulo": "Resolver antes de pintar el campo",
+      "lineas": [
+        "1. ¿Permite el abordaje planificado?",
+        "2. ¿Permite reducir (tracción disponible, gravedad a favor)?",
+        "3. ¿Permite todas las proyecciones de fluoroscopia sin recolocar?",
+        "4. ¿Protege puntos de presión, plexos y la extremidad contralateral?",
+        "5. ¿Es tolerable para la anestesia durante toda la cirugía?"
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Resolver estas cinco preguntas antes de pintar evita el peor escenario: descubrir, con el campo ya montado, que no se puede reducir, fijar o radiografiar. La posición es barata de cambiar antes de empezar e imposible después."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "Evidencia, autoevaluación y lecturas"
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "evidencia",
+      "titulo": "Evidencia (nivel indicativo)",
+      "lineas": [
+        "Complicaciones de la mesa de tracción (Nivel IV): parálisis del nervio pudendo por el poste perineal y síndrome compartimental de la pierna contralateral («well-leg»); minimizar el tiempo y la fuerza de tracción."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Autoevaluación"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. Cita dos riesgos específicos de la mesa ortopédica de tracción."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. Lesión del nervio pudendo (poste perineal) y síndrome compartimental de la extremidad contralateral en tracción prolongada."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. ¿Qué cinco preguntas deben resolverse antes de pintar el campo?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. Que la posición permita el abordaje, la reducción, todas las proyecciones de fluoroscopia, la protección de puntos de presión/plexos y la tolerancia anestésica."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Lecturas recomendadas"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Hoppenfeld — Surgical Exposures in Orthopaedics."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "AO, principios de colocación e imagen intraoperatoria."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Los niveles de evidencia son orientativos y se ofrecen para guiar la lectura crítica, no como recomendación clínica cerrada."
+    }
+  ]
+}

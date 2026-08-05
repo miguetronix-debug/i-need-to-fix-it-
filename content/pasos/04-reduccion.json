@@ -1,0 +1,974 @@
+{
+  "id": "paso-04-reduccion",
+  "numero": 4,
+  "titulo": "El tipo de reducción",
+  "subtitulo": "Dos preguntas: de qué tipo, y por qué vía",
+  "preguntaClave": "¿Anatómica o funcional? ¿Y por qué vía la consigo sin desvitalizar el foco?",
+  "objetivos": [
+    "Distinguir el TIPO de reducción (anatómica o funcional) de la VÍA para conseguirla",
+    "Reducir de forma anatómica los trazos simples y los bloques articulares, aunque el bloque sea complejo",
+    "Reducir de forma funcional las metáfisis y diáfisis complejas, restaurando longitud, eje y rotación",
+    "Elegir entre vía directa, percutánea e indirecta sabiendo lo que cuesta cada una",
+    "Verificar la rotación de forma activa: el implante no la corrige solo"
+  ],
+  "decisiones": [
+    {
+      "id": "tipo-reduccion",
+      "pregunta": "¿Qué tipo de reducción?",
+      "ayuda": "Anatómica para trazos simples y para cualquier bloque articular, aunque sea complejo. Funcional para metáfisis y diáfisis complejas.",
+      "tipo": "opcionUnica",
+      "mostrarSi": {
+        "ctx": [
+          "zonas-una"
+        ]
+      },
+      "opciones": [
+        {
+          "id": "t-anatomica",
+          "etiqueta": "Anatómica",
+          "criterios": [
+            "Restituir la anatomía fragmento a fragmento",
+            "Trazos simples y TODO bloque articular, aunque el bloque sea complejo",
+            "Es la que permite comprimir: la compresión exige contacto cortical exacto"
+          ]
+        },
+        {
+          "id": "t-funcional",
+          "etiqueta": "Funcional",
+          "criterios": [
+            "No se reconstruye cada fragmento",
+            "Metáfisis y diáfisis complejas o multifragmentarias",
+            "Se restauran longitud, eje y rotación, respetando la biología"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "via",
+      "pregunta": "¿Por qué vía?",
+      "ayuda": "Aquí decides cuánta biología pagas. La percutánea es el punto medio: control directo del fragmento con incisiones mínimas.",
+      "tipo": "opcionUnica",
+      "mostrarSi": {
+        "ctx": [
+          "zonas-una"
+        ]
+      },
+      "opciones": [
+        {
+          "id": "v-directa",
+          "etiqueta": "Directa (abierta)",
+          "criterios": [
+            "Se manipula el foco bajo visión, con exposición del trazo",
+            "Máxima precisión y máximo coste biológico",
+            "Pinzas de reducción, ganchos, palancas sobre el foco expuesto"
+          ]
+        },
+        {
+          "id": "v-percutanea",
+          "etiqueta": "Percutánea",
+          "criterios": [
+            "Manipulación directa del fragmento con instrumentos a través de incisiones mínimas",
+            "Joysticks con agujas, pinzas percutáneas, punzón, elevador por ventana ósea",
+            "Control del fragmento casi como en la abierta, con coste biológico mucho menor",
+            "Depende de radioscopia de calidad y de una idea muy clara del plan"
+          ]
+        },
+        {
+          "id": "v-indirecta",
+          "etiqueta": "Indirecta",
+          "criterios": [
+            "Se reduce a distancia, sin tocar el foco: tracción, distractor, ligamentotaxis",
+            "La propia placa o el clavo como herramienta de reducción",
+            "Preserva el hematoma fracturario y la vascularización perióstica"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tipo-articular",
+      "pregunta": "Bloque articular: ¿qué tipo de reducción?",
+      "ayuda": "Todo bloque articular se reduce de forma anatómica, sea simple o multifragmentario. El escalón es artrosis en potencia.",
+      "tipo": "opcionUnica",
+      "mostrarSi": {
+        "ctx": [
+          "zonas-dos"
+        ]
+      },
+      "opciones": [
+        {
+          "id": "ta-anatomica",
+          "etiqueta": "Anatómica",
+          "criterios": [
+            "Reconstruir la superficie fragmento a fragmento",
+            "Vale también para el bloque articular COMPLEJO: su complejidad no lo exime",
+            "Escalón por debajo de 2 mm como referencia general"
+          ]
+        },
+        {
+          "id": "ta-funcional",
+          "etiqueta": "Funcional",
+          "criterios": [
+            "Excepcional: solo si el bloque no es reconstruible",
+            "Antes de aceptarlo, valora si la indicación real es una artroplastia"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "via-articular",
+      "pregunta": "Bloque articular: ¿por qué vía?",
+      "ayuda": "Una superficie articular rara vez se reconstruye a ciegas.",
+      "tipo": "opcionUnica",
+      "mostrarSi": {
+        "ctx": [
+          "zonas-dos"
+        ]
+      },
+      "opciones": [
+        {
+          "id": "va-directa",
+          "etiqueta": "Directa (abierta)",
+          "criterios": [
+            "Artrotomía o ventana que permita ver la superficie",
+            "Es lo que exige la precisión milimétrica del cartílago"
+          ]
+        },
+        {
+          "id": "va-percutanea",
+          "etiqueta": "Percutánea",
+          "criterios": [
+            "Elevador por ventana metafisaria, joysticks, pinzas percutáneas",
+            "Viable con radioscopia de calidad, artroscopia o TC intraoperatoria"
+          ]
+        },
+        {
+          "id": "va-indirecta",
+          "etiqueta": "Indirecta",
+          "criterios": [
+            "Solo ligamentotaxis: reduce lo que el ligamento arrastra, no lo hundido",
+            "No levanta un fragmento deprimido"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tipo-meta",
+      "pregunta": "Componente metafisario o diafisario: ¿qué tipo?",
+      "ayuda": "Si ese componente es complejo o multifragmentario, la reducción es funcional: longitud, eje y rotación.",
+      "tipo": "opcionUnica",
+      "mostrarSi": {
+        "ctx": [
+          "zonas-dos"
+        ]
+      },
+      "opciones": [
+        {
+          "id": "tm-funcional",
+          "etiqueta": "Funcional",
+          "criterios": [
+            "Metáfisis o diáfisis compleja: no se reconstruye fragmento a fragmento",
+            "Los fragmentos intercalares siguen vivos porque no se los toca"
+          ]
+        },
+        {
+          "id": "tm-anatomica",
+          "etiqueta": "Anatómica",
+          "criterios": [
+            "Solo si ese componente es un trazo SIMPLE que vas a comprimir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "via-meta",
+      "pregunta": "Componente metafisario o diafisario: ¿por qué vía?",
+      "ayuda": "Si lo vas a puentear, ábrelo lo menos posible.",
+      "tipo": "opcionUnica",
+      "mostrarSi": {
+        "ctx": [
+          "zonas-dos"
+        ]
+      },
+      "opciones": [
+        {
+          "id": "vm-indirecta",
+          "etiqueta": "Indirecta",
+          "criterios": [
+            "Tracción, distractor, la placa deslizada como reductor",
+            "Conserva hematoma y periostio de los fragmentos intercalares"
+          ]
+        },
+        {
+          "id": "vm-percutanea",
+          "etiqueta": "Percutánea",
+          "criterios": [
+            "Joysticks y pinzas percutáneas para corregir ejes sin abrir el foco",
+            "Es la vía natural de la MIPO"
+          ]
+        },
+        {
+          "id": "vm-directa",
+          "etiqueta": "Directa (abierta)",
+          "criterios": [
+            "Solo si ese componente es simple y lo vas a comprimir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parametros",
+      "pregunta": "¿Qué vas a restaurar y comprobar?",
+      "ayuda": "La reducción funcional consiste en restaurar tres cosas. La tercera es la que más se pasa por alto.",
+      "tipo": "opcionMultiple",
+      "opciones": [
+        {
+          "id": "pa-longitud",
+          "etiqueta": "Longitud",
+          "criterios": [
+            "Evitar acortamiento y también distracción",
+            "La distracción retrasa la consolidación",
+            "En huesos pareados, el acortamiento altera la longitud relativa"
+          ]
+        },
+        {
+          "id": "pa-eje",
+          "etiqueta": "Eje (alineación)",
+          "criterios": [
+            "Corregir angulación en los planos frontal y sagital",
+            "En el clavo, la posición del implante en el canal restaura el eje casi solo"
+          ]
+        },
+        {
+          "id": "pa-rotacion",
+          "etiqueta": "Rotación",
+          "criterios": [
+            "El error más fácil de pasar por alto y el más difícil de corregir después",
+            "El implante NO la corrige solo: es responsabilidad del cirujano en el acto"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verificacion",
+      "pregunta": "¿Cómo vas a verificarlo antes de cerrar?",
+      "ayuda": "Los errores de reducción se previenen en este paso y se comprueban antes de cerrar, no en la consulta de revisión.",
+      "tipo": "opcionMultiple",
+      "opciones": [
+        {
+          "id": "v-contralateral",
+          "etiqueta": "Comparar con el lado sano",
+          "criterios": [
+            "Referencia de longitud y de rotación",
+            "Especialmente útil en fémur y antebrazo"
+          ]
+        },
+        {
+          "id": "v-cortical",
+          "etiqueta": "Signo del córtex y regla del cable",
+          "criterios": [
+            "Discrepancia del grosor cortical entre fragmentos: señal de malrotación",
+            "El cable comprueba el eje mecánico"
+          ]
+        },
+        {
+          "id": "v-perfil",
+          "etiqueta": "Perfil de trocánter o de cóndilos",
+          "criterios": [
+            "Referencia radiológica de rotación en el fémur"
+          ]
+        },
+        {
+          "id": "v-clinica",
+          "etiqueta": "Prueba clínica de rotación",
+          "criterios": [
+            "Rango de rotación de la cadera con la rodilla flexionada",
+            "Simetría de la posición de reposo del pie"
+          ]
+        },
+        {
+          "id": "v-escopia",
+          "etiqueta": "Control con intensificador en dos planos",
+          "criterios": [
+            "Vistas verdaderamente ortogonales, no aproximadas"
+          ]
+        }
+      ]
+    }
+  ],
+  "derivados": [
+    {
+      "id": "tipo-sugerido",
+      "titulo": "Tipo de reducción que corresponde",
+      "tipo": "reglas",
+      "modo": "todas",
+      "reglas": [
+        {
+          "si": {
+            "ctx": [
+              "artic"
+            ]
+          },
+          "texto": "Bloque articular → REDUCCIÓN ANATÓMICA, sea simple o complejo. La complejidad del bloque no lo exime: todo escalón es artrosis en potencia."
+        },
+        {
+          "si": {
+            "ctx": [
+              "diaf-A"
+            ]
+          },
+          "texto": "Trazo diafisario simple → ANATÓMICA si lo vas a comprimir; funcional si optas por puentear con longitud de trabajo suficiente."
+        },
+        {
+          "si": {
+            "ctx": [
+              "diaf-B",
+              "diaf-C"
+            ]
+          },
+          "texto": "Diáfisis compleja o multifragmentaria → REDUCCIÓN FUNCIONAL. Longitud, eje y rotación; los fragmentos intercalares no se tocan."
+        },
+        {
+          "si": {
+            "ctx": [
+              "est-absoluta"
+            ]
+          },
+          "texto": "Coherencia con el Paso 3: elegiste estabilidad absoluta, y la compresión exige contacto cortical exacto. Eso es reducción anatómica."
+        },
+        {
+          "si": {
+            "ctx": [
+              "est-relativa"
+            ]
+          },
+          "texto": "Coherencia con el Paso 3: elegiste estabilidad relativa, que cura por callo. Basta reducción funcional."
+        },
+        {
+          "si": {
+            "ctx": [
+              "meta-relativa"
+            ]
+          },
+          "texto": "El componente metafisario va a estabilidad relativa → reducción funcional en esa zona."
+        }
+      ]
+    },
+    {
+      "id": "coste",
+      "titulo": "Coste biológico de la vía elegida",
+      "tipo": "reglas",
+      "modo": "todas",
+      "reglas": [
+        {
+          "si": {
+            "via": [
+              "v-directa"
+            ]
+          },
+          "texto": "Vía directa: ganas control total del fragmento y pagas vascularización y hematoma. Justifícala por la necesidad de reconstruir, no por comodidad."
+        },
+        {
+          "si": {
+            "via": [
+              "v-percutanea"
+            ]
+          },
+          "texto": "Vía percutánea: manipulas el fragmento casi como en la abierta pero por incisiones mínimas. Es el punto medio, y exige radioscopia de calidad y un plan preoperatorio muy definido."
+        },
+        {
+          "si": {
+            "via": [
+              "v-indirecta"
+            ]
+          },
+          "texto": "Vía indirecta: preservas hematoma y periostio, que es lo que hace prosperar al callo. A cambio, el control fino del fragmento es limitado."
+        },
+        {
+          "si": {
+            "via-articular": [
+              "va-directa"
+            ],
+            "via-meta": [
+              "vm-indirecta"
+            ]
+          },
+          "texto": "Abordaje limitado a la superficie articular y reducción indirecta de la metáfisis: precisión donde hace falta, biología intacta donde importa."
+        },
+        {
+          "si": {
+            "via-articular": [
+              "va-percutanea"
+            ],
+            "via-meta": [
+              "vm-percutanea"
+            ]
+          },
+          "texto": "Estrategia enteramente percutánea: máxima preservación biológica. Comprueba que la congruencia articular es verificable por imagen antes de renunciar a ver la superficie."
+        }
+      ]
+    },
+    {
+      "id": "tolerancias",
+      "titulo": "Tolerancia orientativa en esta región",
+      "tipo": "reglas",
+      "modo": "primera",
+      "reglas": [
+        {
+          "si": {
+            "ctx": [
+              "seg-2R3"
+            ]
+          },
+          "texto": "Radio distal: escalón articular menor de 2 mm, acortamiento de 2–3 mm o menos, e inclinación volar al menos neutra."
+        },
+        {
+          "si": {
+            "ctx": [
+              "seg-2R2",
+              "seg-2U2"
+            ]
+          },
+          "texto": "Diáfisis del antebrazo: exige reducción casi anatómica y restaurar el radial bow. El antebrazo rota como una articulación."
+        },
+        {
+          "si": {
+            "ctx": [
+              "seg-12"
+            ]
+          },
+          "texto": "Diáfisis humeral: tolera unos 20° de angulación y cierto acortamiento sin déficit funcional. Es el hueso más indulgente."
+        },
+        {
+          "si": {
+            "ctx": [
+              "seg-32",
+              "seg-42"
+            ]
+          },
+          "texto": "Diáfisis femoral o tibial: restaurar longitud, eje —menos de 5° en cada plano es lo deseable— y rotación. Los fragmentos intercalares no requieren anatomía."
+        },
+        {
+          "si": {
+            "ctx": [
+              "seg-62"
+            ]
+          },
+          "texto": "Acetábulo: la reducción anatómica por debajo de 1 mm es el predictor principal del resultado clínico (Matta)."
+        },
+        {
+          "si": {
+            "ctx": [
+              "artic"
+            ]
+          },
+          "texto": "Superficie articular en general: escalón menor de 2 mm. Cuanta más congruencia, mejor pronóstico."
+        }
+      ],
+      "nota": "Las cifras son guías, no dogmas: la edad, la demanda funcional y la articulación implicada modulan lo aceptable. La regla cualitativa sí es constante — articular, precisión milimétrica; metáfiso-diáfisis, longitud, eje y rotación."
+    },
+    {
+      "id": "anticipa4",
+      "titulo": "Lo que esto ya decide de los pasos siguientes",
+      "tipo": "reglas",
+      "modo": "todas",
+      "reglas": [
+        {
+          "si": {
+            "ctx": [
+              "est-absoluta"
+            ]
+          },
+          "texto": "Paso 5: compresión interfragmentaria. Paso 8: abordaje que permita ver y manipular el foco. Paso 9: técnicas de reducción directa —pinzas, tornillo de tracción provisional, agujas—."
+        },
+        {
+          "si": {
+            "ctx": [
+              "est-relativa"
+            ]
+          },
+          "texto": "Paso 5: ferulización o puenteo. Paso 8: abordaje mínimo o percutáneo. Paso 9: técnicas indirectas —mesa de tracción, distractor femoral, la propia placa como reductor—."
+        },
+        {
+          "si": {
+            "parametros": [
+              "pa-rotacion"
+            ]
+          },
+          "texto": "Paso 9: incluye en el plan una maniobra explícita de control de rotación antes del bloqueo distal o del último tornillo."
+        }
+      ]
+    }
+  ],
+  "esencial": [
+    {
+      "tipo": "parrafo",
+      "texto": "Reducir es restaurar la relación espacial de los fragmentos. Pero reducir no significa lo mismo en una superficie articular que en una diáfisis. Este paso responde a dos preguntas: cuán perfecta debe ser la reducción, y cómo se logra. La primera se deduce del Paso 3; la segunda tiene un precio biológico que hay que elegir a conciencia."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "regla",
+      "titulo": "Tipo y vía son dos preguntas distintas",
+      "texto": "El TIPO dice cuán perfecta debe ser la reducción: anatómica para trazos simples y para todo bloque articular —aunque sea complejo—, funcional para metáfisis y diáfisis complejas. La VÍA dice cómo se consigue: directa, percutánea o indirecta, con coste biológico creciente hacia la primera. Se pueden combinar: una reducción anatómica puede lograrse por vía percutánea."
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Los tres parámetros de la reducción funcional",
+      "encabezados": [
+        "Parámetro",
+        "Qué restaurar",
+        "Nota"
+      ],
+      "filas": [
+        [
+          "Longitud",
+          "Evitar acortamiento y distracción",
+          "La distracción retrasa la consolidación; el acortamiento altera la biomecánica y la longitud relativa en huesos pareados."
+        ],
+        [
+          "Eje",
+          "Corregir angulación en los planos frontal y sagital",
+          "En el clavo endomedular, la posición del implante en el canal restaura el eje casi automáticamente."
+        ],
+        [
+          "Rotación",
+          "Restaurar la rotación en el plano horizontal",
+          "El error más fácil de pasar por alto y el más difícil de corregir. El implante NO la corrige solo."
+        ]
+      ]
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Las tres vías",
+      "encabezados": [
+        "Vía",
+        "En qué consiste",
+        "Coste biológico"
+      ],
+      "filas": [
+        [
+          "Directa (abierta)",
+          "Se expone el foco y se manipula bajo visión con pinzas, ganchos y palancas.",
+          "Alto: pierde hematoma y vascularización perióstica."
+        ],
+        [
+          "Percutánea",
+          "Manipulación directa del fragmento con instrumentos por incisiones mínimas: joysticks con agujas, pinzas percutáneas, punzón, elevador por ventana ósea.",
+          "Bajo: control casi de abierta preservando la envoltura. Exige radioscopia de calidad."
+        ],
+        [
+          "Indirecta",
+          "Reducción a distancia sin tocar el foco: tracción, distractor, ligamentotaxis, la placa o el clavo como reductor.",
+          "Mínimo: conserva hematoma y periostio. Control fino limitado."
+        ]
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "idea",
+      "titulo": "La ligamentotaxis tiene un límite",
+      "texto": "La tracción reduce lo que las partes blandas arrastran consigo, pero no levanta un fragmento articular hundido. Un hundimiento central hay que elevarlo, y para eso hace falta verlo o entrar por una ventana metafisaria."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "error",
+      "titulo": "La advertencia de Mast, Jakob y Ganz sobre el clavo",
+      "texto": "En el enclavado, el alineamiento frontal y sagital lo restablece el implante por su posición en el canal, pero la rotación y la longitud son responsabilidad del cirujano durante la operación. El clavo no las corrige por sí mismo."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "idea",
+      "titulo": "Por qué no se tocan los fragmentos intercalares",
+      "texto": "Mast, Jakob y Ganz lo dijeron sin rodeos: la reducción anatómica de los fragmentos intercalares diafisarios no importa mientras no interfieran con la función. Esos fragmentos permanecen viables precisamente porque no se los manipula."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "error",
+      "titulo": "La incoherencia que hay que evitar",
+      "texto": "No tiene sentido desnudar el foco con una reducción directa para luego puentearlo con estabilidad relativa, que prospera justamente con la biología intacta. Y al revés: una superficie articular no se reconstruye a ciegas. El método de reducción tiene que ir de la mano del principio biomecánico."
+    },
+    {
+      "tipo": "tabla",
+      "titulo": "Tolerancias orientativas por región",
+      "encabezados": [
+        "Zona",
+        "Tolerancia"
+      ],
+      "filas": [
+        [
+          "Superficie articular en general",
+          "Escalón menor de 2 mm; cuanta más congruencia, mejor pronóstico."
+        ],
+        [
+          "Radio distal",
+          "Escalón articular menor de 2 mm; acortamiento de 2–3 mm o menos; inclinación volar al menos neutra."
+        ],
+        [
+          "Diáfisis humeral",
+          "Tolera unos 20° de angulación y cierto acortamiento sin déficit funcional."
+        ],
+        [
+          "Diáfisis de antebrazo",
+          "Reducción casi anatómica y restauración del radial bow: rota como una articulación."
+        ],
+        [
+          "Diáfisis femoral y tibial",
+          "Longitud, eje —menos de 5° por plano— y rotación. Los fragmentos intercalares no requieren anatomía."
+        ],
+        [
+          "Acetábulo",
+          "Reducción anatómica por debajo de 1 mm: es el predictor principal del resultado."
+        ]
+      ]
+    },
+    {
+      "tipo": "lista",
+      "titulo": "Control de calidad antes de cerrar",
+      "items": [
+        "Longitud: comparar con el lado sano.",
+        "Eje: vistas verdaderamente alineadas y regla del cable o de la cortical.",
+        "Rotación, la más difícil: signos del córtex, perfil de trocánter o de cóndilos, y prueba clínica de rotación.",
+        "Las consecuencias de fallar no se corrigen solas: la mala unión articular lleva a artrosis postraumática, y la malrotación o la malalineación diafisaria producen disfunción y sobrecarga de la articulación adyacente."
+      ]
+    }
+  ],
+  "alertas": [
+    {
+      "id": "articular-funcional",
+      "severidad": "critica",
+      "titulo": "Un bloque articular no se reduce de forma funcional",
+      "texto": "Todo bloque articular se reduce de forma anatómica, sea simple o multifragmentario. Su complejidad no lo exime: el escalón residual es artrosis postraumática. Si el bloque no es reconstruible, la pregunta real es si procede una artroplastia.",
+      "mostrarSi": {
+        "tipo-articular": [
+          "ta-funcional"
+        ]
+      }
+    },
+    {
+      "id": "articular-funcional-unica",
+      "severidad": "critica",
+      "titulo": "Estás reduciendo de forma funcional una fractura articular",
+      "texto": "La superficie articular exige reducción anatómica aunque el bloque sea complejo. Revisa el tipo, o marca dos zonas si lo que quieres reducir de forma funcional es el componente metafisario.",
+      "mostrarSi": {
+        "ctx": [
+          "artic-B",
+          "artic-C"
+        ],
+        "tipo-reduccion": [
+          "t-funcional"
+        ]
+      }
+    },
+    {
+      "id": "meta-compleja-anatomica",
+      "severidad": "advertencia",
+      "titulo": "Reducción anatómica de un componente complejo",
+      "texto": "Solo procede si ese componente es un trazo simple. En una metáfisis o diáfisis compleja, perseguir la anatomía fragmento a fragmento los desvitaliza sin beneficio.",
+      "mostrarSi": {
+        "tipo-meta": [
+          "tm-anatomica"
+        ]
+      }
+    },
+    {
+      "id": "diaf-compleja-anatomica",
+      "severidad": "critica",
+      "titulo": "Diáfisis compleja con reducción anatómica",
+      "texto": "Clasificaste una diafisaria multifragmentaria. Reconstruirla fragmento a fragmento desvitaliza el foco y no aporta nada: basta longitud, eje y rotación.",
+      "mostrarSi": {
+        "ctx": [
+          "diaf-C"
+        ],
+        "tipo-reduccion": [
+          "t-anatomica"
+        ]
+      }
+    },
+    {
+      "id": "directa-para-puentear",
+      "severidad": "critica",
+      "titulo": "Estás desvitalizando un foco que vas a puentear",
+      "texto": "Elegiste estabilidad relativa y vía directa. El puenteo prospera con la biología intacta: abrir el foco para luego no comprimirlo suma el coste de la exposición sin ninguna de sus ventajas. Valora la vía percutánea o la indirecta.",
+      "mostrarSi": {
+        "ctx": [
+          "est-relativa"
+        ],
+        "via": [
+          "v-directa"
+        ]
+      }
+    },
+    {
+      "id": "articular-ligamentotaxis",
+      "severidad": "critica",
+      "titulo": "La ligamentotaxis no levanta un fragmento hundido",
+      "texto": "Elegiste vía indirecta para el bloque articular. La tracción reduce lo que el ligamento arrastra, pero no eleva una superficie deprimida. Para eso hace falta ver la superficie o entrar por una ventana metafisaria.",
+      "mostrarSi": {
+        "via-articular": [
+          "va-indirecta"
+        ]
+      }
+    },
+    {
+      "id": "percutanea-exige-imagen",
+      "severidad": "media",
+      "titulo": "La percutánea depende de la imagen y del plan",
+      "texto": "Manipular a ciegas con instrumentos exige radioscopia de calidad, proyecciones verdaderamente ortogonales y un plan preoperatorio dibujado. Sin eso, la percutánea se convierte en una abierta larga y peor.",
+      "mostrarSiAlguno": [
+        {
+          "via": [
+            "v-percutanea"
+          ]
+        },
+        {
+          "via-articular": [
+            "va-percutanea"
+          ]
+        },
+        {
+          "via-meta": [
+            "vm-percutanea"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meta-desnudada",
+      "severidad": "alta",
+      "titulo": "No desnudes lo que vas a puentear",
+      "texto": "Vas a dar estabilidad relativa al componente metafisario pero reducirlo por vía directa. Manipular los fragmentos intercalares los desvitaliza sin beneficio.",
+      "mostrarSi": {
+        "ctx": [
+          "meta-relativa"
+        ],
+        "via-meta": [
+          "vm-directa"
+        ]
+      }
+    },
+    {
+      "id": "antebrazo-bow",
+      "severidad": "alta",
+      "titulo": "Antebrazo: restaura el radial bow",
+      "texto": "La diáfisis del antebrazo exige reducción casi anatómica. Restaurar la curvatura radial se correlaciona con mejor pronosupinación: el antebrazo funciona como una articulación, no como un hueso largo cualquiera.",
+      "mostrarSi": {
+        "ctx": [
+          "seg-2R2",
+          "seg-2U2"
+        ]
+      }
+    },
+    {
+      "id": "rotacion-olvidada",
+      "severidad": "alta",
+      "titulo": "La rotación no se corrige sola",
+      "texto": "Has marcado longitud y eje pero no rotación. Es el parámetro que más se pasa por alto y el más difícil de corregir después. El implante no la restaura: hay que comprobarla de forma activa en quirófano.",
+      "mostrarSi": {
+        "parametros": [
+          "pa-longitud"
+        ]
+      },
+      "noSi": {
+        "parametros": [
+          "pa-rotacion"
+        ]
+      }
+    },
+    {
+      "id": "distraccion",
+      "severidad": "media",
+      "titulo": "Cuidado con la distracción",
+      "texto": "Al restaurar longitud, pasarse es tan malo como quedarse corto: la distracción del foco retrasa la consolidación. Es un riesgo típico del enclavado con mesa de tracción.",
+      "mostrarSi": {
+        "parametros": [
+          "pa-longitud"
+        ]
+      }
+    },
+    {
+      "id": "sin-verificar",
+      "severidad": "media",
+      "titulo": "Define cómo lo vas a comprobar",
+      "texto": "Los errores de reducción se previenen aquí y se verifican antes de cerrar. Sin un método de comprobación explícito, la malrotación se descubre en la primera revisión.",
+      "mostrarSiempre": true
+    }
+  ],
+  "reglasCoherencia": [
+    {
+      "id": "r4-anatomica-indirecta",
+      "titulo": "Coherencia — anatómica por vía indirecta",
+      "si": {
+        "tipo-reduccion": [
+          "t-anatomica"
+        ],
+        "via": [
+          "v-indirecta"
+        ]
+      },
+      "severidad": "advertencia",
+      "mensaje": "La reducción anatómica exige contacto cortical exacto, y la vía indirecta rara vez lo consigue sola. Si la mantienes, considera al menos apoyo percutáneo con pinzas o joysticks, y comprueba el contacto por imagen."
+    },
+    {
+      "id": "r4-diaf-sin-rotacion",
+      "titulo": "Coherencia — diáfisis sin control de rotación",
+      "si": {
+        "ctx": [
+          "diaf"
+        ],
+        "parametros": [
+          "pa-eje"
+        ]
+      },
+      "noSi": {
+        "parametros": [
+          "pa-rotacion"
+        ]
+      },
+      "severidad": "info",
+      "mensaje": "En una diafisaria el eje suele venir dado por el implante; la rotación no. Asegúrate de haberla incluido en lo que vas a comprobar."
+    }
+  ],
+  "evidencia": [
+    {
+      "nivel": "3-4",
+      "afirmacion": "En el acetábulo, la reducción anatómica por debajo de 1 mm mejora el resultado clínico; en meseta y pilón el escalón residual se asocia a artrosis postraumática.",
+      "refs": [
+        "ref-matta-1996"
+      ]
+    },
+    {
+      "nivel": "3",
+      "afirmacion": "Restaurar la curvatura radial (radial bow) del antebrazo se correlaciona con mejor pronosupinación.",
+      "refs": [
+        "ref-schemitsch-1992"
+      ]
+    },
+    {
+      "nivel": "5",
+      "afirmacion": "La reducción anatómica de los fragmentos intercalares diafisarios no es necesaria mientras no interfieran con la función; permanecen viables porque no se los manipula.",
+      "refs": [
+        "ref-mast-1989"
+      ]
+    }
+  ],
+  "autoevaluacion": [
+    {
+      "pregunta": "En una fractura diafisaria conminuta, ¿hay que reducir cada fragmento intercalar?",
+      "opciones": [
+        "Sí, la anatomía siempre es el objetivo",
+        "No: basta restaurar longitud, eje y rotación; manipularlos los desvitaliza sin beneficio",
+        "Solo los mayores de 1 cm",
+        "Solo si se va a usar placa"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la enseñanza de Mast, Jakob y Ganz: esos fragmentos permanecen viables precisamente porque no se los toca.",
+      "origen": "libro"
+    },
+    {
+      "pregunta": "¿Qué parámetro de la reducción funcional se pasa por alto con más frecuencia?",
+      "opciones": [
+        "La longitud",
+        "El eje frontal",
+        "La rotación",
+        "El eje sagital"
+      ],
+      "correcta": 2,
+      "explicacion": "El clavo no la corrige por sí solo y debe verificarse de forma activa en quirófano. Además es la más difícil de corregir una vez consolidada.",
+      "origen": "libro"
+    },
+    {
+      "pregunta": "Meseta tibial con bloque articular multifragmentario. ¿Qué tipo de reducción exige ese bloque?",
+      "opciones": [
+        "Funcional, porque es complejo",
+        "Anatómica: todo bloque articular se reduce de forma anatómica, sea simple o complejo",
+        "Depende del implante que se vaya a usar",
+        "Indirecta por ligamentotaxis"
+      ],
+      "correcta": 1,
+      "explicacion": "La complejidad del bloque articular no lo exime de la anatomía: el escalón residual es artrosis. Lo que sí se reduce de forma funcional es el componente metafisario complejo.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Qué caracteriza a la reducción percutánea frente a la indirecta?",
+      "opciones": [
+        "Que se hace sin radioscopia",
+        "Que se manipula el fragmento de forma directa con instrumentos, pero a través de incisiones mínimas",
+        "Que siempre requiere artroscopia",
+        "Que no permite reducción anatómica"
+      ],
+      "correcta": 1,
+      "explicacion": "La indirecta actúa a distancia sobre el foco; la percutánea toca el fragmento con joysticks, pinzas o elevador, pero sin abrir. Da control casi de abierta con coste biológico bajo.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Por qué es incoherente abrir el foco para luego puentearlo?",
+      "opciones": [
+        "Porque alarga el tiempo quirúrgico",
+        "Porque el puenteo prospera con la biología intacta, y la exposición la destruye sin aportar la ventaja de la compresión",
+        "Porque impide colocar la placa",
+        "Porque aumenta el sangrado"
+      ],
+      "correcta": 1,
+      "explicacion": "Se paga el coste biológico de la exposición sin obtener nada a cambio. La estabilidad relativa pide reducción indirecta.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "Diáfisis humeral con 18° de angulación tras reducción cerrada. ¿Es aceptable?",
+      "opciones": [
+        "No, hay que reoperar para dejarla anatómica",
+        "Sí: el húmero diafisario tolera unos 20° de angulación sin déficit funcional",
+        "Depende solo de la edad",
+        "Solo si el paciente no es deportista"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el hueso más indulgente del esqueleto en cuanto a alineación. El antebrazo, en cambio, exige reducción casi anatómica.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Por qué el antebrazo exige reducción casi anatómica y el húmero no?",
+      "opciones": [
+        "Porque el antebrazo consolida peor",
+        "Porque el antebrazo funciona como una articulación: la pronosupinación depende del radial bow y de la relación entre ambos huesos",
+        "Porque el húmero tiene mejor vascularización",
+        "Porque en el antebrazo no se puede usar clavo"
+      ],
+      "correcta": 1,
+      "explicacion": "Perder la curvatura radial o la longitud relativa entre radio y cúbito compromete la rotación del antebrazo, que es un movimiento articular.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "Al restaurar la longitud con mesa de tracción, ¿qué riesgo hay que vigilar?",
+      "opciones": [
+        "El acortamiento excesivo",
+        "La distracción del foco, que retrasa la consolidación",
+        "La infección del pin",
+        "La rotación externa forzada"
+      ],
+      "correcta": 1,
+      "explicacion": "Pasarse es tan malo como quedarse corto. La distracción deja una brecha que ni comprime ni forma callo con facilidad.",
+      "origen": "app"
+    },
+    {
+      "pregunta": "¿Cuál de estas maniobras NO ayuda a comprobar la rotación?",
+      "opciones": [
+        "El signo del córtex, comparando el grosor cortical entre fragmentos",
+        "El perfil del trocánter o de los cóndilos",
+        "La comparación con el lado sano",
+        "Medir la angulación en la proyección frontal"
+      ],
+      "correcta": 3,
+      "explicacion": "La proyección frontal informa del eje, no de la rotación. La rotación se comprueba con referencias del plano horizontal y con la exploración clínica.",
+      "origen": "app"
+    }
+  ],
+  "sintesis": "Dos preguntas distintas. El TIPO: anatómica para trazos simples y para todo bloque articular, aunque sea complejo; funcional para metáfisis y diáfisis complejas, restaurando longitud, eje y rotación. La VÍA: directa, percutánea o indirecta, eligiendo cuánta biología se paga. Una reducción anatómica puede conseguirse por vía percutánea; lo que no cabe es desnudar un foco que se va a puentear.",
+  "lecturas": [
+    "Mast J, Jakob R, Ganz R — Planning and Reduction Technique in Fracture Surgery. Springer, 1989.",
+    "Matta JM. Fractures of the acetabulum. J Bone Joint Surg Am. 1996.",
+    "Schemitsch EH, Richards RR. The effect of malunion on functional outcome after plate fixation of fractures of both bones of the forearm. J Bone Joint Surg Am. 1992."
+  ],
+  "refs": [
+    "ref-matta-1996",
+    "ref-schemitsch-1992",
+    "ref-mast-1989"
+  ]
+}

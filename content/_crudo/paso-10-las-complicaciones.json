@@ -1,0 +1,186 @@
+{
+  "origen": "LIBRO_Los_10_pasos_completo.docx",
+  "titulo": "Paso 10 · Las complicaciones",
+  "numeroPaso": 10,
+  "bloques": [
+    {
+      "tipo": "parrafo",
+      "texto": "Planificar las complicaciones no es pesimismo: es la diferencia entre resolver un problema en el acto y descubrir, con el campo abierto, que falta el implante, el instrumento o el plan B. El Paso 10 obliga a anticipar qué puede salir mal y a tener a mano lo necesario para solucionarlo, sin perder tiempo."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "mapa",
+      "titulo": "Mapa del Paso 10",
+      "lineas": [
+        "A. Anticipación intraoperatoria.",
+        "B. Complicaciones diferidas y su prevención desde la planificación.",
+        "C. La lección de aprender de los fallos."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "A. Anticipación intraoperatoria"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "¿Y si la reducción no se logra como esperaba? Plan B de reducción y de abordaje ampliable, previstos de antemano."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "¿Y si el hueso es peor de lo previsto (osteoporosis)? Tornillos bloqueados, aumentación con cemento, injerto o sustituto óseo disponibles en la sala."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "¿Tengo el inventario? Implantes de tamaño alternativo, set de extracción, instrumental de rescate — verificado antes de incidir."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "B. Complicaciones diferidas y su prevención"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "La mayoría de las complicaciones no nacen en el quirófano, sino en una decisión equivocada de los pasos previos. Por eso se previenen «hacia atrás»:"
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Complicación",
+        "Origen habitual",
+        "Se previene en…"
+      ],
+      "filas": [
+        [
+          "Retardo / no unión",
+          "Error mecánico (montaje muy rígido o muy laxo) o biológico (foco desvitalizado).",
+          "Pasos 3, 5 y 8."
+        ],
+        [
+          "Infección",
+          "Partes blandas comprometidas, mal timing, técnica traumática.",
+          "Paso 1 y Paso 8."
+        ],
+        [
+          "Mala unión (mal eje / malrotación)",
+          "Reducción funcional no verificada.",
+          "Paso 4 y verificación intraoperatoria."
+        ],
+        [
+          "Artrosis postraumática",
+          "Escalón articular residual.",
+          "Paso 4 (reducción anatómica articular)."
+        ],
+        [
+          "Fallo del implante por fatiga",
+          "El foco nunca consolidó.",
+          "Pasos 3 y 5 (estabilidad correcta)."
+        ],
+        [
+          "Rigidez",
+          "Fijación insuficiente para movilizar precozmente.",
+          "Pasos 3 y 5 (estabilidad para mover)."
+        ]
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Otras a vigilar según la región"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Necrosis avascular (cuello femoral, escafoides, cabeza humeral, astrágalo), síndrome compartimental (antebrazo, pierna), SDRC (radio distal), osificación heterotópica (codo, cadera/acetábulo) e irritación/migración del material."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Principios de manejo"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "No unión: diagnosticar si es mecánica (revisar estabilidad: comprimir/cambiar a montaje más rígido o injertar) o biológica (injerto, mejorar el huésped)."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Infección: desbridamiento, cultivos, antibióticos dirigidos; mantener la estabilidad (un foco estable puede consolidar pese a la infección); retirada/recambio según consolidación."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Fallo del implante: entender por qué el hueso no curó antes de revisar; tratar la causa, no solo el síntoma."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "C. La lección de aprender de los fallos"
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "idea",
+      "titulo": "La idea que cierra el método",
+      "lineas": [
+        "La mayoría de las complicaciones de la osteosíntesis no nacen en el quirófano, sino en una decisión equivocada de los pasos previos: una estabilidad mal elegida, una reducción que traicionó la biología, un abordaje que desvitalizó el foco. Revisar el caso a la luz de los 9 pasos suele revelar exactamente dónde se perdió la fractura."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "Cierre: el método como un todo"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Recorridos los nueve pasos —del huésped y la clasificación (1) a la anticipación de las complicaciones (9)— queda claro por qué el libro sostiene que no hay fractura que no se pueda resolver si se planifica. Cada paso encadena con el siguiente: clasificar define la estabilidad; la estabilidad, la reducción y el principio; el principio, el implante; y la fractura, el implante y la biología definen juntos la posición, el abordaje y las técnicas. Quien domina esta cadena no necesita una receta para cada hueso: tiene un método para cualquiera. Los capítulos por región (Parte II) no son más que este mismo razonamiento aplicado una y otra vez."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "Evidencia, autoevaluación y lecturas"
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "evidencia",
+      "titulo": "Evidencia (nivel indicativo)",
+      "lineas": [
+        "Tromboprofilaxis en trauma de miembro inferior (Nivel I): reduce la enfermedad tromboembólica venosa; balancear con el riesgo hemorrágico individual.",
+        "Infección y grado de Gustilo (Nivel II–III): la tasa de infección aumenta con el grado (mínima en I, elevada en IIIB/IIIC).",
+        "No unión (Nivel V, principio): distinguir la no unión mecánica (revisar estabilidad) de la biológica (injerto, optimizar al huésped) orienta el tratamiento."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Autoevaluación"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. El implante falla por fatiga a los 4 meses sin signos de consolidación: ¿qué indica?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. Que el hueso nunca curó; el implante es un puente temporal. Hay que tratar la causa (mecánica o biológica), no solo recambiar el material."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. ¿En qué pasos se previene la mayoría de las no uniones?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. En los Pasos 3 y 5 (estabilidad y principio correctos) y en el Paso 8 (preservar la biología)."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Lecturas recomendadas"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "AO — Learning from Failures in Orthopedic Trauma."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Contemporary Surgical Management of Fractures and Complications."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Los niveles de evidencia son orientativos y se ofrecen para guiar la lectura crítica, no como recomendación clínica cerrada."
+    }
+  ]
+}

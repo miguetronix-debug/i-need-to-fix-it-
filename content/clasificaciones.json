@@ -1,0 +1,996 @@
+{
+  "nota": "Clasificaciones regionales que complementan a la AO/OTA. Criterio de inclusión: cambian el manejo, el abordaje o el pronóstico. La concordancia interobservador NO se usa como filtro: se muestra, para que se usen sabiendo lo que valen. Se inyectan como decisiones del Paso 2 con tools/build_clasificaciones.py.",
+  "clasificaciones": [
+    {
+      "id": "schatzker",
+      "nombre": "Schatzker modificada por Kfuri",
+      "ctx": [
+        "seg-41"
+      ],
+      "pregunta": "Meseta tibial · Schatzker modificada por Kfuri: ¿qué tipo?",
+      "decide": "Es el idioma con el que se habla de la meseta y orienta el implante: los tipos I-III son laterales, el IV es medial y lleva otro pronóstico, y el V-VI separan el bloque de la diáfisis. La modificación de Kfuri completa el tipo con la columna afectada, que es lo que Schatzker solo no dice: por eso las dos preguntas van juntas.",
+      "concordancia": "Concordancia moderada en su forma original, que es de radiografía simple: la TC reasigna el tipo con frecuencia, sobre todo entre IV, V y VI. La modificación de Kfuri se define sobre TC y por eso mejora tanto la reproducibilidad como la planificación.",
+      "grados": [
+        {
+          "id": "sch-I",
+          "etiqueta": "I · Separación pura lateral",
+          "emite": [
+            "sch-lateral"
+          ],
+          "criterios": [
+            "Cuña lateral sin hundimiento",
+            "Hueso joven y denso",
+            "Tornillos percutáneos si no hay desplazamiento"
+          ]
+        },
+        {
+          "id": "sch-II",
+          "etiqueta": "II · Separación con hundimiento lateral",
+          "emite": [
+            "sch-lateral",
+            "sch-hundido"
+          ],
+          "criterios": [
+            "El patrón más frecuente",
+            "Exige elevar el hundimiento y rellenar el defecto"
+          ]
+        },
+        {
+          "id": "sch-III",
+          "etiqueta": "III · Hundimiento puro lateral",
+          "emite": [
+            "sch-lateral",
+            "sch-hundido"
+          ],
+          "criterios": [
+            "Sin trazo de separación: la ligamentotaxis no lo levanta",
+            "Elevación por ventana metafisaria y relleno"
+          ]
+        },
+        {
+          "id": "sch-IV",
+          "etiqueta": "IV · Meseta medial",
+          "emite": [
+            "sch-medial"
+          ],
+          "criterios": [
+            "El platillo medial es el que soporta más carga: peor pronóstico",
+            "Puede ser una luxación de rodilla reducida: descarta lesión del peroneo y vascular",
+            "La placa lateral NO lo controla"
+          ]
+        },
+        {
+          "id": "sch-V",
+          "etiqueta": "V · Bicondílea",
+          "emite": [
+            "sch-bicondilea"
+          ],
+          "criterios": [
+            "Las dos mesetas, con la diáfisis todavía en continuidad"
+          ]
+        },
+        {
+          "id": "sch-VI",
+          "etiqueta": "VI · Bicondílea con disociación metafiso-diafisaria",
+          "emite": [
+            "sch-bicondilea",
+            "sch-disociada"
+          ],
+          "criterios": [
+            "El bloque articular queda separado de la diáfisis: son dos zonas",
+            "Partes blandas casi siempre comprometidas"
+          ]
+        }
+      ],
+      "refs": [
+        "ref-schatzker-1979"
+      ]
+    },
+    {
+      "id": "columnas",
+      "nombre": "Schatzker modificada por Kfuri · columnas",
+      "ctx": [
+        "seg-41"
+      ],
+      "pregunta": "Meseta tibial · Schatzker modificada por Kfuri: ¿qué columnas?",
+      "decide": "Es la segunda mitad de la clasificación y la que de verdad decide el abordaje y la posición. Kfuri divide la meseta en cuadrantes por dos líneas y obliga a nombrar la columna, que es la información que el tipo de Schatzker no contiene.",
+      "concordancia": "Se define sobre TC, no sobre radiografía, y ahí está su ventaja: reproduce mejor y planifica mejor que el tipo solo. Marca todas las que apliquen.",
+      "multiple": true,
+      "grados": [
+        {
+          "id": "col-lat",
+          "etiqueta": "Columna lateral",
+          "emite": [
+            "col-lateral"
+          ],
+          "criterios": [
+            "Abordaje anterolateral o parapatelar lateral"
+          ]
+        },
+        {
+          "id": "col-med",
+          "etiqueta": "Columna medial",
+          "emite": [
+            "col-medial"
+          ],
+          "criterios": [
+            "Abordaje medial o anteromedial",
+            "La placa lateral no la sostiene"
+          ]
+        },
+        {
+          "id": "col-post-med",
+          "etiqueta": "Columna posteromedial",
+          "emite": [
+            "col-medial",
+            "col-posterior"
+          ],
+          "criterios": [
+            "Es el fragmento que más se olvida y el que más falla",
+            "Exige contrafuerte posteromedial por abordaje propio"
+          ]
+        },
+        {
+          "id": "col-post-lat",
+          "etiqueta": "Columna posterolateral",
+          "emite": [
+            "col-posterior"
+          ],
+          "criterios": [
+            "De acceso difícil: valorar abordaje posterolateral u osteotomía del peroné"
+          ]
+        }
+      ],
+      "refs": [
+        "ref-kfuri-2018",
+        "ref-schatzker-1979"
+      ]
+    },
+    {
+      "id": "garden",
+      "nombre": "Garden",
+      "ctx": [
+        "seg-31"
+      ],
+      "pregunta": "Cuello femoral · Garden",
+      "decide": "Separa fijar de protetizar, que es la decisión más importante de esta fractura.",
+      "concordancia": "En cuatro grados NO es fiable. Dicotomizada en desplazada o no desplazada la concordancia es buena, y es la forma que se usa porque es la que cambia la conducta. Por eso aquí solo hay dos opciones.",
+      "grados": [
+        {
+          "id": "gar-nd",
+          "etiqueta": "No desplazada · Garden I-II",
+          "emite": [
+            "garden-nodesplazada"
+          ],
+          "criterios": [
+            "Impactada en valgo o completa sin desplazar",
+            "Fijación in situ con tornillos o tornillo deslizante",
+            "Ojo: muchas «no desplazadas» tienen rotación en la TC"
+          ]
+        },
+        {
+          "id": "gar-d",
+          "etiqueta": "Desplazada · Garden III-IV",
+          "emite": [
+            "garden-desplazada"
+          ],
+          "criterios": [
+            "Trabéculas rotas o discontinuas",
+            "Riesgo alto de necrosis y de no unión",
+            "En el mayor de 65 años la respuesta suele ser artroplastia, no fijación"
+          ]
+        }
+      ],
+      "refs": [
+        "ref-garden-1961"
+      ]
+    },
+    {
+      "id": "pauwels",
+      "nombre": "Pauwels",
+      "ctx": [
+        "seg-31"
+      ],
+      "pregunta": "Cuello femoral · Pauwels",
+      "decide": "Es la única clasificación de esta lista que habla directamente de biomecánica: cuanto más vertical el trazo, más cizallamiento y menos compresión. Conecta con el Paso 5.",
+      "concordancia": "Concordancia pobre. El ángulo se mide sobre una proyección que cambia con la rotación y la tracción del miembro, así que el mismo caso da grados distintos. Úsala como concepto, no como medida.",
+      "grados": [
+        {
+          "id": "pau-I",
+          "etiqueta": "I · menos de 30°",
+          "criterios": [
+            "Trazo casi horizontal: la carga comprime el foco",
+            "Situación mecánicamente favorable"
+          ]
+        },
+        {
+          "id": "pau-II",
+          "etiqueta": "II · 30 a 50°",
+          "criterios": [
+            "Componente mixto de compresión y cizallamiento"
+          ]
+        },
+        {
+          "id": "pau-III",
+          "etiqueta": "III · más de 50°",
+          "emite": [
+            "pauwels-vertical"
+          ],
+          "criterios": [
+            "Trazo casi vertical: la carga cizalla en vez de comprimir",
+            "Los tornillos paralelos trabajan a cizallamiento y ceden",
+            "Pide ángulo fijo, o añadir un tornillo antirrotatorio o una placa de sostén"
+          ]
+        }
+      ],
+      "refs": [
+        "ref-pauwels-fiab"
+      ]
+    },
+    {
+      "id": "neer",
+      "nombre": "Neer",
+      "ctx": [
+        "seg-11"
+      ],
+      "pregunta": "Húmero proximal · Neer",
+      "decide": "Es el vocabulario universal del húmero proximal y fija los umbrales clásicos de desplazamiento: 1 cm o 45 grados.",
+      "concordancia": "Concordancia justa: kappa entre 0,07 y 0,48, y solo 0,30 entre cirujanos de hombro dedicados. El acuerdo es aceptable en las poco desplazadas y se derrumba en las desplazadas. Trátala como idioma común, no como criterio de decisión.",
+      "grados": [
+        {
+          "id": "neer-1",
+          "etiqueta": "1 parte · sin desplazamiento",
+          "emite": [
+            "neer-estable"
+          ],
+          "criterios": [
+            "Ningún fragmento supera 1 cm o 45°",
+            "Tratamiento casi siempre conservador"
+          ]
+        },
+        {
+          "id": "neer-2cq",
+          "etiqueta": "2 partes · cuello quirúrgico",
+          "criterios": [
+            "El patrón que mejor concordancia tiene",
+            "Clavo o placa según hueso y desplazamiento"
+          ]
+        },
+        {
+          "id": "neer-2tro",
+          "etiqueta": "2 partes · troquíter",
+          "emite": [
+            "neer-troquiter"
+          ],
+          "criterios": [
+            "Tracción excéntrica del manguito: escenario de banda de tensión",
+            "Umbral quirúrgico más bajo en el paciente activo, sobre 5 mm"
+          ]
+        },
+        {
+          "id": "neer-3",
+          "etiqueta": "3 partes",
+          "emite": [
+            "neer-desplazada"
+          ],
+          "criterios": [
+            "Cabeza, una tuberosidad y diáfisis"
+          ]
+        },
+        {
+          "id": "neer-4",
+          "etiqueta": "4 partes",
+          "emite": [
+            "neer-desplazada",
+            "riesgo-necrosis-humeral"
+          ],
+          "criterios": [
+            "Riesgo alto de necrosis de la cabeza",
+            "Valorar artroplastia invertida en el mayor"
+          ]
+        },
+        {
+          "id": "neer-lux",
+          "etiqueta": "Luxación-fractura",
+          "emite": [
+            "neer-desplazada",
+            "riesgo-necrosis-humeral"
+          ],
+          "criterios": [
+            "La cabeza está fuera de la glena: urgencia relativa"
+          ]
+        }
+      ],
+      "refs": [
+        "ref-neer-fiab"
+      ]
+    },
+    {
+      "id": "hertel",
+      "nombre": "Hertel · predictores de isquemia",
+      "ctx": [
+        "seg-11"
+      ],
+      "pregunta": "Húmero proximal · ¿hay predictores de isquemia de la cabeza?",
+      "decide": "Predice la isquemia de la cabeza mejor que el número de partes, y por tanto orienta entre fijar y protetizar. Marca los que estén presentes.",
+      "concordancia": "Descripción binaria: cada plano de fractura se responde con sí o no, y por eso es más reproducible que contar partes. Los tres predictores de más peso son los que aparecen aquí.",
+      "multiple": true,
+      "grados": [
+        {
+          "id": "her-calcar",
+          "etiqueta": "Extensión metafisaria de la cabeza menor de 8 mm",
+          "emite": [
+            "riesgo-necrosis-humeral"
+          ],
+          "criterios": [
+            "Es el predictor más fuerte de isquemia",
+            "Se mide en el calcar, sobre el fragmento cefálico"
+          ]
+        },
+        {
+          "id": "her-bisagra",
+          "etiqueta": "Bisagra medial rota, con desplazamiento mayor de 2 mm",
+          "emite": [
+            "riesgo-necrosis-humeral"
+          ],
+          "criterios": [
+            "Sin bisagra medial no hay aporte por la arteria circunfleja anterior"
+          ]
+        },
+        {
+          "id": "her-basi",
+          "etiqueta": "Trazo basicervical",
+          "emite": [
+            "riesgo-necrosis-humeral"
+          ],
+          "criterios": [
+            "Secciona el aporte cefálico por debajo del cuello anatómico"
+          ]
+        },
+        {
+          "id": "her-no",
+          "etiqueta": "Ninguno de los tres",
+          "criterios": [
+            "La cabeza probablemente conserva vascularización: la fijación es razonable"
+          ]
+        }
+      ],
+      "refs": [
+        "ref-hertel-2004"
+      ]
+    },
+    {
+      "id": "hawkins",
+      "nombre": "Hawkins",
+      "ctx": [
+        "seg-81"
+      ],
+      "pregunta": "Astrágalo · Hawkins",
+      "decide": "Predice la necrosis avascular del cuerpo, que es lo que determina el resultado de esta fractura.",
+      "concordancia": "Concordancia moderada. Su valor está en el pronóstico, que escala de forma clara con el tipo: cuantas más articulaciones luxadas, menos aporte vascular queda.",
+      "grados": [
+        {
+          "id": "haw-I",
+          "etiqueta": "I · Cuello sin desplazar",
+          "criterios": [
+            "Riesgo de necrosis en torno al 10 %"
+          ]
+        },
+        {
+          "id": "haw-II",
+          "etiqueta": "II · Con subluxación o luxación subastragalina",
+          "emite": [
+            "riesgo-necrosis-astragalo"
+          ],
+          "criterios": [
+            "Riesgo del 20 al 50 %"
+          ]
+        },
+        {
+          "id": "haw-III",
+          "etiqueta": "III · Luxación subastragalina y tibioastragalina",
+          "emite": [
+            "riesgo-necrosis-astragalo",
+            "urgencia-reduccion"
+          ],
+          "criterios": [
+            "Riesgo por encima del 80 %",
+            "Cuerpo extruido: reducción urgente, y vigilar la piel"
+          ]
+        },
+        {
+          "id": "haw-IV",
+          "etiqueta": "IV · Añade luxación astragaloescafoidea",
+          "emite": [
+            "riesgo-necrosis-astragalo",
+            "urgencia-reduccion"
+          ],
+          "criterios": [
+            "Necrosis prácticamente segura"
+          ]
+        }
+      ],
+      "refs": [
+        "ref-hawkins-1970"
+      ]
+    },
+    {
+      "id": "sanders",
+      "nombre": "Sanders",
+      "ctx": [
+        "seg-82"
+      ],
+      "pregunta": "Calcáneo · Sanders",
+      "decide": "Se define sobre TC coronal en la faceta posterior y determina el pronóstico y la indicación: el tipo IV lleva a valorar artrodesis subastragalina primaria.",
+      "concordancia": "Concordancia justa entre expertos (kappa 0,29) y moderada entre menos expertos (0,53). Mejora bastante con reconstrucción tridimensional. No la uses sin TC.",
+      "grados": [
+        {
+          "id": "san-I",
+          "etiqueta": "I · No desplazada",
+          "criterios": [
+            "Menos de 2 mm, cualquiera que sea el número de trazos",
+            "Tratamiento conservador"
+          ]
+        },
+        {
+          "id": "san-II",
+          "etiqueta": "II · Dos fragmentos articulares",
+          "criterios": [
+            "Un trazo en la faceta posterior",
+            "Buen candidato a reducción y osteosíntesis"
+          ]
+        },
+        {
+          "id": "san-III",
+          "etiqueta": "III · Tres fragmentos",
+          "emite": [
+            "sanders-complejo"
+          ],
+          "criterios": [
+            "Dos trazos, con un fragmento central hundido"
+          ]
+        },
+        {
+          "id": "san-IV",
+          "etiqueta": "IV · Cuatro o más fragmentos",
+          "emite": [
+            "sanders-complejo",
+            "valorar-artrodesis"
+          ],
+          "criterios": [
+            "Conminución de la faceta posterior",
+            "Peor pronóstico funcional: valorar artrodesis subastragalina primaria"
+          ]
+        }
+      ],
+      "refs": [
+        "ref-sanders-fiab"
+      ]
+    },
+    {
+      "id": "letournel",
+      "nombre": "Letournel y Judet",
+      "ctx": [
+        "seg-62"
+      ],
+      "pregunta": "Acetábulo · Letournel y Judet",
+      "decide": "Decide el abordaje, y en el acetábulo el abordaje es la operación. No hay alternativa a nombrar el patrón.",
+      "concordancia": "Concordancia moderada y muy dependiente de la experiencia, pero es el idioma quirúrgico de la región y no existe sustituto práctico. Exige las tres proyecciones y TC.",
+      "grados": [
+        {
+          "id": "let-pared-post",
+          "etiqueta": "Pared posterior",
+          "emite": [
+            "acet-posterior"
+          ],
+          "criterios": [
+            "La más frecuente",
+            "Kocher-Langenbeck, en prono o lateral"
+          ]
+        },
+        {
+          "id": "let-columna-post",
+          "etiqueta": "Columna posterior",
+          "emite": [
+            "acet-posterior"
+          ],
+          "criterios": [
+            "Kocher-Langenbeck"
+          ]
+        },
+        {
+          "id": "let-pared-ant",
+          "etiqueta": "Pared anterior",
+          "emite": [
+            "acet-anterior"
+          ],
+          "criterios": [
+            "Ilioinguinal o anterior intrapélvico, en supino"
+          ]
+        },
+        {
+          "id": "let-columna-ant",
+          "etiqueta": "Columna anterior",
+          "emite": [
+            "acet-anterior"
+          ],
+          "criterios": [
+            "Ilioinguinal o anterior intrapélvico"
+          ]
+        },
+        {
+          "id": "let-transversa",
+          "etiqueta": "Transversa",
+          "emite": [
+            "acet-ambas"
+          ],
+          "criterios": [
+            "Separa el acetábulo en mitad superior e inferior",
+            "Puede exigir abordaje combinado o extensible"
+          ]
+        },
+        {
+          "id": "let-t",
+          "etiqueta": "En T",
+          "emite": [
+            "acet-ambas"
+          ],
+          "criterios": [
+            "Transversa más trazo vertical",
+            "De las más difíciles: casi siempre dos ventanas"
+          ]
+        },
+        {
+          "id": "let-post-post",
+          "etiqueta": "Columna posterior más pared posterior",
+          "emite": [
+            "acet-posterior"
+          ],
+          "criterios": [
+            "Kocher-Langenbeck; comprueba el ciático desde el principio"
+          ]
+        },
+        {
+          "id": "let-transv-pp",
+          "etiqueta": "Transversa más pared posterior",
+          "emite": [
+            "acet-ambas"
+          ],
+          "criterios": [
+            "Patrón asociado más frecuente"
+          ]
+        },
+        {
+          "id": "let-hemitransv",
+          "etiqueta": "Columna anterior más hemitransversa posterior",
+          "emite": [
+            "acet-ambas"
+          ],
+          "criterios": [
+            "Habitualmente por vía anterior, con control indirecto de la posterior"
+          ]
+        },
+        {
+          "id": "let-ambas",
+          "etiqueta": "Ambas columnas",
+          "emite": [
+            "acet-ambas"
+          ],
+          "criterios": [
+            "Ningún fragmento articular queda unido al esqueleto axial",
+            "El signo del espolón en la proyección obturatriz lo confirma"
+          ]
+        }
+      ],
+      "refs": [
+        "ref-letournel",
+        "ref-matta-1996"
+      ]
+    },
+    {
+      "id": "young-burgess",
+      "nombre": "Young y Burgess",
+      "ctx": [
+        "seg-61"
+      ],
+      "pregunta": "Anillo pélvico · Young y Burgess",
+      "decide": "Clasifica por mecanismo y por eso anticipa el patrón de sangrado y las lesiones asociadas. Es la que conecta con el Paso 1: cambia la reanimación, no solo la fijación.",
+      "concordancia": "Concordancia moderada. Su valor no está en la precisión del subtipo sino en el mecanismo, que orienta qué buscar y qué esperar hemodinámicamente.",
+      "grados": [
+        {
+          "id": "yb-lc1",
+          "etiqueta": "Compresión lateral I",
+          "criterios": [
+            "Fractura de ramas más impactación del sacro",
+            "Estable; el mecanismo cierra el anillo"
+          ]
+        },
+        {
+          "id": "yb-lc2",
+          "etiqueta": "Compresión lateral II",
+          "emite": [
+            "pelvis-inestable"
+          ],
+          "criterios": [
+            "Añade fractura en asa de cubo del ala ilíaca"
+          ]
+        },
+        {
+          "id": "yb-lc3",
+          "etiqueta": "Compresión lateral III · en limpiaparabrisas",
+          "emite": [
+            "pelvis-inestable",
+            "pelvis-hemorragia"
+          ],
+          "criterios": [
+            "Compresión lateral de un lado y apertura del contrario",
+            "Mortalidad alta"
+          ]
+        },
+        {
+          "id": "yb-apc1",
+          "etiqueta": "Compresión anteroposterior I",
+          "criterios": [
+            "Diástasis del pubis menor de 2,5 cm",
+            "Ligamentos posteriores intactos"
+          ]
+        },
+        {
+          "id": "yb-apc2",
+          "etiqueta": "Compresión anteroposterior II · libro abierto",
+          "emite": [
+            "pelvis-inestable",
+            "pelvis-hemorragia"
+          ],
+          "criterios": [
+            "Diástasis mayor de 2,5 cm con sacroilíacos anteriores rotos",
+            "Aumenta el volumen pélvico: faja o fijador externo urgente"
+          ]
+        },
+        {
+          "id": "yb-apc3",
+          "etiqueta": "Compresión anteroposterior III",
+          "emite": [
+            "pelvis-inestable",
+            "pelvis-hemorragia"
+          ],
+          "criterios": [
+            "Disociación completa de la hemipelvis",
+            "El patrón que más sangra y más transfunde"
+          ]
+        },
+        {
+          "id": "yb-vs",
+          "etiqueta": "Cizallamiento vertical",
+          "emite": [
+            "pelvis-inestable",
+            "pelvis-hemorragia"
+          ],
+          "criterios": [
+            "Desplazamiento craneal de la hemipelvis",
+            "Inestabilidad vertical: la faja no la controla"
+          ]
+        },
+        {
+          "id": "yb-cm",
+          "etiqueta": "Mecanismo combinado",
+          "emite": [
+            "pelvis-inestable",
+            "pelvis-hemorragia"
+          ],
+          "criterios": [
+            "Patrones mixtos, habitualmente por caída de altura"
+          ]
+        }
+      ],
+      "refs": [
+        "ref-young-burgess"
+      ]
+    },
+    {
+      "id": "tile",
+      "nombre": "Tile · AO pelvis",
+      "ctx": [
+        "seg-61"
+      ],
+      "pregunta": "Anillo pélvico · estabilidad de Tile",
+      "decide": "Clasifica por estabilidad, que es lo que decide si hace falta fijación posterior. Complementa a Young y Burgess: uno da el mecanismo, la otra la estabilidad.",
+      "concordancia": "Concordancia moderada. Es la base del 61A, 61B y 61C de la AO, así que se solapa con lo que ya has elegido en el código.",
+      "grados": [
+        {
+          "id": "tile-A",
+          "etiqueta": "A · Estable",
+          "criterios": [
+            "Anillo posterior intacto",
+            "Avulsiones y fracturas aisladas de ramas"
+          ]
+        },
+        {
+          "id": "tile-B",
+          "etiqueta": "B · Rotacionalmente inestable, verticalmente estable",
+          "emite": [
+            "pelvis-inestable"
+          ],
+          "criterios": [
+            "Libro abierto o compresión lateral",
+            "Suele bastar con fijación anterior"
+          ]
+        },
+        {
+          "id": "tile-C",
+          "etiqueta": "C · Rotacional y verticalmente inestable",
+          "emite": [
+            "pelvis-inestable",
+            "pelvis-fijacion-posterior"
+          ],
+          "criterios": [
+            "Disrupción completa del complejo posterior",
+            "Exige fijación posterior: tornillos iliosacros o placa"
+          ]
+        }
+      ],
+      "refs": [
+        "ref-tile"
+      ]
+    },
+    {
+      "id": "vancouver",
+      "nombre": "Vancouver",
+      "ctx": [
+        "reg-cadera",
+        "reg-femur"
+      ],
+      "pregunta": "¿Es periprotésica? · Vancouver",
+      "decide": "Es la clasificación que mejor decide de toda la lista: separa fijar de revisar el vástago, que son dos operaciones distintas con dos equipos distintos.",
+      "concordancia": "Concordancia moderada, kappa alrededor de 0,45, con acuerdo total en el 43 % de los casos. Lo que peor se distingue es el B1 del B2, y esa es justo la distinción que importa: si dudas, planifica como si el vástago estuviera suelto.",
+      "grados": [
+        {
+          "id": "van-no",
+          "etiqueta": "No es periprotésica",
+          "criterios": [
+            "Hueso nativo"
+          ]
+        },
+        {
+          "id": "van-A",
+          "etiqueta": "A · Trocantérea",
+          "criterios": [
+            "Trocánter mayor o menor",
+            "Casi siempre conservador si no hay inestabilidad abductora"
+          ]
+        },
+        {
+          "id": "van-B1",
+          "etiqueta": "B1 · Alrededor del vástago, con vástago estable",
+          "emite": [
+            "periprotesica"
+          ],
+          "criterios": [
+            "Osteosíntesis con placa bloqueada, cables o combinación"
+          ]
+        },
+        {
+          "id": "van-B2",
+          "etiqueta": "B2 · Vástago suelto, hueso bueno",
+          "emite": [
+            "periprotesica",
+            "revisar-vastago"
+          ],
+          "criterios": [
+            "La operación es revisar el vástago, no fijar la fractura",
+            "Poner una placa sobre un vástago suelto es fallo garantizado"
+          ]
+        },
+        {
+          "id": "van-B3",
+          "etiqueta": "B3 · Vástago suelto y hueso deficiente",
+          "emite": [
+            "periprotesica",
+            "revisar-vastago"
+          ],
+          "criterios": [
+            "Revisión con vástago largo, aloinjerto o megaprótesis"
+          ]
+        },
+        {
+          "id": "van-C",
+          "etiqueta": "C · Distal a la punta del vástago",
+          "emite": [
+            "periprotesica"
+          ],
+          "criterios": [
+            "Se trata como una fractura de fémur distal",
+            "Cuidado con la zona entre implantes: solapa la placa con el vástago"
+          ]
+        }
+      ],
+      "refs": [
+        "ref-vancouver-fiab"
+      ]
+    },
+    {
+      "id": "winquist",
+      "nombre": "Winquist y Hansen",
+      "ctx": [
+        "seg-32"
+      ],
+      "pregunta": "Diáfisis femoral · conminución de Winquist y Hansen",
+      "decide": "Mide cuánta cortical queda para compartir carga, y con ello si el clavo puede dinamizarse o tiene que quedar estático.",
+      "concordancia": "Concordancia moderada. El umbral que importa en la práctica es si queda o no contacto cortical suficiente, y eso se decide bien.",
+      "grados": [
+        {
+          "id": "win-0",
+          "etiqueta": "0 · Sin conminución",
+          "emite": [
+            "contacto-cortical"
+          ],
+          "criterios": [
+            "Trazo simple, contacto cortical completo"
+          ]
+        },
+        {
+          "id": "win-I",
+          "etiqueta": "I · Fragmento pequeño",
+          "emite": [
+            "contacto-cortical"
+          ],
+          "criterios": [
+            "Menos del 25 % de la circunferencia",
+            "Todavía comparte carga"
+          ]
+        },
+        {
+          "id": "win-II",
+          "etiqueta": "II · Entre el 25 y el 50 %",
+          "emite": [
+            "contacto-cortical"
+          ],
+          "criterios": [
+            "Contacto suficiente para tolerar dinamización"
+          ]
+        },
+        {
+          "id": "win-III",
+          "etiqueta": "III · Más del 50 %",
+          "emite": [
+            "sin-contacto-cortical"
+          ],
+          "criterios": [
+            "Ya no hay columna que comparta carga",
+            "Bloqueo estático obligado"
+          ]
+        },
+        {
+          "id": "win-IV",
+          "etiqueta": "IV · Segmentaria, sin contacto",
+          "emite": [
+            "sin-contacto-cortical"
+          ],
+          "criterios": [
+            "El clavo soporta toda la carga",
+            "Longitud y rotación dependen por completo de los pernos"
+          ]
+        }
+      ],
+      "refs": [
+        "ref-winquist-1984"
+      ]
+    },
+    {
+      "id": "mason",
+      "nombre": "Mason",
+      "ctx": [
+        "seg-2R1"
+      ],
+      "pregunta": "Cabeza radial · Mason",
+      "decide": "Separa lo que se trata funcionalmente de lo que se fija y de lo que se sustituye. El tipo IV obliga a buscar la lesión ligamentosa asociada.",
+      "concordancia": "Concordancia moderada, mejor con TC. La distinción entre II y III depende de si el fragmento bloquea la rotación, que se explora, no se mide.",
+      "grados": [
+        {
+          "id": "mas-I",
+          "etiqueta": "I · No desplazada",
+          "criterios": [
+            "Menos de 2 mm",
+            "Movilización precoz"
+          ]
+        },
+        {
+          "id": "mas-II",
+          "etiqueta": "II · Desplazada, un fragmento",
+          "criterios": [
+            "Fijación con tornillos si bloquea la rotación",
+            "Comprueba el bloqueo mecánico bajo anestesia"
+          ]
+        },
+        {
+          "id": "mas-III",
+          "etiqueta": "III · Conminuta",
+          "emite": [
+            "mason-compleja"
+          ],
+          "criterios": [
+            "No reconstruible: valorar prótesis de cabeza radial",
+            "La resección aislada está contraindicada si hay inestabilidad"
+          ]
+        },
+        {
+          "id": "mas-IV",
+          "etiqueta": "IV · Con luxación del codo",
+          "emite": [
+            "mason-compleja",
+            "inestabilidad-codo"
+          ],
+          "criterios": [
+            "Busca la tríada terrible: coronoides y ligamento colateral lateral",
+            "La cabeza radial es un estabilizador secundario que aquí pasa a primario"
+          ]
+        }
+      ],
+      "refs": [
+        "ref-mason"
+      ]
+    },
+    {
+      "id": "lauge-hansen",
+      "nombre": "Lauge-Hansen",
+      "ctx": [
+        "seg-44"
+      ],
+      "pregunta": "Tobillo · mecanismo de Lauge-Hansen",
+      "decide": "Clasifica por mecanismo, y el mecanismo se deshace al revés: es la que dice la maniobra de reducción. Conecta con el Paso 9.",
+      "concordancia": "Concordancia pobre a moderada, y muchas fracturas no encajan en ninguna secuencia. Úsala para razonar la maniobra y para saber qué lesión buscar, no para etiquetar.",
+      "grados": [
+        {
+          "id": "lh-sa",
+          "etiqueta": "Supinación-aducción",
+          "emite": [
+            "lh-aduccion"
+          ],
+          "criterios": [
+            "Trazo transverso del peroné por debajo de la sindesmosis",
+            "Trazo vertical del maléolo medial: pide contrafuerte, no tornillos a fricción",
+            "Reducción: pronar y abducir"
+          ]
+        },
+        {
+          "id": "lh-ser",
+          "etiqueta": "Supinación-rotación externa",
+          "emite": [
+            "lh-rotacion"
+          ],
+          "criterios": [
+            "El patrón más frecuente",
+            "Trazo espiroideo del peroné a la altura de la sindesmosis",
+            "Reducción: rotación interna, que es el gesto contrario al del mecanismo"
+          ]
+        },
+        {
+          "id": "lh-pa",
+          "etiqueta": "Pronación-abducción",
+          "emite": [
+            "lh-abduccion"
+          ],
+          "criterios": [
+            "Peroné conminuto lateral, por encima de la sindesmosis",
+            "Trazo transverso del maléolo medial por avulsión"
+          ]
+        },
+        {
+          "id": "lh-per",
+          "etiqueta": "Pronación-rotación externa",
+          "emite": [
+            "lh-rotacion",
+            "riesgo-sindesmosis"
+          ],
+          "criterios": [
+            "Peroné alto: descarta una Maisonneuve palpando todo el peroné",
+            "Sindesmosis casi siempre lesionada"
+          ]
+        }
+      ],
+      "refs": [
+        "ref-lauge-hansen"
+      ]
+    }
+  ]
+}

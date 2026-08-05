@@ -1,0 +1,1169 @@
+{
+  "nota": "Casos construidos sobre el error. Cada uno lleva dos estados: el que se planificó y el que correspondía. Las alertas NO se escriben aquí: las produce el motor a partir del estado, así que si mañana cambia un criterio clínico, los casos se actualizan solos.",
+  "casos": [
+    {
+      "id": "puente-sobre-trazo-simple",
+      "titulo": "Placa puente sobre un trazo simple",
+      "region": "Diáfisis tibial · 42A",
+      "minutos": 4,
+      "resumen": "Rotura de la placa por fatiga a los cinco meses, en un agujero vacío, sin callo en la radiografía.",
+      "pasoClave": 3,
+      "loQueSeHizo": "Varón de 34 años, fractura transversa de diáfisis tibial por accidente de moto, cerrada, Tscherne I. Se clasificó como 42A3. En quirófano se consiguió una reducción casi anatómica por vía directa y se colocó una placa larga de 12 agujeros. Se decidió estabilidad relativa —«dejo que haga callo»— y se llenaron los agujeros hasta cerca del foco, dos a cada lado, para «asegurar» el montaje. No se comprimió.",
+      "estadoError": {
+        "2": {
+          "hueso": "h-4",
+          "segmento": "s-42",
+          "tipo": "t-42A"
+        },
+        "3": {
+          "zonas": "z-unica",
+          "estabilidad": "e-relativa"
+        },
+        "4": {
+          "tipo-reduccion": "t-anatomica",
+          "via": "v-directa"
+        },
+        "5": {
+          "principio": [
+            "pr-ferulaje"
+          ],
+          "modo-ferulaje": [
+            "mf-placa-puente"
+          ]
+        },
+        "6": {
+          "implante": [
+            "i-placa"
+          ],
+          "funcion-placa": [
+            "fp-puente"
+          ],
+          "diseno-placa": "pl-bloqueada",
+          "hueso-huesped": "hh-normal"
+        }
+      },
+      "porQue": "La deformación es movimiento dividido entre brecha, y aquí el denominador era diminuto: una reducción casi anatómica de un trazo transverso deja una sola interfase de menos de un milímetro. Con los tornillos junto al foco, la longitud de trabajo quedó en dos huecos, así que ese poco movimiento se concentró entero en esa brecha mínima. Deformación altísima: el hueso reabsorbe los extremos en vez de hacer callo. Y como la placa quedó sola soportando toda la carga —carga soportada, sin contacto cortical que la ayude—, acabó fallando por fatiga en el punto de mayor concentración de tensión, que es el agujero vacío más próximo al foco. El montaje no consolidó por ninguna de las dos vías: no comprimía lo suficiente para curación directa y deformaba demasiado para curar por callo.",
+      "loQueTocaba": "Con un trazo simple y una reducción anatómica ya conseguida, la decisión coherente era estabilidad absoluta: compresión interfragmentaria y consolidación directa. La misma placa, usada a compresión con su unidad dinámica y un tornillo interfragmentario a través de ella, con pretensado para que la cortical opuesta también cerrara. La otra salida legítima habría sido la contraria y desde el principio: no reducir de forma anatómica, no abrir el foco, y ferulizar con un clavo endomedular bloqueado, que da una longitud de trabajo larga y es de carga compartida. Lo que no era una opción es lo intermedio.",
+      "estadoCorrecto": {
+        "2": {
+          "hueso": "h-4",
+          "segmento": "s-42",
+          "tipo": "t-42A"
+        },
+        "3": {
+          "zonas": "z-unica",
+          "estabilidad": "e-absoluta"
+        },
+        "4": {
+          "tipo-reduccion": "t-anatomica",
+          "via": "v-directa"
+        },
+        "5": {
+          "principio": [
+            "pr-compresion"
+          ],
+          "modo-compresion": [
+            "mc-placa-dcp",
+            "mc-tornillo-por-placa",
+            "mc-prebending"
+          ],
+          "neutralizacion": "n-si"
+        },
+        "6": {
+          "implante": [
+            "i-placa",
+            "i-tornillo"
+          ],
+          "tipo-tornillo": [
+            "tor-cortical"
+          ],
+          "funcion-placa": [
+            "fp-compresion"
+          ],
+          "diseno-placa": "pl-bloqueada",
+          "hueso-huesped": "hh-normal"
+        }
+      },
+      "mensaje": "Ante un trazo simple no hay término medio: o se comprime de verdad, o se feruliza con una longitud de trabajo larga y sin tocar el foco. Puentear una fractura que casi has reducido anatómicamente es la forma más rápida de no consolidar.",
+      "refs": [
+        "ref-gautier-2003",
+        "ref-stoffel-2003",
+        "ref-perren-2002"
+      ]
+    },
+    {
+      "id": "comprimir-metafisis-conminuta",
+      "titulo": "Comprimir el componente metafisario conminuto",
+      "region": "Meseta tibial · 41C",
+      "minutos": 5,
+      "resumen": "Colapso en varo y hundimiento del platillo a las ocho semanas, con pérdida de la reducción articular ya conseguida.",
+      "pasoClave": 3,
+      "loQueSeHizo": "Mujer de 52 años, caída de altura, meseta tibial 41C3: superficie articular fragmentada y, por debajo, una zona metafisaria conminuta que separaba el bloque articular de la diáfisis. Se reconstruyó bien la superficie con tornillos subcondrales y luego, buscando «un montaje sólido», se intentó comprimir también el componente metafisario contra la diáfisis con una placa a compresión, apretando hasta cerrar. Se abrió ampliamente para conseguirlo.",
+      "estadoError": {
+        "2": {
+          "hueso": "h-4",
+          "segmento": "s-41",
+          "tipo": "t-41C"
+        },
+        "3": {
+          "zonas": "z-dos",
+          "estab-articular": "ea-absoluta",
+          "estab-metafisis": "em-absoluta"
+        },
+        "4": {
+          "tipo-articular": "ta-anatomica",
+          "via-articular": "va-directa",
+          "tipo-meta": "tm-anatomica",
+          "via-meta": "vm-directa"
+        },
+        "5": {
+          "principio-articular": [
+            "pa-compresion"
+          ],
+          "principio-meta": [
+            "pm-compresion"
+          ],
+          "modo-compresion": [
+            "mc-placa-dcp"
+          ]
+        },
+        "6": {
+          "implante": [
+            "i-placa",
+            "i-tornillo"
+          ],
+          "funcion-placa": [
+            "fp-compresion"
+          ],
+          "diseno-placa": "pl-no-bloqueada",
+          "hueso-huesped": "hh-normal",
+          "defecto": "df-no"
+        }
+      },
+      "porQue": "En un componente conminuto no hay nada que comprimir. Los fragmentos intercalares no forman una columna continua, así que apretar no genera fricción entre corticales: solo los desplaza, los impacta unos contra otros y les quita el poco periostio que les quedaba. La exposición amplia necesaria para conseguirlo terminó de desvitalizarlos. Y bajo el platillo elevado quedó un vacío metafisario que no se rellenó, de modo que el soporte estructural dependía por completo del implante. La placa no bloqueada, que estabiliza por fricción contra el hueso, no tenía dónde agarrar en esa metáfisis fragmentada. El resultado previsible es el colapso en varo, y con él la pérdida de la reducción articular que sí se había conseguido bien.",
+      "loQueTocaba": "Dos zonas con dos exigencias distintas, y eso no es una tercera estabilidad: es combinar los dos principios en un solo constructo. Absoluta al bloque articular, con reducción anatómica directa y compresión interfragmentaria. Relativa al componente metafisario, con reducción funcional indirecta y ferulaje: una placa que puentee esa zona sin tocarla, bloqueada por el ángulo fijo, colocada por vía percutánea en túnel submuscular. Y el defecto que queda bajo el platillo elevado hay que rellenarlo con injerto o sustituto, o el fragmento vuelve a hundirse en cuanto se carga.",
+      "estadoCorrecto": {
+        "2": {
+          "hueso": "h-4",
+          "segmento": "s-41",
+          "tipo": "t-41C"
+        },
+        "3": {
+          "zonas": "z-dos",
+          "estab-articular": "ea-absoluta",
+          "estab-metafisis": "em-relativa",
+          "palancas": [
+            "p-longitud",
+            "p-span",
+            "p-densidad",
+            "p-bloqueada",
+            "p-fcl"
+          ]
+        },
+        "4": {
+          "tipo-articular": "ta-anatomica",
+          "via-articular": "va-directa",
+          "tipo-meta": "tm-funcional",
+          "via-meta": "vm-percutanea"
+        },
+        "5": {
+          "principio-articular": [
+            "pa-compresion"
+          ],
+          "principio-meta": [
+            "pm-ferulaje"
+          ],
+          "modo-compresion": [
+            "mc-tornillo-tecnica"
+          ],
+          "modo-ferulaje": [
+            "mf-placa-puente"
+          ],
+          "neutralizacion": "n-si"
+        },
+        "6": {
+          "implante": [
+            "i-placa",
+            "i-tornillo"
+          ],
+          "tipo-tornillo": [
+            "tor-esponjoso",
+            "tor-bloqueado"
+          ],
+          "funcion-placa": [
+            "fp-puente",
+            "fp-sosten"
+          ],
+          "diseno-placa": "pl-bloqueada",
+          "hueso-huesped": "hh-normal",
+          "defecto": "df-sintetico"
+        }
+      },
+      "mensaje": "Un componente conminuto no admite estabilidad absoluta. Cuando conviven un bloque articular y una metáfisis fragmentada, se le da absoluta al bloque y relativa a la metáfisis, en un solo constructo. Y el vacío que deja un fragmento elevado se rellena, siempre.",
+      "refs": [
+        "ref-perren-2002",
+        "ref-biomec-trauma"
+      ]
+    },
+    {
+      "id": "banda-tension-sin-fulcro",
+      "titulo": "Banda de tensión sin cortical opuesta",
+      "region": "Olécranon · 2U1",
+      "minutos": 4,
+      "resumen": "Apertura progresiva del foco y migración de las agujas a las tres semanas, con el codo en extensión incompleta.",
+      "pasoClave": 5,
+      "loQueSeHizo": "Varón de 61 años, caída sobre el codo, fractura de olécranon conminuta con un fragmento intermedio libre en la zona media. Se optó por el montaje clásico de dos agujas de Kirschner paralelas más cerclaje en ocho, «porque es lo que se hace en el olécranon», apretando el ocho para cerrar el foco.",
+      "estadoError": {
+        "2": {
+          "hueso": "h-2U",
+          "segmento": "s-2U1",
+          "tipo": "t-2U1C"
+        },
+        "3": {
+          "zonas": "z-unica",
+          "estabilidad": "e-absoluta"
+        },
+        "4": {
+          "tipo-reduccion": "t-anatomica",
+          "via": "v-directa"
+        },
+        "5": {
+          "fuerza": [
+            "f-traccion"
+          ],
+          "principio": [
+            "pr-banda"
+          ]
+        },
+        "6": {
+          "implante": [
+            "i-agujas"
+          ],
+          "hueso-huesped": "hh-normal"
+        }
+      },
+      "porQue": "La banda de tensión no es un constructo: es un principio, y exige tres cosas a la vez. Un fragmento sometido a tracción excéntrica —eso sí lo había, el tríceps—, carga funcional cíclica que active el mecanismo, y sobre todo una cortical opuesta intacta que actúe de fulcro. Esa tercera condición es la que faltaba: con la cortical anterior conminuta no hay punto de apoyo sobre el que convertir la tracción del tríceps en compresión. Sin fulcro, el ocho no comprime nada; simplemente aproxima, y al primer movimiento el foco se abre por delante y las agujas empiezan a migrar. Un alambre en ocho que no convierte tracción en compresión no es una banda de tensión: es un cerclaje.",
+      "loQueTocaba": "Con la cortical opuesta conminuta, el principio correcto es el ferulaje: una placa premoldeada de olécranon colocada por la cara posterior, que puentee la zona conminuta manteniendo longitud, eje y la congruencia de la escotadura troclear, sin pretender comprimir lo que no se puede comprimir. Y si además hay que sostener un fragmento que desliza, la misma placa cumple función de contrafuerte.",
+      "estadoCorrecto": {
+        "2": {
+          "hueso": "h-2U",
+          "segmento": "s-2U1",
+          "tipo": "t-2U1C"
+        },
+        "3": {
+          "zonas": "z-unica",
+          "estabilidad": "e-relativa",
+          "palancas": [
+            "p-longitud",
+            "p-densidad",
+            "p-bloqueada"
+          ]
+        },
+        "4": {
+          "tipo-reduccion": "t-anatomica",
+          "via": "v-directa"
+        },
+        "5": {
+          "fuerza": [
+            "f-traccion"
+          ],
+          "principio": [
+            "pr-ferulaje"
+          ],
+          "modo-ferulaje": [
+            "mf-placa-puente"
+          ]
+        },
+        "6": {
+          "implante": [
+            "i-placa"
+          ],
+          "funcion-placa": [
+            "fp-puente"
+          ],
+          "diseno-placa": "pl-bloqueada",
+          "hueso-huesped": "hh-normal"
+        }
+      },
+      "mensaje": "Antes de poner una banda de tensión hay que comprobar las tres condiciones, y la que más se olvida es la cortical opuesta intacta. Si está conminuta, el principio falla por definición y hay que pasar a placa.",
+      "refs": [
+        "ref-brink-2013",
+        "ref-biomec-trauma"
+      ]
+    },
+    {
+      "id": "pilon-sin-ventana",
+      "titulo": "Operar el pilón sin esperar la ventana de partes blandas",
+      "region": "Pilón tibial · 43C",
+      "minutos": 5,
+      "resumen": "Necrosis del borde de la herida a los diez días, dehiscencia e infección profunda que acabó en colgajo libre.",
+      "pasoClave": 8,
+      "loQueSeHizo": "Varón de 41 años, caída de andamio, pilón tibial 43C2 cerrado. Llega con la pierna edematosa, flictenas hemorrágicas en la cara anteromedial y la piel tensa. Se decide operar esa misma noche «para no perder tiempo» con abordaje anteromedial extenso y placa. Se cierra con tensión.",
+      "estadoError": {
+        "1": {
+          "estado-fisiologico": "estable",
+          "estrategia": "etc",
+          "partes-blandas": "cerrada-tscherne-2-3"
+        },
+        "2": {
+          "hueso": "h-4",
+          "segmento": "s-43",
+          "tipo": "t-43C"
+        },
+        "3": {
+          "zonas": "z-dos",
+          "estab-articular": "ea-absoluta",
+          "estab-metafisis": "em-relativa"
+        },
+        "4": {
+          "tipo-articular": "ta-anatomica",
+          "via-articular": "va-directa",
+          "tipo-meta": "tm-funcional",
+          "via-meta": "vm-directa"
+        },
+        "8": {
+          "tipo-abordaje": "ab-extenso",
+          "via-nombrada": "vn-anteromedial-tibia",
+          "herida": "he-unica",
+          "ventana": "vt-no"
+        }
+      },
+      "porQue": "La cara anteromedial de la tibia distal es piel sobre hueso: no hay músculo debajo que la nutra ni que la cubra si falla. Con el edema en su pico y flictenas hemorrágicas —que son un Tscherne II-III, no una piel intacta— esa piel ya está isquémica antes de la incisión. Abrir ahí y encima cerrar con tensión suma tres agresiones sobre un tejido que no las tolera. El borde necrosa, la herida se abre, y como debajo hay una placa el problema deja de ser cutáneo y pasa a ser una infección profunda sobre material. Lo que se ganó en tiempo se perdió multiplicado: colgajo libre, meses de tratamiento y un resultado funcional peor que el de haber esperado dos semanas.",
+      "loQueTocaba": "El pilón de alta energía es el ejemplo de manual del abordaje en dos tiempos. Primero, fijador externo puente que restaura longitud y eje y deja las partes blandas en reposo, con el peroné fijado si eso ayuda a la alineación. Después, esperar a que el edema ceda y aparezca el signo de las arrugas, lo que suele llevar de una a tres semanas. Y entonces sí, osteosíntesis definitiva: reducción anatómica del bloque articular por una ventana dirigida y puenteo de la metáfisis por vía percutánea, con incisiones separadas y puente cutáneo respetado. La decisión de tiempos que se tomó en el Paso 1 es la que se materializa aquí, con el bisturí en la mano.",
+      "estadoCorrecto": {
+        "1": {
+          "estado-fisiologico": "estable",
+          "estrategia": "dco",
+          "partes-blandas": "cerrada-tscherne-2-3"
+        },
+        "2": {
+          "hueso": "h-4",
+          "segmento": "s-43",
+          "tipo": "t-43C"
+        },
+        "3": {
+          "zonas": "z-dos",
+          "estab-articular": "ea-absoluta",
+          "estab-metafisis": "em-relativa",
+          "palancas": [
+            "p-longitud",
+            "p-span",
+            "p-densidad",
+            "p-bloqueada",
+            "p-fcl"
+          ]
+        },
+        "4": {
+          "tipo-articular": "ta-anatomica",
+          "via-articular": "va-directa",
+          "tipo-meta": "tm-funcional",
+          "via-meta": "vm-percutanea"
+        },
+        "5": {
+          "principio-articular": [
+            "pa-compresion"
+          ],
+          "principio-meta": [
+            "pm-ferulaje"
+          ],
+          "modo-compresion": [
+            "mc-tornillo-tecnica"
+          ],
+          "modo-ferulaje": [
+            "mf-placa-puente"
+          ],
+          "neutralizacion": "n-si"
+        },
+        "6": {
+          "implante": [
+            "i-placa",
+            "i-tornillo"
+          ],
+          "tipo-tornillo": [
+            "tor-esponjoso",
+            "tor-bloqueado"
+          ],
+          "funcion-placa": [
+            "fp-puente",
+            "fp-sosten"
+          ],
+          "diseno-placa": "pl-bloqueada",
+          "hueso-huesped": "hh-normal",
+          "defecto": "df-sintetico"
+        },
+        "8": {
+          "tipo-abordaje": "ab-combinado",
+          "via-nombrada": "vn-anterolateral-tobillo",
+          "partes-blandas": [
+            "pb-colgajo",
+            "pb-periostio",
+            "pb-internervioso",
+            "pb-cierre"
+          ],
+          "herida": "he-doble",
+          "ventana": "vt-si"
+        }
+      },
+      "mensaje": "En el pilón, el tobillo y el calcáneo la piel manda sobre el calendario. Fijador puente, esperar al signo de las arrugas, y entonces operar. Dos semanas de espera cuestan mucho menos que un colgajo libre.",
+      "refs": [
+        "ref-boast",
+        "ref-hoppenfeld"
+      ]
+    },
+    {
+      "id": "placa-sobre-vastago-suelto",
+      "titulo": "Placa sobre un vástago suelto",
+      "region": "Periprotésica de fémur · Vancouver B2",
+      "minutos": 4,
+      "resumen": "Fallo del montaje a las seis semanas, con el vástago hundido y la placa despegada del hueso proximal.",
+      "pasoClave": 6,
+      "loQueSeHizo": "Mujer de 78 años con prótesis total de cadera de doce años de evolución. Caída desde su altura y fractura espiroidea alrededor del vástago. En la radiografía se leyó «fractura periprotésica alrededor del vástago» y se planificó una placa bloqueada larga con cables proximales. No se valoró si el vástago estaba estable: llevaba seis meses con dolor de muslo al iniciar la marcha.",
+      "estadoError": {
+        "2": {
+          "hueso": "h-3",
+          "segmento": "s-32",
+          "tipo": "t-32A",
+          "cl-vancouver": "van-B2"
+        },
+        "3": {
+          "zonas": "z-unica",
+          "estabilidad": "e-relativa",
+          "palancas": [
+            "p-longitud",
+            "p-bloqueada",
+            "p-densidad"
+          ]
+        },
+        "5": {
+          "principio": [
+            "pr-ferulaje"
+          ],
+          "modo-ferulaje": [
+            "mf-placa-puente"
+          ]
+        },
+        "6": {
+          "implante": [
+            "i-placa",
+            "i-cerclaje"
+          ],
+          "funcion-placa": [
+            "fp-puente"
+          ],
+          "diseno-placa": "pl-bloqueada",
+          "hueso-huesped": "hh-patologico"
+        }
+      },
+      "porQue": "En un Vancouver B2 el problema no es la fractura: es que la prótesis ya había perdido su fijación, y el dolor de muslo al iniciar la marcha lo estaba anunciando desde hacía medio año. Fijar el hueso alrededor de un vástago suelto no resuelve nada, porque el vástago sigue moviéndose dentro del canal con cada paso. Ese micromovimiento continuo trabaja contra la placa desde dentro, impide la consolidación y termina aflojando los tornillos proximales. Se operó la consecuencia y se dejó la causa intacta. La distinción entre B1 y B2 es la que decide la operación entera, y es justamente la que peor se distingue en la radiografía: por eso, ante la duda, se planifica como si el vástago estuviera suelto.",
+      "loQueTocaba": "La operación de un B2 es una revisión, no una osteosíntesis. Vástago largo, no cementado y con fijación distal, que puentee el foco y quede anclado en hueso sano por debajo. La fractura se reduce alrededor del vástago y se sostiene con cables o una placa complementaria, pero el implante que da la estabilidad es el vástago. Y el planteamiento cambia de servicio: hace falta el equipo de revisión y el instrumental de extracción, no la bandeja de trauma. Si además el hueso proximal estuviera deficiente, sería un B3 y habría que reconstruirlo.",
+      "estadoCorrecto": {
+        "2": {
+          "hueso": "h-3",
+          "segmento": "s-32",
+          "tipo": "t-32A",
+          "cl-vancouver": "van-B2"
+        },
+        "3": {
+          "zonas": "z-unica",
+          "estabilidad": "e-relativa",
+          "palancas": [
+            "p-longitud",
+            "p-span",
+            "p-densidad",
+            "p-bloqueada"
+          ]
+        },
+        "5": {
+          "principio": [
+            "pr-ferulaje"
+          ],
+          "modo-ferulaje": [
+            "mf-clavo"
+          ]
+        },
+        "6": {
+          "implante": [
+            "i-revision",
+            "i-cerclaje"
+          ],
+          "hueso-huesped": "hh-patologico"
+        },
+        "10": {
+          "plan-b": [
+            "pb-implante",
+            "pb-extraccion",
+            "pb-injerto"
+          ],
+          "vigilancia": [
+            "vg-nounion",
+            "vg-fallo"
+          ],
+          "tipo-nounion": "nu-mecanica",
+          "huesped": [
+            "hu-ninguno"
+          ]
+        }
+      },
+      "mensaje": "Antes de fijar una periprotésica hay que contestar una sola pregunta: ¿el vástago está suelto? Si lo está, la operación es revisarlo. Poner una placa sobre un vástago móvil es fijar la consecuencia y dejar la causa.",
+      "refs": [
+        "ref-vancouver-fiab"
+      ]
+    },
+    {
+      "id": "femur-distal-superficie-a-ciegas",
+      "titulo": "Reducir la superficie del fémur distal por ligamentotaxis",
+      "region": "Fémur distal · 33C",
+      "minutos": 4,
+      "resumen": "Escalón intercondíleo de 4 mm en la TC postoperatoria y artrosis sintomática a los tres años.",
+      "pasoClave": 4,
+      "loQueSeHizo": "Varón de 29 años, motociclista, fémur distal 33C2. Se colocó al paciente en mesa de tracción y se planteó una reducción cerrada del bloque articular confiando en la ligamentotaxis, con placa lateral bloqueada percutánea. La radiografía intraoperatoria pareció aceptable y no se hizo control articular directo.",
+      "estadoError": {
+        "2": {
+          "hueso": "h-3",
+          "segmento": "s-33",
+          "tipo": "t-33C"
+        },
+        "3": {
+          "zonas": "z-dos",
+          "estab-articular": "ea-absoluta",
+          "estab-metafisis": "em-relativa"
+        },
+        "4": {
+          "tipo-articular": "ta-funcional",
+          "via-articular": "va-indirecta",
+          "tipo-meta": "tm-funcional",
+          "via-meta": "vm-percutanea"
+        },
+        "8": {
+          "tipo-abordaje": "ab-mipo",
+          "via-nombrada": "vn-lateral-femur",
+          "ventana": "vt-si"
+        }
+      },
+      "porQue": "La ligamentotaxis reduce lo que el ligamento arrastra, y el trazo intercondíleo del 33C no tiene nada que lo arrastre: los cóndilos se separan y rotan entre sí sin que la tracción los vuelva a enfrentar. Eso es un límite estructural, no una cuestión de fuerza. Además, la proyección anteroposterior no ve el escalón intercondíleo, que es sagital: la radiografía «aceptable» estaba mirando en la dirección equivocada. Un escalón de 4 mm en una rodilla de 29 años es artrosis anunciada, y el reloj empezó a correr el día de la cirugía. La MIPO es la vía correcta para la metáfisis, pero no para la superficie.",
+      "loQueTocaba": "Las dos zonas piden dos vías distintas, y esa es la esencia del caso. El bloque articular se reduce de forma anatómica y bajo visión directa, por una artrotomía parapatelar lateral o con ayuda artroscópica, y se comprime con tornillos independientes de la placa. Solo después, con el bloque ya convertido en una pieza única, se une a la diáfisis por vía percutánea con la placa lateral en función de puente. Un mismo constructo con dos principios: compresión arriba y ferulaje abajo. Y la comprobación de la superficie es visual o por TC, nunca por una anteroposterior.",
+      "estadoCorrecto": {
+        "2": {
+          "hueso": "h-3",
+          "segmento": "s-33",
+          "tipo": "t-33C"
+        },
+        "3": {
+          "zonas": "z-dos",
+          "estab-articular": "ea-absoluta",
+          "estab-metafisis": "em-relativa",
+          "palancas": [
+            "p-longitud",
+            "p-span",
+            "p-densidad",
+            "p-bloqueada",
+            "p-fcl"
+          ]
+        },
+        "4": {
+          "tipo-articular": "ta-anatomica",
+          "via-articular": "va-directa",
+          "tipo-meta": "tm-funcional",
+          "via-meta": "vm-percutanea",
+          "parametros": [
+            "pa-longitud",
+            "pa-eje",
+            "pa-rotacion"
+          ]
+        },
+        "5": {
+          "principio-articular": [
+            "pa-compresion"
+          ],
+          "principio-meta": [
+            "pm-ferulaje"
+          ],
+          "modo-compresion": [
+            "mc-tornillo-tecnica"
+          ],
+          "modo-ferulaje": [
+            "mf-placa-puente"
+          ],
+          "neutralizacion": "n-si"
+        },
+        "6": {
+          "implante": [
+            "i-placa",
+            "i-tornillo"
+          ],
+          "tipo-tornillo": [
+            "tor-esponjoso",
+            "tor-bloqueado"
+          ],
+          "funcion-placa": [
+            "fp-puente"
+          ],
+          "diseno-placa": "pl-bloqueada",
+          "hueso-huesped": "hh-normal"
+        },
+        "8": {
+          "tipo-abordaje": "ab-combinado",
+          "via-nombrada": "vn-parapatelar",
+          "partes-blandas": [
+            "pb-colgajo",
+            "pb-periostio",
+            "pb-internervioso",
+            "pb-cierre"
+          ],
+          "herida": "he-unica",
+          "ventana": "vt-si"
+        },
+        "9": {
+          "basicas": [
+            "tb-joystick",
+            "tb-pinzas"
+          ],
+          "avanzadas": [
+            "ta-distractor"
+          ],
+          "secuencia-articular": "sa-articular-primero",
+          "hundido": "hu-no",
+          "provisional": [
+            "pv-agujas",
+            "pv-tornillo"
+          ],
+          "control": [
+            "cn-proyecciones",
+            "cn-longitud",
+            "cn-eje",
+            "cn-rotacion",
+            "cn-articular"
+          ]
+        }
+      },
+      "mensaje": "Todo bloque articular se reduce de forma anatómica y bajo visión, aunque el resto de la fractura se puentee. La ligamentotaxis alinea, pero no enfrenta dos cóndilos que han rotado entre sí.",
+      "refs": [
+        "ref-matta-1996",
+        "ref-mast-1989"
+      ]
+    },
+    {
+      "id": "humero-distal-puenteado",
+      "titulo": "Puentear el bloque articular del húmero distal",
+      "region": "Húmero distal · 13C",
+      "minutos": 4,
+      "resumen": "Pseudoartrosis intercondílea y codo con arco de 40 grados al año de la cirugía.",
+      "pasoClave": 5,
+      "loQueSeHizo": "Mujer de 63 años, caída sobre el codo, húmero distal 13C2. Se decidió estabilidad absoluta para el bloque articular, pero al planificar el principio se optó por «puentear con una placa larga posterior» para no abrir demasiado, con la idea de que el callo cerrara el trazo intercondíleo.",
+      "estadoError": {
+        "2": {
+          "hueso": "h-1",
+          "segmento": "s-13",
+          "tipo": "t-13C"
+        },
+        "3": {
+          "zonas": "z-unica",
+          "estabilidad": "e-absoluta"
+        },
+        "4": {
+          "tipo-reduccion": "t-anatomica",
+          "via": "v-directa"
+        },
+        "5": {
+          "fuerza": [
+            "f-cizallamiento"
+          ],
+          "principio": [
+            "pr-ferulaje"
+          ],
+          "modo-ferulaje": [
+            "mf-placa-puente"
+          ]
+        },
+        "6": {
+          "implante": [
+            "i-placa"
+          ],
+          "funcion-placa": [
+            "fp-puente"
+          ],
+          "diseno-placa": "pl-bloqueada",
+          "hueso-huesped": "hh-normal"
+        }
+      },
+      "porQue": "Una superficie articular no cura por callo. El callo es hueso desorganizado que crece hacia fuera del foco, y en una articulación eso significa incongruencia y bloqueo mecánico. Por eso el bloque articular exige consolidación directa, y la consolidación directa exige compresión. Elegir ferulaje donde se había decidido estabilidad absoluta es una contradicción interna del plan: el principio elegido produce justo la biología contraria a la que se buscaba. Y hay una segunda consecuencia, que en el codo pesa tanto como la primera: sin compresión no hay estabilidad suficiente para movilizar en la primera semana, y el codo que no se mueve pronto se queda rígido para siempre.",
+      "loQueTocaba": "El 13C es el ejemplo clásico de las dos zonas en un solo hueso. Primero se convierte el bloque articular en una pieza única, con reducción anatómica y compresión interfragmentaria entre los cóndilos: un tornillo de tracción transversal. Después ese bloque ya reconstruido se une a la diáfisis con dos placas en columnas —una medial y otra lateral, perpendiculares o paralelas según la escuela—, que es donde sí cabe el ferulaje. Compresión arriba, ferulaje abajo, en un solo constructo. Y el objetivo declarado del montaje es permitir movilizar el codo en la primera semana.",
+      "estadoCorrecto": {
+        "2": {
+          "hueso": "h-1",
+          "segmento": "s-13",
+          "tipo": "t-13C"
+        },
+        "3": {
+          "zonas": "z-dos",
+          "estab-articular": "ea-absoluta",
+          "estab-metafisis": "em-relativa",
+          "palancas": [
+            "p-longitud",
+            "p-densidad",
+            "p-bloqueada"
+          ]
+        },
+        "4": {
+          "tipo-articular": "ta-anatomica",
+          "via-articular": "va-directa",
+          "tipo-meta": "tm-funcional",
+          "via-meta": "vm-directa"
+        },
+        "5": {
+          "fuerza": [
+            "f-cizallamiento"
+          ],
+          "principio-articular": [
+            "pa-compresion"
+          ],
+          "principio-meta": [
+            "pm-ferulaje"
+          ],
+          "modo-compresion": [
+            "mc-tornillo-tecnica"
+          ],
+          "modo-ferulaje": [
+            "mf-placa-puente"
+          ],
+          "neutralizacion": "n-si"
+        },
+        "6": {
+          "implante": [
+            "i-placa",
+            "i-tornillo"
+          ],
+          "tipo-tornillo": [
+            "tor-cortical"
+          ],
+          "funcion-placa": [
+            "fp-puente",
+            "fp-proteccion"
+          ],
+          "diseno-placa": "pl-bloqueada",
+          "hueso-huesped": "hh-normal"
+        },
+        "7": {
+          "posicion": "pos-prono",
+          "traccion": "tr-gravedad",
+          "imagen": [
+            "im-dos-planos"
+          ],
+          "proteccion": [
+            "pt-presion",
+            "pt-ojos",
+            "pt-plexo",
+            "pt-via"
+          ],
+          "checklist": [
+            "ck-abordaje",
+            "ck-reduccion",
+            "ck-imagen",
+            "ck-seguridad",
+            "ck-anestesia"
+          ]
+        },
+        "8": {
+          "tipo-abordaje": "ab-extenso",
+          "via-nombrada": "vn-posterior-codo",
+          "partes-blandas": [
+            "pb-colgajo",
+            "pb-periostio",
+            "pb-internervioso",
+            "pb-cierre"
+          ],
+          "herida": "he-unica",
+          "ventana": "vt-si"
+        }
+      },
+      "mensaje": "El cartílago no hace callo. Todo bloque articular pide compresión y consolidación directa, y en el codo además pide un montaje que permita mover en la primera semana: la rigidez decide el resultado tanto como la consolidación.",
+      "refs": [
+        "ref-perren-2002",
+        "ref-schemitsch-mckee"
+      ]
+    },
+    {
+      "id": "acetabulo-posicion-equivocada",
+      "titulo": "Pared posterior del acetábulo en decúbito supino",
+      "region": "Acetábulo · 62B",
+      "minutos": 4,
+      "resumen": "Campo montado, paciente pintado, y la pared posterior inalcanzable: hubo que desmontar y recolocar, con dos horas de más de anestesia.",
+      "pasoClave": 7,
+      "loQueSeHizo": "Varón de 34 años, colisión frontal con luxación posterior de cadera reducida en urgencias. La TC muestra una fractura de pared posterior con fragmento marginal impactado. En el parte se escribió «acetábulo» sin más, y el paciente entró en supino porque «es como se ponen las caderas».",
+      "estadoError": {
+        "2": {
+          "hueso": "h-6",
+          "segmento": "s-62",
+          "tipo": "t-62B",
+          "cl-letournel": "let-pared-post"
+        },
+        "3": {
+          "zonas": "z-dos",
+          "estab-articular": "ea-absoluta",
+          "estab-metafisis": "em-relativa"
+        },
+        "4": {
+          "tipo-articular": "ta-anatomica",
+          "via-articular": "va-directa",
+          "tipo-meta": "tm-funcional",
+          "via-meta": "vm-directa"
+        },
+        "7": {
+          "posicion": "pos-supino",
+          "traccion": "tr-manual",
+          "imagen": [
+            "im-dos-planos"
+          ],
+          "proteccion": [
+            "pt-presion"
+          ],
+          "checklist": [
+            "ck-anestesia"
+          ]
+        }
+      },
+      "porQue": "En el acetábulo la posición y el abordaje son una sola decisión, y la clasificación de Letournel no describe: prescribe. La pared posterior se alcanza por Kocher-Langenbeck, y ese abordaje exige prono o lateral, con la rodilla flexionada y la cadera extendida para descargar el ciático. En supino no hay forma de llegar, y no es un problema que se arregle ampliando la incisión. El error no fue quirúrgico sino de planificación: se saltó la lista de verificación de la posición, que existe precisamente para que esto se descubra antes de pintar. Cambiar la posición antes de empezar cuesta quince minutos; con el campo montado cuesta desmontar, volver a preparar, volver a pintar, y sumar tiempo de anestesia y riesgo de contaminación.",
+      "loQueTocaba": "Nombrar el patrón según Letournel antes de entrar, y dejar que sea él quien elija la posición. Pared posterior significa Kocher-Langenbeck, y por tanto prono o lateral. Con el paciente ya colocado y todavía sin pintar se comprueban las proyecciones alares y obturatrices con el arco en C, porque son las que van a guiar la reducción y son las que la mesa bloquea con más facilidad. Y el fragmento marginal impactado se anticipa: no lo levanta la ligamentotaxis, hay que elevarlo y rellenar el defecto subcondral.",
+      "estadoCorrecto": {
+        "2": {
+          "hueso": "h-6",
+          "segmento": "s-62",
+          "tipo": "t-62B",
+          "cl-letournel": "let-pared-post"
+        },
+        "3": {
+          "zonas": "z-dos",
+          "estab-articular": "ea-absoluta",
+          "estab-metafisis": "em-relativa",
+          "palancas": [
+            "p-longitud",
+            "p-densidad",
+            "p-bloqueada"
+          ]
+        },
+        "4": {
+          "tipo-articular": "ta-anatomica",
+          "via-articular": "va-directa",
+          "tipo-meta": "tm-funcional",
+          "via-meta": "vm-directa"
+        },
+        "5": {
+          "fuerza": [
+            "f-cizallamiento"
+          ],
+          "principio-articular": [
+            "pa-compresion",
+            "pa-sosten"
+          ],
+          "principio-meta": [
+            "pm-ferulaje"
+          ],
+          "modo-compresion": [
+            "mc-tornillo-tecnica"
+          ],
+          "modo-ferulaje": [
+            "mf-placa-puente"
+          ],
+          "neutralizacion": "n-si"
+        },
+        "6": {
+          "implante": [
+            "i-placa",
+            "i-tornillo"
+          ],
+          "tipo-tornillo": [
+            "tor-cortical"
+          ],
+          "funcion-placa": [
+            "fp-sosten",
+            "fp-proteccion"
+          ],
+          "diseno-placa": "pl-no-bloqueada",
+          "hueso-huesped": "hh-normal",
+          "defecto": "df-sintetico"
+        },
+        "7": {
+          "posicion": "pos-prono",
+          "traccion": "tr-distractor",
+          "imagen": [
+            "im-dos-planos",
+            "im-oblicuas"
+          ],
+          "proteccion": [
+            "pt-presion",
+            "pt-ojos",
+            "pt-plexo",
+            "pt-via"
+          ],
+          "checklist": [
+            "ck-abordaje",
+            "ck-reduccion",
+            "ck-imagen",
+            "ck-seguridad",
+            "ck-anestesia"
+          ]
+        },
+        "8": {
+          "tipo-abordaje": "ab-extenso",
+          "via-nombrada": "vn-kocher-langenbeck",
+          "partes-blandas": [
+            "pb-colgajo",
+            "pb-periostio",
+            "pb-internervioso",
+            "pb-cierre"
+          ],
+          "herida": "he-unica",
+          "ventana": "vt-si"
+        },
+        "9": {
+          "basicas": [
+            "tb-joystick",
+            "tb-pinzas"
+          ],
+          "avanzadas": [
+            "ta-laminares"
+          ],
+          "secuencia-articular": "sa-articular-primero",
+          "hundido": "hu-si",
+          "provisional": [
+            "pv-agujas"
+          ],
+          "control": [
+            "cn-proyecciones",
+            "cn-longitud",
+            "cn-eje",
+            "cn-rotacion",
+            "cn-articular"
+          ]
+        }
+      },
+      "mensaje": "En el acetábulo el patrón elige la posición, y la posición elige el abordaje. Se decide antes de entrar a quirófano, no con el paciente ya pintado.",
+      "refs": [
+        "ref-letournel",
+        "ref-matta-1996"
+      ]
+    },
+    {
+      "id": "sindesmosis-comprimida",
+      "titulo": "Comprimir la sindesmosis",
+      "region": "Segmento maleolar · 44C",
+      "minutos": 4,
+      "resumen": "Dorsiflexión limitada a 5 grados y dolor anterolateral persistente; la TC comparativa mostró la mortaja estrechada respecto al lado sano.",
+      "pasoClave": 6,
+      "loQueSeHizo": "Varón de 37 años, torsión del tobillo jugando al fútbol. Fractura del peroné por encima de la sindesmosis, dolor en toda la pierna. Se fijó el peroné y, tras comprobar inestabilidad sindesmótica con la prueba de estrés, se colocó un tornillo de rosca parcial apretándolo a fondo «para cerrar bien la sindesmosis», con el pie en equino relajado sobre la mesa.",
+      "estadoError": {
+        "2": {
+          "hueso": "h-4",
+          "segmento": "s-44",
+          "tipo": "t-44C",
+          "cl-lauge-hansen": "lh-per"
+        },
+        "3": {
+          "zonas": "z-unica",
+          "estabilidad": "e-absoluta"
+        },
+        "4": {
+          "tipo-reduccion": "t-anatomica",
+          "via": "v-directa"
+        },
+        "5": {
+          "principio": [
+            "pr-compresion"
+          ],
+          "modo-compresion": [
+            "mc-tornillo-diseno"
+          ]
+        },
+        "6": {
+          "implante": [
+            "i-placa",
+            "i-tornillo"
+          ],
+          "tipo-tornillo": [
+            "tor-parcial"
+          ],
+          "funcion-placa": [
+            "fp-proteccion"
+          ],
+          "diseno-placa": "pl-no-bloqueada",
+          "hueso-huesped": "hh-normal"
+        }
+      },
+      "porQue": "La sindesmosis no es un foco de fractura: es una articulación con movimiento fisiológico. El peroné rota y se desplaza lateralmente unos milímetros con cada paso de dorsiflexión, porque la tróclea astragalina es más ancha por delante y necesita que la mortaja se abra para alojarla. Un tornillo de rosca parcial apretado a fondo hace exactamente lo contrario: aproxima el peroné a la tibia y estrecha la mortaja de forma permanente. Con el pie en equino durante la colocación, además, se fija esa estrechez en la posición equivocada. El resultado es un tobillo que no dorsiflexiona y que duele por delante. Y hay un segundo error encadenado: con un peroné alto había que descartar una Maisonneuve palpando toda la pierna, porque cuanto más sube el trazo más membrana interósea está rota.",
+      "loQueTocaba": "El implante correcto es un tornillo de POSICIÓN: rosca completa, que atraviesa las dos corticales sin sobreperforar la próxima, colocado sin comprimir y con el tobillo en dorsiflexión neutra. Su función no es cerrar nada sino mantener la relación anatómica mientras cicatrizan los ligamentos. La reducción de la sindesmosis se comprueba, además, contra el lado sano, porque la malreducción sindesmótica es la causa más frecuente de mal resultado del tobillo y en la radiografía simple no se ve: si hay duda, TC comparativa intraoperatoria o postoperatoria precoz. Y el peroné se palpa entero antes de terminar.",
+      "estadoCorrecto": {
+        "2": {
+          "hueso": "h-4",
+          "segmento": "s-44",
+          "tipo": "t-44C",
+          "cl-lauge-hansen": "lh-per"
+        },
+        "3": {
+          "zonas": "z-unica",
+          "estabilidad": "e-absoluta"
+        },
+        "4": {
+          "tipo-reduccion": "t-anatomica",
+          "via": "v-directa"
+        },
+        "5": {
+          "fuerza": [
+            "f-torsion"
+          ],
+          "principio": [
+            "pr-sosten"
+          ]
+        },
+        "6": {
+          "implante": [
+            "i-placa",
+            "i-tornillo"
+          ],
+          "tipo-tornillo": [
+            "tor-posicion",
+            "tor-cortical"
+          ],
+          "funcion-placa": [
+            "fp-proteccion"
+          ],
+          "diseno-placa": "pl-no-bloqueada",
+          "hueso-huesped": "hh-normal"
+        },
+        "9": {
+          "basicas": [
+            "tb-pinzas",
+            "tb-maniobras"
+          ],
+          "avanzadas": [
+            "ta-ninguna"
+          ],
+          "hundido": "hu-no",
+          "provisional": [
+            "pv-agujas",
+            "pv-pinzas"
+          ],
+          "control": [
+            "cn-proyecciones",
+            "cn-longitud",
+            "cn-eje",
+            "cn-rotacion",
+            "cn-articular"
+          ]
+        }
+      },
+      "mensaje": "La sindesmosis se posiciona, no se comprime. Tornillo de rosca completa, sin apretar contra la tibia y con el tobillo en neutro; y la reducción se comprueba contra el lado sano, porque en la radiografía simple la malreducción no se ve.",
+      "refs": [
+        "ref-lauge-hansen",
+        "ref-biomec-trauma"
+      ]
+    },
+    {
+      "id": "etc-en-paciente-inestable",
+      "titulo": "Cirugía definitiva en un paciente que no la aguanta",
+      "region": "Fémur y tibia abiertos · politraumatizado",
+      "minutos": 6,
+      "resumen": "Deterioro respiratorio intraoperatorio, coagulopatía y traslado a cuidados intensivos con la osteosíntesis a medias.",
+      "pasoClave": 1,
+      "loQueSeHizo": "Varón de 26 años, atropello. Fractura de diáfisis femoral cerrada y fractura abierta de tibia Gustilo IIIB. A su llegada, lactato de 4,8, tensión que solo se mantiene con volumen y temperatura de 34,8 grados. A las cuatro horas se decide llevarlo a quirófano para enclavado femoral definitivo más osteosíntesis definitiva de la tibia y cobertura, en un solo tiempo de más de seis horas.",
+      "estadoError": {
+        "1": {
+          "estado-fisiologico": "inestable",
+          "estrategia": "etc",
+          "partes-blandas": "abierta-gustilo-3b",
+          "compartimental": "sin-datos",
+          "contaminacion": "limpia"
+        },
+        "2": {
+          "hueso": "h-3",
+          "segmento": "s-32",
+          "tipo": "t-32B"
+        },
+        "3": {
+          "zonas": "z-unica",
+          "estabilidad": "e-relativa",
+          "palancas": [
+            "p-clavo-trabajo",
+            "p-clavo-bloqueo"
+          ]
+        },
+        "5": {
+          "principio": [
+            "pr-ferulaje"
+          ],
+          "modo-ferulaje": [
+            "mf-clavo"
+          ]
+        },
+        "6": {
+          "implante": [
+            "i-clavo"
+          ],
+          "clavo-config": [
+            "cl-fresado",
+            "cl-estatico"
+          ],
+          "hueso-huesped": "hh-normal"
+        }
+      },
+      "porQue": "El paciente estaba en la tríada letal —hipotermia, acidosis y coagulopatía en camino— y la cirugía definitiva es, en ese contexto, un segundo golpe. El enclavado fresado del fémur añade una carga inflamatoria considerable justo cuando la respuesta del paciente ya está desbordada, y seis horas de quirófano añaden hipotermia, sangrado y transfusión. La estrategia no la elige la fractura: la elige el estado fisiológico del paciente. Un lactato de 4,8 con tensión dependiente de volumen no es un paciente estable con una fractura urgente: es un paciente inestable con una fractura que puede esperar. Y la fractura abierta IIIB necesitaba desbridamiento urgente, sí, pero desbridamiento y estabilización temporal, no reconstrucción definitiva.",
+      "loQueTocaba": "Control de daños. En quirófano, lo que no espera: desbridamiento amplio de la tibia abierta con lavado, antibiótico ya iniciado en urgencias, y estabilización temporal de los dos huesos con fijador externo. Nada más. Después, reanimación en cuidados intensivos hasta normalizar lactato, temperatura y coagulación, que suele llevar de veinticuatro a setenta y dos horas. Y entonces, con el paciente ya recuperado y las partes blandas evaluadas de nuevo, la conversión a osteosíntesis definitiva y la cobertura, en un tiempo programado. Si a las pocas horas el paciente respondiera bien a la reanimación, la estrategia intermedia —tratamiento apropiado precoz— permitiría adelantar la definitiva del fémur, pero eso se decide con los parámetros fisiológicos en la mano, no con el reloj.",
+      "estadoCorrecto": {
+        "1": {
+          "estado-fisiologico": "inestable",
+          "estrategia": "dco",
+          "partes-blandas": "abierta-gustilo-3b",
+          "compartimental": "sin-datos",
+          "contaminacion": "limpia"
+        },
+        "2": {
+          "hueso": "h-3",
+          "segmento": "s-32",
+          "tipo": "t-32B"
+        },
+        "3": {
+          "zonas": "z-unica",
+          "estabilidad": "e-relativa",
+          "palancas": [
+            "p-tutor"
+          ]
+        },
+        "5": {
+          "principio": [
+            "pr-ferulaje"
+          ],
+          "modo-ferulaje": [
+            "mf-tutor"
+          ]
+        },
+        "6": {
+          "implante": [
+            "i-tutor"
+          ],
+          "tutor-tipo": "tu-monoplanar",
+          "hueso-huesped": "hh-normal"
+        },
+        "10": {
+          "plan-b": [
+            "pb-implante",
+            "pb-injerto"
+          ],
+          "vigilancia": [
+            "vg-infeccion",
+            "vg-nounion"
+          ],
+          "tipo-nounion": "nu-septica",
+          "huesped": [
+            "hu-ninguno"
+          ]
+        }
+      },
+      "mensaje": "La estrategia la elige el paciente, no la fractura. Ante un inestable, control de daños: desbridar lo que no espera, estabilizar con fijador y reanimar. La osteosíntesis definitiva es una operación electiva que se hace cuando el paciente puede tolerarla.",
+      "refs": [
+        "ref-pape-2007",
+        "ref-pfeifer-2023",
+        "ref-vallier-2013",
+        "ref-boast"
+      ]
+    }
+  ]
+}

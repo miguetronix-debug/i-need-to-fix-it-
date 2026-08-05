@@ -1,0 +1,367 @@
+{
+  "origen": "LIBRO_Los_10_pasos_completo.docx",
+  "titulo": "Paso 3 · El tipo de estabilidad",
+  "numeroPaso": 3,
+  "bloques": [
+    {
+      "tipo": "parrafo",
+      "texto": "Deformación interfragmentaria y longitud de trabajo."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Toda osteosíntesis aporta estabilidad, pero no toda fractura necesita la misma. La estabilidad no es un fin en sí mismo: es un medio para conseguir una biología de consolidación determinada. Elegir entre estabilidad absoluta y relativa es, en realidad, elegir entre dos formas de curar el hueso. Comprender por qué es así —y no aprenderlo como dogma— es lo que permite aplicarlo a cualquier fractura."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "mapa",
+      "titulo": "Mapa del Paso 3",
+      "lineas": [
+        "A. Qué significa «estabilidad» en osteosíntesis.",
+        "B. El fundamento: la teoría de la deformación de Perren.",
+        "C. Las dos biologías de la consolidación.",
+        "D. La regla operativa: cuándo absoluta y cuándo relativa.",
+        "E. Cómo se «dosifica» la estabilidad relativa.",
+        "F. Errores conceptuales frecuentes."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "A. Qué significa «estabilidad»"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Estabilidad, en osteosíntesis, es el grado de movimiento relativo entre los fragmentos bajo carga fisiológica. No es una propiedad de «todo o nada», sino un continuo entre dos polos:"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Estabilidad absoluta: ausencia de movimiento interfragmentario bajo carga funcional. Se obtiene con compresión que genera fricción y anula la brecha."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Estabilidad relativa: se permite un micromovimiento controlado, proporcional a la carga. El foco se mueve, pero dentro de un margen que la biología tolera."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "La pregunta del Paso 3 no es «¿cuánta estabilidad?», sino «¿qué tipo de estabilidad necesita esta fractura para curar y para funcionar?». La respuesta nace de un principio físico: la deformación."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "B. La teoría de la deformación de Perren"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Stephan Perren explicó por qué unas fracturas consolidan con callo y otras sin él. La clave es la deformación interfragmentaria (interfragmentary strain): el desplazamiento relativo del foco dividido por el ancho de la brecha."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "idea",
+      "titulo": "La fórmula conceptual",
+      "lineas": [
+        "Deformación (ε) = cambio de longitud de la brecha ÷ ancho original de la brecha.",
+        "Un mismo micromovimiento produce una deformación enorme en una brecha estrecha y pequeña en una brecha ancha o repartida entre muchas brechas."
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Cada tejido que intenta formarse en el foco solo sobrevive si la deformación local está por debajo de su tolerancia. Si la deformación supera ese umbral, el tejido se rompe y se reabsorbe; el foco no progresa."
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Tejido en el foco",
+        "Deformación que tolera (aprox.)"
+      ],
+      "filas": [
+        [
+          "Tejido de granulación",
+          "Hasta ~100 %"
+        ],
+        [
+          "Cartílago / fibrocartílago (callo blando)",
+          "~10–15 %"
+        ],
+        [
+          "Hueso laminar (consolidación directa)",
+          "~2 %"
+        ]
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "De aquí se deducen dos consecuencias que parecen paradójicas pero son la esencia del razonamiento:"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Una brecha estrecha con movimiento no consolida. Un trazo simple transverso con una pequeña separación, sometido a flexión, genera una deformación local altísima: ningún hueso laminar la tolera → reabsorción → no unión. Necesita anular la deformación (estabilidad absoluta, compresión) o repartirla sobre una distancia mayor (estabilidad relativa con suficiente longitud de trabajo)."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "La conminución, paradójicamente, ayuda. En una fractura multifragmentaria el movimiento total se reparte entre muchas brechas; la deformación en cada una es baja → se forma callo con facilidad. Por eso una fractura compleja consolida bien con un clavo (estabilidad relativa) y mal si intentamos comprimirla."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "idea",
+      "titulo": "Corolario clínico de Perren",
+      "lineas": [
+        "No comprimir lo conminuto; no dejar móvil con brecha estrecha lo simple. La morfología del trazo (Paso 2) dicta qué estrategia de deformación es viable."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "C. Las dos biologías de la consolidación"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Las dos estabilidades conducen a dos rutas de curación radicalmente distintas. No son mejor y peor: son adecuadas a contextos distintos."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "C.1 Consolidación primaria (directa) — estabilidad absoluta"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Con compresión y deformación casi nula, el hueso se repara sin callo visible, remodelándose directamente a través del foco. Históricamente lo describió Danis («soudure autogène», soldadura autógena) y lo desarrolló la escuela AO de Willenegger."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Curación por contacto (contact healing): donde las corticales se tocan, los conos perforantes (cutting cones) de osteoclastos y osteoblastos cruzan el foco siguiendo los sistemas de Havers, reconstituyendo hueso laminar orientado. No hay callo."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Curación por brecha (gap healing): en brechas pequeñas (<0,5–1 mm) y deformación <2 %, se rellena primero con hueso entretejido (woven) que luego se remodela a laminar. Más lenta que el contacto, pero igualmente «directa»."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Requisito imprescindible: deformación mínima. Por eso la estabilidad absoluta exige reducción anatómica y compresión; cualquier movimiento residual aborta la consolidación directa."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "C.2 Consolidación secundaria (indirecta) — estabilidad relativa"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Con micromovimiento controlado se forma callo, que es a la vez resultado y motor del proceso. Etapas:"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "1. Inflamación / hematoma: el hematoma fracturario es un órgano biológico; aporta células y señales. Preservarlo (reducción indirecta, MIPO) favorece la curación."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "2. Callo blando: tejido de granulación y fibrocartílago puentean el foco; toleran mucha deformación y empiezan a estabilizar."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "3. Callo duro: osificación endocondral e intramembranosa convierten el callo blando en hueso entretejido; el foco se rigidiza."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "4. Remodelación: el hueso entretejido se reorganiza en laminar según las cargas (ley de Wolff), restaurando la forma original."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "info",
+      "titulo": "El callo es auto-estabilizante",
+      "lineas": [
+        "Al crecer, el callo aumenta el diámetro y el momento de inercia del foco, reduciendo progresivamente la deformación. Cada etapa crea un entorno de menor deformación que permite la siguiente: un sistema que se estabiliza solo, siempre que haya vascularización y perfusión suficientes."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "D. La regla operativa: cuándo absoluta y cuándo relativa"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Traduciendo la biología a decisión clínica, la estabilidad se elige según la naturaleza del trazo y su localización:"
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Tipo (Paso 2)",
+        "Estabilidad",
+        "Por qué"
+      ],
+      "filas": [
+        [
+          "Articular (B/C)",
+          "ABSOLUTA",
+          "La superficie debe consolidar sin deformación; el escalón o el micromovimiento generan artrosis postraumática."
+        ],
+        [
+          "Diáfisis/metáfisis simple a comprimir",
+          "ABSOLUTA",
+          "Trazo reconstruible; la compresión anula la brecha y da fricción."
+        ],
+        [
+          "Diáfisis (A/B/C) tratada con clavo",
+          "RELATIVA",
+          "Reconstruir cada fragmento es innecesario; basta restaurar el eje y dejar que el callo cure."
+        ],
+        [
+          "Metáfisis/diáfisis multifragmentaria",
+          "RELATIVA",
+          "La conminución reparte la deformación; el puenteo respeta la biología."
+        ]
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Las construcciones mixtas"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Muchas fracturas exigen las dos estabilidades en el mismo hueso: la superficie articular se reconstruye con estabilidad absoluta (compresión, tornillos de tracción) mientras la metáfisis conminuta que la une a la diáfisis se puentea con estabilidad relativa (placa puente). Es el patrón de la meseta tibial, el pilón o el húmero distal complejos. Reconocer las dos zonas es clave para no aplicar una sola filosofía a toda la fractura."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "E. Cómo se «dosifica» la estabilidad relativa"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "La estabilidad relativa no es «poca fijación»: es una cantidad de movimiento calculada. Demasiada rigidez suprime el callo; demasiada laxitud lo retrasa o impide. Existe una ventana óptima, y se ajusta con la ingeniería de la construcción."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Los determinantes de la rigidez"
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Factor",
+        "Efecto sobre la rigidez / deformación"
+      ],
+      "filas": [
+        [
+          "Longitud de trabajo (working length)",
+          "Distancia del implante que «trabaja» a través del foco. Mayor longitud de trabajo → menor rigidez → más deformación repartida. En la placa, distancia entre los tornillos más internos a cada lado del foco; en el clavo, entre los puntos de contacto cortical proximal y distal."
+        ],
+        [
+          "Densidad y distribución de tornillos",
+          "Menos tornillos y más separados (configuración near-far, dejar agujeros vacíos junto al foco) reducen rigidez y reparten la carga; concentrarlos junto al foco la concentra y favorece el fallo."
+        ],
+        [
+          "Span ratio de la placa",
+          "Placa larga sobre fractura corta (relación de cobertura alta) distribuye mejor las cargas."
+        ],
+        [
+          "Diámetro del clavo / fresado",
+          "La rigidez a flexión crece con la 4.ª potencia del radio; un clavo más grueso (y el fresado que lo permite) aumenta mucho la estabilidad."
+        ],
+        [
+          "Bloqueado vs no bloqueado",
+          "La placa bloqueada es de ángulo fijo (fijador interno): no comprime la placa al hueso, preserva la vascularización perióstica y sostiene hueso osteoporótico, pero es más rígida si se usa mal."
+        ],
+        [
+          "Distancia placa-hueso",
+          "Una placa algo separada del hueso reduce la rigidez del montaje (afecta a la longitud de trabajo efectiva)."
+        ]
+      ]
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "info",
+      "titulo": "La ventana de Ricitos de Oro (Goldilocks)",
+      "lineas": [
+        "Demasiado rígido (placa corta, tornillos junto al foco, montaje muy denso): suprime el callo → no unión y fallo por fatiga.",
+        "Demasiado laxo: deformación excesiva → reabsorción, retardo de consolidación.",
+        "Justo: micromovimiento que estimula callo abundante y rápido. La estabilidad relativa se diseña, no se improvisa."
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "El implante es un puente temporal"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Ninguna construcción de estabilidad relativa sobrevive indefinidamente a la carga cíclica: si el hueso no consolida, el implante falla por fatiga. El fallo del material casi nunca es «mala suerte»: es la señal de que el foco nunca curó, casi siempre por un error mecánico (rigidez inadecuada) o biológico (foco desvitalizado). El objetivo es que el hueso cure antes de que el implante se agote."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "F. Errores conceptuales frecuentes"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Comprimir la conminución. Aplicar compresión a una fractura multifragmentaria deja brechas con deformación local altísima y suprime el callo: foco inestable y fallo del implante. La conminución pide puenteo, no compresión."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Placa corta y rígida sobre una transversa diafisaria simple. Crea una brecha estrecha con micromovimiento (deformación alta) que no consolida ni por vía directa (falta compresión) ni por callo (demasiado rígida para generarlo): «tierra de nadie» mecánica. Hay que decidir: o compresión absoluta, o alargar la longitud de trabajo para permitir callo."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Confundir estabilidad con rigidez. Más rígido no es «más estable» en sentido útil: puede ser justamente lo que impide la consolidación. La estabilidad correcta es la que produce la biología deseada."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "sintesis",
+      "titulo": "Síntesis del Paso 3",
+      "lineas": [
+        "La estabilidad es un medio para una biología. La deformación (Perren) explica por qué: el tejido solo se forma si la deformación local está bajo su tolerancia. Articular y trazo simple a reconstruir → estabilidad absoluta → consolidación directa, sin callo. Diáfisis y conminución → estabilidad relativa → consolidación por callo, que se dosifica con la longitud de trabajo y la rigidez del montaje. Elegir la estabilidad es elegir cómo va a curar el hueso."
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Definida la estabilidad, el siguiente paso decide cuán perfecta debe ser la reducción —anatómica o funcional— y por qué ambas decisiones van de la mano."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "Evidencia, autoevaluación y lecturas"
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "evidencia",
+      "titulo": "Evidencia (nivel indicativo)",
+      "lineas": [
+        "Base conceptual de Perren (Nivel V): Perren SM, «Evolution of internal fixation», J Bone Joint Surg Br 2002: teoría de la deformación y estabilidad relativa/absoluta.",
+        "Placa bloqueada vs convencional (Nivel II): su superioridad se concentra en hueso osteoporótico y metáfisis conminuta; no hay ventaja universal en hueso de buena calidad."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Autoevaluación"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. ¿Por qué una fractura conminuta consolida mejor con estabilidad relativa que con compresión?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. Porque el movimiento se reparte entre muchas brechas → la deformación en cada una cae por debajo de la tolerancia del callo; comprimir crearía brechas de alta deformación que no consolidan."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. ¿Qué error mecánico convierte una placa en «tierra de nadie»?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. Una placa corta y rígida sobre una transversa simple deja una brecha estrecha con micromovimiento: ni compresión (directa) ni callo (demasiado rígida). Solución: comprimir, o alargar la longitud de trabajo."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Lecturas recomendadas"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Essential Biomechanics for Orthopedic Trauma (Springer), caps. 1–2."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Manual AO, principios de estabilidad y biología de la consolidación."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Los niveles de evidencia son orientativos y se ofrecen para guiar la lectura crítica, no como recomendación clínica cerrada."
+    }
+  ]
+}

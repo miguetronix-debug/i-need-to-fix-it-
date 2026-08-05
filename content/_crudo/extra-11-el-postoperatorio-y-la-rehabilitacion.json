@@ -1,0 +1,168 @@
+{
+  "origen": "LIBRO_Los_10_pasos_completo.docx",
+  "titulo": "El postoperatorio y la rehabilitación",
+  "numeroPaso": null,
+  "bloques": [
+    {
+      "tipo": "parrafo",
+      "texto": "El plan no termina cuando se cierra la piel. La rehabilitación determina el resultado funcional tanto como la fijación: una osteosíntesis impecable seguida de una inmovilización prolongada produce un hueso curado dentro de un miembro rígido e inútil. Por eso el postoperatorio se piensa antes de operar, no después; es el complemento natural de los diez pasos."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "mapa",
+      "titulo": "Mapa del capítulo",
+      "lineas": [
+        "A. El principio: proteger lo fijado, movilizar lo que puede moverse.",
+        "B. La carga: del no apoyo al apoyo completo.",
+        "C. Movilización precoz vs inmovilización.",
+        "D. Seguimiento, consolidación y señales de alarma."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "A. El principio rector"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "La rehabilitación equilibra dos fuerzas opuestas: proteger la construcción mientras el hueso cura y movilizar para no perder función. El punto de equilibrio lo fija la estabilidad lograda (Paso 3): una fijación estable autoriza a mover antes; una construcción de estabilidad relativa frágil obliga a más cautela."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "B. La carga: una decisión que nace del implante"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "La progresión de carga depende del tipo de implante (Paso 6) y del patrón:"
+    },
+    {
+      "tipo": "tabla",
+      "encabezados": [
+        "Pauta",
+        "Significado",
+        "Cuándo"
+      ],
+      "filas": [
+        [
+          "Sin apoyo (NWB)",
+          "Cero carga sobre el miembro.",
+          "Articulares conminutas, montajes frágiles, partes blandas en riesgo."
+        ],
+        [
+          "Toque de dedos (TTWB)",
+          "Apoyo simbólico para equilibrio.",
+          "Transición temprana en muchas fracturas de miembro inferior."
+        ],
+        [
+          "Apoyo parcial (PWB)",
+          "Fracción del peso (p. ej., 20–50 %).",
+          "Progresión guiada según consolidación."
+        ],
+        [
+          "Según tolerancia (WBAT)",
+          "El paciente carga lo que el dolor permite.",
+          "Implantes de carga compartida (clavo); cada vez más precoz con evidencia favorable."
+        ],
+        [
+          "Apoyo completo",
+          "Carga total.",
+          "Consolidación radiográfica y clínica."
+        ]
+      ]
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Regla mnemónica: clavo (carga compartida) tolera apoyo precoz; placa puente (carga soportada) pide cautela hasta ver callo. La tendencia actual, con buena evidencia en varias fracturas de miembro inferior, es hacia el apoyo precoz según tolerancia cuando la fijación lo permite."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "C. Movilización precoz vs inmovilización"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Mover lo antes posible lo que puede moverse: el codo, el hombro y la mano castigan la inmovilización con rigidez a veces irreversible; una fijación estable existe precisamente para permitir el movimiento precoz."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Controlar edema y dolor: elevación, frío, analgesia multimodal; el edema mantenido alimenta la rigidez y el SDRC."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Tromboprofilaxis: según el riesgo individual en trauma de miembro inferior e inmovilización."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "D. Seguimiento, consolidación y señales de alarma"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Consolidación: se juzga por la clínica (ausencia de dolor a la carga) y la radiología (puentes de callo o borramiento del trazo); guía la progresión de carga y el alta."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Señales de alarma: dolor creciente, fiebre, secreción (infección); pérdida de reducción o aflojamiento (fallo de fijación); dolor mecánico persistente con halo radiolúcido (no unión incipiente). Detectarlas a tiempo conecta con el Paso 10."
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "sintesis",
+      "titulo": "Síntesis",
+      "lineas": [
+        "La rehabilitación se planifica antes de operar. La estabilidad lograda y el tipo de implante deciden cuánto y cuándo se carga y se mueve. Proteger lo fijado y movilizar lo móvil; vigilar consolidación y señales de alarma. Un hueso curado dentro de un miembro rígido es un fracaso funcional, aunque la radiografía sea perfecta."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 3,
+      "texto": "Evidencia, autoevaluación y lecturas"
+    },
+    {
+      "tipo": "recuadro",
+      "variante": "evidencia",
+      "titulo": "Evidencia (nivel indicativo)",
+      "lineas": [
+        "Carga precoz según tolerancia (Nivel I–II): evidencia creciente de que el apoyo precoz es seguro y mejora la función en varias fracturas de miembro inferior estabilizadas (estudios en tobillo, cadera y fracturas periarticulares)."
+      ]
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Autoevaluación"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. ¿Cómo influye el tipo de implante en la pauta de carga?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. Un implante de carga compartida (clavo) tolera apoyo precoz; uno de carga soportada (placa puente) suele requerir más cautela hasta ver callo."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "P. ¿Cuál es el principal enemigo funcional del codo y la mano?"
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "R. La rigidez por inmovilización prolongada; cuando la fijación es estable, la movilización precoz es prioritaria."
+    },
+    {
+      "tipo": "seccion",
+      "nivel": 4,
+      "texto": "Lecturas recomendadas"
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "AO casts, splintage and bandages (orthofiles)."
+    },
+    {
+      "tipo": "vinheta",
+      "texto": "Protocolos institucionales de rehabilitación por región."
+    },
+    {
+      "tipo": "parrafo",
+      "texto": "Los niveles de evidencia son orientativos y se ofrecen para guiar la lectura crítica, no como recomendación clínica cerrada."
+    }
+  ]
+}
