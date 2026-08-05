@@ -8,7 +8,11 @@
 | https://i-need-to-fix-it.vercel.app | Alias del mismo despliegue. |
 | https://ineedtofixit.netlify.app | El primer intento, subido a mano. **Se queda congelado** hasta que vuelvas a arrastrar la carpeta. |
 
-Repositorio: `github.com/miguetronix-debug/i-need-to-fix-it`, con Root Directory `sitio` en Vercel.
+Repositorio: `github.com/miguetronix-debug/i-need-to-fix-it-` (con el guion final, que se coló al crearlo).
+
+**El ajuste que hace que todo funcione** está en Vercel, en *Settings → **Build and Deployment** → Root Directory → `sitio`*. Ojo: **no está en General**, que es donde la documentación vieja lo sitúa. Sin ese ajuste, Vercel sirve la raíz del repositorio y el app queda colgando de `/sitio/` con la portada vacía.
+
+Un `vercel.json` en la raíz con `outputDirectory` **no sustituye a ese ajuste**: en proyectos estáticos sin compilación, Vercel lo ignora. Se probó y no funciona.
 
 Verificado en las tres: el HTML llega entero, el *service worker* y el icono responden, y las figuras cargan. En Vercel además el manifest llega con su tipo correcto, que es lo que permite instalar la app.
 
