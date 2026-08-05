@@ -8,7 +8,7 @@ Está todo listo. Falta el paso que solo puedes dar tú, porque exige entrar con
 
 Para subirlo a GitHub o a Vercel hay que autenticarse, y **yo no manejo contraseñas ni tokens**: no me los pegues en el chat. La forma correcta de darme acceso a GitHub no es pasarme una credencial sino **autorizar el conector desde tus ajustes de Claude**, con lo que el permiso lo das tú y yo nunca veo la clave. Aun así, en esta sesión ese flujo no se puede completar, y para Vercel directamente no existe conector.
 
-Así que la división queda así: el repositorio está creado y con su primer commit hecho, el sitio está armado y probado, y lo único que falta son dos comandos y un clic.
+Así que la división queda así: el repositorio está creado, con todo confirmado; el sitio está armado y probado; y lo único que falta es que entres tú con tu cuenta.
 
 ---
 
@@ -24,19 +24,58 @@ Sirve para enseñárselo a alguien hoy mismo. La pega es que para actualizarlo h
 
 ## Opción B · GitHub y Vercel · la buena para mantenerlo
 
-El repositorio está inicializado, con dos commits y **nada pendiente de confirmar**. Solo falta conectarlo:
+El repositorio está inicializado, en la rama `main`, con cuatro commits y **nada pendiente de confirmar**. Pesa 29 MB y el archivo más grande son 1,2 MB, muy por debajo del límite de 100 MB por archivo de GitHub. Solo falta conectarlo.
+
+### Primero: la cuenta
+
+Si aún no la tienes, en **[github.com/signup](https://github.com/signup)**. Correo, contraseña, nombre de usuario. Gratis, y los repositorios privados también son gratis, así que puedes tenerlo oculto mientras lo pruebas.
+
+Ahora elige ruta. **La primera no usa el terminal y no exige tokens: es la que recomiendo.**
+
+---
+
+### Ruta 1 · GitHub Desktop · sin terminal *(recomendada)*
+
+1. Descarga **[desktop.github.com](https://desktop.github.com)** e instálalo.
+
+2. Ábrelo y entra con tu cuenta: *File → Options → Accounts → Sign in*. Se autentica por el navegador, así que **no tienes que crear ni pegar ningún token**. Este es el motivo principal para preferir esta ruta.
+
+3. **File → Add Local Repository…**, y elige la carpeta:
+
+   `/Users/drkush/Documents/Claude/Projects/libro de ortopedia/app-10-pasos`
+
+   La reconocerá como repositorio de git —ya lo es— y no te pedirá inicializar nada.
+
+4. Verás un botón **Publish repository**. Al pulsarlo te pregunta el nombre (`i-need-to-fix-it`) y si quieres mantenerlo privado. **Deja marcado *Keep this code private* de momento**; se puede hacer público después con un clic.
+
+5. **Publish repository**. Sube los 29 MB en un par de minutos.
+
+A partir de ahí, cada vez que cambies algo: el programa te lista lo que cambió, escribes una frase abajo a la izquierda, pulsas **Commit to main** y luego **Push origin**. Eso es todo.
+
+---
+
+### Ruta 2 · Terminal
+
+Funciona igual, pero **hay una trampa**: desde 2021 GitHub **no acepta la contraseña de tu cuenta** para subir código. Si te pide contraseña y escribes la tuya, falla siempre y el mensaje de error no lo explica bien. Hay que darle un *token* en su lugar.
+
+**Antes**, crea el repositorio vacío en **[github.com/new](https://github.com/new)** con el nombre `i-need-to-fix-it`, y **sin marcar** README, .gitignore ni licencia —si marcas alguno, el repositorio nace con un commit y el `push` es rechazado por historiales divergentes—.
+
+La forma más limpia de resolver la autenticación es instalar la herramienta oficial de GitHub, que también entra por el navegador y deja las credenciales guardadas:
+
+```bash
+brew install gh          # si no tienes Homebrew: brew.sh
+gh auth login            # elige GitHub.com → HTTPS → sí → Login with a web browser
+```
+
+Y ya:
 
 ```bash
 cd "/Users/drkush/Documents/Claude/Projects/libro de ortopedia/app-10-pasos"
-
-# 1 · crea el repositorio vacío en github.com/new  (por ejemplo: i-need-to-fix-it)
-#     sin README, sin .gitignore, sin licencia
-
-# 2 · conéctalo y sube
 git remote add origin https://github.com/TU_USUARIO/i-need-to-fix-it.git
-git branch -M main
 git push -u origin main
 ```
+
+*(Si prefieres no instalar nada: **github.com → foto de perfil → Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token**, marca el permiso `repo`, cópialo, y cuando el `git push` pida la contraseña **pega el token ahí**. Cópialo bien: GitHub no vuelve a enseñártelo.)
 
 ### Y después, en Vercel, clic a clic
 
