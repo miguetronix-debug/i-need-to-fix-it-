@@ -1284,10 +1284,16 @@ function pintarQ(){
   marcadorQuiz();
 }
 
-/* El service worker solo se registra si la app se sirve por http(s); abierta
-   como archivo suelto no hay ámbito donde registrarlo, y no pasa nada. */
+/* El service worker es lo que permite usar el app sin conexión. Solo se puede
+   registrar si la página se sirve por http(s): abierta como archivo suelto no
+   hay ámbito donde hacerlo, y eso no es un fallo.
+   Se registra de inmediato y no en el evento «load»: diferirlo hacía que en
+   algunos navegadores no llegara a registrarse nunca. Y si falla, se dice por
+   consola en vez de tragárselo, que fue lo que ocultó el problema. */
 if('serviceWorker' in navigator && location.protocol.indexOf('http')===0){
-  window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+  navigator.serviceWorker.register('sw.js').then(
+    r=>{ S.sw=true; },
+    e=>console.warn('El modo sin conexión no está disponible:', e && e.message));
 }
 
 S.dec=S.porPaso[1]={};

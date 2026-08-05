@@ -52,9 +52,9 @@ def main():
     if not (RAIZ / "prototipo.html").exists():
         raise SystemExit("Falta prototipo.html: ejecuta antes tools/build_prototipo.py")
 
-    if SITIO.exists():
-        shutil.rmtree(SITIO)
-    SITIO.mkdir()
+    # se sobrescribe en lugar de borrar y rehacer: en algunas carpetas
+    # sincronizadas el borrado no está permitido y no hace falta.
+    SITIO.mkdir(exist_ok=True)
 
     # el app, con el nombre que espera cualquier servidor estático
     shutil.copy(RAIZ / "prototipo.html", SITIO / "index.html")
@@ -62,7 +62,7 @@ def main():
         shutil.copy(RAIZ / f, SITIO / f)
 
     destino = SITIO / "content" / "figuras"
-    shutil.copytree(RAIZ / "content" / "figuras", destino)
+    shutil.copytree(RAIZ / "content" / "figuras", destino, dirs_exist_ok=True)
 
     (SITIO / "robots.txt").write_text(ROBOTS, encoding="utf-8")
     (SITIO / "vercel.json").write_text(VERCEL, encoding="utf-8")

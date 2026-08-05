@@ -1255,10 +1255,16 @@ function pintarQ(){
   marcadorQuiz();
 }
 
-/* El service worker solo se registra si la app se sirve por http(s); abierta
-   como archivo suelto no hay ámbito donde registrarlo, y no pasa nada. */
+/* El service worker es lo que permite usar el app sin conexión. Solo se puede
+   registrar si la página se sirve por http(s): abierta como archivo suelto no
+   hay ámbito donde hacerlo, y eso no es un fallo.
+   Se registra de inmediato y no en el evento «load»: diferirlo hacía que en
+   algunos navegadores no llegara a registrarse nunca. Y si falla, se dice por
+   consola en vez de tragárselo, que fue lo que ocultó el problema. */
 if('serviceWorker' in navigator && location.protocol.indexOf('http')===0){
-  window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+  navigator.serviceWorker.register('sw.js').then(
+    r=>{ S.sw=true; },
+    e=>console.warn('El modo sin conexión no está disponible:', e && e.message));
 }
 
 S.dec=S.porPaso[1]={};
@@ -1286,10 +1292,18 @@ SW = """/* Service worker de «I Need To Fix It».
    Estrategia: la app y sus figuras se guardan la primera vez y a partir de ahí
    se sirven del caché. Es lo que permite usarla en quirófano sin conexión. */
 const CACHE='infi-v{v}';
-const BASE=['./','./prototipo.html','./manifest.webmanifest','./icono.svg'];
+// En el sitio publicado el app se llama index.html; prototipo.html solo existe
+// en el repositorio. Y como addAll es atómico, basta con que uno de estos
+// devuelva 404 para que la instalación entera falle y el modo sin conexión no
+// llegue a funcionar nunca. Por eso se cachea uno a uno y se tolera el fallo.
+const BASE=['./','./index.html','./manifest.webmanifest','./icono.svg'];
 
 self.addEventListener('install',e=>{{
-  e.waitUntil(caches.open(CACHE).then(c=>c.addAll(BASE)).then(()=>self.skipWaiting()));
+  e.waitUntil(
+    caches.open(CACHE)
+      .then(c=>Promise.all(BASE.map(u=>c.add(u).catch(err=>
+        console.warn('[sw] no se pudo cachear',u,err&&err.message)))))
+      .then(()=>self.skipWaiting()));
 }});
 self.addEventListener('activate',e=>{{
   e.waitUntil(caches.keys().then(ks=>Promise.all(
