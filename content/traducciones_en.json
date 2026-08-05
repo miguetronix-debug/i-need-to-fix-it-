@@ -1,320 +1,941 @@
 {
-  "_nota": "Inglés del Paso 2, generado por tools/traducir_paso2.py. Los segmentos vienen del compendio AO original; el resto, de las tablas del script. No editar a mano: editar el script.",
+  "_nota": "Inglés del Paso 2, generado por tools/traducir_paso2.py. Es un calco parcial del paso: solo los campos traducidos, que el motor funde sobre el español. Los segmentos vienen del compendio AO original. No editar a mano: editar el script.",
   "pasos": {
     "2": {
-      "decisiones": {
-        "hueso": {
+      "decisiones": [
+        {
+          "id": "hueso",
           "pregunta": "Which bone?",
-          "opciones": {
-            "h-1": "1 · Humerus",
-            "h-14": "14 · Scapula",
-            "h-15": "15 · Clavicle",
-            "h-16": "16 · Thorax — ribs and sternum",
-            "h-2R": "2R · Radius",
-            "h-2U": "2U · Ulna",
-            "h-3": "3 · Femur",
-            "h-34": "34 · Patella",
-            "h-4": "4 · Tibia",
-            "h-4F": "4F · Fibula",
-            "h-6": "6 · Pelvis and acetabulum",
-            "h-7": "7 · Hand and carpus",
-            "h-8": "8 · Foot",
-            "h-5": "5 · Spine"
-          }
+          "opciones": [
+            {
+              "id": "h-1",
+              "etiqueta": "1 · Humerus"
+            },
+            {
+              "id": "h-14",
+              "etiqueta": "14 · Scapula"
+            },
+            {
+              "id": "h-15",
+              "etiqueta": "15 · Clavicle"
+            },
+            {
+              "id": "h-16",
+              "etiqueta": "16 · Thorax — ribs and sternum"
+            },
+            {
+              "id": "h-2R",
+              "etiqueta": "2R · Radius"
+            },
+            {
+              "id": "h-2U",
+              "etiqueta": "2U · Ulna"
+            },
+            {
+              "id": "h-3",
+              "etiqueta": "3 · Femur"
+            },
+            {
+              "id": "h-34",
+              "etiqueta": "34 · Patella"
+            },
+            {
+              "id": "h-4",
+              "etiqueta": "4 · Tibia"
+            },
+            {
+              "id": "h-4F",
+              "etiqueta": "4F · Fibula"
+            },
+            {
+              "id": "h-6",
+              "etiqueta": "6 · Pelvis and acetabulum"
+            },
+            {
+              "id": "h-7",
+              "etiqueta": "7 · Hand and carpus"
+            },
+            {
+              "id": "h-8",
+              "etiqueta": "8 · Foot"
+            },
+            {
+              "id": "h-5",
+              "etiqueta": "5 · Spine"
+            }
+          ]
         },
-        "segmento": {
+        {
+          "id": "segmento",
           "pregunta": "Which segment?",
-          "opciones": {
-            "s-11": "11 · Humerus, proximal end segment",
-            "s-12": "12 · Humerus, diaphyseal segment",
-            "s-13": "13 · Humerus, distal end segment",
-            "s-14": "14 · Scapula",
-            "s-15": "15 · Clavicle",
-            "s-15.1": "15.1 · Clavicle, proximal (medial) end segment",
-            "s-15.2": "15.2 · Clavicle, diaphyseal segment",
-            "s-15.3": "15.3 · Clavicle, distal (lateral) end segment",
-            "s-16": "16 · Thorax Anatomical location: Thorax",
-            "s-16._.1": "16._.1 · → The location number is added to the code between two dots after the bone code Location: Sternum, manubrium fracture",
-            "s-16._.2": "16._.2 · → The body side and rib number are added to the code (between dots ._._. after the bone code Example: Left second rib is",
-            "s-16._.3": "16._.3 · Sternum, xiphoid fracture",
-            "s-16._._": "16._._ · Thorax, Sternum",
-            "s-16._._.1": "16._._.1 · → The location number is added after the bone code and rib number identifier Example: Left second rib, posterior segment fracture is",
-            "s-16._._.2": "16._._.2 · Rib, shaft",
-            "s-16._._.3": "16._._.3 · Rib, anterior end segment",
-            "s-16._.__": "16._.__ · Thorax, Rib* The ribs are identified as follows Right side =",
-            "s-2R2": "2R2 · Radius 2R_ Ulna 2U_",
-            "s-2U1": "2U1 · Radius or Ulna, proximal end segment 2R1/",
-            "s-2U2": "2U2 · Radius or ulna diaphyseal segment 2R2/",
-            "s-2U3": "2U3 · Radius/Ulna, distal end segment 2R3/",
-            "s-31": "31 · Femur, proximal end segment",
-            "s-32": "32 · Femur, diaphyseal segment",
-            "s-33": "33 · Femur, distal end segment",
-            "s-34": "34 · Patella",
-            "s-41": "41 · Proximal end segment",
-            "s-42": "42 · Tibia, diaphyseal segment",
-            "s-43": "43 · Tibia, distal end segment",
-            "s-44": "44 · If the medial malleolar fracture is associated with a lateral side ankle injury, it is classified as a malleolar fracture",
-            "s-4F1": "4F1 · Fibula, proximal end segment",
-            "s-4F2": "4F2 · Fibula, diaphyseal segment",
-            "s-4F3": "4F3 · Fibula, distal end segment (excluding lateral malleolar fractures 44)",
-            "s-51": "51 · No injury Cervical",
-            "s-52": "52 · Spine 5 Spine, Cervical 51, Thoracic 52, Lumbar 53, and Sacrum 54 Thoracic",
-            "s-52._": "52._ · → The vertebral body number is added between two dots. __. after the location code. Example: Fracture of thoracic vertebra 7 is",
-            "s-53._": "53._ · Thoracic or Lumbar spine Location: Spine, thoracic 52.__. or lumbar",
-            "s-61": "61 · Pelvis, pelvic ring",
-            "s-62": "62 · Pelvis, acetabulum",
-            "s-71": "71 · Hand and carpus, Lunate",
-            "s-72": "72 · Hand and carpus, Scaphoid",
-            "s-73": "73 · Hand and carpus, Capitate",
-            "s-74": "74 · Hand and carpus, Hamate",
-            "s-75": "75 · Hand and carpus, Trapezium",
-            "s-76": "76 · Hand and carpus, Other carpal bones",
-            "s-76.1": "76.1 · Hand and carpus, pisiform",
-            "s-76.2": "76.2 · Hand and carpus, triquetrum",
-            "s-76.3": "76.3 · Hand and carpus, trapezoid",
-            "s-76._": "76._ · Other",
-            "s-76.__": "76.__ · Hand and carpus, other",
-            "s-77": "77 · Hand and carpus, Metacarpal",
-            "s-77._.1": "77._.1 · → Example code for the 3rd metacarpal is indicated with an underline",
-            "s-77._.2": "77._.2 · → Example code for the 3rd metacarpal is indicated with an underline",
-            "s-77._.3": "77._.3 · → Example code for the 3rd metacarpal is indicated with an underline",
-            "s-77.__": "77.__ · Hand and carpus, metacarpal",
-            "s-78": "78 · Hand and carpus, Phalanx",
-            "s-78._._.1": "78._._.1 · → The location is then added → Anatomical region+bone.Finger.Phalanx.Bone segment location → Example: Proximal thumb phalanx proximal end segment is",
-            "s-78._._.2": "78._._.2 · → Example code for proximal thumb phalanx is indicated with an underline",
-            "s-78._._.3": "78._._.3 · → Example code for proximal thumb phalanx is indicated with an underline",
-            "s-78._.__": "78._.__ · Hand and carpus, phalanx",
-            "s-81": "81 · Foot, Talus",
-            "s-81.1": "81.1 · Foot, talus, body",
-            "s-81.2": "81.2 · Foot, talus, neck fracture",
-            "s-81.3": "81.3 · Foot, talus, head",
-            "s-82": "82 · Foot, Calcaneus",
-            "s-83": "83 · Foot, Navicular",
-            "s-84": "84 · Foot, Cuboid",
-            "s-85": "85 · Foot, Cuneiforms",
-            "s-85.1": "85.1 · Foot, cuneiform, medial",
-            "s-85.2": "85.2 · Foot, cuneiform, middle",
-            "s-85.3": "85.3 · Foot, cuneiform, lateral",
-            "s-85.__": "85.__ · Foot, cuneiform",
-            "s-87": "87 · Foot, Metatarsals",
-            "s-87._.1": "87._.1 · → Example code for the third metatarsal is indicated with an underline",
-            "s-87._.2": "87._.2 · → Example code for the third metatarsal is indicated with an underline",
-            "s-87._.3": "87._.3 · → Example code for the third metatarsal is indicated with an underline",
-            "s-88": "88 · Foot, Phalanges",
-            "s-88._.2": "88._.2 · → Example code for the proximal great toe is indicated with an underline",
-            "s-88._._.1": "88._._.1 · → The phalangeal bone segment location is then added → Anatomical region+bone.Toe.Phalanx.Bone segment location+Type → Example: Great toe, middle phalanx, proximal end segment is",
-            "s-88._._.2": "88._._.2 · → Example code for the proximal great toe is indicated with an underline",
-            "s-88._._.3": "88._._.3 · Foot, phalanx .__.__ distal end segment",
-            "s-2R1": "2R1 · Radius, proximal end segment",
-            "s-2R3": "2R3 · Radius, distal end segment",
-            "s-51._": "51._ · Cervical spine · ._",
-            "s-53": "53 · Lumbar spine",
-            "s-78._.1": "78._.1 · Phalanges of the hand · ._.1"
-          }
+          "opciones": [
+            {
+              "id": "s-11",
+              "etiqueta": "11 · Humerus, proximal end segment"
+            },
+            {
+              "id": "s-12",
+              "etiqueta": "12 · Humerus, diaphyseal segment"
+            },
+            {
+              "id": "s-13",
+              "etiqueta": "13 · Humerus, distal end segment"
+            },
+            {
+              "id": "s-14",
+              "etiqueta": "14 · Scapula"
+            },
+            {
+              "id": "s-15",
+              "etiqueta": "15 · Clavicle"
+            },
+            {
+              "id": "s-15.1",
+              "etiqueta": "15.1 · Clavicle, proximal (medial) end segment"
+            },
+            {
+              "id": "s-15.2",
+              "etiqueta": "15.2 · Clavicle, diaphyseal segment"
+            },
+            {
+              "id": "s-15.3",
+              "etiqueta": "15.3 · Clavicle, distal (lateral) end segment"
+            },
+            {
+              "id": "s-16",
+              "etiqueta": "16 · Thorax Anatomical location: Thorax"
+            },
+            {
+              "id": "s-16._.1",
+              "etiqueta": "16._.1 · → The location number is added to the code between two dots after the bone code Location: Sternum, manubrium fracture"
+            },
+            {
+              "id": "s-16._.2",
+              "etiqueta": "16._.2 · → The body side and rib number are added to the code (between dots ._._. after the bone code Example: Left second rib is"
+            },
+            {
+              "id": "s-16._.3",
+              "etiqueta": "16._.3 · Sternum, xiphoid fracture"
+            },
+            {
+              "id": "s-16._._",
+              "etiqueta": "16._._ · Thorax, Sternum"
+            },
+            {
+              "id": "s-16._._.1",
+              "etiqueta": "16._._.1 · → The location number is added after the bone code and rib number identifier Example: Left second rib, posterior segment fracture is"
+            },
+            {
+              "id": "s-16._._.2",
+              "etiqueta": "16._._.2 · Rib, shaft"
+            },
+            {
+              "id": "s-16._._.3",
+              "etiqueta": "16._._.3 · Rib, anterior end segment"
+            },
+            {
+              "id": "s-16._.__",
+              "etiqueta": "16._.__ · Thorax, Rib* The ribs are identified as follows Right side ="
+            },
+            {
+              "id": "s-2R1",
+              "etiqueta": "2R1 · Radius, proximal end segment"
+            },
+            {
+              "id": "s-2R2",
+              "etiqueta": "2R2 · Radius 2R_ Ulna 2U_"
+            },
+            {
+              "id": "s-2R3",
+              "etiqueta": "2R3 · Radius, distal end segment"
+            },
+            {
+              "id": "s-2U1",
+              "etiqueta": "2U1 · Radius or Ulna, proximal end segment 2R1/"
+            },
+            {
+              "id": "s-2U2",
+              "etiqueta": "2U2 · Radius or ulna diaphyseal segment 2R2/"
+            },
+            {
+              "id": "s-2U3",
+              "etiqueta": "2U3 · Radius/Ulna, distal end segment 2R3/"
+            },
+            {
+              "id": "s-31",
+              "etiqueta": "31 · Femur, proximal end segment"
+            },
+            {
+              "id": "s-32",
+              "etiqueta": "32 · Femur, diaphyseal segment"
+            },
+            {
+              "id": "s-33",
+              "etiqueta": "33 · Femur, distal end segment"
+            },
+            {
+              "id": "s-34",
+              "etiqueta": "34 · Patella"
+            },
+            {
+              "id": "s-41",
+              "etiqueta": "41 · Proximal end segment"
+            },
+            {
+              "id": "s-42",
+              "etiqueta": "42 · Tibia, diaphyseal segment"
+            },
+            {
+              "id": "s-43",
+              "etiqueta": "43 · Tibia, distal end segment"
+            },
+            {
+              "id": "s-44",
+              "etiqueta": "44 · If the medial malleolar fracture is associated with a lateral side ankle injury, it is classified as a malleolar fracture"
+            },
+            {
+              "id": "s-4F1",
+              "etiqueta": "4F1 · Fibula, proximal end segment"
+            },
+            {
+              "id": "s-4F2",
+              "etiqueta": "4F2 · Fibula, diaphyseal segment"
+            },
+            {
+              "id": "s-4F3",
+              "etiqueta": "4F3 · Fibula, distal end segment (excluding lateral malleolar fractures 44)"
+            },
+            {
+              "id": "s-51",
+              "etiqueta": "51 · No injury Cervical"
+            },
+            {
+              "id": "s-51._",
+              "etiqueta": "51._ · Cervical spine · ._"
+            },
+            {
+              "id": "s-52",
+              "etiqueta": "52 · Spine 5 Spine, Cervical 51, Thoracic 52, Lumbar 53, and Sacrum 54 Thoracic"
+            },
+            {
+              "id": "s-52._",
+              "etiqueta": "52._ · → The vertebral body number is added between two dots. __. after the location code. Example: Fracture of thoracic vertebra 7 is"
+            },
+            {
+              "id": "s-53",
+              "etiqueta": "53 · Lumbar spine"
+            },
+            {
+              "id": "s-53._",
+              "etiqueta": "53._ · Thoracic or Lumbar spine Location: Spine, thoracic 52.__. or lumbar"
+            },
+            {
+              "id": "s-61",
+              "etiqueta": "61 · Pelvis, pelvic ring"
+            },
+            {
+              "id": "s-62",
+              "etiqueta": "62 · Pelvis, acetabulum"
+            },
+            {
+              "id": "s-71",
+              "etiqueta": "71 · Hand and carpus, Lunate"
+            },
+            {
+              "id": "s-72",
+              "etiqueta": "72 · Hand and carpus, Scaphoid"
+            },
+            {
+              "id": "s-73",
+              "etiqueta": "73 · Hand and carpus, Capitate"
+            },
+            {
+              "id": "s-74",
+              "etiqueta": "74 · Hand and carpus, Hamate"
+            },
+            {
+              "id": "s-75",
+              "etiqueta": "75 · Hand and carpus, Trapezium"
+            },
+            {
+              "id": "s-76",
+              "etiqueta": "76 · Hand and carpus, Other carpal bones"
+            },
+            {
+              "id": "s-76.1",
+              "etiqueta": "76.1 · Hand and carpus, pisiform"
+            },
+            {
+              "id": "s-76.2",
+              "etiqueta": "76.2 · Hand and carpus, triquetrum"
+            },
+            {
+              "id": "s-76.3",
+              "etiqueta": "76.3 · Hand and carpus, trapezoid"
+            },
+            {
+              "id": "s-76._",
+              "etiqueta": "76._ · Other"
+            },
+            {
+              "id": "s-76.__",
+              "etiqueta": "76.__ · Hand and carpus, other"
+            },
+            {
+              "id": "s-77",
+              "etiqueta": "77 · Hand and carpus, Metacarpal"
+            },
+            {
+              "id": "s-77._.1",
+              "etiqueta": "77._.1 · → Example code for the 3rd metacarpal is indicated with an underline"
+            },
+            {
+              "id": "s-77._.2",
+              "etiqueta": "77._.2 · → Example code for the 3rd metacarpal is indicated with an underline"
+            },
+            {
+              "id": "s-77._.3",
+              "etiqueta": "77._.3 · → Example code for the 3rd metacarpal is indicated with an underline"
+            },
+            {
+              "id": "s-77.__",
+              "etiqueta": "77.__ · Hand and carpus, metacarpal"
+            },
+            {
+              "id": "s-78",
+              "etiqueta": "78 · Hand and carpus, Phalanx"
+            },
+            {
+              "id": "s-78._.1",
+              "etiqueta": "78._.1 · Phalanges of the hand · ._.1"
+            },
+            {
+              "id": "s-78._._.1",
+              "etiqueta": "78._._.1 · → The location is then added → Anatomical region+bone.Finger.Phalanx.Bone segment location → Example: Proximal thumb phalanx proximal end segment is"
+            },
+            {
+              "id": "s-78._._.2",
+              "etiqueta": "78._._.2 · → Example code for proximal thumb phalanx is indicated with an underline"
+            },
+            {
+              "id": "s-78._._.3",
+              "etiqueta": "78._._.3 · → Example code for proximal thumb phalanx is indicated with an underline"
+            },
+            {
+              "id": "s-78._.__",
+              "etiqueta": "78._.__ · Hand and carpus, phalanx"
+            },
+            {
+              "id": "s-81",
+              "etiqueta": "81 · Foot, Talus"
+            },
+            {
+              "id": "s-81.1",
+              "etiqueta": "81.1 · Foot, talus, body"
+            },
+            {
+              "id": "s-81.2",
+              "etiqueta": "81.2 · Foot, talus, neck fracture"
+            },
+            {
+              "id": "s-81.3",
+              "etiqueta": "81.3 · Foot, talus, head"
+            },
+            {
+              "id": "s-82",
+              "etiqueta": "82 · Foot, Calcaneus"
+            },
+            {
+              "id": "s-83",
+              "etiqueta": "83 · Foot, Navicular"
+            },
+            {
+              "id": "s-84",
+              "etiqueta": "84 · Foot, Cuboid"
+            },
+            {
+              "id": "s-85",
+              "etiqueta": "85 · Foot, Cuneiforms"
+            },
+            {
+              "id": "s-85.1",
+              "etiqueta": "85.1 · Foot, cuneiform, medial"
+            },
+            {
+              "id": "s-85.2",
+              "etiqueta": "85.2 · Foot, cuneiform, middle"
+            },
+            {
+              "id": "s-85.3",
+              "etiqueta": "85.3 · Foot, cuneiform, lateral"
+            },
+            {
+              "id": "s-85.__",
+              "etiqueta": "85.__ · Foot, cuneiform"
+            },
+            {
+              "id": "s-87",
+              "etiqueta": "87 · Foot, Metatarsals"
+            },
+            {
+              "id": "s-87._.1",
+              "etiqueta": "87._.1 · → Example code for the third metatarsal is indicated with an underline"
+            },
+            {
+              "id": "s-87._.2",
+              "etiqueta": "87._.2 · → Example code for the third metatarsal is indicated with an underline"
+            },
+            {
+              "id": "s-87._.3",
+              "etiqueta": "87._.3 · → Example code for the third metatarsal is indicated with an underline"
+            },
+            {
+              "id": "s-88",
+              "etiqueta": "88 · Foot, Phalanges"
+            },
+            {
+              "id": "s-88._.2",
+              "etiqueta": "88._.2 · → Example code for the proximal great toe is indicated with an underline"
+            },
+            {
+              "id": "s-88._._.1",
+              "etiqueta": "88._._.1 · → The phalangeal bone segment location is then added → Anatomical region+bone.Toe.Phalanx.Bone segment location+Type → Example: Great toe, middle phalanx, proximal end segment is"
+            },
+            {
+              "id": "s-88._._.2",
+              "etiqueta": "88._._.2 · → Example code for the proximal great toe is indicated with an underline"
+            },
+            {
+              "id": "s-88._._.3",
+              "etiqueta": "88._._.3 · Foot, phalanx .__.__ distal end segment"
+            }
+          ]
         },
-        "identificador": {
-          "pregunta": "Which one?",
-          "opciones": {}
+        {
+          "id": "identificador",
+          "pregunta": "Which one?"
         },
-        "tipo": {
-          "pregunta": "Which type?",
-          "opciones": {}
+        {
+          "id": "tipo",
+          "pregunta": "Which type?"
         },
-        "grupo": {
-          "pregunta": "Which group?",
-          "opciones": {}
+        {
+          "id": "grupo",
+          "pregunta": "Which group?"
         },
-        "subgrupo": {
-          "pregunta": "Which subgroup?",
-          "opciones": {}
+        {
+          "id": "subgrupo",
+          "pregunta": "Which subgroup?"
         },
-        "calificaciones": {
-          "pregunta": "Qualifications",
-          "opciones": {}
+        {
+          "id": "calificaciones",
+          "pregunta": "Qualifications"
         },
-        "modificadores": {
+        {
+          "id": "modificadores",
           "pregunta": "Universal modifiers",
-          "opciones": {
-            "m-1": "[1] Undisplaced",
-            "m-2": "[2] Displaced",
-            "m-3a": "[3a] Articular impaction",
-            "m-3b": "[3b] Metaphyseal impaction",
-            "m-4": "[4] No impaction",
-            "m-5a": "[5a] Anterior (volar, palmar, plantar)",
-            "m-5b": "[5b] Posterior (dorsal)",
-            "m-5c": "[5c] Medial (ulnar)",
-            "m-5d": "[5d] Lateral (radial)",
-            "m-5e": "[5e] Inferior (at the hip, also obturator)",
-            "m-5f": "[5f] Multidirectional",
-            "m-6a": "[6a] Anterior (volar, palmar, plantar)",
-            "m-6b": "[6b] Posterior (dorsal)",
-            "m-6c": "[6c] Medial (ulnar)",
-            "m-6d": "[6d] Lateral (radial)",
-            "m-6e": "[6e] Inferior (at the hip, also obturator)",
-            "m-6f": "[6f] Multidirectional",
-            "m-7": "[7] Diaphyseal extension",
-            "m-8a": "[8a] ICRS grade 0 — normal",
-            "m-8b": "[8b] ICRS grade 1 — superficial indentation and/or superficial fissures and cracks",
-            "m-8c": "[8c] ICRS grade 2 — abnormal lesions extending down to less than 50% of cartilage depth",
-            "m-8d": "[8d] ICRS grade 3 — severely abnormal, defects extending down more than 50% of cartilage depth; down to the calcified layer; down to but not through the subchondral bone; includes blisters",
-            "m-8e": "[8e] ICRS grade 4 — cartilage loss extending through the subchondral bone",
-            "m-9": "[9] Poor bone quality",
-            "m-10": "[10] Replantation",
-            "m-11": "[11] Amputation associated with the fracture",
-            "m-12": "[12] Associated with a non-prosthetic implant",
-            "m-13": "[13] Spiral-type fracture",
-            "m-14": "[14] Bending-type fracture"
-          }
+          "opciones": [
+            {
+              "id": "m-1",
+              "etiqueta": "[1] Undisplaced"
+            },
+            {
+              "id": "m-2",
+              "etiqueta": "[2] Displaced"
+            },
+            {
+              "id": "m-3a",
+              "etiqueta": "[3a] Articular impaction"
+            },
+            {
+              "id": "m-3b",
+              "etiqueta": "[3b] Metaphyseal impaction"
+            },
+            {
+              "id": "m-4",
+              "etiqueta": "[4] No impaction"
+            },
+            {
+              "id": "m-5a",
+              "etiqueta": "[5a] Anterior (volar, palmar, plantar)"
+            },
+            {
+              "id": "m-5b",
+              "etiqueta": "[5b] Posterior (dorsal)"
+            },
+            {
+              "id": "m-5c",
+              "etiqueta": "[5c] Medial (ulnar)"
+            },
+            {
+              "id": "m-5d",
+              "etiqueta": "[5d] Lateral (radial)"
+            },
+            {
+              "id": "m-5e",
+              "etiqueta": "[5e] Inferior (at the hip, also obturator)"
+            },
+            {
+              "id": "m-5f",
+              "etiqueta": "[5f] Multidirectional"
+            },
+            {
+              "id": "m-6a",
+              "etiqueta": "[6a] Anterior (volar, palmar, plantar)"
+            },
+            {
+              "id": "m-6b",
+              "etiqueta": "[6b] Posterior (dorsal)"
+            },
+            {
+              "id": "m-6c",
+              "etiqueta": "[6c] Medial (ulnar)"
+            },
+            {
+              "id": "m-6d",
+              "etiqueta": "[6d] Lateral (radial)"
+            },
+            {
+              "id": "m-6e",
+              "etiqueta": "[6e] Inferior (at the hip, also obturator)"
+            },
+            {
+              "id": "m-6f",
+              "etiqueta": "[6f] Multidirectional"
+            },
+            {
+              "id": "m-7",
+              "etiqueta": "[7] Diaphyseal extension"
+            },
+            {
+              "id": "m-8a",
+              "etiqueta": "[8a] ICRS grade 0 — normal"
+            },
+            {
+              "id": "m-8b",
+              "etiqueta": "[8b] ICRS grade 1 — superficial indentation and/or superficial fissures and cracks"
+            },
+            {
+              "id": "m-8c",
+              "etiqueta": "[8c] ICRS grade 2 — abnormal lesions extending down to less than 50% of cartilage depth"
+            },
+            {
+              "id": "m-8d",
+              "etiqueta": "[8d] ICRS grade 3 — severely abnormal, defects extending down more than 50% of cartilage depth; down to the calcified layer; down to but not through the subchondral bone; includes blisters"
+            },
+            {
+              "id": "m-8e",
+              "etiqueta": "[8e] ICRS grade 4 — cartilage loss extending through the subchondral bone"
+            },
+            {
+              "id": "m-9",
+              "etiqueta": "[9] Poor bone quality"
+            },
+            {
+              "id": "m-10",
+              "etiqueta": "[10] Replantation"
+            },
+            {
+              "id": "m-11",
+              "etiqueta": "[11] Amputation associated with the fracture"
+            },
+            {
+              "id": "m-12",
+              "etiqueta": "[12] Associated with a non-prosthetic implant"
+            },
+            {
+              "id": "m-13",
+              "etiqueta": "[13] Spiral-type fracture"
+            },
+            {
+              "id": "m-14",
+              "etiqueta": "[14] Bending-type fracture"
+            }
+          ]
         },
-        "cl-schatzker": {
+        {
+          "id": "cl-schatzker",
           "pregunta": "Tibial plateau · Schatzker as modified by Kfuri: which type?",
-          "opciones": {
-            "sch-I": "I · Pure lateral split",
-            "sch-II": "II · Lateral split-depression",
-            "sch-III": "III · Pure lateral depression",
-            "sch-IV": "IV · Medial plateau",
-            "sch-V": "V · Bicondylar",
-            "sch-VI": "VI · Bicondylar with metaphyseal-diaphyseal dissociation"
-          }
+          "opciones": [
+            {
+              "id": "sch-I",
+              "etiqueta": "I · Pure lateral split"
+            },
+            {
+              "id": "sch-II",
+              "etiqueta": "II · Lateral split-depression"
+            },
+            {
+              "id": "sch-III",
+              "etiqueta": "III · Pure lateral depression"
+            },
+            {
+              "id": "sch-IV",
+              "etiqueta": "IV · Medial plateau"
+            },
+            {
+              "id": "sch-V",
+              "etiqueta": "V · Bicondylar"
+            },
+            {
+              "id": "sch-VI",
+              "etiqueta": "VI · Bicondylar with metaphyseal-diaphyseal dissociation"
+            }
+          ]
         },
-        "cl-columnas": {
+        {
+          "id": "cl-columnas",
           "pregunta": "Tibial plateau · Schatzker as modified by Kfuri: which quadrants are broken?",
-          "opciones": {
-            "col-antero-lat": "Anterolateral",
-            "col-antero-med": "Anteromedial",
-            "col-post-lat": "Posterolateral",
-            "col-post-med": "Posteromedial"
-          }
+          "opciones": [
+            {
+              "id": "col-antero-lat",
+              "etiqueta": "Anterolateral"
+            },
+            {
+              "id": "col-antero-med",
+              "etiqueta": "Anteromedial"
+            },
+            {
+              "id": "col-post-lat",
+              "etiqueta": "Posterolateral"
+            },
+            {
+              "id": "col-post-med",
+              "etiqueta": "Posteromedial"
+            }
+          ]
         },
-        "cl-garden": {
+        {
+          "id": "cl-garden",
           "pregunta": "Femoral neck · Garden",
-          "opciones": {
-            "gar-nd": "Undisplaced · Garden I-II",
-            "gar-d": "Displaced · Garden III-IV"
-          }
+          "opciones": [
+            {
+              "id": "gar-nd",
+              "etiqueta": "Undisplaced · Garden I-II"
+            },
+            {
+              "id": "gar-d",
+              "etiqueta": "Displaced · Garden III-IV"
+            }
+          ]
         },
-        "cl-pauwels": {
+        {
+          "id": "cl-pauwels",
           "pregunta": "Femoral neck · Pauwels",
-          "opciones": {
-            "pau-I": "I · less than 30°",
-            "pau-II": "II · 30 to 50°",
-            "pau-III": "III · more than 50°"
-          }
+          "opciones": [
+            {
+              "id": "pau-I",
+              "etiqueta": "I · less than 30°"
+            },
+            {
+              "id": "pau-II",
+              "etiqueta": "II · 30 to 50°"
+            },
+            {
+              "id": "pau-III",
+              "etiqueta": "III · more than 50°"
+            }
+          ]
         },
-        "cl-neer": {
+        {
+          "id": "cl-neer",
           "pregunta": "Proximal humerus · Neer",
-          "opciones": {
-            "neer-1": "1 part · undisplaced",
-            "neer-2cq": "2 parts · surgical neck",
-            "neer-2tro": "2 parts · greater tuberosity",
-            "neer-3": "3 parts",
-            "neer-4": "4 parts",
-            "neer-lux": "Fracture-dislocation"
-          }
+          "opciones": [
+            {
+              "id": "neer-1",
+              "etiqueta": "1 part · undisplaced"
+            },
+            {
+              "id": "neer-2cq",
+              "etiqueta": "2 parts · surgical neck"
+            },
+            {
+              "id": "neer-2tro",
+              "etiqueta": "2 parts · greater tuberosity"
+            },
+            {
+              "id": "neer-3",
+              "etiqueta": "3 parts"
+            },
+            {
+              "id": "neer-4",
+              "etiqueta": "4 parts"
+            },
+            {
+              "id": "neer-lux",
+              "etiqueta": "Fracture-dislocation"
+            }
+          ]
         },
-        "cl-hertel": {
+        {
+          "id": "cl-hertel",
           "pregunta": "Proximal humerus · any predictors of head ischaemia?",
-          "opciones": {
-            "her-calcar": "Metaphyseal head extension shorter than 8 mm",
-            "her-bisagra": "Medial hinge disrupted, displaced more than 2 mm",
-            "her-basi": "Basicervical fracture line",
-            "her-no": "None of the three"
-          }
+          "opciones": [
+            {
+              "id": "her-calcar",
+              "etiqueta": "Metaphyseal head extension shorter than 8 mm"
+            },
+            {
+              "id": "her-bisagra",
+              "etiqueta": "Medial hinge disrupted, displaced more than 2 mm"
+            },
+            {
+              "id": "her-basi",
+              "etiqueta": "Basicervical fracture line"
+            },
+            {
+              "id": "her-no",
+              "etiqueta": "None of the three"
+            }
+          ]
         },
-        "cl-hawkins": {
+        {
+          "id": "cl-hawkins",
           "pregunta": "Talus · Hawkins",
-          "opciones": {
-            "haw-I": "I · Undisplaced neck",
-            "haw-II": "II · With subtalar subluxation or dislocation",
-            "haw-III": "III · Subtalar and tibiotalar dislocation",
-            "haw-IV": "IV · Adds talonavicular dislocation"
-          }
+          "opciones": [
+            {
+              "id": "haw-I",
+              "etiqueta": "I · Undisplaced neck"
+            },
+            {
+              "id": "haw-II",
+              "etiqueta": "II · With subtalar subluxation or dislocation"
+            },
+            {
+              "id": "haw-III",
+              "etiqueta": "III · Subtalar and tibiotalar dislocation"
+            },
+            {
+              "id": "haw-IV",
+              "etiqueta": "IV · Adds talonavicular dislocation"
+            }
+          ]
         },
-        "cl-sanders": {
+        {
+          "id": "cl-sanders",
           "pregunta": "Calcaneus · Sanders",
-          "opciones": {
-            "san-I": "I · Undisplaced",
-            "san-II": "II · Two articular fragments",
-            "san-III": "III · Three fragments",
-            "san-IV": "IV · Four or more fragments"
-          }
+          "opciones": [
+            {
+              "id": "san-I",
+              "etiqueta": "I · Undisplaced"
+            },
+            {
+              "id": "san-II",
+              "etiqueta": "II · Two articular fragments"
+            },
+            {
+              "id": "san-III",
+              "etiqueta": "III · Three fragments"
+            },
+            {
+              "id": "san-IV",
+              "etiqueta": "IV · Four or more fragments"
+            }
+          ]
         },
-        "cl-letournel": {
+        {
+          "id": "cl-letournel",
           "pregunta": "Acetabulum · Letournel and Judet",
-          "opciones": {
-            "let-pared-post": "Posterior wall",
-            "let-columna-post": "Posterior column",
-            "let-pared-ant": "Anterior wall",
-            "let-columna-ant": "Anterior column",
-            "let-transversa": "Transverse",
-            "let-t": "T-shaped",
-            "let-post-post": "Posterior column with posterior wall",
-            "let-transv-pp": "Transverse with posterior wall",
-            "let-hemitransv": "Anterior column with posterior hemitransverse",
-            "let-ambas": "Both-column"
-          }
+          "opciones": [
+            {
+              "id": "let-pared-post",
+              "etiqueta": "Posterior wall"
+            },
+            {
+              "id": "let-columna-post",
+              "etiqueta": "Posterior column"
+            },
+            {
+              "id": "let-pared-ant",
+              "etiqueta": "Anterior wall"
+            },
+            {
+              "id": "let-columna-ant",
+              "etiqueta": "Anterior column"
+            },
+            {
+              "id": "let-transversa",
+              "etiqueta": "Transverse"
+            },
+            {
+              "id": "let-t",
+              "etiqueta": "T-shaped"
+            },
+            {
+              "id": "let-post-post",
+              "etiqueta": "Posterior column with posterior wall"
+            },
+            {
+              "id": "let-transv-pp",
+              "etiqueta": "Transverse with posterior wall"
+            },
+            {
+              "id": "let-hemitransv",
+              "etiqueta": "Anterior column with posterior hemitransverse"
+            },
+            {
+              "id": "let-ambas",
+              "etiqueta": "Both-column"
+            }
+          ]
         },
-        "cl-young-burgess": {
+        {
+          "id": "cl-young-burgess",
           "pregunta": "Pelvic ring · Young and Burgess",
-          "opciones": {
-            "yb-lc1": "Lateral compression I",
-            "yb-lc2": "Lateral compression II",
-            "yb-lc3": "Lateral compression III · windswept",
-            "yb-apc1": "Anteroposterior compression I",
-            "yb-apc2": "Anteroposterior compression II · open book",
-            "yb-apc3": "Anteroposterior compression III",
-            "yb-vs": "Vertical shear",
-            "yb-cm": "Combined mechanism"
-          }
+          "opciones": [
+            {
+              "id": "yb-lc1",
+              "etiqueta": "Lateral compression I"
+            },
+            {
+              "id": "yb-lc2",
+              "etiqueta": "Lateral compression II"
+            },
+            {
+              "id": "yb-lc3",
+              "etiqueta": "Lateral compression III · windswept"
+            },
+            {
+              "id": "yb-apc1",
+              "etiqueta": "Anteroposterior compression I"
+            },
+            {
+              "id": "yb-apc2",
+              "etiqueta": "Anteroposterior compression II · open book"
+            },
+            {
+              "id": "yb-apc3",
+              "etiqueta": "Anteroposterior compression III"
+            },
+            {
+              "id": "yb-vs",
+              "etiqueta": "Vertical shear"
+            },
+            {
+              "id": "yb-cm",
+              "etiqueta": "Combined mechanism"
+            }
+          ]
         },
-        "cl-tile": {
+        {
+          "id": "cl-tile",
           "pregunta": "Pelvic ring · Tile stability",
-          "opciones": {
-            "tile-A": "A · Stable",
-            "tile-B": "B · Rotationally unstable, vertically stable",
-            "tile-C": "C · Rotationally and vertically unstable"
-          }
+          "opciones": [
+            {
+              "id": "tile-A",
+              "etiqueta": "A · Stable"
+            },
+            {
+              "id": "tile-B",
+              "etiqueta": "B · Rotationally unstable, vertically stable"
+            },
+            {
+              "id": "tile-C",
+              "etiqueta": "C · Rotationally and vertically unstable"
+            }
+          ]
         },
-        "cl-vancouver": {
+        {
+          "id": "cl-vancouver",
           "pregunta": "Is it periprosthetic? · Vancouver",
-          "opciones": {
-            "van-no": "Not periprosthetic",
-            "van-A": "A · Trochanteric",
-            "van-B1": "B1 · Around the stem, stem well fixed",
-            "van-B2": "B2 · Stem loose, adequate bone stock",
-            "van-B3": "B3 · Stem loose and poor bone stock",
-            "van-C": "C · Distal to the tip of the stem"
-          }
+          "opciones": [
+            {
+              "id": "van-no",
+              "etiqueta": "Not periprosthetic"
+            },
+            {
+              "id": "van-A",
+              "etiqueta": "A · Trochanteric"
+            },
+            {
+              "id": "van-B1",
+              "etiqueta": "B1 · Around the stem, stem well fixed"
+            },
+            {
+              "id": "van-B2",
+              "etiqueta": "B2 · Stem loose, adequate bone stock"
+            },
+            {
+              "id": "van-B3",
+              "etiqueta": "B3 · Stem loose and poor bone stock"
+            },
+            {
+              "id": "van-C",
+              "etiqueta": "C · Distal to the tip of the stem"
+            }
+          ]
         },
-        "cl-winquist": {
+        {
+          "id": "cl-winquist",
           "pregunta": "Femoral shaft · Winquist and Hansen comminution",
-          "opciones": {
-            "win-0": "0 · No comminution",
-            "win-I": "I · Small fragment",
-            "win-II": "II · Between 25 and 50%",
-            "win-III": "III · More than 50%",
-            "win-IV": "IV · Segmental, no cortical contact"
-          }
+          "opciones": [
+            {
+              "id": "win-0",
+              "etiqueta": "0 · No comminution"
+            },
+            {
+              "id": "win-I",
+              "etiqueta": "I · Small fragment"
+            },
+            {
+              "id": "win-II",
+              "etiqueta": "II · Between 25 and 50%"
+            },
+            {
+              "id": "win-III",
+              "etiqueta": "III · More than 50%"
+            },
+            {
+              "id": "win-IV",
+              "etiqueta": "IV · Segmental, no cortical contact"
+            }
+          ]
         },
-        "cl-mason": {
+        {
+          "id": "cl-mason",
           "pregunta": "Radial head · Mason",
-          "opciones": {
-            "mas-I": "I · Undisplaced",
-            "mas-II": "II · Displaced, single fragment",
-            "mas-III": "III · Comminuted",
-            "mas-IV": "IV · With elbow dislocation"
-          }
+          "opciones": [
+            {
+              "id": "mas-I",
+              "etiqueta": "I · Undisplaced"
+            },
+            {
+              "id": "mas-II",
+              "etiqueta": "II · Displaced, single fragment"
+            },
+            {
+              "id": "mas-III",
+              "etiqueta": "III · Comminuted"
+            },
+            {
+              "id": "mas-IV",
+              "etiqueta": "IV · With elbow dislocation"
+            }
+          ]
         },
-        "cl-lauge-hansen": {
+        {
+          "id": "cl-lauge-hansen",
           "pregunta": "Ankle · Lauge-Hansen mechanism",
-          "opciones": {
-            "lh-sa": "Supination-adduction",
-            "lh-ser": "Supination-external rotation",
-            "lh-pa": "Pronation-abduction",
-            "lh-per": "Pronation-external rotation"
-          }
+          "opciones": [
+            {
+              "id": "lh-sa",
+              "etiqueta": "Supination-adduction"
+            },
+            {
+              "id": "lh-ser",
+              "etiqueta": "Supination-external rotation"
+            },
+            {
+              "id": "lh-pa",
+              "etiqueta": "Pronation-abduction"
+            },
+            {
+              "id": "lh-per",
+              "etiqueta": "Pronation-external rotation"
+            }
+          ]
         }
-      }
+      ]
     }
   }
 }

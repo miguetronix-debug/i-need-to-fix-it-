@@ -1,0 +1,312 @@
+{
+  "_nota": "Inglés del Paso 7 · La posición del paciente. Es un CALCO PARCIAL del paso español: misma forma, solo los campos traducidos, que el motor funde sobre el original. Las listas con id se emparejan por id; las que no lo tienen —bloques de texto, reglas derivadas, preguntas del examen— por posición, así que NO cambiar el orden sin ajustar aquí.",
+  "titulo": "Patient positioning",
+  "subtitulo": "It is a surgical decision, not a logistical formality",
+  "preguntaClave": "Does this position let me approach, reduce and image the fracture without repositioning the patient, and is it safe for the whole operation?",
+  "objetivos": [
+    "Choose the position from the approach, the reduction and the imaging you are going to need",
+    "Know which table each position demands and its specific complications",
+    "Anticipate protection of pressure points, plexuses and the contralateral limb",
+    "Settle the five checklist questions before the field is draped"
+  ],
+  "sintesis": "The position is chosen so that the approach, the reduction and the imaging are all possible, and so that the patient stays safe for the whole expected duration. Five questions before draping — approach, reduction, projections, protection and anaesthetic tolerance — prevent the worst scenario, which is discovering with the field already draped that you cannot reduce, fix or image the fracture.",
+
+  "decisiones": [
+    {
+      "id": "posicion",
+      "pregunta": "In which position are you going to place the patient?",
+      "ayuda": "The position is cheap to change before you start and impossible afterwards. Choose it for what you need to do, not for what your unit always does.",
+      "opciones": [
+        { "id": "pos-supino", "etiqueta": "Supine", "criterios": [
+          "Femur, tibia, ankle and upper limb",
+          "Radiolucent table; hand table for the upper limb",
+          "The most versatile position and the best tolerated by anaesthesia"
+        ]},
+        { "id": "pos-mesa-traccion", "etiqueta": "Supine on a fracture (traction) table", "criterios": [
+          "Femoral and tibial nailing",
+          "Holds traction without an assistant and frees the surgeon's hands",
+          "Its own risks: pudendal nerve from the perineal post, and compartment syndrome of the contralateral leg"
+        ]},
+        { "id": "pos-prono", "etiqueta": "Prone", "criterios": [
+          "Posterior approaches: posterior acetabular column, distal humerus, posterior tibia, sacrum",
+          "Chest and pelvic supports that leave the abdomen free",
+          "Protect the eyes, breasts and genitals"
+        ]},
+        { "id": "pos-lateral", "etiqueta": "Lateral or semi-lateral", "criterios": [
+          "Hip, posterior acetabulum, some humerus and ankle work",
+          "Stable anterior and posterior supports",
+          "Axillary roll to offload the contralateral axilla"
+        ]},
+        { "id": "pos-beach", "etiqueta": "Beach-chair", "criterios": [
+          "Shoulder, proximal humerus and clavicle",
+          "Head firmly secured",
+          "Watch for cerebral hypotension in the seated position"
+        ]},
+        { "id": "pos-flotante", "etiqueta": "Floppy lateral (convertible to supine)", "criterios": [
+          "Lets you move from one approach to another without draping again",
+          "Useful when two columns or two bones have to be addressed",
+          "Demands a wide field and reliable fixation in both positions"
+        ]}
+      ]
+    },
+    {
+      "id": "traccion",
+      "pregunta": "How are you going to get the traction the reduction needs?",
+      "ayuda": "This is the link between this step and Step 9. If you are going to reduce by ligamentotaxis or regain length, decide now who holds it.",
+      "opciones": [
+        { "id": "tr-mesa", "etiqueta": "Fracture (traction) table", "criterios": [
+          "Sustained, reproducible traction without an assistant",
+          "Keep force and time to a minimum: the perineal post and the contralateral leg send the bill"
+        ]},
+        { "id": "tr-distractor", "etiqueta": "Distractor or external fixator as a reduction tool", "criterios": [
+          "Regains length and alignment without a traction table",
+          "Lets you position the patient to suit the approach"
+        ]},
+        { "id": "tr-manual", "etiqueta": "Manual traction by an assistant", "criterios": [
+          "Enough for short procedures",
+          "It runs out: if the operation drags on, the reduction is lost"
+        ]},
+        { "id": "tr-gravedad", "etiqueta": "Gravity and limb position", "criterios": [
+          "The elbow hanging in prone, the arm on a hand table, the foot relaxed in equinus",
+          "Position does part of the reduction work: using it costs nothing"
+        ]},
+        { "id": "tr-ninguna", "etiqueta": "No traction needed", "criterios": [
+          "Stable pattern, or reduction by direct manipulation of the fragment"
+        ]}
+      ]
+    },
+    {
+      "id": "imagen",
+      "pregunta": "What intraoperative imaging are you going to need?",
+      "ayuda": "The C-arm usually comes in from the side opposite the surgeon. If a projection forces you to reposition the patient, the position is wrong.",
+      "opciones": [
+        { "id": "im-dos-planos", "etiqueta": "Two orthogonal planes without repositioning", "criterios": [
+          "The bare minimum for any internal fixation"
+        ]},
+        { "id": "im-oblicuas", "etiqueta": "Specific oblique projections", "criterios": [
+          "Iliac and obturator obliques in the acetabulum, inlet and outlet in the pelvis, mortise view in the ankle",
+          "Check that the table and the supports do not block them"
+        ]},
+        { "id": "im-lado-sano", "etiqueta": "Comparison with the uninjured side", "criterios": [
+          "This is how length and rotation are verified",
+          "Requires leaving the contralateral side within reach of the C-arm"
+        ]},
+        { "id": "im-tc-artro", "etiqueta": "Intraoperative CT or arthroscopy", "criterios": [
+          "Articular surfaces: confirms the reduction before closing",
+          "Dictates the table and the space around the patient"
+        ]},
+        { "id": "im-nav", "etiqueta": "Navigation or electromagnetic guidance", "criterios": [
+          "Pelvis and spine; demands a stable reference and a clear field"
+        ]}
+      ]
+    },
+    {
+      "id": "proteccion",
+      "pregunta": "What are you going to protect?",
+      "ayuda": "Tick everything that applies to your position. Whatever is not protected before draping will not be protected at all.",
+      "opciones": [
+        { "id": "pt-presion", "etiqueta": "Pressure points and bony prominences", "criterios": [
+          "Heels, sacrum, trochanters, elbows, knees"
+        ]},
+        { "id": "pt-plexo", "etiqueta": "Brachial plexus and contralateral axilla", "criterios": [
+          "In the lateral position, an axillary roll",
+          "Arms without forced abduction beyond 90°"
+        ]},
+        { "id": "pt-ojos", "etiqueta": "Eyes, breasts and genitals", "criterios": [
+          "Specific to prone: check them again after every table change"
+        ]},
+        { "id": "pt-contralateral", "etiqueta": "The contralateral limb", "criterios": [
+          "On a traction table, the contralateral leg in lithotomy can develop compartment syndrome",
+          "Lower it, pad it and limit the time"
+        ]},
+        { "id": "pt-perineal", "etiqueta": "A well-padded, off-centre perineal post", "criterios": [
+          "Reduces the risk of pudendal neurapraxia",
+          "Minimise the force and the duration of traction"
+        ]},
+        { "id": "pt-via", "etiqueta": "Airway, lines and secured head", "criterios": [
+          "Especially in beach-chair and prone, where the head is far from reach"
+        ]},
+        { "id": "pt-termico", "etiqueta": "Normothermia and exposed surface", "criterios": [
+          "Long operations in polytrauma: hypothermia worsens the coagulopathy from Step 1"
+        ]}
+      ]
+    },
+    {
+      "id": "checklist",
+      "pregunta": "The position you chose — which of these does it allow? Tick them.",
+      "ayuda": "These are the five things the position has to allow, and they are checked with the patient already positioned and still undraped. Whatever you leave unticked is what you are going to discover once the field is set up.",
+      "opciones": [
+        { "id": "ck-abordaje", "etiqueta": "Approach where I planned to", "criterios": [
+          "Comfortable access to the incision planned in Step 8"
+        ]},
+        { "id": "ck-reduccion", "etiqueta": "Reduce the fracture", "criterios": [
+          "Traction available and gravity in your favour, without repositioning"
+        ]},
+        { "id": "ck-imagen", "etiqueta": "Obtain every projection without repositioning", "criterios": [
+          "Checked with the C-arm before draping, not after"
+        ]},
+        { "id": "ck-seguridad", "etiqueta": "Protect pressure points, plexuses and the contralateral limb", "criterios": [
+          "Reviewed with the scrub team before covering the patient"
+        ]},
+        { "id": "ck-anestesia", "etiqueta": "Hold it for the whole operation without compromising anaesthesia", "criterios": [
+          "Agreed with the anaesthetist, expected duration included"
+        ]}
+      ]
+    }
+  ],
+
+  "derivados": [
+    {
+      "id": "sugerida",
+      "titulo": "What this region usually asks for",
+      "reglas": [
+        { "texto": "Shoulder, proximal humerus and clavicle → beach-chair. Head secured and cerebral perfusion pressure watched in the seated position." },
+        { "texto": "Humeral shaft → supine with a hand table for the anterolateral approach; lateral or prone if you go posteriorly. In the posterior approach, identify the radial nerve before applying the plate." },
+        { "texto": "Elbow and distal humerus → prone or lateral with the elbow hanging flexed: gives posterior access and comfortable fluoroscopy. Supine with the arm across the chest also works." },
+        { "texto": "Forearm → supine with a hand table. Remember that radius and ulna need separate incisions with a skin bridge (Step 8)." },
+        { "texto": "Distal radius and ulna → supine with a hand table and a horizontal C-arm, which allows projections without moving the forearm." },
+        { "texto": "Proximal femur → supine on a traction table for nailing, or lateral if the approach demands it. Watch the perineal post and the contralateral leg." },
+        { "texto": "Femoral shaft → supine on a traction table, or supine on a radiolucent table with a distractor. The second option avoids the complications of prolonged traction." },
+        { "texto": "Distal femur, patella and tibial plateau → supine with the knee flexed over a bolster: it relaxes the gastrocnemius and corrects the recurvatum of the distal fragment." },
+        { "texto": "Tibial shaft → supine with the knee flexed over a radiolucent support, or a traction table. Leave the uninjured side accessible to compare length and rotation." },
+        { "texto": "Ankle and pilon → supine with a bump under the ipsilateral hip to bring the foot to neutral. Prone if the posterior malleolus is the main target." },
+        { "texto": "Foot → supine with an ipsilateral bump, or lateral for the extensile lateral approach to the calcaneus." },
+        { "texto": "Acetabulum → the position decides which column is accessible: supine for the ilioinguinal or anterior intrapelvic, prone or lateral for the posterior Kocher-Langenbeck. Pelvic ring: supine." },
+        { "texto": "Spine → prone on chest and pelvic supports that leave the abdomen free, to reduce epidural bleeding. Eye protection is mandatory." }
+      ]
+    },
+    {
+      "id": "riesgos",
+      "titulo": "What you have to watch for in this position",
+      "reglas": [
+        { "texto": "Traction table: pudendal neurapraxia from the perineal post, and compartment syndrome of the contralateral leg in lithotomy. Minimise the force and the duration of traction and pad the post well." },
+        { "texto": "Prone: ocular pressure, breasts and genitals; the abdomen free between the supports so as not to raise intra-abdominal pressure or epidural bleeding. Check the airway after every move." },
+        { "texto": "Lateral: axillary roll to offload the contralateral brachial plexus, stable anterior and posterior supports, and confirm the pelvis does not tilt during the reduction." },
+        { "texto": "Beach-chair: cerebral hypotension in the seated position. Pressure measured at the arm overestimates cerebral perfusion; agree the blood pressure target with anaesthesia and secure the head well." },
+        { "texto": "Floppy lateral: the advantage is changing approach without draping again; the risk is the fixation. Check stability and C-arm access in both positions before draping." }
+      ]
+    }
+  ],
+
+  "esencial": [
+    { "texto": "Positioning is a surgical decision, not a logistical formality. A bad position compromises the approach, the reduction, the radiographic control and the safety of the patient, and often it cannot be fixed once the field is draped. It is chosen from the bone, the planned approach, the reduction strategy and the intraoperative imaging you will need." },
+    { "titulo": "The four determinants", "texto": "The planned approach: the position must give comfortable access to the planned incision. The reduction strategy: do I need sustained traction? does gravity work in my favour? The imaging: can I obtain every projection without repositioning the patient? And safety: protection of pressure points, plexuses and airway, plus the anaesthetic tolerance of the position for the whole expected duration." },
+    { "titulo": "The positions and their tables",
+      "encabezados": ["Position", "Typical indications", "Table and details"],
+      "filas": [
+        ["Supine", "Femur, tibia, ankle, upper limb.", "Radiolucent or traction table; hand table for the upper limb."],
+        ["Supine on a fracture table", "Femoral and tibial nailing.", "Sustained traction; watch the pudendal nerve and compartment syndrome of the contralateral leg."],
+        ["Prone", "Posterior approaches: posterior acetabular column, distal humerus, posterior tibia, sacrum.", "Chest and pelvic supports; protect eyes, breasts and genitals."],
+        ["Lateral or semi-lateral", "Hip, posterior acetabulum, some humerus and ankle work.", "Anterior and posterior supports; roll in the contralateral axilla."],
+        ["Beach-chair", "Shoulder, proximal humerus, clavicle.", "Head secured; watch for cerebral hypotension when seated."]
+      ]},
+    { "titulo": "What each region implies",
+      "encabezados": ["Region", "Position and why"],
+      "filas": [
+        ["Distal humerus", "Prone or lateral with the elbow hanging flexed: posterior access and fluoroscopy."],
+        ["Acetabulum", "Supine for the ilioinguinal or anterior; prone or lateral for the Kocher-Langenbeck. The position decides which column is accessible."],
+        ["Ankle and pilon", "Supine with a bump under the ipsilateral hip to bring the foot to neutral."],
+        ["Distal femur and plateau", "Supine with the knee flexed over a bolster: relaxes the gastrocnemius and corrects the recurvatum."]
+      ]},
+    { "titulo": "Settle this before the field is draped", "texto": "1. Does it allow the planned approach? 2. Does it allow reduction, with traction available and gravity in your favour? 3. Does it allow every fluoroscopic projection without repositioning? 4. Does it protect pressure points, plexuses and the contralateral limb? 5. Is it tolerable for anaesthesia for the whole operation? Settling these five questions before draping prevents the worst scenario: discovering, with the field already set up, that you cannot reduce, fix or image the fracture." },
+    { "titulo": "Cheap before, impossible after", "texto": "Changing the position before you start costs fifteen minutes. Changing it with the field draped means taking it down, prepping again, draping again, and adding anaesthetic time and contamination risk. That is why the checklist is answered before the incision, and never signed off from memory." }
+  ],
+
+  "alertas": [
+    { "id": "pos-decision", "titulo": "Positioning is a surgical decision",
+      "texto": "It compromises the approach, the reduction, the radiographic control and safety. And often it cannot be fixed once the field is draped." },
+    { "id": "mesa-pudendo", "titulo": "Traction table: pudendal nerve and contralateral leg",
+      "texto": "The perineal post can cause pudendal neurapraxia, and the contralateral leg in prolonged lithotomy can develop compartment syndrome. Pad the post and move it off centre, lower the uninjured leg, and minimise the force and duration of traction." },
+    { "id": "mesa-sin-proteger", "titulo": "Traction table with no protection declared",
+      "texto": "You are using sustained mechanical traction and you have marked neither the perineal post nor the contralateral limb. Those are exactly the two described complications of this table, and both are preventable before you start." },
+    { "id": "prono-ojos", "titulo": "Prone: check eyes, supports and a free abdomen",
+      "texto": "Ocular pressure in prone can cause visual loss. The chest and pelvic supports must leave the abdomen free: if it is compressed, intra-abdominal pressure and epidural bleeding rise." },
+    { "id": "prono-sin-proteccion", "titulo": "Prone with no eye protection declared",
+      "texto": "It is the most serious preventable complication of this position. Mark it, and check it again after every movement of the table." },
+    { "id": "beach-perfusion", "titulo": "Beach-chair: cerebral perfusion",
+      "texto": "In the seated position, pressure measured at the arm overestimates cerebral perfusion pressure. Agree the blood pressure target with anaesthesia and check the head fixation before draping." },
+    { "id": "lateral-axila", "titulo": "Lateral: axillary roll",
+      "texto": "Without a roll, the weight of the chest compresses the contralateral brachial plexus. Check as well that the pelvis does not tilt during the reduction manoeuvres." },
+    { "id": "checklist-incompleta", "titulo": "This position does not yet allow everything you need",
+      "texto": "Some items are unticked. Either you solve them now — by changing the table, the supports or the position itself — or you are going to discover them with the field already draped, which is when they can no longer be solved." },
+    { "id": "imagen-sin-comprobar", "titulo": "You are going to need obliques: check them before draping",
+      "texto": "Iliac and obturator obliques, inlet and outlet views or the mortise view are easily blocked by the table or the supports. Take them with the C-arm once the patient is positioned and still undraped." },
+    { "id": "lado-sano-accesible", "titulo": "You are going to compare with the uninjured side: leave it accessible",
+      "texto": "That is how length and rotation are verified. If the contralateral side is buried under supports or out of reach of the C-arm, the comparison cannot be made and rotation ends up judged by eye." },
+    { "id": "traccion-manual-larga", "titulo": "Manual traction runs out",
+      "texto": "It works for short procedures. If the reduction has to be held while the implant goes in, the assistant tires and the reduction is lost. Consider a distractor or a table." },
+    { "id": "distractor-libera", "titulo": "The distractor frees you from the traction table",
+      "texto": "It regains length and alignment with no perineal post and no contralateral leg in lithotomy, and it lets you choose the position that suits the approach. It is the favourite tool of Mast, Jakob and Ganz." },
+    { "id": "politrauma-tiempo", "titulo": "Position and time in the compromised patient",
+      "texto": "In the patient who was not stable back in Step 1, the position must allow the shortest possible procedure and give the anaesthetic team easy access. Watch normothermia: hypothermia worsens the coagulopathy." },
+    { "id": "rg-acetabulo-supino-posterior", "titulo": "A posterior pattern cannot be reached supine",
+      "texto": "The posterior wall and column are approached through the Kocher-Langenbeck, and that demands prone or lateral. Supine simply cannot get there, and finding out with the field draped means taking it down, prepping again and draping again. If the pattern also involves the anterior column, the answer is a floppy lateral position or two stages." },
+    { "id": "rg-acetabulo-posicion", "titulo": "The acetabular pattern decides the position, not the other way round",
+      "texto": "Posterior patterns are approached prone or lateral through the Kocher-Langenbeck; anterior ones supine through the ilioinguinal or anterior intrapelvic. If the pattern involves both columns, decide beforehand whether you will need a floppy lateral position or two stages." },
+    { "id": "rg-columna-posterior-pos", "titulo": "Posteromedial fragment: the position has to let you reach it from behind",
+      "texto": "With a posteromedial quadrant involved, pure supine gives no access. Consider a floppy lateral position, prone, or a position that lets you flex the knee and rotate the hip to open the posteromedial interval." }
+  ],
+
+  "reglasCoherencia": [
+    { "id": "r7-tc-sin-espacio", "titulo": "Consistency — advanced imaging without checking the position",
+      "mensaje": "Intraoperative CT and arthroscopy dictate the table and the space around the patient. Confirm that the chosen position allows them before draping." },
+    { "id": "r7-beach-anestesia", "titulo": "Consistency — beach-chair without anaesthetic agreement",
+      "mensaje": "The seated position demands a blood pressure target agreed with anaesthesia. It is the position where disagreement is most expensive." }
+  ],
+
+  "evidencia": [
+    { "afirmacion": "The fracture table is associated with pudendal neurapraxia from the perineal post and with compartment syndrome of the contralateral limb; minimising the time and force of traction reduces both risks." },
+    { "afirmacion": "The position is planned from the intended anatomical approach, not the other way round." }
+  ],
+
+  "autoevaluacion": [
+    { "pregunta": "Name two risks specific to the fracture (traction) table.",
+      "opciones": [
+        "Cerebral hypotension and ocular injury",
+        "Pudendal nerve injury from the perineal post and compartment syndrome of the contralateral limb",
+        "Brachial plexus injury and pneumothorax",
+        "Rhabdomyolysis and venous thrombosis"
+      ],
+      "explicacion": "Both depend on the time and the force of traction: minimising them is the most effective prevention." },
+    { "pregunta": "Which five questions must be settled before the field is draped?",
+      "opciones": [
+        "Diagnosis, classification, stability, reduction and principle",
+        "That the position allows the approach, the reduction, every fluoroscopic projection, protection of pressure points and plexuses, and anaesthetic tolerance",
+        "Implant, material, size, length and number of screws",
+        "Antibiotic, prophylaxis, consent, fasting and allergies"
+      ],
+      "explicacion": "Answering them costs minutes before the incision. Afterwards, with the field draped, there is no room left." },
+    { "pregunta": "Why does the acetabulum force you to decide the position with particular care?",
+      "opciones": [
+        "Because the patient is usually polytraumatised",
+        "Because the position decides which column is accessible: supine for the anterior approach, prone or lateral for the Kocher-Langenbeck",
+        "Because it always requires a traction table",
+        "Because fluoroscopy is useless in the pelvis"
+      ],
+      "explicacion": "It is the clearest example that position and approach are one decision, not two." },
+    { "pregunta": "In the beach-chair position, why can the blood pressure measured at the arm mislead you?",
+      "opciones": [
+        "Because the cuff sits loose",
+        "Because when seated it overestimates cerebral perfusion pressure, which lies above the point of measurement",
+        "Because the head is secured",
+        "Because the operated shoulder alters the flow"
+      ],
+      "explicacion": "That is why the blood pressure target is agreed with anaesthesia before you start." },
+    { "pregunta": "What is the advantage of reducing with a distractor rather than with a traction table?",
+      "opciones": [
+        "It is quicker to set up",
+        "It regains length and alignment with no perineal post and no contralateral leg in lithotomy, and it lets you choose the position to suit the approach",
+        "It does not require fluoroscopy",
+        "It allows you to do without locking the nail"
+      ],
+      "explicacion": "It is the favourite tool of Mast, Jakob and Ganz, and it avoids the two classic complications of the table at the root." },
+    { "pregunta": "Where does the C-arm usually come in from?",
+      "opciones": [
+        "From the feet",
+        "From the side opposite the surgeon",
+        "From the surgeon's side",
+        "From the head end"
+      ],
+      "explicacion": "It leaves the surgeon's working field free and lets the image intensifier come and go without breaking sterility." }
+  ]
+}

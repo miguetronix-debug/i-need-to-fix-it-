@@ -119,7 +119,12 @@
         "Técnicas",
         "Complicaciones"
       ],
-      "tira_por_fragmento": "Tornillos por fragmento · {a} y {b}"
+      "tira_por_fragmento": "Tornillos por fragmento · {a} y {b}",
+      "banner_ninguno": "",
+      "banner_algunos": "",
+      "banner_todos": "",
+      "banner_paso_1": "",
+      "banner_paso_n": ""
     },
     "en": {
       "_etiqueta": "EN",
@@ -214,7 +219,7 @@
       "sw_sin_conexion": "Offline mode is not available:",
       "aviso_b": "Notice.",
       "aviso": "A prototype for education and methodical support. It is not a clinical indication and does not replace the judgement of the responsible surgeon or the protocols of the institution. Content based on the book «The 10 steps to fix any fracture» and on the document «Polytrauma — Resuscitation and Surgical Decision», both by Dr. Michael David Kushner Shrem. Content version: {version}. AO/OTA 2018 classification reproduced for educational purposes.",
-      "banner_es": "The interface and the AO/OTA classification are in English. The clinical reasoning of the ten steps — questions, warnings and full text — is still in Spanish; the English version is being written.",
+      "banner_es": "",
       "pasos_titulos": [
         "Initial assessment",
         "Classification",
@@ -239,7 +244,12 @@
         "Techniques",
         "Complications"
       ],
-      "tira_por_fragmento": "Screws per fragment · {a} and {b}"
+      "tira_por_fragmento": "Screws per fragment · {a} and {b}",
+      "banner_ninguno": "The interface and the AO/OTA classification are in English. The clinical reasoning of the ten steps — questions, warnings and full text — is still in Spanish; the English version is being written.",
+      "banner_algunos": "The interface and the AO/OTA classification are in English, and so is {lista}. The remaining steps are still in Spanish while the English version is written.",
+      "banner_todos": "Fully in English.",
+      "banner_paso_1": "Step {l}",
+      "banner_paso_n": "Steps {l}"
     }
   }
 }

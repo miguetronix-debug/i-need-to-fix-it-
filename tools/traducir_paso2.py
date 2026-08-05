@@ -161,57 +161,56 @@ CLASIFICACIONES = {
 def main():
     paso2 = json.loads((RAIZ / "content" / "pasos" / "02-clasificacion.json").read_text(encoding="utf-8"))
     codigos = json.loads((RAIZ / "content" / "aoota_codigos.json").read_text(encoding="utf-8"))["codigos"]
-    decs = {d["id"]: d for d in paso2["decisiones"]}
 
-    salida = {"_nota": "Inglés del Paso 2, generado por tools/traducir_paso2.py. "
-                       "Los segmentos vienen del compendio AO original; el resto, "
-                       "de las tablas del script. No editar a mano: editar el script.",
-              "pasos": {"2": {"decisiones": {}}}}
-    dst = salida["pasos"]["2"]["decisiones"]
-
-    for did, preg in PREGUNTAS.items():
-        if did in decs:
-            dst[did] = {"pregunta": preg, "opciones": {}}
-
-    # huesos y modificadores, de tabla
-    for did, tabla in (("hueso", HUESOS), ("modificadores", MODIFICADORES)):
-        if did in dst:
-            dst[did]["opciones"].update(tabla)
-
-    # segmentos: del compendio, que es la fuente original
-    delCompendio = 0
-    if "segmento" in dst:
-        for o in decs["segmento"]["opciones"]:
+    # Segmentos: del compendio, que es la fuente original
+    segmentos, delCompendio = {}, 0
+    for d in paso2["decisiones"]:
+        if d["id"] != "segmento":
+            continue
+        for o in d["opciones"]:
             c = o.get("codigo", "")
             en = (codigos.get(c) or {}).get("texto", "")
             if en:
-                dst["segmento"]["opciones"][o["id"]] = f"{c} · {en}"
+                segmentos[o["id"]] = f"{c} · {en}"
                 delCompendio += 1
-        dst["segmento"]["opciones"].update(SEGMENTOS_EXTRA)
+    segmentos.update(SEGMENTOS_EXTRA)
 
-    # clasificaciones regionales
-    for did, tabla in CLASIFICACIONES.items():
-        if did in dst:
-            dst[did]["opciones"].update(tabla)
+    etiquetas = {"hueso": HUESOS, "segmento": segmentos, "modificadores": MODIFICADORES}
+    etiquetas.update(CLASIFICACIONES)
 
-    # aviso si alguna opción se quedó sin pareja
-    huecos = []
-    for did, d in dst.items():
-        if did in ("tipo", "grupo", "subgrupo", "identificador", "calificaciones"):
-            continue   # son código o ya vienen en inglés del compendio
-        faltan = [o["id"] for o in decs[did]["opciones"] if o["id"] not in d["opciones"]]
-        if faltan:
-            huecos.append((did, faltan))
+    # El archivo es un CALCO PARCIAL del paso: misma forma, solo lo traducido.
+    # Así el motor lo funde sobre el español sin lógica especial.
+    decisiones, huecos = [], []
+    estructural = ("tipo", "grupo", "subgrupo", "identificador", "calificaciones")
+    for d in paso2["decisiones"]:
+        did = d["id"]
+        if did not in PREGUNTAS:
+            continue
+        entrada = {"id": did, "pregunta": PREGUNTAS[did]}
+        tabla = etiquetas.get(did)
+        if tabla:
+            entrada["opciones"] = [{"id": o["id"], "etiqueta": tabla[o["id"]]}
+                                   for o in d["opciones"] if o["id"] in tabla]
+            faltan = [o["id"] for o in d["opciones"] if o["id"] not in tabla]
+            if faltan and did not in estructural:
+                huecos.append((did, faltan))
+        decisiones.append(entrada)
+
+    salida = {"_nota": "Inglés del Paso 2, generado por tools/traducir_paso2.py. Es un calco "
+                       "parcial del paso: solo los campos traducidos, que el motor funde sobre "
+                       "el español. Los segmentos vienen del compendio AO original. "
+                       "No editar a mano: editar el script.",
+              "pasos": {"2": {"decisiones": decisiones}}}
 
     SALIDA.write_text(json.dumps(salida, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    total = sum(len(d["opciones"]) for d in dst.values())
+    total = sum(len(d.get("opciones", [])) for d in decisiones)
     print(f"Generado: {SALIDA.name}")
-    print(f"   {len(dst)} preguntas · {total} etiquetas")
+    print(f"   {len(decisiones)} preguntas · {total} etiquetas")
     print(f"   {delCompendio} segmentos tomados del inglés original del compendio AO")
     if huecos:
         print("   AVISO — opciones sin traducir:")
-        for did, f in huecos:
-            print(f"      {did}: {len(f)} → {f[:6]}")
+        for did, fal in huecos:
+            print(f"      {did}: {len(fal)} → {fal[:6]}")
     else:
         print("   Sin huecos: todas las opciones traducibles tienen pareja.")
 

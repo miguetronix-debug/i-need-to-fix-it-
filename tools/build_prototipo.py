@@ -51,9 +51,18 @@ def cargar():
     # Traducciones del CONTENIDO (preguntas y etiquetas), por idioma. Lo que no
     # esté aquí se muestra en español: es preferible a dejar el hueco vacío.
     trad = {}
+    # Dos fuentes, porque son dos maneras de trabajar: el Paso 2 lo genera un
+    # script y vive en un archivo suelto; los pasos redactados se traducen a
+    # mano, uno por archivo, para poder revisarlos de uno en uno.
     for f_tr in sorted((RAIZ / "content").glob("traducciones_*.json")):
         lang = f_tr.stem.split("_")[-1]
-        trad[lang] = json.loads(f_tr.read_text(encoding="utf-8")).get("pasos", {})
+        trad.setdefault(lang, {}).update(
+            json.loads(f_tr.read_text(encoding="utf-8")).get("pasos", {}))
+    for f_tr in sorted((RAIZ / "content" / "traducciones").glob("*-*.json")):
+        num, lang = f_tr.stem.split("-", 1)
+        cuerpo = json.loads(f_tr.read_text(encoding="utf-8"))
+        cuerpo.pop("_nota", None)
+        trad.setdefault(lang, {})[str(int(num))] = cuerpo
     return pasos, refs, codigos, casos, idiomas, trad
 
 
@@ -359,19 +368,45 @@ const CLAVE='infi-caso-v1', CLAVE_Q='infi-quiz-v1', CLAVE_L='infi-idioma-v1';
 const IDIOMAS=DATA.idiomas||{};
 const VERSION=DATA.version||'';
 
-/* Traducción del CONTENIDO. Solo el Paso 2 la tiene por ahora, porque su
-   vocabulario es el de la AO y nació en inglés; el resto es la voz del autor
-   y espera a la Fase 2. Lo que falte se muestra en español. */
-function trDec(n, did){
-  if(S.idioma==='es') return null;
-  const t=DATA.trad&&DATA.trad[S.idioma]; if(!t) return null;
-  const p=t[String(n)]; if(!p||!p.decisiones) return null;
-  return p.decisiones[did]||null;
+/* -------------------------------------------------- traducción del contenido
+   El archivo de traducción es un CALCO PARCIAL del paso: la misma forma, solo
+   con los campos ya traducidos. `fusiona` lo superpone sobre el español, así
+   que traducir un campo nuevo no exige tocar el motor.
+
+   Las listas se emparejan por `id` cuando lo tienen —el orden puede cambiar sin
+   desalinear nada— y por posición cuando no, que es el caso de los bloques de
+   texto y de las preguntas del examen. */
+function fusiona(base, over){
+  if(over===undefined||over===null) return base;
+  if(Array.isArray(base)){
+    if(!Array.isArray(over)) return base;
+    const conId = base.length && base[0] && base[0].id!==undefined;
+    if(conId){
+      const porId={}; for(const o of over) if(o&&o.id!==undefined) porId[o.id]=o;
+      return base.map(b=>fusiona(b, porId[b.id]));
+    }
+    return base.map((b,i)=>fusiona(b, over[i]));
+  }
+  if(base&&typeof base==='object'){
+    if(typeof over!=='object'||Array.isArray(over)) return base;
+    const out={}; for(const k in base) out[k]=base[k];
+    for(const k in over) out[k]=fusiona(base[k], over[k]);
+    return out;
+  }
+  return over;   // cadena, número o booleano: manda la traducción
 }
-function preguntaDe(n, d){ const x=trDec(n,d.id); return (x&&x.pregunta)||d.pregunta; }
-function etiquetaDe(n, did, o){
-  const x=trDec(n,did);
-  return (x&&x.opciones&&x.opciones[o.id])||o.etiqueta;
+
+/* Se calcula una vez por paso e idioma: fusionar en cada render sería tirar
+   trabajo a la basura sesenta veces por pantalla. */
+var _pasoCache={};
+function pasoDe(n){
+  if(S.idioma==='es') return DATA.pasos[n];
+  const clave=S.idioma+':'+n;
+  if(_pasoCache[clave]) return _pasoCache[clave];
+  const tr=DATA.trad&&DATA.trad[S.idioma]&&DATA.trad[S.idioma][String(n)];
+  const r = tr? fusiona(DATA.pasos[n], tr) : DATA.pasos[n];
+  _pasoCache[clave]=r;
+  return r;
 }
 function TR(k, huecos){
   const d=IDIOMAS[S.idioma]||{}, base=IDIOMAS.es||{};
@@ -379,12 +414,33 @@ function TR(k, huecos){
   if(huecos) for(const h in huecos) s=s.split('{'+h+'}').join(huecos[h]);
   return s;
 }
+/* La banda no puede mentir: dice exactamente qué pasos están traducidos, y
+   desaparece sola cuando ya no queda ninguno en español. Un paso cuenta como
+   traducido si su calco trae título, que es lo que solo se pone al traducirlo
+   entero; el Paso 2 no lo lleva porque su traducción es de vocabulario. */
+function pasosTraducidos(){
+  const tr=DATA.trad&&DATA.trad[S.idioma]; if(!tr) return [];
+  return DISPONIBLES.filter(n=>tr[String(n)]&&tr[String(n)].titulo);
+}
+function textoBanner(){
+  if(S.idioma==='es') return '';
+  const hechos=pasosTraducidos();
+  if(!hechos.length) return TR('banner_ninguno');
+  if(hechos.length===DISPONIBLES.length) return TR('banner_todos');
+  const nom = n => TR('paso')+' '+n;
+  const lista = hechos.length===1
+    ? nom(hechos[0])
+    : TR('pasos')+' '+hechos.slice(0,-1).join(', ')+' & '+hechos[hechos.length-1];
+  return TR('banner_algunos',{lista:lista});
+}
 function idiomasDisponibles(){ return Object.keys(IDIOMAS); }
 function idioma(l){
   if(!IDIOMAS[l]) return;
   S.idioma=l;
   try{ localStorage.setItem(CLAVE_L,l); }catch(e){}
   aplicarIdioma();
+  INDICE=null;   // el buscador del compendio se reconstruye en el otro idioma
+  P=pasoDe(S.paso);
   cargar();
   window.scrollTo(0,0);
 }
@@ -405,7 +461,7 @@ function aplicarIdioma(){
   const av=document.getElementById('aviso');
   if(av) av.innerHTML='<b>'+esc(TR('aviso_b'))+'</b> '+esc(TR('aviso',{version:VERSION}));
   const ban=document.getElementById('banner');
-  if(ban){ const t=TR('banner_es'); ban.textContent=t; ban.classList.toggle('oculto', !t); }
+  if(ban){ ban.textContent=textoBanner(); ban.classList.toggle('oculto', !ban.textContent); }
   const chips=(IDIOMAS[S.idioma]||{}).pasos_chips||(IDIOMAS.es||{}).pasos_chips||[];
   for(const c of document.querySelectorAll('.pchip[data-n]')){
     const n=+c.getAttribute('data-n');
@@ -530,7 +586,7 @@ function alertas(){
 const DIAFISARIOS=['12','2R2','2U2','32','42','4F2','15.2'];
 function contexto(){
   const d2=S.porPaso[2]||{}; const t=[];
-  const opt=(dec,id)=>{ const p=DATA.pasos[2]; if(!p) return null;
+  const opt=(dec,id)=>{ const p=pasoDe(2); if(!p) return null;
     const dd=p.decisiones.find(x=>x.id===dec); if(!dd) return null;
     return dd.opciones.find(x=>x.id===id)||null; };
   const seg=d2['segmento']?(opt('segmento',d2['segmento'])||{}).codigo:null;
@@ -580,7 +636,7 @@ function contexto(){
   // Cualquier opción puede declarar «emite»: así una clasificación regional
   // alimenta el razonamiento de los pasos siguientes sin tocar el motor.
   for(const n of Object.keys(S.porPaso)){
-    const p=DATA.pasos[n]; if(!p) continue;
+    const p=pasoDe(n); if(!p) continue;
     const d=S.porPaso[n]||{};
     for(const dd of p.decisiones){
       const v=d[dd.id]; if(!v) continue;
@@ -691,7 +747,7 @@ function descripcionCompleta(){
   }
   frase=frase.charAt(0).toUpperCase()+frase.slice(1);
   // calificaciones y modificadores, en palabras
-  const et=id=>{ for(const dd of P.decisiones){ const o=dd.opciones.find(x=>x.id===id); if(o) return etiquetaDe(P.numero,dd.id,o); } return ''; };
+  const et=id=>{ for(const dd of P.decisiones){ const o=dd.opciones.find(x=>x.id===id); if(o) return o.etiqueta; } return ''; };
   const q=(S.dec['calificaciones']||[]).map(et).map(x=>x.replace(/^\([a-z]\)\s*/,'')).filter(Boolean);
   if(q.length) frase+=' — '+q.join('; ');
   const m=(S.dec['modificadores']||[]).map(et).map(x=>x.replace(/^\[[^\]]+\]\s*/,'')).filter(Boolean);
@@ -884,14 +940,14 @@ function render(){
     // contenido más valioso (las cifras, la estructura en riesgo) no se ve.
     const chip=(multi||vis.length>12)&&!abierto;
     const hayCrit=vis.some(o=>(o.criterios||[]).length);
-    h+='<section><div class="qrow"><h2>'+esc(preguntaDe(P.numero,d))+'</h2>'+
+    h+='<section><div class="qrow"><h2>'+esc(d.pregunta)+'</h2>'+
        (hayCrit?'<button class="vermas" onclick="verCrit(\\''+d.id+'\\')">'+(abierto?TR('ocultar'):TR('ver_mas'))+'</button>':'')+
        '</div>';
     if(d.ayuda && (abierto||S.modo==='estudio')) h+='<p class="ayuda">'+esc(d.ayuda)+'</p>';
     h+='<div class="opts'+(chip?' chips':'')+'">';
     for(const o of vis){
       const sel=marcado(d.id,o.id);
-      h+='<button class="opt'+(sel?' sel':'')+(chip?' chip':'')+'" onclick="pick(\\''+d.id+'\\',\\''+o.id+'\\')"><b>'+esc(etiquetaDe(P.numero,d.id,o))+
+      h+='<button class="opt'+(sel?' sel':'')+(chip?' chip':'')+'" onclick="pick(\\''+d.id+'\\',\\''+o.id+'\\')"><b>'+esc(o.etiqueta)+
          (sug===o.id&&!sel?' <span style="font-weight:400;font-size:11.5px;color:var(--acc)">'+esc(TR('sugerida'))+'</span>':'')+'</b>'+
          (abierto?'<ul>'+(o.criterios||[]).map(c=>'<li>'+esc(c)+'</li>').join('')+'</ul>':'')+'</button>';
     }
@@ -928,9 +984,9 @@ function render(){
     if(!visible(d)) continue;
     const v=S.dec[d.id]; if(!v) continue;
     const et=Array.isArray(v)
-      ? v.map(id=>{const o=d.opciones.find(x=>x.id===id); return o?etiquetaDe(P.numero,d.id,o):'';}).filter(Boolean).join(' · ')
-      : (function(){const o=d.opciones.find(x=>x.id===v); return o?etiquetaDe(P.numero,d.id,o):'';})();
-    if(et) filas.push('<div class="prow"><span>'+esc(preguntaDe(P.numero,d))+'</span><span>'+esc(et)+'</span></div>');
+      ? v.map(id=>{const o=d.opciones.find(x=>x.id===id); return o?o.etiqueta:'';}).filter(Boolean).join(' · ')
+      : (function(){const o=d.opciones.find(x=>x.id===v); return o?o.etiqueta:'';})();
+    if(et) filas.push('<div class="prow"><span>'+esc(d.pregunta)+'</span><span>'+esc(et)+'</span></div>');
   }
   const bloqueantes=al.filter(a=>a.bloqueante);
   const der=derivados().map(d=>'<div class="deriv'+(d.destacado?' big':'')+'"><b>'+esc(d.titulo)+' <i>· derivado</i></b>'+
@@ -972,7 +1028,7 @@ function sinTildes(s){ return String(s).toLowerCase().normalize('NFD').replace(/
 function construirIndice(){
   if(INDICE) return INDICE;
   INDICE=[];
-  const p2=DATA.pasos[2]; if(!p2) return INDICE;
+  const p2=pasoDe(2); if(!p2) return INDICE;
   const decs={}; for(const d of p2.decisiones) decs[d.id]=d;
   const seg={}; for(const o of (decs.segmento||{opciones:[]}).opciones) seg[o.codigo]=o;
   for(const cod in (DATA.codigos||{})){
@@ -1015,7 +1071,7 @@ function buscar(q){
 function cerrarBusca(){ const c=document.getElementById('bres'); if(c){ c.innerHTML=''; c.style.display='none'; } }
 /* Rellena las decisiones del Paso 2 hacia atrás desde un código completo. */
 function irACodigo(cod){
-  const p2=DATA.pasos[2]; if(!p2) return;
+  const p2=pasoDe(2); if(!p2) return;
   const decs={}; for(const d of p2.decisiones) decs[d.id]=d;
   const elige=(id,pred)=>{ const d=decs[id]; if(!d) return null;
     const o=d.opciones.find(pred); if(o){ S.porPaso[2]=S.porPaso[2]||{}; S.porPaso[2][id]=o.id; } return o; };
@@ -1112,14 +1168,14 @@ function reiniciar(){
 function planCompleto(){
   const out=[];
   for(const n of DISPONIBLES){
-    const p=DATA.pasos[n], d=S.porPaso[n]||{};
+    const p=pasoDe(n), d=S.porPaso[n]||{};
     const filas=[];
     for(const dd of p.decisiones){
       const v=d[dd.id]; if(!v||(Array.isArray(v)&&!v.length)) continue;
       const et=Array.isArray(v)
-        ? v.map(id=>{const o=dd.opciones.find(x=>x.id===id); return o?etiquetaDe(n,dd.id,o):'';}).filter(Boolean).join(' · ')
-        : (function(){const o=dd.opciones.find(x=>x.id===v); return o?etiquetaDe(n,dd.id,o):'';})();
-      if(et) filas.push({q:preguntaDe(n,dd),r:et});
+        ? v.map(id=>{const o=dd.opciones.find(x=>x.id===id); return o?o.etiqueta:'';}).filter(Boolean).join(' · ')
+        : (function(){const o=dd.opciones.find(x=>x.id===v); return o?o.etiqueta:'';})();
+      if(et) filas.push({q:dd.pregunta,r:et});
     }
     // derivados y alertas se calculan en el contexto de ese paso
     const guardaP=P, guardaDec=S.dec, guardaPaso=S.paso;
@@ -1178,7 +1234,7 @@ function verCaso(id){ S.vista='caso'; S.caso=id; render(); window.scrollTo(0,0);
 function alertasDe(estado, n){
   const gP=P, gDec=S.dec, gPaso=S.paso, gPorPaso=S.porPaso;
   S.porPaso={}; for(const k in estado) S.porPaso[k]=estado[k];
-  P=DATA.pasos[n]; S.dec=S.porPaso[n]||{}; S.paso=n;
+  P=pasoDe(n); S.dec=S.porPaso[n]||{}; S.paso=n;
   let out=[];
   try{ out=alertas().filter(a=>!a.siempre); }catch(e){}
   P=gP; S.dec=gDec; S.paso=gPaso; S.porPaso=gPorPaso;
@@ -1270,7 +1326,7 @@ function pintarResumen(){
 }
 function irPaso(n){
   if(!DATA.pasos[n]) return;
-  S.paso=n; P=DATA.pasos[n]; S.vista='paso';
+  S.paso=n; P=pasoDe(n); S.vista='paso';
   if(!S.porPaso[n]) S.porPaso[n]={};
   S.dec=S.porPaso[n]; S.resp={}; S.soloFallos=null;
   guardar(); cargar(); window.scrollTo(0,0);
@@ -1386,6 +1442,7 @@ if(!S.porPaso[S.paso]) S.porPaso[S.paso]={};
   }
   S.idioma=l;
   aplicarIdioma();
+  P=pasoDe(S.paso);
 })();
 
 cargar();

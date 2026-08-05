@@ -100,12 +100,18 @@ if (conIngles.length) {
      tEn === DATA.codigos[c].en, c);
 }
 
-// 6 · el aviso de que lo clínico sigue en español solo aparece en inglés
+// 6 · la banda dice la verdad y desaparece sola cuando ya no hace falta
+const textoBanner = vm.runInThisContext('textoBanner');
+const pasosTraducidos = vm.runInThisContext('pasosTraducidos');
 S.idioma = 'es';
-ok('En español no se muestra la banda de aviso', TR('banner_es') === '');
+ok('En español no se muestra ninguna banda', textoBanner() === '');
 S.idioma = 'en';
-ok('En inglés sí se avisa de que lo clínico sigue en español',
-   TR('banner_es').length > 40);
+const hechos = pasosTraducidos();
+ok('La banda nombra los pasos ya traducidos',
+   hechos.every(n => textoBanner().indexOf(String(n)) >= 0),
+   hechos + ' → ' + textoBanner().slice(0, 90));
+ok('La banda sigue avisando de que quedan pasos en español',
+   /still in Spanish/.test(textoBanner()), textoBanner().slice(0, 60));
 
 // 7 · el idioma elegido sobrevive
 S.idioma = 'es';
@@ -121,48 +127,79 @@ ok('El contenido clínico sigue en español (Fase 2 pendiente)',
    /[áéíóúñ¿]/.test(p1.decisiones[0].pregunta), p1.decisiones[0].pregunta.slice(0, 40));
 
 // 9 · el Paso 2 sí cambia de idioma: su vocabulario es el de la AO
-const preguntaDe = vm.runInThisContext('preguntaDe');
-const etiquetaDe = vm.runInThisContext('etiquetaDe');
-const p2 = DATA.pasos[2];
-const dHueso = p2.decisiones.find(d => d.id === 'hueso');
-const dSeg   = p2.decisiones.find(d => d.id === 'segmento');
-const dSch   = p2.decisiones.find(d => d.id === 'cl-schatzker');
+const pasoDe = vm.runInThisContext('pasoDe');
+const fusiona = vm.runInThisContext('fusiona');
 
-S.idioma = 'es';
-const pEs = preguntaDe(2, dHueso), hEs = etiquetaDe(2, 'hueso', dHueso.opciones[0]);
-S.idioma = 'en';
-const pEn = preguntaDe(2, dHueso), hEn = etiquetaDe(2, 'hueso', dHueso.opciones[0]);
-ok('La pregunta del Paso 2 se traduce', pEs !== pEn, pEs + ' / ' + pEn);
-ok('«Which bone?» en inglés', pEn === 'Which bone?', pEn);
-ok('El hueso se traduce', hEn.indexOf('Humerus') >= 0, hEn);
+// la fusión respeta la forma y empareja por id, no por posición
+const probaFus = fusiona(
+  { a: 'uno', lista: [{ id: 'x', t: 'equis' }, { id: 'y', t: 'ye' }], intacto: 'igual' },
+  { a: 'one', lista: [{ id: 'y', t: 'why' }] });
+ok('La fusión traduce el campo suelto', probaFus.a === 'one', probaFus.a);
+ok('La fusión empareja por id, no por posición',
+   probaFus.lista[0].t === 'equis' && probaFus.lista[1].t === 'why',
+   JSON.stringify(probaFus.lista));
+ok('La fusión deja intacto lo que no se tradujo', probaFus.intacto === 'igual');
 
-const segEn = etiquetaDe(2, 'segmento', dSeg.opciones[0]);
-ok('El segmento viene del compendio AO', segEn.indexOf('Humerus') >= 0, segEn);
+S.idioma = 'es'; const p2es = pasoDe(2);
+S.idioma = 'en'; const p2en = pasoDe(2);
+const dh = id => p2en.decisiones.find(d => d.id === id);
+ok('«Which bone?» en inglés', dh('hueso').pregunta === 'Which bone?', dh('hueso').pregunta);
+ok('El hueso se traduce', dh('hueso').opciones[0].etiqueta.indexOf('Humerus') >= 0,
+   dh('hueso').opciones[0].etiqueta);
+ok('El segmento viene del compendio AO',
+   dh('segmento').opciones[0].etiqueta.indexOf('Humerus') >= 0,
+   dh('segmento').opciones[0].etiqueta);
+ok('Las clasificaciones regionales se traducen',
+   /split/i.test(dh('cl-schatzker').opciones[0].etiqueta),
+   dh('cl-schatzker').opciones[0].etiqueta);
+ok('Los cuadrantes de Kfuri son cuatro y en inglés',
+   dh('cl-columnas').opciones.length === 4 &&
+   dh('cl-columnas').opciones.map(o => o.etiqueta).join(',') ===
+     'Anterolateral,Anteromedial,Posterolateral,Posteromedial',
+   dh('cl-columnas').opciones.map(o => o.etiqueta).join(','));
+ok('El español queda intacto tras fundir',
+   p2es.decisiones.find(d => d.id === 'hueso').pregunta === '¿Qué hueso?',
+   p2es.decisiones.find(d => d.id === 'hueso').pregunta);
 
-if (dSch) {
-  const schEn = etiquetaDe(2, 'cl-schatzker', dSch.opciones[0]);
-  ok('Las clasificaciones regionales se traducen', /split/i.test(schEn), schEn);
+// lo estructural no necesita traducción y debe quedarse como está
+ok('Los códigos de tipo/grupo no se tocan',
+   dh('tipo').opciones[0].etiqueta === p2es.decisiones.find(d => d.id === 'tipo').opciones[0].etiqueta,
+   dh('tipo').opciones[0].etiqueta);
+
+// 10 · el Paso 7 traducido entero: la muestra de la Fase 2
+S.idioma = 'en'; const p7 = pasoDe(7);
+const esEspanol = s => /[áéíóúñ¿¡]|\b(el|la|los|las|que|con|para|una|del)\b/i.test(String(s || ''));
+if (DATA.trad && DATA.trad.en && DATA.trad.en['7']) {
+  ok('El Paso 7 tiene título en inglés', !esEspanol(p7.titulo), p7.titulo);
+  ok('El Paso 7 tiene subtítulo en inglés', !esEspanol(p7.subtitulo), p7.subtitulo);
+  ok('La pregunta clave del Paso 7 está en inglés', !esEspanol(p7.preguntaClave), p7.preguntaClave);
+  const restos = [];
+  for (const d of p7.decisiones) {
+    if (esEspanol(d.pregunta)) restos.push('pregunta: ' + d.pregunta.slice(0, 34));
+    for (const o of d.opciones) {
+      if (esEspanol(o.etiqueta)) restos.push('opción: ' + o.etiqueta.slice(0, 34));
+      for (const c of (o.criterios || [])) if (esEspanol(c)) restos.push('criterio: ' + c.slice(0, 34));
+    }
+  }
+  for (const a of (p7.alertas || [])) {
+    if (esEspanol(a.titulo)) restos.push('alerta: ' + a.titulo.slice(0, 34));
+    if (esEspanol(a.texto)) restos.push('texto: ' + a.texto.slice(0, 34));
+  }
+  ok('No queda español suelto en el Paso 7', restos.length === 0,
+     restos.length + ': ' + restos.slice(0, 3).join(' | '));
+  // y el español original sigue intacto
+  S.idioma = 'es';
+  ok('El Paso 7 en español no se estropeó', esEspanol(pasoDe(7).titulo), pasoDe(7).titulo);
+  S.idioma = 'en';
+} else {
+  console.log('  --    El Paso 7 aún no está traducido (Fase 2 en curso)');
 }
 
-// ninguna opción traducible del Paso 2 se quedó en español
-const tr = (DATA.trad && DATA.trad.en && DATA.trad.en['2']) || { decisiones: {} };
-const estructural = ['tipo','grupo','subgrupo','identificador','calificaciones'];
-let sinPareja = [];
-for (const d of p2.decisiones) {
-  if (estructural.indexOf(d.id) >= 0) continue;
-  const td = tr.decisiones[d.id];
-  if (!td) { sinPareja.push(d.id + ' (decisión entera)'); continue; }
-  for (const o of d.opciones)
-    if (!td.opciones || td.opciones[o.id] === undefined) sinPareja.push(d.id + '/' + o.id);
-}
-ok('Ninguna opción traducible del Paso 2 quedó en español',
-   sinPareja.length === 0, sinPareja.length + ': ' + sinPareja.slice(0, 5).join(', '));
-
-// y lo que NO debe cambiar, no cambia: los pasos que son voz del autor
+// y lo que NO debe cambiar, no cambia
 S.idioma = 'en';
-const d1 = DATA.pasos[1].decisiones[0];
 ok('El Paso 1 sigue en español (Fase 2 pendiente)',
-   preguntaDe(1, d1) === d1.pregunta, preguntaDe(1, d1).slice(0, 40));
+   esEspanol(pasoDe(1).decisiones[0].pregunta),
+   pasoDe(1).decisiones[0].pregunta.slice(0, 40));
 
 console.log('\n' + '='.repeat(58));
 console.log(fallos ? `${fallos} comprobación(es) fallida(s)` : 'Bilingüe correcto: la Fase 1 hace lo que dice');
