@@ -1,0 +1,323 @@
+{
+  "_nota": "Inglés del Paso 10 · Las complicaciones. Calco parcial. «No unión hipertrófica / atrófica» quedan como hypertrophic / atrophic non-union, y la regla de que toda no unión es séptica hasta demostrar lo contrario se mantiene con el mismo filo.",
+  "titulo": "Complications",
+  "subtitulo": "Anticipating them is not pessimism: it is having plan B before you need it",
+  "preguntaClave": "What can go wrong in this case, what do I need in the room, and in which earlier step is it prevented?",
+  "sintesis": "To anticipate is to have plan B decided before you cut: what you do if you cannot reduce it, what you do if the bone is worse than expected, and whether the inventory has been checked. Delayed complications are prevented backwards, each in its own step. And when something fails, the question is not what hardware to use but why the bone did not heal: mechanical non-union is stabilised, biological non-union is grafted, and every non-union is septic until proved otherwise.",
+  "objetivos": [
+    "Anticipate what can fail in theatre and have plan B decided before you cut",
+    "Prevent «backwards»: every delayed complication is born in a specific step of the method",
+    "Recognise the complications particular to the region and to the host in this case",
+    "Distinguish mechanical from biological non-union, because the treatment is different",
+    "Review the case against the nine steps when something fails, to find where it was lost"
+  ],
+
+  "decisiones": [
+    {
+      "id": "plan-b",
+      "pregunta": "What plan B have you decided before cutting?",
+      "ayuda": "The moment to settle this is now, not with the field open. Tick what you have actually arranged.",
+      "opciones": [
+        { "id": "pb-reduccion", "etiqueta": "Plan B for the reduction", "criterios": [
+          "If the planned manoeuvre does not achieve the reduction, what do you do?",
+          "Distractor, fixator as a reduction tool, joysticks, extending the window"
+        ]},
+        { "id": "pb-abordaje", "etiqueta": "An extensile approach planned", "criterios": [
+          "Know where the incision extends before you draw it",
+          "A route that cannot be extended forces you to improvise a second one"
+        ]},
+        { "id": "pb-implante", "etiqueta": "Alternative implant in the room", "criterios": [
+          "Alternative sizes and lengths, and the plan B plate",
+          "The implant that is not there does not exist, even if it is in the catalogue"
+        ]},
+        { "id": "pb-extraccion", "etiqueta": "Extraction set and rescue hardware", "criterios": [
+          "Broken-screw extractor, rescue drills, cutting pliers",
+          "Ask for it before you start: asking mid-operation costs an hour"
+        ]},
+        { "id": "pb-injerto", "etiqueta": "Graft or substitute available", "criterios": [
+          "If the bone is worse than expected or the defect larger",
+          "Deciding where the autograft comes from is part of the plan, not of the surprise"
+        ]},
+        { "id": "pb-aumentacion", "etiqueta": "Cement augmentation", "criterios": [
+          "Osteoporotic bone: it improves screw purchase",
+          "It has to be decided beforehand, because it changes the implant and the sequence"
+        ]},
+        { "id": "pb-conversion", "etiqueta": "Conversion to arthroplasty", "criterios": [
+          "Femoral neck, proximal humerus, calcaneus: if on opening, reconstruction is not viable",
+          "The team and the implant have to be available, not just the idea"
+        ]}
+      ]
+    },
+    {
+      "id": "vigilancia",
+      "pregunta": "What are you going to watch for postoperatively in THIS case?",
+      "ayuda": "It is not a generic list: you tick what this patient and this fracture make likely.",
+      "opciones": [
+        { "id": "vg-nounion", "etiqueta": "Delayed union or non-union", "criterios": [
+          "Serial radiographs looking for callus, and a decision at three months",
+          "It was prevented or condemned in Steps 3, 5 and 8"
+        ]},
+        { "id": "vg-infeccion", "etiqueta": "Infection", "criterios": [
+          "Pain that does not settle, a wound that discharges, markers that do not fall",
+          "It was prevented in Step 1 (timing and soft tissues) and in Step 8 (technique)"
+        ]},
+        { "id": "vg-malaunion", "etiqueta": "Malunion: alignment or rotation", "criterios": [
+          "Rotational deformity does not show on the radiograph: it shows when the patient walks",
+          "It was prevented by verifying in Step 9, not afterwards"
+        ]},
+        { "id": "vg-artrosis", "etiqueta": "Post-traumatic arthritis", "criterios": [
+          "Residual articular step-off: the clock starts on the day of surgery",
+          "It was prevented in Step 4, with anatomical reduction of the block"
+        ]},
+        { "id": "vg-fallo", "etiqueta": "Implant failure by fatigue", "criterios": [
+          "The implant is a temporary bridge: if the bone does not heal, it eventually breaks",
+          "It was prevented by choosing the stability well in Steps 3 and 5"
+        ]},
+        { "id": "vg-rigidez", "etiqueta": "Joint stiffness", "criterios": [
+          "Fixation not good enough to allow early movement",
+          "Stability is chosen so that you can move, not only so that it holds"
+        ]},
+        { "id": "vg-necrosis", "etiqueta": "Avascular necrosis", "criterios": [
+          "Femoral neck, scaphoid, humeral head and talus",
+          "It is anticipated from the classification, not discovered at six months"
+        ]},
+        { "id": "vg-compartimental", "etiqueta": "Compartment syndrome", "criterios": [
+          "Forearm and leg, especially after high energy or prolonged traction",
+          "Pain out of proportion and pain on passive stretch: do not wait for the pulse to go"
+        ]},
+        { "id": "vg-sdrc", "etiqueta": "Complex regional pain syndrome", "criterios": [
+          "Classic after distal radius; pain, trophic changes and stiffness out of proportion",
+          "Early mobilisation and vitamin C according to local protocol"
+        ]},
+        { "id": "vg-ho", "etiqueta": "Heterotopic ossification", "criterios": [
+          "Elbow, hip and acetabulum, especially after extensile approaches or associated head injury",
+          "Consider prophylaxis according to the patient's risk"
+        ]},
+        { "id": "vg-material", "etiqueta": "Hardware irritation or migration", "criterios": [
+          "Subcutaneous areas: ankle, ulna, clavicle, olecranon",
+          "The wires of a figure-of-eight cerclage migrate; warn the patient beforehand, not afterwards"
+        ]},
+        { "id": "vg-tromboembolica", "etiqueta": "Venous thromboembolism", "criterios": [
+          "Lower limb, immobilisation and prolonged surgery",
+          "Thromboprophylaxis balanced against the individual bleeding risk"
+        ]}
+      ]
+    },
+    {
+      "id": "tipo-nounion",
+      "pregunta": "If this does not heal, what kind of non-union will it be?",
+      "ayuda": "It is the question that organises the rescue. Mechanical and biological are treated as opposites of each other.",
+      "opciones": [
+        { "id": "nu-mecanica", "etiqueta": "Mechanical · hypertrophic", "criterios": [
+          "There is abundant callus but it does not bridge: the bone wants to heal and the construct will not let it",
+          "Elephant-foot callus on the radiograph",
+          "The treatment is mechanical: compress, stiffen the construct or change it"
+        ]},
+        { "id": "nu-biologica", "etiqueta": "Biological · atrophic", "criterios": [
+          "There is no callus: tapered, sclerotic ends, the biology is not responding",
+          "A devitalised site, or a host who is not helping",
+          "The treatment is biological: graft, decortication and optimise the patient"
+        ]},
+        { "id": "nu-septica", "etiqueta": "Septic", "criterios": [
+          "Every non-union is infected until proved otherwise",
+          "Cultures from several deep samples before deciding anything",
+          "A stable site can heal despite infection: the stability is kept"
+        ]}
+      ]
+    },
+    {
+      "id": "huesped",
+      "pregunta": "What about the host is working against you?",
+      "ayuda": "These are factors that do not change the implant but do change the odds that it works, and some are modifiable.",
+      "opciones": [
+        { "id": "hu-tabaco", "etiqueta": "Smoking", "criterios": [
+          "It is the modifiable factor that weighs most on healing",
+          "It deserves an explicit conversation, not a note in the chart"
+        ]},
+        { "id": "hu-diabetes", "etiqueta": "Poorly controlled diabetes", "criterios": [
+          "More infection, more delayed healing, worse wound healing"
+        ]},
+        { "id": "hu-nutricion", "etiqueta": "Malnutrition or vitamin D deficiency", "criterios": [
+          "Common and seldom looked for in the frail patient"
+        ]},
+        { "id": "hu-aines", "etiqueta": "NSAIDs or prolonged steroids", "criterios": [
+          "They interfere with the initial inflammatory phase of healing"
+        ]},
+        { "id": "hu-vascular", "etiqueta": "Peripheral vascular disease", "criterios": [
+          "It compromises the biology of the fracture and the healing of the wound"
+        ]},
+        { "id": "hu-ninguno", "etiqueta": "Nothing relevant", "criterios": [
+          "A host with no factors against: the mechanics rule"
+        ]}
+      ]
+    }
+  ],
+
+  "derivados": [
+    {
+      "id": "hacia-atras",
+      "titulo": "Where what you are watching for is prevented",
+      "reglas": [
+        { "texto": "Non-union → Steps 3 and 5: the stability and the principle. And Step 8: the biology you left intact. If it does not heal, start by reviewing those three decisions before the implant." },
+        { "texto": "Infection → Step 1, with the timing and the state of the soft tissues, and Step 8, with the technique and the tension-free closure. The soft-tissue window is not skipped." },
+        { "texto": "Malunion → Step 4 and the verification in Step 9. Rotation is the one most often forgotten and the worst tolerated: it is checked against the uninjured side before definitive fixation." },
+        { "texto": "Post-traumatic arthritis → Step 4: anatomical reduction of the articular block. The residual step-off is arthritis in the making and the clock starts on the day of surgery." },
+        { "texto": "Implant failure → Steps 3 and 5. The hardware does not fail because it was poor: it fails because the bone never healed and the temporary bridge had to hold longer than it should." },
+        { "texto": "Stiffness → Steps 3 and 5. Stability is not chosen only so that it holds: it is chosen so that you can move early." },
+        { "texto": "Compartment syndrome → Step 1, where it is assessed, and Step 7 if there is prolonged traction or the contralateral leg in lithotomy." }
+      ]
+    },
+    {
+      "id": "rescate",
+      "titulo": "How it would be salvaged",
+      "reglas": [
+        { "texto": "Hypertrophic non-union: the problem is the construct, not the biology. There is callus and it does not bridge because the motion is excessive. The answer is mechanical: compress the site, stiffen it or change the construct. Graft is superfluous here." },
+        { "texto": "Atrophic non-union: the problem is the biology. The answer is to supply it — graft, decortication — and to optimise the host. Stiffening a site that is not responding does not cure it." },
+        { "texto": "Septic non-union: debridement, cultures from several deep samples and targeted antibiotics. And a rule that surprises people: the stability is kept. A stable site can heal despite infection; an unstable one does not heal even when sterile." },
+        { "texto": "Before exchanging a broken implant, understand why the bone did not heal. Putting the same construct back repeats the same failure six months later." }
+      ]
+    },
+    {
+      "id": "pronostico-regional",
+      "titulo": "What the classification in this case anticipates",
+      "reglas": [
+        { "texto": "Predictors of humeral head ischaemia present: watch for necrosis with serial radiographs for at least two years, and warn the patient that collapse can appear late." },
+        { "texto": "Talus with an associated dislocation: the risk of necrosis climbs with the Hawkins type, from 20-50% in type II to over 80% in type III. Hawkins' sign — subchondral lucency at around 6-8 weeks — indicates that the blood supply is preserved." },
+        { "texto": "Displaced femoral neck: necrosis and non-union are the two complications that define the result. If fixation was chosen, follow-up has to be long and the conversation about a possible arthroplasty starts now." },
+        { "texto": "Calcaneus with a comminuted posterior facet: residual subtalar pain is the rule rather than the exception. If primary arthrodesis was not done, it is worth keeping on the horizon." },
+        { "texto": "Periprosthetic: watch for loosening of the stem as well as for healing. And remember that the zone between implants is a stress riser: always overlap plate and stem." },
+        { "texto": "Posterior acetabulum: heterotopic ossification and sciatic nerve injury are the two particular to this route. Consider ossification prophylaxis according to risk." },
+        { "texto": "High-energy pelvic pattern: genitourinary injury, lumbosacral nerve injury and venous thrombosis are frequent associated complications, and none of the three is found unless it is looked for." },
+        { "texto": "Complex elbow: stiffness is the complication that decides the functional result. The fixation has to allow movement in the first week, and heterotopic ossification is frequent." },
+        { "texto": "Syndesmosis injured: syndesmotic malreduction is the commonest cause of a poor ankle result. Check the reduction with CT if in doubt, because it does not show on the radiograph." }
+      ]
+    }
+  ],
+
+  "esencial": [
+    { "texto": "Planning for complications is not pessimism: it is the difference between solving a problem on the spot and discovering, with the field open, that the implant, the instrument or plan B is missing. Step 10 forces you to anticipate what can go wrong and to have at hand what it takes to solve it, without losing time." },
+    { "titulo": "The three questions of intraoperative anticipation", "texto": "What if the reduction does not come as expected? Then you need a plan B for the reduction and an extensile approach, both planned in advance. What if the bone is worse than expected? Then you need locking screws, augmentation, graft or substitute, available in the room and not in the catalogue. Do I have the inventory? Alternative implant sizes, an extraction set and rescue instruments, checked before you cut. All three are answered before the incision or they are not answered at all." },
+    { "titulo": "Complications are prevented backwards", "texto": "Most complications of internal fixation are not born in theatre but in a wrong decision in the earlier steps: a badly chosen stability, a reduction that betrayed the biology, an approach that devitalised the fracture. That is why the prevention is not in this step: it is in the nine before it. And that is why, when something fails, reviewing the case against the nine steps usually reveals exactly where the fracture was lost." },
+    { "titulo": "Every complication has its step",
+      "encabezados": ["Complication", "Usual origin", "Prevented in"],
+      "filas": [
+        ["Delayed union or non-union", "A mechanical error — a construct too stiff or too lax — or a biological one — a devitalised site.", "Steps 3, 5 and 8"],
+        ["Infection", "Compromised soft tissues, badly chosen timing, traumatic technique.", "Steps 1 and 8"],
+        ["Malunion: alignment or rotation", "Functional reduction not verified.", "Step 4 and verification in 9"],
+        ["Post-traumatic arthritis", "Residual articular step-off.", "Step 4"],
+        ["Implant failure by fatigue", "The fracture never healed.", "Steps 3 and 5"],
+        ["Stiffness", "Fixation not good enough to allow early movement.", "Steps 3 and 5"]
+      ]},
+    { "titulo": "The regional ones to anticipate",
+      "encabezados": ["Complication", "Where"],
+      "filas": [
+        ["Avascular necrosis", "Femoral neck, scaphoid, humeral head, talus."],
+        ["Compartment syndrome", "Forearm and leg."],
+        ["Complex regional pain syndrome", "Distal radius, above all."],
+        ["Heterotopic ossification", "Elbow, hip and acetabulum."],
+        ["Hardware irritation or migration", "Subcutaneous areas: ankle, ulna, clavicle, olecranon."]
+      ]},
+    { "titulo": "Non-union is treated in opposite ways depending on which kind it is", "texto": "The question is not how a non-union is treated, but which kind it is. The hypertrophic one has abundant callus that never quite bridges: the bone wants to heal and the construct will not let it, so the answer is mechanical — compress, stiffen, change the construct — and graft is superfluous. The atrophic one has no callus: tapered, sclerotic ends, biology that is not responding, and then the answer is biological — graft, decortication, optimise the host — and more stiffness cures nothing. Confusing them means treating each with the other's remedy." },
+    { "titulo": "Every non-union is septic until proved otherwise", "texto": "Before deciding between mechanical and biological, infection has to be ruled out, with cultures from several deep samples and not from a swab. And here is a rule that surprises people the first time they hear it: faced with an infected site, the stability is kept. A stable site can heal despite infection; an unstable one does not heal even when sterile. Removing hardware from an ununited fracture out of fear of infection usually makes both things worse." },
+    { "titulo": "Before you exchange it, understand why it did not heal", "texto": "The implant is a temporary bridge. When it breaks by fatigue, it did not break because it was poor: it broke because the bone did not heal and it had to hold for longer than intended. Putting the same construct back is repeating the same failure six months later. First the cause is identified — mechanical or biological — and only then is the salvage chosen." },
+    { "titulo": "What the host contributes, and what can actually be changed",
+      "items": [
+        "Smoking: the modifiable factor that weighs most on healing, and it deserves an explicit conversation.",
+        "Poorly controlled diabetes: more infection, more delay, worse wound healing.",
+        "Malnutrition and vitamin D deficiency: common and seldom looked for in the frail patient.",
+        "NSAIDs and prolonged steroids: they interfere with the initial inflammatory phase.",
+        "Peripheral vascular disease: it compromises the fracture and the wound at the same time."
+      ]},
+    { "titulo": "The method as a whole", "texto": "Having worked through the ten steps — from the host and the classification to anticipating the complications — it becomes clear why there is no fracture that cannot be solved if it is planned. Each step chains into the next: classifying defines the stability; the stability defines the reduction and the principle; the principle defines the implant; and the fracture, the implant and the biology together define the position, the approach and the techniques. Whoever commands this chain does not need a recipe for each bone: they have a method for any of them." }
+  ],
+
+  "alertas": [
+    { "id": "prevencion-hacia-atras", "titulo": "Complications are prevented in the earlier steps",
+      "texto": "Most of them are not born in theatre but in an earlier decision. This step is for anticipating them and having plan B; preventing them was the work of the nine steps before." },
+    { "id": "sin-plan-b", "titulo": "You have not decided any plan B",
+      "texto": "The three questions of anticipation — what you do if you cannot reduce it, what you do if the bone is worse than expected, and whether you have the inventory — are answered before the incision. Afterwards they are no longer questions: they are problems." },
+    { "id": "osteoporotico-sin-recurso", "titulo": "Osteoporotic bone with no salvage planned",
+      "texto": "In Step 6 you said the bone is osteoporotic. If the first screw grips worse than expected, you need the way out already decided: cement augmentation, screws with greater purchase or a longer construct. Improvising it with the field open is expensive." },
+    { "id": "articular-sin-conversion", "titulo": "Complex articular fracture: what if it is not reconstructable on opening?",
+      "texto": "In some surfaces — femoral neck, four-part proximal humerus, Sanders IV calcaneus — reconstruction can turn out to be unviable once you see it. Having decided whether to convert to arthroplasty or arthrodesis, and having the implant in the room, is what prevents closing and coming back another day." },
+    { "id": "nounion-sin-tipo", "titulo": "You are watching for non-union but you have not anticipated which kind",
+      "texto": "Mechanical and biological are treated as opposites. Anticipating which is more likely in this case — from the construct you chose and the biology you left — guides the follow-up and saves months." },
+    { "id": "septica-primero", "titulo": "Rule out infection before deciding the salvage",
+      "texto": "Every non-union is septic until proved otherwise. Cultures from several deep samples, not a swab. And if it is infected, the stability is kept: a stable site can heal despite infection, an unstable one does not heal even when sterile." },
+    { "id": "tabaco", "titulo": "Smoking is the modifiable factor that weighs most",
+      "texto": "On healing it weighs more than almost anything else you can change. It deserves an explicit conversation with the patient and an entry in the notes, not a remark in the margin." },
+    { "id": "puente-fatiga", "titulo": "A load-bearing construct: fatigue is a matter of time",
+      "texto": "You chose a plate that bridges, so the implant carries the whole load until the bone heals. If there is no callus at three months, the decision is then and not when the plate breaks. Set the radiograph schedule and the threshold for intervening now." },
+    { "id": "compartimental-alerta", "titulo": "Compartment syndrome is diagnosed before the pulse disappears",
+      "texto": "Pain out of proportion and pain on passive stretch are the early signs. By the time the pulse goes it is late. In the sedated or intubated patient, suspicion is measured: compartment pressure." },
+    { "id": "rotacion-postop", "titulo": "Rotational deformity does not show on the radiograph",
+      "texto": "It shows when the patient walks, and by then it has healed. If you are watching for malunion, the useful check was intraoperative: against the uninjured side, before definitive fixation." }
+  ],
+
+  "reglasCoherencia": [
+    { "id": "r10-relativa-sin-vigilar", "titulo": "Consistency — relative stability without watching the healing",
+      "mensaje": "You chose relative stability, which heals by callus and depends on the dose of motion being right. It is precisely the scenario where healing has to be watched actively: if there is no callus at three months, the decision is taken then." },
+    { "id": "r10-articular-sin-artrosis", "titulo": "Consistency — an articular fracture without reckoning with arthritis",
+      "mensaje": "Every articular fracture carries a risk of post-traumatic arthritis that was settled in Step 4, with the quality of the reduction. It is part of what has to be explained to the patient before operating, not afterwards." },
+    { "id": "r10-abierta-sin-infeccion", "titulo": "Consistency — an open fracture without watching for infection",
+      "mensaje": "In Step 1 you classified an open fracture. The infection rate climbs with the Gustilo grade, and in grade III close follow-up is not optional." }
+  ],
+
+  "evidencia": [
+    { "afirmacion": "Thromboprophylaxis in lower limb trauma reduces venous thromboembolism; the indication is balanced against the individual bleeding risk." },
+    { "afirmacion": "The infection rate of an open fracture rises with the Gustilo grade: minimal in grade I and high in IIIB and IIIC." },
+    { "afirmacion": "Distinguishing mechanical non-union — hypertrophic, with callus that does not bridge — from biological non-union — atrophic, with no response — points the treatment in opposite directions: stabilise versus supply biology." },
+    { "afirmacion": "Rotational deformity of the forearm compromises pronosupination and the functional result, and it is not detected on a conventional radiograph." }
+  ],
+
+  "autoevaluacion": [
+    { "pregunta": "The implant fails by fatigue at four months and there are no signs of healing. What does that tell you?",
+      "opciones": [
+        "That the implant was faulty",
+        "That the bone never healed: the implant is a temporary bridge and the cause has to be treated, not the hardware exchanged",
+        "That the patient bore weight too early",
+        "That a bigger implant was needed"
+      ],
+      "explicacion": "Putting the same construct back repeats the same failure six months later. First it has to be established whether the cause was mechanical or biological." },
+    { "pregunta": "In which steps is most non-union prevented?",
+      "opciones": [
+        "In Step 10, by anticipating it",
+        "In Steps 3 and 5 — the right stability and principle — and in Step 8, by preserving the biology",
+        "In Step 6, by choosing the implant",
+        "In Step 1, with the antibiotic"
+      ],
+      "explicacion": "Complications are prevented backwards: hardly any are born in theatre, but in a decision from the earlier steps." },
+    { "pregunta": "A hypertrophic non-union, with abundant callus that never quite bridges — what does it need?",
+      "opciones": [
+        "Bone graft",
+        "Stability: compress, stiffen or change the construct",
+        "Prolonged antibiotics",
+        "More time"
+      ],
+      "explicacion": "The bone wants to heal and the construct will not let it. The problem is mechanical and graft is superfluous. The opposite of the atrophic one, where what is missing is biology." },
+    { "pregunta": "Faced with a non-union with suspected infection, what is done with stable hardware?",
+      "opciones": [
+        "It is always removed; infection does not clear with hardware in place",
+        "It is kept: a stable site can heal despite infection; an unstable one does not heal even when sterile",
+        "It is exchanged for titanium",
+        "It is removed only if there is a sinus"
+      ],
+      "explicacion": "It is the rule that surprises people most. Debridement, deep cultures and targeted antibiotics, keeping the stability; removal is decided according to healing." },
+    { "pregunta": "Which host factor is the modifiable one that weighs most on healing?",
+      "opciones": [
+        "Diabetes",
+        "Smoking",
+        "Vitamin D deficiency",
+        "NSAIDs"
+      ],
+      "explicacion": "It deserves an explicit conversation with the patient. The others count, but none as much nor as directly reversibly." },
+    { "pregunta": "When is compartment syndrome diagnosed?",
+      "opciones": [
+        "When the distal pulse disappears",
+        "With pain out of proportion and pain on passive stretch, long before the pulse goes",
+        "When paraesthesia appears",
+        "On the check radiograph"
+      ],
+      "explicacion": "An absent pulse is a late sign. In the sedated or intubated patient, suspicion is measured with compartment pressure." }
+  ]
+}
