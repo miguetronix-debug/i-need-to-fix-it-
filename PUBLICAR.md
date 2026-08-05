@@ -1,10 +1,45 @@
 # Cómo publicarlo
 
-Está todo listo. Falta el paso que solo puedes dar tú, porque exige entrar con tus credenciales.
+## ✅ Publicado el 5 de agosto de 2026
+
+| Dirección | Estado |
+|---|---|
+| **https://ineedtofixit.vercel.app** | **La buena.** Conectada al repositorio: cada `git push` la republica sola. |
+| https://i-need-to-fix-it.vercel.app | Alias del mismo despliegue. |
+| https://ineedtofixit.netlify.app | El primer intento, subido a mano. **Se queda congelado** hasta que vuelvas a arrastrar la carpeta. |
+
+Repositorio: `github.com/miguetronix-debug/i-need-to-fix-it`, con Root Directory `sitio` en Vercel.
+
+Verificado en las tres: el HTML llega entero, el *service worker* y el icono responden, y las figuras cargan. En Vercel además el manifest llega con su tipo correcto, que es lo que permite instalar la app.
+
+**Para publicar un cambio de aquí en adelante:**
+
+```bash
+cd "/Users/drkush/Documents/Claude/Projects/libro de ortopedia/app-10-pasos"
+python3 tools/build_prototipo.py && python3 tools/publicar.py
+git add -A && git commit -m "lo que hayas cambiado" && git push
+```
+
+Y ya está: Vercel lo detecta y republica en menos de un minuto. **La de Netlify no**: esa hay que actualizarla a mano entrando al sitio → pestaña *Deploys* → arrastrar ahí la carpeta `sitio`. Ojo: si vuelves a arrastrarla en `app.netlify.com/drop` se crea un sitio **nuevo** con otra dirección. Lo más simple es quedarse con la de Vercel y olvidar la otra.
 
 ---
 
-## Por qué no puedo publicarlo yo
+## Lo que queda por comprobar en un móvil
+
+Tres cosas que **no se pueden verificar desde aquí** y que en tu teléfono llevan dos minutos. Usa la dirección de Vercel:
+
+1. **Que se instale.** Abre https://ineedtofixit.vercel.app y busca «Añadir a pantalla de inicio». Debe aparecer con su icono y abrirse sin barra de navegador.
+2. **Que funcione sin conexión.** Ábrela, navega dos o tres pasos, pon el móvil en modo avión y recarga. Si sigue funcionando, el *service worker* quedó bien.
+3. **Que los enlaces de caso viajen.** Rellena medio caso, copia la URL de la barra y ábrela en otro dispositivo: tienen que aparecer las mismas decisiones marcadas.
+
+Si el modo sin conexión falla, la consola del navegador dirá exactamente qué recurso no se pudo cachear: el *service worker* avisa en lugar de callarse.
+
+---
+
+<details>
+<summary>Cómo se llegó hasta aquí (por si hay que repetirlo)</summary>
+
+## Por qué no pude publicarlo yo
 
 Para subirlo a GitHub o a Vercel hay que autenticarse, y **yo no manejo contraseñas ni tokens**: no me los pegues en el chat. La forma correcta de darme acceso a GitHub no es pasarme una credencial sino **autorizar el conector desde tus ajustes de Claude**, con lo que el permiso lo das tú y yo nunca veo la clave. Aun así, en esta sesión ese flujo no se puede completar, y para Vercel directamente no existe conector.
 
@@ -108,17 +143,7 @@ python3 tools/build_prototipo.py && python3 tools/publicar.py
 git add -A && git commit -m "lo que hayas cambiado" && git push
 ```
 
----
-
-## Lo que hay que comprobar en cuanto esté en línea
-
-Tres cosas que **no he podido verificar aquí** porque el navegador del entorno de pruebas no soporta *service workers*, y que en cambio se comprueban en dos minutos en tu móvil:
-
-1. **Que se instale.** Abre la URL en el móvil y busca «Añadir a pantalla de inicio». Debería aparecer con su icono y abrirse sin barra de navegador.
-2. **Que funcione sin conexión.** Ábrela, navega un par de pasos, pon el móvil en modo avión y recárgala. Debería seguir funcionando.
-3. **Que los enlaces de caso funcionen.** Copia la URL con un caso a medias y ábrela en otro dispositivo: tiene que aparecer con las mismas decisiones puestas.
-
-Si el modo sin conexión falla, la consola del navegador dirá exactamente qué recurso no se pudo cachear: el *service worker* ahora avisa en lugar de callarse.
+</details>
 
 ---
 
