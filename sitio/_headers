@@ -1,0 +1,18 @@
+# manifest.webmanifest tiene que llegar con su tipo propio: si el servidor lo
+# manda como application/octet-stream, algunos navegadores se niegan a instalar
+# la app. Netlify lee este archivo; Vercel lee vercel.json, que dice lo mismo.
+
+/manifest.webmanifest
+  Content-Type: application/manifest+json; charset=utf-8
+
+# Las figuras nunca cambian: caché de un año.
+/content/figuras/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# El HTML y el service worker sí cambian: nunca en caché, o el usuario se queda
+# con una versión vieja y no hay forma de actualizarlo.
+/index.html
+  Cache-Control: no-cache
+
+/sw.js
+  Cache-Control: no-cache

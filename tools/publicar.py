@@ -27,6 +27,29 @@ ROBOTS = """User-agent: *
 Allow: /
 """
 
+# Lo mismo que vercel.json, en el formato que entiende Netlify. Hace falta
+# sobre todo por el manifest: Netlify lo sirve como application/octet-stream y
+# con ese tipo algunos navegadores se niegan a instalar la app.
+HEADERS = """# manifest.webmanifest tiene que llegar con su tipo propio: si el servidor lo
+# manda como application/octet-stream, algunos navegadores se niegan a instalar
+# la app. Netlify lee este archivo; Vercel lee vercel.json, que dice lo mismo.
+
+/manifest.webmanifest
+  Content-Type: application/manifest+json; charset=utf-8
+
+# Las figuras nunca cambian: caché de un año.
+/content/figuras/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# El HTML y el service worker sí cambian: nunca en caché, o el usuario se queda
+# con una versión vieja y no hay forma de actualizarlo.
+/index.html
+  Cache-Control: no-cache
+
+/sw.js
+  Cache-Control: no-cache
+"""
+
 # Vercel y Netlify sirven estáticos sin configuración; esto solo añade caché
 # larga para las figuras, que no cambian nunca, y ninguna para el HTML.
 VERCEL = """{
@@ -66,6 +89,7 @@ def main():
 
     (SITIO / "robots.txt").write_text(ROBOTS, encoding="utf-8")
     (SITIO / "vercel.json").write_text(VERCEL, encoding="utf-8")
+    (SITIO / "_headers").write_text(HEADERS, encoding="utf-8")
 
     archivos = sum(1 for _ in SITIO.rglob("*") if _.is_file())
     peso = sum(f.stat().st_size for f in SITIO.rglob("*") if f.is_file()) / 1024 / 1024
