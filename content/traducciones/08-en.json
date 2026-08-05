@@ -1,0 +1,430 @@
+{
+  "_nota": "Inglés del Paso 8 · El abordaje quirúrgico. Calco parcial. Los abordajes epónimos conservan su nombre propio (Kocher, Henry, Thompson, Kocher-Langenbeck…), que es como se citan en cualquier idioma.",
+  "titulo": "The surgical approach",
+  "subtitulo": "The approach serves the biomechanical principle, not the other way round",
+  "preguntaClave": "Does this approach give access to what I have to do, and is it consistent with the biology I decided to preserve?",
+  "sintesis": "The approach is chosen for what you want to achieve and it must match the principle from Step 5: extensile to reconstruct and compress, minimally invasive to bridge, combined when there are two zones. The soft tissues determine the result as much as the fixation does: full-thickness flaps, periosteum respected, an internervous plane and a tension-free closure. And the structure at risk of each route is part of the plan, not an intraoperative surprise.",
+  "objetivos": [
+    "Choose the approach for what you want to achieve, not out of habit",
+    "Check that the approach is consistent with the principle from Step 5",
+    "Handle the soft tissues as a determinant of the result, not as a formality",
+    "Know the internervous plane and the structure at risk of the chosen route",
+    "Decide single or double incision, and whether the soft-tissue window is open"
+  ],
+
+  "decisiones": [
+    {
+      "id": "tipo-abordaje",
+      "pregunta": "What kind of approach?",
+      "ayuda": "This is the decision that has to match the principle from Step 5. A wide approach over a fracture you were going to bridge betrays the strategy.",
+      "opciones": [
+        { "id": "ab-extenso", "etiqueta": "Extensile or direct", "criterios": [
+          "Direct anatomical reduction: articular surfaces and lines that are going to be compressed",
+          "It accepts more exposure in exchange for precision",
+          "It is consistent when the plan is to compress, not when the plan is to bridge"
+        ]},
+        { "id": "ab-mipo", "etiqueta": "Minimally invasive (MIPO)", "criterios": [
+          "Indirect reduction and bridging",
+          "Small windows, submuscular tunnel, preserves the fracture haematoma",
+          "It depends on good-quality fluoroscopy and a very clear plan"
+        ]},
+        { "id": "ab-combinado", "etiqueta": "Combined or extensile", "criterios": [
+          "Complex fractures: acetabulum, pilon, tibial plateau",
+          "It reaches more than one column or facet",
+          "Plan from the start where each window goes and what skin bridge you leave"
+        ]},
+        { "id": "ab-percutaneo", "etiqueta": "Purely percutaneous", "criterios": [
+          "Cannulated screws or wires over a guide wire, with no exposure of the fracture",
+          "Femoral neck, scaphoid, sacroiliac, some articular fragments",
+          "It requires that the reduction has already been achieved closed"
+        ]}
+      ]
+    },
+    {
+      "id": "partes-blandas",
+      "pregunta": "Which soft-tissue principles are you going to apply?",
+      "ayuda": "Handling of the soft tissues determines the result as much as the fixation does. Tick what you are actually going to do.",
+      "opciones": [
+        { "id": "pb-colgajo", "etiqueta": "Full-thickness flaps", "criterios": [
+          "Dissect down to the deep plane and handle the tissue as a block",
+          "Do not raise layers: every plane you separate is skin perfusion lost"
+        ]},
+        { "id": "pb-periostio", "etiqueta": "Respect the periosteum", "criterios": [
+          "Avoid circumferential periosteal stripping",
+          "Every millimetre of devitalised periosteum is biology lost"
+        ]},
+        { "id": "pb-internervioso", "etiqueta": "Work through the internervous plane", "criterios": [
+          "Entering between territories of different nerves avoids denervating muscles",
+          "It is the whole reason the classic approaches exist"
+        ]},
+        { "id": "pb-cierre", "etiqueta": "Close without tension", "criterios": [
+          "Dehiscence and edge necrosis open the door to infection",
+          "If it does not close, do not close it: delayed closure or coverage is better"
+        ]},
+        { "id": "pb-hemostasia", "etiqueta": "Haemostasis and tourniquet management", "criterios": [
+          "The postoperative haematoma is a culture medium",
+          "Release the tourniquet before closing to check the bleeding"
+        ]}
+      ]
+    },
+    {
+      "id": "herida",
+      "pregunta": "One incision or two?",
+      "opciones": [
+        { "id": "he-unica", "etiqueta": "Single incision", "criterios": [
+          "A single bone or a single column to approach"
+        ]},
+        { "id": "he-doble", "etiqueta": "Two incisions with a skin bridge", "criterios": [
+          "Two-bone fractures: forearm, pilon with fibula, Lisfranc",
+          "Respecting the skin bridge prevents necrosis and, in the forearm, synostosis"
+        ]}
+      ]
+    },
+    {
+      "id": "ventana",
+      "pregunta": "Is the soft-tissue window open?",
+      "ayuda": "This is where the timing decision from Step 1 becomes real. In critical regions, the incision is postponed until the swelling settles.",
+      "opciones": [
+        { "id": "vt-si", "etiqueta": "Yes: the wrinkle sign is present", "criterios": [
+          "The swelling has settled and the skin creases again",
+          "This is the moment for definitive internal fixation"
+        ]},
+        { "id": "vt-no", "etiqueta": "No: swelling, blisters or tight skin", "criterios": [
+          "Cutting now opens the door to edge necrosis and infection",
+          "Spanning external fixator, and wait"
+        ]},
+        { "id": "vt-nc", "etiqueta": "Not applicable in this region", "criterios": [
+          "Generous soft-tissue cover with no compromise"
+        ]}
+      ]
+    },
+    {
+      "id": "via-nombrada",
+      "pregunta": "Which named approach?",
+      "ayuda": "They are filtered by the region you classified in Step 2. Each one exploits an interval between muscles of different innervation and has its own structure at risk.",
+      "opciones": [
+        { "id": "vn-deltopectoral", "etiqueta": "Deltopectoral", "criterios": [
+          "Deltoid–pectoralis major interval, with the cephalic vein as the landmark",
+          "Proximal humerus: it is the classic extensile route"
+        ]},
+        { "id": "vn-deltoideo", "etiqueta": "Lateral deltoid split", "criterios": [
+          "Direct access to the greater tuberosity and the lateral surface",
+          "Structure at risk: the axillary nerve, about 5 cm from the acromion. Do not extend the split"
+        ]},
+        { "id": "vn-clavicula", "etiqueta": "Direct over the clavicle", "criterios": [
+          "Incision below the clavicular border so the scar does not sit over the plate",
+          "Structure at risk: the supraclavicular nerves. Identify and preserve them"
+        ]},
+        { "id": "vn-escapula-post", "etiqueta": "Posterior scapula (Judet)", "criterios": [
+          "Neck and lateral border of the scapula",
+          "Structure at risk: the suprascapular nerve at the notch"
+        ]},
+        { "id": "vn-anterolateral-humero", "etiqueta": "Anterolateral humerus", "criterios": [
+          "Biceps–brachialis interval; extensile from the deltopectoral",
+          "The radial nerve crosses as it pierces the lateral intermuscular septum in the distal third"
+        ]},
+        { "id": "vn-posterior-humero", "etiqueta": "Posterior humerus", "criterios": [
+          "Triceps split or the interval between its heads",
+          "Structure at risk: the radial nerve in the spiral groove. Identify it BEFORE applying the plate"
+        ]},
+        { "id": "vn-posterior-codo", "etiqueta": "Posterior elbow, with or without olecranon osteotomy", "criterios": [
+          "The osteotomy gives the best view of the distal humeral articular surface",
+          "Structure at risk: the ulnar nerve. Identify it, protect it and decide whether to transpose it"
+        ]},
+        { "id": "vn-kocher", "etiqueta": "Lateral Kocher or Kaplan", "criterios": [
+          "Anconeus–extensor carpi ulnaris interval",
+          "Radial head and lateral condyle",
+          "Pronating the forearm moves the posterior interosseous nerve away"
+        ]},
+        { "id": "vn-boyd", "etiqueta": "Posterolateral Boyd", "criterios": [
+          "Combined access to the proximal olecranon and the radial head",
+          "Beware of proximal radioulnar synostosis"
+        ]},
+        { "id": "vn-henry", "etiqueta": "Henry (volar radius)", "criterios": [
+          "Brachioradialis–flexor carpi radialis interval",
+          "Extensile from elbow to wrist: the most versatile route in the forearm",
+          "In the proximal third, the posterior interosseous nerve lies within the supinator"
+        ]},
+        { "id": "vn-thompson", "etiqueta": "Thompson (dorsal radius)", "criterios": [
+          "Extensor carpi radialis brevis–extensor digitorum communis interval",
+          "Structure at risk: the posterior interosseous nerve as it passes through the supinator. Pronate to move it away"
+        ]},
+        { "id": "vn-cubital-directo", "etiqueta": "Direct subcutaneous ulna", "criterios": [
+          "Between flexor carpi ulnaris and extensor carpi ulnaris",
+          "A separate incision from the radial one: it respects the skin bridge"
+        ]},
+        { "id": "vn-volar-radio", "etiqueta": "Volar distal radius (modified Henry)", "criterios": [
+          "Between flexor carpi radialis and the radial artery",
+          "Pronator quadratus taken down and repaired at closure"
+        ]},
+        { "id": "vn-dorsal-muneca", "etiqueta": "Dorsal wrist", "criterios": [
+          "Third extensor compartment, with transposition of extensor pollicis longus",
+          "It gives direct articular vision; dorsal hardware irritates the tendons"
+        ]},
+        { "id": "vn-mano-dorsal", "etiqueta": "Dorsal metacarpals and phalanges", "criterios": [
+          "Respect the extensor apparatus and the dorsal veins",
+          "Tendon adhesion is the complication that decides the functional result"
+        ]},
+        { "id": "vn-watson-jones", "etiqueta": "Watson-Jones (anterolateral hip)", "criterios": [
+          "Gluteus medius–tensor fasciae latae interval"
+        ]},
+        { "id": "vn-hardinge", "etiqueta": "Hardinge (direct lateral)", "criterios": [
+          "Gluteus medius split; risk of abductor insufficiency if extended proximally"
+        ]},
+        { "id": "vn-smith-petersen", "etiqueta": "Smith-Petersen (anterior)", "criterios": [
+          "Sartorius–tensor fasciae latae interval",
+          "Structure at risk: the lateral femoral cutaneous nerve"
+        ]},
+        { "id": "vn-lateral-femur", "etiqueta": "Lateral femur", "criterios": [
+          "Between vastus lateralis and the intermuscular septum",
+          "The natural route for the lateral plate and for the submuscular tunnel in MIPO"
+        ]},
+        { "id": "vn-entrada-clavo", "etiqueta": "Entry portal for an intramedullary nail", "criterios": [
+          "Piriformis, greater trochanter, suprapatellar or infrapatellar, depending on the bone and the nail",
+          "The correct entry point is the one that avoids deformity: an eccentric portal deforms the moment the nail goes in"
+        ]},
+        { "id": "vn-parapatelar", "etiqueta": "Medial or lateral parapatellar", "criterios": [
+          "Articular and metaphyseal access to the distal femur and the tibial plateau",
+          "Extensile with a tibial tubercle osteotomy if more vision is needed"
+        ]},
+        { "id": "vn-anteromedial-tibia", "etiqueta": "Anteromedial tibia", "criterios": [
+          "Subcutaneous medial surface: easy access and poor cover",
+          "It is the region where waiting for the soft-tissue window matters most"
+        ]},
+        { "id": "vn-anterolateral-tobillo", "etiqueta": "Anterolateral ankle", "criterios": [
+          "Pilon and anterolateral column",
+          "Structure at risk: the superficial peroneal nerve"
+        ]},
+        { "id": "vn-posterolateral-tobillo", "etiqueta": "Posterolateral ankle", "criterios": [
+          "Fibula and posterior malleolus through a single incision",
+          "Peroneal–flexor hallucis longus interval; structure at risk: the sural nerve"
+        ]},
+        { "id": "vn-medial-tobillo", "etiqueta": "Medial ankle", "criterios": [
+          "Medial malleolus; beware of the saphenous vein and nerve"
+        ]},
+        { "id": "vn-lateral-calcaneo", "etiqueta": "Extensile lateral calcaneus", "criterios": [
+          "A full-thickness L-shaped flap, raised without touching the subcutaneous plane",
+          "It is the approach where edge necrosis is commonest: wait for the window"
+        ]},
+        { "id": "vn-dorsal-pie", "etiqueta": "Dorsal foot", "criterios": [
+          "Lisfranc and metatarsals; separate incisions with an adequate skin bridge"
+        ]},
+        { "id": "vn-kocher-langenbeck", "etiqueta": "Kocher-Langenbeck (posterior acetabulum)", "criterios": [
+          "Posterior wall and column",
+          "Structure at risk: the sciatic nerve. Knee flexed and hip extended to offload it"
+        ]},
+        { "id": "vn-ilioinguinal", "etiqueta": "Ilioinguinal or anterior intrapelvic", "criterios": [
+          "Anterior column and quadrilateral plate",
+          "Structures at risk: femoral vessels, corona mortis, bladder"
+        ]},
+        { "id": "vn-columna-post", "etiqueta": "Posterior spine", "criterios": [
+          "Subperiosteal in the midline; abdomen free to reduce epidural bleeding"
+        ]},
+        { "id": "vn-tp-lateral", "etiqueta": "Lateral proximal tibia", "criterios": [
+          "It reaches the ANTEROLATERAL quadrant, the one of the classic split-depression",
+          "Supine. It is the route for the lateral locked plate",
+          "Extensile to lateral parapatellar if the surface has to be seen"
+        ]},
+        { "id": "vn-tp-medial", "etiqueta": "Medial proximal tibia", "criterios": [
+          "It reaches the ANTEROMEDIAL quadrant",
+          "Subcutaneous surface: poor cover, respect the soft-tissue window",
+          "It buttresses the medial plateau, which the lateral plate does not control"
+        ]},
+        { "id": "vn-tp-posteromedial", "etiqueta": "Posteromedial proximal tibia", "criterios": [
+          "It reaches the POSTEROMEDIAL quadrant, the fragment most often forgotten",
+          "Supine with the knee flexed, or prone depending on the combination",
+          "Between medial gastrocnemius and pes anserinus; it allows the buttress where the fragment actually pushes"
+        ]},
+        { "id": "vn-tp-posterolateral", "etiqueta": "Posterolateral proximal tibia", "criterios": [
+          "It reaches the POSTEROLATERAL quadrant, the hardest to get to",
+          "Prone or lateral. Consider a fibular osteotomy or a posterior window",
+          "Structures at risk: the common peroneal nerve and the tibioperoneal trunk"
+        ]}
+      ]
+    }
+  ],
+
+  "derivados": [
+    {
+      "id": "en-riesgo",
+      "titulo": "The structure at risk of this route",
+      "reglas": [
+        { "texto": "RADIAL nerve in the spiral groove. Identify it before applying the plate, not afterwards. It is the classic iatrogenic injury of this route." },
+        { "texto": "RADIAL nerve as it pierces the lateral intermuscular septum in the distal third, and the musculocutaneous nerve within brachialis." },
+        { "texto": "AXILLARY nerve, about 5 cm from the edge of the acromion. Do not extend the split distally." },
+        { "texto": "SUPRACLAVICULAR nerves. Identifying and preserving them avoids shoulder numbness, which is the commonest complaint after this plate." },
+        { "texto": "SUPRASCAPULAR nerve at the notch, and the circumflex scapular artery." },
+        { "texto": "ULNAR nerve. Identify and protect it in every elbow approach, and decide explicitly whether to transpose it." },
+        { "texto": "POSTERIOR INTEROSSEOUS nerve within the supinator. Pronating the forearm moves it away from the field." },
+        { "texto": "POSTERIOR INTEROSSEOUS nerve as it passes through the supinator in the proximal third. Pronate to move it away." },
+        { "texto": "RADIAL artery in the interval, and the posterior interosseous nerve if you extend proximally towards the supinator. At the wrist, pronator quadratus is taken down and repaired." },
+        { "texto": "LATERAL FEMORAL CUTANEOUS nerve, and the femoral bundle deep in the interval." },
+        { "texto": "Branch of the SUPERIOR GLUTEAL nerve: do not extend the split more than 3-5 cm above the trochanter or abductor insufficiency will follow." },
+        { "texto": "SCIATIC nerve. Knee flexed and hip extended throughout the operation to offload it, and the superior gluteal artery at the notch." },
+        { "texto": "FEMORAL bundle, corona mortis and bladder. The corona mortis is the anastomosis between the obturator and epigastric vessels: it bleeds heavily and gives no warning." },
+        { "texto": "SUPERFICIAL PERONEAL nerve, which crosses the field in the distal third of the leg." },
+        { "texto": "SURAL nerve, alongside the short saphenous vein." },
+        { "texto": "SAPHENOUS vein and nerve, which run together in front of the medial malleolus." },
+        { "texto": "SURAL nerve and, above all, the lateral calcaneal artery that supplies the apex of the L-shaped flap. Edge necrosis is the complication that decides the result." },
+        { "texto": "More than a nerve, the risk here is the entry point itself: an eccentric portal deforms the proximal fragment the moment the nail goes in, and that deformity is no longer correctable." }
+      ]
+    },
+    {
+      "id": "coherencia-principio",
+      "titulo": "The approach against your principle",
+      "reglas": [
+        { "texto": "Consistent. You are going to bridge and you are entering through small windows in a submuscular tunnel: the biology callus needs stays where it is." },
+        { "texto": "Consistent. Anatomical reduction is paid for with exposure, and here that exposure buys millimetre precision." },
+        { "texto": "Consistent. Two zones with different demands usually call for two windows: the articular one open to reconstruct, the metaphyseal one minimal to bridge." },
+        { "texto": "Review this. Compression demands exact cortical contact and control of the fracture line. It is possible through MIPO with a percutaneous screw or with the plate's dynamic compression unit, but you need good-quality fluoroscopy and you must accept less room for correction." }
+      ]
+    }
+  ],
+
+  "esencial": [
+    { "texto": "The approach is chosen for what you want to achieve, not out of habit. It has to give enough access to the fracture and to the fixation points while respecting the blood supply and the neurovascular planes as far as possible. The AO's governing principle is clear: handling of the soft tissues determines the result as much as the fixation does." },
+    { "titulo": "The four soft-tissue principles", "texto": "Full-thickness flaps: dissect down to the deep plane and handle the tissue as a block, without raising layers, to preserve skin perfusion. Respect the bone's blood supply: avoid circumferential periosteal stripping, because every millimetre of devitalised periosteum is biology lost. Work through internervous planes: entering between territories of different nerves avoids denervating muscles. And do not close under tension: dehiscence and edge necrosis open the door to infection." },
+    { "titulo": "Types of approach and consistency with the principle",
+      "encabezados": ["Type", "When", "Consistency"],
+      "filas": [
+        ["Extensile or direct", "Direct anatomical reduction: articular fractures and lines to be compressed.", "It accepts more exposure in exchange for precision."],
+        ["Minimally invasive (MIPO)", "Indirect reduction and bridging.", "Small windows, submuscular tunnel, preserves the haematoma."],
+        ["Combined or extensile", "Complex fractures: acetabulum, pilon, plateau.", "It reaches more than one column or facet."]
+      ]},
+    { "titulo": "Approach and principle must agree", "texto": "If the plan is to bridge — relative stability, functional reduction — a wide approach that strips the fracture betrays the strategy. If the plan is to rebuild an articular surface, an inadequate window makes anatomical reduction impossible. The approach serves the biomechanical principle, not the other way round." },
+    { "titulo": "The structure at risk is known beforehand, not discovered inside", "texto": "Every classic approach exploits an interval between muscles of different innervation and keeps a safe zone with respect to the vital structures. The radial nerve in the posterior humerus and the proximal forearm, the axillary nerve 5 cm from the acromion, the ulnar nerve in every elbow approach, the supraclavicular nerves at the clavicle, the suprascapular nerve in the posterior scapula, the sciatic nerve in the posterior hip and acetabulum. Knowing which structure is at risk is part of the plan, not an intraoperative surprise." },
+    { "titulo": "Named approaches by region",
+      "encabezados": ["Region", "Approach", "Interval or note"],
+      "filas": [
+        ["Proximal humerus", "Deltopectoral", "Deltoid–pectoralis major, with the cephalic vein."],
+        ["Humeral shaft", "Anterolateral or posterior", "Posterior: identify the radial nerve before the plate."],
+        ["Distal humerus", "Posterior, with or without olecranon osteotomy", "Transpose or protect the ulnar nerve."],
+        ["Lateral elbow", "Kocher or Kaplan", "Anconeus–extensor carpi ulnaris; pronation protects the posterior interosseous nerve."],
+        ["Forearm (radius)", "Volar Henry or dorsal Thompson", "Posterior interosseous nerve within the supinator, in the proximal third."],
+        ["Hip", "Watson-Jones, Hardinge or Smith-Petersen", "Anterolateral, lateral and anterior."],
+        ["Acetabulum", "Kocher-Langenbeck or ilioinguinal", "Posterior with the sciatic nerve; anterior with the femoral vessels and the corona mortis."],
+        ["Distal femur and knee", "Medial or lateral parapatellar", "Articular and metaphyseal access."],
+        ["Ankle", "Anterolateral, posterolateral and medial", "According to the column or the malleolus to be fixed."]
+      ]},
+    { "titulo": "Wound decisions", "texto": "Single or double incision: in two-bone fractures — forearm, pilon with fibula — separate incisions with the skin bridge respected prevent necrosis and, in the forearm, synostosis. And wait for the soft-tissue window: in critical regions, postpone the incision until the swelling settles and the wrinkle sign appears. The timing decision taken in Step 1 becomes real here, with the scalpel in hand." },
+    { "titulo": "Steps 7 and 8, in summary", "texto": "Positioning and approach prepare the execution. The position is chosen so that the approach, the reduction and the imaging are possible; the approach is chosen to serve the biomechanical principle with the least damage to the soft tissues. Both must be consistent with everything decided before: the best implant is worthless through an inconsistent route or in a position that makes reduction impossible." }
+  ],
+
+  "alertas": [
+    { "id": "partes-blandas-mandan", "titulo": "Handling of the soft tissues determines the result as much as the fixation",
+      "texto": "It is the AO's governing principle in this step. Full-thickness flaps, periosteum respected, internervous plane and tension-free closure." },
+    { "id": "extenso-sobre-puenteo", "titulo": "You are going to bridge and you are opening the fracture",
+      "texto": "In Step 5 you chose splinting, which heals by callus and lives off intact biology. An extensile approach over that zone destroys the fracture haematoma and the periosteal blood supply the callus needs. The approach betrays the strategy: the consistent route is MIPO." },
+    { "id": "mipo-sobre-articular", "titulo": "Anatomical articular reconstruction through a minimally invasive route",
+      "texto": "An articular surface is rarely rebuilt blind. If you go by MIPO, make sure you have arthroscopy, intraoperative CT or a dedicated articular window; otherwise the window is inadequate and the step-off stays inside." },
+    { "id": "percutaneo-sin-reduccion", "titulo": "The percutaneous approach does not reduce: it only fixes",
+      "texto": "It assumes the reduction has already been achieved closed. If it has not, you are going to fix a badly reduced fracture with the advantage of not seeing it." },
+    { "id": "ventana-cerrada", "titulo": "The soft-tissue window is not open",
+      "texto": "With swelling, blisters or tight skin, cutting now leads to edge necrosis, dehiscence and deep infection. Spanning external fixator and wait for the wrinkle sign. This is the Step 1 decision becoming real." },
+    { "id": "dos-huesos-una-incision", "titulo": "Two bones and a single incision",
+      "texto": "In the forearm and in the pilon with fibula, a single incision compromises the skin bridge. In the forearm it also adds the risk of radioulnar synostosis. Use separate incisions." },
+    { "id": "puente-cutaneo", "titulo": "Respect the skin bridge",
+      "texto": "The narrower it is, the greater the risk of necrosis of the flap between the incisions. Plan both incisions before the first one, not after." },
+    { "id": "cierre-tension", "titulo": "You have not planned a tension-free closure",
+      "texto": "Dehiscence and edge necrosis are the door to deep infection, and in subcutaneous regions — tibia, calcaneus, ankle — they decide the result. If in the end it will not close without tension, do not close it: delayed closure or coverage." },
+    { "id": "periostio", "titulo": "Circumferential periosteal stripping is biology lost",
+      "texto": "Opening widely and then stripping the periosteum all the way round leaves the fragment with no source of blood supply at all. It is the mechanism by which a technically correct fixation ends in non-union." },
+    { "id": "colgajo-calcaneo", "titulo": "The L-shaped calcaneal flap does not forgive",
+      "texto": "It is raised full thickness, without touching the subcutaneous plane, and it is not retracted with retractors: it is held with bent Kirschner wires. Necrosis of the apex is the complication that decides the result of this operation." },
+    { "id": "radial-posterior", "titulo": "Identify the radial nerve before putting in the plate",
+      "texto": "In the posterior humeral approach the nerve crosses the field in the spiral groove. Finding it first and protecting it is quicker than looking for it once a plate is already on top." },
+    { "id": "ciatico-kl", "titulo": "Sciatic nerve offloaded throughout the operation",
+      "texto": "In the Kocher-Langenbeck, knee flexed and hip extended from beginning to end. Sciatic injury in this approach is almost always from sustained retractor traction, not from division." },
+    { "id": "portal-excentrico", "titulo": "The nail entry point decides the deformity",
+      "texto": "An eccentric portal deforms the proximal fragment the moment the nail goes in, and that deformity cannot be corrected afterwards. Check it in two planes before reaming." },
+    { "id": "internervioso", "titulo": "Work through the internervous plane",
+      "texto": "It is the whole reason the classic approaches exist: entering between territories of different nerves lets you separate muscles without denervating them. If you leave the interval, the muscle you cross loses its nerve supply." },
+    { "id": "rg-placa-lateral-insuficiente", "titulo": "The lateral plate does not control the medial fragment",
+      "texto": "A Schatzker IV, or a medial or posteromedial column involved, needs its own buttress through its own approach. Holding them with long screws from a lateral plate is the mechanism by which these fractures collapse into varus within weeks." },
+    { "id": "rg-acetabulo-abordaje", "titulo": "In the acetabulum, the approach is the operation",
+      "texto": "The Letournel pattern does not describe: it prescribes. Choosing the wrong route is not corrected by extending the incision, and the combined or extensile approach has a soft-tissue cost that has to be accepted before starting." },
+    { "id": "tp-cuadrante-anterolateral", "titulo": "You marked the anterolateral quadrant and you are not approaching it",
+      "texto": "The anterolateral quadrant is reached through the lateral approach. Without that window, the split-depression is reduced blind. What fits is the lateral approach to the proximal tibia, alone or combined with the one you already chose." },
+    { "id": "tp-cuadrante-anteromedial", "titulo": "You marked the anteromedial quadrant and you are not approaching it",
+      "texto": "The anteromedial plateau is not held by a lateral plate: it works in shear and gives way into varus. It needs its own medial window and a buttress. What fits is the medial approach to the proximal tibia, alone or combined with the one you already chose." },
+    { "id": "tp-cuadrante-posterolateral", "titulo": "You marked the posterolateral quadrant and you are not approaching it",
+      "texto": "The posterolateral quadrant lies behind the fibula: it can be neither seen nor instrumented from the front. Either it is approached from behind, or that depression is left unreduced. What fits is the posterolateral approach to the proximal tibia, alone or combined with the one you already chose." },
+    { "id": "tp-cuadrante-posteromedial", "titulo": "You marked the posteromedial quadrant and you are not approaching it",
+      "texto": "The posteromedial fragment subluxes in flexion and no anterior plate controls it. It is the one most often forgotten and the one that most often fails. What fits is the posteromedial approach to the proximal tibia, alone or combined with the one you already chose." },
+    { "id": "tp-cuadrante-doctrina", "titulo": "In the plateau, each quadrant asks for its own window",
+      "texto": "Schatzker as modified by Kfuri divides the plateau into four quadrants — anterolateral, anteromedial, posterolateral and posteromedial — precisely because each one is reached from a different place. That is the value of the classification: it does not describe, it plans the approach. Two broken quadrants usually mean two windows, with the skin bridge thought out from the start." }
+  ],
+
+  "reglasCoherencia": [
+    { "id": "r8-abordaje-sin-via", "titulo": "Consistency — the named approach is missing",
+      "mensaje": "You have defined the kind of approach but not the specific route. The internervous plane and the structure at risk depend on that choice, and they are part of the plan, not an intraoperative surprise." },
+    { "id": "r8-mipo-sin-imagen", "titulo": "Consistency — MIPO demands good fluoroscopy",
+      "mensaje": "Minimally invasive fixation replaces direct vision with imaging. Check that in Step 7 you settled C-arm access to every projection you are going to need." },
+    { "id": "r8-ventana-abierta-tarde", "titulo": "Consistency — extensile approach with a doubtful window",
+      "mensaje": "An extensile approach over soft tissues that are not ready. It is the combination that produces edge necrosis and deep infection. Spanning external fixator and wait for the wrinkle sign." }
+  ],
+
+  "evidencia": [
+    { "afirmacion": "In distal tibial and femoral fractures, minimally invasive fixation achieves healing comparable to open reduction with fewer soft-tissue complications and less infection." },
+    { "afirmacion": "Every classic approach exploits an internervous interval and defines a safe zone with respect to the vital structures." }
+  ],
+
+  "autoevaluacion": [
+    { "pregunta": "Why can a wide approach betray the plan?",
+      "opciones": [
+        "Because it lengthens the operating time",
+        "Because if the principle is to bridge — relative stability, which thrives on intact biology — stripping the fracture destroys the blood supply the callus needs",
+        "Because it makes the plate impossible to apply",
+        "Because it needs more assistants"
+      ],
+      "explicacion": "The approach serves the biomechanical principle, not the other way round. If you are going to bridge, enter through small windows." },
+    { "pregunta": "Name the structure at risk in the posterior humeral approach.",
+      "opciones": [
+        "Ulnar nerve",
+        "Axillary nerve",
+        "Radial nerve in the spiral groove",
+        "Musculocutaneous nerve"
+      ],
+      "explicacion": "It has to be identified BEFORE the plate is applied, not once hardware is already on top." },
+    { "pregunta": "Which manoeuvre moves the posterior interosseous nerve away from the field in the lateral elbow approach?",
+      "opciones": [
+        "Supinating the forearm",
+        "Pronating the forearm",
+        "Flexing the elbow",
+        "Extending the wrist"
+      ],
+      "explicacion": "Pronation moves the nerve, which runs within the supinator, laterally and away from the dissection." },
+    { "pregunta": "In a both-bone forearm fracture, why two separate incisions?",
+      "opciones": [
+        "Because the hardware will not fit through one",
+        "To respect the skin bridge and reduce the risk of necrosis and of radioulnar synostosis",
+        "Because the internervous plane demands it",
+        "To shorten the operating time"
+      ],
+      "explicacion": "The same criterion applies to the pilon with fibula: separate incisions and the skin bridge respected." },
+    { "pregunta": "What does the wrinkle sign mean?",
+      "opciones": [
+        "That the fracture is healing",
+        "That the swelling has settled and the skin creases again: the soft-tissue window is open",
+        "That there is compartment syndrome",
+        "That the skin is ischaemic"
+      ],
+      "explicacion": "It is the clinical criterion for moving from a spanning fixator to definitive fixation in critical regions." },
+    { "pregunta": "Why are full-thickness flaps dissected?",
+      "opciones": [
+        "To see the bone better",
+        "Because handling the tissue as a block, without raising layers, preserves skin perfusion",
+        "To make closure easier",
+        "Because it speeds up the dissection"
+      ],
+      "explicacion": "Every plane you separate is a blood supply lost. It is what decides the viability of the wound edge." },
+    { "pregunta": "In the Kocher-Langenbeck, how is the sciatic nerve protected?",
+      "opciones": [
+        "By transposing it",
+        "With the knee flexed and the hip extended throughout the operation",
+        "With the hip flexed and the knee extended",
+        "It cannot be protected"
+      ],
+      "explicacion": "That position offloads it. Injury in this approach is almost always from sustained retractor traction, not from division." }
+  ]
+}
