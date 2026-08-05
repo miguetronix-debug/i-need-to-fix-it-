@@ -1,0 +1,372 @@
+{
+  "_nota": "Inglés del Paso 4 · El tipo de reducción. Calco parcial. La distinción del autor entre TIPO y VÍA se mantiene como TYPE (anatomical / functional) y ROUTE (direct / percutaneous / indirect), nunca fundidas en «approach», que en este método significa otra cosa (Paso 8).",
+  "titulo": "The type of reduction",
+  "subtitulo": "Two questions: what type, and by which route",
+  "preguntaClave": "Anatomical or functional? And by which route do I get there without devitalising the fracture?",
+  "sintesis": "Two different questions. The TYPE: anatomical for simple lines and for every articular block, even a complex one; functional for complex metaphyses and shafts, restoring length, alignment and rotation. The ROUTE: direct, percutaneous or indirect, choosing how much biology you pay. An anatomical reduction can be achieved percutaneously; what does not make sense is stripping a fracture you are going to bridge.",
+  "objetivos": [
+    "Distinguish the TYPE of reduction (anatomical or functional) from the ROUTE used to achieve it",
+    "Reduce simple lines and articular blocks anatomically, even when the block is complex",
+    "Reduce complex metaphyses and shafts functionally, restoring length, alignment and rotation",
+    "Choose between direct, percutaneous and indirect routes knowing what each one costs",
+    "Verify rotation actively: the implant does not correct it on its own"
+  ],
+
+  "decisiones": [
+    {
+      "id": "tipo-reduccion",
+      "pregunta": "Which type of reduction?",
+      "ayuda": "Anatomical for simple lines and for any articular block, even a complex one. Functional for complex metaphyses and shafts.",
+      "opciones": [
+        { "id": "t-anatomica", "etiqueta": "Anatomical", "criterios": [
+          "Restore the anatomy fragment by fragment",
+          "Simple lines and EVERY articular block, even when the block is complex",
+          "It is what allows compression: compression demands exact cortical contact"
+        ]},
+        { "id": "t-funcional", "etiqueta": "Functional", "criterios": [
+          "Each fragment is not rebuilt",
+          "Complex or multifragmentary metaphyses and shafts",
+          "Length, alignment and rotation are restored, respecting the biology"
+        ]}
+      ]
+    },
+    {
+      "id": "via",
+      "pregunta": "By which route?",
+      "ayuda": "This is where you decide how much biology you pay. The percutaneous route is the middle ground: direct control of the fragment through minimal incisions.",
+      "opciones": [
+        { "id": "v-directa", "etiqueta": "Direct (open)", "criterios": [
+          "The fracture is handled under vision, with the line exposed",
+          "Maximum precision and maximum biological cost",
+          "Reduction clamps, hooks, levers on the exposed fracture"
+        ]},
+        { "id": "v-percutanea", "etiqueta": "Percutaneous", "criterios": [
+          "Direct handling of the fragment with instruments through minimal incisions",
+          "Wire joysticks, percutaneous clamps, punch, elevator through a bone window",
+          "Fragment control almost as in an open procedure, at a far lower biological cost",
+          "It depends on good-quality fluoroscopy and a very clear plan"
+        ]},
+        { "id": "v-indirecta", "etiqueta": "Indirect", "criterios": [
+          "Reduction from a distance, without touching the fracture: traction, distractor, ligamentotaxis",
+          "The plate or the nail itself used as a reduction tool",
+          "It preserves the fracture haematoma and the periosteal blood supply"
+        ]}
+      ]
+    },
+    {
+      "id": "tipo-articular",
+      "pregunta": "Articular block: which type of reduction?",
+      "ayuda": "Every articular block is reduced anatomically, simple or multifragmentary. A step-off is arthritis in the making.",
+      "opciones": [
+        { "id": "ta-anatomica", "etiqueta": "Anatomical", "criterios": [
+          "Rebuild the surface fragment by fragment",
+          "This holds for the COMPLEX articular block too: its complexity does not excuse it",
+          "A step-off under 2 mm as a general reference"
+        ]},
+        { "id": "ta-funcional", "etiqueta": "Functional", "criterios": [
+          "Exceptional: only if the block cannot be rebuilt",
+          "Before accepting it, consider whether the real indication is an arthroplasty"
+        ]}
+      ]
+    },
+    {
+      "id": "via-articular",
+      "pregunta": "Articular block: by which route?",
+      "ayuda": "An articular surface is rarely rebuilt blind.",
+      "opciones": [
+        { "id": "va-directa", "etiqueta": "Direct (open)", "criterios": [
+          "Arthrotomy or a window that lets you see the surface",
+          "It is what the millimetre precision of cartilage demands"
+        ]},
+        { "id": "va-percutanea", "etiqueta": "Percutaneous", "criterios": [
+          "Elevator through a metaphyseal window, joysticks, percutaneous clamps",
+          "Viable with good fluoroscopy, arthroscopy or intraoperative CT"
+        ]},
+        { "id": "va-indirecta", "etiqueta": "Indirect", "criterios": [
+          "Ligamentotaxis only: it reduces what the ligament drags, not what is depressed",
+          "It does not lift a depressed fragment"
+        ]}
+      ]
+    },
+    {
+      "id": "tipo-meta",
+      "pregunta": "Metaphyseal or diaphyseal component: which type?",
+      "ayuda": "If that component is complex or multifragmentary, the reduction is functional: length, alignment and rotation.",
+      "opciones": [
+        { "id": "tm-funcional", "etiqueta": "Functional", "criterios": [
+          "Complex metaphysis or shaft: it is not rebuilt fragment by fragment",
+          "The intercalary fragments stay alive because they are not touched"
+        ]},
+        { "id": "tm-anatomica", "etiqueta": "Anatomical", "criterios": [
+          "Only if that component is a SIMPLE line you are going to compress"
+        ]}
+      ]
+    },
+    {
+      "id": "via-meta",
+      "pregunta": "Metaphyseal or diaphyseal component: by which route?",
+      "ayuda": "If you are going to bridge it, open it as little as possible.",
+      "opciones": [
+        { "id": "vm-indirecta", "etiqueta": "Indirect", "criterios": [
+          "Traction, distractor, the plate slid in as a reduction tool",
+          "It preserves the haematoma and the periosteum of the intercalary fragments"
+        ]},
+        { "id": "vm-percutanea", "etiqueta": "Percutaneous", "criterios": [
+          "Joysticks and percutaneous clamps to correct alignment without opening the fracture",
+          "It is the natural route of MIPO"
+        ]},
+        { "id": "vm-directa", "etiqueta": "Direct (open)", "criterios": [
+          "Only if that component is simple and you are going to compress it"
+        ]}
+      ]
+    },
+    {
+      "id": "parametros",
+      "pregunta": "What are you going to restore and check?",
+      "ayuda": "Functional reduction consists of restoring three things. The third is the one most often overlooked.",
+      "opciones": [
+        { "id": "pa-longitud", "etiqueta": "Length", "criterios": [
+          "Avoid shortening, and distraction as well",
+          "Distraction delays healing",
+          "In paired bones, shortening alters the relative length"
+        ]},
+        { "id": "pa-eje", "etiqueta": "Alignment", "criterios": [
+          "Correct angulation in the coronal and sagittal planes",
+          "With a nail, the position of the implant in the canal restores alignment almost by itself"
+        ]},
+        { "id": "pa-rotacion", "etiqueta": "Rotation", "criterios": [
+          "The easiest error to overlook and the hardest to correct afterwards",
+          "The implant does NOT correct it: it is the surgeon's responsibility during the operation"
+        ]}
+      ]
+    },
+    {
+      "id": "verificacion",
+      "pregunta": "How are you going to verify it before closing?",
+      "ayuda": "Reduction errors are prevented in this step and checked before closing, not in the follow-up clinic.",
+      "opciones": [
+        { "id": "v-contralateral", "etiqueta": "Compare with the uninjured side", "criterios": [
+          "A reference for length and for rotation",
+          "Particularly useful in the femur and the forearm"
+        ]},
+        { "id": "v-cortical", "etiqueta": "Cortical step sign and the cable rule", "criterios": [
+          "A mismatch in cortical thickness between fragments: a sign of malrotation",
+          "The cable checks the mechanical axis"
+        ]},
+        { "id": "v-perfil", "etiqueta": "Lesser trochanter or condylar profile", "criterios": [
+          "The radiographic reference for rotation in the femur"
+        ]},
+        { "id": "v-clinica", "etiqueta": "Clinical rotation test", "criterios": [
+          "Range of hip rotation with the knee flexed",
+          "Symmetry of the resting position of the foot"
+        ]},
+        { "id": "v-escopia", "etiqueta": "Image intensifier check in two planes", "criterios": [
+          "Truly orthogonal views, not approximate ones"
+        ]}
+      ]
+    }
+  ],
+
+  "derivados": [
+    {
+      "id": "tipo-sugerido",
+      "titulo": "The type of reduction that fits",
+      "reglas": [
+        { "texto": "Articular block → ANATOMICAL REDUCTION, simple or complex. The complexity of the block does not excuse it: every step-off is arthritis in the making." },
+        { "texto": "Simple diaphyseal line → ANATOMICAL if you are going to compress it; functional if you opt to bridge with enough working length." },
+        { "texto": "Complex or multifragmentary shaft → FUNCTIONAL REDUCTION. Length, alignment and rotation; the intercalary fragments are not touched." },
+        { "texto": "Consistency with Step 3: you chose absolute stability, and compression demands exact cortical contact. That means anatomical reduction." },
+        { "texto": "Consistency with Step 3: you chose relative stability, which heals by callus. Functional reduction is enough." },
+        { "texto": "The metaphyseal component is going to relative stability → functional reduction in that zone." }
+      ]
+    },
+    {
+      "id": "coste",
+      "titulo": "Biological cost of the route you chose",
+      "reglas": [
+        { "texto": "Direct route: you gain full control of the fragment and you pay with blood supply and haematoma. Justify it by the need to reconstruct, not by convenience." },
+        { "texto": "Percutaneous route: you handle the fragment almost as in an open procedure but through minimal incisions. It is the middle ground, and it demands good fluoroscopy and a very well-defined preoperative plan." },
+        { "texto": "Indirect route: you preserve haematoma and periosteum, which is what makes callus thrive. In exchange, fine control of the fragment is limited." },
+        { "texto": "Approach limited to the articular surface and indirect reduction of the metaphysis: precision where it is needed, biology intact where it matters." },
+        { "texto": "An entirely percutaneous strategy: maximum biological preservation. Check that articular congruity can be verified by imaging before giving up seeing the surface." }
+      ]
+    },
+    {
+      "id": "tolerancias",
+      "titulo": "Rough tolerance in this region",
+      "nota": "The figures are guides, not dogma: age, functional demand and the joint involved all modulate what is acceptable. The qualitative rule does hold — articular, millimetre precision; metaphysis and shaft, length, alignment and rotation.",
+      "reglas": [
+        { "texto": "Distal radius: articular step-off under 2 mm, shortening of 2–3 mm or less, and volar tilt at least neutral." },
+        { "texto": "Forearm shaft: demands near-anatomical reduction and restoration of the radial bow. The forearm rotates like a joint." },
+        { "texto": "Humeral shaft: tolerates around 20° of angulation and some shortening with no functional deficit. It is the most forgiving bone." },
+        { "texto": "Femoral or tibial shaft: restore length, alignment — under 5° in each plane is the aim — and rotation. The intercalary fragments do not need anatomy." },
+        { "texto": "Acetabulum: anatomical reduction under 1 mm is the main predictor of the clinical result (Matta)." },
+        { "texto": "Articular surface in general: step-off under 2 mm. The greater the congruity, the better the prognosis." }
+      ]
+    },
+    {
+      "id": "anticipa4",
+      "titulo": "What this already decides about the following steps",
+      "reglas": [
+        { "texto": "Step 5: interfragmentary compression. Step 8: an approach that lets you see and handle the fracture. Step 9: direct reduction techniques — clamps, provisional lag screw, wires." },
+        { "texto": "Step 5: splinting or bridging. Step 8: a minimal or percutaneous approach. Step 9: indirect techniques — traction table, femoral distractor, the plate itself as a reduction tool." },
+        { "texto": "Step 9: include an explicit rotation-control manoeuvre in the plan before distal locking or the last screw." }
+      ]
+    }
+  ],
+
+  "esencial": [
+    { "texto": "To reduce is to restore the spatial relationship of the fragments. But reducing does not mean the same thing on an articular surface as on a shaft. This step answers two questions: how perfect the reduction has to be, and how it is achieved. The first follows from Step 3; the second has a biological price that has to be chosen deliberately." },
+    { "titulo": "Type and route are two different questions", "texto": "The TYPE says how perfect the reduction has to be: anatomical for simple lines and for every articular block — even a complex one — and functional for complex metaphyses and shafts. The ROUTE says how it is achieved: direct, percutaneous or indirect, with a biological cost rising towards the first. They can be combined: an anatomical reduction can be achieved percutaneously." },
+    { "titulo": "The three parameters of functional reduction",
+      "encabezados": ["Parameter", "What to restore", "Note"],
+      "filas": [
+        ["Length", "Avoid shortening and distraction", "Distraction delays healing; shortening alters the biomechanics and the relative length in paired bones."],
+        ["Alignment", "Correct angulation in the coronal and sagittal planes", "With an intramedullary nail, the position of the implant in the canal restores alignment almost automatically."],
+        ["Rotation", "Restore rotation in the horizontal plane", "The easiest error to overlook and the hardest to correct. The implant does NOT correct it on its own."]
+      ]},
+    { "titulo": "The three routes",
+      "encabezados": ["Route", "What it involves", "Biological cost"],
+      "filas": [
+        ["Direct (open)", "The fracture is exposed and handled under vision with clamps, hooks and levers.", "High: it loses haematoma and periosteal blood supply."],
+        ["Percutaneous", "Direct handling of the fragment with instruments through minimal incisions: wire joysticks, percutaneous clamps, punch, elevator through a bone window.", "Low: almost open control while preserving the envelope. It demands good fluoroscopy."],
+        ["Indirect", "Reduction from a distance without touching the fracture: traction, distractor, ligamentotaxis, the plate or the nail as a reduction tool.", "Minimal: it preserves haematoma and periosteum. Fine control is limited."]
+      ]},
+    { "titulo": "Ligamentotaxis has a limit", "texto": "Traction reduces what the soft tissues drag with them, but it does not lift a depressed articular fragment. A central depression has to be elevated, and for that you need to see it or to go in through a metaphyseal window." },
+    { "titulo": "The warning of Mast, Jakob and Ganz about the nail", "texto": "In nailing, coronal and sagittal alignment is restored by the implant through its position in the canal, but rotation and length are the surgeon's responsibility during the operation. The nail does not correct them by itself." },
+    { "titulo": "Why the intercalary fragments are not touched", "texto": "Mast, Jakob and Ganz put it bluntly: anatomical reduction of the diaphyseal intercalary fragments does not matter as long as they do not interfere with function. Those fragments stay viable precisely because they are not handled." },
+    { "titulo": "The inconsistency to avoid", "texto": "There is no sense in stripping the fracture with a direct reduction only to bridge it afterwards with relative stability, which thrives on exactly the biology you have just destroyed. And the other way round: an articular surface is not rebuilt blind. The reduction method has to go hand in hand with the biomechanical principle." },
+    { "titulo": "Rough tolerances by region",
+      "encabezados": ["Zone", "Tolerance"],
+      "filas": [
+        ["Articular surface in general", "Step-off under 2 mm; the greater the congruity, the better the prognosis."],
+        ["Distal radius", "Articular step-off under 2 mm; shortening of 2–3 mm or less; volar tilt at least neutral."],
+        ["Humeral shaft", "Tolerates around 20° of angulation and some shortening with no functional deficit."],
+        ["Forearm shaft", "Near-anatomical reduction and restoration of the radial bow: it rotates like a joint."],
+        ["Femoral and tibial shaft", "Length, alignment — under 5° per plane — and rotation. The intercalary fragments do not need anatomy."],
+        ["Acetabulum", "Anatomical reduction under 1 mm: it is the main predictor of the result."]
+      ]},
+    { "titulo": "Quality control before closing",
+      "items": [
+        "Length: compare with the uninjured side.",
+        "Alignment: truly aligned views and the cable or cortical rule.",
+        "Rotation, the hardest one: cortical step signs, lesser trochanter or condylar profile, and the clinical rotation test.",
+        "The consequences of getting it wrong do not correct themselves: articular malunion leads to post-traumatic arthritis, and diaphyseal malrotation or malalignment produce dysfunction and overload of the adjacent joint."
+      ]}
+  ],
+
+  "alertas": [
+    { "id": "articular-funcional", "titulo": "An articular block is not reduced functionally",
+      "texto": "Every articular block is reduced anatomically, simple or multifragmentary. Its complexity does not excuse it: the residual step-off is post-traumatic arthritis. If the block cannot be rebuilt, the real question is whether an arthroplasty is indicated." },
+    { "id": "articular-funcional-unica", "titulo": "You are reducing an articular fracture functionally",
+      "texto": "The articular surface demands anatomical reduction even when the block is complex. Review the type, or mark two zones if what you want to reduce functionally is the metaphyseal component." },
+    { "id": "meta-compleja-anatomica", "titulo": "Anatomical reduction of a complex component",
+      "texto": "This is only appropriate if that component is a simple line. In a complex metaphysis or shaft, chasing anatomy fragment by fragment devitalises them for no benefit." },
+    { "id": "diaf-compleja-anatomica", "titulo": "Complex shaft with anatomical reduction",
+      "texto": "You classified a multifragmentary diaphyseal fracture. Rebuilding it fragment by fragment devitalises the site and adds nothing: length, alignment and rotation are enough." },
+    { "id": "directa-para-puentear", "titulo": "You are devitalising a fracture you are going to bridge",
+      "texto": "You chose relative stability and a direct route. Bridging thrives on intact biology: opening the fracture only to then not compress it adds the cost of the exposure without any of its advantages. Consider the percutaneous or the indirect route." },
+    { "id": "articular-ligamentotaxis", "titulo": "Ligamentotaxis does not lift a depressed fragment",
+      "texto": "You chose the indirect route for the articular block. Traction reduces what the ligament drags, but it does not raise a depressed surface. For that you need to see the surface or to go in through a metaphyseal window." },
+    { "id": "percutanea-exige-imagen", "titulo": "The percutaneous route depends on imaging and on the plan",
+      "texto": "Handling blind with instruments demands good fluoroscopy, truly orthogonal projections and a drawn preoperative plan. Without that, the percutaneous route turns into a long, worse open one." },
+    { "id": "meta-desnudada", "titulo": "Do not strip what you are going to bridge",
+      "texto": "You are going to give relative stability to the metaphyseal component but reduce it by the direct route. Handling the intercalary fragments devitalises them for no benefit." },
+    { "id": "antebrazo-bow", "titulo": "Forearm: restore the radial bow",
+      "texto": "The forearm shaft demands near-anatomical reduction. Restoring the radial curvature correlates with better pronosupination: the forearm works as a joint, not as just another long bone." },
+    { "id": "rotacion-olvidada", "titulo": "Rotation does not correct itself",
+      "texto": "You have marked length and alignment but not rotation. It is the parameter most often overlooked and the hardest to correct afterwards. The implant does not restore it: it has to be checked actively in theatre." },
+    { "id": "distraccion", "titulo": "Beware of distraction",
+      "texto": "When restoring length, overshooting is as bad as falling short: distraction of the fracture delays healing. It is a typical risk of nailing on a traction table." },
+    { "id": "sin-verificar", "titulo": "Define how you are going to check it",
+      "texto": "Reduction errors are prevented here and verified before closing. Without an explicit checking method, malrotation is discovered at the first follow-up." }
+  ],
+
+  "reglasCoherencia": [
+    { "id": "r4-anatomica-indirecta", "titulo": "Consistency — anatomical by an indirect route",
+      "mensaje": "Anatomical reduction demands exact cortical contact, and the indirect route rarely achieves it on its own. If you keep it, consider at least percutaneous help with clamps or joysticks, and check the contact by imaging." },
+    { "id": "r4-diaf-sin-rotacion", "titulo": "Consistency — shaft with no rotation control",
+      "mensaje": "In a diaphyseal fracture the alignment usually comes from the implant; the rotation does not. Make sure you have included it in what you are going to check." }
+  ],
+
+  "evidencia": [
+    { "afirmacion": "In the acetabulum, anatomical reduction under 1 mm improves the clinical result; in the plateau and the pilon, residual step-off is associated with post-traumatic arthritis." },
+    { "afirmacion": "Restoring the radial bow of the forearm correlates with better pronosupination." },
+    { "afirmacion": "Anatomical reduction of the diaphyseal intercalary fragments is not necessary as long as they do not interfere with function; they stay viable because they are not handled." }
+  ],
+
+  "autoevaluacion": [
+    { "pregunta": "In a comminuted diaphyseal fracture, does every intercalary fragment have to be reduced?",
+      "opciones": [
+        "Yes, anatomy is always the goal",
+        "No: restoring length, alignment and rotation is enough; handling them devitalises them for no benefit",
+        "Only those larger than 1 cm",
+        "Only if a plate is going to be used"
+      ],
+      "explicacion": "It is the teaching of Mast, Jakob and Ganz: those fragments stay viable precisely because they are not touched." },
+    { "pregunta": "Which parameter of functional reduction is most often overlooked?",
+      "opciones": [
+        "Length",
+        "Coronal alignment",
+        "Rotation",
+        "Sagittal alignment"
+      ],
+      "explicacion": "The nail does not correct it on its own and it must be verified actively in theatre. It is also the hardest to correct once healed." },
+    { "pregunta": "Tibial plateau with a multifragmentary articular block. What type of reduction does that block demand?",
+      "opciones": [
+        "Functional, because it is complex",
+        "Anatomical: every articular block is reduced anatomically, simple or complex",
+        "It depends on the implant to be used",
+        "Indirect, by ligamentotaxis"
+      ],
+      "explicacion": "The complexity of the articular block does not excuse it from anatomy: the residual step-off is arthritis. What is reduced functionally is the complex metaphyseal component." },
+    { "pregunta": "What distinguishes percutaneous reduction from indirect reduction?",
+      "opciones": [
+        "That it is done without fluoroscopy",
+        "That the fragment is handled directly with instruments, but through minimal incisions",
+        "That it always requires arthroscopy",
+        "That it does not allow anatomical reduction"
+      ],
+      "explicacion": "Indirect reduction acts on the fracture from a distance; percutaneous reduction touches the fragment with joysticks, clamps or an elevator, but without opening. It gives almost open control at a low biological cost." },
+    { "pregunta": "Why is it inconsistent to open the fracture only to bridge it afterwards?",
+      "opciones": [
+        "Because it lengthens the operating time",
+        "Because bridging thrives on intact biology, and the exposure destroys it without providing the advantage of compression",
+        "Because it prevents the plate being applied",
+        "Because it increases bleeding"
+      ],
+      "explicacion": "You pay the biological cost of the exposure without getting anything in return. Relative stability calls for indirect reduction." },
+    { "pregunta": "Humeral shaft with 18° of angulation after closed reduction. Is that acceptable?",
+      "opciones": [
+        "No, it has to be revised to leave it anatomical",
+        "Yes: the humeral shaft tolerates around 20° of angulation with no functional deficit",
+        "It depends only on age",
+        "Only if the patient is not an athlete"
+      ],
+      "explicacion": "It is the most forgiving bone in the skeleton as far as alignment goes. The forearm, by contrast, demands near-anatomical reduction." },
+    { "pregunta": "Why does the forearm demand near-anatomical reduction and the humerus not?",
+      "opciones": [
+        "Because the forearm heals worse",
+        "Because the forearm works as a joint: pronosupination depends on the radial bow and on the relationship between the two bones",
+        "Because the humerus has a better blood supply",
+        "Because a nail cannot be used in the forearm"
+      ],
+      "explicacion": "Losing the radial curvature or the relative length between radius and ulna compromises forearm rotation, which is a joint movement." },
+    { "pregunta": "When restoring length on a traction table, what risk should you watch for?",
+      "opciones": [
+        "Excessive shortening",
+        "Distraction of the fracture, which delays healing",
+        "Pin-site infection",
+        "Forced external rotation"
+      ],
+      "explicacion": "Overshooting is as bad as falling short. Distraction leaves a gap that neither compresses nor forms callus readily." },
+    { "pregunta": "Which of these manoeuvres does NOT help check rotation?",
+      "opciones": [
+        "The cortical step sign, comparing cortical thickness between fragments",
+        "The lesser trochanter or condylar profile",
+        "Comparison with the uninjured side",
+        "Measuring angulation on the coronal view"
+      ],
+      "explicacion": "The coronal view tells you about alignment, not rotation. Rotation is checked with horizontal-plane references and with clinical examination." }
+  ]
+}
