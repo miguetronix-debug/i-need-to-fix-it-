@@ -31,7 +31,7 @@ Y ya está: Vercel lo detecta y republica en menos de un minuto. **La de Netlify
 ## Comprobado en móvil
 
 - ✅ **Se instala** en la pantalla de inicio y abre sin barra de navegador.
-- ✅ **Funciona sin conexión.**
+- ✅ **Funciona sin conexión** — verificado en modo avión el 5 de agosto de 2026, ya con el arreglo del service worker.
 - ⬜ **Enlaces de caso compartidos** — falta probarlo: rellena medio caso, copia la URL de la barra y ábrela en otro dispositivo; tienen que aparecer las mismas decisiones marcadas.
 
 ### Los dos fallos que aparecieron al probarlo, y que no se veían desde el escritorio
