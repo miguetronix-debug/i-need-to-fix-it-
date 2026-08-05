@@ -38,16 +38,31 @@ git branch -M main
 git push -u origin main
 ```
 
-Después, en **vercel.com**:
+### Y después, en Vercel, clic a clic
 
-1. *Add New… → Project* e importa el repositorio
-2. Framework Preset: **Other**
-3. **Root Directory: `sitio`** ← lo único que hay que cambiar
-4. *Deploy*
+Vercel no sube archivos: **importa desde GitHub**, así que el `git push` de arriba tiene que estar hecho antes.
 
-A partir de ahí, cada `git push` republica solo.
+1. Entra en **[vercel.com](https://vercel.com)** y pulsa **Continue with GitHub**. Iniciar sesión con la cuenta de GitHub evita tener que conectarlas después.
 
-Para actualizar el contenido:
+2. En el panel, arriba a la derecha: **Add New…** → **Project**.
+
+3. Aparece *Import Git Repository*. La primera vez no verás ningún repositorio: hay que darle acceso. Pulsa **Adjust GitHub App Permissions** —o *Install*— y autoriza, o bien todos tus repositorios o bien solo `i-need-to-fix-it`. Al volver ya aparece en la lista.
+
+4. Pulsa **Import** en la fila del repositorio.
+
+5. Se abre *Configure Project*. Aquí solo hay que tocar una cosa:
+
+   - **Framework Preset:** `Other`
+   - **Root Directory:** pulsa **Edit**, elige la carpeta **`sitio`** y confirma. ← *esto es lo único imprescindible*
+   - **Build Command**, **Output Directory** e **Install Command**: déjalos vacíos y sin activar *Override*. No hay nada que compilar: son archivos estáticos.
+
+6. **Deploy**. Tarda menos de un minuto.
+
+7. Te da una URL del tipo `i-need-to-fix-it.vercel.app`. Ábrela en el móvil.
+
+**Si te equivocas en el Root Directory** —que es el fallo típico— verás el listado de archivos del repositorio en vez del app. Se arregla sin volver a desplegar: *Settings → General → Root Directory → `sitio` → Save*, y luego *Deployments → … → Redeploy*.
+
+A partir de ahí, cada `git push` republica solo. Para actualizar el contenido:
 
 ```bash
 python3 tools/build_prototipo.py && python3 tools/publicar.py
