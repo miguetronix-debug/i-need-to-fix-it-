@@ -1,0 +1,787 @@
+{
+  "_nota": "Inglés del Paso 3 · El tipo de estabilidad. Calco parcial. OJO con «esencial»: las listas sin id se emparejan por POSICIÓN, así que el bloque 9 (tiraTornillos) va como objeto vacío para no descolocar los demás.",
+  "titulo": "The type of stability",
+  "subtitulo": "There are only two kinds of stability; in one fracture they can coexist by zone",
+  "preguntaClave": "What kind of stability does this fracture need in order to heal and in order to work?",
+  "sintesis": "There are only two kinds of stability. Perren's strain theory tells you which one applies: a reconstructable line and an articular surface → absolute, and direct healing; a comminuted component → relative, and healing by callus. When both coexist in the same fracture, one is assigned to each zone and the two principles are combined in a single construct. What is comminuted is never compressed.",
+  "objetivos": [
+    "Understand stability as a means to a biology, not as an end in itself",
+    "Apply Perren's strain theory to decide between absolute and relative",
+    "Accept that a comminuted component does NOT allow absolute stability",
+    "Assign a stability to each zone and combine both principles in a single construct",
+    "Dose relative stability with the working length and the stiffness of the construct"
+  ],
+  "decisiones": [
+    {
+      "id": "zonas",
+      "pregunta": "How many mechanical zones does this fracture have?",
+      "ayuda": "A fracture can have a single component, or two with different demands: an articular block that has to be rebuilt, and a metaphyseal or diaphyseal component separating it from the shaft. Each zone is assigned its own stability.",
+      "opciones": [
+        {
+          "id": "z-unica",
+          "etiqueta": "One zone",
+          "criterios": [
+            "The whole fracture answers to the same mechanical demand",
+            "Purely diaphyseal, or articular with no metaphyseal component to solve"
+          ]
+        },
+        {
+          "id": "z-dos",
+          "etiqueta": "Two zones: articular block and metaphyseal component",
+          "criterios": [
+            "An articular surface that has to be rebuilt",
+            "A metaphyseal or diaphyseal component separating it from the shaft",
+            "The pattern of complex tibial plateau, pilon and distal humerus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "estabilidad",
+      "pregunta": "Which stability?",
+      "ayuda": "There are only two. Absolute is the absence of interfragmentary motion under functional load; relative is controlled micromotion, proportional to the load.",
+      "opciones": [
+        {
+          "id": "e-absoluta",
+          "etiqueta": "Absolute",
+          "criterios": [
+            "Compression that generates friction and closes the gap",
+            "Demands a reconstructable line and an anatomical reduction",
+            "Strain below 2%, which is what lamellar bone tolerates"
+          ]
+        },
+        {
+          "id": "e-relativa",
+          "etiqueta": "Relative",
+          "criterios": [
+            "Controlled micromotion that stimulates callus",
+            "It is enough to restore alignment, length and rotation",
+            "Callus tolerates 10 to 15% strain"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "estab-articular",
+      "pregunta": "Articular block: which stability?",
+      "ayuda": "The articular surface does not tolerate micromotion: step-off and motion generate post-traumatic arthritis.",
+      "opciones": [
+        {
+          "id": "ea-absoluta",
+          "etiqueta": "Absolute",
+          "criterios": [
+            "Anatomical reduction and interfragmentary compression",
+            "This is what an articular surface almost always demands"
+          ]
+        },
+        {
+          "id": "ea-relativa",
+          "etiqueta": "Relative",
+          "criterios": [
+            "Exceptional: only if the articular block cannot be rebuilt",
+            "Check first whether the real indication is an arthroplasty"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "estab-metafisis",
+      "pregunta": "Metaphyseal or diaphyseal component: which stability?",
+      "ayuda": "If that component is complex, multifragmentary or comminuted, it does NOT allow absolute stability: there is nothing to compress without devitalising it.",
+      "opciones": [
+        {
+          "id": "em-relativa",
+          "etiqueta": "Relative",
+          "criterios": [
+            "Bridging of the comminuted component",
+            "Comminution spreads the strain and favours callus",
+            "It respects the blood supply of the intermediate fragments"
+          ]
+        },
+        {
+          "id": "em-absoluta",
+          "etiqueta": "Absolute",
+          "criterios": [
+            "Only if that component is a SIMPLE, reconstructable line",
+            "If it is comminuted, this option is a mechanical error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "palancas",
+      "pregunta": "How are you going to dose the relative stability?",
+      "ayuda": "It is not «less fixation»: it is a calculated amount of motion. These are the real levers of the construct, and almost all of them are decided at the table, not in the catalogue.",
+      "opciones": [
+        {
+          "id": "p-longitud",
+          "etiqueta": "Plate · Increase the working length",
+          "criterios": [
+            "It is the distance between the innermost screws on either side of the fracture: the length of plate that actually works",
+            "It is the dominant lever: it governs axial and torsional stiffness above any other factor",
+            "Omitting the screw next to the fracture on each side leaves the construct almost TWICE as flexible, in compression and in torsion",
+            "In practice: leave two or three holes empty on each side of the fracture"
+          ]
+        },
+        {
+          "id": "p-span",
+          "etiqueta": "Plate · Raise the plate span ratio",
+          "criterios": [
+            "Length of the plate divided by the length of the fracture",
+            "Above 2 or 3 in comminuted fractures; above 8 or 10 if the line is simple",
+            "A long plate spreads the load and lowers what each screw carries"
+          ]
+        },
+        {
+          "id": "p-densidad",
+          "etiqueta": "Plate · Lower the plate screw density",
+          "criterios": [
+            "Screws inserted divided by holes in the plate",
+            "Below 0.5 in comminuted fractures; below 0.3 or 0.4 if the line is simple",
+            "Filling every hole gives no more stability: it gives more stiffness, less callus and no margin"
+          ]
+        },
+        {
+          "id": "p-tornillos",
+          "etiqueta": "Plate · Three screws per fragment, well spread",
+          "criterios": [
+            "Beyond three per fragment axial stiffness no longer rises; beyond four neither does torsional",
+            "Spread them along the fragment instead of grouping them near the fracture",
+            "The fourth and fifth screws buy no stability: they spend bone and holes"
+          ]
+        },
+        {
+          "id": "p-bloqueada",
+          "etiqueta": "Plate · Locked (fixed angle)",
+          "criterios": [
+            "An internal fixator: it does not press the plate against the bone and preserves the periosteal blood supply",
+            "Holds osteoporotic bone and a comminuted metaphysis",
+            "But it suppresses motion at the near cortex: without enough working length it is too stiff"
+          ]
+        },
+        {
+          "id": "p-separacion",
+          "etiqueta": "Plate · Lift it 2 to 5 mm off the bone",
+          "criterios": [
+            "Only with a locked plate, which does not need to rest on the bone to stabilise",
+            "It reduces the stiffness of the construct and respects the periosteum",
+            "Going further lengthens the lever arm on the screws and brings forward implant failure"
+          ]
+        },
+        {
+          "id": "p-fcl",
+          "etiqueta": "Plate · Dynamic locking or far cortical locking screws",
+          "criterios": [
+            "They grip only the far cortex; the shaft flexes inside the medullary canal",
+            "They give motion back to the near cortex and with it a symmetrical callus",
+            "It is the direct answer to the asymmetrical callus of the conventional locked plate"
+          ]
+        },
+        {
+          "id": "p-material",
+          "etiqueta": "Plate · Titanium instead of steel",
+          "criterios": [
+            "A lower elastic modulus: the construct works somewhat more elastically",
+            "It is fine tuning; it is no substitute for the working length"
+          ]
+        },
+        {
+          "id": "p-clavo-trabajo",
+          "etiqueta": "Nail · Working length of the nail",
+          "criterios": [
+            "With cortical contact, it is the distance between the zones where the nail rests on the endosteum",
+            "Without cortical contact, it is the whole distance between the innermost locking bolts",
+            "That is why a comminuted fracture treated with a nail is always far less stiff than it looks"
+          ]
+        },
+        {
+          "id": "p-clavo",
+          "etiqueta": "Nail · Diameter and reaming",
+          "criterios": [
+            "Bending stiffness rises with the fourth power of the radius",
+            "It raises stiffness A LOT: it is the lever for asking for LESS motion, not more",
+            "A thicker nail also fits better and shortens the effective working length"
+          ]
+        },
+        {
+          "id": "p-clavo-bloqueo",
+          "etiqueta": "Nail · Number and position of the locking bolts",
+          "criterios": [
+            "Static at both ends: it controls length and rotation, which the nail does not guarantee on its own",
+            "Bolts further from the fracture lengthen the working length and make it more flexible",
+            "Dynamising allows axial compression with load, but it demands cortical contact"
+          ]
+        },
+        {
+          "id": "p-tutor",
+          "etiqueta": "External fixator · Mechanics of the frame",
+          "criterios": [
+            "Pin diameter: also to the fourth power. Going from 5 to 6 mm changes more than adding a pin",
+            "More pins, further apart from each other and closer to the fracture: stiffer",
+            "Bar close to the bone: stiffer. Bar further away: more elastic",
+            "A second plane or a second bar: stiffer"
+          ]
+        }
+      ]
+    }
+  ],
+  "derivados": [
+    {
+      "id": "sugerida",
+      "titulo": "What the classification from Step 2 says",
+      "reglas": [
+        {
+          "texto": "Complete articular: the articular block demands ABSOLUTE stability. If the metaphyseal component is comminuted, that component demands RELATIVE. Two zones and two principles in one construct."
+        },
+        {
+          "texto": "Partial articular: the involved articular portion demands ABSOLUTE stability — compression or buttress. The rest is solved according to its morphology."
+        },
+        {
+          "texto": "Simple diaphyseal: a reconstructable line. It can go to compression (ABSOLUTE) or to bridging with enough working length (RELATIVE). What does not work is stopping halfway."
+        },
+        {
+          "texto": "Wedge or multifragmentary diaphyseal: a comminuted component. It does NOT allow absolute stability. Bridge it with RELATIVE stability."
+        },
+        {
+          "texto": "Extra-articular: the surface is intact. The decision is played out in the metaphysis: a simple one allows compression, a comminuted one demands bridging."
+        },
+        {
+          "texto": "Malleolar segment: the fibula and the medial malleolus are rebuilt with absolute stability; the syndesmosis is stabilised separately."
+        }
+      ]
+    },
+    {
+      "id": "constructo",
+      "titulo": "The construct you are defining",
+      "reglas": [
+        {
+          "texto": "Absolute in the articular block and relative in the metaphyseal component. This is NOT a third kind of stability: it is COMBINING BOTH PRINCIPLES IN A SINGLE CONSTRUCT. Lag screws compressing the surface, plus a plate bridging the comminuted metaphysis."
+        },
+        {
+          "texto": "Absolute in both zones: only correct if the metaphyseal component is a simple, reconstructable line. Check that there is no comminution."
+        },
+        {
+          "texto": "Absolute stability throughout the construct: this demands that the whole line be reconstructable and allow compression."
+        },
+        {
+          "texto": "Relative stability throughout the construct: bridging, with the strain spread out and dosed by the construct."
+        }
+      ]
+    },
+    {
+      "id": "biologia",
+      "titulo": "The healing biology you are choosing",
+      "reglas": [
+        {
+          "texto": "Primary or direct healing, with no visible callus. Where the cortices touch, cutting cones cross the fracture following the Haversian systems. In gaps under 0.5–1 mm with strain below 2%, it is filled with woven bone that later remodels."
+        },
+        {
+          "texto": "Secondary or indirect healing, by callus: haematoma and inflammation → soft callus → hard callus → remodelling. Callus is self-stabilising: as it grows it increases the moment of inertia and reduces the strain."
+        },
+        {
+          "texto": "Two biologies at once, each in its own zone: direct at the compressed articular surface, by callus at the bridged metaphysis."
+        },
+        {
+          "texto": "The governing threshold: lamellar bone tolerates only 2% strain."
+        },
+        {
+          "texto": "The governing threshold: soft callus tolerates 10 to 15%; granulation tissue, up to 100%."
+        }
+      ]
+    },
+    {
+      "id": "anticipa",
+      "titulo": "What this already decides about Steps 4 to 6",
+      "reglas": [
+        {
+          "texto": "Step 4: anatomical reduction. Step 5: interfragmentary compression. Step 6: an implant that delivers that compression."
+        },
+        {
+          "texto": "Step 4: functional, indirect, atraumatic reduction. Step 5: splinting or bridging. Step 6: intramedullary nail or bridge plate. Step 10: watch for non-union from too much or too little stiffness."
+        },
+        {
+          "texto": "Step 4: anatomical at the surface, functional at the metaphysis. Step 5: compression plus bridging in the same construct. And do not confuse the principle with the implant: one plate can compress in one zone and bridge in another."
+        }
+      ]
+    },
+    {
+      "id": "dosis",
+      "titulo": "The dose you are prescribing",
+      "reglas": [
+        {
+          "texto": "Working length increased. It is the dominant lever: omitting the screw next to the fracture on each side leaves the construct almost twice as flexible, in compression and in torsion. In practice, two or three empty holes on each side."
+        },
+        {
+          "texto": "Plate span ratio = length of the plate / length of the fracture. Target: above 2-3 in comminuted fractures and 8-10 in simple lines."
+        },
+        {
+          "texto": "Plate screw density = screws inserted / holes in the plate. Target: below 0.5 in comminuted fractures and 0.3-0.4 in simple lines."
+        },
+        {
+          "texto": "Three screws per main fragment, spread along the fragment. More than three does not raise axial stiffness and more than four does not raise torsional stiffness."
+        },
+        {
+          "texto": "Dynamic locking or far cortical locking: the shaft flexes in the canal and gives motion back to the near cortex, so the callus forms symmetrically at both cortices."
+        },
+        {
+          "texto": "Working length of the nail: with cortical contact it is the distance between the endosteal contact zones; without contact, the whole distance between the innermost bolts."
+        },
+        {
+          "texto": "Pin mechanics: diameter to the fourth power, number of pins, spacing between them, bar-to-bone distance and number of planes. Raising the pin diameter changes more than adding a pin."
+        },
+        {
+          "texto": "Multifragmentary site: the motion is shared between several interfaces and each one carries only a fraction of the strain. This is the scenario bridging was designed for, and it is why the working length works in your favour here."
+        },
+        {
+          "texto": "Simple line: a single interface takes all the motion of the construct. The denominator of the formula is tiny, so either you compress or you lengthen the working length a great deal. There is no middle ground."
+        }
+      ]
+    }
+  ],
+  "esencial": [
+    {
+      "texto": "Every internal fixation provides stability, but not every fracture needs the same kind. Stability is not an end in itself: it is a means to a particular healing biology. Choosing between absolute and relative is choosing between two ways for bone to heal."
+    },
+    {
+      "titulo": "Perren's formula",
+      "texto": "Strain (ε) = change in gap length ÷ original gap width. The same micromotion produces enormous strain in a narrow gap and small strain in a wide one, or in one spread across many gaps. Each tissue only survives if the local strain stays below its tolerance."
+    },
+    {
+      "titulo": "What strain each tissue tolerates",
+      "encabezados": [
+        "Tissue at the fracture",
+        "Strain it tolerates"
+      ],
+      "filas": [
+        [
+          "Granulation tissue",
+          "Up to ~100%"
+        ],
+        [
+          "Cartilage and fibrocartilage (soft callus)",
+          "~10–15%"
+        ],
+        [
+          "Lamellar bone (direct healing)",
+          "~2%"
+        ]
+      ]
+    },
+    {
+      "titulo": "The two consequences that look paradoxical",
+      "texto": "A narrow gap with motion does not heal: a transverse line with a small separation under bending generates extremely high strain, no lamellar bone tolerates it, and the fracture resorbs. And comminution, paradoxically, helps: the motion is spread across many gaps, the strain in each falls, and callus forms readily."
+    },
+    {
+      "titulo": "Perren's clinical corollary",
+      "texto": "Do not compress what is comminuted; do not leave what is simple mobile with a narrow gap. The morphology of the line, which you settled in Step 2, dictates which strain strategy is viable."
+    },
+    {
+      "titulo": "There is no such thing as «mixed stability»",
+      "texto": "There are only two kinds of stability: absolute and relative. When an articular fracture also has a complex metaphyseal component, no third principle is invented: ABSOLUTE stability is given to the articular block and RELATIVE to the comminuted component. That is combining both principles in a single construct. Talking about «mixed» as if it were a category of its own leads people to think there is something in between, and there is not."
+    },
+    {
+      "titulo": "Hard rule",
+      "texto": "A complex, multifragmentary or comminuted component does NOT allow absolute stability. There is nothing to compress without devitalising it, and the resulting gaps would carry a strain no tissue tolerates. That component is bridged, always."
+    },
+    {
+      "titulo": "The operational rule",
+      "encabezados": [
+        "Type (Step 2)",
+        "Stability",
+        "Why"
+      ],
+      "filas": [
+        [
+          "Articular (B/C) — articular block",
+          "Absolute",
+          "The surface must heal without strain; step-off and micromotion generate arthritis."
+        ],
+        [
+          "SIMPLE metaphyseal component",
+          "Absolute",
+          "A reconstructable line: compression closes the gap and gives friction."
+        ],
+        [
+          "COMPLEX metaphyseal or diaphyseal component",
+          "Relative",
+          "It allows no compression: comminution spreads the strain and bridging respects the biology."
+        ],
+        [
+          "Shaft treated with a nail",
+          "Relative",
+          "It is enough to restore alignment, length and rotation; callus heals it."
+        ]
+      ]
+    },
+    {
+      "titulo": "The levers of the construct, with their numbers",
+      "encabezados": [
+        "Lever",
+        "What it is",
+        "Target or effect"
+      ],
+      "filas": [
+        [
+          "Working length",
+          "Distance between the innermost screws on either side of the fracture; in a nail, between the endosteal contact zones or between the innermost bolts.",
+          "The dominant lever. Omitting the screw next to the fracture on each side leaves the construct almost twice as flexible in compression and in torsion."
+        ],
+        [
+          "Plate span ratio",
+          "Length of the plate / length of the fracture.",
+          "Above 2-3 in comminuted fractures; above 8-10 in simple lines."
+        ],
+        [
+          "Plate screw density",
+          "Screws inserted / holes in the plate.",
+          "Below 0.5 in comminuted fractures; below 0.3-0.4 in simple lines."
+        ],
+        [
+          "Screws per fragment",
+          "How many, and how spread, in each main fragment.",
+          "Three is enough: beyond that axial stiffness no longer rises, and beyond four neither does torsional."
+        ],
+        [
+          "Locked or unlocked",
+          "Fixed angle versus plate-to-bone friction.",
+          "The locked plate preserves the blood supply and holds weak bone, but suppresses motion at the near cortex."
+        ],
+        [
+          "Plate-to-bone distance",
+          "Elevation of the locked plate off the cortex.",
+          "2 to 5 mm reduce stiffness and respect the periosteum; going further increases the lever arm on the screws."
+        ],
+        [
+          "Far cortical locking / dynamic locking",
+          "Screws that grip only the far cortex and flex in the canal.",
+          "They give motion back to the near cortex and with it a symmetrical callus."
+        ],
+        [
+          "Nail diameter and reaming",
+          "Radius of the intramedullary implant.",
+          "Bending stiffness rises with the fourth power of the radius: it raises stability a great deal, it does not lower it."
+        ],
+        [
+          "Fixator pin mechanics",
+          "Diameter, number, spacing, bar-to-bone distance, planes.",
+          "Diameter also rules to the fourth power: 5 to 6 mm changes more than adding a pin."
+        ],
+        [
+          "Material",
+          "Steel versus titanium.",
+          "Titanium has a lower elastic modulus and works somewhat more elastically. Fine tuning, not a substitute for working length."
+        ]
+      ]
+    },
+    {
+      "titulo": "Try it with the plate"
+    },
+    {
+      "titulo": "Check it in the AO simulator",
+      "texto": "OSapp lets you configure the fracture, the plate and the load, and calculates the gap strain with finite elements. Changing the working length and watching the indicator move teaches this better than any table."
+    },
+    {
+      "titulo": "The Goldilocks window",
+      "texto": "Too stiff — a short plate, screws next to the fracture, a dense construct — suppresses callus and leads to non-union and fatigue failure. Too lax produces excessive strain, resorption and delay. At the right point, micromotion stimulates abundant, rapid callus. Relative stability is designed, not improvised."
+    },
+    {
+      "titulo": "The implant is a temporary bridge",
+      "texto": "No relative-stability construct survives cyclical loading indefinitely. Implant failure is almost never bad luck: it is the sign that the fracture never healed, nearly always through a mechanical error — inadequate stiffness — or a biological one — a devitalised site. The aim is for the bone to heal before the implant runs out."
+    },
+    {
+      "titulo": "The three conceptual errors",
+      "items": [
+        "Compressing comminution: it leaves gaps with extremely high strain and suppresses callus. Comminution calls for bridging, not compression.",
+        "A short, stiff plate over a simple transverse fracture: it creates a narrow gap with micromotion that heals neither by the direct route — no compression — nor by callus — too stiff. It is mechanical no-man's-land.",
+        "Confusing stability with stiffness: stiffer is not more stable in any useful sense; it may be precisely what prevents healing."
+      ]
+    },
+    {
+      "titulo": "The gap is the denominator, and it is what gets forgotten",
+      "texto": "Strain is motion divided by gap. Almost everyone works on the numerator — how much the construct moves — and forgets the denominator. A multifragmentary site spreads the motion across many interfaces and turns a considerable displacement into small strain at each one; a well-reduced simple line concentrates all the motion in one narrow interface and turns micromotion into enormous strain. That is why a bridged comminuted fracture heals and a nearly reduced, bridged transverse one does not, even with the same implant. And that is why there is no need to ask: the AO type from Step 2 already says it."
+    },
+    {
+      "titulo": "The trap of the bridged simple line",
+      "texto": "It is the commonest construct error and the most expensive. A transverse or short oblique line is reduced almost anatomically, a long plate is applied, and the holes near the fracture are filled. The result is a minimal gap with a minimal working length: the strain at that single interface is extremely high, the fracture resorbs, no callus appears and the plate eventually breaks by fatigue at an empty hole. There are only two coherent answers to this: compress properly, or lengthen the working length a great deal to spread the motion."
+    },
+    {
+      "titulo": "The asymmetrical callus of the locked plate",
+      "texto": "The conventional locked construct does not close the gap uniformly: the far cortex moves and the one under the plate barely does. Callus follows that asymmetry and appears scant and irregular precisely where the implant is. The three described answers are to lengthen the working length, to lift the plate a few millimetres off the bone, and to use dynamic locking or far cortical locking screws, which grip only the far cortex and flex inside the canal to give motion back to the near one."
+    },
+    {
+      "titulo": "Stiffness and strength pull in opposite directions",
+      "texto": "Lengthening the working length makes the construct more flexible, which is what you want, but at the same time it lowers the load the plate withstands before it deforms permanently. And if there is no cortical contact to share load, that flexible construct fails earlier under cyclical loading. Dosing relative stability is always a balance between the two, and it is compensated with a longer plate, with the weight-bearing regimen, or by restoring some contact."
+    }
+  ],
+  "alertas": [
+    {
+      "id": "conminuto-no-absoluta",
+      "titulo": "A comminuted component does not allow absolute stability",
+      "texto": "You classified a multifragmentary fracture and you are choosing compression. There is nothing to compress without devitalising it: you would be left with gaps carrying extremely high strain, callus would be suppressed and the implant would fail by fatigue. That component is bridged."
+    },
+    {
+      "id": "metafisis-conminuta-absoluta",
+      "titulo": "You are compressing a comminuted metaphyseal component",
+      "texto": "In an articular fracture with a complex metaphysis, that component allows no absolute stability. What fits is relative: absolute for the articular block, bridging for the metaphysis."
+    },
+    {
+      "id": "combinar-principios",
+      "titulo": "Good: you are combining both principles in a single construct",
+      "texto": "This is not a third kind of stability. It is absolute in the articular block and relative in the metaphyseal component, each with its own construct: compression above, bridging below."
+    },
+    {
+      "id": "tierra-de-nadie",
+      "titulo": "Beware of no-man's-land",
+      "texto": "You classified a simple line. There is no middle ground here: either absolute compression, or a long working length that spreads the motion. The reason is that strain is motion divided by gap, and in a well-reduced simple line the denominator is tiny: a short, stiff plate leaves micromotion that heals by neither route."
+    },
+    {
+      "id": "relativa-sin-dosificar",
+      "titulo": "Relative stability is designed",
+      "texto": "You chose relative stability but you have not yet defined how you dose it. The working length, the screw density and the span ratio are not construct details: they are the dose. Without deciding them, the amount of motion is left to chance."
+    },
+    {
+      "id": "articular-relativa-raro",
+      "titulo": "Relative stability in the articular block",
+      "texto": "This is exceptional. The articular surface does not tolerate micromotion. If the block cannot be rebuilt, consider whether the real indication is a primary arthroplasty."
+    },
+    {
+      "id": "clavo-mas-rigido",
+      "titulo": "A thicker nail gives MORE stability, not less",
+      "texto": "Bending stiffness rises with the fourth power of the radius. If you are trying to spread strain, a thick nail works against you."
+    },
+    {
+      "id": "bloqueada-rigida",
+      "titulo": "The locked plate can also be too stiff",
+      "texto": "Its advantage lies in osteoporotic bone and in the comminuted metaphysis. But it is a rigid internal fixator: without enough working length it suppresses callus."
+    },
+    {
+      "id": "estabilidad-no-rigidez",
+      "titulo": "Stability is not stiffness",
+      "texto": "The right stability is the one that produces the biology you want, not the one that holds hardest. Stiffer may be precisely what prevents healing."
+    },
+    {
+      "id": "trabajo-sin-contacto",
+      "titulo": "A long working length over a site with no bony contact",
+      "texto": "Lengthening the working length makes the construct more flexible, which is what you want, but it also lowers the load the plate withstands before it deforms. Over a multifragmentary site there is no cortical contact to share load, so the implant fails earlier by fatigue. Compensate with a longer plate or by restricting weight bearing."
+    },
+    {
+      "id": "callo-asimetrico",
+      "titulo": "The locked plate produces an asymmetrical callus",
+      "texto": "The conventional locked construct closes the gap asymmetrically: almost all the motion happens at the far cortex and almost none under the plate. Callus follows that asymmetry and appears scant and irregular at the near cortex. It is corrected with dynamic locking or far cortical locking screws, by lifting the plate off the bone, or by lengthening the working length."
+    },
+    {
+      "id": "densidad-alta",
+      "titulo": "Filling every hole is not safer",
+      "texto": "You have planned the working length but not the screw density. With three per fragment axial stiffness no longer rises, and with four neither does torsional. The extra ones only add stiffness, spend bone and remove options for any future revision."
+    },
+    {
+      "id": "simple-puenteada",
+      "titulo": "A simple line with relative stability: the classic trap",
+      "texto": "Step 2 says the line is simple, and here you have asked for relative stability. A single narrow interface takes all the motion of the construct, and callus does not tolerate that strain: the fracture resorbs and the plate eventually breaks by fatigue. Either you compress properly, or you lengthen the working length a great deal to spread that motion over a long stretch."
+    },
+    {
+      "id": "simple-puenteada-sin-trabajo",
+      "titulo": "A simple line bridged and with no working length",
+      "texto": "This is exactly the construct that heals by neither route: it does not compress enough for direct healing and it strains too much to heal by callus. If you are keeping relative stability, the working length stops being optional."
+    },
+    {
+      "id": "rg-sin-contacto",
+      "titulo": "No cortical column to share the load",
+      "texto": "A Winquist III or IV means there is no cortical contact left: the implant carries the whole load and the working length is the entire distance between the bolts. Static locking is mandatory, and the weight-bearing regimen has to be defined, not assumed."
+    }
+  ],
+  "reglasCoherencia": [
+    {
+      "id": "r-articular-relativa-global",
+      "titulo": "Consistency — articular fracture with relative stability throughout",
+      "mensaje": "A complete articular fracture with relative stability throughout the construct. The surface does not tolerate micromotion. If the metaphyseal component is comminuted, mark TWO ZONES: absolute for the articular block and relative for the metaphysis."
+    },
+    {
+      "id": "r-una-zona-articular-compleja",
+      "titulo": "Consistency — a complex articular fracture treated as a single zone",
+      "mensaje": "You classified a complete articular fracture. If there is a complex metaphyseal component, that is two zones with different demands: check whether it really is solved with a single strategy."
+    }
+  ],
+  "evidencia": [
+    {
+      "afirmacion": "Conceptual basis: Perren's strain theory, which explains why some fractures heal with callus and others without it, and underpins the distinction between absolute and relative stability."
+    },
+    {
+      "afirmacion": "The superiority of the locked plate over the conventional one is concentrated in osteoporotic bone and the comminuted metaphysis; there is no universal advantage in good-quality bone."
+    },
+    {
+      "afirmacion": "The working length is the factor that most determines the axial and torsional stiffness of a locked plate; omitting the screw next to the fracture on each side leaves the construct almost twice as flexible. More than three screws per fragment does not increase axial stiffness, and more than four does not increase torsional stiffness."
+    },
+    {
+      "afirmacion": "As an empirical guide, the plate span ratio should exceed 2-3 in comminuted fractures and 8-10 in simple lines, and the screw density should stay below 0.5 in comminuted fractures and 0.3-0.4 in simple lines."
+    },
+    {
+      "afirmacion": "Conventional locked plating produces asymmetrical gap closure and, with it, an asymmetrical and inconsistent callus that decreases from the far cortex towards the near one."
+    },
+    {
+      "afirmacion": "Far cortical locking screws induce symmetrical interfragmentary motion through cantilever bending of the shaft, and in an animal model were associated with greater callus volume and mineral content than conventional locked plating."
+    }
+  ],
+  "autoevaluacion": [
+    {
+      "pregunta": "Why does a comminuted fracture heal better with relative stability than with compression?",
+      "opciones": [
+        "Because compression damages the periosteum directly",
+        "Because the motion is spread across many gaps and the strain at each one falls below the tolerance of callus",
+        "Because compression implants are weaker",
+        "Because comminution makes it impossible to place screws"
+      ],
+      "explicacion": "Compressing would create high-strain gaps that do not heal. Spreading the motion across many gaps lowers the local strain and allows callus."
+    },
+    {
+      "pregunta": "Which mechanical error turns a plate into «no-man's-land»?",
+      "opciones": [
+        "Using too long a plate",
+        "Putting the plate on the tension side",
+        "A short, stiff plate over a simple transverse fracture",
+        "Leaving too many holes empty"
+      ],
+      "explicacion": "It leaves a narrow gap with micromotion: no compression for the direct route, and no flexibility for callus. The answer is to compress, or to lengthen the working length."
+    },
+    {
+      "pregunta": "Tibial plateau with a depressed articular surface and a comminuted metaphysis. What do you do?",
+      "opciones": [
+        "Mixed stability, which is a third principle for these cases",
+        "Absolute for the articular block and relative for the metaphysis: both principles combined in a single construct",
+        "Relative throughout, because there is comminution",
+        "Absolute throughout, because there is an articular surface"
+      ],
+      "explicacion": "Only two kinds of stability exist. What is combined are the principles within one construct, each in its own zone. Calling it «mixed» suggests an intermediate principle that does not exist."
+    },
+    {
+      "pregunta": "Why does a comminuted metaphyseal component not allow absolute stability?",
+      "opciones": [
+        "Because screws do not hold in the metaphysis",
+        "Because there is nothing to compress without devitalising it, and the gaps would be left with a strain no tissue tolerates",
+        "Because the metaphysis always heals by callus",
+        "Because the locked plate prevents it"
+      ],
+      "explicacion": "Compressing comminution leaves gaps with extremely high strain, suppresses callus and ends in fatigue failure of the implant. That component is bridged."
+    },
+    {
+      "pregunta": "What strain does lamellar bone tolerate?",
+      "opciones": [
+        "Up to 100%",
+        "10 to 15%",
+        "Around 2%",
+        "It tolerates none"
+      ],
+      "explicacion": "That is why direct healing demands almost zero strain: anatomical reduction and compression. Soft callus tolerates 10 to 15%, and granulation tissue up to 100%."
+    },
+    {
+      "pregunta": "What does doubling the diameter of an intramedullary nail do to its bending stiffness?",
+      "opciones": [
+        "Doubles it",
+        "Quadruples it",
+        "Multiplies it by sixteen",
+        "Does not change it"
+      ],
+      "explicacion": "Bending stiffness rises with the fourth power of the radius. That is why reaming, by allowing a thicker nail, increases stability so much."
+    },
+    {
+      "pregunta": "What does it mean that callus is self-stabilising?",
+      "opciones": [
+        "That it forms without an implant",
+        "That as it grows it increases the moment of inertia and progressively reduces the strain",
+        "That it resorbs if the fracture moves",
+        "That it definitively replaces lamellar bone"
+      ],
+      "explicacion": "Each stage creates a lower-strain environment that allows the next. It is a system that stabilises itself, provided there is enough blood supply."
+    },
+    {
+      "pregunta": "A relative-stability implant fails by fatigue at four months. What does that mean?",
+      "opciones": [
+        "That the implant was faulty",
+        "That the patient bore weight too early",
+        "That the fracture never healed, through a mechanical or a biological error",
+        "That a stiffer implant was needed"
+      ],
+      "explicacion": "No construct survives cyclical loading indefinitely. Implant failure is the sign that the bone did not heal in time: inadequate stiffness or a devitalised site."
+    },
+    {
+      "pregunta": "Tibial plateau with a depressed articular surface and a comminuted metaphysis. Which stability?",
+      "opciones": [
+        "Absolute throughout the construct",
+        "Relative throughout the construct",
+        "Two zones: absolute at the surface, relative at the metaphysis",
+        "It depends only on bone quality"
+      ],
+      "explicacion": "It is the classic two-zone pattern, along with the pilon and the complex distal humerus. Recognising the two zones prevents applying a single philosophy to the whole bone."
+    },
+    {
+      "pregunta": "Which of these manoeuvres REDUCES the stiffness of the construct?",
+      "opciones": [
+        "Grouping the screws next to the fracture",
+        "Leaving holes empty on both sides of the fracture",
+        "Using a shorter plate",
+        "Reaming and using a thicker nail"
+      ],
+      "explicacion": "It lengthens the working length and spreads the strain. The other three increase stiffness, which is the opposite of what relative stability is after."
+    },
+    {
+      "pregunta": "Which is the lever that most determines the stiffness of a bridge plate?",
+      "opciones": [
+        "The material of the plate",
+        "The working length: the distance between the innermost screws on either side of the fracture",
+        "The total number of screws",
+        "The thickness of the plate"
+      ],
+      "explicacion": "Omitting the screw next to the fracture on each side leaves the construct almost twice as flexible, in compression and in torsion. No other lever changes so much for so little."
+    },
+    {
+      "pregunta": "A screw density below 0.5 in a comminuted fracture — what does that mean exactly?",
+      "opciones": [
+        "That smaller-diameter screws are used",
+        "That fewer than half the holes in the plate are filled",
+        "That the two ends are left free",
+        "That locked and conventional screws are alternated"
+      ],
+      "explicacion": "It is screws inserted divided by holes available. Filling them all gives no more stability: it gives more stiffness, less callus and no margin for revision."
+    },
+    {
+      "pregunta": "How many screws per main fragment actually contribute stiffness?",
+      "opciones": [
+        "One",
+        "Two",
+        "Three: beyond that axial stiffness no longer rises, and beyond four neither does torsional",
+        "As many as will fit"
+      ],
+      "explicacion": "The fourth and fifth screws buy no stability: they spend bone and holes. What does matter is spreading them along the fragment instead of grouping them next to the fracture."
+    },
+    {
+      "pregunta": "A transverse line reduced almost anatomically and bridged with a long plate — why does it not heal?",
+      "opciones": [
+        "Because the plate is too long",
+        "Because the gap is minimal: with one narrow interface, any micromotion gives extremely high strain",
+        "Because graft is missing",
+        "Because titanium is too elastic"
+      ],
+      "explicacion": "Strain is motion divided by gap, and there the denominator is tiny. Either you compress properly, or you lengthen the working length a great deal to spread that motion."
+    },
+    {
+      "pregunta": "Why does the conventional locked plate produce an asymmetrical callus?",
+      "opciones": [
+        "Because titanium behaves differently at each cortex",
+        "Because the gap closes mainly at the far cortex and barely under the plate",
+        "Because locking screws are stiffer",
+        "Because it is always placed on the tension side"
+      ],
+      "explicacion": "Callus follows that asymmetry and appears scant exactly where the implant is. It is corrected by lengthening the working length, lifting the plate a few millimetres, or using dynamic locking or far cortical locking screws."
+    },
+    {
+      "pregunta": "Lengthening the working length makes the construct more flexible. What does that cost?",
+      "opciones": [
+        "Nothing",
+        "It lowers the load the plate withstands before it deforms, and without cortical contact it fails earlier by fatigue",
+        "It increases infection",
+        "It always prevents early weight bearing"
+      ],
+      "explicacion": "Stiffness and strength pull in opposite directions. It is compensated with a longer plate, with the weight-bearing regimen, or by restoring some bony contact."
+    }
+  ]
+}
