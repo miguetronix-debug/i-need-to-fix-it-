@@ -28,15 +28,21 @@ Y ya está: Vercel lo detecta y republica en menos de un minuto. **La de Netlify
 
 ---
 
-## Lo que queda por comprobar en un móvil
+## Comprobado en móvil
 
-Tres cosas que **no se pueden verificar desde aquí** y que en tu teléfono llevan dos minutos. Usa la dirección de Vercel:
+- ✅ **Se instala** en la pantalla de inicio y abre sin barra de navegador.
+- ✅ **Funciona sin conexión.**
+- ⬜ **Enlaces de caso compartidos** — falta probarlo: rellena medio caso, copia la URL de la barra y ábrela en otro dispositivo; tienen que aparecer las mismas decisiones marcadas.
 
-1. **Que se instale.** Abre https://ineedtofixit.vercel.app y busca «Añadir a pantalla de inicio». Debe aparecer con su icono y abrirse sin barra de navegador.
-2. **Que funcione sin conexión.** Ábrela, navega dos o tres pasos, pon el móvil en modo avión y recarga. Si sigue funcionando, el *service worker* quedó bien.
-3. **Que los enlaces de caso viajen.** Rellena medio caso, copia la URL de la barra y ábrela en otro dispositivo: tienen que aparecer las mismas decisiones marcadas.
+### Los dos fallos que aparecieron al probarlo, y que no se veían desde el escritorio
 
-Si el modo sin conexión falla, la consola del navegador dirá exactamente qué recurso no se pudo cachear: el *service worker* avisa en lugar de callarse.
+**1 · El icono de la pantalla de inicio daba 404.** El `manifest.webmanifest` traía `start_url: "./prototipo.html"`, pero **en el sitio publicado el app se llama `index.html`** — `prototipo.html` solo existe en el repositorio. El mismo fallo tumbaba el modo sin conexión, porque el *service worker* guarda `index.html` y la app pedía un nombre que nunca se había guardado. Un solo error, dos síntomas.
+
+**Regla general que deja este fallo:** todo lo que en el repositorio se llama `prototipo.html` se publica como `index.html`. Cualquier ruta a `prototipo.html` que acabe dentro de `sitio/` es un error latente.
+
+**2 · La raíz `/` daba 404 por su cuenta.** Con Root Directory correcto, `/index.html` y `/robots.txt` respondían pero `/` a secas no. Resuelto con una regla explícita en `sitio/vercel.json`.
+
+Si algún día el modo sin conexión vuelve a fallar, la consola del navegador dirá qué recurso no se pudo cachear: el *service worker* avisa en lugar de callarse.
 
 ---
 
