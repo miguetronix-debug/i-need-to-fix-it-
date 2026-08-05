@@ -1,0 +1,343 @@
+{
+  "_nota": "Inglés del Paso 5 · Los principios biomecánicos. Calco parcial: misma forma que el español, solo los campos traducidos. Este paso lleva las tres reglas conceptuales del autor —principio ≠ manera ≠ implante, la neutralización no es un principio, y banda de tensión ≠ cerclaje ≠ compresión interfragmentaria—, y la traducción está hecha para que esas distinciones sobrevivan: PRINCIPLE / METHOD / IMPLANT, y «lag screw» reservado para la manera, nunca para el principio.",
+  "titulo": "Biomechanical principles",
+  "subtitulo": "Four principles; everything else is a way of achieving them",
+  "preguntaClave": "Which force do I want to neutralise in each zone, with which principle, and by which method do I deliver it?",
+  "sintesis": "There are only four principles: interfragmentary compression, tension band and buttress produce absolute stability; splinting, internal or external, produces relative stability. Compression allows five methods — screw by technique, screw by design, screw through the plate, the plate's dynamic compression unit, and prebending. Neutralisation is not a principle but an accessory to the screw that compresses, and «bridge plate» is not a principle but a form of splinting.",
+
+  "objetivos": [
+    "Separate the PRINCIPLE from the METHOD of achieving it and from the IMPLANT that executes it",
+    "Recognise that there are only four principles: interfragmentary compression, tension band, buttress and splinting",
+    "Know the five methods of delivering interfragmentary compression",
+    "Understand that neutralisation is not a principle but an accessory to the screw that compresses",
+    "Distinguish splinting as a principle from its forms: external fixator, nail or bridge plate"
+  ],
+
+  "decisiones": [
+    {
+      "id": "fuerza",
+      "pregunta": "Which force do you have to neutralise?",
+      "ayuda": "This is the control question of the step. Identifying the dominant force takes you almost straight to the principle that counters it.",
+      "opciones": [
+        { "id": "f-axial", "etiqueta": "Axial load", "criterios": [
+          "Longitudinal compression of the bone",
+          "Tends to shorten and collapse the fracture site"
+        ]},
+        { "id": "f-traccion", "etiqueta": "Traction", "criterios": [
+          "Muscle pull on an eccentric fragment",
+          "Olecranon, patella, greater tuberosity, malleolus"
+        ]},
+        { "id": "f-cizallamiento", "etiqueta": "Shear", "criterios": [
+          "One fragment tends to slide on the other",
+          "Volar Barton, posterior malleolus, tibial plateau"
+        ]},
+        { "id": "f-flexion", "etiqueta": "Bending", "criterios": [
+          "Angulation of the fracture site under load",
+          "It rules the shafts of long bones"
+        ]},
+        { "id": "f-torsion", "etiqueta": "Torsion", "criterios": [
+          "Rotation of one fragment relative to the other",
+          "This is the one the interfragmentary screw does NOT resist"
+        ]}
+      ]
+    },
+    {
+      "id": "principio",
+      "pregunta": "Which principle or principles are you going to apply?",
+      "ayuda": "There are only four. Everything else — lag screw, compression plate, bridge plate, external fixator — are ways of delivering them.",
+      "opciones": [
+        { "id": "pr-compresion", "etiqueta": "Interfragmentary compression", "criterios": [
+          "Bring the fragments together until friction neutralises the loads and strain falls close to zero",
+          "It can be achieved in several ways: with a screw, with a plate, or by combining both",
+          "It is the essence of absolute stability"
+        ]},
+        { "id": "pr-banda", "etiqueta": "Tension band", "criterios": [
+          "Converts TRACTION into COMPRESSION at the opposite cortex",
+          "A dynamic principle: the compression increases with function",
+          "Very specific indications and one anatomical condition that is not negotiable"
+        ]},
+        { "id": "pr-sosten", "etiqueta": "Buttress", "criterios": [
+          "Neutralises shear by acting as a physical stop to the fragment that slides",
+          "It does not hold by friction: it holds by support",
+          "Partial articular fractures under shear; antiglide in the distal fibula"
+        ]},
+        { "id": "pr-ferulaje", "etiqueta": "Splinting (internal or external)", "criterios": [
+          "The implant splints the segment, holding length, alignment and rotation",
+          "It allows the micromotion that stimulates callus",
+          "This is the principle; the external fixator, the nail and the bridge plate are its forms"
+        ]}
+      ]
+    },
+    {
+      "id": "principio-articular",
+      "pregunta": "Articular block: which principle?",
+      "ayuda": "The articular surface calls for compression; the fragment that slides calls for a buttress.",
+      "opciones": [
+        { "id": "pa-compresion", "etiqueta": "Interfragmentary compression", "criterios": [
+          "Close the gap in the articular surface by friction"
+        ]},
+        { "id": "pa-banda", "etiqueta": "Tension band", "criterios": [
+          "When the dominant force on the fragment is muscle pull"
+        ]},
+        { "id": "pa-sosten", "etiqueta": "Buttress", "criterios": [
+          "A partial articular fragment sliding under shear",
+          "Spring plate or one-third tubular plate for small fragments"
+        ]}
+      ]
+    },
+    {
+      "id": "principio-meta",
+      "pregunta": "Metaphyseal or diaphyseal component: which principle?",
+      "ayuda": "The comminuted component is splinted. There is nothing to compress without devitalising it.",
+      "opciones": [
+        { "id": "pm-ferulaje", "etiqueta": "Splinting", "criterios": [
+          "Hold length, alignment and rotation and let it heal by callus"
+        ]},
+        { "id": "pm-compresion", "etiqueta": "Interfragmentary compression", "criterios": [
+          "Only if that component is a simple, reconstructable line"
+        ]},
+        { "id": "pm-sosten", "etiqueta": "Buttress", "criterios": [
+          "If there is a metaphyseal fragment that slides and has to be stopped"
+        ]}
+      ]
+    },
+    {
+      "id": "modo-compresion",
+      "pregunta": "By which method are you going to deliver the compression?",
+      "ayuda": "Interfragmentary compression allows several executions. You can combine more than one.",
+      "opciones": [
+        { "id": "mc-tornillo-tecnica", "etiqueta": "Screw, by technique (lag screw)", "criterios": [
+          "Gliding hole in the near cortex and threaded hole in the far one",
+          "The thread only grips the far fragment, so tightening pulls the fragments together",
+          "Any fully threaded cortical screw works if the technique is done properly"
+        ]},
+        { "id": "mc-tornillo-diseno", "etiqueta": "Screw, by design", "criterios": [
+          "Partially threaded screw: smooth at one end, threaded at the other",
+          "The design itself acts as the gliding hole, with no need to overdrill",
+          "Partially threaded cancellous screws, cannulated compression screws"
+        ]},
+        { "id": "mc-tornillo-por-placa", "etiqueta": "Interfragmentary screw through the plate", "criterios": [
+          "The screw goes through a plate hole, using the lag technique",
+          "It adds the point compression of the screw to the plate construct"
+        ]},
+        { "id": "mc-placa-dcp", "etiqueta": "Plate, through its dynamic compression unit", "criterios": [
+          "DCP or LCP: one neutral screw and one eccentric",
+          "As the eccentric screw is tightened, the head runs down the ramp of the hole and shifts the plate, compressing the fracture"
+        ]},
+        { "id": "mc-prebending", "etiqueta": "Prebending the plate", "criterios": [
+          "Bend the plate slightly over the fracture so that the far cortex is compressed as well",
+          "Without it, the compression concentrates at the near cortex and the far one can stay open"
+        ]}
+      ]
+    },
+    {
+      "id": "neutralizacion",
+      "pregunta": "Are you going to protect that compression?",
+      "ayuda": "Neutralisation is not a principle: it is an accessory to the screw that compresses. It protects against the forces that screw cannot counter on its own.",
+      "opciones": [
+        { "id": "n-si", "etiqueta": "Yes, with a protection plate", "criterios": [
+          "Shields the compression against torsion, bending and shear",
+          "The screw gives the compression; the plate only protects it"
+        ]},
+        { "id": "n-no", "etiqueta": "Not needed", "criterios": [
+          "A well-contained articular fragment, or several screws that already control rotation",
+          "Justify it: torsion is what the interfragmentary screw does not resist"
+        ]}
+      ]
+    },
+    {
+      "id": "modo-ferulaje",
+      "pregunta": "How are you going to deliver the splinting?",
+      "ayuda": "All of them are forms of the same principle: they describe how the implant is used, not a different principle.",
+      "opciones": [
+        { "id": "mf-clavo", "etiqueta": "Internal splinting with an intramedullary nail", "criterios": [
+          "An intramedullary splint aligned with the mechanical axis",
+          "Load sharing; the stiffness depends on the diameter and on reaming"
+        ]},
+        { "id": "mf-placa-puente", "etiqueta": "Internal splinting with a bridge plate", "criterios": [
+          "The plate spans the comminuted zone without touching it",
+          "«Bridge plate» describes how the plate is used, not a different principle"
+        ]},
+        { "id": "mf-tutor", "etiqueta": "External splinting with a fixator", "criterios": [
+          "External fixator: a splint outside the skin",
+          "The choice when the soft tissues or the physiology do not allow the definitive procedure"
+        ]}
+      ]
+    }
+  ],
+
+  "derivados": [
+    {
+      "id": "de-la-fuerza",
+      "titulo": "The force you flagged calls for this principle",
+      "reglas": [
+        { "texto": "Traction → TENSION BAND, which converts it into compression at the opposite cortex. Essential condition: that cortex must be intact and act as a fulcrum." },
+        { "texto": "Shear → BUTTRESS. The implant acts as a physical stop to the fragment that slides; it does not hold it by friction." },
+        { "texto": "Torsion → this is exactly what the interfragmentary screw does NOT resist. If you are compressing with a screw, add a protection plate: neutralisation." },
+        { "texto": "Bending → a plate on the tension side if the line is reconstructable, or splinting with enough working length if the site is comminuted." },
+        { "texto": "Axial load → compression if the line is reconstructable; if it is not, splinting and, where appropriate, filling the defect." }
+      ]
+    },
+    {
+      "id": "jerarquia",
+      "titulo": "What you have defined, in order",
+      "reglas": [
+        { "texto": "Principle: interfragmentary compression. Method: screw by technique — gliding hole near, threaded hole far. Implant: any fully threaded cortical screw." },
+        { "texto": "Principle: interfragmentary compression. Method: screw by design, smooth at one end and threaded at the other. Implant: partially threaded or cannulated compression screw." },
+        { "texto": "Principle: interfragmentary compression. Method: the plate's dynamic compression unit, with one neutral screw and one eccentric. Implant: DCP, LC-DCP or LCP." },
+        { "texto": "Principle: interfragmentary compression. Method: interfragmentary screw placed through a plate hole. It adds point compression to the construct." },
+        { "texto": "Prebending: without it, the compression concentrates at the near cortex and the far one can stay open." },
+        { "texto": "Neutralisation: an accessory to the screw that compresses, not a principle. The plate contributes no stability of its own here; it protects the stability the screw provides against torsion, bending and shear." },
+        { "texto": "Principle: internal splinting. Method: bridge plate. «Bridge plate» is a description of how the implant is used, not a separate principle." },
+        { "texto": "Principle: external splinting. Method: external fixator. The same principle as the nail or the bridge plate, executed outside the skin." },
+        { "texto": "Principle: internal splinting. Method: intramedullary nail. The working length from Step 3 defines how much strain you allow." }
+      ]
+    },
+    {
+      "id": "coherente",
+      "titulo": "Principles that match your stability",
+      "reglas": [
+        { "texto": "Absolute stability → interfragmentary compression, tension band or buttress. Neutralisation accompanies the screw that compresses, but generates no stability by itself." },
+        { "texto": "Relative stability → splinting, internal or external. The amount of motion is dosed with the working length, as you decided in Step 3." },
+        { "texto": "Articular block with absolute stability → interfragmentary compression and, if the fragment slides, a buttress." },
+        { "texto": "Metaphyseal component with relative stability → splinting. One implant can compress above and splint below: that is two principles in one construct, not two implants." }
+      ]
+    }
+  ],
+
+  "esencial": [
+    { "texto": "The biomechanical principle is the mechanical strategy by which the stability chosen in Step 3 is obtained. It is not the implant, and it is not the technique used to execute it either. Keeping those three levels apart — principle, method and implant — is what lets you improvise with whatever material is available instead of depending on one particular tray." },
+    { "titulo": "The three levels, which must not be mixed up",
+      "encabezados": ["Level", "What it is", "Example"],
+      "filas": [
+        ["Principle", "The mechanical strategy: which force is neutralised and how", "Interfragmentary compression"],
+        ["Method", "How that principle is executed", "Screw by technique · screw by design · the plate's dynamic compression unit"],
+        ["Implant", "The actual hardware that delivers it (Step 6)", "3.5 cortical screw · DCP · LCP"]
+      ]},
+    { "titulo": "There are only four principles", "texto": "Interfragmentary compression, tension band and buttress produce absolute stability. Splinting — internal or external — produces relative stability. Everything else taught as though it were a principle is in fact a way of achieving one of these four, or a description of how the implant is used." },
+    { "titulo": "The five methods of delivering interfragmentary compression",
+      "encabezados": ["Method", "What it involves"],
+      "filas": [
+        ["Screw, by technique", "Gliding hole in the near cortex and threaded hole in the far one. The thread only grips the far fragment, so tightening pulls the fragments together. Any fully threaded screw works if the technique is done properly."],
+        ["Screw, by design", "Partially threaded screw: smooth at one end, threaded at the other. The design itself acts as the gliding hole, with no overdrilling."],
+        ["Interfragmentary screw through the plate", "The screw goes through a plate hole using the lag technique, adding point compression to the construct."],
+        ["The plate's dynamic compression unit", "DCP or LCP with one neutral screw and one eccentric: tightening the eccentric one makes the head run down the ramp of the hole and shift the plate, compressing the fracture."],
+        ["Prebending", "Bending the plate slightly over the fracture so that the compression reaches the far cortex as well."]
+      ]},
+    { "titulo": "Neutralisation is NOT a principle", "texto": "It is an accessory to the screw that provides the interfragmentary compression. It protects against the forces that screw cannot counter on its own: torsion, bending and shear. It generates no stability of its own and makes no sense without a construct that compresses. Treating it as a principle leads people to think a neutralisation plate stabilises the fracture, and it does not: the screw does." },
+    { "titulo": "«Bridge plate» is not a principle", "texto": "It describes the way the implant is used. The principle is SPLINTING, and it takes three forms: internal splinting with an intramedullary nail, internal splinting with a bridge plate, and external splinting with a fixator. All three do the same thing — hold length, alignment and rotation while allowing micromotion — and differ only in where the splint is placed." },
+    { "titulo": "Do not confuse: tension band ≠ cerclage ≠ interfragmentary compression", "texto": "The TENSION BAND is a dynamic principle: it converts traction into compression at the opposite cortex, and it demands an intact opposite cortex acting as a fulcrum plus cyclical functional loading. The compression increases with function. CERCLAGE is static: a circumferential wire that only approximates or holds fragments. A figure-of-eight wire that does not convert traction into compression works as a cerclage, not as a tension band. And INTERFRAGMENTARY COMPRESSION is static: it closes the gap by friction in a sustained way, independently of movement." },
+    { "titulo": "An honest caveat about the olecranon figure-of-eight", "texto": "It has been questioned experimentally whether the classic wires-plus-figure-of-eight construct really works as a dynamic tension band: it behaves more statically than it is taught. It remains effective in the simple pattern, but the construct should not be equated with the principle." },
+    { "titulo": "The tension band has very specific indications", "texto": "Three things are needed: a fragment under eccentric traction, an intact opposite cortex to resist the compression, and cyclical functional loading to activate the mechanism. Olecranon, patella, greater tuberosity and malleolus are the classic settings. If any of the three conditions is missing — above all the opposite cortex — the principle does not work and you have to move to a plate." },
+    { "titulo": "The buttress holds by support, not by friction", "texto": "The buttress neutralises shear by acting as a physical stop against the fragment that slides. That is why it is fixed first to the stable fragment and rests against the one that migrates. If you try to hold that fragment with screws working by friction, the screws work in shear and eventually give way." },
+    { "titulo": "The control question of Step 5", "texto": "Which force do I want to neutralise in each zone, with which principle, and by which method do I deliver it? Compression where I am after direct healing; splinting where I am after callus; buttress where there is shear; tension band where there is traction and an opposite cortex exists. The implant in Step 6 will be only the instrument." },
+    { "titulo": "See the principle in motion", "texto": "In the OSapp configurator you can put two constructs side by side and see where the stress concentrates in each. It is the quickest way to understand why an isolated screw does not resist torsion.", "fuente": "AO Research Institute · free, in English" }
+  ],
+
+  "alertas": [
+    { "id": "tres-niveles", "titulo": "Principle, method and implant are three different things",
+      "texto": "The principle is the strategy; the method is how it is executed; the implant is the hardware. A reconstruction plate is the implant that delivers a protection, not the principle. Keep the three levels apart." },
+    { "id": "neutralizacion-accesorio", "titulo": "Neutralisation is an accessory, not a principle",
+      "texto": "It protects against the forces the interfragmentary screw does not counter. The stability comes from the screw; the plate only shields it." },
+    { "id": "compresion-sin-manera", "titulo": "Define how you are going to compress",
+      "texto": "You have chosen interfragmentary compression but not the method. A screw by technique is not the same as the plate's dynamic compression unit: the instruments, the sequence and the mechanical result all differ." },
+    { "id": "tornillo-sin-proteger", "titulo": "An isolated interfragmentary screw does not resist torsion",
+      "texto": "You are compressing with a screw and have decided not to protect it. Except in well-contained articular fragments, point compression needs a plate to shield it against torsion, bending and shear." },
+    { "id": "placa-sin-prebending", "titulo": "Without prebending, the far cortex can stay open",
+      "texto": "The dynamic compression unit concentrates the force at the cortex under the plate. Bending the plate slightly over the fracture spreads the compression to the far cortex as well." },
+    { "id": "banda-cortical", "titulo": "Check the three conditions of the tension band",
+      "texto": "A fragment under eccentric traction, an intact opposite cortex acting as a fulcrum, and cyclical functional loading. If any is missing, the principle does not convert traction into compression and you have to move to a plate. And remember: a figure-of-eight wire that does not convert traction into compression is a cerclage." },
+    { "id": "banda-conminuta", "titulo": "Tension band on a multifragmentary fracture",
+      "texto": "You classified a complex fracture and you are choosing a tension band. With the opposite cortex comminuted there is no fulcrum and the principle fails by definition: the fracture collapses. The answer is a plate." },
+    { "id": "compresion-en-relativa", "titulo": "You are compressing where you decided on relative stability",
+      "texto": "In Step 3 you chose relative stability, which heals by callus. Compression abolishes the micromotion that callus needs and, over a comminuted site, leaves gaps with extremely high strain. The principle that fits is splinting." },
+    { "id": "ferulaje-en-absoluta", "titulo": "You are splinting where you decided on absolute stability",
+      "texto": "Splinting produces relative stability and healing by callus. If you were after direct healing, the principle has to compress." },
+    { "id": "cizallamiento-sin-sosten", "titulo": "There is shear and you have not used a buttress",
+      "texto": "A fragment that slides is not held by friction: it needs a physical stop. Without a buttress, the screws work in shear and the fragment migrates." },
+    { "id": "rg-pauwels", "titulo": "A vertical neck line: that is shear, not compression",
+      "texto": "With a Pauwels III the load does not compress the fracture: it shears it. Three parallel screws then work in shear and give way into varus. What fits is a fixed-angle device — sliding hip screw with a plate, or a cephalomedullary nail — or adding an antirotation screw with a buttress plate acting as a stop." },
+    { "id": "rg-sa-medial", "titulo": "A vertical medial malleolus: friction screws will not hold it",
+      "texto": "In supination-adduction the medial line is vertical, so horizontal screws work in shear. That fragment calls for an antiglide buttress plate." }
+  ],
+
+  "reglasCoherencia": [
+    { "id": "r5-meta-comprimida", "titulo": "Consistency — compressing the comminuted component",
+      "mensaje": "You decided on relative stability for that component and now you are choosing to compress it. There is nothing to compress without devitalising it: the principle that fits is splinting." },
+    { "id": "r5-articular-sin-principio", "titulo": "Consistency — articular block with no principle to stabilise it",
+      "mensaje": "You chose absolute stability for the articular block but have not marked any principle that produces it: compression, buttress or tension band." }
+  ],
+
+  "evidencia": [
+    { "afirmacion": "Compression from the interfragmentary screw is greatest with the screw perpendicular to the fracture plane; in the presence of axial load it is aimed halfway between the perpendicular to the fracture line and the perpendicular to the cortex." },
+    { "afirmacion": "The tension band requires an intact opposite cortex; with comminution the principle fails and you have to move to a plate." },
+    { "afirmacion": "It has been questioned experimentally whether the classic olecranon construct of wires and a figure-of-eight works as a dynamic tension band: it behaves more statically than it is taught." }
+  ],
+
+  "autoevaluacion": [
+    { "pregunta": "How many biomechanical principles are there, and which?",
+      "opciones": [
+        "Seven: compression, lag screw, compression plate, tension band, buttress, neutralisation and bridging",
+        "Four: interfragmentary compression, tension band, buttress and splinting",
+        "Two: absolute and relative",
+        "It depends on the implant available"
+      ],
+      "explicacion": "The lag screw and the compression plate are METHODS of delivering interfragmentary compression; neutralisation is an accessory; the bridge plate is a form of splinting. There are only four principles." },
+    { "pregunta": "What is neutralisation?",
+      "opciones": [
+        "A principle of absolute stability",
+        "An accessory to the screw that compresses, protecting against the forces that screw does not counter",
+        "A form of splinting",
+        "A type of plate"
+      ],
+      "explicacion": "It generates no stability of its own and makes no sense without a construct that compresses. The stability comes from the screw; the plate only shields it against torsion, bending and shear." },
+    { "pregunta": "A partially threaded screw, smooth at one end and threaded at the other, represents which method of compressing?",
+      "opciones": [
+        "Compression by technique",
+        "Compression by the design of the screw itself",
+        "The dynamic compression unit",
+        "Tension band"
+      ],
+      "explicacion": "The design acts as the gliding hole with no need to overdrill. If instead you use a fully threaded screw and create the gliding hole yourself, that is compression by technique." },
+    { "pregunta": "How does the dynamic compression unit of a DCP compress?",
+      "opciones": [
+        "By bending the plate before applying it",
+        "With one neutral screw and one eccentric: tightening the eccentric one makes the head run down the ramp and shift the plate",
+        "By tightening every screw at once",
+        "With fixed-angle locking screws"
+      ],
+      "explicacion": "The design of the hole turns the descent of the head into horizontal displacement of the plate, and that displacement compresses the fracture. Prebending is a different thing: it makes the compression reach the far cortex as well." },
+    { "pregunta": "What is a «bridge plate»?",
+      "opciones": [
+        "A biomechanical principle in its own right",
+        "A form of internal splinting: it describes how the implant is used",
+        "A specifically designed type of plate",
+        "The same as a neutralisation plate"
+      ],
+      "explicacion": "The principle is splinting, and it takes three forms: intramedullary nail, bridge plate and external fixator. All three hold length, alignment and rotation while allowing micromotion." },
+    { "pregunta": "Which anatomical condition is essential for a tension band to work?",
+      "opciones": [
+        "Good bone quality",
+        "An intact opposite cortex acting as a fulcrum",
+        "A transverse fracture line",
+        "The absence of functional loading"
+      ],
+      "explicacion": "Without a fulcrum there is no conversion of traction into compression and the fracture collapses. If that cortex is comminuted, you have to move to a plate." },
+    { "pregunta": "A figure-of-eight wire that does not convert traction into compression — what is it?",
+      "opciones": [
+        "A badly placed tension band",
+        "A cerclage",
+        "Interfragmentary compression",
+        "A neutralisation"
+      ],
+      "explicacion": "Cerclage is static: it only approximates or holds. The tension band is a dynamic principle that demands a fulcrum and cyclical loading. The construct does not define the principle." },
+    { "pregunta": "Why does the buttress not hold by friction?",
+      "opciones": [
+        "Because the plate is not tightened against the bone",
+        "Because it acts as a physical stop against the fragment that slides",
+        "Because it uses locking screws",
+        "Because it is placed on the tension side"
+      ],
+      "explicacion": "It is fixed first to the stable fragment and rests against the one that migrates. If you tried to hold that fragment by friction, the screws would work in shear and give way." }
+  ]
+}
