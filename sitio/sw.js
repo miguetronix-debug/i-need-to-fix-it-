@@ -30,7 +30,8 @@ self.addEventListener('fetch',e=>{{
           const copia=res.clone(); caches.open(CACHE).then(c=>c.put(e.request,copia));
         }}
         return res;
-      }}).catch(()=>caches.match('./prototipo.html'));
+      // sin conexión, cualquier navegación que falle cae en la portada guardada
+      }}).catch(()=>caches.match('./index.html').then(r=>r||caches.match('./')));
     }})
   );
 }});

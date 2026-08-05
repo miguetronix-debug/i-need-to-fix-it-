@@ -1320,7 +1320,8 @@ self.addEventListener('fetch',e=>{{
           const copia=res.clone(); caches.open(CACHE).then(c=>c.put(e.request,copia));
         }}
         return res;
-      }}).catch(()=>caches.match('./prototipo.html'));
+      // sin conexión, cualquier navegación que falle cae en la portada guardada
+      }}).catch(()=>caches.match('./index.html').then(r=>r||caches.match('./')));
     }})
   );
 }});
@@ -1330,7 +1331,11 @@ MANIFEST = {
     "name": "I Need To Fix It — Los 10 pasos para resolver cualquier fractura",
     "short_name": "Fix It",
     "description": "Asistente metodológico de planificación quirúrgica en ortopedia y traumatología.",
-    "start_url": "./prototipo.html",
+    # En el sitio publicado el app se llama index.html; «prototipo.html» solo
+    # existe en el repositorio. Apuntar aquí a prototipo.html hacía que el icono
+    # de la pantalla de inicio abriera un 404 y que el modo sin conexión nunca
+    # funcionara, porque el service worker guarda index.html y no ese nombre.
+    "start_url": "./index.html",
     "scope": "./",
     "display": "standalone",
     "orientation": "portrait-primary",

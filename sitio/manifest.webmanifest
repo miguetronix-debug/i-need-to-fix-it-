@@ -2,7 +2,7 @@
   "name": "I Need To Fix It — Los 10 pasos para resolver cualquier fractura",
   "short_name": "Fix It",
   "description": "Asistente metodológico de planificación quirúrgica en ortopedia y traumatología.",
-  "start_url": "./prototipo.html",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
