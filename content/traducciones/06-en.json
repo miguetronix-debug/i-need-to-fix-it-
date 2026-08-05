@@ -1,0 +1,462 @@
+{
+  "_nota": "Inglés del Paso 6 · El implante o material. Calco parcial. «Lag screw» se traduce como FUNCIÓN, no como diseño, para conservar la distinción del Paso 5. La secuencia de la LCP —comprimir con el convencional, después bloquear— se mantiene explícita en todos los sitios donde aparece.",
+  "titulo": "The implant or hardware",
+  "subtitulo": "Only now is the hardware chosen: it is the means, not the end",
+  "preguntaClave": "Does this implant deliver the principle I chose, or is it forcing me to change principle?",
+  "sintesis": "The implant is chosen last, and through three filters in this order: that it delivers the principle from Step 5, that it respects the biology, and that it suits the host's bone. The function of a plate is defined by the surgeon, not by its shape. The locked plate preserves blood supply and holds weak bone, but it does not compress. And the distinction between load sharing and load bearing governs how much weight can be taken afterwards.",
+  "objetivos": [
+    "Choose the implant because it delivers the principle from Step 5, not out of habit or inventory",
+    "Know that the function of a plate is defined by the surgeon, not by the shape of the plate",
+    "Distinguish a load-sharing implant from a load-bearing one and what that means postoperatively",
+    "Match the implant to the host's bone: osteoporotic or comminuted calls for fixed angle",
+    "Recognise when a defect has to be filled, and with what"
+  ],
+
+  "decisiones": [
+    {
+      "id": "implante",
+      "pregunta": "Which implant is going to deliver your principle?",
+      "ayuda": "You can combine several: a construct is almost never a single implant. Choose by what the principle demands, not by what is in the tray.",
+      "opciones": [
+        { "id": "i-tornillo", "etiqueta": "Screws", "criterios": [
+          "It converts turning into axial force: it is the implant that compresses",
+          "Its anatomy — core, thread, pitch, head — defines what it can do"
+        ]},
+        { "id": "i-placa", "etiqueta": "Plate", "criterios": [
+          "The most versatile implant: the same plate can compress, protect, buttress or bridge",
+          "Its function is defined by the surgeon, not by its shape"
+        ]},
+        { "id": "i-clavo", "etiqueta": "Intramedullary nail", "criterios": [
+          "It splints the shaft from within, with minimal insult to the fracture",
+          "A load-sharing implant: it tolerates early weight bearing well"
+        ]},
+        { "id": "i-tutor", "etiqueta": "External fixator", "criterios": [
+          "Splinting outside the skin: damage control, unsuitable soft tissues, reconstruction",
+          "The stiffness is governed by the pin mechanics: diameter, number, spacing and bar-to-bone distance"
+        ]},
+        { "id": "i-agujas", "etiqueta": "Kirschner wires and figure-of-eight cerclage", "criterios": [
+          "Two parallel wires plus a figure-of-eight wire: it is the classic tension band construct",
+          "Wires alone give little stability: provisional fixation or small fragments"
+        ]},
+        { "id": "i-cerclaje", "etiqueta": "Cerclage or cables", "criterios": [
+          "They encircle the bone to reduce and hold long spiral or periprosthetic lines",
+          "Static: they approximate or hold, but they do not convert traction into compression"
+        ]},
+        { "id": "i-anclaje", "etiqueta": "Suture anchors or intramedullary screws", "criterios": [
+          "Small articular fragments and tendinous or ligamentous avulsions"
+        ]},
+        { "id": "i-revision", "etiqueta": "Revision stem or megaprosthesis", "criterios": [
+          "When the problem is not the fracture but that the previous implant has lost its fixation",
+          "A long, uncemented stem with distal fixation, bypassing the fracture",
+          "It is a different operation with different instruments: it is decided beforehand, not at the table"
+        ]}
+      ]
+    },
+    {
+      "id": "tipo-tornillo",
+      "pregunta": "Which screws?",
+      "ayuda": "«Lag» and «position» are not designs: they are functions. Any screw can act as a lag screw if the technique is used.",
+      "opciones": [
+        { "id": "tor-cortical", "etiqueta": "Cortical", "criterios": [
+          "Fine thread and short pitch",
+          "It grips dense cortical bone"
+        ]},
+        { "id": "tor-esponjoso", "etiqueta": "Cancellous", "criterios": [
+          "Wide thread and long pitch",
+          "It grips cancellous metaphyseal bone"
+        ]},
+        { "id": "tor-parcial", "etiqueta": "Partially threaded", "criterios": [
+          "Smooth at one end and threaded at the other",
+          "It compresses by design: the screw itself acts as the gliding hole"
+        ]},
+        { "id": "tor-posicion", "etiqueta": "Position screw", "criterios": [
+          "It holds two fragments at a fixed distance WITHOUT compressing",
+          "Syndesmosis: compressing it would be the error"
+        ]},
+        { "id": "tor-bloqueado", "etiqueta": "Locking", "criterios": [
+          "A thread in the head that engages the plate: fixed angle",
+          "It does not press the plate against the bone: it is no use for compressing the fracture",
+          "The choice in osteoporotic or comminuted bone"
+        ]},
+        { "id": "tor-canulado", "etiqueta": "Cannulated", "criterios": [
+          "Placed over a guide wire: it lets you check the trajectory before committing",
+          "Femoral neck, scaphoid, articular fragments"
+        ]}
+      ]
+    },
+    {
+      "id": "funcion-placa",
+      "pregunta": "What function is the plate going to perform?",
+      "ayuda": "This is where the implant connects to the principle from Step 5. The same plate changes function according to how you use it.",
+      "opciones": [
+        { "id": "fp-compresion", "etiqueta": "Compression", "criterios": [
+          "Self-compression of the DCP or LC-DCP, or an eccentric screw",
+          "It compresses the fracture: it demands a reconstructable line and cortical contact"
+        ]},
+        { "id": "fp-proteccion", "etiqueta": "Protection (neutralisation)", "criterios": [
+          "It shields a lag screw against torsion, bending and shear",
+          "The stability comes from the screw; the plate only protects it"
+        ]},
+        { "id": "fp-sosten", "etiqueta": "Buttress", "criterios": [
+          "A physical stop against the fragment that slides under shear",
+          "It is fixed first to the stable fragment and rests against the one that migrates"
+        ]},
+        { "id": "fp-puente", "etiqueta": "Bridging", "criterios": [
+          "It spans the comminution, fixed only to the main fragments",
+          "A load-bearing implant: it carries everything until the bone heals"
+        ]},
+        { "id": "fp-banda", "etiqueta": "Tension band", "criterios": [
+          "Placed on the tension side, it converts traction into compression",
+          "It demands an intact opposite cortex acting as a fulcrum"
+        ]}
+      ]
+    },
+    {
+      "id": "diseno-placa",
+      "pregunta": "Locked or unlocked?",
+      "ayuda": "It is not a matter of fashion: it changes completely how the plate transmits load and how much biology it costs.",
+      "opciones": [
+        { "id": "pl-no-bloqueada", "etiqueta": "Conventional (unlocked)", "criterios": [
+          "It stabilises by friction: it presses the plate against the bone",
+          "It demands good contact and good cortical purchase",
+          "It compresses the periosteum under the plate and compromises its blood supply"
+        ]},
+        { "id": "pl-bloqueada", "etiqueta": "LCP or LISS · fixed-angle locked", "criterios": [
+          "The screws thread into the plate: fixed angle, without pressing it against the bone",
+          "The combi hole is part of the LCP design: one half is a dynamic compression unit and the other a conical thread",
+          "That is why the SAME plate can compress with a conventional screw and then be shielded with a locking one. The sequence is not negotiable: compress first, lock afterwards",
+          "It preserves the periosteal blood supply, holds osteoporotic bone and allows biological bridging"
+        ]},
+        { "id": "pl-va", "etiqueta": "VA-LCP · variable-angle locked", "criterios": [
+          "The screw locks even when angled up to 15° in any direction: a 30° cone around the axis of the hole",
+          "It works where the fixed angle does not reach: subchondral rafting dodging the articular surface, narrow metaphyses, and periprosthetic fractures where the stem has to be bypassed",
+          "It has a mechanical price: rotational resistance at the screw-plate interface falls almost linearly as the screw is angled, and at 15° bending resistance is measurably lower",
+          "Angle only as much as you need, and never outside the cone: overshooting ruins the thread and the screw stops locking"
+        ]},
+        { "id": "pl-angulo-fijo", "etiqueta": "Classic fixed angle (blade plate, DCS, DHS)", "criterios": [
+          "A blade or blade-screw that fixes the metaphysis at a constant angle",
+          "The forerunners of the concept that locked plates now deliver"
+        ]}
+      ]
+    },
+    {
+      "id": "clavo-config",
+      "pregunta": "How are you configuring the nail?",
+      "ayuda": "The nail on its own guarantees neither length nor rotation: the locking bolts do.",
+      "opciones": [
+        { "id": "cl-fresado", "etiqueta": "Reamed", "criterios": [
+          "It allows a larger diameter and better contact: a stiffer construct",
+          "Bending stiffness rises with the fourth power of the radius — strictly, with outer r⁴ minus inner r⁴, because the nail is a tube",
+          "The cost: it damages the endosteal blood supply"
+        ]},
+        { "id": "cl-no-fresado", "etiqueta": "Unreamed", "criterios": [
+          "It preserves the endosteum",
+          "A smaller-diameter nail: a less stiff construct"
+        ]},
+        { "id": "cl-estatico", "etiqueta": "Static locking", "criterios": [
+          "Proximal and distal bolts: it controls length and rotation",
+          "It is the default locking in unstable patterns"
+        ]},
+        { "id": "cl-dinamico", "etiqueta": "Dynamic locking", "criterios": [
+          "It allows controlled axial compression with load",
+          "Only with a stable pattern and enough cortical contact"
+        ]}
+      ]
+    },
+    {
+      "id": "tutor-tipo",
+      "pregunta": "Which external fixator?",
+      "opciones": [
+        { "id": "tu-monoplanar", "etiqueta": "Monoplanar or uniplanar", "criterios": [
+          "Damage control and rapid temporary stabilisation",
+          "Some definitive indications"
+        ]},
+        { "id": "tu-circular", "etiqueta": "Circular (Ilizarov) or hexapod", "criterios": [
+          "Reconstruction, deformity correction, lengthening and complex non-unions"
+        ]},
+        { "id": "tu-hibrido", "etiqueta": "Hybrid", "criterios": [
+          "A periarticular ring plus bars",
+          "Metaphysis with compromised soft tissues"
+        ]}
+      ]
+    },
+    {
+      "id": "hueso-huesped",
+      "pregunta": "What is the host's bone like?",
+      "ayuda": "The best implant for a principle can be the worst for that bone. It is the third filter of the choice.",
+      "opciones": [
+        { "id": "hh-normal", "etiqueta": "Normal-quality bone", "criterios": [
+          "Reliable cortical purchase",
+          "Any design is viable if it delivers the principle"
+        ]},
+        { "id": "hh-osteoporotico", "etiqueta": "Osteoporotic", "criterios": [
+          "The conventional screw does not grip and plate-to-bone friction is not reliable",
+          "Fixed angle, greater purchase, consider augmentation"
+        ]},
+        { "id": "hh-patologico", "etiqueta": "Pathological or periprosthetic", "criterios": [
+          "Bone that may never heal: the implant has to hold on its own",
+          "Long constructs, fixed angle, consider cement or prosthetic revision"
+        ]}
+      ]
+    },
+    {
+      "id": "material",
+      "pregunta": "Steel or titanium?",
+      "ayuda": "It modulates the stiffness of the construct, but it is no substitute for a correct mechanical strategy.",
+      "opciones": [
+        { "id": "mat-acero", "etiqueta": "Stainless steel", "criterios": [
+          "Higher elastic modulus: stiffer",
+          "Good biocompatibility, more artefact on CT and MRI",
+          "More notch-sensitive"
+        ]},
+        { "id": "mat-titanio", "etiqueta": "Titanium", "criterios": [
+          "An elastic modulus closer to bone: a somewhat more elastic construct",
+          "Excellent biocompatibility and osseointegration, less artefact",
+          "Good fatigue resistance; beware of cold welding of locking screws"
+        ]}
+      ]
+    },
+    {
+      "id": "defecto",
+      "pregunta": "Is there a bone defect to fill?",
+      "opciones": [
+        { "id": "df-no", "etiqueta": "No", "criterios": [
+          "Enough bony contact after the reduction"
+        ]},
+        { "id": "df-auto", "etiqueta": "Autograft (iliac crest)", "criterios": [
+          "The gold standard: osteogenesis, osteoinduction and osteoconduction",
+          "Limited by donor-site morbidity"
+        ]},
+        { "id": "df-alo", "etiqueta": "Allograft", "criterios": [
+          "Osteoconductive and somewhat osteoinductive: unlimited volume, no donor morbidity",
+          "No living cells and a theoretical transmission risk"
+        ]},
+        { "id": "df-sintetico", "etiqueta": "Synthetic substitute", "criterios": [
+          "Calcium phosphate or sulphate, hydroxyapatite: osteoconductive",
+          "They fill metaphyseal defects and give temporary structural support"
+        ]},
+        { "id": "df-bmp", "etiqueta": "BMP (bone morphogenetic proteins)", "criterios": [
+          "Osteoinductive; selective use because of cost and indication caveats",
+          "Studied settings: open tibia and non-unions"
+        ]}
+      ]
+    }
+  ],
+
+  "derivados": [
+    {
+      "id": "del-principio",
+      "titulo": "The implant your principle calls for",
+      "reglas": [
+        { "texto": "Compression → lag screw, compression plate (DCP/LC-DCP), or both. If you choose a purely locked plate, you do not compress: you need at least one conventional screw or a combi hole." },
+        { "texto": "Tension band → Kirschner wires with a figure-of-eight cerclage, or a plate on the tension side. Check first that the opposite cortex is intact." },
+        { "texto": "Buttress → buttress plate. For small fragments, a spring plate or a one-third tubular plate; antiglide in the distal fibula." },
+        { "texto": "Splinting with a nail → load sharing. Lock proximally and distally: the nail alone does not control rotation." },
+        { "texto": "Splinting with a bridge plate → load bearing. Choose locked or combi and put it in by MIPO: if you open the fracture you were going to bridge, you betray the strategy." },
+        { "texto": "External splinting → fixator. The stiffness is governed by the pin mechanics: diameter, number, spacing and bar-to-bone distance." },
+        { "texto": "Protection → neutralisation plate. It is the implant that shields the screw's compression, not the one that produces it." }
+      ]
+    },
+    {
+      "id": "carga",
+      "titulo": "Load sharing or load bearing",
+      "reglas": [
+        { "texto": "LOAD BEARING. A plate bridging a zone with no bony contact carries the whole load until the bone heals. It is vulnerable to fatigue if healing is delayed: restrict weight bearing and watch the construct." },
+        { "texto": "LOAD SHARING. The nail transmits part of the load through the bone, so it tolerates early weight bearing and cyclical loading better while it heals." },
+        { "texto": "LOAD BEARING for as long as the construct is the only support. Decide now whether it is temporary — damage control, soft-tissue window — or definitive, because it changes the weight-bearing plan." },
+        { "texto": "LOAD SHARING if the anatomical reduction restores cortical contact: the compressed bone transmits load with the plate. Without that contact, the plate is on its own." }
+      ]
+    },
+    {
+      "id": "huesped",
+      "titulo": "What the host's bone imposes",
+      "reglas": [
+        { "texto": "Osteoporosis → fixed angle. The locked plate does not depend on plate-to-bone friction or on the cortical purchase of each screw: the screws and the plate work as a block. Consider longer constructs and augmentation." },
+        { "texto": "Pathological or periprosthetic bone → the implant may have to hold indefinitely. Favour long constructs, fixed angle and, where appropriate, cement or prosthetic revision." }
+      ]
+    }
+  ],
+
+  "esencial": [
+    { "texto": "Only now is the hardware chosen. The implant is the means, not the end: it is selected because it delivers the biomechanical principle from Step 5 at the lowest biological cost. The surgeon who commands the principles chooses the hardware freely; the one who only knows the hardware is a prisoner of the inventory." },
+    { "titulo": "Screws: type and function",
+      "encabezados": ["Type", "Function"],
+      "filas": [
+        ["Cortical", "Fine thread and short pitch; grips dense cortical bone."],
+        ["Cancellous", "Wide thread and long pitch; grips cancellous metaphyseal bone."],
+        ["Lag screw", "Any screw used with a gliding hole to compress. It is a function, not a design."],
+        ["Position screw", "Holds two fragments at a fixed distance without compressing; syndesmosis."],
+        ["Locking", "A thread in the head that engages the plate: fixed angle, no plate-to-bone compression; ideal in osteoporotic or comminuted bone."]
+      ]},
+    { "titulo": "The five functions of a plate",
+      "encabezados": ["Function", "How the plate works", "Stability"],
+      "filas": [
+        ["Compression", "Self-compression (DCP/LC-DCP) or an eccentric screw; it compresses the fracture.", "Absolute"],
+        ["Protection / neutralisation", "It protects a lag screw against torsion and bending.", "Absolute"],
+        ["Buttress", "A stop against the shear of a fragment that slides.", "Absolute"],
+        ["Bridging", "It spans the comminution, fixed to the main fragments; it allows callus.", "Relative"],
+        ["Tension band", "On the tension side, it converts traction into compression.", "Dynamic absolute"]
+      ]},
+    { "titulo": "The function of the plate is defined by the surgeon", "texto": "The plate is the most versatile implant precisely because its function is not in its shape. The same plate can compress, protect, buttress or bridge. That is why the trade name of the plate never answers the question from Step 5: what answers it is what you decide to do with it." },
+    { "titulo": "Locked is not the same as better", "texto": "The conventional plate stabilises by friction: it has to be pressed against the bone, which demands good contact and compromises the periosteal blood supply under the plate. The locked plate works as an internal fixator: the screws thread into the plate at a fixed angle without pressing it against the bone, it preserves the blood supply, holds osteoporotic and comminuted bone and allows biological bridging. And one frequent confusion is worth clearing up: the combi hole is not a separate type of plate, it is the design of the LCP's own hole — one half a dynamic compression unit and the other a conical thread — so the same plate both compresses and locks. What does not change is the sequence: compress first with the conventional screw, lock afterwards. The locking screw never compresses: it fixes the plate where it is." },
+    { "titulo": "The variable angle, and what it costs", "texto": "The VA-LCP adds a freedom the fixed angle does not give: the screw locks even when angled up to 15° in any direction, within a 30° cone. That solves specific situations — subchondral rafting dodging the articular surface, narrow metaphyses where the predetermined angles do not fit, periprosthetic fractures where the stem has to be bypassed. The price is mechanical and it has been measured: as the screw is angled, rotational resistance at the screw-plate interface falls almost linearly, and at 15° the bending resistance of the assembly is lower than at 0°. The practical rule is to angle only as much as the anatomy forces, and never to leave the cone." },
+    { "titulo": "Steel against titanium",
+      "encabezados": ["Property", "Stainless steel", "Titanium"],
+      "filas": [
+        ["Elastic modulus (stiffness)", "Higher: stiffer.", "Lower, closer to bone; a somewhat more elastic construct."],
+        ["Biocompatibility", "Good.", "Excellent; less reaction and better osseointegration."],
+        ["Imaging (CT/MRI)", "More artefact.", "Less artefact."],
+        ["Fatigue and notches", "More notch-sensitive.", "Good resistance; beware of cold welding of locking screws."]
+      ]},
+    { "titulo": "Load sharing against load bearing", "texto": "A load-sharing implant — the intramedullary nail is the example — transmits part of the load through the bone, and therefore tolerates early weight bearing and cyclical loading better while it heals. A load-bearing implant — a plate bridging a zone with no bony contact — carries the whole load until the bone heals, and is more vulnerable to fatigue if healing is delayed. The distinction is not academic: it dictates how much weight is allowed, and when." },
+    { "titulo": "Stiffness is not strength", "texto": "It is the same nuance as in Step 3. An implant can be very stiff and still fail by fatigue if the bone does not heal. No material makes up for a mistaken mechanical strategy: the metal only lasts as long as the biology takes, and if the biology never arrives, the metal breaks." },
+    { "titulo": "Grafts and substitutes: what each one provides",
+      "encabezados": ["Material", "Properties"],
+      "filas": [
+        ["Autograft (iliac crest)", "The gold standard: osteogenesis (cells), osteoinduction (factors) and osteoconduction (scaffold). Limited by donor-site morbidity."],
+        ["Allograft", "Osteoconductive and somewhat osteoinductive; unlimited volume and no donor morbidity, but no living cells."],
+        ["Synthetic substitutes", "Calcium phosphate or sulphate and hydroxyapatite: osteoconductive; they fill metaphyseal defects and give temporary support."],
+        ["BMP", "Osteoinductive; selective use because of cost and indication caveats."]
+      ]},
+    { "titulo": "The three filters for choosing", "texto": "First, that it delivers the principle from Step 5: compression calls for a lag screw or a compression plate; bridging calls for a nail, a bridge plate or a fixator; shear calls for a buttress; traction calls for a tension band. Second, that it respects the biology: if the plan is to bridge, choose hardware and technique — MIPO, locked — that do not devitalise the fracture. And third, that it suits the host's bone: osteoporotic or comminuted calls for fixed angle, greater purchase and, if needed, augmentation." },
+    { "titulo": "The control question of Step 6", "texto": "Does this implant deliver the principle I chose, or is it forcing me to change principle? If placing it means devitalising the fracture you decided to bridge, the implant — or the technique — is the wrong one." },
+    { "titulo": "Implant failure cases, simulated", "texto": "The AO publishes discussions of real cases that failed — a short working length, loss of opposite cortical support, too wide a gap — with the construct simulated and the correction alongside.", "fuente": "AO Research Institute · free, in English" }
+  ],
+
+  "alertas": [
+    { "id": "implante-es-medio", "titulo": "The implant is the means, not the end",
+      "texto": "It is chosen because it delivers the principle from Step 5 at the lowest biological cost. If placing it means devitalising the fracture you decided to bridge, the implant or the technique is the wrong one." },
+    { "id": "bloqueada-no-comprime", "titulo": "The locking screw does not compress: the conventional one does",
+      "texto": "You are going to compress with a locked plate. The LCP can do it, because half of its combi hole is a dynamic compression unit, but that is done by the CONVENTIONAL screw, not the locking one. Place the eccentric cortical screw or the interfragmentary screw through the plate first, compress, and only then lock. The other way round there is no compression: the locking screw fixes the plate where it is." },
+    { "id": "no-bloqueada-osteoporosis", "titulo": "Conventional plate in osteoporotic bone",
+      "texto": "The unlocked plate stabilises by friction and depends on the cortical purchase of each screw. In osteoporotic bone that purchase fails and the screws loosen one after another. What fits is fixed angle." },
+    { "id": "compresion-en-conminuta", "titulo": "Compression plate over a multifragmentary fracture",
+      "texto": "You classified a complex fracture and you are choosing to compress with the plate. There is no cortical contact to compress: the plate will be left carrying the whole load and the biological price of exposing the fracture buys nothing. The correct function is bridging." },
+    { "id": "puente-carga-soportada", "titulo": "The bridge plate is load bearing",
+      "texto": "It carries the whole load until the bone heals. If healing is delayed, it fails by fatigue. Dose the working length as you decided in Step 3 and adjust the weight-bearing plan." },
+    { "id": "puente-abierto", "titulo": "You are going to bridge, but by opening the fracture",
+      "texto": "The bridge plate lives off the biology it preserves. If you apply it by the direct route over the comminuted zone, you destroy the haematoma and the periosteum that callus needs. The consistent route is percutaneous or indirect, through a submuscular tunnel." },
+    { "id": "clavo-sin-bloqueo", "titulo": "An unlocked nail controls neither length nor rotation",
+      "texto": "The nail aligns, but on its own it does not stop the fragment shortening or rotating. The proximal and distal bolts are what give those two things. Decide whether the locking is static or dynamic." },
+    { "id": "dinamico-inestable", "titulo": "Dynamic locking on a pattern that does not tolerate it",
+      "texto": "Dynamisation allows axial compression with load, and that demands enough cortical contact. Over a complex or segmental fracture, the result is shortening." },
+    { "id": "fresado-rigidez", "titulo": "Reaming raises stiffness, it does not lower it",
+      "texto": "A larger-diameter nail is far stiffer: bending stiffness rises with the fourth power of the radius. If you were after micromotion, that is the opposite direction. Compensate with the working length." },
+    { "id": "tutor-temporal", "titulo": "Decide whether the fixator is temporary or definitive",
+      "texto": "It changes everything that follows: the conversion plan, the soft-tissue window and the weight-bearing regimen. A fixator that stays on by inertia ends in pin-track problems and stiffness." },
+    { "id": "cerclaje-estrangula", "titulo": "Cerclage can strangle the periosteal blood supply",
+      "texto": "It encircles the bone completely. Use it with judgement and in the minimum number, over long spiral or periprosthetic lines. And remember it is static: it approximates and holds, but it does not convert traction into compression." },
+    { "id": "posicion-no-comprime", "titulo": "The position screw does not compress, and that is as it should be",
+      "texto": "It holds the fragments at a fixed distance. In the syndesmosis, compressing it would be the error: the aim is to restore the relationship, not to close it." },
+    { "id": "titanio-galling", "titulo": "Titanium with locking screws: beware of cold welding",
+      "texto": "Titanium against titanium can seize (cold welding) and leave a locking screw impossible to remove. Use the torque-limiting screwdriver and do not overtighten." },
+    { "id": "bmp-indicacion", "titulo": "BMP has narrow indications",
+      "texto": "Its use has been studied mainly in open tibia and non-unions. Outside those settings, the cost and the indication caveats outweigh the expected benefit." },
+    { "id": "hundido-sin-relleno", "titulo": "An elevated articular fragment with the defect not filled",
+      "texto": "Elevating the articular surface leaves a metaphyseal void underneath. If it is not filled with graft or substitute, the fragment collapses again as soon as it is loaded." },
+    { "id": "va-angulacion", "titulo": "Angling has a price: do not angle for convenience",
+      "texto": "In the VA-LCP the screw locks within a 30° cone — up to 15° each way — but rotational resistance at the screw-plate interface falls almost linearly as you angle, and at 15° bending resistance is already measurably lower. Angle just enough to dodge the articular surface or the stem, and do not leave the cone: outside it the thread is ruined and the screw stops locking." },
+    { "id": "rg-vancouver-b2", "titulo": "A loose stem: the operation is to revise it, not to fix the fracture",
+      "texto": "In a Vancouver B2 or B3 the problem is not the fracture, it is that the prosthesis has lost its fixation. Putting a plate over a loose stem always fails, because the stem goes on moving inside the bone. It has to be revised with a long stem that bypasses the fracture, and in B3 the bone has to be reconstructed as well." },
+    { "id": "rg-garden-desplazada", "titulo": "A displaced neck: consider whether the answer is an arthroplasty",
+      "texto": "A Garden III-IV disrupts the head's blood supply and carries high rates of necrosis and non-union. In the older or low-demand patient, arthroplasty avoids the reoperation; fixation is reserved for the young patient, and then it is urgent and anatomical." },
+    { "id": "rg-necrosis-humeral", "titulo": "Predictors of humeral head ischaemia",
+      "texto": "A short calcar under 8 mm, a disrupted medial hinge or a basicervical line: the head is probably ischaemic. With several present, in the older patient a reverse arthroplasty avoids a fixation that is going to collapse." },
+    { "id": "rg-sanders-iv", "titulo": "Comminuted posterior facet: consider primary arthrodesis",
+      "texto": "In a Sanders IV the surface is not reconstructable and the functional result of internal fixation alone is poor. Primary subtalar arthrodesis, restoring height and width, is a legitimate alternative that has to be raised before operating, not after." },
+    { "id": "rg-pelvis-posterior", "titulo": "Vertical instability: anterior fixation is not enough",
+      "texto": "A Tile C means the posterior complex is disrupted. The symphysis or an anterior fixator does not control cranial displacement: posterior fixation is needed, with iliosacral screws or a transiliac plate." },
+    { "id": "rg-sindesmosis-comprimida", "titulo": "The syndesmosis is not compressed: it is positioned",
+      "texto": "You have chosen interfragmentary compression with the syndesmosis injured. That space is not a fracture gap to be closed: it is a joint with physiological motion. Compressing it narrows the mortise, blocks dorsiflexion and leaves the ankle stiff and painful. What fits is a POSITION screw, placed without compressing and with the ankle in neutral." },
+    { "id": "rg-sindesmosis", "titulo": "A high fibula: check the syndesmosis",
+      "texto": "In pronation-external rotation the fibular line rises, and the higher it rises the more interosseous membrane is torn. Palpate the whole fibula to rule out a Maisonneuve and do the intraoperative stress test. If it has to be stabilised, it is a position screw: compressing the syndesmosis is the error." },
+    { "id": "rg-codo-inestable", "titulo": "Here the radial head is a primary stabiliser",
+      "texto": "With an associated elbow dislocation, excising the radial head without replacing it leaves the elbow unstable. Look for the terrible triad — coronoid and lateral collateral ligament — and plan the order of repair from inside out." },
+    { "id": "rg-winquist-dinamizar", "titulo": "Do not dynamise what has no cortical contact",
+      "texto": "With a Winquist III or IV there is no column left to share load: dynamisation only produces shortening. Static locking at both ends." }
+  ],
+
+  "reglasCoherencia": [
+    { "id": "r6-ferulaje-sin-implante", "titulo": "Consistency — splinting with no implant to deliver it",
+      "mensaje": "You chose splinting in Step 5, but you have not marked any implant capable of splinting: nail, bridge plate or external fixator." },
+    { "id": "r6-compresion-sin-medio", "titulo": "Consistency — compressing with nothing that compresses",
+      "mensaje": "You chose interfragmentary compression but the construct includes neither screws nor a plate in a compression function. Review which implant is going to produce it." },
+    { "id": "r6-banda-sin-constructo", "titulo": "Consistency — tension band with no construct",
+      "mensaje": "The tension band is delivered with wires plus a figure-of-eight cerclage, or with a plate on the tension side. You have marked neither." },
+    { "id": "r6-proteccion-sin-tornillo", "titulo": "Consistency — protecting a compression that does not exist",
+      "mensaje": "The protection plate generates no stability of its own: it shields the stability given by the interfragmentary screw. Without that screw in the construct, the plate is protecting nothing." }
+  ],
+
+  "evidencia": [
+    { "afirmacion": "In closed tibial shaft fractures, reamed nailing reduced reoperations; in open fractures the difference did not reach significance." },
+    { "afirmacion": "In open tibial fractures treated with a nail, rhBMP-2 reduced reoperations and accelerated healing compared with standard care." },
+    { "afirmacion": "Autograft remains the gold standard for defects and non-unions because of its triple osteogenic, osteoinductive and osteoconductive action." }
+  ],
+
+  "autoevaluacion": [
+    { "pregunta": "What does it mean that the nail is a load-sharing implant?",
+      "opciones": [
+        "That it shares the load with the plate accompanying it",
+        "That it transmits part of the load through the bone, and therefore tolerates early weight bearing and fatigue better",
+        "That it carries the whole load until the bone heals",
+        "That it can only be used with delayed weight bearing"
+      ],
+      "explicacion": "A plate bridging without bony contact is the opposite: load bearing, and therefore more vulnerable to fatigue if healing is delayed." },
+    { "pregunta": "Why is the locked plate the choice in osteoporotic bone?",
+      "opciones": [
+        "Because it is stiffer",
+        "Because it is fixed angle: it depends neither on plate-to-bone friction nor on cortical purchase, and it preserves the periosteal blood supply",
+        "Because it compresses the fracture better",
+        "Because it allows longer screws"
+      ],
+      "explicacion": "It works as an internal fixator: the screws and the plate work as a block. What it does not do is compress the fracture." },
+    { "pregunta": "You want to compress a simple line with a plate. Which design will NOT do it on its own?",
+      "opciones": [
+        "DCP",
+        "LC-DCP",
+        "A purely locked plate",
+        "A plate with combi holes"
+      ],
+      "explicacion": "The locking screw fixes at a fixed angle without pressing the plate against the bone, so it does not compress the fracture. The combi hole does work, but respecting the sequence: compress first with the conventional screw, lock afterwards." },
+    { "pregunta": "What exactly is a «lag screw»?",
+      "opciones": [
+        "A specific screw design",
+        "A function: any screw used with a gliding hole to compress",
+        "A partially threaded screw",
+        "A cannulated screw"
+      ],
+      "explicacion": "It is the same distinction as in Step 5 between principle, method and implant. A fully threaded cortical screw acts as a lag screw if the gliding hole is created for it." },
+    { "pregunta": "What controls rotation in intramedullary nailing?",
+      "opciones": [
+        "The diameter of the nail",
+        "Reaming",
+        "The locking bolts",
+        "Endosteal contact"
+      ],
+      "explicacion": "The nail aligns but does not stop the fragment rotating or shortening. The proximal and distal bolts do." },
+    { "pregunta": "What effect does reaming a nail have on the stiffness of the construct?",
+      "opciones": [
+        "It reduces it",
+        "It increases it, because it allows a larger-diameter nail",
+        "It does not change it",
+        "It depends on the material"
+      ],
+      "explicacion": "Bending stiffness rises with the fourth power of the radius. The cost is the endosteal blood supply." },
+    { "pregunta": "What does autograft provide that allograft does not?",
+      "opciones": [
+        "Osteoconduction",
+        "Osteoinduction",
+        "Osteogenesis: living cells",
+        "Unlimited volume"
+      ],
+      "explicacion": "Allograft is osteoconductive and somewhat osteoinductive, but it carries no living cells. In exchange, it has no donor-site morbidity." },
+    { "pregunta": "What is the control question of Step 6?",
+      "opciones": [
+        "Do I have this implant available?",
+        "Does this implant deliver the principle I chose, or is it forcing me to change principle?",
+        "Is it the most modern implant?",
+        "Steel or titanium?"
+      ],
+      "explicacion": "If placing it means devitalising the fracture you decided to bridge, the implant or the technique is the wrong one." }
+  ]
+}

@@ -11,6 +11,7 @@ Uso:  python3 tools/build_prototipo.py
 """
 
 import datetime
+import hashlib
 import json
 from pathlib import Path
 
@@ -1483,18 +1484,43 @@ self.addEventListener('activate',e=>{{
   e.waitUntil(caches.keys().then(ks=>Promise.all(
     ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));
 }});
+/* Dos estrategias, y la distinción importa.
+
+   El APP (la navegación y el index.html) va a RED PRIMERO: si hay conexión se
+   sirve la versión recién publicada y se guarda una copia; si no la hay, se
+   sirve la copia guardada. Con caché primero, como estaba antes, el usuario se
+   quedaba clavado en la versión que se descargó el primer día y ninguna
+   corrección le llegaba nunca.
+
+   Las FIGURAS del compendio van a CACHÉ PRIMERO: son 604 imágenes que no
+   cambian, y volver a pedirlas por red sería tirar datos y batería. */
+function esApp(req){{
+  return req.mode==='navigate' ||
+         req.url.indexOf('/index.html')>=0 ||
+         req.url.replace(/[?#].*$/,'').endsWith('/');
+}}
 self.addEventListener('fetch',e=>{{
   if(e.request.method!=='GET') return;
+  if(esApp(e.request)){{
+    e.respondWith(
+      fetch(e.request).then(res=>{{
+        if(res && res.ok){{
+          const copia=res.clone();
+          caches.open(CACHE).then(c=>c.put('./index.html',copia));
+        }}
+        return res;
+      }}).catch(()=>caches.match('./index.html').then(r=>r||caches.match('./')))
+    );
+    return;
+  }}
   e.respondWith(
     caches.match(e.request).then(hit=>{{
       if(hit) return hit;
       return fetch(e.request).then(res=>{{
-        // las figuras del compendio se guardan según se van pidiendo
         if(res.ok && e.request.url.indexOf('/figuras/')>=0){{
           const copia=res.clone(); caches.open(CACHE).then(c=>c.put(e.request,copia));
         }}
         return res;
-      // sin conexión, cualquier navegación que falle cae en la portada guardada
       }}).catch(()=>caches.match('./index.html').then(r=>r||caches.match('./')));
     }})
   );
@@ -1653,7 +1679,12 @@ def main():
 </html>
 """
     SALIDA.write_text(html, encoding="utf-8")
-    escribir_pwa(FECHA.strftime("%Y%m%d"))
+    # La versión del caché tiene que cambiar cuando cambia el CONTENIDO. Con la
+    # fecha, dos publicaciones el mismo día generaban un sw.js idéntico, el
+    # navegador no lo consideraba nuevo y el usuario se quedaba con la versión
+    # antigua guardada. Con el hash del HTML, cualquier cambio invalida el caché.
+    huella = hashlib.sha1(html.encode("utf-8")).hexdigest()[:10]
+    escribir_pwa(FECHA.strftime("%Y%m%d") + "-" + huella)
     kb = SALIDA.stat().st_size / 1024
     print(f"Generado: {SALIDA}  ({kb:.0f} KB)")
     print(f"Pasos incrustados: {sorted(pasos)}")
