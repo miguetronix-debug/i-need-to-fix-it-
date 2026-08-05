@@ -26,23 +26,47 @@ lógica clínica), `probar_render.js` (15 puntos de render), `probar_kfuri.js`
 
 ## Lo que arreglaría, por orden
 
-### 1 · El arranque descarga 1,5 MB antes de mostrar nada · **alto impacto**
+### 1 · Cargar el contenido bajo demanda · **medio, no alto** *(corregido tras medirlo)*
 
-**Qué pasa.** Todo el contenido va incrustado en `index.html`: 1,44 MB de JSON,
-de los cuales **el Paso 2 solo son 32 112 palabras** —el 60 % del contenido del
-app— y las traducciones inglesas otros 371 KB. Un residente en el móvil, con
-datos móviles del hospital, espera a que baje todo eso aunque solo quiera abrir
-el Paso 3.
+**Corrección de mi propia estimación.** En la primera versión de esta auditoría
+puse esto como lo más urgente diciendo «el arranque descarga 1,5 MB». Es cierto
+en disco y **falso en la red**: al medirlo, ese archivo viaja **comprimido a
+265 KB con gzip**, y Vercel aplica brotli, que suele quedar otro 20 % por debajo.
+Así que el coste real de red hoy es de unos **210 KB**, no de 1,5 MB. Sigue
+mereciendo la pena, pero no es la emergencia que yo describí.
 
-**Por qué está así.** Fue una decisión deliberada y correcta al principio: un
-archivo único que se abre con doble clic, sin servidor. Esa razón desapareció el
-día que se publicó en Vercel.
+**Lo que sí cuesta de verdad.** El navegador tiene que analizar 1,5 MB de JSON en
+el arranque, y eso ocupa memoria y tiempo de CPU en un móvil de gama media, cada
+vez que se abre el app. Ese coste no lo arregla la compresión.
 
-**Cómo lo arreglaría.** Sacar el compendio AO (`codigos`) y las traducciones a
-archivos aparte y cargarlos bajo demanda: el compendio solo cuando se entra al
-Paso 2, el inglés solo si el idioma es inglés. El HTML bajaría de 1,5 MB a unos
-250 KB. El service worker ya está preparado para cachearlos. **Es el cambio con
-mejor relación beneficio/riesgo de toda la lista.**
+**Dónde está el peso, medido:**
+
+| Bloque | KB | % |
+|---|---:|---:|
+| Paso 2 · decisión `calificaciones` (3 553 opciones) | 458 | 31 % |
+| Traducciones inglesas (los diez pasos) | 310 | 21 % |
+| Compendio AO (`codigos`) | 126 | 8 % |
+| Resto del Paso 2 (hueso, segmento, tipo, grupo, subgrupo…) | 199 | 13 % |
+| Los otros nueve pasos, juntos | 299 | 20 % |
+| Casos por fallo | 36 | 2 % |
+| Referencias, interfaz, versión | 24 | 2 % |
+
+**El hallazgo que lo hace fácil.** `calificaciones` es **la tercera parte de todo
+el app** y es una decisión opcional, la última del Paso 2, que además **ningún
+otro paso consulta**. `contexto()` —la función que hace que los pasos se hablen
+entre sí— solo necesita `segmento` y `tipo`, que juntos son 52 KB. Es decir: lo
+más pesado es también lo más fácil de separar, porque no tiene dependencias.
+
+**Plan realista, por orden de facilidad:**
+
+1. `calificaciones`, `codigos` y `casos` a archivos aparte, cargados cuando hagan
+   falta. Son **620 KB (42 %)** y ninguno tiene dependencias cruzadas.
+2. Las traducciones, solo si el idioma es inglés, y por paso. Otros **310 KB**.
+3. Con las dos, el arranque queda en **~550 KB en disco y ~100 KB en la red**,
+   frente a los 265 KB de hoy.
+
+El service worker ya está preparado para cachear esos archivos, así que el modo
+sin conexión no se rompe: lo que se descargue una vez queda guardado.
 
 ### 2 · Accesibilidad: cero atributos ARIA y foco apenas visible · **alto impacto**
 
@@ -147,7 +171,37 @@ AO, que ya estaba dentro. 80 de los 85 segmentos salen de ahí, no de mí.
 
 ## Si tuviera que elegir tres cosas
 
-1. **Partir el contenido y cargarlo bajo demanda.** Es lo que más nota el usuario.
-2. **Accesibilidad básica.** Media tarde, cero riesgo, beneficio para todos.
-3. **Poner una licencia.** Cinco minutos, y sin ella el trabajo queda en un limbo
+Tras medir la compresión, **el orden cambia**:
+
+1. **Poner una licencia.** Cinco minutos, y sin ella el trabajo queda en un limbo
    legal justo cuando empieza a circular.
+2. **Accesibilidad básica.** Media tarde, cero riesgo, beneficio para todos.
+3. **Cargar `calificaciones`, el compendio y los casos bajo demanda.** Un tercio
+   del peso sale de en medio sin tocar la lógica entre pasos. Lo demás (las
+   traducciones) puede esperar.
+
+---
+
+## Coste de partir el contenido, con detalle
+
+Lo que hay que tocar:
+
+**En el generador (`build_prototipo.py`).** Escribir tres archivos nuevos en
+`sitio/datos/` —`calificaciones.json`, `codigos.json`, `casos.json`— en lugar de
+incrustarlos, y dejar en su sitio un marcador de que se cargan aparte.
+
+**En el motor.** Una función `cargarBloque(nombre)` que descargue y guarde en
+memoria, y un puñado de puntos donde hoy se asume que el dato ya está:
+`opcionesVisibles` para las calificaciones, `txtDe` y `descripcionCompleta` para
+el compendio, `pintarCasos` para los casos. Es la parte delicada: el render es
+síncrono de arriba abajo, así que hay que decidir si esos puntos esperan o pintan
+un estado de «cargando».
+
+**En las pruebas.** Las seis suites cargan `prototipo.html` y evalúan el motor sin
+red. Habría que darles un `fetch` simulado que lea los archivos del disco, o el
+conjunto entero deja de funcionar.
+
+**Riesgo principal.** No es el rendimiento: es que una descarga que falla deje una
+pantalla a medias. Hay que decidir el comportamiento cuando no hay red y el
+bloque no está cacheado —lo razonable es seguir mostrando el paso y avisar de que
+esa parte no está disponible— y probarlo explícitamente.
