@@ -24,14 +24,10 @@ Sirve para enseñárselo a alguien hoy mismo. La pega es que para actualizarlo h
 
 ## Opción B · GitHub y Vercel · la buena para mantenerlo
 
-El repositorio ya está inicializado y con el primer commit hecho, con los 1 270 archivos dentro. Quedan seis cambios sin confirmar —este documento y el arreglo del *service worker*— porque desde mi entorno no puedo borrar un fichero de bloqueo dentro de tu carpeta. Se resuelve con la primera línea:
+El repositorio está inicializado, con dos commits y **nada pendiente de confirmar**. Solo falta conectarlo:
 
 ```bash
 cd "/Users/drkush/Documents/Claude/Projects/libro de ortopedia/app-10-pasos"
-
-# 0 · quitar el bloqueo que quedó suelto y cerrar el último commit
-rm -f .git/index.lock
-git add -A && git commit -m "Sitio listo para publicar"
 
 # 1 · crea el repositorio vacío en github.com/new  (por ejemplo: i-need-to-fix-it)
 #     sin README, sin .gitignore, sin licencia
