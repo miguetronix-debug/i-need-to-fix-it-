@@ -1,0 +1,356 @@
+{
+  "_nota": "Inglés de la PROSA del Paso 2. El vocabulario AO y el derivado de clasificaciones regionales los genera tools/traducir_paso2.py; el generador funde ambas fuentes. Aquí solo va lo redactado a mano.",
+  "titulo": "Fracture classification",
+  "subtitulo": "The label contains the indication",
+  "preguntaClave": "What exactly is this fracture, and what does that label anticipate about the rest of the plan?",
+  "sintesis": "The label contains the indication. Classify with AO/OTA (bone-segment-type) on good radiographs, lean on the regional satellite, refine with CT in articular and periarticular fractures — it complements, it is not a requirement — and read in the label the conduct that will guide Steps 3 to 10. With Steps 1 and 2 done properly, half the operation has already been thought through.",
+  "objetivos": [
+    "Build the AO/OTA code from bone, segment and type",
+    "Read the letter A/B/C in its context: it means different things in the shaft, in an articular segment and in the malleoli",
+    "Choose the satellite classification that adds what AO/OTA does not capture in that region",
+    "Recognise when CT refines the classification, knowing that it is not a requirement for classifying",
+    "Accept non-operative treatment and primary arthroplasty as legitimate outcomes of the method"
+  ],
+  "esencial": [
+    {
+      "texto": "Classifying is the second act of planning, not an academic formality. A good classification is a treatment hypothesis: when we say «complete multifragmentary articular fracture» we have already said, implicitly, «I will need anatomical reduction, absolute stability of the surface and, probably, bridging of the metaphysis»."
+    },
+    {
+      "titulo": "The core idea of Step 2",
+      "texto": "The label contains the indication. If the classification does not suggest a course of action, either it has not been classified properly or information is missing."
+    },
+    {
+      "titulo": "Structure of the AO/OTA code",
+      "items": [
+        "Bone (1st digit): 1 humerus · 2 ulna and radius · 3 femur · 4 tibia and fibula. Hand, foot, pelvis and spine have their own.",
+        "Segment (2nd digit): 1 proximal · 2 diaphyseal · 3 distal. Tibia and fibula add 4 for the malleoli.",
+        "Type (A/B/C): the layer that carries most prognostic weight; it means different things in the shaft and in an articular segment.",
+        "Group and subgroup (1, 2, 3 and .1–.3): they detail the morphology and refine the severity within the type.",
+        "Universal qualifiers: the AO/OTA-2018 revision added common qualifiers (articular involvement, fragmentation, location) that standardise the nuances between bones."
+      ]
+    },
+    {
+      "titulo": "Shaft — what the letter means",
+      "encabezados": [
+        "Type",
+        "Morphology",
+        "Consequence"
+      ],
+      "filas": [
+        [
+          "A",
+          "Simple: a single line (spiral, oblique or transverse). Two fragments.",
+          "Reconstruction and compression are possible."
+        ],
+        [
+          "B",
+          "Wedge: a third fragment; after reduction, contact between the main fragments persists.",
+          "Compression or bridging, depending on the wedge."
+        ],
+        [
+          "C",
+          "Complex or multifragmentary: no reconstructable contact between the main fragments.",
+          "Bridging; relative stability."
+        ]
+      ]
+    },
+    {
+      "titulo": "Articular segment — what the letter means",
+      "encabezados": [
+        "Type",
+        "Morphology",
+        "Consequence"
+      ],
+      "filas": [
+        [
+          "A",
+          "Extra-articular: the line does not enter the surface.",
+          "The surface is intact."
+        ],
+        [
+          "B",
+          "Partial articular: part of the surface remains attached to the shaft.",
+          "Rebuild the surface; often a buttress."
+        ],
+        [
+          "C",
+          "Complete articular: the surface is entirely separated from the shaft.",
+          "Anatomical and absolute at the surface; metaphyseal bridging."
+        ]
+      ]
+    },
+    {
+      "titulo": "The same letter says opposite things",
+      "texto": "A diaphyseal B is a wedge; an articular B is a partial fracture of the surface; a malleolar B is a fibular line at the level of the syndesmosis; a pelvic ring B is rotational instability. Always read the letter in its context."
+    },
+    {
+      "titulo": "Map of bones and segments",
+      "encabezados": [
+        "No.",
+        "Bone",
+        "Segments"
+      ],
+      "filas": [
+        [
+          "1",
+          "Humerus",
+          "11 proximal · 12 shaft · 13 distal"
+        ],
+        [
+          "2",
+          "Ulna and radius",
+          "21 proximal · 22 shaft · 23 distal"
+        ],
+        [
+          "3",
+          "Femur",
+          "31 proximal · 32 shaft · 33 distal"
+        ],
+        [
+          "4",
+          "Tibia and fibula",
+          "41 proximal · 42 shaft · 43 distal · 44 malleoli"
+        ],
+        [
+          "6",
+          "Pelvis",
+          "61 pelvic ring · 62 acetabulum"
+        ]
+      ]
+    },
+    {
+      "titulo": "Satellite classifications — the trunk is the AO/OTA",
+      "encabezados": [
+        "Region",
+        "Satellite",
+        "What it adds"
+      ],
+      "filas": [
+        [
+          "Proximal humerus",
+          "Neer",
+          "Number of displaced «parts»; vascular prognosis."
+        ],
+        [
+          "Radial head",
+          "Modified Mason",
+          "Displacement, block, comminution; ORIF versus replacement."
+        ],
+        [
+          "Femoral neck",
+          "Garden / Pauwels",
+          "Displacement and verticality of the line; risk of necrosis."
+        ],
+        [
+          "Tibial plateau",
+          "Schatzker (mod. Kfuri-Luo)",
+          "Pattern of depression and split; approach and support."
+        ],
+        [
+          "Ankle",
+          "Weber / Lauge-Hansen",
+          "Level of the fibula and mechanism; syndesmotic stability."
+        ],
+        [
+          "Calcaneus",
+          "Sanders",
+          "Articular comminution on CT; prognosis."
+        ],
+        [
+          "Scaphoid",
+          "Herbert / Russe",
+          "Stability and location; risk of non-union."
+        ],
+        [
+          "Monteggia",
+          "Bado",
+          "Direction of the radial dislocation."
+        ],
+        [
+          "Pelvis",
+          "Young-Burgess / Tile",
+          "Mechanism and stability of the ring."
+        ],
+        [
+          "Acetabulum",
+          "Letournel-Judet",
+          "Columns and walls; approach."
+        ]
+      ]
+    },
+    {
+      "titulo": "The four traps of classification",
+      "items": [
+        "Inter- and intraobserver variability: agreement is good for the type (A/B/C) and falls in the fine subgroups. Useful for strategy, not for millimetre distinctions.",
+        "Believing you cannot classify without CT: the radiograph classifies; CT refines. In articular and periarticular fractures it is worth complementing, but it is not a requirement.",
+        "Classifying on a poor image: inadequate or badly centred projections lead to error. Insist on the right ones, and on the contralateral side when it helps.",
+        "Classifying without assessing the patient: the biggest trap. A perfect bony label on a badly assessed host leads to failure. Always go back to Step 1."
+      ]
+    },
+    {
+      "titulo": "Not operating is also a decision of the method",
+      "texto": "The book is about solving any fracture, not about operating on any fracture. Many fractures — a large share of proximal and shaft humerus, clavicle, ribs, stable pelvic ring, undisplaced fractures — heal better with a brace and rehabilitation. The method is worked through just the same: the best stability may be that of a splint and the best approach, none at all."
+    },
+    {
+      "titulo": "Arthroplasty as primary treatment",
+      "texto": "In certain settings it is not a salvage plan: the displaced subcapital femoral neck fracture in the elderly, or the comminuted, unreconstructable articular fracture of the distal or proximal humerus in very osteoporotic bone. Recognising it in Step 2 avoids internal fixations that were condemned from the start."
+    }
+  ],
+  "alertas": [
+    {
+      "id": "volver-paso-1",
+      "titulo": "The biggest trap: classifying without assessing",
+      "texto": "A perfect bony label on a badly assessed host or badly assessed soft tissues leads to failure. If you have not completed Step 1, go back before going on."
+    },
+    {
+      "id": "letra-contexto",
+      "titulo": "Read the letter in its context",
+      "texto": "You are in an articular segment: here A means extra-articular, not «simple»."
+    },
+    {
+      "id": "sin-b1-c1",
+      "titulo": "In the shaft, B1 and C1 no longer exist",
+      "texto": "The 2018 revision removed the spiral wedge (B1) and the complex spiral (C1). The diaphyseal groups are A1, A2, A3, B2, B3, C2 and C3."
+    },
+    {
+      "id": "escapula-letra",
+      "titulo": "In the scapula the letter is the location",
+      "texto": "14A is the process, 14B the body and 14F the glenoid fossa — with F, not with C. The glenoid also has a group 0 (14F0) for the extra-articular neck."
+    },
+    {
+      "id": "identificador",
+      "titulo": "This bone carries an identifier",
+      "texto": "The compendium leaves a gap between dots for the number of the ray, digit, rib or vertebra. Without filling it in, the code is incomplete."
+    },
+    {
+      "id": "tc-articular",
+      "titulo": "Articular: CT refines and frequently reclassifies",
+      "texto": "In the plateau, pilon, calcaneus, distal humerus, distal radius and acetabulum, CT often changes the type, reveals key fragments and guides the approach. It is not a requirement for classifying, but without it the injury is underestimated."
+    },
+    {
+      "id": "sindesmosis",
+      "titulo": "Check the syndesmosis",
+      "texto": "In the transsyndesmotic line the syndesmotic injury is variable, and in the suprasyndesmotic one it is constant. Its malreduction is the key complication of the ankle."
+    },
+    {
+      "id": "pared-lateral",
+      "titulo": "Incompetent lateral wall",
+      "texto": "Group 31A2 incorporates the lateral wall threshold of ≤ 20.5 mm. With an incompetent lateral wall the DHS fails: the indication is a cephalomedullary nail."
+    },
+    {
+      "id": "subgrupos-finos",
+      "titulo": "Reliability: good for the type, lower for the subgroup",
+      "texto": "Interobserver agreement is good for the letter and falls in groups and subgroups. It serves to decide the strategy, not to argue over millimetre distinctions."
+    }
+  ],
+  "evidencia": [
+    {
+      "afirmacion": "Interobserver agreement for the AO/OTA is good for the type (A/B/C) and falls in the fine subgroups: useful for strategy, not for millimetre distinctions."
+    },
+    {
+      "afirmacion": "In the plateau, pilon, calcaneus and distal humerus, CT frequently changes the type and reveals key fragments that plain radiographs do not show."
+    }
+  ],
+  "autoevaluacion": [
+    {
+      "pregunta": "Why is it said that «classifying well is starting to plan»?",
+      "opciones": [
+        "Because it allows the case to be coded for the notes",
+        "Because the right label already anticipates stability, reduction, principle, approach and complications",
+        "Because it is an administrative requirement before operating",
+        "Because it allows series to be compared between hospitals"
+      ],
+      "explicacion": "If the classification does not suggest a course of action, either the classification or the information is missing. Comparing series is an added benefit, not the clinical reason."
+    },
+    {
+      "pregunta": "When is it worth complementing an articular classification with CT?",
+      "opciones": [
+        "Always: without CT you cannot classify",
+        "Never: CT belongs to the postoperative work-up",
+        "In articular and periarticular fractures, because it refines and frequently reclassifies",
+        "Only if the radiograph is poorly taken"
+      ],
+      "explicacion": "The classification is established with a radiograph. CT adds detail in articular and periarticular fractures — plateau, pilon, calcaneus, distal humerus, distal radius, acetabulum — showing fragments and depressions the radiograph underestimates."
+    },
+    {
+      "pregunta": "A fracture coded 42-B. What does the letter B mean here?",
+      "opciones": [
+        "Partial articular fracture of the proximal tibia",
+        "Wedge fracture of the tibial shaft",
+        "A fibular line at the level of the syndesmosis",
+        "Rotational instability of the ring"
+      ],
+      "explicacion": "4 = tibia and fibula, 2 = shaft. In the shaft, B is the wedge fracture: there is a third fragment but, after reduction, contact between the main ones persists."
+    },
+    {
+      "pregunta": "And in a 41-B, what does the same letter mean?",
+      "opciones": [
+        "Wedge fracture of the metaphysis",
+        "Extra-articular fracture of the proximal tibia",
+        "Partial articular fracture: part of the surface remains attached to the shaft",
+        "Complete articular fracture"
+      ],
+      "explicacion": "Same bone, different segment, different meaning. In an articular segment, B is the partial articular fracture, which usually demands a buttress principle."
+    },
+    {
+      "pregunta": "A complete articular fracture (type C) anticipates which combination in the following steps?",
+      "opciones": [
+        "Relative stability throughout the construct and functional reduction",
+        "Anatomical reduction and absolute stability at the surface, with metaphyseal bridging",
+        "Pure bridging with an intramedullary nail",
+        "Interfragmentary compression of every fragment"
+      ],
+      "explicacion": "The articular surface demands anatomical and absolute; the comminuted metaphysis is bridged. It is the classic example of combining two principles in one construct."
+    },
+    {
+      "pregunta": "In a diaphyseal wedge fracture, what is the commonest error?",
+      "opciones": [
+        "Using a nail instead of a plate",
+        "Chasing and stripping the wedge in order to reduce it anatomically",
+        "Not requesting CT before operating",
+        "Classifying it as type C"
+      ],
+      "explicacion": "The wedge is reduced if it can be done without devitalising it. Chasing it at the cost of its blood supply turns a mechanical problem into a biological one."
+    },
+    {
+      "pregunta": "What is the BIGGEST trap of classification?",
+      "opciones": [
+        "Interobserver variability in the subgroups",
+        "Not having CT available",
+        "Classifying without having assessed the patient and the soft tissues",
+        "Using a satellite classification instead of the AO/OTA"
+      ],
+      "explicacion": "A perfect bony label on a badly assessed host leads to failure. The classification does not replace Step 1."
+    },
+    {
+      "pregunta": "An elderly patient with a displaced subcapital femoral neck fracture. How does the method read it in Step 2?",
+      "opciones": [
+        "As an indication for fixation with cannulated screws",
+        "As an indication for primary arthroplasty, not for salvage",
+        "As a fracture for non-operative treatment",
+        "As a fracture that does not need classifying"
+      ],
+      "explicacion": "Recognising arthroplasty as primary treatment in Step 2 avoids internal fixations condemned from the start. In the active, independent patient, total hip replacement is the choice."
+    },
+    {
+      "pregunta": "What does a satellite classification add that the AO/OTA does not capture?",
+      "opciones": [
+        "It replaces the AO/OTA in that region",
+        "It captures regional nuances that change the treatment of that particular bone",
+        "It is only useful for publishing series",
+        "It allows you to do without CT"
+      ],
+      "explicacion": "The AO/OTA is the trunk and the satellites orbit around it: Neer adds the vascular prognosis, Letournel-Judet the approach, Weber the syndesmotic stability. They do not compete: they complement."
+    },
+    {
+      "pregunta": "Non-operative treatment of a humeral shaft fracture. Which statement is correct?",
+      "opciones": [
+        "It means the method does not apply to this case",
+        "It is the failure of the method in the face of an unsolvable fracture",
+        "It is a legitimate outcome of the method: the same steps are worked through",
+        "It is only accepted if the patient refuses surgery"
+      ],
+      "explicacion": "The method is about solving, not about operating. The best stability may be that of a brace and the best approach, none at all. What does not change is the duty to define follow-up and the threshold for conversion."
+    }
+  ]
+}

@@ -63,7 +63,11 @@ def cargar():
         num, lang = f_tr.stem.split("-", 1)
         cuerpo = json.loads(f_tr.read_text(encoding="utf-8"))
         cuerpo.pop("_nota", None)
-        trad.setdefault(lang, {})[str(int(num))] = cuerpo
+        # Se FUNDE, no se sustituye: el Paso 2 tiene dos fuentes —el vocabulario
+        # AO que genera un script, y su prosa traducida a mano— y ninguna debe
+        # borrar a la otra.
+        destino = trad.setdefault(lang, {}).setdefault(str(int(num)), {})
+        destino.update(cuerpo)
     return pasos, refs, codigos, casos, idiomas, trad
 
 

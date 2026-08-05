@@ -1,0 +1,494 @@
+{
+  "_nota": "Inglés del Paso 1 · La evaluación inicial. Calco parcial. Las siglas de estrategia (ETC, EAC, DCO, SDS, MuST) ya son inglesas y se dejan tal cual; Tscherne y Gustilo-Anderson conservan su nombre. «Índice de shock» es shock index, y «déficit de base» base deficit.",
+  "titulo": "The initial assessment",
+  "subtitulo": "The patient first, not the radiograph",
+  "preguntaClave": "Is this patient — and this skin — in a fit state to be operated on, and when?",
+  "sintesis": "The patient first. The physiological category (stable, borderline, unstable, in extremis) determines the surgical strategy (ETC, EAC, DCO, MuST); the soft tissues (Tscherne/Gustilo, with mechanism and contamination as reclassifiers) determine what can be done and through where. Above all of it, compartment syndrome: if there are suggestive or established signs, decompressive fasciotomy comes before any other part of the plan. The remaining steps are executed on that foundation.",
+  "objetivos": [
+    "Classify the polytrauma patient as stable, borderline, unstable or in extremis using objective physiological variables",
+    "Choose the surgical strategy that matches each category (ETC · EAC · DCO · SDS · MuST)",
+    "Grade the soft tissues with Tscherne (closed) and Gustilo-Anderson (open), including the IIIA/IIIB/IIIC breakdown",
+    "Recognise that macroscopic contamination or contact with organic material define type III on their own",
+    "Recognise compartment syndrome before the late signs appear"
+  ],
+
+  "decisiones": [
+    {
+      "id": "estado-fisiologico",
+      "pregunta": "Which physiological category is the patient in?",
+      "ayuda": "The patient's physiology — not the clock — dictates the surgical strategy. The values are assessed dynamically and together, never as isolated single readings.",
+      "opciones": [
+        { "id": "estable", "etiqueta": "Stable", "criterios": [
+          "SBP > 100 mmHg · shock index < 0.9 · HR < 100",
+          "Lactate < 2 mmol/L · base deficit ≥ −5 · pH > 7.35",
+          "INR < 1.2 · platelets > 150,000 · fibrinogen > 200",
+          "Core temperature > 36 °C · Hb > 10 · P/F > 300 · GCS 14–15",
+          "No vasopressors · 0–2 units of packed red cells"
+        ]},
+        { "id": "borderline", "etiqueta": "Borderline", "criterios": [
+          "SBP 90–100 · shock index 0.9–1.2 · HR 100–120",
+          "Lactate 2–4 · base deficit −5 to −10 · pH 7.25–7.35",
+          "INR 1.2–1.5 · platelets 100–150,000 · fibrinogen 150–200",
+          "Core temperature 33–36 °C · Hb 8–10 · P/F 200–300 · GCS 9–13",
+          "Low-dose vasopressors · 3–10 units of packed red cells"
+        ]},
+        { "id": "inestable", "etiqueta": "Unstable", "criterios": [
+          "SBP < 90 · shock index > 1.2 · HR 120–140",
+          "Lactate > 4 · base deficit < −10 · pH < 7.25",
+          "INR > 1.5 · platelets < 100,000 · fibrinogen < 150",
+          "Core temperature < 33 °C · Hb < 8 · P/F < 200 · GCS 6–8",
+          "Medium to high-dose vasopressors · > 10 units of packed red cells"
+        ]},
+        { "id": "in-extremis", "etiqueta": "In extremis", "criterios": [
+          "≥ 5 of the 7 in extremis criteria → mortality > 50%",
+          "SBP < 90 with no response · vasopressor dependence · massive transfusion protocol",
+          "Lactate > 4 with no clearance · pH < 7.20 · base deficit < −14",
+          "Prothrombin activity ≤ 25% · platelets < 50,000 (DIC) · refractory coagulopathy",
+          "Core temperature < 32 °C · refractory anuria"
+        ]}
+      ]
+    },
+    {
+      "id": "estrategia",
+      "pregunta": "Which surgical strategy fits?",
+      "ayuda": "It follows from the physiological category. The engine suggests it and warns you if you choose another.",
+      "opciones": [
+        { "id": "etc", "etiqueta": "ETC · Early Total Care", "criterios": [
+          "Stable patient",
+          "Definitive fixation of every fracture within 24 h"
+        ]},
+        { "id": "eac", "etiqueta": "EAC · Early Appropriate Care", "criterios": [
+          "Borderline patient who responds to resuscitation",
+          "Definitive fixation at 24–36 h if the parameters normalise"
+        ]},
+        { "id": "dco", "etiqueta": "DCO · Damage Control Orthopaedics", "criterios": [
+          "Unstable patient",
+          "Phase 1 within 24 h: external fixator + ICU",
+          "Phase 2: conversion on day 5–10"
+        ]},
+        { "id": "must", "etiqueta": "MuST · Musculoskeletal Temporary Surgery", "criterios": [
+          "In extremis",
+          "Life-saving surgery only: haemorrhage control, fasciotomies, minimal provisional fixation",
+          "No intramedullary nailing and no definitive surgery"
+        ]}
+      ]
+    },
+    {
+      "id": "partes-blandas",
+      "pregunta": "What is the state of the soft tissues?",
+      "ayuda": "An open fracture is graded AFTER debridement, not in the emergency department: the skin wound underestimates the deep injury.",
+      "opciones": [
+        { "id": "cerrada-tscherne-0-1", "etiqueta": "Closed · Tscherne 0–I", "criterios": [
+          "Low energy",
+          "Minimal injury or superficial abrasion from pressure from within"
+        ]},
+        { "id": "cerrada-tscherne-2-3", "etiqueta": "Closed · Tscherne II–III", "criterios": [
+          "Significant muscle contusion",
+          "Closed degloving",
+          "Blisters or tense swelling",
+          "Arterial disruption or established compartment syndrome (III)"
+        ]},
+        { "id": "abierta-gustilo-1", "etiqueta": "Open · Gustilo I", "criterios": [
+          "Wound < 1 cm",
+          "Clean, from inside out",
+          "Minimal muscle contusion · low energy"
+        ]},
+        { "id": "abierta-gustilo-2", "etiqueta": "Open · Gustilo II", "criterios": [
+          "Wound 1–10 cm",
+          "Moderate soft-tissue damage",
+          "No extensive avulsion or flaps"
+        ]},
+        { "id": "abierta-gustilo-3a", "etiqueta": "Open · Gustilo IIIA", "criterios": [
+          "Extensive damage BUT adequate bone cover by soft tissue",
+          "Segmental fractures, gunshot wounds, high energy — type III whatever the size of the wound",
+          "No flap required"
+        ]},
+        { "id": "abierta-gustilo-3b", "etiqueta": "Open · Gustilo IIIB", "criterios": [
+          "Periosteal stripping and bone exposure",
+          "REQUIRES a flap for cover",
+          "Massive contamination is usual"
+        ]},
+        { "id": "abierta-gustilo-3c", "etiqueta": "Open · Gustilo IIIC", "criterios": [
+          "Arterial injury REQUIRING repair to save the limb",
+          "Any wound size",
+          "Vascular emergency"
+        ]}
+      ]
+    },
+    {
+      "id": "compartimental",
+      "pregunta": "Are there signs of compartment syndrome?",
+      "ayuda": "It is ALWAYS asked, alongside the soft-tissue grade and independently of it: an open fracture does not decompress the compartments. Suspicion is clinical; pressure is measured only when the clinical picture cannot be assessed.",
+      "opciones": [
+        { "id": "sin-datos", "etiqueta": "No signs", "criterios": [
+          "Pain proportionate to the injury and controlled with the usual analgesia",
+          "Compressible compartments",
+          "No pain on passive stretch",
+          "Patient assessable clinically"
+        ]},
+        { "id": "datos-sugestivos", "etiqueta": "Suggestive signs (clinical suspicion)", "criterios": [
+          "Pain out of proportion or increasing despite analgesia",
+          "Pain on passive stretch of the toes or fingers",
+          "Compartment tight and tense on palpation",
+          "Rising analgesic requirement (escalating opioids)",
+          "Patient not assessable (obtunded, intubated, regional block): measure pressures — ΔP = diastolic BP − compartment pressure < 30 mmHg is an indication"
+        ]},
+        { "id": "evidente-establecido", "etiqueta": "Established / obvious", "criterios": [
+          "Wooden-hard compartment with an established neurological deficit",
+          "Paraesthesia, paresis or pallor present (LATE signs)",
+          "ΔP < 30 mmHg confirmed",
+          "Do not wait for further studies: the diagnosis is already made"
+        ]}
+      ]
+    },
+    {
+      "id": "contaminacion",
+      "pregunta": "How contaminated is the wound?",
+      "ayuda": "Contamination reclassifies: certain mechanisms are type III by definition, whatever the size of the wound.",
+      "opciones": [
+        { "id": "limpia", "etiqueta": "Clean", "criterios": [
+          "Wound from inside out",
+          "No foreign bodies or soil",
+          "Urban setting, low energy"
+        ]},
+        { "id": "proyectil-arma-fuego", "etiqueta": "Gunshot wound", "criterios": [
+          "Type III by definition, whatever the size of the entry wound",
+          "Cavitation and deep devitalisation from dissipation of kinetic energy",
+          "Clothing and contaminants dragged into the track",
+          "Explore the whole track, not just the holes"
+        ]},
+        { "id": "contaminacion-macroscopica", "etiqueta": "Macroscopic contamination", "criterios": [
+          "Soil, sand, grit or visible foreign bodies",
+          "It requires serial debridement",
+          "Consider local antibiotics"
+        ]},
+        { "id": "material-organico", "etiqueta": "Contact with organic material", "criterios": [
+          "Farmyard, barn, manure or faecal matter",
+          "Standing water, fresh or salt",
+          "Bite or plant material"
+        ]}
+      ]
+    }
+  ],
+
+  "derivados": [
+    {
+      "id": "momento",
+      "titulo": "Timing of the definitive surgery",
+      "reglas": [
+        { "texto": "Definitive fixation of every fracture within 24 h." },
+        { "texto": "Definitive fixation at 24–36 h if the parameters normalise. If they plateau or worsen, escalate to DCO." },
+        { "texto": "Phase 1 within 24 h: external fixator and ICU. Definitive conversion between day 5 and day 10." },
+        { "texto": "Life-saving surgery only. Definitive conversion deferred to day 5–10 or later, if the patient survives and normalises." },
+        { "texto": "Decompressive fasciotomy comes before all of the above; definitive fixation is subordinate to it." },
+        { "texto": "Arterial repair rules: rapid stabilisation to protect it, and vigilance for compartment syndrome after reperfusion." },
+        { "texto": "Early flap cover (fix and flap); the definitive procedure is planned together with the plastic surgery team." },
+        { "texto": "Serial debridement before any definitive step; do not close primarily." },
+        { "texto": "Also conditioned by the soft-tissue window: wait for the wrinkle sign and for the blisters to settle." }
+      ]
+    }
+  ],
+
+  "esencial": [
+    { "texto": "The fracture never exists in a vacuum. The method begins with the patient: what physiological state they are in, how the soft tissues are, and when it is best to operate. It is the ground on which most technically well-fixed fractures end in failure." },
+    { "titulo": "The rule of Step 1", "texto": "If the skin or the patient is not ready, the best implant is the wrong one. The patient's physiology — not the clock — dictates the surgical strategy." },
+    { "titulo": "Physiological variables · A. Haemodynamic",
+      "encabezados": ["Parameter", "Stable", "Borderline", "Unstable", "In extremis"],
+      "filas": [
+        ["SBP (mmHg)", "> 100", "90–100", "< 90", "< 90 with no response"],
+        ["Shock index (HR/SBP)", "< 0.9", "0.9–1.2", "> 1.2", "> 1.0 + multiparametric"],
+        ["Heart rate (bpm)", "< 100", "100–120", "120–140", "> 140 or bradycardia"],
+        ["Vasopressors", "Not required", "Low dose", "Medium to high dose", "Dependence"],
+        ["Packed red cells (24 h)", "0–2 U", "3–10 U", "> 10 U", "Massive transfusion protocol"],
+        ["Urine output (mL/kg/h)", "> 0.5", "0.3–0.5", "< 0.3", "Anuria / refractory oliguria"]
+      ]},
+    { "titulo": "Physiological variables · B. Metabolic / blood gases",
+      "encabezados": ["Parameter", "Stable", "Borderline", "Unstable", "In extremis"],
+      "filas": [
+        ["Lactate (mmol/L)", "< 2", "2–4", "> 4", "> 4 with no clearance"],
+        ["Lactate clearance (%/h)", "Already normal", "> 10–20 %/h → responding", "< 10 %/h", "No fall, or rising"],
+        ["Base deficit (mmol/L)", "≥ −5", "−5 to −10", "< −10", "< −14"],
+        ["Arterial pH", "> 7.35", "7.25–7.35", "< 7.25", "< 7.20"],
+        ["PaCO₂ (mmHg)", "35–45", "45–50", "> 50", "> 50 (IE criterion)"],
+        ["PaO₂/FiO₂ (Horowitz)", "> 300", "200–300", "< 200", "< 300 (IE criterion)"]
+      ]},
+    { "titulo": "Physiological variables · C. Coagulation",
+      "encabezados": ["Parameter", "Stable", "Borderline", "Unstable", "In extremis"],
+      "filas": [
+        ["INR", "< 1.2", "1.2–1.5", "> 1.5", "> 1.5 + consumption"],
+        ["Prothrombin activity", "> 70%", "50–70%", "< 50%", "≤ 25% → mortality > 50%"],
+        ["Platelets (× 10³/µL)", "> 150", "100–150", "< 100", "< 50 (DIC)"],
+        ["Fibrinogen (mg/dL)", "> 200", "150–200", "< 150", "< 100"],
+        ["ROTEM / TEG", "Normal", "Mild to moderate abnormality", "Hypofibrinolysis / DIC", "Refractory coagulopathy"]
+      ]},
+    { "titulo": "Physiological variables · D–F. Temperature, oxygenation and neurological",
+      "encabezados": ["Parameter", "Stable", "Borderline", "Unstable", "In extremis"],
+      "filas": [
+        ["Core temperature (°C)", "> 36", "33–36", "< 33", "< 32"],
+        ["Haemoglobin (g/dL)", "> 10", "8–10", "< 8", "< 9.5 + multiparametric"],
+        ["Arterial SaO₂ (%)", "> 95", "90–95", "< 90", "< 90 refractory"],
+        ["GCS", "14–15", "9–13", "6–8", "≤ 8 + unresolvable injury"]
+      ]},
+    { "titulo": "In extremis score — 7 criteria", "texto": "PaCO₂ > 50 · Hb < 9.5 · pH < 7.2 · lactate > 4 · base excess < −6 · shock index > 1 · P/F < 300. With ≥ 5 of 7 positive, mortality exceeds 50%." },
+    { "titulo": "Resuscitation endpoints — clearance for definitive surgery",
+      "encabezados": ["Situation", "Criteria and conduct"],
+      "filas": [
+        ["ETC / EAC authorised", "Lactate ≤ 4 (ideally < 2) · base deficit ≥ −5.5 · INR < 1.5 · temperature > 35 °C · SBP > 90 without vasopressors · lactate clearance > 10 %/h · platelets > 100,000 · Hb > 8. Reassess within 24–36 h. There is no fixed time window: physiological normalisation is the only valid criterion."],
+        ["Borderline → EAC / SDS / DCO", "If the parameters improve steadily, definitive fixation with close monitoring. If they plateau or worsen, escalate to DCO. Independent aggravating factors: severe head injury (GCS ≤ 8), bilateral pulmonary contusion (P/F < 200), bilateral femoral fracture, ISS > 40, vasopressors, age > 65, frailty."],
+        ["In extremis → MuST / minimal DCO", "Life-saving surgery only: haemorrhage control, fasciotomies if there is compartment syndrome, minimal provisional fixation. No intramedullary nailing and no definitive surgery. Conversion deferred to day 5–10 if the patient survives and normalises."]
+      ]},
+    { "titulo": "Lactate clearance — the dynamics of the response",
+      "encabezados": ["Clearance", "Interpretation", "Decision"],
+      "filas": [
+        ["> 20 %/h", "Excellent response to resuscitation", "Proceed safely to ETC/EAC"],
+        ["10–20 %/h", "Partial response — borderline responder", "Individualised EAC, close monitoring"],
+        ["< 10 %/h", "Inadequate response", "DCO — defer the definitive surgery"],
+        ["No fall, or rising", "Failed resuscitation / active bleeding", "MuST — urgent haemorrhage control"]
+      ]},
+    { "titulo": "Surgical strategies — for whom and when",
+      "encabezados": ["Strategy", "Patient", "Core idea", "Timing"],
+      "filas": [
+        ["ETC · Early Total Care", "Stable", "Definitive fixation of every fracture", "< 24 h, all definitive"],
+        ["EAC · Early Appropriate Care", "Borderline responder", "Early definitive fixation if the physiology allows it", "24–36 h if the parameters normalise"],
+        ["DCO · Damage Control", "Unstable / in extremis", "Minimal surgery (external fixator) + ICU + deferred conversion", "Phase 1 < 24 h · Phase 2 day 5–10"],
+        ["SDS · Safe Definitive Surgery", "Any category", "Definitive surgery only when it is safe; it integrates the team's resources and experience", "No fixed window"],
+        ["MuST · Musculoskeletal Temporary Surgery", "In extremis / unresponsive unstable", "Life-saving surgery only; no definitive fixation", "Phase 1 immediate and minimal · definitive day 5–10+"]
+      ]},
+    { "titulo": "The second hit", "texto": "Trauma releases DAMPs and activates complement: SIRS proportional to the magnitude of the injury, plus the lethal triad (coagulopathy + hypothermia + acidosis). Operating definitively on a physiologically compromised patient amplifies the SIRS towards ARDS and multi-organ failure. Reamed intramedullary nailing generates the largest second hit (EPOFF, Pape 2003)." },
+    { "titulo": "The lethal triad", "texto": "Coagulopathy (INR > 1.5 · platelets < 100,000 · fibrinogen < 150) + hypothermia (temperature < 33 °C, which worsens the coagulopathy and causes dysrhythmias) + acidosis (pH < 7.25 · base deficit < −10 · lactate > 4, which inhibits the clotting enzymes). Active prevention: warming blankets, warmed fluids, a warm theatre." },
+    { "titulo": "Tscherne — closed fractures",
+      "encabezados": ["Grade", "Soft-tissue injury"],
+      "filas": [
+        ["0", "Low energy; minimal or no injury. Simple fracture line."],
+        ["I", "Abrasion or superficial contusion from pressure of a fragment from within."],
+        ["II", "Significant muscle contusion; deep contaminated abrasion; moderate to high energy."],
+        ["III", "Extensive crushing, closed degloving, arterial disruption or compartment syndrome."]
+      ]},
+    { "titulo": "Gustilo-Anderson — open fractures (grade AFTER debridement)",
+      "encabezados": ["Type", "Wound", "Features", "Implication"],
+      "filas": [
+        ["I", "< 1 cm", "Clean, from inside out; minimal contusion; low energy", "Antibiotics + debridement; fixation according to the fracture"],
+        ["II", "1–10 cm", "Moderate damage; no extensive avulsion or flaps", "Antibiotics + debridement; consider definitive fixation"],
+        ["IIIA", "> 10 cm", "Extensive damage BUT adequate bone cover; segmental, gunshot", "No flap required; fixation according to physiology"],
+        ["IIIB", "> 10 cm", "Periosteal stripping and bone exposure; massive contamination", "REQUIRES a flap; early fix and flap"],
+        ["IIIC", "Any", "Arterial injury requiring repair to save the limb", "Vascular emergency; joint team"]
+      ]},
+    { "titulo": "Mechanism and contamination reclassify: type III by definition", "texto": "Regardless of the size of the wound, these are type III: gunshot wounds, macroscopic contamination (soil, sand, foreign bodies), contact with organic material (farmyard, barn, manure, faecal matter), standing water, segmental fractures and those presenting late. A 5 mm entry wound is not a Gustilo I if a bullet caused it: the kinetic energy is dissipated along the track and the real damage is deep. Farmyard settings and manure add the risk of clostridia: serial debridement and broadened antibiotic cover." },
+    { "titulo": "Mechanisms that define type III regardless of wound size",
+      "encabezados": ["Mechanism", "Why it reclassifies"],
+      "filas": [
+        ["Gunshot wound", "The kinetic energy is dissipated along the track: cavitation, deep devitalisation and contaminants dragged in. The skin wound does not reflect the damage."],
+        ["Segmental fracture", "High energy and devascularisation of the intermediate fragment."],
+        ["Farmyard, barn, manure", "Massive organic contamination; risk of clostridia."],
+        ["Standing water, fresh or salt", "Atypical flora (Aeromonas, Vibrio); broadened antibiotic cover."],
+        ["Macroscopic contamination (soil, sand, foreign bodies)", "It demands serial debridement; the bed is not left clean in a single sitting."],
+        ["Crush or degloving", "Extensive devitalisation even when the skin looks intact."],
+        ["Long delay before treatment", "Established colonisation."]
+      ]},
+    { "titulo": "Open fracture — the five steps",
+      "items": [
+        "Early antibiotics: time to antibiotics weighs more than time to theatre.",
+        "Debridement and lavage: the viability of the bed defines the result; serial if there is macroscopic or organic contamination.",
+        "Stabilise and cover (fix and flap): early flap in IIIB.",
+        "Tetanus prophylaxis according to immunisation status and degree of contamination.",
+        "Local antibiotics (beads, sponges, impregnated cement) as a complement to systemic ones."
+      ]},
+    { "titulo": "Compartment syndrome — the diagnosis is clinical and there is only one course of action", "texto": "Suggestive or established signs demand immediate decompressive fasciotomy. There is no intermediate course: not observation, not elevating the limb, not waiting for an MRI. Remove every circumferential dressing and the cast down to skin while theatre is being prepared. In the patient who cannot be assessed, ΔP (diastolic pressure minus compartment pressure) < 30 mmHg confirms the indication; in the assessable patient, the clinical picture is enough and measuring pressures must not delay surgery." },
+    { "titulo": "Compartment syndrome — the sequence of signs",
+      "encabezados": ["Timing", "Sign", "Diagnostic value"],
+      "filas": [
+        ["Early", "Pain out of proportion and increasing despite analgesia", "The earliest and most sensitive"],
+        ["Early", "Pain on passive stretch of the digits", "The most reliable in the conscious patient"],
+        ["Early", "Compartment tense on palpation", "It supports suspicion; a soft compartment does not exclude it"],
+        ["Early", "Escalating opioid requirement", "A warning sign that is frequently ignored"],
+        ["Late", "Paraesthesia", "Nerve damage has already begun"],
+        ["Late", "Pallor and coolness", "Perfusion compromised"],
+        ["Late", "Paralysis", "Established muscle damage"],
+        ["Late", "Absent pulse", "The last to appear: the limb is usually lost"]
+      ]},
+    { "titulo": "Fasciotomy — principles of execution",
+      "items": [
+        "Decompress EVERY compartment of the segment: in the leg, four through a two-incision approach (anterolateral and posteromedial).",
+        "Long incisions: a short fasciotomy is an incomplete fasciotomy.",
+        "Assess muscle viability with the 4 Cs — colour, consistency, contractility and capacity to bleed.",
+        "Do not close primarily: delayed progressive closure or a graft once the swelling settles.",
+        "Definitive fixation is subordinate to the decompression: temporary stabilisation if needed.",
+        "Watch for rhabdomyolysis and renal function after reperfusion."
+      ]},
+    { "titulo": "The soft-tissue window", "texto": "In the pilon, calcaneus, tibial plateau and ankle, definitive surgery is deferred until the swelling settles. The return of the skin creases (wrinkle sign) and the resolution of the blisters signal that the skin will tolerate the incision. In the meantime: spanning external fixator or traction." }
+  ],
+
+  "alertas": [
+    { "id": "compartimental-vigilancia", "titulo": "Continuous vigilance for compartment syndrome",
+      "texto": "Suspicion is clinical and it can arise at any point in the course: pain out of proportion and pain on passive stretch are the early, reliable signs. Paraesthesia, pallor, paralysis and absent pulse are late. In the patient who cannot be assessed, measure pressures. Reassess serially." },
+    { "id": "in-extremis-mortalidad", "titulo": "In extremis — mortality > 50%",
+      "texto": "With ≥ 5 of 7 criteria positive, life-saving surgery only: haemorrhage control, fasciotomies if there is compartment syndrome and minimal provisional fixation. No intramedullary nailing. Definitive conversion is deferred to day 5–10 if the patient survives and normalises." },
+    { "id": "borderline-reevaluar", "titulo": "Borderline: the decision is taken on the trend, not on a single reading",
+      "texto": "If the parameters improve steadily, definitive fixation with close monitoring. If they plateau or worsen, escalate to DCO. A lactate clearance below 10 %/h obliges you to defer." },
+    { "id": "clavo-fresado-second-hit", "titulo": "Reamed nailing is the largest second hit",
+      "texto": "In the unstable or in extremis patient, reamed intramedullary nailing amplifies the inflammatory response towards ARDS and multi-organ failure (EPOFF, Pape 2003). External fixator and deferred conversion." },
+    { "id": "fasciotomia-inmediata", "titulo": "Immediate decompressive fasciotomy",
+      "texto": "There are signs of compartment syndrome. Decompression comes before any other part of the plan: remove dressings and circumferential cast down to skin, theatre without delay, decompress every compartment of the segment through long incisions. Definitive fixation is subordinate to the fasciotomy; temporary stabilisation if needed." },
+    { "id": "abierta-no-descomprime", "titulo": "Open does not exclude compartment syndrome",
+      "texto": "An open fracture does NOT necessarily decompress the compartments and does NOT rule out a compartment syndrome. Keep watching." },
+    { "id": "iiic-vascular", "titulo": "Gustilo IIIC — vascular emergency",
+      "texto": "Arterial repair takes priority over definitive fixation. Rapid stabilisation (external fixator) to protect the repair, a joint vascular team, and close vigilance for compartment syndrome after reperfusion." },
+    { "id": "proyectil-tipo-iii", "titulo": "Gunshot wound — type III by definition",
+      "texto": "Do not classify by the size of the hole. Explore the whole track, not just the entry and exit wounds; look for dragged clothing and fragments. Debride the track, give early antibiotics and watch closely for compartment syndrome. A track running close to a vascular axis obliges you to exclude arterial injury." },
+    { "id": "contaminacion-organica", "titulo": "Organic material — risk of clostridia",
+      "texto": "Farmyard settings, manure and faecal matter demand serial debridement, broadened antibiotic cover and a low threshold for returning to theatre. Do not close primarily." },
+    { "id": "lactato-poco-fiable", "titulo": "Lactate is not always reliable",
+      "texto": "Its value loses reliability in the intoxicated, diabetic, chronically renally impaired or elderly patient. In those cases, rely on the base deficit and on the trend, not on an isolated value." },
+    { "id": "fragilidad-centinela", "titulo": "A fragility fracture is a sentinel event",
+      "texto": "It announces the next one. It demands specific anchoring strategies (fixed angle, augmentation) and secondary prevention." },
+    { "id": "rg-astragalo-urgente", "titulo": "Talar dislocation: the reduction does not wait",
+      "texto": "A Hawkins III or IV keeps the talar body extruded, tenting the skin from within with its blood supply interrupted. Urgent reduction is the only thing that can save that skin and some of the blood supply, even if definitive fixation is deferred." },
+    { "id": "rg-pelvis-sangrado", "titulo": "This is the pelvic pattern that bleeds",
+      "texto": "Open-book and vertical shear increase the pelvic volume and tear the presacral venous plexus. Pelvic binder or external fixator from the outset, massive transfusion protocol, and an early decision about packing or angioembolisation. Definitive fixation comes afterwards." }
+  ],
+
+  "reglasCoherencia": [
+    { "id": "r-inestable-no-definitivo", "titulo": "Consistency — definitive strategy in an unstable patient",
+      "mensaje": "You chose a definitive fixation strategy in an unstable patient. The physiology does not authorise it: damage control (DCO) and deferred conversion on day 5–10." },
+    { "id": "r-estrategia-categoria", "titulo": "Consistency — strategy against category",
+      "mensaje": "The strategy chosen is not the one that matches the selected physiological category. Check whether there is an aggravating factor that justifies it." },
+    { "id": "r-in-extremis-clavo", "titulo": "Consistency — definitive surgery in extremis",
+      "mensaje": "In extremis with a definitive strategy: mortality > 50%. MuST only — life-saving surgery." },
+    { "id": "r-compartimental-precede", "titulo": "Priority — the fasciotomy comes first",
+      "mensaje": "Compartment syndrome: decompressive fasciotomy comes before the whole plan. No later step is carried out before decompressing." },
+    { "id": "r-compartimental-in-extremis", "titulo": "Caveat — fasciotomy is authorised within MuST",
+      "mensaje": "Fasciotomy is one of the few operations authorised in the in extremis patient: it is part of life-saving surgery (MuST)." }
+  ],
+
+  "evidencia": [
+    { "afirmacion": "The classification into four physiological categories (stable, borderline, unstable, in extremis) and its thresholds come from a PRISMA systematic review of 1,550 publications." },
+    { "afirmacion": "Reamed intramedullary nailing in the at-risk polytrauma patient amplifies the immunoinflammatory parameters compared with damage control (EPOFF)." },
+    { "afirmacion": "EAC protocol: lactate ≤ 4 mmol/L or base deficit ≥ −5.5 after resuscitation authorises early definitive fixation (n = 1,239)." },
+    { "afirmacion": "In extremis score of 7 criteria: with ≥ 5 positive, mortality exceeds 50%." },
+    { "afirmacion": "Early intravenous antibiotics reduce infection in open fractures; the classic «6 hours» limit for debridement is not well supported." },
+    { "afirmacion": "Salvage versus amputation (LEAP): similar functional results at 2 and 7 years; the MESS does not reliably predict the need to amputate." }
+  ],
+
+  "autoevaluacion": [
+    { "pregunta": "Why is an open fracture graded after debridement and not in the emergency department?",
+      "opciones": [
+        "Because there is not enough time in the emergency department",
+        "Because the skin wound underestimates the deep injury",
+        "Because the grade only matters for the operation note",
+        "Because the classification requires prior radiographs"
+      ],
+      "explicacion": "The true grade — above all IIIB/IIIC — is only known once the debrided bed is seen. The skin lies about what lies beneath." },
+    { "pregunta": "High-energy closed tibial fracture with blisters and tense swelling. Operate definitively today?",
+      "opciones": [
+        "Yes, the sooner the better for healing",
+        "Yes, if the patient is haemodynamically stable",
+        "No: stabilise temporarily and wait for the soft-tissue window",
+        "No: treat definitively without surgery"
+      ],
+      "explicacion": "Step 1 overrules the radiograph. Fixator or cast, and wait for the wrinkle sign." },
+    { "pregunta": "What is the earliest and most reliable sign of compartment syndrome?",
+      "opciones": [
+        "Absent distal pulse",
+        "Pallor and coolness of the limb",
+        "Pain out of proportion and pain on passive stretch",
+        "Paralysis of the compartment musculature"
+      ],
+      "explicacion": "The classic Ps (pallor, paraesthesia, paralysis, pulselessness) are LATE signs. Waiting for them is arriving too late." },
+    { "pregunta": "A patient with a lactate of 3.2 mmol/L falling by 15%/hour after resuscitation. Category and conduct?",
+      "opciones": [
+        "Stable — ETC, definitive fixation of everything within 24 h",
+        "Borderline responder — individualised EAC with close monitoring",
+        "Unstable — DCO mandatory",
+        "In extremis — life-saving surgery only"
+      ],
+      "explicacion": "A lactate of 2–4 with a clearance of 10–20 %/h defines the borderline responder. The decision is taken on the trend, not on the single reading." },
+    { "pregunta": "How many of the 7 in extremis criteria are needed to predict a mortality above 50%?",
+      "opciones": [
+        "3 of 7",
+        "4 of 7",
+        "5 of 7",
+        "7 of 7"
+      ],
+      "explicacion": "The 7 criteria are PaCO₂ > 50, Hb < 9.5, pH < 7.2, lactate > 4, base excess < −6, shock index > 1 and P/F < 300. With ≥ 5 positive, mortality exceeds 50%." },
+    { "pregunta": "Unstable polytrauma patient with a femoral shaft fracture. Which step is expressly contraindicated?",
+      "opciones": [
+        "External fixation of the femur",
+        "Reamed intramedullary nailing",
+        "Temporary skeletal traction",
+        "Fasciotomy if there is compartment syndrome"
+      ],
+      "explicacion": "Reamed nailing generates the largest second hit (EPOFF, Pape 2003): it amplifies the SIRS towards ARDS and multi-organ failure. External fixator and conversion on day 5–10." },
+    { "pregunta": "A 2 cm wound from a tractor accident, with manure in the bed. Which Gustilo type is it?",
+      "opciones": [
+        "Type I, because the wound is under 10 cm",
+        "Type II, from the size and the moderate damage",
+        "Type III, because a farmyard setting and organic contamination reclassify by definition",
+        "Not classifiable until it heals"
+      ],
+      "explicacion": "The size of the wound does not rule when there is macroscopic contamination or organic material. A farmyard setting is type III by definition, with an added risk of clostridia: serial debridement and broadened cover." },
+    { "pregunta": "What distinguishes a Gustilo IIIA from a IIIB?",
+      "opciones": [
+        "The size of the skin wound",
+        "The presence of arterial injury",
+        "That the IIIB requires a flap to cover the exposed bone",
+        "The high-energy mechanism"
+      ],
+      "explicacion": "Both are high energy and > 10 cm. The IIIA keeps adequate bone cover by soft tissue; the IIIB has periosteal stripping and bone exposure that demands a flap (fix and flap). Arterial injury defines the IIIC." },
+    { "pregunta": "In an open fracture, what weighs most on the risk of infection?",
+      "opciones": [
+        "The time elapsed until theatre",
+        "The time elapsed until antibiotics",
+        "The type of implant chosen",
+        "The patient's position on the table"
+      ],
+      "explicacion": "The evidence supports early antibiotics; the classic 6-hour limit to debridement is not well supported." },
+    { "pregunta": "What are the components of the lethal triad?",
+      "opciones": [
+        "Hypotension, tachycardia and oliguria",
+        "Coagulopathy, hypothermia and acidosis",
+        "SIRS, ARDS and multi-organ failure",
+        "Anaemia, hypoxaemia and hypercapnia"
+      ],
+      "explicacion": "Coagulopathy (INR > 1.5, platelets < 100,000, fibrinogen < 150), hypothermia (< 33 °C, which worsens it) and acidosis (pH < 7.25, which inhibits the clotting enzymes). They feed one another." },
+    { "pregunta": "Tibial fracture with increasing pain despite escalating opioids and severe pain on passive stretch of the toes. What do you do?",
+      "opciones": [
+        "Elevate the limb, ice and reassess in 6 hours",
+        "Request an urgent MRI to confirm",
+        "Immediate decompressive fasciotomy",
+        "Increase the analgesia and watch the distal pulses"
+      ],
+      "explicacion": "Pain out of proportion and pain on passive stretch are the early, reliable signs. In the assessable patient the clinical picture is enough: there is no intermediate course and no investigation that should delay decompression. Elevating the limb actually lowers the perfusion pressure." },
+    { "pregunta": "An intubated, sedated patient with a leg fracture. The diastolic pressure is 70 mmHg and the measured compartment pressure 45 mmHg. What does that mean?",
+      "opciones": [
+        "Normal: the compartment pressure is below 50 mmHg",
+        "ΔP = 25 mmHg — an indication for fasciotomy",
+        "Repeat the measurement in 4 hours",
+        "It cannot be judged without the systolic pressure"
+      ],
+      "explicacion": "ΔP = diastolic pressure − compartment pressure = 70 − 45 = 25 mmHg. Below 30 mmHg is an indication for fasciotomy. In the patient who cannot be assessed, the measurement replaces the clinical picture." },
+    { "pregunta": "A 5 mm entry wound from a gunshot to the leg, with a tibial fracture. Which Gustilo type?",
+      "opciones": [
+        "Type I, because the wound is under 1 cm",
+        "Type II, because it is a diaphyseal fracture",
+        "Type III, because a bullet reclassifies by definition",
+        "It depends on the calibre of the bullet"
+      ],
+      "explicacion": "The skin hole does not reflect the damage: the kinetic energy is dissipated along the track, producing cavitation, deep devitalisation and dragged clothing and contaminants. The whole track has to be explored, not just the holes." },
+    { "pregunta": "Which of these is NOT part of a correct fasciotomy?",
+      "opciones": [
+        "Decompressing all four compartments of the leg through a two-incision approach",
+        "Assessing muscle viability with the 4 Cs",
+        "Closing the skin primarily to reduce the risk of infection",
+        "Watching for rhabdomyolysis and renal function after reperfusion"
+      ],
+      "explicacion": "It is not closed primarily: closure is delayed and progressive, or by graft, once the swelling settles. Closing it straight away undoes the decompression. And a short fasciotomy is an incomplete fasciotomy." },
+    { "pregunta": "An 82-year-old patient with a low-energy fracture. What does that mean for the plan beyond the fixation?",
+      "opciones": [
+        "Nothing different: the fracture pattern dictates the treatment",
+        "It is a sentinel event: it demands adapted anchorage and secondary prevention",
+        "It contraindicates surgery on the grounds of chronological age",
+        "It always mandates an arthroplasty"
+      ],
+      "explicacion": "A fragility fracture announces the next one. What matters is physiological age, not chronological, and osteoporotic bone demands specific anchoring strategies." }
+  ]
+}

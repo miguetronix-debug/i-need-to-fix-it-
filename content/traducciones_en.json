@@ -6,136 +6,239 @@
         {
           "id": "hueso",
           "pregunta": "Which bone?",
+          "ayuda": "The first digit of the code. Since 2018 the paired bones are coded separately: radius 2R, ulna 2U, fibula 4F.",
           "opciones": [
             {
               "id": "h-1",
-              "etiqueta": "1 · Humerus"
+              "etiqueta": "1 · Humerus",
+              "criterios": [
+                "11 · 12 · 13"
+              ]
             },
             {
               "id": "h-14",
-              "etiqueta": "14 · Scapula"
+              "etiqueta": "14 · Scapula",
+              "criterios": [
+                "14"
+              ]
             },
             {
               "id": "h-15",
-              "etiqueta": "15 · Clavicle"
+              "etiqueta": "15 · Clavicle",
+              "criterios": [
+                "15"
+              ]
             },
             {
               "id": "h-16",
-              "etiqueta": "16 · Thorax — ribs and sternum"
+              "etiqueta": "16 · Thorax — ribs and sternum",
+              "criterios": [
+                "16"
+              ]
             },
             {
               "id": "h-2R",
-              "etiqueta": "2R · Radius"
+              "etiqueta": "2R · Radius",
+              "criterios": [
+                "2R1 · 2R2 · 2R3"
+              ]
             },
             {
               "id": "h-2U",
-              "etiqueta": "2U · Ulna"
+              "etiqueta": "2U · Ulna",
+              "criterios": [
+                "2U1 · 2U2 · 2U3"
+              ]
             },
             {
               "id": "h-3",
-              "etiqueta": "3 · Femur"
+              "etiqueta": "3 · Femur",
+              "criterios": [
+                "31 · 32 · 33"
+              ]
             },
             {
               "id": "h-34",
-              "etiqueta": "34 · Patella"
+              "etiqueta": "34 · Patella",
+              "criterios": [
+                "34"
+              ]
             },
             {
               "id": "h-4",
-              "etiqueta": "4 · Tibia"
+              "etiqueta": "4 · Tibia",
+              "criterios": [
+                "41 · 42 · 43 · 44"
+              ]
             },
             {
               "id": "h-4F",
-              "etiqueta": "4F · Fibula"
+              "etiqueta": "4F · Fibula",
+              "criterios": [
+                "4F1 · 4F2 · 4F3"
+              ]
             },
             {
               "id": "h-6",
-              "etiqueta": "6 · Pelvis and acetabulum"
+              "etiqueta": "6 · Pelvis and acetabulum",
+              "criterios": [
+                "61 · 62"
+              ]
             },
             {
               "id": "h-7",
-              "etiqueta": "7 · Hand and carpus"
+              "etiqueta": "7 · Hand and carpus",
+              "criterios": [
+                "71 · 72 · 73 · 74 · 75 · 76 · 77 · 78"
+              ]
             },
             {
               "id": "h-8",
-              "etiqueta": "8 · Foot"
+              "etiqueta": "8 · Foot",
+              "criterios": [
+                "81 · 82 · 83 · 84 · 85 · 87 · 88"
+              ]
             },
             {
               "id": "h-5",
-              "etiqueta": "5 · Spine"
+              "etiqueta": "5 · Spine",
+              "criterios": [
+                "51 · 52 · 53"
+              ]
             }
           ]
         },
         {
           "id": "segmento",
           "pregunta": "Which segment?",
+          "ayuda": "It determines what the letter that follows will mean.",
           "opciones": [
             {
               "id": "s-11",
-              "etiqueta": "11 · Humerus, proximal end segment"
+              "etiqueta": "11 · Humerus, proximal end segment",
+              "criterios": [
+                "Humerus, proximal end segment"
+              ]
             },
             {
               "id": "s-12",
-              "etiqueta": "12 · Humerus, diaphyseal segment"
+              "etiqueta": "12 · Humerus, diaphyseal segment",
+              "criterios": [
+                "Humerus, diaphyseal segment"
+              ]
             },
             {
               "id": "s-13",
-              "etiqueta": "13 · Humerus, distal end segment"
+              "etiqueta": "13 · Humerus, distal end segment",
+              "criterios": [
+                "Humerus, distal end segment"
+              ]
             },
             {
               "id": "s-14",
-              "etiqueta": "14 · Scapula"
+              "etiqueta": "14 · Scapula",
+              "criterios": [
+                "Scapula Bone: Scapula"
+              ]
             },
             {
               "id": "s-15",
-              "etiqueta": "15 · Clavicle"
+              "etiqueta": "15 · Clavicle",
+              "criterios": [
+                "Clavicle Bone: Clavicle"
+              ]
             },
             {
               "id": "s-15.1",
-              "etiqueta": "15.1 · Clavicle, proximal (medial) end segment"
+              "etiqueta": "15.1 · Clavicle, proximal (medial) end segment",
+              "criterios": [
+                "Clavicle, proximal (medial) end segment"
+              ]
             },
             {
               "id": "s-15.2",
-              "etiqueta": "15.2 · Clavicle, diaphyseal segment"
+              "etiqueta": "15.2 · Clavicle, diaphyseal segment",
+              "criterios": [
+                "Clavicle, diaphyseal segment"
+              ]
             },
             {
               "id": "s-15.3",
-              "etiqueta": "15.3 · Clavicle, distal (lateral) end segment"
+              "etiqueta": "15.3 · Clavicle, distal (lateral) end segment",
+              "criterios": [
+                "Clavicle, distal (lateral) end segment"
+              ]
             },
             {
               "id": "s-16",
-              "etiqueta": "16 · Thorax Anatomical location: Thorax"
+              "etiqueta": "16 · Thorax Anatomical location: Thorax",
+              "criterios": [
+                "Thorax Anatomical location: Thorax"
+              ]
             },
             {
               "id": "s-16._.1",
-              "etiqueta": "16._.1 · → The location number is added to the code between two dots after the bone code Location: Sternum, manubrium fracture"
+              "etiqueta": "16._.1 · → The location number is added to the code between two dots after the bone code Location: Sternum, manubrium fracture",
+              "criterios": [
+                "→ The location number is added to the code between two dots after the bone code Location: Sternum, manubrium fracture",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-16._.2",
-              "etiqueta": "16._.2 · → The body side and rib number are added to the code (between dots ._._. after the bone code Example: Left second rib is"
+              "etiqueta": "16._.2 · → The body side and rib number are added to the code (between dots ._._. after the bone code Example: Left second rib is",
+              "criterios": [
+                "→ The body side and rib number are added to the code (between dots ._._. after the bone code Example: Left second rib is",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-16._.3",
-              "etiqueta": "16._.3 · Sternum, xiphoid fracture"
+              "etiqueta": "16._.3 · Sternum, xiphoid fracture",
+              "criterios": [
+                "Sternum, xiphoid fracture",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-16._._",
-              "etiqueta": "16._._ · Thorax, Sternum"
+              "etiqueta": "16._._ · Thorax, Sternum",
+              "criterios": [
+                "Thorax—Sternum Bone: Thorax, Sternum",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-16._._.1",
-              "etiqueta": "16._._.1 · → The location number is added after the bone code and rib number identifier Example: Left second rib, posterior segment fracture is"
+              "etiqueta": "16._._.1 · → The location number is added after the bone code and rib number identifier Example: Left second rib, posterior segment fracture is",
+              "criterios": [
+                "→ The location number is added after the bone code and rib number identifier Example: Left second rib, posterior segment fracture is",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-16._._.2",
-              "etiqueta": "16._._.2 · Rib, shaft"
+              "etiqueta": "16._._.2 · Rib, shaft",
+              "criterios": [
+                "Rib, shaft",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-16._._.3",
-              "etiqueta": "16._._.3 · Rib, anterior end segment"
+              "etiqueta": "16._._.3 · Rib, anterior end segment",
+              "criterios": [
+                "Rib, anterior end segment",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-16._.__",
-              "etiqueta": "16._.__ · Thorax, Rib* The ribs are identified as follows Right side ="
+              "etiqueta": "16._.__ · Thorax, Rib* The ribs are identified as follows Right side =",
+              "criterios": [
+                "Thorax, Rib* The ribs are identified as follows Right side =",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-2R1",
@@ -143,7 +246,10 @@
             },
             {
               "id": "s-2R2",
-              "etiqueta": "2R2 · Radius 2R_ Ulna 2U_"
+              "etiqueta": "2R2 · Radius 2R_ Ulna 2U_",
+              "criterios": [
+                "Radius 2R_ Ulna 2U_"
+              ]
             },
             {
               "id": "s-2R3",
@@ -151,75 +257,130 @@
             },
             {
               "id": "s-2U1",
-              "etiqueta": "2U1 · Radius or Ulna, proximal end segment 2R1/"
+              "etiqueta": "2U1 · Radius or Ulna, proximal end segment 2R1/",
+              "criterios": [
+                "Radius or Ulna, proximal end segment 2R1/"
+              ]
             },
             {
               "id": "s-2U2",
-              "etiqueta": "2U2 · Radius or ulna diaphyseal segment 2R2/"
+              "etiqueta": "2U2 · Radius or ulna diaphyseal segment 2R2/",
+              "criterios": [
+                "Radius or ulna diaphyseal segment 2R2/"
+              ]
             },
             {
               "id": "s-2U3",
-              "etiqueta": "2U3 · Radius/Ulna, distal end segment 2R3/"
+              "etiqueta": "2U3 · Radius/Ulna, distal end segment 2R3/",
+              "criterios": [
+                "Radius/Ulna, distal end segment 2R3/"
+              ]
             },
             {
               "id": "s-31",
-              "etiqueta": "31 · Femur, proximal end segment"
+              "etiqueta": "31 · Femur, proximal end segment",
+              "criterios": [
+                "Femur, proximal end segment"
+              ]
             },
             {
               "id": "s-32",
-              "etiqueta": "32 · Femur, diaphyseal segment"
+              "etiqueta": "32 · Femur, diaphyseal segment",
+              "criterios": [
+                "Femur, diaphyseal segment"
+              ]
             },
             {
               "id": "s-33",
-              "etiqueta": "33 · Femur, distal end segment"
+              "etiqueta": "33 · Femur, distal end segment",
+              "criterios": [
+                "Femur, distal end segment"
+              ]
             },
             {
               "id": "s-34",
-              "etiqueta": "34 · Patella"
+              "etiqueta": "34 · Patella",
+              "criterios": [
+                "Patella Bone: Patella"
+              ]
             },
             {
               "id": "s-41",
-              "etiqueta": "41 · Proximal end segment"
+              "etiqueta": "41 · Proximal end segment",
+              "criterios": [
+                "Proximal end segment"
+              ]
             },
             {
               "id": "s-42",
-              "etiqueta": "42 · Tibia, diaphyseal segment"
+              "etiqueta": "42 · Tibia, diaphyseal segment",
+              "criterios": [
+                "Tibia, diaphyseal segment"
+              ]
             },
             {
               "id": "s-43",
-              "etiqueta": "43 · Tibia, distal end segment"
+              "etiqueta": "43 · Tibia, distal end segment",
+              "criterios": [
+                "Tibia, distal end segment"
+              ]
             },
             {
               "id": "s-44",
-              "etiqueta": "44 · If the medial malleolar fracture is associated with a lateral side ankle injury, it is classified as a malleolar fracture"
+              "etiqueta": "44 · If the medial malleolar fracture is associated with a lateral side ankle injury, it is classified as a malleolar fracture",
+              "criterios": [
+                "If the medial malleolar fracture is associated with a lateral side ankle injury, it is classified as a malleolar fracture"
+              ]
             },
             {
               "id": "s-4F1",
-              "etiqueta": "4F1 · Fibula, proximal end segment"
+              "etiqueta": "4F1 · Fibula, proximal end segment",
+              "criterios": [
+                "Fibula, proximal end segment"
+              ]
             },
             {
               "id": "s-4F2",
-              "etiqueta": "4F2 · Fibula, diaphyseal segment"
+              "etiqueta": "4F2 · Fibula, diaphyseal segment",
+              "criterios": [
+                "Fibula, diaphyseal segment"
+              ]
             },
             {
               "id": "s-4F3",
-              "etiqueta": "4F3 · Fibula, distal end segment (excluding lateral malleolar fractures 44)"
+              "etiqueta": "4F3 · Fibula, distal end segment (excluding lateral malleolar fractures 44)",
+              "criterios": [
+                "Fibula, distal end segment (excluding lateral malleolar fractures 44)"
+              ]
             },
             {
               "id": "s-51",
-              "etiqueta": "51 · No injury Cervical"
+              "etiqueta": "51 · No injury Cervical",
+              "criterios": [
+                "No injury Cervical"
+              ]
             },
             {
               "id": "s-51._",
-              "etiqueta": "51._ · Cervical spine · ._"
+              "etiqueta": "51._ · Cervical spine · ._",
+              "criterios": [
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-52",
-              "etiqueta": "52 · Spine 5 Spine, Cervical 51, Thoracic 52, Lumbar 53, and Sacrum 54 Thoracic"
+              "etiqueta": "52 · Spine 5 Spine, Cervical 51, Thoracic 52, Lumbar 53, and Sacrum 54 Thoracic",
+              "criterios": [
+                "Spine 5 Spine, Cervical 51, Thoracic 52, Lumbar 53, and Sacrum 54 Thoracic"
+              ]
             },
             {
               "id": "s-52._",
-              "etiqueta": "52._ · → The vertebral body number is added between two dots. __. after the location code. Example: Fracture of thoracic vertebra 7 is"
+              "etiqueta": "52._ · → The vertebral body number is added between two dots. __. after the location code. Example: Fracture of thoracic vertebra 7 is",
+              "criterios": [
+                "→ The vertebral body number is added between two dots. __. after the location code. Example: Fracture of thoracic vertebra 7 is",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-53",
@@ -227,213 +388,402 @@
             },
             {
               "id": "s-53._",
-              "etiqueta": "53._ · Thoracic or Lumbar spine Location: Spine, thoracic 52.__. or lumbar"
+              "etiqueta": "53._ · Thoracic or Lumbar spine Location: Spine, thoracic 52.__. or lumbar",
+              "criterios": [
+                "Thoracic or Lumbar spine Location: Spine, thoracic 52.__. or lumbar",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-61",
-              "etiqueta": "61 · Pelvis, pelvic ring"
+              "etiqueta": "61 · Pelvis, pelvic ring",
+              "criterios": [
+                "Pelvis, pelvic ring"
+              ]
             },
             {
               "id": "s-62",
-              "etiqueta": "62 · Pelvis, acetabulum"
+              "etiqueta": "62 · Pelvis, acetabulum",
+              "criterios": [
+                "Pelvis, acetabulum"
+              ]
             },
             {
               "id": "s-71",
-              "etiqueta": "71 · Hand and carpus, Lunate"
+              "etiqueta": "71 · Hand and carpus, Lunate",
+              "criterios": [
+                "Hand and carpus, Lunate"
+              ]
             },
             {
               "id": "s-72",
-              "etiqueta": "72 · Hand and carpus, Scaphoid"
+              "etiqueta": "72 · Hand and carpus, Scaphoid",
+              "criterios": [
+                "Hand and carpus, Scaphoid"
+              ]
             },
             {
               "id": "s-73",
-              "etiqueta": "73 · Hand and carpus, Capitate"
+              "etiqueta": "73 · Hand and carpus, Capitate",
+              "criterios": [
+                "Hand and carpus, Capitate"
+              ]
             },
             {
               "id": "s-74",
-              "etiqueta": "74 · Hand and carpus, Hamate"
+              "etiqueta": "74 · Hand and carpus, Hamate",
+              "criterios": [
+                "Hand and carpus, Hamate"
+              ]
             },
             {
               "id": "s-75",
-              "etiqueta": "75 · Hand and carpus, Trapezium"
+              "etiqueta": "75 · Hand and carpus, Trapezium",
+              "criterios": [
+                "Hand and carpus, Trapezium"
+              ]
             },
             {
               "id": "s-76",
-              "etiqueta": "76 · Hand and carpus, Other carpal bones"
+              "etiqueta": "76 · Hand and carpus, Other carpal bones",
+              "criterios": [
+                "Hand and carpus, Other carpal bones"
+              ]
             },
             {
               "id": "s-76.1",
-              "etiqueta": "76.1 · Hand and carpus, pisiform"
+              "etiqueta": "76.1 · Hand and carpus, pisiform",
+              "criterios": [
+                "Hand and carpus, pisiform"
+              ]
             },
             {
               "id": "s-76.2",
-              "etiqueta": "76.2 · Hand and carpus, triquetrum"
+              "etiqueta": "76.2 · Hand and carpus, triquetrum",
+              "criterios": [
+                "Hand and carpus, triquetrum"
+              ]
             },
             {
               "id": "s-76.3",
-              "etiqueta": "76.3 · Hand and carpus, trapezoid"
+              "etiqueta": "76.3 · Hand and carpus, trapezoid",
+              "criterios": [
+                "Hand and carpus, trapezoid"
+              ]
             },
             {
               "id": "s-76._",
-              "etiqueta": "76._ · Other"
+              "etiqueta": "76._ · Other",
+              "criterios": [
+                "Other",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-76.__",
-              "etiqueta": "76.__ · Hand and carpus, other"
+              "etiqueta": "76.__ · Hand and carpus, other",
+              "criterios": [
+                "Hand and carpus, other",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-77",
-              "etiqueta": "77 · Hand and carpus, Metacarpal"
+              "etiqueta": "77 · Hand and carpus, Metacarpal",
+              "criterios": [
+                "Hand and carpus, Metacarpal"
+              ]
             },
             {
               "id": "s-77._.1",
-              "etiqueta": "77._.1 · → Example code for the 3rd metacarpal is indicated with an underline"
+              "etiqueta": "77._.1 · → Example code for the 3rd metacarpal is indicated with an underline",
+              "criterios": [
+                "→ Example code for the 3rd metacarpal is indicated with an underline",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-77._.2",
-              "etiqueta": "77._.2 · → Example code for the 3rd metacarpal is indicated with an underline"
+              "etiqueta": "77._.2 · → Example code for the 3rd metacarpal is indicated with an underline",
+              "criterios": [
+                "→ Example code for the 3rd metacarpal is indicated with an underline",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-77._.3",
-              "etiqueta": "77._.3 · → Example code for the 3rd metacarpal is indicated with an underline"
+              "etiqueta": "77._.3 · → Example code for the 3rd metacarpal is indicated with an underline",
+              "criterios": [
+                "→ Example code for the 3rd metacarpal is indicated with an underline",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-77.__",
-              "etiqueta": "77.__ · Hand and carpus, metacarpal"
+              "etiqueta": "77.__ · Hand and carpus, metacarpal",
+              "criterios": [
+                "Hand and carpus, metacarpal",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-78",
-              "etiqueta": "78 · Hand and carpus, Phalanx"
+              "etiqueta": "78 · Hand and carpus, Phalanx",
+              "criterios": [
+                "Hand and carpus, Phalanx"
+              ]
             },
             {
               "id": "s-78._.1",
-              "etiqueta": "78._.1 · Phalanges of the hand · ._.1"
+              "etiqueta": "78._.1 · Phalanges of the hand · ._.1",
+              "criterios": [
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-78._._.1",
-              "etiqueta": "78._._.1 · → The location is then added → Anatomical region+bone.Finger.Phalanx.Bone segment location → Example: Proximal thumb phalanx proximal end segment is"
+              "etiqueta": "78._._.1 · → The location is then added → Anatomical region+bone.Finger.Phalanx.Bone segment location → Example: Proximal thumb phalanx proximal end segment is",
+              "criterios": [
+                "→ The location is then added → Anatomical region+bone.Finger.Phalanx.Bone segment location → Example: Proximal thumb phalanx proximal end segment is",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-78._._.2",
-              "etiqueta": "78._._.2 · → Example code for proximal thumb phalanx is indicated with an underline"
+              "etiqueta": "78._._.2 · → Example code for proximal thumb phalanx is indicated with an underline",
+              "criterios": [
+                "→ Example code for proximal thumb phalanx is indicated with an underline",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-78._._.3",
-              "etiqueta": "78._._.3 · → Example code for proximal thumb phalanx is indicated with an underline"
+              "etiqueta": "78._._.3 · → Example code for proximal thumb phalanx is indicated with an underline",
+              "criterios": [
+                "→ Example code for proximal thumb phalanx is indicated with an underline",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-78._.__",
-              "etiqueta": "78._.__ · Hand and carpus, phalanx"
+              "etiqueta": "78._.__ · Hand and carpus, phalanx",
+              "criterios": [
+                "Hand and carpus, phalanx",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-81",
-              "etiqueta": "81 · Foot, Talus"
+              "etiqueta": "81 · Foot, Talus",
+              "criterios": [
+                "Foot, Talus"
+              ]
             },
             {
               "id": "s-81.1",
-              "etiqueta": "81.1 · Foot, talus, body"
+              "etiqueta": "81.1 · Foot, talus, body",
+              "criterios": [
+                "Foot, talus, body"
+              ]
             },
             {
               "id": "s-81.2",
-              "etiqueta": "81.2 · Foot, talus, neck fracture"
+              "etiqueta": "81.2 · Foot, talus, neck fracture",
+              "criterios": [
+                "Foot, talus, neck fracture"
+              ]
             },
             {
               "id": "s-81.3",
-              "etiqueta": "81.3 · Foot, talus, head"
+              "etiqueta": "81.3 · Foot, talus, head",
+              "criterios": [
+                "Foot, talus, head"
+              ]
             },
             {
               "id": "s-82",
-              "etiqueta": "82 · Foot, Calcaneus"
+              "etiqueta": "82 · Foot, Calcaneus",
+              "criterios": [
+                "Foot, Calcaneus"
+              ]
             },
             {
               "id": "s-83",
-              "etiqueta": "83 · Foot, Navicular"
+              "etiqueta": "83 · Foot, Navicular",
+              "criterios": [
+                "Foot, Navicular"
+              ]
             },
             {
               "id": "s-84",
-              "etiqueta": "84 · Foot, Cuboid"
+              "etiqueta": "84 · Foot, Cuboid",
+              "criterios": [
+                "Foot, Cuboid"
+              ]
             },
             {
               "id": "s-85",
-              "etiqueta": "85 · Foot, Cuneiforms"
+              "etiqueta": "85 · Foot, Cuneiforms",
+              "criterios": [
+                "Foot, Cuneiforms"
+              ]
             },
             {
               "id": "s-85.1",
-              "etiqueta": "85.1 · Foot, cuneiform, medial"
+              "etiqueta": "85.1 · Foot, cuneiform, medial",
+              "criterios": [
+                "Foot, cuneiform, medial"
+              ]
             },
             {
               "id": "s-85.2",
-              "etiqueta": "85.2 · Foot, cuneiform, middle"
+              "etiqueta": "85.2 · Foot, cuneiform, middle",
+              "criterios": [
+                "Foot, cuneiform, middle"
+              ]
             },
             {
               "id": "s-85.3",
-              "etiqueta": "85.3 · Foot, cuneiform, lateral"
+              "etiqueta": "85.3 · Foot, cuneiform, lateral",
+              "criterios": [
+                "Foot, cuneiform, lateral"
+              ]
             },
             {
               "id": "s-85.__",
-              "etiqueta": "85.__ · Foot, cuneiform"
+              "etiqueta": "85.__ · Foot, cuneiform",
+              "criterios": [
+                "Foot, cuneiform",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-87",
-              "etiqueta": "87 · Foot, Metatarsals"
+              "etiqueta": "87 · Foot, Metatarsals",
+              "criterios": [
+                "Foot, Metatarsals"
+              ]
             },
             {
               "id": "s-87._.1",
-              "etiqueta": "87._.1 · → Example code for the third metatarsal is indicated with an underline"
+              "etiqueta": "87._.1 · → Example code for the third metatarsal is indicated with an underline",
+              "criterios": [
+                "→ Example code for the third metatarsal is indicated with an underline",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-87._.2",
-              "etiqueta": "87._.2 · → Example code for the third metatarsal is indicated with an underline"
+              "etiqueta": "87._.2 · → Example code for the third metatarsal is indicated with an underline",
+              "criterios": [
+                "→ Example code for the third metatarsal is indicated with an underline",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-87._.3",
-              "etiqueta": "87._.3 · → Example code for the third metatarsal is indicated with an underline"
+              "etiqueta": "87._.3 · → Example code for the third metatarsal is indicated with an underline",
+              "criterios": [
+                "→ Example code for the third metatarsal is indicated with an underline",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-88",
-              "etiqueta": "88 · Foot, Phalanges"
+              "etiqueta": "88 · Foot, Phalanges",
+              "criterios": [
+                "Foot, Phalanges"
+              ]
             },
             {
               "id": "s-88._.2",
-              "etiqueta": "88._.2 · → Example code for the proximal great toe is indicated with an underline"
+              "etiqueta": "88._.2 · → Example code for the proximal great toe is indicated with an underline",
+              "criterios": [
+                "→ Example code for the proximal great toe is indicated with an underline",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-88._._.1",
-              "etiqueta": "88._._.1 · → The phalangeal bone segment location is then added → Anatomical region+bone.Toe.Phalanx.Bone segment location+Type → Example: Great toe, middle phalanx, proximal end segment is"
+              "etiqueta": "88._._.1 · → The phalangeal bone segment location is then added → Anatomical region+bone.Toe.Phalanx.Bone segment location+Type → Example: Great toe, middle phalanx, proximal end segment is",
+              "criterios": [
+                "→ The phalangeal bone segment location is then added → Anatomical region+bone.Toe.Phalanx.Bone segment location+Type → Example: Great toe, middle phalanx, proximal end segment is",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-88._._.2",
-              "etiqueta": "88._._.2 · → Example code for the proximal great toe is indicated with an underline"
+              "etiqueta": "88._._.2 · → Example code for the proximal great toe is indicated with an underline",
+              "criterios": [
+                "→ Example code for the proximal great toe is indicated with an underline",
+                "It carries an identifier: completed in the next step."
+              ]
             },
             {
               "id": "s-88._._.3",
-              "etiqueta": "88._._.3 · Foot, phalanx .__.__ distal end segment"
+              "etiqueta": "88._._.3 · Foot, phalanx .__.__ distal end segment",
+              "criterios": [
+                "Foot, phalanx .__.__ distal end segment",
+                "It carries an identifier: completed in the next step."
+              ]
             }
           ]
         },
         {
           "id": "identificador",
-          "pregunta": "Which one?"
+          "pregunta": "Which one?",
+          "ayuda": "The compendium leaves a gap between dots for the number of the ray, digit, rib or vertebra.",
+          "opciones": [
+            {
+              "etiqueta": "Index (2)",
+              "id": "i-77._.1-2"
+            },
+            {
+              "etiqueta": "Little (5)",
+              "id": "i-77._.1-5"
+            },
+            {
+              "etiqueta": "Index (2)",
+              "id": "i-77._.2-2"
+            },
+            {
+              "etiqueta": "Little (5)",
+              "id": "i-77._.2-5"
+            },
+            {
+              "etiqueta": "Index (2)",
+              "id": "i-77._.3-2"
+            },
+            {
+              "etiqueta": "Little (5)",
+              "id": "i-77._.3-5"
+            }
+          ]
         },
         {
           "id": "tipo",
-          "pregunta": "Which type?"
+          "pregunta": "Which type?",
+          "ayuda": "The letter. It means different things depending on the segment: in the shaft it speaks of fragmentation, in an end segment of articular involvement, in the scapula of location."
         },
         {
           "id": "grupo",
-          "pregunta": "Which group?"
+          "pregunta": "Which group?",
+          "ayuda": "The number after the letter."
         },
         {
           "id": "subgrupo",
-          "pregunta": "Which subgroup?"
+          "pregunta": "Which subgroup?",
+          "ayuda": "The final decimal. Maximum detail; interobserver agreement falls a great deal at this level."
         },
         {
           "id": "calificaciones",
-          "pregunta": "Qualifications"
+          "pregunta": "Qualifications",
+          "ayuda": "Lower-case letters in brackets, particular to this fracture. Optional and cumulative."
         },
         {
           "id": "modificadores",
           "pregunta": "Universal modifiers",
+          "ayuda": "In square brackets at the end. They apply to almost any fracture and are optional.",
           "opciones": [
             {
               "id": "m-1",
@@ -445,11 +795,17 @@
             },
             {
               "id": "m-3a",
-              "etiqueta": "[3a] Articular impaction"
+              "etiqueta": "[3a] Articular impaction",
+              "criterios": [
+                "Impaction"
+              ]
             },
             {
               "id": "m-3b",
-              "etiqueta": "[3b] Metaphyseal impaction"
+              "etiqueta": "[3b] Metaphyseal impaction",
+              "criterios": [
+                "Impaction"
+              ]
             },
             {
               "id": "m-4",
@@ -457,51 +813,87 @@
             },
             {
               "id": "m-5a",
-              "etiqueta": "[5a] Anterior (volar, palmar, plantar)"
+              "etiqueta": "[5a] Anterior (volar, palmar, plantar)",
+              "criterios": [
+                "Dislocation"
+              ]
             },
             {
               "id": "m-5b",
-              "etiqueta": "[5b] Posterior (dorsal)"
+              "etiqueta": "[5b] Posterior (dorsal)",
+              "criterios": [
+                "Dislocation"
+              ]
             },
             {
               "id": "m-5c",
-              "etiqueta": "[5c] Medial (ulnar)"
+              "etiqueta": "[5c] Medial (ulnar)",
+              "criterios": [
+                "Dislocation"
+              ]
             },
             {
               "id": "m-5d",
-              "etiqueta": "[5d] Lateral (radial)"
+              "etiqueta": "[5d] Lateral (radial)",
+              "criterios": [
+                "Dislocation"
+              ]
             },
             {
               "id": "m-5e",
-              "etiqueta": "[5e] Inferior (at the hip, also obturator)"
+              "etiqueta": "[5e] Inferior (at the hip, also obturator)",
+              "criterios": [
+                "Dislocation"
+              ]
             },
             {
               "id": "m-5f",
-              "etiqueta": "[5f] Multidirectional"
+              "etiqueta": "[5f] Multidirectional",
+              "criterios": [
+                "Dislocation"
+              ]
             },
             {
               "id": "m-6a",
-              "etiqueta": "[6a] Anterior (volar, palmar, plantar)"
+              "etiqueta": "[6a] Anterior (volar, palmar, plantar)",
+              "criterios": [
+                "Subluxation / ligamentous instability"
+              ]
             },
             {
               "id": "m-6b",
-              "etiqueta": "[6b] Posterior (dorsal)"
+              "etiqueta": "[6b] Posterior (dorsal)",
+              "criterios": [
+                "Subluxation / ligamentous instability"
+              ]
             },
             {
               "id": "m-6c",
-              "etiqueta": "[6c] Medial (ulnar)"
+              "etiqueta": "[6c] Medial (ulnar)",
+              "criterios": [
+                "Subluxation / ligamentous instability"
+              ]
             },
             {
               "id": "m-6d",
-              "etiqueta": "[6d] Lateral (radial)"
+              "etiqueta": "[6d] Lateral (radial)",
+              "criterios": [
+                "Subluxation / ligamentous instability"
+              ]
             },
             {
               "id": "m-6e",
-              "etiqueta": "[6e] Inferior (at the hip, also obturator)"
+              "etiqueta": "[6e] Inferior (at the hip, also obturator)",
+              "criterios": [
+                "Subluxation / ligamentous instability"
+              ]
             },
             {
               "id": "m-6f",
-              "etiqueta": "[6f] Multidirectional"
+              "etiqueta": "[6f] Multidirectional",
+              "criterios": [
+                "Subluxation / ligamentous instability"
+              ]
             },
             {
               "id": "m-7",
@@ -509,23 +901,38 @@
             },
             {
               "id": "m-8a",
-              "etiqueta": "[8a] ICRS grade 0 — normal"
+              "etiqueta": "[8a] ICRS grade 0 — normal",
+              "criterios": [
+                "Articular cartilage injury (ICRS scale)"
+              ]
             },
             {
               "id": "m-8b",
-              "etiqueta": "[8b] ICRS grade 1 — superficial indentation and/or superficial fissures and cracks"
+              "etiqueta": "[8b] ICRS grade 1 — superficial indentation and/or superficial fissures and cracks",
+              "criterios": [
+                "Articular cartilage injury (ICRS scale)"
+              ]
             },
             {
               "id": "m-8c",
-              "etiqueta": "[8c] ICRS grade 2 — abnormal lesions extending down to less than 50% of cartilage depth"
+              "etiqueta": "[8c] ICRS grade 2 — abnormal lesions extending down to less than 50% of cartilage depth",
+              "criterios": [
+                "Articular cartilage injury (ICRS scale)"
+              ]
             },
             {
               "id": "m-8d",
-              "etiqueta": "[8d] ICRS grade 3 — severely abnormal, defects extending down more than 50% of cartilage depth; down to the calcified layer; down to but not through the subchondral bone; includes blisters"
+              "etiqueta": "[8d] ICRS grade 3 — severely abnormal, defects extending down more than 50% of cartilage depth; down to the calcified layer; down to but not through the subchondral bone; includes blisters",
+              "criterios": [
+                "Articular cartilage injury (ICRS scale)"
+              ]
             },
             {
               "id": "m-8e",
-              "etiqueta": "[8e] ICRS grade 4 — cartilage loss extending through the subchondral bone"
+              "etiqueta": "[8e] ICRS grade 4 — cartilage loss extending through the subchondral bone",
+              "criterios": [
+                "Articular cartilage injury (ICRS scale)"
+              ]
             },
             {
               "id": "m-9",
@@ -556,382 +963,868 @@
         {
           "id": "cl-schatzker",
           "pregunta": "Tibial plateau · Schatzker as modified by Kfuri: which type?",
+          "ayuda": "It is the language in which the plateau is discussed and it points to the implant: types I-III are lateral, type IV is medial and carries a different prognosis, and V-VI separate the block from the shaft. Kfuri's modification completes the type with the quadrant involved, which is what Schatzker alone does not say: that is why the two questions go together.",
           "opciones": [
             {
               "id": "sch-I",
-              "etiqueta": "I · Pure lateral split"
+              "etiqueta": "I · Pure lateral split",
+              "criterios": [
+                "A lateral wedge with no depression",
+                "Hueso joven y denso",
+                "Percutaneous screws if there is no displacement"
+              ]
             },
             {
               "id": "sch-II",
-              "etiqueta": "II · Lateral split-depression"
+              "etiqueta": "II · Lateral split-depression",
+              "criterios": [
+                "The commonest pattern",
+                "It demands elevating the depression and filling the defect"
+              ]
             },
             {
               "id": "sch-III",
-              "etiqueta": "III · Pure lateral depression"
+              "etiqueta": "III · Pure lateral depression",
+              "criterios": [
+                "No split line: ligamentotaxis does not lift it",
+                "Elevation through a metaphyseal window and grafting"
+              ]
             },
             {
               "id": "sch-IV",
-              "etiqueta": "IV · Medial plateau"
+              "etiqueta": "IV · Medial plateau",
+              "criterios": [
+                "The medial plateau carries most of the load: worse prognosis",
+                "It may be a reduced knee dislocation: exclude peroneal nerve and vascular injury",
+                "The lateral plate does NOT control it"
+              ]
             },
             {
               "id": "sch-V",
-              "etiqueta": "V · Bicondylar"
+              "etiqueta": "V · Bicondylar",
+              "criterios": [
+                "Both plateaus, with the shaft still in continuity"
+              ]
             },
             {
               "id": "sch-VI",
-              "etiqueta": "VI · Bicondylar with metaphyseal-diaphyseal dissociation"
+              "etiqueta": "VI · Bicondylar with metaphyseal-diaphyseal dissociation",
+              "criterios": [
+                "The articular block is separated from the shaft: that is two zones",
+                "Partes blandas casi siempre comprometidas"
+              ]
             }
           ]
         },
         {
           "id": "cl-columnas",
           "pregunta": "Tibial plateau · Schatzker as modified by Kfuri: which quadrants are broken?",
+          "ayuda": "This is the second half of the classification and the one that really decides the approach and the position. Kfuri divides the plateau into quadrants with two lines and forces you to name the quadrant, which is the information the Schatzker type does not contain.",
           "opciones": [
             {
               "id": "col-antero-lat",
-              "etiqueta": "Anterolateral"
+              "etiqueta": "Anterolateral",
+              "criterios": [
+                "The classic quadrant of the lateral split-depression",
+                "Reached through the lateral approach, with the patient supine"
+              ]
             },
             {
               "id": "col-antero-med",
-              "etiqueta": "Anteromedial"
+              "etiqueta": "Anteromedial",
+              "criterios": [
+                "Depression or split of the anterior half of the medial plateau",
+                "Reached through the medial approach; the lateral plate does not hold it"
+              ]
             },
             {
               "id": "col-post-lat",
-              "etiqueta": "Posterolateral"
+              "etiqueta": "Posterolateral",
+              "criterios": [
+                "The hardest to reach: it lies behind the fibula and below the common peroneal nerve",
+                "A pure depression the AP radiograph does not show: it needs CT",
+                "Posterolateral approach, with a fibular osteotomy or a posterior window depending on the case"
+              ]
             },
             {
               "id": "col-post-med",
-              "etiqueta": "Posteromedial"
+              "etiqueta": "Posteromedial",
+              "criterios": [
+                "It is the fragment most often forgotten and the one that most often fails",
+                "It subluxes in flexion: neither the lateral nor the anteromedial plate controls it",
+                "It demands a posteromedial buttress through its own approach"
+              ]
             }
           ]
         },
         {
           "id": "cl-garden",
           "pregunta": "Femoral neck · Garden",
+          "ayuda": "It separates fixing from replacing, which is the most important decision in this fracture.",
           "opciones": [
             {
               "id": "gar-nd",
-              "etiqueta": "Undisplaced · Garden I-II"
+              "etiqueta": "Undisplaced · Garden I-II",
+              "criterios": [
+                "Valgus impacted or complete without displacement",
+                "In situ fixation with screws or a sliding hip screw",
+                "Careful: many «undisplaced» ones show rotation on CT"
+              ]
             },
             {
               "id": "gar-d",
-              "etiqueta": "Displaced · Garden III-IV"
+              "etiqueta": "Displaced · Garden III-IV",
+              "criterios": [
+                "Trabeculae broken or discontinuous",
+                "High risk of necrosis and non-union",
+                "In the patient over 65 the answer is usually arthroplasty, not fixation"
+              ]
             }
           ]
         },
         {
           "id": "cl-pauwels",
           "pregunta": "Femoral neck · Pauwels",
+          "ayuda": "It is the only classification on this list that speaks directly of biomechanics: the more vertical the line, the more shear and the less compression. It connects with Step 5.",
           "opciones": [
             {
               "id": "pau-I",
-              "etiqueta": "I · less than 30°"
+              "etiqueta": "I · less than 30°",
+              "criterios": [
+                "An almost horizontal line: the load compresses the fracture",
+                "A mechanically favourable situation"
+              ]
             },
             {
               "id": "pau-II",
-              "etiqueta": "II · 30 to 50°"
+              "etiqueta": "II · 30 to 50°",
+              "criterios": [
+                "A mixed component of compression and shear"
+              ]
             },
             {
               "id": "pau-III",
-              "etiqueta": "III · more than 50°"
+              "etiqueta": "III · more than 50°",
+              "criterios": [
+                "An almost vertical line: the load shears instead of compressing",
+                "Parallel screws then work in shear and give way",
+                "It calls for a fixed angle, or adding an antirotation screw or a buttress plate"
+              ]
             }
           ]
         },
         {
           "id": "cl-neer",
           "pregunta": "Proximal humerus · Neer",
+          "ayuda": "It is the universal vocabulary of the proximal humerus and sets the classic displacement thresholds: 1 cm or 45 degrees.",
           "opciones": [
             {
               "id": "neer-1",
-              "etiqueta": "1 part · undisplaced"
+              "etiqueta": "1 part · undisplaced",
+              "criterios": [
+                "No fragment exceeds 1 cm or 45°",
+                "Tratamiento casi siempre conservador"
+              ]
             },
             {
               "id": "neer-2cq",
-              "etiqueta": "2 parts · surgical neck"
+              "etiqueta": "2 parts · surgical neck",
+              "criterios": [
+                "The pattern with the best agreement",
+                "Nail or plate according to the bone and the displacement"
+              ]
             },
             {
               "id": "neer-2tro",
-              "etiqueta": "2 parts · greater tuberosity"
+              "etiqueta": "2 parts · greater tuberosity",
+              "criterios": [
+                "Eccentric pull of the cuff: a tension band setting",
+                "A lower surgical threshold in the active patient, around 5 mm"
+              ]
             },
             {
               "id": "neer-3",
-              "etiqueta": "3 parts"
+              "etiqueta": "3 parts",
+              "criterios": [
+                "Head, one tuberosity and shaft"
+              ]
             },
             {
               "id": "neer-4",
-              "etiqueta": "4 parts"
+              "etiqueta": "4 parts",
+              "criterios": [
+                "High risk of head necrosis",
+                "Consider reverse arthroplasty in the older patient"
+              ]
             },
             {
               "id": "neer-lux",
-              "etiqueta": "Fracture-dislocation"
+              "etiqueta": "Fracture-dislocation",
+              "criterios": [
+                "The head is out of the glenoid: a relative emergency"
+              ]
             }
           ]
         },
         {
           "id": "cl-hertel",
           "pregunta": "Proximal humerus · any predictors of head ischaemia?",
+          "ayuda": "It predicts head ischaemia better than the number of parts, and therefore guides the choice between fixing and replacing. Mark those that are present.",
           "opciones": [
             {
               "id": "her-calcar",
-              "etiqueta": "Metaphyseal head extension shorter than 8 mm"
+              "etiqueta": "Metaphyseal head extension shorter than 8 mm",
+              "criterios": [
+                "It is the strongest predictor of ischaemia",
+                "It is measured at the calcar, on the head fragment"
+              ]
             },
             {
               "id": "her-bisagra",
-              "etiqueta": "Medial hinge disrupted, displaced more than 2 mm"
+              "etiqueta": "Medial hinge disrupted, displaced more than 2 mm",
+              "criterios": [
+                "Without a medial hinge there is no supply from the anterior circumflex artery"
+              ]
             },
             {
               "id": "her-basi",
-              "etiqueta": "Basicervical fracture line"
+              "etiqueta": "Basicervical fracture line",
+              "criterios": [
+                "It cuts the supply to the head below the anatomical neck"
+              ]
             },
             {
               "id": "her-no",
-              "etiqueta": "None of the three"
+              "etiqueta": "None of the three",
+              "criterios": [
+                "The head probably retains its blood supply: fixation is reasonable"
+              ]
             }
           ]
         },
         {
           "id": "cl-hawkins",
           "pregunta": "Talus · Hawkins",
+          "ayuda": "It predicts avascular necrosis of the body, which is what determines the result of this fracture.",
           "opciones": [
             {
               "id": "haw-I",
-              "etiqueta": "I · Undisplaced neck"
+              "etiqueta": "I · Undisplaced neck",
+              "criterios": [
+                "Riesgo de necrosis en torno al 10 %"
+              ]
             },
             {
               "id": "haw-II",
-              "etiqueta": "II · With subtalar subluxation or dislocation"
+              "etiqueta": "II · With subtalar subluxation or dislocation",
+              "criterios": [
+                "Risk of 20 to 50%"
+              ]
             },
             {
               "id": "haw-III",
-              "etiqueta": "III · Subtalar and tibiotalar dislocation"
+              "etiqueta": "III · Subtalar and tibiotalar dislocation",
+              "criterios": [
+                "Risk above 80%",
+                "The body is extruded: urgent reduction, and watch the skin"
+              ]
             },
             {
               "id": "haw-IV",
-              "etiqueta": "IV · Adds talonavicular dislocation"
+              "etiqueta": "IV · Adds talonavicular dislocation",
+              "criterios": [
+                "Necrosis is virtually certain"
+              ]
             }
           ]
         },
         {
           "id": "cl-sanders",
           "pregunta": "Calcaneus · Sanders",
+          "ayuda": "It is defined on coronal CT of the posterior facet and it determines the prognosis and the indication: type IV leads you to consider primary subtalar arthrodesis.",
           "opciones": [
             {
               "id": "san-I",
-              "etiqueta": "I · Undisplaced"
+              "etiqueta": "I · Undisplaced",
+              "criterios": [
+                "Under 2 mm, whatever the number of fracture lines",
+                "Tratamiento conservador"
+              ]
             },
             {
               "id": "san-II",
-              "etiqueta": "II · Two articular fragments"
+              "etiqueta": "II · Two articular fragments",
+              "criterios": [
+                "One fracture line in the posterior facet",
+                "A good candidate for reduction and internal fixation"
+              ]
             },
             {
               "id": "san-III",
-              "etiqueta": "III · Three fragments"
+              "etiqueta": "III · Three fragments",
+              "criterios": [
+                "Two fracture lines, with a depressed central fragment"
+              ]
             },
             {
               "id": "san-IV",
-              "etiqueta": "IV · Four or more fragments"
+              "etiqueta": "IV · Four or more fragments",
+              "criterios": [
+                "Comminution of the posterior facet",
+                "Worse functional prognosis: consider primary subtalar arthrodesis"
+              ]
             }
           ]
         },
         {
           "id": "cl-letournel",
           "pregunta": "Acetabulum · Letournel and Judet",
+          "ayuda": "It decides the approach, and in the acetabulum the approach is the operation. There is no alternative to naming the pattern.",
           "opciones": [
             {
               "id": "let-pared-post",
-              "etiqueta": "Posterior wall"
+              "etiqueta": "Posterior wall",
+              "criterios": [
+                "The commonest",
+                "Kocher-Langenbeck, en prono o lateral"
+              ]
             },
             {
               "id": "let-columna-post",
-              "etiqueta": "Posterior column"
+              "etiqueta": "Posterior column",
+              "criterios": [
+                "Kocher-Langenbeck"
+              ]
             },
             {
               "id": "let-pared-ant",
-              "etiqueta": "Anterior wall"
+              "etiqueta": "Anterior wall",
+              "criterios": [
+                "Ilioinguinal or anterior intrapelvic, supine"
+              ]
             },
             {
               "id": "let-columna-ant",
-              "etiqueta": "Anterior column"
+              "etiqueta": "Anterior column",
+              "criterios": [
+                "Ilioinguinal or anterior intrapelvic"
+              ]
             },
             {
               "id": "let-transversa",
-              "etiqueta": "Transverse"
+              "etiqueta": "Transverse",
+              "criterios": [
+                "It separates the acetabulum into upper and lower halves",
+                "Puede exigir abordaje combinado o extensible"
+              ]
             },
             {
               "id": "let-t",
-              "etiqueta": "T-shaped"
+              "etiqueta": "T-shaped",
+              "criterios": [
+                "Transverse plus a vertical line",
+                "One of the hardest: almost always two windows"
+              ]
             },
             {
               "id": "let-post-post",
-              "etiqueta": "Posterior column with posterior wall"
+              "etiqueta": "Posterior column with posterior wall",
+              "criterios": [
+                "Kocher-Langenbeck; check the sciatic nerve from the start"
+              ]
             },
             {
               "id": "let-transv-pp",
-              "etiqueta": "Transverse with posterior wall"
+              "etiqueta": "Transverse with posterior wall",
+              "criterios": [
+                "The commonest associated pattern"
+              ]
             },
             {
               "id": "let-hemitransv",
-              "etiqueta": "Anterior column with posterior hemitransverse"
+              "etiqueta": "Anterior column with posterior hemitransverse",
+              "criterios": [
+                "Usually through an anterior route, with indirect control of the posterior one"
+              ]
             },
             {
               "id": "let-ambas",
-              "etiqueta": "Both-column"
+              "etiqueta": "Both-column",
+              "criterios": [
+                "No articular fragment stays attached to the axial skeleton",
+                "The spur sign on the obturator oblique confirms it"
+              ]
             }
           ]
         },
         {
           "id": "cl-young-burgess",
           "pregunta": "Pelvic ring · Young and Burgess",
+          "ayuda": "It classifies by mechanism and therefore anticipates the bleeding pattern and the associated injuries. It is the one that connects with Step 1: it changes the resuscitation, not only the fixation.",
           "opciones": [
             {
               "id": "yb-lc1",
-              "etiqueta": "Lateral compression I"
+              "etiqueta": "Lateral compression I",
+              "criterios": [
+                "Rami fracture plus sacral impaction",
+                "Stable; the mechanism closes the ring"
+              ]
             },
             {
               "id": "yb-lc2",
-              "etiqueta": "Lateral compression II"
+              "etiqueta": "Lateral compression II",
+              "criterios": [
+                "It adds a bucket-handle fracture of the iliac wing"
+              ]
             },
             {
               "id": "yb-lc3",
-              "etiqueta": "Lateral compression III · windswept"
+              "etiqueta": "Lateral compression III · windswept",
+              "criterios": [
+                "Lateral compression on one side and opening on the other",
+                "Mortalidad alta"
+              ]
             },
             {
               "id": "yb-apc1",
-              "etiqueta": "Anteroposterior compression I"
+              "etiqueta": "Anteroposterior compression I",
+              "criterios": [
+                "Pubic diastasis under 2.5 cm",
+                "Ligamentos posteriores intactos"
+              ]
             },
             {
               "id": "yb-apc2",
-              "etiqueta": "Anteroposterior compression II · open book"
+              "etiqueta": "Anteroposterior compression II · open book",
+              "criterios": [
+                "Diastasis over 2.5 cm with the anterior sacroiliac ligaments torn",
+                "It increases the pelvic volume: urgent binder or external fixator"
+              ]
             },
             {
               "id": "yb-apc3",
-              "etiqueta": "Anteroposterior compression III"
+              "etiqueta": "Anteroposterior compression III",
+              "criterios": [
+                "Complete dissociation of the hemipelvis",
+                "The pattern that bleeds and transfuses most"
+              ]
             },
             {
               "id": "yb-vs",
-              "etiqueta": "Vertical shear"
+              "etiqueta": "Vertical shear",
+              "criterios": [
+                "Cranial displacement of the hemipelvis",
+                "Vertical instability: a binder does not control it"
+              ]
             },
             {
               "id": "yb-cm",
-              "etiqueta": "Combined mechanism"
+              "etiqueta": "Combined mechanism",
+              "criterios": [
+                "Mixed patterns, usually from a fall from height"
+              ]
             }
           ]
         },
         {
           "id": "cl-tile",
           "pregunta": "Pelvic ring · Tile stability",
+          "ayuda": "It classifies by stability, which is what decides whether posterior fixation is needed. It complements Young and Burgess: one gives the mechanism, the other the stability.",
           "opciones": [
             {
               "id": "tile-A",
-              "etiqueta": "A · Stable"
+              "etiqueta": "A · Stable",
+              "criterios": [
+                "Anillo posterior intacto",
+                "Avulsiones y fracturas aisladas de ramas"
+              ]
             },
             {
               "id": "tile-B",
-              "etiqueta": "B · Rotationally unstable, vertically stable"
+              "etiqueta": "B · Rotationally unstable, vertically stable",
+              "criterios": [
+                "Open book or lateral compression",
+                "Anterior fixation is usually enough"
+              ]
             },
             {
               "id": "tile-C",
-              "etiqueta": "C · Rotationally and vertically unstable"
+              "etiqueta": "C · Rotationally and vertically unstable",
+              "criterios": [
+                "Complete disruption of the posterior complex",
+                "It demands posterior fixation: iliosacral screws or a plate"
+              ]
             }
           ]
         },
         {
           "id": "cl-vancouver",
           "pregunta": "Is it periprosthetic? · Vancouver",
+          "ayuda": "It is the classification on this list that decides most: it separates fixing from revising the stem, which are two different operations with two different teams.",
           "opciones": [
             {
               "id": "van-no",
-              "etiqueta": "Not periprosthetic"
+              "etiqueta": "Not periprosthetic",
+              "criterios": [
+                "Hueso nativo"
+              ]
             },
             {
               "id": "van-A",
-              "etiqueta": "A · Trochanteric"
+              "etiqueta": "A · Trochanteric",
+              "criterios": [
+                "Greater or lesser trochanter",
+                "Casi siempre conservador si no hay inestabilidad abductora"
+              ]
             },
             {
               "id": "van-B1",
-              "etiqueta": "B1 · Around the stem, stem well fixed"
+              "etiqueta": "B1 · Around the stem, stem well fixed",
+              "criterios": [
+                "Fixation with a locked plate, cables or a combination"
+              ]
             },
             {
               "id": "van-B2",
-              "etiqueta": "B2 · Stem loose, adequate bone stock"
+              "etiqueta": "B2 · Stem loose, adequate bone stock",
+              "criterios": [
+                "The operation is to revise the stem, not to fix the fracture",
+                "Putting a plate over a loose stem is guaranteed failure"
+              ]
             },
             {
               "id": "van-B3",
-              "etiqueta": "B3 · Stem loose and poor bone stock"
+              "etiqueta": "B3 · Stem loose and poor bone stock",
+              "criterios": [
+                "Revision with a long stem, allograft or megaprosthesis"
+              ]
             },
             {
               "id": "van-C",
-              "etiqueta": "C · Distal to the tip of the stem"
+              "etiqueta": "C · Distal to the tip of the stem",
+              "criterios": [
+                "It is treated as a distal femoral fracture",
+                "Beware of the zone between implants: overlap the plate with the stem"
+              ]
             }
           ]
         },
         {
           "id": "cl-winquist",
           "pregunta": "Femoral shaft · Winquist and Hansen comminution",
+          "ayuda": "It measures how much cortex is left to share load, and with it whether the nail can be dynamised or has to stay static.",
           "opciones": [
             {
               "id": "win-0",
-              "etiqueta": "0 · No comminution"
+              "etiqueta": "0 · No comminution",
+              "criterios": [
+                "Trazo simple, contacto cortical completo"
+              ]
             },
             {
               "id": "win-I",
-              "etiqueta": "I · Small fragment"
+              "etiqueta": "I · Small fragment",
+              "criterios": [
+                "Less than 25% of the circumference",
+                "It still shares load"
+              ]
             },
             {
               "id": "win-II",
-              "etiqueta": "II · Between 25 and 50%"
+              "etiqueta": "II · Between 25 and 50%",
+              "criterios": [
+                "Enough contact to tolerate dynamisation"
+              ]
             },
             {
               "id": "win-III",
-              "etiqueta": "III · More than 50%"
+              "etiqueta": "III · More than 50%",
+              "criterios": [
+                "There is no column left to share load",
+                "Static locking is mandatory"
+              ]
             },
             {
               "id": "win-IV",
-              "etiqueta": "IV · Segmental, no cortical contact"
+              "etiqueta": "IV · Segmental, no cortical contact",
+              "criterios": [
+                "The nail carries the whole load",
+                "Length and rotation depend entirely on the bolts"
+              ]
             }
           ]
         },
         {
           "id": "cl-mason",
           "pregunta": "Radial head · Mason",
+          "ayuda": "It separates what is treated functionally from what is fixed and from what is replaced. Type IV obliges you to look for the associated ligament injury.",
           "opciones": [
             {
               "id": "mas-I",
-              "etiqueta": "I · Undisplaced"
+              "etiqueta": "I · Undisplaced",
+              "criterios": [
+                "Menos de 2 mm",
+                "Early mobilisation"
+              ]
             },
             {
               "id": "mas-II",
-              "etiqueta": "II · Displaced, single fragment"
+              "etiqueta": "II · Displaced, single fragment",
+              "criterios": [
+                "Screw fixation if it blocks rotation",
+                "Check for mechanical block under anaesthesia"
+              ]
             },
             {
               "id": "mas-III",
-              "etiqueta": "III · Comminuted"
+              "etiqueta": "III · Comminuted",
+              "criterios": [
+                "Not reconstructable: consider a radial head replacement",
+                "Isolated excision is contraindicated if there is instability"
+              ]
             },
             {
               "id": "mas-IV",
-              "etiqueta": "IV · With elbow dislocation"
+              "etiqueta": "IV · With elbow dislocation",
+              "criterios": [
+                "Look for the terrible triad: coronoid and lateral collateral ligament",
+                "The radial head is a secondary stabiliser that here becomes primary"
+              ]
             }
           ]
         },
         {
           "id": "cl-lauge-hansen",
           "pregunta": "Ankle · Lauge-Hansen mechanism",
+          "ayuda": "It classifies by mechanism, and the mechanism is undone in reverse: it is the one that tells you the reduction manoeuvre. It connects with Step 9.",
           "opciones": [
             {
               "id": "lh-sa",
-              "etiqueta": "Supination-adduction"
+              "etiqueta": "Supination-adduction",
+              "criterios": [
+                "Transverse fibular line below the syndesmosis",
+                "Vertical line of the medial malleolus: it calls for a buttress, not friction screws",
+                "Reduction: pronate and abduct"
+              ]
             },
             {
               "id": "lh-ser",
-              "etiqueta": "Supination-external rotation"
+              "etiqueta": "Supination-external rotation",
+              "criterios": [
+                "The commonest pattern",
+                "Spiral fibular line at the level of the syndesmosis",
+                "Reduction: internal rotation, the opposite of the injuring mechanism"
+              ]
             },
             {
               "id": "lh-pa",
-              "etiqueta": "Pronation-abduction"
+              "etiqueta": "Pronation-abduction",
+              "criterios": [
+                "Comminuted lateral fibula, above the syndesmosis",
+                "Transverse avulsion line of the medial malleolus"
+              ]
             },
             {
               "id": "lh-per",
-              "etiqueta": "Pronation-external rotation"
+              "etiqueta": "Pronation-external rotation",
+              "criterios": [
+                "High fibula: rule out a Maisonneuve by palpating the whole fibula",
+                "Sindesmosis casi siempre lesionada"
+              ]
+            }
+          ]
+        }
+      ],
+      "derivados": [
+        {
+          "id": "codigo",
+          "titulo": "AO/OTA 2018 code",
+          "nota": "No hyphen: the 2018 revision removed it. Order: bone · location · type · group · subgroup · (qualifications) · [modifiers]."
+        },
+        {
+          "id": "oficial",
+          "titulo": "Official description from the compendium"
+        },
+        {
+          "id": "regionales",
+          "titulo": "What the regional classification adds",
+          "reglas": [
+            {
+              "texto": "Schatzker as modified by Kfuri I · Pure lateral split — A lateral wedge with no depression. Hueso joven y denso"
+            },
+            {
+              "texto": "Schatzker as modified by Kfuri II · Lateral split-depression — The commonest pattern. It demands elevating the depression and filling the defect"
+            },
+            {
+              "texto": "Schatzker as modified by Kfuri III · Pure lateral depression — No split line: ligamentotaxis does not lift it. Elevation through a metaphyseal window and grafting"
+            },
+            {
+              "texto": "Schatzker as modified by Kfuri IV · Medial plateau — The medial plateau carries most of the load: worse prognosis. It may be a reduced knee dislocation: exclude peroneal nerve and vascular injury"
+            },
+            {
+              "texto": "Schatzker as modified by Kfuri V · Bicondylar — Both plateaus, with the shaft still in continuity"
+            },
+            {
+              "texto": "Schatzker as modified by Kfuri VI · Bicondylar with metaphyseal-diaphyseal dissociation — The articular block is separated from the shaft: that is two zones. Partes blandas casi siempre comprometidas"
+            },
+            {
+              "texto": "Schatzker as modified by Kfuri · quadrants Anterolateral — The classic quadrant of the lateral split-depression. Reached through the lateral approach, with the patient supine"
+            },
+            {
+              "texto": "Schatzker as modified by Kfuri · quadrants Anteromedial — Depression or split of the anterior half of the medial plateau. Reached through the medial approach; the lateral plate does not hold it"
+            },
+            {
+              "texto": "Schatzker as modified by Kfuri · quadrants Posterolateral — The hardest to reach: it lies behind the fibula and below the common peroneal nerve. A pure depression the AP radiograph does not show: it needs CT"
+            },
+            {
+              "texto": "Schatzker as modified by Kfuri · quadrants Posteromedial — It is the fragment most often forgotten and the one that most often fails. It subluxes in flexion: neither the lateral nor the anteromedial plate controls it"
+            },
+            {
+              "texto": "Garden Undisplaced · Garden I-II — Valgus impacted or complete without displacement. In situ fixation with screws or a sliding hip screw"
+            },
+            {
+              "texto": "Garden Displaced · Garden III-IV — Trabeculae broken or discontinuous. High risk of necrosis and non-union"
+            },
+            {
+              "texto": "Pauwels III · more than 50° — An almost vertical line: the load shears instead of compressing. Parallel screws then work in shear and give way"
+            },
+            {
+              "texto": "Neer 1 part · undisplaced — No fragment exceeds 1 cm or 45°. Tratamiento casi siempre conservador"
+            },
+            {
+              "texto": "Neer 2 parts · greater tuberosity — Eccentric pull of the cuff: a tension band setting. A lower surgical threshold in the active patient, around 5 mm"
+            },
+            {
+              "texto": "Neer 3 parts — Head, one tuberosity and shaft"
+            },
+            {
+              "texto": "Neer 4 parts — High risk of head necrosis. Consider reverse arthroplasty in the older patient"
+            },
+            {
+              "texto": "Neer Fracture-dislocation — The head is out of the glenoid: a relative emergency"
+            },
+            {
+              "texto": "Hertel · predictors of ischaemia Metaphyseal head extension shorter than 8 mm — It is the strongest predictor of ischaemia. It is measured at the calcar, on the head fragment"
+            },
+            {
+              "texto": "Hertel · predictors of ischaemia Medial hinge disrupted, displaced more than 2 mm — Without a medial hinge there is no supply from the anterior circumflex artery"
+            },
+            {
+              "texto": "Hertel · predictors of ischaemia Basicervical fracture line — It cuts the supply to the head below the anatomical neck"
+            },
+            {
+              "texto": "Hawkins II · With subtalar subluxation or dislocation — Risk of 20 to 50%"
+            },
+            {
+              "texto": "Hawkins III · Subtalar and tibiotalar dislocation — Risk above 80%. The body is extruded: urgent reduction, and watch the skin"
+            },
+            {
+              "texto": "Hawkins IV · Adds talonavicular dislocation — Necrosis is virtually certain"
+            },
+            {
+              "texto": "Sanders III · Three fragments — Two fracture lines, with a depressed central fragment"
+            },
+            {
+              "texto": "Sanders IV · Four or more fragments — Comminution of the posterior facet. Worse functional prognosis: consider primary subtalar arthrodesis"
+            },
+            {
+              "texto": "Letournel and Judet Posterior wall — The commonest. Kocher-Langenbeck, en prono o lateral"
+            },
+            {
+              "texto": "Letournel and Judet Posterior column — Kocher-Langenbeck"
+            },
+            {
+              "texto": "Letournel and Judet Anterior wall — Ilioinguinal or anterior intrapelvic, supine"
+            },
+            {
+              "texto": "Letournel and Judet Anterior column — Ilioinguinal or anterior intrapelvic"
+            },
+            {
+              "texto": "Letournel and Judet Transverse — It separates the acetabulum into upper and lower halves. Puede exigir abordaje combinado o extensible"
+            },
+            {
+              "texto": "Letournel and Judet T-shaped — Transverse plus a vertical line. One of the hardest: almost always two windows"
+            },
+            {
+              "texto": "Letournel and Judet Posterior column with posterior wall — Kocher-Langenbeck; check the sciatic nerve from the start"
+            },
+            {
+              "texto": "Letournel and Judet Transverse with posterior wall — The commonest associated pattern"
+            },
+            {
+              "texto": "Letournel and Judet Anterior column with posterior hemitransverse — Usually through an anterior route, with indirect control of the posterior one"
+            },
+            {
+              "texto": "Letournel and Judet Both-column — No articular fragment stays attached to the axial skeleton. The spur sign on the obturator oblique confirms it"
+            },
+            {
+              "texto": "Young and Burgess Lateral compression II — It adds a bucket-handle fracture of the iliac wing"
+            },
+            {
+              "texto": "Young and Burgess Lateral compression III · windswept — Lateral compression on one side and opening on the other. Mortalidad alta"
+            },
+            {
+              "texto": "Young and Burgess Anteroposterior compression II · open book — Diastasis over 2.5 cm with the anterior sacroiliac ligaments torn. It increases the pelvic volume: urgent binder or external fixator"
+            },
+            {
+              "texto": "Young and Burgess Anteroposterior compression III — Complete dissociation of the hemipelvis. The pattern that bleeds and transfuses most"
+            },
+            {
+              "texto": "Young and Burgess Vertical shear — Cranial displacement of the hemipelvis. Vertical instability: a binder does not control it"
+            },
+            {
+              "texto": "Young and Burgess Combined mechanism — Mixed patterns, usually from a fall from height"
+            },
+            {
+              "texto": "Tile · AO pelvis B · Rotationally unstable, vertically stable — Open book or lateral compression. Anterior fixation is usually enough"
+            },
+            {
+              "texto": "Tile · AO pelvis C · Rotationally and vertically unstable — Complete disruption of the posterior complex. It demands posterior fixation: iliosacral screws or a plate"
+            },
+            {
+              "texto": "Vancouver B1 · Around the stem, stem well fixed — Fixation with a locked plate, cables or a combination"
+            },
+            {
+              "texto": "Vancouver B2 · Stem loose, adequate bone stock — The operation is to revise the stem, not to fix the fracture. Putting a plate over a loose stem is guaranteed failure"
+            },
+            {
+              "texto": "Vancouver B3 · Stem loose and poor bone stock — Revision with a long stem, allograft or megaprosthesis"
+            },
+            {
+              "texto": "Vancouver C · Distal to the tip of the stem — It is treated as a distal femoral fracture. Beware of the zone between implants: overlap the plate with the stem"
+            },
+            {
+              "texto": "Winquist and Hansen 0 · No comminution — Trazo simple, contacto cortical completo"
+            },
+            {
+              "texto": "Winquist and Hansen I · Small fragment — Less than 25% of the circumference. It still shares load"
+            },
+            {
+              "texto": "Winquist and Hansen II · Between 25 and 50% — Enough contact to tolerate dynamisation"
+            },
+            {
+              "texto": "Winquist and Hansen III · More than 50% — There is no column left to share load. Static locking is mandatory"
+            },
+            {
+              "texto": "Winquist and Hansen IV · Segmental, no cortical contact — The nail carries the whole load. Length and rotation depend entirely on the bolts"
+            },
+            {
+              "texto": "Mason III · Comminuted — Not reconstructable: consider a radial head replacement. Isolated excision is contraindicated if there is instability"
+            },
+            {
+              "texto": "Mason IV · With elbow dislocation — Look for the terrible triad: coronoid and lateral collateral ligament. The radial head is a secondary stabiliser that here becomes primary"
+            },
+            {
+              "texto": "Lauge-Hansen Supination-adduction — Transverse fibular line below the syndesmosis. Vertical line of the medial malleolus: it calls for a buttress, not friction screws"
+            },
+            {
+              "texto": "Lauge-Hansen Supination-external rotation — The commonest pattern. Spiral fibular line at the level of the syndesmosis"
+            },
+            {
+              "texto": "Lauge-Hansen Pronation-abduction — Comminuted lateral fibula, above the syndesmosis. Transverse avulsion line of the medial malleolus"
+            },
+            {
+              "texto": "Lauge-Hansen Pronation-external rotation — High fibula: rule out a Maisonneuve by palpating the whole fibula. Sindesmosis casi siempre lesionada"
             }
           ]
         }

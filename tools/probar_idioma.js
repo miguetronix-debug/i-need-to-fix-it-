@@ -103,15 +103,16 @@ if (conIngles.length) {
 // 6 · la banda dice la verdad y desaparece sola cuando ya no hace falta
 const textoBanner = vm.runInThisContext('textoBanner');
 const pasosTraducidos = vm.runInThisContext('pasosTraducidos');
+const DISPONIBLES_TEST = vm.runInThisContext('DISPONIBLES');
 S.idioma = 'es';
 ok('En español no se muestra ninguna banda', textoBanner() === '');
 S.idioma = 'en';
 const hechos = pasosTraducidos();
-ok('La banda nombra los pasos ya traducidos',
-   hechos.every(n => textoBanner().indexOf(String(n)) >= 0),
-   hechos + ' → ' + textoBanner().slice(0, 90));
-ok('La banda sigue avisando de que quedan pasos en español',
-   /still in Spanish/.test(textoBanner()), textoBanner().slice(0, 60));
+ok('La banda reconoce que están los diez pasos',
+   hechos.length === DISPONIBLES_TEST.length,
+   hechos.length + ' de ' + DISPONIBLES_TEST.length);
+ok('Con todo traducido, la banda ya no avisa de nada pendiente',
+   !/still in Spanish/.test(textoBanner()), textoBanner().slice(0, 70));
 
 // 7 · el idioma elegido sobrevive
 S.idioma = 'es';
@@ -121,9 +122,9 @@ ok('El idioma queda guardado', localStorage.getItem('infi-idioma-v1') === 'en',
 ok('El atributo lang del documento se actualiza',
    document.documentElement.lang === 'en', document.documentElement.lang);
 
-// 8 · el contenido clínico NO se tradujo: sigue en español, y eso es lo esperado
+// 8 · el español original nunca se toca, pase lo que pase con la traducción
 const p1 = DATA.pasos[1];
-ok('El contenido clínico sigue en español (Fase 2 pendiente)',
+ok('El JSON español original queda intacto',
    /[áéíóúñ¿]/.test(p1.decisiones[0].pregunta), p1.decisiones[0].pregunta.slice(0, 40));
 
 // 9 · el Paso 2 sí cambia de idioma: su vocabulario es el de la AO
@@ -210,11 +211,14 @@ for (const n of pasosTraducidos()) {
   S.idioma = 'en';
 }
 
-// y lo que NO debe cambiar, no cambia
+// la Fase 2 está cerrada: los diez pasos tienen que estar traducidos
 S.idioma = 'en';
-ok('El Paso 1 sigue en español (Fase 2 pendiente)',
-   esEspanol(pasoDe(1).decisiones[0].pregunta),
-   pasoDe(1).decisiones[0].pregunta.slice(0, 40));
+const sinTraducir = DISPONIBLES_TEST.filter(n => !(DATA.trad && DATA.trad.en && DATA.trad.en[String(n)]));
+ok('Los diez pasos tienen traducción', sinTraducir.length === 0,
+   'faltan: ' + sinTraducir.join(', '));
+ok('Ningún paso conserva su título en español',
+   DISPONIBLES_TEST.every(n => !esEspanol(pasoDe(n).titulo)),
+   DISPONIBLES_TEST.filter(n => esEspanol(pasoDe(n).titulo)).join(', '));
 
 console.log('\n' + '='.repeat(58));
 console.log(fallos ? `${fallos} comprobación(es) fallida(s)` : 'Bilingüe correcto: la Fase 1 hace lo que dice');

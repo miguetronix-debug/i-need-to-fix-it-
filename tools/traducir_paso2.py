@@ -21,7 +21,12 @@ Uso:  python3 tools/traducir_paso2.py && python3 tools/build_prototipo.py
 """
 
 import json
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _glosario_paso2_en import (AYUDAS, CRITERIOS, IDENTIFICADORES,   # noqa: E402
+                                NOMBRES, DERIVADOS_TITULOS, NOTA_CODIGO)
 
 RAIZ = Path(__file__).resolve().parent.parent
 SALIDA = RAIZ / "content" / "traducciones_en.json"
@@ -187,20 +192,71 @@ def main():
         if did not in PREGUNTAS:
             continue
         entrada = {"id": did, "pregunta": PREGUNTAS[did]}
+        if did in AYUDAS:
+            entrada["ayuda"] = AYUDAS[did]
         tabla = etiquetas.get(did)
         if tabla:
-            entrada["opciones"] = [{"id": o["id"], "etiqueta": tabla[o["id"]]}
-                                   for o in d["opciones"] if o["id"] in tabla]
+            entrada["opciones"] = []
+            for o in d["opciones"]:
+                if o["id"] not in tabla:
+                    continue
+                op = {"id": o["id"], "etiqueta": tabla[o["id"]]}
+                # Los criterios se traducen por su texto español, no por posición:
+                # así el mismo criterio reutilizado en dos opciones se traduce una vez.
+                if o.get("criterios"):
+                    op["criterios"] = [CRITERIOS.get(c, c) for c in o["criterios"]]
+                entrada["opciones"].append(op)
             faltan = [o["id"] for o in d["opciones"] if o["id"] not in tabla]
             if faltan and did not in estructural:
                 huecos.append((did, faltan))
+        else:
+            # decisiones sin tabla de etiquetas (tipo, grupo, subgrupo…): sus
+            # etiquetas son código, pero algunas etiquetas y criterios son prosa
+            ops = []
+            for o in d["opciones"]:
+                op = {}
+                if o["etiqueta"] in IDENTIFICADORES:
+                    op["etiqueta"] = IDENTIFICADORES[o["etiqueta"]]
+                if o.get("criterios") and any(c in CRITERIOS for c in o["criterios"]):
+                    op["criterios"] = [CRITERIOS.get(c, c) for c in o["criterios"]]
+                if op:
+                    op["id"] = o["id"]
+                    ops.append(op)
+            if ops:
+                entrada["opciones"] = ops
         decisiones.append(entrada)
+
+    # El derivado «regionales» se REGENERA en inglés con la misma fórmula que
+    # usa build_clasificaciones.py en español, en vez de mantenerse a mano: así
+    # añadir o quitar una clasificación no descoloca nada.
+    clas = json.loads((RAIZ / "content" / "clasificaciones.json").read_text(encoding="utf-8"))
+    reglas_en, sin_nombre = [], set()
+    for c in clas["clasificaciones"]:
+        nom = NOMBRES.get(c["nombre"])
+        if nom is None:
+            sin_nombre.add(c["nombre"]); nom = c["nombre"]
+        etq = CLASIFICACIONES.get("cl-" + c["id"], {})
+        for g in c["grados"]:
+            if not g.get("emite"):
+                continue
+            cr = [CRITERIOS.get(x, x) for x in g["criterios"]]
+            texto = nom + " " + etq.get(g["id"], g["etiqueta"]) + " — " + cr[0]
+            if len(cr) > 1:
+                texto += ". " + cr[1]
+            reglas_en.append({"texto": texto})
+    derivados_en = [
+        {"id": "codigo", "titulo": DERIVADOS_TITULOS["codigo"], "nota": NOTA_CODIGO},
+        {"id": "oficial", "titulo": DERIVADOS_TITULOS["oficial"]},
+        {"id": "regionales", "titulo": DERIVADOS_TITULOS["regionales"], "reglas": reglas_en},
+    ]
+    if sin_nombre:
+        print("   AVISO — clasificaciones sin nombre inglés:", ", ".join(sorted(sin_nombre)))
 
     salida = {"_nota": "Inglés del Paso 2, generado por tools/traducir_paso2.py. Es un calco "
                        "parcial del paso: solo los campos traducidos, que el motor funde sobre "
                        "el español. Los segmentos vienen del compendio AO original. "
                        "No editar a mano: editar el script.",
-              "pasos": {"2": {"decisiones": decisiones}}}
+              "pasos": {"2": {"decisiones": decisiones, "derivados": derivados_en}}}
 
     SALIDA.write_text(json.dumps(salida, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     total = sum(len(d.get("opciones", [])) for d in decisiones)
