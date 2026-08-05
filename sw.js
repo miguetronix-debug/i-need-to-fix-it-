@@ -1,7 +1,7 @@
 /* Service worker de «I Need To Fix It».
    Estrategia: la app y sus figuras se guardan la primera vez y a partir de ahí
    se sirven del caché. Es lo que permite usarla en quirófano sin conexión. */
-const CACHE='infi-v20260805-fe86e24154';
+const CACHE='infi-v20260805-18318e7d41';
 // En el sitio publicado el app se llama index.html; prototipo.html solo existe
 // en el repositorio. Y como addAll es atómico, basta con que uno de estos
 // devuelva 404 para que la instalación entera falle y el modo sin conexión no

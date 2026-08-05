@@ -1132,7 +1132,7 @@ function pintarBarra(){
   const ant=document.getElementById('ant');
   ant.disabled = enResumen || !DATA.pasos[S.paso-1];
   ant.onclick = ()=>irPaso(S.paso-1);
-  document.querySelectorAll('.pchip').forEach(c=>{
+  document.querySelectorAll('.pchip[data-n]').forEach(c=>{
     const k=+c.dataset.n;
     c.classList.toggle('on',!enResumen&&k===S.paso);
     c.classList.toggle('hecho',Object.keys(S.porPaso[k]||{}).length>0);
@@ -1363,7 +1363,12 @@ document.getElementById('titulo').textContent=
     return '<div class="ev"><span class="niv">'+esc(TR('nivel'))+' '+esc(e.nivel)+'</span>'+esc(e.afirmacion)+
            (rr.length?'<div class="ref">'+rr.join('<br>')+'</div>':'')+'</div>';
   }).join('');
-  document.querySelectorAll('.pchip').forEach(c=>{
+  // OJO con el selector: tiene que ser «.pchip[data-n]», no «.pchip».
+  // El chip de «Casos por fallo» también es un .pchip pero NO lleva data-n, así
+  // que con el selector amplio se le asignaba onclick=()=>irPaso(NaN), lo que
+  // borraba su verCasos() y hacía que al pulsarlo no ocurriera absolutamente
+  // nada: irPaso(NaN) sale por la primera línea sin decir ni pío.
+  document.querySelectorAll('.pchip[data-n]').forEach(c=>{
     const n=+c.dataset.n;
     c.onclick=()=>irPaso(n);
   });

@@ -30,9 +30,26 @@ const nodo = id => (cache[id] = cache[id] || {
   addEventListener: noop, insertAdjacentHTML: noop,
   querySelector: () => nodo('x'), querySelectorAll: () => [],
 });
+// Chips simulados como en el HTML: los diez de paso llevan data-n; el de casos
+// NO, y su único enlace con la lógica es el onclick que trae de fábrica.
+const chipCasos = nodo('chipcasos');
+chipCasos.dataset = {};
+chipCasos.onclick = () => vm.runInThisContext('verCasos')();
+const chipsPaso = [];
+for (let n = 1; n <= 10; n++) {
+  const c = nodo('pchip-' + n);
+  c.dataset = { n: String(n) };
+  chipsPaso.push(c);
+}
+const TODOS = [chipCasos].concat(chipsPaso);
+
 global.document = {
   getElementById: id => nodo(id), querySelector: () => nodo('q'),
-  querySelectorAll: () => [], createElement: () => nodo('n'),
+  // el selector importa: «.pchip» los devuelve todos, «.pchip[data-n]» solo los
+  // de paso. Ese matiz es exactamente el que provocó el fallo.
+  querySelectorAll: sel => sel === '.pchip' ? TODOS
+                         : sel === '.pchip[data-n]' ? chipsPaso : [],
+  createElement: () => nodo('n'),
   addEventListener: noop, body: nodo('body'), documentElement: nodo('html'), title: '',
 };
 global.window = { scrollTo: noop, addEventListener: noop, print: noop,
@@ -64,7 +81,23 @@ function ok(nombre, cond, detalle) {
 
 console.log('\nBiblioteca: ' + CASOS.length + ' casos\n');
 
-// 1 · pulsar el chip «Casos por fallo»
+// 0 · EL FALLO QUE MOTIVÓ ESTA PRUEBA
+// El chip de casos comparte la clase .pchip con los de paso pero no lleva
+// data-n. Con el selector amplio, el render le asignaba onclick=()=>irPaso(NaN)
+// y su verCasos() desaparecía: al pulsarlo no ocurría nada. Aquí se PULSA el
+// chip, no se llama a la función, que es lo único que lo detecta.
+vm.runInThisContext('irPaso')(5);          // fuerza un render completo
+S.vista = 'paso';
+chipCasos.onclick();
+ok('Pulsar el chip de casos lleva a la biblioteca (no lo pisa el render)',
+   S.vista === 'casos',
+   'vista = ' + S.vista + ' · si es «paso», el render le borró el onclick');
+
+const chip3 = chipsPaso[2];
+chip3.onclick();
+ok('Los chips de paso siguen funcionando', S.paso === 3, 'paso ' + S.paso);
+
+// 1 · la vista de la biblioteca
 verCasos();
 ok('Pulsar el chip lleva a la biblioteca', S.vista === 'casos', S.vista);
 const lista = pintarCasos();
