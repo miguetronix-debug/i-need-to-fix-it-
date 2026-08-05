@@ -120,6 +120,50 @@ const p1 = DATA.pasos[1];
 ok('El contenido clínico sigue en español (Fase 2 pendiente)',
    /[áéíóúñ¿]/.test(p1.decisiones[0].pregunta), p1.decisiones[0].pregunta.slice(0, 40));
 
+// 9 · el Paso 2 sí cambia de idioma: su vocabulario es el de la AO
+const preguntaDe = vm.runInThisContext('preguntaDe');
+const etiquetaDe = vm.runInThisContext('etiquetaDe');
+const p2 = DATA.pasos[2];
+const dHueso = p2.decisiones.find(d => d.id === 'hueso');
+const dSeg   = p2.decisiones.find(d => d.id === 'segmento');
+const dSch   = p2.decisiones.find(d => d.id === 'cl-schatzker');
+
+S.idioma = 'es';
+const pEs = preguntaDe(2, dHueso), hEs = etiquetaDe(2, 'hueso', dHueso.opciones[0]);
+S.idioma = 'en';
+const pEn = preguntaDe(2, dHueso), hEn = etiquetaDe(2, 'hueso', dHueso.opciones[0]);
+ok('La pregunta del Paso 2 se traduce', pEs !== pEn, pEs + ' / ' + pEn);
+ok('«Which bone?» en inglés', pEn === 'Which bone?', pEn);
+ok('El hueso se traduce', hEn.indexOf('Humerus') >= 0, hEn);
+
+const segEn = etiquetaDe(2, 'segmento', dSeg.opciones[0]);
+ok('El segmento viene del compendio AO', segEn.indexOf('Humerus') >= 0, segEn);
+
+if (dSch) {
+  const schEn = etiquetaDe(2, 'cl-schatzker', dSch.opciones[0]);
+  ok('Las clasificaciones regionales se traducen', /split/i.test(schEn), schEn);
+}
+
+// ninguna opción traducible del Paso 2 se quedó en español
+const tr = (DATA.trad && DATA.trad.en && DATA.trad.en['2']) || { decisiones: {} };
+const estructural = ['tipo','grupo','subgrupo','identificador','calificaciones'];
+let sinPareja = [];
+for (const d of p2.decisiones) {
+  if (estructural.indexOf(d.id) >= 0) continue;
+  const td = tr.decisiones[d.id];
+  if (!td) { sinPareja.push(d.id + ' (decisión entera)'); continue; }
+  for (const o of d.opciones)
+    if (!td.opciones || td.opciones[o.id] === undefined) sinPareja.push(d.id + '/' + o.id);
+}
+ok('Ninguna opción traducible del Paso 2 quedó en español',
+   sinPareja.length === 0, sinPareja.length + ': ' + sinPareja.slice(0, 5).join(', '));
+
+// y lo que NO debe cambiar, no cambia: los pasos que son voz del autor
+S.idioma = 'en';
+const d1 = DATA.pasos[1].decisiones[0];
+ok('El Paso 1 sigue en español (Fase 2 pendiente)',
+   preguntaDe(1, d1) === d1.pregunta, preguntaDe(1, d1).slice(0, 40));
+
 console.log('\n' + '='.repeat(58));
 console.log(fallos ? `${fallos} comprobación(es) fallida(s)` : 'Bilingüe correcto: la Fase 1 hace lo que dice');
 process.exit(fallos ? 1 : 0);

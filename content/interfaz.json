@@ -118,7 +118,8 @@
         "Abordaje",
         "Técnicas",
         "Complicaciones"
-      ]
+      ],
+      "tira_por_fragmento": "Tornillos por fragmento · {a} y {b}"
     },
     "en": {
       "_etiqueta": "EN",
@@ -237,7 +238,8 @@
         "Approach",
         "Techniques",
         "Complications"
-      ]
+      ],
+      "tira_por_fragmento": "Screws per fragment · {a} and {b}"
     }
   }
 }

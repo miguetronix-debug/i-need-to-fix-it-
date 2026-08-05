@@ -48,7 +48,13 @@ def cargar():
     # así añadir un idioma es editar un JSON y no tocar el generador.
     int_path = RAIZ / "content" / "interfaz.json"
     idiomas = json.loads(int_path.read_text(encoding="utf-8"))["idiomas"] if int_path.exists() else {}
-    return pasos, refs, codigos, casos, idiomas
+    # Traducciones del CONTENIDO (preguntas y etiquetas), por idioma. Lo que no
+    # esté aquí se muestra en español: es preferible a dejar el hueco vacío.
+    trad = {}
+    for f_tr in sorted((RAIZ / "content").glob("traducciones_*.json")):
+        lang = f_tr.stem.split("_")[-1]
+        trad[lang] = json.loads(f_tr.read_text(encoding="utf-8")).get("pasos", {})
+    return pasos, refs, codigos, casos, idiomas, trad
 
 
 CSS = """
@@ -352,6 +358,21 @@ const CLAVE='infi-caso-v1', CLAVE_Q='infi-quiz-v1', CLAVE_L='infi-idioma-v1';
    español, y en inglés se avisa de ello con una banda arriba. */
 const IDIOMAS=DATA.idiomas||{};
 const VERSION=DATA.version||'';
+
+/* Traducción del CONTENIDO. Solo el Paso 2 la tiene por ahora, porque su
+   vocabulario es el de la AO y nació en inglés; el resto es la voz del autor
+   y espera a la Fase 2. Lo que falte se muestra en español. */
+function trDec(n, did){
+  if(S.idioma==='es') return null;
+  const t=DATA.trad&&DATA.trad[S.idioma]; if(!t) return null;
+  const p=t[String(n)]; if(!p||!p.decisiones) return null;
+  return p.decisiones[did]||null;
+}
+function preguntaDe(n, d){ const x=trDec(n,d.id); return (x&&x.pregunta)||d.pregunta; }
+function etiquetaDe(n, did, o){
+  const x=trDec(n,did);
+  return (x&&x.opciones&&x.opciones[o.id])||o.etiqueta;
+}
 function TR(k, huecos){
   const d=IDIOMAS[S.idioma]||{}, base=IDIOMAS.es||{};
   let s = (k in d && d[k]!=='') ? d[k] : (base[k]!==undefined ? base[k] : k);
@@ -663,7 +684,7 @@ function descripcionCompleta(){
   }
   frase=frase.charAt(0).toUpperCase()+frase.slice(1);
   // calificaciones y modificadores, en palabras
-  const et=id=>{ for(const dd of P.decisiones){ const o=dd.opciones.find(x=>x.id===id); if(o) return o.etiqueta; } return ''; };
+  const et=id=>{ for(const dd of P.decisiones){ const o=dd.opciones.find(x=>x.id===id); if(o) return etiquetaDe(P.numero,dd.id,o); } return ''; };
   const q=(S.dec['calificaciones']||[]).map(et).map(x=>x.replace(/^\([a-z]\)\s*/,'')).filter(Boolean);
   if(q.length) frase+=' — '+q.join('; ');
   const m=(S.dec['modificadores']||[]).map(et).map(x=>x.replace(/^\[[^\]]+\]\s*/,'')).filter(Boolean);
@@ -821,7 +842,7 @@ function tiraPintar(){
   h+='</div><div class="tmets">'+
     marca(c.densidad, objDen, false, TR('tira_densidad',{v:c.densidad.toFixed(2).replace('.',S.idioma==='es'?',':'.')}))+
     marca(c.cobertura, objCob, true, TR('tira_cobertura',{v:c.cobertura.toFixed(1).replace('.',S.idioma==='es'?',':'.')}))+
-    marca(Math.min(c.izq,c.der), 3, true, 'Tornillos por fragmento · '+c.izq+' y '+c.der)+
+    marca(Math.min(c.izq,c.der), 3, true, TR('tira_por_fragmento',{a:c.izq,b:c.der}))+
     (c.trabajo!==null? marca(c.trabajo, 3, true, TR('tira_trabajo',{n:c.trabajo}))
                      : '<div class="tmet mal"><b>'+esc(TR('tira_trabajo_sin'))+'</b><span>'+esc(TR('tira_trabajo_faltan'))+'</span></div>')+
   '</div><p class="tnota">'+
@@ -856,14 +877,14 @@ function render(){
     // contenido más valioso (las cifras, la estructura en riesgo) no se ve.
     const chip=(multi||vis.length>12)&&!abierto;
     const hayCrit=vis.some(o=>(o.criterios||[]).length);
-    h+='<section><div class="qrow"><h2>'+esc(d.pregunta)+'</h2>'+
+    h+='<section><div class="qrow"><h2>'+esc(preguntaDe(P.numero,d))+'</h2>'+
        (hayCrit?'<button class="vermas" onclick="verCrit(\\''+d.id+'\\')">'+(abierto?TR('ocultar'):TR('ver_mas'))+'</button>':'')+
        '</div>';
     if(d.ayuda && (abierto||S.modo==='estudio')) h+='<p class="ayuda">'+esc(d.ayuda)+'</p>';
     h+='<div class="opts'+(chip?' chips':'')+'">';
     for(const o of vis){
       const sel=marcado(d.id,o.id);
-      h+='<button class="opt'+(sel?' sel':'')+(chip?' chip':'')+'" onclick="pick(\\''+d.id+'\\',\\''+o.id+'\\')"><b>'+esc(o.etiqueta)+
+      h+='<button class="opt'+(sel?' sel':'')+(chip?' chip':'')+'" onclick="pick(\\''+d.id+'\\',\\''+o.id+'\\')"><b>'+esc(etiquetaDe(P.numero,d.id,o))+
          (sug===o.id&&!sel?' <span style="font-weight:400;font-size:11.5px;color:var(--acc)">'+esc(TR('sugerida'))+'</span>':'')+'</b>'+
          (abierto?'<ul>'+(o.criterios||[]).map(c=>'<li>'+esc(c)+'</li>').join('')+'</ul>':'')+'</button>';
     }
@@ -885,7 +906,7 @@ function render(){
   const doctrina=todas.filter(a=>a.siempre), al=todas.filter(a=>!a.siempre);
   document.getElementById('principio').innerHTML = doctrina.length
     ? '<details class="princ"'+(S.modo==='estudio'?' open':'')+'><summary>'+esc(TR('principio_del_paso',{n:P.numero}))+
-      ' · '+doctrina.length+(doctrina.length===1?' idea que no conviene perder de vista':' ideas que no conviene perder de vista')+
+      ' · '+esc(doctrina.length===1?TR('idea_1'):TR('idea_n',{n:doctrina.length}))+
       '</summary><div class="dbody">'+doctrina.map(a=>'<div class="pidea"><b>'+esc(a.titulo)+'</b><p>'+esc(a.texto)+'</p></div>').join('')+
       '</div></details>'
     : '';
@@ -900,9 +921,9 @@ function render(){
     if(!visible(d)) continue;
     const v=S.dec[d.id]; if(!v) continue;
     const et=Array.isArray(v)
-      ? v.map(id=>{const o=d.opciones.find(x=>x.id===id); return o?o.etiqueta:'';}).filter(Boolean).join(' · ')
-      : (d.opciones.find(x=>x.id===v)||{}).etiqueta;
-    if(et) filas.push('<div class="prow"><span>'+esc(d.pregunta)+'</span><span>'+esc(et)+'</span></div>');
+      ? v.map(id=>{const o=d.opciones.find(x=>x.id===id); return o?etiquetaDe(P.numero,d.id,o):'';}).filter(Boolean).join(' · ')
+      : (function(){const o=d.opciones.find(x=>x.id===v); return o?etiquetaDe(P.numero,d.id,o):'';})();
+    if(et) filas.push('<div class="prow"><span>'+esc(preguntaDe(P.numero,d))+'</span><span>'+esc(et)+'</span></div>');
   }
   const bloqueantes=al.filter(a=>a.bloqueante);
   const der=derivados().map(d=>'<div class="deriv'+(d.destacado?' big':'')+'"><b>'+esc(d.titulo)+' <i>· derivado</i></b>'+
@@ -1089,9 +1110,9 @@ function planCompleto(){
     for(const dd of p.decisiones){
       const v=d[dd.id]; if(!v||(Array.isArray(v)&&!v.length)) continue;
       const et=Array.isArray(v)
-        ? v.map(id=>(dd.opciones.find(x=>x.id===id)||{}).etiqueta).filter(Boolean).join(' · ')
-        : (dd.opciones.find(x=>x.id===v)||{}).etiqueta;
-      if(et) filas.push({q:dd.pregunta,r:et});
+        ? v.map(id=>{const o=dd.opciones.find(x=>x.id===id); return o?etiquetaDe(n,dd.id,o):'';}).filter(Boolean).join(' · ')
+        : (function(){const o=dd.opciones.find(x=>x.id===v); return o?etiquetaDe(n,dd.id,o):'';})();
+      if(et) filas.push({q:preguntaDe(n,dd),r:et});
     }
     // derivados y alertas se calculan en el contexto de ese paso
     const guardaP=P, guardaDec=S.dec, guardaPaso=S.paso;
@@ -1447,14 +1468,14 @@ def escribir_pwa(version_cache: str):
 
 
 def main():
-    pasos, refs, codigos, casos, idiomas = cargar()
+    pasos, refs, codigos, casos, idiomas, trad = cargar()
     hechos_v = sorted(pasos)
     version_txt = (f"Pasos {hechos_v[0]}-{hechos_v[-1]} de {len(TITULOS_10)}"
                    if hechos_v == list(range(hechos_v[0], hechos_v[-1] + 1))
                    else "Pasos " + ", ".join(map(str, hechos_v)))
     version_txt += " · " + MESES[FECHA.month - 1] + " de " + str(FECHA.year)
     data = json.dumps({"pasos": pasos, "refs": refs, "codigos": codigos, "casos": casos,
-                       "idiomas": idiomas, "version": version_txt},
+                       "idiomas": idiomas, "trad": trad, "version": version_txt},
                       ensure_ascii=False)
     data = data.replace("</", "<\\/")
 
