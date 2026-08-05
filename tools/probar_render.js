@@ -17,7 +17,9 @@ function nodo(id){ return {_id:id, get innerHTML(){return SALIDA[id]||''}, set i
   scrollIntoView:noop, querySelector:()=>nodo('x'), querySelectorAll:()=>[], parentNode:null, remove:noop}; }
 const cache={};
 global.document={ getElementById:id=>(cache[id]=cache[id]||nodo(id)), querySelector:()=>nodo('x'),
-  querySelectorAll:()=>[], createElement:()=>nodo('new'), addEventListener:noop, body:nodo('body') };
+  querySelectorAll:()=>[], createElement:()=>nodo('new'), addEventListener:noop, body:nodo('body'),
+  // el cambio de idioma escribe el atributo lang y el título del documento
+  documentElement:nodo('html'), title:'' };
 global.window={scrollTo:noop,addEventListener:noop,print:noop,matchMedia:()=>({matches:false,addListener:noop})};
 const mem={};
 global.localStorage={getItem:k=>k in mem?mem[k]:null,setItem:(k,v)=>{mem[k]=String(v)},removeItem:k=>{delete mem[k]}};

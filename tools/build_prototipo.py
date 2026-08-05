@@ -44,7 +44,11 @@ def cargar():
                for k, v in codigos.items()}
     casos_path = RAIZ / "content" / "casos.json"
     casos = json.loads(casos_path.read_text(encoding="utf-8"))["casos"] if casos_path.exists() else []
-    return pasos, refs, codigos, casos
+    # Cadenas de la interfaz. Separadas del código como el resto del contenido,
+    # así añadir un idioma es editar un JSON y no tocar el generador.
+    int_path = RAIZ / "content" / "interfaz.json"
+    idiomas = json.loads(int_path.read_text(encoding="utf-8"))["idiomas"] if int_path.exists() else {}
+    return pasos, refs, codigos, casos, idiomas
 
 
 CSS = """
@@ -76,6 +80,21 @@ header{border-bottom:1px solid var(--line);background:var(--card);position:stick
 .modos{display:flex;gap:0;border:1px solid var(--line2);border-radius:var(--r);overflow:hidden;flex-shrink:0}
 .modos button{background:none;border:0;padding:7px 13px;font:inherit;font-size:13px;color:var(--ink2);cursor:pointer}
 .modos button.on{background:var(--acc);color:#fff}
+
+/* Selector de idioma: dos letras, deliberadamente discreto. No compite con
+   los modos, que son la decisión frecuente; el idioma se elige una vez. */
+.hder{display:flex;gap:8px;align-items:center;flex-shrink:0}
+.idiomas{display:flex;border:1px solid var(--line2);border-radius:var(--r);overflow:hidden;flex-shrink:0}
+.idiomas button{background:none;border:0;padding:7px 9px;font:inherit;font-size:11.5px;
+                font-weight:600;letter-spacing:.4px;color:var(--ink3);cursor:pointer}
+.idiomas button.on{background:var(--ink2);color:#fff}
+
+/* Banda que advierte, en inglés, que el razonamiento clínico sigue en español.
+   Sin ella el app parecería a medio traducir, que es peor que decirlo. */
+.banner{background:#fff8e6;border:1px solid #e8d9a8;border-left:3px solid #d9a441;
+        border-radius:var(--r);padding:10px 13px;margin:12px 0 0;font-size:12.5px;
+        line-height:1.6;color:#6b5518}
+@media print{.idiomas,.banner{display:none}}
 
 .pasos{display:flex;gap:4px;padding:10px 0 12px;overflow-x:auto}
 .pchip{flex:0 0 auto;font-size:11px;padding:5px 9px;border-radius:20px;border:1px solid var(--line);
@@ -319,11 +338,64 @@ tr:last-child td{border-bottom:0}
 """
 
 JS = """
-const S={modo:'consulta',paso:1,dec:{},resp:{},porPaso:{},verCrit:{},vista:'paso'};
+const S={modo:'consulta',paso:1,dec:{},resp:{},porPaso:{},verCrit:{},vista:'paso',idioma:'es'};
 let P=DATA.pasos[1];
 const REFS=DATA.refs.referencias||{};
 const DISPONIBLES=Object.keys(DATA.pasos).map(Number).sort((a,b)=>a-b);
-const CLAVE='infi-caso-v1', CLAVE_Q='infi-quiz-v1';
+const CLAVE='infi-caso-v1', CLAVE_Q='infi-quiz-v1', CLAVE_L='infi-idioma-v1';
+
+/* -------------------------------------------------------------------- idioma
+   TR('clave', {hueco:valor}) devuelve la cadena en el idioma activo. Si una
+   clave falta en el idioma elegido cae al español en vez de escribir «undefined»
+   en la pantalla: es preferible una palabra en el idioma equivocado a un hueco.
+   El contenido clínico de los diez pasos NO pasa por aquí todavía: sigue en
+   español, y en inglés se avisa de ello con una banda arriba. */
+const IDIOMAS=DATA.idiomas||{};
+const VERSION=DATA.version||'';
+function TR(k, huecos){
+  const d=IDIOMAS[S.idioma]||{}, base=IDIOMAS.es||{};
+  let s = (k in d && d[k]!=='') ? d[k] : (base[k]!==undefined ? base[k] : k);
+  if(huecos) for(const h in huecos) s=s.split('{'+h+'}').join(huecos[h]);
+  return s;
+}
+function idiomasDisponibles(){ return Object.keys(IDIOMAS); }
+function idioma(l){
+  if(!IDIOMAS[l]) return;
+  S.idioma=l;
+  try{ localStorage.setItem(CLAVE_L,l); }catch(e){}
+  aplicarIdioma();
+  cargar();
+  window.scrollTo(0,0);
+}
+/* Lo que no se repinta en cada render —cabecera, aviso legal, atributo lang—
+   se refresca aquí una vez por cambio de idioma. */
+function aplicarIdioma(){
+  const d=IDIOMAS[S.idioma]||{};
+  document.documentElement.lang = d._html_lang || S.idioma;
+  document.title = TR('titulo_doc');
+  const md=document.querySelector('meta[name="description"]');
+  if(md) md.setAttribute('content', TR('descripcion_doc'));
+  const sub=document.querySelector('.brand small'); if(sub) sub.textContent=TR('marca_sub');
+  const bc=document.querySelector('.modos button[data-m="consulta"]'); if(bc) bc.textContent=TR('modo_consulta');
+  const be=document.querySelector('.modos button[data-m="estudio"]');  if(be) be.textContent=TR('modo_estudio');
+  const dh=document.getElementById('desh'); if(dh) dh.textContent=TR('desarrollo_h2');
+  const ds=document.getElementById('dessum'); if(ds) ds.textContent=TR('desarrollo_abrir');
+  const qh=document.getElementById('quizh'); if(qh) qh.textContent=TR('autoevaluacion_h2');
+  const av=document.getElementById('aviso');
+  if(av) av.innerHTML='<b>'+esc(TR('aviso_b'))+'</b> '+esc(TR('aviso',{version:VERSION}));
+  const ban=document.getElementById('banner');
+  if(ban){ const t=TR('banner_es'); ban.textContent=t; ban.classList.toggle('oculto', !t); }
+  const chips=(IDIOMAS[S.idioma]||{}).pasos_chips||(IDIOMAS.es||{}).pasos_chips||[];
+  for(const c of document.querySelectorAll('.pchip[data-n]')){
+    const n=+c.getAttribute('data-n');
+    if(chips[n-1]) c.textContent=n+'. '+chips[n-1];
+  }
+  const cc=document.getElementById('chipcasos'); if(cc) cc.textContent=TR('casos_h1');
+  const bb=document.getElementById('brei'); if(bb) bb.textContent=TR('b_reiniciar');
+  const ba=document.getElementById('ant'); if(ba) ba.textContent=TR('b_atras');
+  for(const b of document.querySelectorAll('.idiomas button'))
+    b.classList.toggle('on', b.getAttribute('data-l')===S.idioma);
+}
 
 /* ---------------------------------------------------------------- persistencia
    El caso vive en localStorage y, además, se puede llevar en la URL. Si al
@@ -424,7 +496,7 @@ function alertas(){
     if(ok&&r.noSi&&cumple(r.noSi)) ok=false;
     if(ok&&r.noSiAlguno&&r.noSiAlguno.some(cumple)) ok=false;
     if(ok&&r.noSiTodo&&cumpleTodo(r.noSiTodo)) ok=false;
-    if(ok) out.push({id:r.id,severidad:r.severidad,titulo:r.titulo||'Coherencia del plan',texto:r.mensaje,bloqueante:r.bloqueante,regla:true});
+    if(ok) out.push({id:r.id,severidad:r.severidad,titulo:r.titulo||TR('coherencia'),texto:r.mensaje,bloqueante:r.bloqueante,regla:true});
   }
   const hayCritica=out.some(a=>a.regla&&a.severidad==='critica');
   const filtrado=out.filter(a=>!(a.regla&&a.severidad==='info'&&hayCritica));
@@ -560,7 +632,11 @@ function codigoAO(d){
   return txt;
 }
 
-function txtDe(c){ const r=DATA.codigos?DATA.codigos[c]:null; return r&&r.texto?r.texto:''; }
+// En inglés se sirve el texto ORIGINAL del compendio, que es la fuente:
+// no es una traducción nuestra, es el documento de la AO tal cual.
+function txtDe(c){ const r=DATA.codigos?DATA.codigos[c]:null; if(!r) return '';
+  if(S.idioma!=='es' && r.en) return r.en;
+  return r.texto||''; }
 
 function descripcionCompleta(){
   const seg=S.dec['segmento']; if(!seg) return null;
@@ -743,11 +819,11 @@ function tiraPintar(){
        (foco?'disabled title="Sobre el foco: aquí no va tornillo"':'onclick="tiraTogglear('+i+')"')+'></button>';
   }
   h+='</div><div class="tmets">'+
-    marca(c.densidad, objDen, false, 'Densidad de tornillos · '+c.densidad.toFixed(2).replace('.',','))+
-    marca(c.cobertura, objCob, true, 'Relación de cobertura · '+c.cobertura.toFixed(1).replace('.',','))+
+    marca(c.densidad, objDen, false, TR('tira_densidad',{v:c.densidad.toFixed(2).replace('.',S.idioma==='es'?',':'.')}))+
+    marca(c.cobertura, objCob, true, TR('tira_cobertura',{v:c.cobertura.toFixed(1).replace('.',S.idioma==='es'?',':'.')}))+
     marca(Math.min(c.izq,c.der), 3, true, 'Tornillos por fragmento · '+c.izq+' y '+c.der)+
-    (c.trabajo!==null? marca(c.trabajo, 3, true, 'Longitud de trabajo · '+c.trabajo+' huecos')
-                     : '<div class="tmet mal"><b>Longitud de trabajo · sin definir</b><span>faltan tornillos a un lado</span></div>')+
+    (c.trabajo!==null? marca(c.trabajo, 3, true, TR('tira_trabajo',{n:c.trabajo}))
+                     : '<div class="tmet mal"><b>'+esc(TR('tira_trabajo_sin'))+'</b><span>'+esc(TR('tira_trabajo_faltan'))+'</span></div>')+
   '</div><p class="tnota">'+
     (c.simple
       ? 'Trazo simple: Gautier y Sommer piden cobertura por encima de 8-10 y densidad por debajo de 0,3-0,4. Si no llegas, el camino correcto es comprimir, no puentear.'
@@ -781,14 +857,14 @@ function render(){
     const chip=(multi||vis.length>12)&&!abierto;
     const hayCrit=vis.some(o=>(o.criterios||[]).length);
     h+='<section><div class="qrow"><h2>'+esc(d.pregunta)+'</h2>'+
-       (hayCrit?'<button class="vermas" onclick="verCrit(\\''+d.id+'\\')">'+(abierto?'Ocultar':'Ver más')+'</button>':'')+
+       (hayCrit?'<button class="vermas" onclick="verCrit(\\''+d.id+'\\')">'+(abierto?TR('ocultar'):TR('ver_mas'))+'</button>':'')+
        '</div>';
     if(d.ayuda && (abierto||S.modo==='estudio')) h+='<p class="ayuda">'+esc(d.ayuda)+'</p>';
     h+='<div class="opts'+(chip?' chips':'')+'">';
     for(const o of vis){
       const sel=marcado(d.id,o.id);
       h+='<button class="opt'+(sel?' sel':'')+(chip?' chip':'')+'" onclick="pick(\\''+d.id+'\\',\\''+o.id+'\\')"><b>'+esc(o.etiqueta)+
-         (sug===o.id&&!sel?' <span style="font-weight:400;font-size:11.5px;color:var(--acc)">· sugerida</span>':'')+'</b>'+
+         (sug===o.id&&!sel?' <span style="font-weight:400;font-size:11.5px;color:var(--acc)">'+esc(TR('sugerida'))+'</span>':'')+'</b>'+
          (abierto?'<ul>'+(o.criterios||[]).map(c=>'<li>'+esc(c)+'</li>').join('')+'</ul>':'')+'</button>';
     }
     h+='</div>';
@@ -798,7 +874,7 @@ function render(){
   // El buscador solo tiene sentido donde hay 4 592 opciones: la clasificación
   const buscador = P.numero===2
     ? '<div class="busca"><input id="binput" type="search" autocomplete="off" '+
-      'placeholder="Busca por código (42B2) o por región (meseta, pilón, cadera)…" '+
+      'placeholder="'+esc(TR('busca_ph'))+'" '+
       'oninput="buscar(this.value)" onblur="setTimeout(cerrarBusca,180)"><div class="bres" id="bres"></div></div>'
     : '';
   document.getElementById('decs').innerHTML=buscador+h;
@@ -808,15 +884,15 @@ function render(){
   const todas=alertas();
   const doctrina=todas.filter(a=>a.siempre), al=todas.filter(a=>!a.siempre);
   document.getElementById('principio').innerHTML = doctrina.length
-    ? '<details class="princ"'+(S.modo==='estudio'?' open':'')+'><summary>Principio del Paso '+P.numero+
+    ? '<details class="princ"'+(S.modo==='estudio'?' open':'')+'><summary>'+esc(TR('principio_del_paso',{n:P.numero}))+
       ' · '+doctrina.length+(doctrina.length===1?' idea que no conviene perder de vista':' ideas que no conviene perder de vista')+
       '</summary><div class="dbody">'+doctrina.map(a=>'<div class="pidea"><b>'+esc(a.titulo)+'</b><p>'+esc(a.texto)+'</p></div>').join('')+
       '</div></details>'
     : '';
   document.getElementById('alerts').innerHTML = al.length
-    ? '<h2>Avisos sobre este caso</h2>'+al.map(a=>'<div class="alerta a-'+a.severidad+'"><b>'+esc(a.titulo)+'</b><p>'+esc(a.texto)+'</p>'+
-        (a.bloqueante?'<span class="bloq">Precede a todo el plan</span>':'')+
-        '<button class="porque" onclick="porQue()">Por qué →</button></div>').join('')
+    ? '<h2>'+esc(TR('avisos_h2'))+'</h2>'+al.map(a=>'<div class="alerta a-'+a.severidad+'"><b>'+esc(a.titulo)+'</b><p>'+esc(a.texto)+'</p>'+
+        (a.bloqueante?'<span class="bloq">'+esc(TR('bloqueante'))+'</span>':'')+
+        '<button class="porque" onclick="porQue()">'+esc(TR('por_que'))+'</button></div>').join('')
     : '';
 
   const filas=[];
@@ -832,18 +908,18 @@ function render(){
   const der=derivados().map(d=>'<div class="deriv'+(d.destacado?' big':'')+'"><b>'+esc(d.titulo)+' <i>· derivado</i></b>'+
       (d.destacado?'<p class="cod">'+esc(d.principal)+'</p>':'<p>'+esc(d.principal)+'</p>')+
       (d.lineas.length?'<ul>'+d.lineas.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>':'')+
-      (d.galeria?'<div class="gal"><p class="galt">Elige viendo el dibujo — '+
+      (d.galeria?'<div class="gal"><p class="galt">'+esc(TR('elige_dibujo'))+
         (d.galeria.decision==='subgrupo'?'subgrupos':d.galeria.decision==='grupo'?'grupos':'tipos')+' posibles:</p><div class="galg">'+
         d.galeria.hijos.map(h=>'<button class="galo" onclick="pick(\\''+h.dec+'\\',\\''+h.id+'\\')">'+
           '<img src="'+esc(h.figura)+'" alt="'+esc(h.codigo)+'" loading="lazy">'+
           '<b>'+esc(h.codigo)+'</b><span>'+esc(h.texto)+'</span></button>').join('')+'</div></div>':'')+
       (d.imagen?'<figure class="lam'+(d.recorte?' rec':'')+'"><img src="'+esc(d.imagen)+'" alt="Figura del compendio" loading="lazy"><figcaption>'+
-        (d.recorte?'Figura del compendio AO/OTA 2018':'Lámina completa del compendio AO/OTA 2018')+
-        (d.pagina?', página '+esc(d.pagina):'')+'. Reproducida con fines educativos.</figcaption></figure>':'')+
+        esc(d.recorte?TR('fig_recorte'):TR('fig_lamina'))+
+        (d.pagina?esc(TR('fig_pagina',{n:d.pagina})):'')+esc(TR('fig_educativa'))+'</figcaption></figure>':'')+
       (d.nota?'<p class="nota">'+esc(d.nota)+'</p>':'')+'</div>').join('');
-  document.getElementById('plan').innerHTML='<h3>Plan del Paso '+P.numero+'</h3>'+
+  document.getElementById('plan').innerHTML='<h3>'+esc(TR('plan_del_paso',{n:P.numero}))+'</h3>'+
     (filas.length?filas.join(''):'<p class="vacio">Aún no has tomado ninguna decisión.</p>')+der+
-    (bloqueantes.length?'<div class="alerta a-critica" style="margin-top:13px"><b>Antes que nada</b><p>'+
+    (bloqueantes.length?'<div class="alerta a-critica" style="margin-top:13px"><b>'+esc(TR('antes_que_nada'))+'</b><p>'+
       bloqueantes.map(b=>esc(b.texto)).join(' ')+'</p></div>':'')+
     (filas.length? '<p style="font-size:12.5px;color:var(--ink3);margin-top:13px;line-height:1.6">'+esc(P.sintesis)+'</p>':'');
 
@@ -906,7 +982,7 @@ function buscar(q){
         const desc=suelto&&e.region? e.region : (e.region? e.region+' · '+e.txt : e.txt);
         return '<button onclick="irACodigo(\\''+e.cod+'\\')"><b>'+esc(e.cod)+'</b><span>'+esc(desc)+'</span></button>';
       }).join('')
-    : '<p class="bnada">Nada con «'+esc(q)+'». Prueba con el código (42B2) o con la región (meseta, pilón, cadera).</p>';
+    : '<p class="bnada">'+esc(TR('busca_nada',{q:q}))+'</p>';
 }
 function cerrarBusca(){ const c=document.getElementById('bres'); if(c){ c.innerHTML=''; c.style.display='none'; } }
 /* Rellena las decisiones del Paso 2 hacia atrás desde un código completo. */
@@ -944,15 +1020,15 @@ function pintarBarra(){
   const conDecision=DISPONIBLES.filter(k=>Object.keys(S.porPaso[k]||{}).length).length;
   const caso = S.vista==='caso'? CASOS.find(x=>x.id===S.caso) : null;
   document.getElementById('prog').textContent =
-      S.vista==='casos' ? 'Biblioteca · '+CASOS.length+(CASOS.length===1?' caso':' casos')
-    : caso              ? 'Caso · '+caso.region
-    : S.vista==='resumen'? conDecision+' de '+DISPONIBLES.length+' pasos'
-    : 'Paso '+S.paso+' de '+DISPONIBLES.length+' · '+hechas+' de '+n+' decisiones';
+      S.vista==='casos' ? (CASOS.length===1?TR('prog_biblioteca_1'):TR('prog_biblioteca_n',{n:CASOS.length}))
+    : caso              ? TR('prog_caso',{region:caso.region})
+    : S.vista==='resumen'? TR('prog_resumen',{a:conDecision,b:DISPONIBLES.length})
+    : TR('prog_paso',{a:S.paso,b:DISPONIBLES.length,c:hechas,d:n});
   const bp=document.getElementById('bplan');
-  bp.textContent = enResumen? 'Volver al paso' : 'Plan completo';
+  bp.textContent = enResumen? TR('b_volver_paso') : TR('b_plan');
   bp.onclick = enResumen? verPaso : verResumen;
   const sig=document.getElementById('sig'), hay=!!DATA.pasos[S.paso+1];
-  sig.textContent = hay? ('Paso '+(S.paso+1)+' →') : 'Ver el plan completo';
+  sig.textContent = hay? TR('b_paso_n',{n:S.paso+1}) : TR('b_ver_plan');
   sig.disabled = enResumen || (hay && hechas<n);
   sig.onclick = ()=> hay? irPaso(S.paso+1) : verResumen();
   const ant=document.getElementById('ant');
@@ -996,7 +1072,7 @@ function pick(d,o){
 function verCrit(id){ S.verCrit[id]=!S.verCrit[id]; render(); }
 function modo(m){ S.modo=m; guardar(); render(); window.scrollTo(0,0); }
 function reiniciar(){
-  const todo = hayCaso() && confirm('¿Borrar solo este paso, o el caso entero?\\n\\nAceptar = el caso entero.\\nCancelar = solo el Paso '+S.paso+'.');
+  const todo = hayCaso() && confirm(TR('confirm_borrar',{n:S.paso}));
   if(todo){ S.porPaso={}; S.paso=DISPONIBLES[0]; }
   S.porPaso[S.paso]={}; S.dec=S.porPaso[S.paso]; S.resp={};
   guardar(); irPaso(S.paso); window.scrollTo(0,0);
@@ -1032,11 +1108,11 @@ function planCompleto(){
   return out;
 }
 function planTexto(){
-  const L=['PLAN QUIRÚRGICO — I Need To Fix It',
-           'Generado el '+new Date().toLocaleDateString('es',{day:'numeric',month:'long',year:'numeric'}),''];
+  const L=[TR('txt_plan_titulo'),
+           TR('txt_generado',{fecha:new Date().toLocaleDateString(S.idioma,{day:'numeric',month:'long',year:'numeric'})}),''];
   for(const b of planCompleto()){
     if(!b.completo&&!b.der.length) continue;
-    L.push('PASO '+b.n+' · '+b.titulo.toUpperCase());
+    L.push(TR('paso').toUpperCase()+' '+b.n+' · '+b.titulo.toUpperCase());
     for(const f of b.filas) L.push('  · '+f.q+'  →  '+f.r);
     for(const x of b.der){ L.push('  ▸ '+x.t+': '+x.p); for(const y of x.l) L.push('      - '+y); }
     for(const a of b.crit) L.push('  [!] '+a.titulo+' — '+a.texto);
@@ -1087,12 +1163,11 @@ function cargarCaso(id, cual){
   S.vista='paso'; guardar(); irPaso(c.pasoClave||1);
 }
 function pintarCasos(){
-  if(!CASOS.length) return '<div class="resumen"><h1>Casos</h1>'+
-    '<p class="vacio">Todavía no hay casos en la biblioteca.</p>'+
+  if(!CASOS.length) return '<div class="resumen"><h1>'+esc(TR('casos_h1_vacio'))+'</h1>'+
+    '<p class="vacio">'+esc(TR('casos_vacio'))+'</p>'+
     '<div class="racc"><button onclick="verPaso()">Volver al Paso '+S.paso+'</button></div></div>';
-  let h='<div class="resumen"><h1>Casos por fallo</h1>'+
-    '<p class="sub">Diez planificaciones que salieron mal. En cada una puedes cargar las decisiones '+
-    'tal como se tomaron y ver al app señalar el error solo, antes de leer la explicación.</p>'+
+  let h='<div class="resumen"><h1>'+esc(TR('casos_h1'))+'</h1>'+
+    '<p class="sub">'+esc(TR('casos_sub'))+'</p>'+
     '<div class="racc"><button onclick="verPaso()">Volver al Paso '+S.paso+'</button></div>';
   for(const c of CASOS){
     const al=alertasDe(c.estadoError, c.pasoClave||3);
@@ -1100,7 +1175,7 @@ function pintarCasos(){
     const crit=al.filter(a=>a.severidad==='critica'||a.severidad==='advertencia').length;
     h+='<button class="ccard" onclick="verCaso(\\''+c.id+'\\')">'+
       '<div class="cmeta"><span class="creg">'+esc(c.region)+'</span>'+
-      (crit?'<span class="ccrit">'+crit+(crit===1?' error del plan':' errores del plan')+'</span>':'')+
+      (crit?'<span class="ccrit">'+esc(crit===1?TR('caso_error_1'):TR('caso_error_n',{n:crit}))+'</span>':'')+
       '<span class="cmin">'+esc(String(c.minutos||4))+' min</span></div>'+
       '<b>'+esc(c.titulo)+'</b><p>'+esc(c.resumen)+'</p></button>';
   }
@@ -1113,31 +1188,30 @@ function pintarCaso(){
   const alOK=alertasDe(c.estadoCorrecto, c.pasoClave||3);
   const ref=(c.refs||[]).map(id=>{const r=REFS[id]; if(!r) return ''; const u=urlRef(r);
     return u?'<a href="'+u+'" target="_blank" rel="noopener">'+esc(r.cita)+'</a>':esc(r.cita);}).filter(Boolean);
-  return '<div class="resumen caso"><div class="racc"><button onclick="verCasos()">← Todos los casos</button></div>'+
-    '<h1>'+esc(c.titulo)+'</h1><p class="sub">'+esc(c.region)+' · '+esc(String(c.minutos||4))+' min de lectura</p>'+
+  return '<div class="resumen caso"><div class="racc"><button onclick="verCasos()">'+esc(TR('casos_todos'))+'</button></div>'+
+    '<h1>'+esc(c.titulo)+'</h1><p class="sub">'+esc(c.region)+' · '+esc(TR('caso_minutos',{n:c.minutos||4}))+'</p>'+
 
-    '<div class="rbloque"><h3><span>1 · Lo que se hizo</span></h3>'+
+    '<div class="rbloque"><h3><span>'+esc(TR('caso_b1'))+'</span></h3>'+
       '<p class="ctxt">'+esc(c.loQueSeHizo)+'</p>'+
       '<div class="racc"><button class="pri" onclick="cargarCaso(\\''+c.id+'\\',\\'error\\')">'+
-      'Cargar estas decisiones en el app</button></div></div>'+
+      esc(TR('caso_cargar_error'))+'</button></div></div>'+
 
-    '<div class="rbloque"><h3><span>2 · Lo que el app dice de ese plan</span></h3>'+
-      '<p class="ctxt">Estas alertas no están escritas en el caso: las produce el motor a partir de '+
-      'las decisiones de arriba. Es lo que habría visto quien planificó, si hubiera usado el app.</p>'+
+    '<div class="rbloque"><h3><span>'+esc(TR('caso_b2'))+'</span></h3>'+
+      '<p class="ctxt">'+esc(TR('caso_b2_ctx'))+'</p>'+
       (al.length? al.map(a=>'<div class="alerta a-'+a.severidad+'"><b>'+esc(a.titulo)+'</b><p>'+esc(a.texto)+'</p></div>').join('')
-                : '<p class="vacio">El motor no encuentra nada que objetar en este paso.</p>')+
+                : '<p class="vacio">'+esc(TR('caso_sin_objecion'))+'</p>')+
       '</div>'+
 
-    '<div class="rbloque"><h3><span>3 · Por qué falló</span></h3><p class="ctxt">'+esc(c.porQue)+'</p></div>'+
+    '<div class="rbloque"><h3><span>'+esc(TR('caso_b3'))+'</span></h3><p class="ctxt">'+esc(c.porQue)+'</p></div>'+
 
-    '<div class="rbloque"><h3><span>4 · Lo que tocaba</span></h3><p class="ctxt">'+esc(c.loQueTocaba)+'</p>'+
-      (alOK.length? '<p class="ctxt" style="margin-top:10px">Con el plan corregido, lo que queda es esto:</p>'+
+    '<div class="rbloque"><h3><span>'+esc(TR('caso_b4'))+'</span></h3><p class="ctxt">'+esc(c.loQueTocaba)+'</p>'+
+      (alOK.length? '<p class="ctxt" style="margin-top:10px">'+esc(TR('caso_corregido_queda'))+'</p>'+
         alOK.map(a=>'<div class="alerta a-'+a.severidad+'"><b>'+esc(a.titulo)+'</b><p>'+esc(a.texto)+'</p></div>').join('')
-        : '<p class="ctxt" style="margin-top:10px">Con el plan corregido el motor no objeta nada.</p>')+
+        : '<p class="ctxt" style="margin-top:10px">'+esc(TR('caso_corregido_nada'))+'</p>')+
       '<div class="racc"><button class="pri" onclick="cargarCaso(\\''+c.id+'\\',\\'correcto\\')">'+
-      'Cargar el plan corregido</button></div></div>'+
+      esc(TR('caso_cargar_ok'))+'</button></div></div>'+
 
-    '<div class="rec rec-regla"><b>Para llevarse</b>'+esc(c.mensaje)+'</div>'+
+    '<div class="rec rec-regla"><b>'+esc(TR('caso_llevarse'))+'</b>'+esc(c.mensaje)+'</div>'+
     (ref.length?'<p class="ref">'+ref.join('<br>')+'</p>':'')+
     '</div>';
 }
@@ -1145,17 +1219,15 @@ function pintarCaso(){
 function pintarResumen(){
   const bloques=planCompleto();
   const hechos=bloques.filter(b=>b.completo).length;
-  let h='<div class="resumen"><h1>Plan quirúrgico completo</h1>'+
-    '<p class="sub">'+hechos+' de '+DISPONIBLES.length+' pasos con decisiones tomadas. '+
-    'Este es el documento que se imprime, se discute en sesión y se adjunta a la historia.</p>'+
-    '<div class="racc"><button class="pri" id="bcopiar" onclick="copiarPlan()">Copiar el plan</button>'+
-    '<button onclick="window.print()">Imprimir o guardar en PDF</button>'+
+  let h='<div class="resumen"><h1>'+esc(TR('plan_h1'))+'</h1>'+
+    '<p class="sub">'+esc(TR('plan_sub',{a:hechos,b:DISPONIBLES.length}))+'</p>'+
+    '<div class="racc"><button class="pri" id="bcopiar" onclick="copiarPlan()">'+esc(TR('b_copiar'))+'</button>'+
+    '<button onclick="window.print()">'+esc(TR('b_imprimir'))+'</button>'+
     '<button onclick="verPaso()">Volver al Paso '+S.paso+'</button></div>';
-  if(!hechos) h+='<p class="vacio" style="margin-top:20px">Todavía no has tomado ninguna decisión. '+
-    'Recorre los pasos y el plan se irá componiendo solo.</p>';
+  if(!hechos) h+='<p class="vacio" style="margin-top:20px">'+esc(TR('plan_vacio'))+'</p>';
   for(const b of bloques){
     if(!b.completo&&!b.der.length) continue;
-    h+='<div class="rbloque"><h3><span>Paso '+b.n+'</span> '+esc(b.titulo)+'</h3>';
+    h+='<div class="rbloque"><h3><span>'+esc(TR('paso'))+' '+b.n+'</span> '+esc(b.titulo)+'</h3>';
     for(const f of b.filas) h+='<div class="prow"><span>'+esc(f.q)+'</span><span>'+esc(f.r)+'</span></div>';
     for(const x of b.der) h+='<div class="rder"><b>'+esc(x.t)+'</b><p>'+esc(x.p)+'</p>'+
       (x.l.length?'<ul>'+x.l.map(y=>'<li>'+esc(y)+'</li>').join('')+'</ul>':'')+'</div>';
@@ -1163,8 +1235,8 @@ function pintarResumen(){
     h+='</div>';
   }
   const faltan=bloques.filter(b=>!b.completo).map(b=>b.n);
-  if(faltan.length&&hechos) h+='<p class="vacio">Sin decisiones todavía en '+
-    (faltan.length===1?'el paso ':'los pasos ')+faltan.join(', ')+'.</p>';
+  if(faltan.length&&hechos) h+='<p class="vacio">'+esc(faltan.length===1
+    ? TR('plan_faltan_1',{l:faltan.join(', ')}) : TR('plan_faltan_n',{l:faltan.join(', ')}))+'</p>';
   h+='</div>';
   return h;
 }
@@ -1176,17 +1248,21 @@ function irPaso(n){
   guardar(); cargar(); window.scrollTo(0,0);
 }
 function cargar(){
-  document.getElementById('titulo').textContent='Paso '+P.numero+' · '+P.titulo;
+  // El NOMBRE del paso se traduce (es una etiqueta); el subtítulo y las
+// preguntas no: eso es la voz del autor y espera a la Fase 2.
+const tits=(IDIOMAS[S.idioma]||{}).pasos_titulos||[];
+document.getElementById('titulo').textContent=
+  TR('paso')+' '+P.numero+' · '+(tits[P.numero-1]||P.titulo);
   document.getElementById('subtitulo').textContent=P.subtitulo;
   document.getElementById('qkey').textContent=P.preguntaClave;
-  document.getElementById('objetivos').innerHTML='<h2>Objetivos de aprendizaje</h2><ul style="margin-left:18px;font-size:14px;line-height:1.75;color:var(--ink2)">'+
+  document.getElementById('objetivos').innerHTML='<h2>'+esc(TR('objetivos_h2'))+'</h2><ul style="margin-left:18px;font-size:14px;line-height:1.75;color:var(--ink2)">'+
     P.objetivos.map(o=>'<li>'+esc(o)+'</li>').join('')+'</ul>';
   document.getElementById('desarrollo').innerHTML=P.esencial.map(bloque).join('');
   tiraPintar();   // el widget se monta después de que exista su contenedor
-  document.getElementById('evid').innerHTML='<h2>Evidencia</h2>'+P.evidencia.map(e=>{
+  document.getElementById('evid').innerHTML='<h2>'+esc(TR('evidencia_h2'))+'</h2>'+P.evidencia.map(e=>{
     const rr=(e.refs||[]).map(id=>{const r=REFS[id];if(!r)return '';const u=urlRef(r);
       return u?'<a href="'+u+'" target="_blank" rel="noopener">'+esc(r.cita)+'</a>':esc(r.cita);}).filter(Boolean);
-    return '<div class="ev"><span class="niv">Nivel '+esc(e.nivel)+'</span>'+esc(e.afirmacion)+
+    return '<div class="ev"><span class="niv">'+esc(TR('nivel'))+' '+esc(e.nivel)+'</span>'+esc(e.afirmacion)+
            (rr.length?'<div class="ref">'+rr.join('<br>')+'</div>':'')+'</div>';
   }).join('');
   document.querySelectorAll('.pchip').forEach(c=>{
@@ -1228,14 +1304,14 @@ function marcadorQuiz(){
   if(!idx.length){
     const f=falladas(P.numero);
     m.innerHTML = f.length
-      ? '<button class="vermas" onclick="repasar()">Repasar las '+f.length+' que fallaste</button>'
+      ? '<button class="vermas" onclick="repasar()">'+esc(TR('quiz_repasar_n',{n:f.length}))+'</button>'
       : '<span class="qmini">'+total+' preguntas</span>';
     return;
   }
   const bien=idx.filter(i=>S.resp[i]===P.autoevaluacion[i].correcta).length;
   const pct=Math.round(bien*100/idx.length);
   m.innerHTML='<span class="qmini'+(pct>=70?' ok':' ko')+'">'+bien+' de '+idx.length+' · '+pct+'%</span>'+
-    (idx.length===total? ' <button class="vermas" onclick="repasar()">Repasar lo fallado</button>':'');
+    (idx.length===total? ' <button class="vermas" onclick="repasar()">'+esc(TR('quiz_repasar'))+'</button>':'');
 }
 function repasar(){
   const f=falladas(P.numero);
@@ -1247,11 +1323,11 @@ function pintarQ(){
   const solo=S.soloFallos;
   const lista=P.autoevaluacion.map((q,i)=>({q:q,i:i})).filter(x=>!solo||solo.indexOf(x.i)>=0);
   document.getElementById('quiz').innerHTML = lista.length
-    ? (solo?'<p class="ayuda">Repaso de las '+lista.length+' que fallaste. '+
-             '<button class="vermas" onclick="S.soloFallos=null;S.resp={};pintarQ()">Ver todas</button></p>':'')+
+    ? (solo?'<p class="ayuda">'+esc(TR('quiz_repaso_de',{n:lista.length}))+
+             '<button class="vermas" onclick="S.soloFallos=null;S.resp={};pintarQ()">'+esc(TR('quiz_ver_todas'))+'</button></p>':'')+
       lista.map(x=>'<div class="q"><p>'+(x.i+1)+'. '+esc(x.q.pregunta)+'</p>'+
         x.q.opciones.map((o,j)=>'<button onclick="responder('+x.i+','+j+',this)">'+esc(o)+'</button>').join('')+'</div>').join('')
-    : '<p class="vacio">No has fallado ninguna en este paso.</p>';
+    : '<p class="vacio">'+esc(TR('quiz_sin_fallos'))+'</p>';
   marcadorQuiz();
 }
 
@@ -1264,16 +1340,30 @@ function pintarQ(){
 if('serviceWorker' in navigator && location.protocol.indexOf('http')===0){
   navigator.serviceWorker.register('sw.js').then(
     r=>{ S.sw=true; },
-    e=>console.warn('El modo sin conexión no está disponible:', e && e.message));
+    e=>console.warn(TR('sw_sin_conexion'), e && e.message));
 }
 
 S.dec=S.porPaso[1]={};
 const habiaCaso=restaurar();
 if(!S.porPaso[S.paso]) S.porPaso[S.paso]={};
+
+/* Idioma de arranque: primero lo que el usuario eligió la última vez; si no,
+   el del navegador cuando lo tengamos; si no, español. */
+(function(){
+  let l=null;
+  try{ l=localStorage.getItem(CLAVE_L); }catch(e){}
+  if(!IDIOMAS[l]){
+    const nav=(navigator.language||'es').slice(0,2).toLowerCase();
+    l = IDIOMAS[nav] ? nav : 'es';
+  }
+  S.idioma=l;
+  aplicarIdioma();
+})();
+
 cargar();
 if(habiaCaso) setTimeout(()=>{
   const b=document.getElementById('prog');
-  if(b) b.insertAdjacentHTML('afterend','<span class="retomado">caso recuperado</span>');
+  if(b) b.insertAdjacentHTML('afterend','<span class="retomado">'+esc(TR('caso_recuperado'))+'</span>');
   setTimeout(()=>{const r=document.querySelector('.retomado'); if(r) r.remove();},4000);
 },60);
 """
@@ -1357,8 +1447,14 @@ def escribir_pwa(version_cache: str):
 
 
 def main():
-    pasos, refs, codigos, casos = cargar()
-    data = json.dumps({"pasos": pasos, "refs": refs, "codigos": codigos, "casos": casos},
+    pasos, refs, codigos, casos, idiomas = cargar()
+    hechos_v = sorted(pasos)
+    version_txt = (f"Pasos {hechos_v[0]}-{hechos_v[-1]} de {len(TITULOS_10)}"
+                   if hechos_v == list(range(hechos_v[0], hechos_v[-1] + 1))
+                   else "Pasos " + ", ".join(map(str, hechos_v)))
+    version_txt += " · " + MESES[FECHA.month - 1] + " de " + str(FECHA.year)
+    data = json.dumps({"pasos": pasos, "refs": refs, "codigos": codigos, "casos": casos,
+                       "idiomas": idiomas, "version": version_txt},
                       ensure_ascii=False)
     data = data.replace("</", "<\\/")
 
@@ -1371,12 +1467,17 @@ def main():
     # El chip de casos va delante: al final de una fila que hace scroll no lo
     # encuentra nadie.
     if casos:
-        chips = '<span class="pchip casos" onclick="verCasos()">Casos por fallo</span>' + chips
-    hechos = sorted(pasos)
-    version = (f"Pasos {hechos[0]}-{hechos[-1]} de {len(TITULOS_10)}"
-               if hechos == list(range(hechos[0], hechos[-1] + 1))
-               else "Pasos " + ", ".join(map(str, hechos)))
-    version += " · " + MESES[FECHA.month - 1] + " de " + str(FECHA.year)
+        chips = ('<span class="pchip casos" id="chipcasos" onclick="verCasos()">'
+                 'Casos por fallo</span>') + chips
+    version = version_txt
+    # Un botón por idioma disponible: añadir uno más es editar interfaz.json.
+    botones_idioma = []
+    for k, v in idiomas.items():
+        marcado = ' class="on"' if k == "es" else ''
+        botones_idioma.append(
+            '<button data-l="%s"%s onclick="idioma(\'%s\')" title="%s">%s</button>'
+            % (k, marcado, k, v.get("_nombre", k), v.get("_etiqueta", k.upper())))
+    sel_idioma = "".join(botones_idioma)
 
     html = f"""<!DOCTYPE html>
 <html lang="es">
@@ -1398,14 +1499,19 @@ def main():
   <div class="wrap">
     <div class="hrow">
       <div class="brand">I Need To Fix It<small>Los 10 pasos para resolver cualquier fractura</small></div>
-      <div class="modos">
-        <button data-m="consulta" class="on" onclick="modo('consulta')">Consulta</button>
-        <button data-m="estudio" onclick="modo('estudio')">Estudio</button>
+      <div class="hder">
+        <div class="idiomas">{sel_idioma}</div>
+        <div class="modos">
+          <button data-m="consulta" class="on" onclick="modo('consulta')">Consulta</button>
+          <button data-m="estudio" onclick="modo('estudio')">Estudio</button>
+        </div>
       </div>
     </div>
     <div class="pasos">{chips}</div>
   </div>
 </header>
+
+<div class="wrap"><p id="banner" class="banner oculto"></p></div>
 
 <div class="wrap">
   <div id="vistaresumen" class="oculto"></div>
@@ -1423,20 +1529,20 @@ def main():
   <div class="plan" id="plan"></div>
 
   <section>
-    <h2>Desarrollo y tablas de referencia</h2>
-    <details id="detdes"><summary>Abrir el desarrollo completo del paso</summary><div class="dbody" id="desarrollo"></div></details>
+    <h2 id="desh">Desarrollo y tablas de referencia</h2>
+    <details id="detdes"><summary id="dessum">Abrir el desarrollo completo del paso</summary><div class="dbody" id="desarrollo"></div></details>
   </section>
 
   <div id="estudio2" class="oculto">
     <section id="evid"></section>
     <section>
-      <div class="qrow"><h2>Autoevaluación</h2><span id="qmarcador"></span></div>
+      <div class="qrow"><h2 id="quizh">Autoevaluación</h2><span id="qmarcador"></span></div>
       <div id="quiz"></div>
     </section>
   </div>
   </div>
 
-  <p class="disc">
+  <p class="disc" id="aviso">
     <b>Aviso.</b> Prototipo con fines educativos y de apoyo metodológico. No constituye indicación clínica
     ni sustituye el juicio del cirujano responsable ni los protocolos de la institución. Contenido basado en
     el libro «Los 10 pasos para resolver cualquier fractura» y en el documento «Politrauma — Reanimación y
@@ -1450,7 +1556,7 @@ def main():
     <span style="font-size:13px;color:var(--ink3)" id="prog"></span>
     <span style="display:flex;gap:8px">
       <button id="ant">← Atrás</button>
-      <button onclick="reiniciar()">Reiniciar</button>
+      <button id="brei" onclick="reiniciar()">Reiniciar</button>
       <button id="bplan" onclick="verResumen()">Plan completo</button>
       <button class="pri" id="sig" disabled>Siguiente →</button>
     </span>
