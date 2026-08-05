@@ -121,10 +121,12 @@
       ],
       "tira_por_fragmento": "Tornillos por fragmento · {a} y {b}",
       "banner_ninguno": "",
-      "banner_algunos": "",
       "banner_todos": "",
       "banner_paso_1": "",
-      "banner_paso_n": ""
+      "banner_paso_n": "",
+      "banner_algunos_1": "",
+      "banner_algunos_n": "",
+      "banner_pasos": ""
     },
     "en": {
       "_etiqueta": "EN",
@@ -246,10 +248,12 @@
       ],
       "tira_por_fragmento": "Screws per fragment · {a} and {b}",
       "banner_ninguno": "The interface and the AO/OTA classification are in English. The clinical reasoning of the ten steps — questions, warnings and full text — is still in Spanish; the English version is being written.",
-      "banner_algunos": "The interface and the AO/OTA classification are in English, and so is {lista}. The remaining steps are still in Spanish while the English version is written.",
       "banner_todos": "Fully in English.",
       "banner_paso_1": "Step {l}",
-      "banner_paso_n": "Steps {l}"
+      "banner_paso_n": "Steps {l}",
+      "banner_algunos_1": "The interface and the AO/OTA classification are in English, and so is {lista}. The remaining steps are still in Spanish while the English version is written.",
+      "banner_algunos_n": "The interface and the AO/OTA classification are in English, and so are {lista}. The remaining steps are still in Spanish while the English version is written.",
+      "banner_pasos": "Steps"
     }
   }
 }

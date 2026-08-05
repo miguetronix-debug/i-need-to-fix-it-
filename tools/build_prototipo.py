@@ -427,11 +427,10 @@ function textoBanner(){
   const hechos=pasosTraducidos();
   if(!hechos.length) return TR('banner_ninguno');
   if(hechos.length===DISPONIBLES.length) return TR('banner_todos');
-  const nom = n => TR('paso')+' '+n;
-  const lista = hechos.length===1
-    ? nom(hechos[0])
-    : TR('pasos')+' '+hechos.slice(0,-1).join(', ')+' & '+hechos[hechos.length-1];
-  return TR('banner_algunos',{lista:lista});
+  if(hechos.length===1)
+    return TR('banner_algunos_1',{lista:TR('paso')+' '+hechos[0]});
+  const lista = TR('banner_pasos')+' '+hechos.slice(0,-1).join(', ')+' & '+hechos[hechos.length-1];
+  return TR('banner_algunos_n',{lista:lista});
 }
 function idiomasDisponibles(){ return Object.keys(IDIOMAS); }
 function idioma(l){

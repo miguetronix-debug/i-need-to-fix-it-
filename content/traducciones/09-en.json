@@ -1,0 +1,307 @@
+{
+  "_nota": "Inglés del Paso 9 · Las técnicas de reducción. Calco parcial: misma forma que el español, solo los campos traducidos. Las listas con id se emparejan por id; las que no lo tienen —bloques del desarrollo, reglas derivadas, preguntas del examen— por posición.",
+  "titulo": "Reduction techniques",
+  "subtitulo": "A stepped arsenal: start simple and keep the advanced tools in reserve",
+  "preguntaClave": "Which instrument gets me this reduction with the least possible damage?",
+  "objetivos": [
+    "Work through the arsenal in order: the basics first, the advanced tools when the basics fall short",
+    "Choose techniques consistent with the route and the principle decided in Steps 4 and 5",
+    "Rebuild the articular block as a unit before joining it to the shaft",
+    "Elevate and graft the depressed fragment so that it does not collapse again",
+    "Actively verify length, alignment and rotation before definitive fixation"
+  ],
+  "sintesis": "The arsenal is stepped: traction, manoeuvres, clamps and joysticks first; distractor, plate as a reduction tool, external fixator and collinear clamp when the basics are not enough. The technique has to respect the biological principle — indirect for what you are going to bridge, direct for what you are going to compress. The articular block is rebuilt as a unit before it is joined to the shaft, the depressed fragment is elevated and grafted, and length, alignment and rotation are actively verified while the fixation is still provisional.",
+
+  "decisiones": [
+    {
+      "id": "basicas",
+      "pregunta": "Which basic techniques are you going to use?",
+      "ayuda": "You always start here. Many reductions are solved at this level, and everything you achieve without opening is biology you do not have to pay for.",
+      "opciones": [
+        { "id": "tb-traccion", "etiqueta": "Traction, counter-traction and gravity", "criterios": [
+          "They align by ligamentotaxis when the ligaments are intact",
+          "Gravity is free: the elbow hanging, the foot relaxed in equinus"
+        ]},
+        { "id": "tb-maniobras", "etiqueta": "Closed reduction manoeuvres", "criterios": [
+          "Disimpact, align and rotate according to the pattern",
+          "A Colles is reduced with traction, ulnar deviation and palmar flexion: every pattern has its manoeuvre"
+        ]},
+        { "id": "tb-pinzas", "etiqueta": "Reduction clamps", "criterios": [
+          "Pointed, Weber, serrated",
+          "Place them perpendicular to the fracture line: badly aimed, they displace instead of reducing"
+        ]},
+        { "id": "tb-gancho", "etiqueta": "Bone hook", "criterios": [
+          "Direct traction on a fragment without having to grasp it fully"
+        ]},
+        { "id": "tb-joystick", "etiqueta": "Kirschner wire as a joystick", "criterios": [
+          "Driven into the fragment, it turns it into something you can steer",
+          "This is the technique that gives almost direct control through a minimal incision"
+        ]},
+        { "id": "tb-ballspike", "etiqueta": "Ball-spike pusher", "criterios": [
+          "Pushes the fragment percutaneously without opening the fracture site"
+        ]},
+        { "id": "tb-schanz", "etiqueta": "Percutaneous Schanz screw as a lever", "criterios": [
+          "A long lever on the proximal or distal fragment",
+          "It corrects what traction alone does not: rotation and varus-valgus"
+        ]}
+      ]
+    },
+    {
+      "id": "avanzadas",
+      "pregunta": "Do you need advanced techniques?",
+      "ayuda": "They are kept in reserve for when the basics are not enough: established shortening, comminution, segmental fractures or deep articular surfaces.",
+      "opciones": [
+        { "id": "ta-distractor", "etiqueta": "AO or femoral distractor", "criterios": [
+          "Restores length and alignment without a traction table",
+          "The favourite tool of Mast, Jakob and Ganz: reduce before you fix",
+          "Allows segmental, shortened or comminuted fractures to be reduced without continuous external traction"
+        ]},
+        { "id": "ta-placa-reductor", "etiqueta": "The plate as a reduction instrument", "criterios": [
+          "Fixed first to one fragment, it pulls and aligns the other",
+          "Push-pull screws",
+          "A pre-contoured plate draws the bone to its shape: this is pure indirect reduction"
+        ]},
+        { "id": "ta-fijador-reductor", "etiqueta": "External fixator as a temporary reduction tool", "criterios": [
+          "Holds length and alignment while the definitive implant goes in",
+          "The Schanz screws work as long levers"
+        ]},
+        { "id": "ta-colineal", "etiqueta": "Collinear clamp", "criterios": [
+          "Compresses along the axis of the fracture line without displacing the fragments sideways",
+          "Goes in through two minimal incisions: strong reduction with percutaneous access"
+        ]},
+        { "id": "ta-laminares", "etiqueta": "Lamina spreaders", "criterios": [
+          "Open the fracture site in a controlled way to see a deep articular surface",
+          "They also disimpact by progressive opening"
+        ]},
+        { "id": "ta-ninguna", "etiqueta": "Not needed", "criterios": [
+          "The basics solve this reduction"
+        ]}
+      ]
+    },
+    {
+      "id": "secuencia-articular",
+      "pregunta": "In what order are you rebuilding?",
+      "ayuda": "The classic rule: first the articular block as a unit, then the block to the shaft.",
+      "opciones": [
+        { "id": "sa-articular-primero", "etiqueta": "Articular block first, then to the shaft", "criterios": [
+          "The surface is rebuilt as a unit, using an intact zone or the neighbouring bone as a template",
+          "That reconstructed block is then joined to the diaphyseal axis",
+          "This is the sequence that lets you give absolute stability above and relative below"
+        ]},
+        { "id": "sa-diafisis-primero", "etiqueta": "Alignment and length first, then the surface", "criterios": [
+          "Useful when metaphyseal comminution makes the block impossible to reference",
+          "Length, alignment and rotation are restored with a distractor or fixator, and the surface rebuilt afterwards"
+        ]}
+      ]
+    },
+    {
+      "id": "hundido",
+      "pregunta": "Is there a depressed articular fragment?",
+      "ayuda": "The depressed (die-punch) fragment is not lifted by ligamentotaxis: it has no ligamentous attachment to pull it.",
+      "opciones": [
+        { "id": "hu-si", "etiqueta": "Yes: elevate and graft", "criterios": [
+          "Elevate it until congruity is restored, through a metaphyseal window",
+          "Fill the underlying defect with graft or substitute so that it does not collapse again",
+          "Support it with a plate or subchondral rafting screws"
+        ]},
+        { "id": "hu-no", "etiqueta": "No depression", "criterios": [
+          "An articular split without depression: ligamentotaxis may be enough"
+        ]}
+      ]
+    },
+    {
+      "id": "provisional",
+      "pregunta": "How are you holding the reduction while you fix?",
+      "ayuda": "Provisional fixation is what lets you verify before committing. Skipping it forces you to decide with the implant already in.",
+      "opciones": [
+        { "id": "pv-agujas", "etiqueta": "Kirschner wires", "criterios": [
+          "They hold the reduction while the definitive implant goes in",
+          "Place them out of the path of the planned screws"
+        ]},
+        { "id": "pv-pinzas", "etiqueta": "Clamps left in place", "criterios": [
+          "Quick and reversible, but they occupy the field where the plate goes"
+        ]},
+        { "id": "pv-fijador", "etiqueta": "External fixator or distractor left in place", "criterios": [
+          "Holds length and alignment throughout the fixation without occupying the fracture site"
+        ]},
+        { "id": "pv-tornillo", "etiqueta": "Provisional interfragmentary screw", "criterios": [
+          "Fixes the articular block as a unit before joining it to the shaft"
+        ]}
+      ]
+    },
+    {
+      "id": "control",
+      "pregunta": "What are you going to verify before definitive fixation?",
+      "ayuda": "The three things that do not correct themselves: length, alignment and rotation. Rotation is the one most often forgotten and the worst tolerated.",
+      "opciones": [
+        { "id": "cn-proyecciones", "etiqueta": "Fluoroscopy in every projection", "criterios": [
+          "Two orthogonal planes as a minimum, plus the obliques particular to the region"
+        ]},
+        { "id": "cn-longitud", "etiqueta": "Length compared with the uninjured side", "criterios": [
+          "It is the only reliable reference when the bone is comminuted"
+        ]},
+        { "id": "cn-eje", "etiqueta": "Alignment in both planes", "criterios": [
+          "Varus-valgus and antecurvatum-recurvatum; the diathermy cable as a plumb line for the mechanical axis"
+        ]},
+        { "id": "cn-rotacion", "etiqueta": "Rotation", "criterios": [
+          "Cortical step sign, lesser trochanter profile, clinical rotation compared with the other side",
+          "No implant corrects it on its own: what is not checked is not corrected"
+        ]},
+        { "id": "cn-articular", "etiqueta": "Articular congruity", "criterios": [
+          "A step-off under 2 mm as a general reference; arthroscopy or CT if in doubt"
+        ]}
+      ]
+    }
+  ],
+
+  "derivados": [
+    {
+      "id": "arsenal",
+      "titulo": "The arsenal that matches your route",
+      "reglas": [
+        { "texto": "Direct route → reduction clamps well aimed, bone hooks, lamina spreaders. You handle the fracture site under vision: maximum precision and maximum biological cost. Justify every millimetre of exposure." },
+        { "texto": "Percutaneous route → wire joysticks, percutaneous clamps, ball-spike pusher, Schanz screws as levers, elevator through a bone window. Fragment control almost as in an open procedure, at a far lower biological cost." },
+        { "texto": "Indirect route → AO or femoral distractor, external fixator as a reduction tool, ligamentotaxis by traction, the plate itself with push-pull screws. You do not touch the fracture site: the fracture haematoma and the periosteum stay where they are." }
+      ]
+    },
+    {
+      "id": "coherencia",
+      "titulo": "The technique against your principle",
+      "reglas": [
+        { "texto": "Anatomical reduction → direct, precise technique. That is what an articular surface or a simple line you are going to compress demands: compression needs exact cortical contact." },
+        { "texto": "Functional reduction → indirect, atraumatic technique. You do not rebuild fragment by fragment: you restore length, alignment and rotation and leave the intercalary fragments alive." },
+        { "texto": "You are going to splint. Reduce without touching the fracture site: distractor, traction, the plate slid in as a reduction tool. Forcing the site with aggressive manoeuvres to improve the radiograph ruins the biology that carries the healing." },
+        { "texto": "You are going to compress. You need exact cortical contact: the reduction has to be anatomical and held when you tighten. Fix provisionally before compressing." }
+      ]
+    }
+  ],
+
+  "esencial": [
+    { "texto": "The reduction is often the hardest part of the operation. It pays to have a stepped arsenal: start simple and keep the advanced tools for when the simple ones are not enough. Every technique falls into one of two categories — direct or indirect — and they must be consistent with the biological principle from Steps 4 and 5." },
+    { "titulo": "Direct against indirect",
+      "encabezados": ["Category", "What it involves", "Indication"],
+      "filas": [
+        ["Direct", "The fracture site is handled under vision and held with instruments applied to the fragments.", "Anatomical reconstruction: articular, or a simple line to be compressed."],
+        ["Indirect", "Reduction from a distance — traction, distractor, ligamentotaxis, the plate itself — without exposing the fracture site.", "Functional reduction and bridging; preserves the biology."]
+      ]},
+    { "titulo": "The stepped arsenal",
+      "encabezados": ["Level", "Tools"],
+      "filas": [
+        ["Basic", "Traction, counter-traction and gravity; closed reduction manoeuvres according to the pattern; pointed, Weber and serrated clamps; bone hook; Kirschner wire as a joystick."],
+        ["Percutaneous", "Ball-spike pusher; percutaneous Schanz screws as levers; elevator through a bone window."],
+        ["Advanced", "AO or femoral distractor; the plate as a reduction instrument with push-pull screws; external fixator as a temporary reduction tool; collinear clamp; lamina spreaders."]
+      ]},
+    { "titulo": "The philosophy of Mast, Jakob and Ganz", "texto": "It is explicit: with the right technique — and the distractor — segmental, shortened or comminuted fractures can be reduced without continuous external traction and without permanent fluoroscopy. This simplifies internal fixation even in poorly equipped theatres, and shifts the weight of the result from the equipment towards the planning." },
+    { "titulo": "The articular sequence", "texto": "Rebuild the articular block as a unit first, using an intact surface or the neighbouring bone as a template, and join it to the shaft afterwards. This is the sequence that lets you give absolute stability to the block and relative stability to the metaphyseal component, combining both principles in a single construct." },
+    { "titulo": "Ligamentotaxis does not lift the depressed fragment", "texto": "The die-punch is depressed and has no ligamentous attachment to drag it: that is why traction does not raise it. It has to be elevated until congruity is restored, and the metaphyseal defect left underneath then filled with graft or bone substitute. Without that fill, the fragment collapses again as soon as it is loaded." },
+    { "titulo": "Verify before you commit", "texto": "Provisional fixation with Kirschner wires exists precisely for this: to hold the reduction while you check it, and to let you redo it if it does not convince you. Then length has to be checked against the uninjured side, alignment in both planes and rotation actively. Rotation is the one most often forgotten and the worst tolerated functionally, and no implant corrects it on its own." },
+    { "titulo": "The rule of Step 9", "texto": "The reduction technique must respect the biological principle. Indirect, atraumatic reduction for what you are going to bridge; direct, precise reduction for what you are going to compress. Forcing the fracture site with aggressive manoeuvres to improve a radiograph can ruin the biology that carries the healing. The best reduction is the one that achieves the objective with the least damage." }
+  ],
+
+  "alertas": [
+    { "id": "menor-dano", "titulo": "The best reduction is the one that achieves the objective with the least damage",
+      "texto": "Forcing the fracture site with aggressive manoeuvres to improve a radiograph can ruin the biology that carries the healing." },
+    { "id": "rotacion-no-se-corrige", "titulo": "Rotation does not correct itself",
+      "texto": "No implant restores it by itself, and it is the deformity worst tolerated functionally. Check it actively: cortical step sign, lesser trochanter profile, clinical comparison with the uninjured side." },
+    { "id": "directa-sobre-puenteo", "titulo": "Direct technique on the site you were going to bridge",
+      "texto": "You chose splinting and an indirect route, and now you are handling the fracture site with instruments applied to the fragments. Every clamp on the comminuted zone costs periosteum. Reduce from a distance: distractor, traction, the plate as a reduction tool." },
+    { "id": "hundido-sin-elevar", "titulo": "Articular depression is not reduced by traction",
+      "texto": "The depressed fragment has no ligamentous attachment to drag it: ligamentotaxis does not lift it. It has to be elevated through a metaphyseal window and the defect underneath filled." },
+    { "id": "sin-provisional", "titulo": "Without provisional fixation you decide with the implant already in",
+      "texto": "Kirschner wires hold the reduction while you check it, and let you redo it if it does not convince you. Without them, every verification arrives too late." },
+    { "id": "agujas-en-trayecto", "titulo": "Place the wires out of the path of the screws",
+      "texto": "A provisional wire in the planned trajectory has to come out exactly when it is most needed, and the reduction is lost at that moment. Plan where each one goes before you drive it." },
+    { "id": "pinza-mal-orientada", "titulo": "A badly aimed clamp displaces instead of reducing",
+      "texto": "It is placed perpendicular to the fracture plane. If the vector is not perpendicular, every squeeze slides the fragments apart instead of bringing them together." },
+    { "id": "ligamentotaxis-limite", "titulo": "Ligamentotaxis reduces what the ligament drags",
+      "texto": "It only works with intact ligaments and capsule, and it does not lift a depressed fragment or reduce anything without an attachment. That is a structural limit, not a question of force." },
+    { "id": "distractor-recomendado", "titulo": "Here the distractor saves you a great deal",
+      "texto": "It regains length and alignment in segmental or comminuted fractures without a traction table and without permanent fluoroscopy. It is the favourite tool of Mast, Jakob and Ganz: reduce first, fix afterwards." },
+    { "id": "articular-a-ciegas", "titulo": "An articular surface is rarely rebuilt blind",
+      "texto": "You are going to reduce an articular block anatomically. You need vision: arthrotomy, a dedicated window, arthroscopy or intraoperative CT. Without any of them, the step-off stays inside." },
+    { "id": "secuencia-invertida", "titulo": "You have reversed the classic sequence",
+      "texto": "Fixing the shaft first is valid when metaphyseal comminution makes the block impossible to reference, but the articular surface then loses its template. Justify it: the general rule is to rebuild the block as a unit and join it afterwards." },
+    { "id": "longitud-sin-referencia", "titulo": "With the bone comminuted, only the uninjured side gives you length",
+      "texto": "Without cortical contact there is no internal reference: if you do not compare with the other side, length is judged by eye and the shortening turns up in clinic." },
+    { "id": "placa-reductora", "titulo": "A pre-contoured plate draws the bone to its shape",
+      "texto": "Fixed first to one fragment, with push-pull screws it aligns the other without touching the fracture site. It is pure indirect reduction, and the best ally of MIPO." },
+    { "id": "rg-lauge-maniobra", "titulo": "The mechanism is undone in reverse",
+      "texto": "Lauge-Hansen is good for exactly this: the reduction manoeuvre is the reverse of the one that produced the injury. In external rotation you reduce by rotating internally; in adduction, by abducting. Using it saves attempts, and saves handling of the fracture site." },
+    { "id": "rg-hundimiento-meseta", "titulo": "Plateau depression: ligamentotaxis does not lift it",
+      "texto": "In a Schatzker II or III there is a depressed fragment with no ligamentous attachment to drag it. It has to be elevated through a metaphyseal window and the defect filled, or it sinks again as soon as it is loaded." }
+  ],
+
+  "reglasCoherencia": [
+    { "id": "r9-tecnica-vs-via", "titulo": "Consistency — open technique with an indirect route",
+      "mensaje": "You decided to reduce without exposing the fracture site and now you are using lamina spreaders, which demand opening it. Either the route was another one, or this technique is one too many." },
+    { "id": "r9-sin-control", "titulo": "Consistency — fixing without verifying",
+      "mensaje": "Checks are missing before definitive fixation. Length, alignment and rotation are the three things that do not correct themselves, and all three are verified while the implant is still provisional." },
+    { "id": "r9-hundido-sin-relleno", "titulo": "Consistency — elevating without filling",
+      "mensaje": "Elevating the fragment leaves a metaphyseal void underneath. Check that you marked graft or bone substitute in Step 6: without a fill, the fragment collapses again as soon as it is loaded." }
+  ],
+
+  "evidencia": [
+    { "afirmacion": "Preserving the haematoma and the blood supply through indirect reduction — distractor, ligamentotaxis, the plate as a reduction tool — is associated with a lower non-union rate in comminuted fractures than aggressive direct reduction." },
+    { "afirmacion": "With a distractor and the right technique, segmental, shortened or comminuted fractures can be reduced without continuous external traction and without permanent fluoroscopy." },
+    { "afirmacion": "Rotational malalignment of the forearm compromises pronosupination and the functional result, which makes active verification of rotation essential." }
+  ],
+
+  "autoevaluacion": [
+    { "pregunta": "When is direct reduction indicated despite its biological cost?",
+      "opciones": [
+        "Whenever it is possible",
+        "When anatomical reconstruction is needed: an articular surface, or a simple line that is going to be compressed",
+        "In comminuted fractures",
+        "When there is no fluoroscopy"
+      ],
+      "explicacion": "Compression demands exact cortical contact, and an articular surface demands millimetre precision. Outside those two cases, the cost buys you nothing." },
+    { "pregunta": "Which instrument lets you regain length and alignment without a traction table?",
+      "opciones": [
+        "The collinear clamp",
+        "The AO or femoral distractor",
+        "The bone hook",
+        "The lamina spreader"
+      ],
+      "explicacion": "It is the favourite tool of Mast, Jakob and Ganz, and it avoids the complications of prolonged traction." },
+    { "pregunta": "Why does ligamentotaxis not lift a depressed articular fragment?",
+      "opciones": [
+        "Because more traction force is needed",
+        "Because the depressed fragment has no ligamentous attachment to drag it",
+        "Because the ligaments are torn",
+        "Because traction only acts along the long axis"
+      ],
+      "explicacion": "It is a structural limit, not one of force. It has to be elevated through a metaphyseal window and the defect underneath filled." },
+    { "pregunta": "What is the classic sequence in an articular fracture with a metaphyseal component?",
+      "opciones": [
+        "Fix the shaft and then the surface",
+        "Rebuild the articular block as a unit and join it to the shaft afterwards",
+        "Fix everything at once with a long plate",
+        "Reduce only the shaft"
+      ],
+      "explicacion": "It is the sequence that lets you give absolute stability to the block and relative stability to the metaphyseal component, combining both principles in a single construct." },
+    { "pregunta": "How should a reduction clamp be aimed relative to the fracture line?",
+      "opciones": [
+        "Parallel",
+        "Perpendicular to the fracture plane",
+        "Oblique at 45°",
+        "It does not matter as long as it compresses"
+      ],
+      "explicacion": "If the vector is not perpendicular, every squeeze slides the fragments apart instead of bringing them together." },
+    { "pregunta": "What is provisional fixation with Kirschner wires for?",
+      "opciones": [
+        "To replace the definitive implant",
+        "To hold the reduction while it is verified, allowing it to be redone before you commit",
+        "To compress the fracture site",
+        "To mark the path of the screws"
+      ],
+      "explicacion": "And that is why they should be placed out of the path of the planned screws: if they have to come out just as you fix, the reduction is lost at that moment." },
+    { "pregunta": "In a comminuted fracture, what do you check length against?",
+      "opciones": [
+        "Against the preoperative radiograph",
+        "Against the uninjured side",
+        "Against the length of the implant",
+        "Against the patient's height"
+      ],
+      "explicacion": "Without cortical contact there is no internal reference. That is why Step 7 tells you to leave the contralateral side within reach of the C-arm." }
+  ]
+}

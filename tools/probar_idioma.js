@@ -166,33 +166,48 @@ ok('Los códigos de tipo/grupo no se tocan',
    dh('tipo').opciones[0].etiqueta === p2es.decisiones.find(d => d.id === 'tipo').opciones[0].etiqueta,
    dh('tipo').opciones[0].etiqueta);
 
-// 10 · el Paso 7 traducido entero: la muestra de la Fase 2
-S.idioma = 'en'; const p7 = pasoDe(7);
-const esEspanol = s => /[áéíóúñ¿¡]|\b(el|la|los|las|que|con|para|una|del)\b/i.test(String(s || ''));
-if (DATA.trad && DATA.trad.en && DATA.trad.en['7']) {
-  ok('El Paso 7 tiene título en inglés', !esEspanol(p7.titulo), p7.titulo);
-  ok('El Paso 7 tiene subtítulo en inglés', !esEspanol(p7.subtitulo), p7.subtitulo);
-  ok('La pregunta clave del Paso 7 está en inglés', !esEspanol(p7.preguntaClave), p7.preguntaClave);
+// 10 · cada paso traducido, revisado entero: ni un resto de español
+const esEspanol = s => /[áéíóúñ¿¡]|\b(el|la|los|las|que|con|para|una|del|sin|por)\b/i.test(String(s || ''));
+S.idioma = 'en';
+for (const n of pasosTraducidos()) {
+  const p = pasoDe(n);
   const restos = [];
-  for (const d of p7.decisiones) {
-    if (esEspanol(d.pregunta)) restos.push('pregunta: ' + d.pregunta.slice(0, 34));
+  for (const campo of ['titulo', 'subtitulo', 'preguntaClave', 'sintesis'])
+    if (esEspanol(p[campo])) restos.push(campo);
+  for (const o of (p.objetivos || [])) if (esEspanol(o)) restos.push('objetivo');
+  for (const d of (p.decisiones || [])) {
+    if (esEspanol(d.pregunta)) restos.push('pregunta: ' + d.pregunta.slice(0, 30));
+    if (esEspanol(d.ayuda)) restos.push('ayuda de ' + d.id);
     for (const o of d.opciones) {
-      if (esEspanol(o.etiqueta)) restos.push('opción: ' + o.etiqueta.slice(0, 34));
-      for (const c of (o.criterios || [])) if (esEspanol(c)) restos.push('criterio: ' + c.slice(0, 34));
+      if (esEspanol(o.etiqueta)) restos.push('opción: ' + o.etiqueta.slice(0, 30));
+      for (const c of (o.criterios || [])) if (esEspanol(c)) restos.push('criterio: ' + c.slice(0, 30));
     }
   }
-  for (const a of (p7.alertas || [])) {
-    if (esEspanol(a.titulo)) restos.push('alerta: ' + a.titulo.slice(0, 34));
-    if (esEspanol(a.texto)) restos.push('texto: ' + a.texto.slice(0, 34));
+  for (const a of (p.alertas || [])) {
+    if (esEspanol(a.titulo)) restos.push('alerta: ' + a.titulo.slice(0, 30));
+    if (esEspanol(a.texto)) restos.push('texto de ' + a.id);
   }
-  ok('No queda español suelto en el Paso 7', restos.length === 0,
+  for (const r of (p.reglasCoherencia || [])) if (esEspanol(r.mensaje)) restos.push('regla ' + r.id);
+  for (const dv of (p.derivados || []))
+    for (const rg of (dv.reglas || [])) if (esEspanol(rg.texto)) restos.push('derivado ' + dv.id);
+  for (const b of (p.esencial || [])) {
+    if (esEspanol(b.texto)) restos.push('bloque: ' + String(b.texto).slice(0, 30));
+    if (esEspanol(b.titulo)) restos.push('título de bloque');
+    for (const fila of (b.filas || [])) for (const c of fila) if (esEspanol(c)) restos.push('celda: ' + c.slice(0, 30));
+    for (const h of (b.encabezados || [])) if (esEspanol(h)) restos.push('encabezado: ' + h);
+  }
+  for (const q of (p.autoevaluacion || [])) {
+    if (esEspanol(q.pregunta)) restos.push('quiz: ' + q.pregunta.slice(0, 30));
+    for (const o of q.opciones) if (esEspanol(o)) restos.push('quiz opción: ' + o.slice(0, 30));
+    if (esEspanol(q.explicacion)) restos.push('quiz explicación');
+  }
+  for (const e of (p.evidencia || [])) if (esEspanol(e.afirmacion)) restos.push('evidencia');
+  ok('Paso ' + n + ' sin restos de español', restos.length === 0,
      restos.length + ': ' + restos.slice(0, 3).join(' | '));
-  // y el español original sigue intacto
+  // el español original no se toca
   S.idioma = 'es';
-  ok('El Paso 7 en español no se estropeó', esEspanol(pasoDe(7).titulo), pasoDe(7).titulo);
+  ok('Paso ' + n + ' en español intacto', esEspanol(pasoDe(n).titulo), pasoDe(n).titulo);
   S.idioma = 'en';
-} else {
-  console.log('  --    El Paso 7 aún no está traducido (Fase 2 en curso)');
 }
 
 // y lo que NO debe cambiar, no cambia
