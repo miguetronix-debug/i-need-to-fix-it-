@@ -36,7 +36,7 @@ PREGUNTAS = {
     "calificaciones": "Qualifications",
     "modificadores": "Universal modifiers",
     "cl-schatzker": "Tibial plateau · Schatzker as modified by Kfuri: which type?",
-    "cl-columnas": "Tibial plateau · Schatzker as modified by Kfuri: which columns?",
+    "cl-columnas": "Tibial plateau · Schatzker as modified by Kfuri: which quadrants are broken?",
     "cl-garden": "Femoral neck · Garden",
     "cl-pauwels": "Femoral neck · Pauwels",
     "cl-neer": "Proximal humerus · Neer",
@@ -98,8 +98,8 @@ CLASIFICACIONES = {
         "sch-V": "V · Bicondylar",
         "sch-VI": "VI · Bicondylar with metaphyseal-diaphyseal dissociation"},
     "cl-columnas": {
-        "col-lat": "Lateral column", "col-med": "Medial column",
-        "col-post-med": "Posteromedial column", "col-post-lat": "Posterolateral column"},
+        "col-antero-lat": "Anterolateral", "col-antero-med": "Anteromedial",
+        "col-post-lat": "Posterolateral", "col-post-med": "Posteromedial"},
     "cl-garden": {
         "gar-nd": "Undisplaced · Garden I-II", "gar-d": "Displaced · Garden III-IV"},
     "cl-pauwels": {

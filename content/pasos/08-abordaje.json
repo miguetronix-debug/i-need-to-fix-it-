@@ -340,20 +340,12 @@
           "criterios": [
             "Acceso articular y metafisario del fémur distal y de la meseta tibial",
             "Extensible con osteotomía de la tuberosidad si hace falta más visión"
-          ]
-        },
-        {
-          "id": "vn-posteromedial-rodilla",
-          "etiqueta": "Posteromedial de rodilla",
-          "soloSi": {
+          ],
+          "noSi": {
             "ctx": [
-              "reg-rodilla"
+              "seg-41"
             ]
-          },
-          "criterios": [
-            "Fragmento posteromedial de la meseta, que la placa lateral no controla",
-            "Permite colocar el contrafuerte donde de verdad empuja el fragmento"
-          ]
+          }
         },
         {
           "id": "vn-anteromedial-tibia",
@@ -367,7 +359,12 @@
           "criterios": [
             "Cara subcutánea medial: acceso fácil y cobertura pobre",
             "Es la región donde esperar la ventana de partes blandas es más determinante"
-          ]
+          ],
+          "noSi": {
+            "ctx": [
+              "seg-41"
+            ]
+          }
         },
         {
           "id": "vn-anterolateral-tobillo",
@@ -468,6 +465,74 @@
           },
           "criterios": [
             "Subperióstico en la línea media; abdomen libre para reducir el sangrado epidural"
+          ]
+        },
+        {
+          "id": "vn-tp-lateral",
+          "etiqueta": "Lateral de la tibia proximal",
+          "soloSi": {
+            "ctx": [
+              "seg-41"
+            ]
+          },
+          "criterios": [
+            "Alcanza el cuadrante ANTEROLATERAL, que es el de la separación-hundimiento clásica",
+            "Supino. Es la vía de la placa lateral bloqueada",
+            "Extensible a parapatelar lateral si hace falta ver la superficie"
+          ],
+          "emite": [
+            "via-lat-tp"
+          ]
+        },
+        {
+          "id": "vn-tp-medial",
+          "etiqueta": "Medial de la tibia proximal",
+          "soloSi": {
+            "ctx": [
+              "seg-41"
+            ]
+          },
+          "criterios": [
+            "Alcanza el cuadrante ANTEROMEDIAL",
+            "Cara subcutánea: cobertura pobre, respeta la ventana de partes blandas",
+            "Sostiene el platillo medial, que la placa lateral no controla"
+          ],
+          "emite": [
+            "via-med-tp"
+          ]
+        },
+        {
+          "id": "vn-tp-posteromedial",
+          "etiqueta": "Posteromedial de la tibia proximal",
+          "soloSi": {
+            "ctx": [
+              "seg-41"
+            ]
+          },
+          "criterios": [
+            "Alcanza el cuadrante POSTEROMEDIAL, el fragmento que más se olvida",
+            "Decúbito supino con la rodilla flexionada, o prono según la combinación",
+            "Entre el gastrocnemio medial y la pata de ganso; permite el contrafuerte donde de verdad empuja el fragmento"
+          ],
+          "emite": [
+            "via-pm-tp"
+          ]
+        },
+        {
+          "id": "vn-tp-posterolateral",
+          "etiqueta": "Posterolateral de la tibia proximal",
+          "soloSi": {
+            "ctx": [
+              "seg-41"
+            ]
+          },
+          "criterios": [
+            "Alcanza el cuadrante POSTEROLATERAL, el de acceso más difícil",
+            "Prono o lateral. Valorar osteotomía del peroné o ventana posterior",
+            "Estructura en riesgo: nervio ciático poplíteo externo y tronco tibioperoneo"
+          ],
+          "emite": [
+            "via-pl-tp"
           ]
         }
       ]
@@ -1129,6 +1194,82 @@
           ]
         }
       ]
+    },
+    {
+      "id": "tp-cuadrante-anterolateral",
+      "severidad": "alta",
+      "titulo": "Marcaste el cuadrante anterolateral y no lo estás abordando",
+      "texto": "El cuadrante anterolateral se alcanza por el abordaje lateral. Sin esa ventana, la separación-hundimiento se reduce a ciegas. Lo que corresponde es el abordaje lateral de la tibia proximal, solo o combinado con el que ya elegiste.",
+      "mostrarSi": {
+        "ctx": [
+          "col-anterolateral"
+        ]
+      },
+      "noSi": {
+        "ctx": [
+          "via-lat-tp"
+        ]
+      }
+    },
+    {
+      "id": "tp-cuadrante-anteromedial",
+      "severidad": "alta",
+      "titulo": "Marcaste el cuadrante anteromedial y no lo estás abordando",
+      "texto": "El platillo anteromedial no lo sostiene una placa lateral: trabaja a cizallamiento y cede en varo. Necesita su propia ventana medial y un contrafuerte. Lo que corresponde es el abordaje medial de la tibia proximal, solo o combinado con el que ya elegiste.",
+      "mostrarSi": {
+        "ctx": [
+          "col-anteromedial"
+        ]
+      },
+      "noSi": {
+        "ctx": [
+          "via-med-tp"
+        ]
+      }
+    },
+    {
+      "id": "tp-cuadrante-posterolateral",
+      "severidad": "alta",
+      "titulo": "Marcaste el cuadrante posterolateral y no lo estás abordando",
+      "texto": "El cuadrante posterolateral queda detrás del peroné: no se ve ni se instrumenta desde delante. O se aborda por detrás, o ese hundimiento se queda sin reducir. Lo que corresponde es el abordaje posterolateral de la tibia proximal, solo o combinado con el que ya elegiste.",
+      "mostrarSi": {
+        "ctx": [
+          "col-posterolateral"
+        ]
+      },
+      "noSi": {
+        "ctx": [
+          "via-pl-tp"
+        ]
+      }
+    },
+    {
+      "id": "tp-cuadrante-posteromedial",
+      "severidad": "alta",
+      "titulo": "Marcaste el cuadrante posteromedial y no lo estás abordando",
+      "texto": "El fragmento posteromedial se luxa en flexión y ninguna placa anterior lo controla. Es el que más se olvida y el que más falla. Lo que corresponde es el abordaje posteromedial de la tibia proximal, solo o combinado con el que ya elegiste.",
+      "mostrarSi": {
+        "ctx": [
+          "col-posteromedial"
+        ]
+      },
+      "noSi": {
+        "ctx": [
+          "via-pm-tp"
+        ]
+      }
+    },
+    {
+      "id": "tp-cuadrante-doctrina",
+      "severidad": "info",
+      "titulo": "En la meseta, cada cuadrante pide su ventana",
+      "texto": "Schatzker modificada por Kfuri divide el platillo en cuatro cuadrantes —anterolateral, anteromedial, posterolateral y posteromedial— precisamente porque cada uno se alcanza por un sitio distinto. Ese es el valor de la clasificación: no describe, planifica el abordaje. Dos cuadrantes rotos suelen significar dos ventanas, con su puente cutáneo pensado desde el principio.",
+      "mostrarSi": {
+        "ctx": [
+          "seg-41"
+        ]
+      },
+      "mostrarSiempre": false
     }
   ],
   "reglasCoherencia": [
@@ -1166,7 +1307,6 @@
           "vn-lateral-femur",
           "vn-entrada-clavo",
           "vn-parapatelar",
-          "vn-posteromedial-rodilla",
           "vn-anteromedial-tibia",
           "vn-anterolateral-tobillo",
           "vn-posterolateral-tobillo",
@@ -1175,7 +1315,11 @@
           "vn-dorsal-pie",
           "vn-kocher-langenbeck",
           "vn-ilioinguinal",
-          "vn-columna-post"
+          "vn-columna-post",
+          "vn-tp-lateral",
+          "vn-tp-medial",
+          "vn-tp-posteromedial",
+          "vn-tp-posterolateral"
         ]
       }
     },

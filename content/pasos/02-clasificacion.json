@@ -52537,7 +52537,7 @@
     },
     {
       "id": "cl-columnas",
-      "pregunta": "Meseta tibial · Schatzker modificada por Kfuri: ¿qué columnas?",
+      "pregunta": "Meseta tibial · Schatzker modificada por Kfuri: ¿qué cuadrantes están rotos?",
       "ayuda": "Es la segunda mitad de la clasificación y la que de verdad decide el abordaje y la posición. Kfuri divide la meseta en cuadrantes por dos líneas y obliga a nombrar la columna, que es la información que el tipo de Schatzker no contiene.",
       "nota": "Concordancia — Se define sobre TC, no sobre radiografía, y ahí está su ventaja: reproduce mejor y planifica mejor que el tipo solo. Marca todas las que apliquen.",
       "tipo": "opcionMultiple",
@@ -52549,46 +52549,55 @@
       },
       "opciones": [
         {
-          "id": "col-lat",
-          "etiqueta": "Columna lateral",
+          "id": "col-antero-lat",
+          "etiqueta": "Anterolateral",
           "criterios": [
-            "Abordaje anterolateral o parapatelar lateral"
+            "El cuadrante clásico de la separación-hundimiento lateral",
+            "Se alcanza por el abordaje lateral, con el paciente en supino"
           ],
           "emite": [
+            "col-anterolateral",
             "col-lateral"
           ]
         },
         {
-          "id": "col-med",
-          "etiqueta": "Columna medial",
+          "id": "col-antero-med",
+          "etiqueta": "Anteromedial",
           "criterios": [
-            "Abordaje medial o anteromedial",
-            "La placa lateral no la sostiene"
+            "Hundimiento o separación de la mitad anterior del platillo medial",
+            "Se alcanza por el abordaje medial; la placa lateral no lo sostiene"
           ],
           "emite": [
+            "col-anteromedial",
             "col-medial"
           ]
         },
         {
-          "id": "col-post-med",
-          "etiqueta": "Columna posteromedial",
+          "id": "col-post-lat",
+          "etiqueta": "Posterolateral",
           "criterios": [
-            "Es el fragmento que más se olvida y el que más falla",
-            "Exige contrafuerte posteromedial por abordaje propio"
+            "El de acceso más difícil: queda por detrás del peroné y por debajo del ciático poplíteo externo",
+            "Hundimiento puro que la radiografía de frente no enseña: exige TC",
+            "Abordaje posterolateral, con osteotomía del peroné o ventana posterior según el caso"
           ],
           "emite": [
-            "col-medial",
-            "col-posterior"
+            "col-posterolateral",
+            "col-posterior",
+            "col-lateral"
           ]
         },
         {
-          "id": "col-post-lat",
-          "etiqueta": "Columna posterolateral",
+          "id": "col-post-med",
+          "etiqueta": "Posteromedial",
           "criterios": [
-            "De acceso difícil: valorar abordaje posterolateral u osteotomía del peroné"
+            "Es el fragmento que más se olvida y el que más falla",
+            "Se luxa en flexión: la placa lateral y la anteromedial no lo controlan",
+            "Exige contrafuerte posteromedial por su propio abordaje"
           ],
           "emite": [
-            "col-posterior"
+            "col-posteromedial",
+            "col-posterior",
+            "col-medial"
           ]
         }
       ]
@@ -53516,26 +53525,18 @@
         {
           "si": {
             "cl-columnas": [
-              "col-lat"
+              "col-antero-lat"
             ]
           },
-          "texto": "Schatzker modificada por Kfuri · columnas Columna lateral — Abordaje anterolateral o parapatelar lateral"
+          "texto": "Schatzker modificada por Kfuri · columnas Anterolateral — El cuadrante clásico de la separación-hundimiento lateral. Se alcanza por el abordaje lateral, con el paciente en supino"
         },
         {
           "si": {
             "cl-columnas": [
-              "col-med"
+              "col-antero-med"
             ]
           },
-          "texto": "Schatzker modificada por Kfuri · columnas Columna medial — Abordaje medial o anteromedial. La placa lateral no la sostiene"
-        },
-        {
-          "si": {
-            "cl-columnas": [
-              "col-post-med"
-            ]
-          },
-          "texto": "Schatzker modificada por Kfuri · columnas Columna posteromedial — Es el fragmento que más se olvida y el que más falla. Exige contrafuerte posteromedial por abordaje propio"
+          "texto": "Schatzker modificada por Kfuri · columnas Anteromedial — Hundimiento o separación de la mitad anterior del platillo medial. Se alcanza por el abordaje medial; la placa lateral no lo sostiene"
         },
         {
           "si": {
@@ -53543,7 +53544,15 @@
               "col-post-lat"
             ]
           },
-          "texto": "Schatzker modificada por Kfuri · columnas Columna posterolateral — De acceso difícil: valorar abordaje posterolateral u osteotomía del peroné"
+          "texto": "Schatzker modificada por Kfuri · columnas Posterolateral — El de acceso más difícil: queda por detrás del peroné y por debajo del ciático poplíteo externo. Hundimiento puro que la radiografía de frente no enseña: exige TC"
+        },
+        {
+          "si": {
+            "cl-columnas": [
+              "col-post-med"
+            ]
+          },
+          "texto": "Schatzker modificada por Kfuri · columnas Posteromedial — Es el fragmento que más se olvida y el que más falla. Se luxa en flexión: la placa lateral y la anteromedial no lo controlan"
         },
         {
           "si": {

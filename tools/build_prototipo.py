@@ -624,7 +624,14 @@ function cumple(si){
 }
 // Variante exigente: hacen falta TODOS los valores, no basta con uno.
 function cumpleTodo(si){ for(const k in si){ if(!si[k].every(v=>marcado(k,v))) return false; } return true; }
-function opcionesVisibles(d){ return d.opciones.filter(o=>!o.soloSi||cumple(o.soloSi)); }
+// Una opción se ve si cumple «soloSi» y NO cumple «noSi». Hacía falta la
+// negación para poder decir «esta vía existe en la rodilla, salvo en la meseta,
+// donde la lista es otra»: sin ella habría que enumerar todo lo demás.
+function opcionesVisibles(d){
+  return d.opciones.filter(o=>
+    (!o.soloSi || cumple(o.soloSi)) &&
+    (!o.noSi   || !cumple(o.noSi)));
+}
 function esMulti(d){ return d.tipo==='opcionMultiple'; }
 
 function cod(id){ for(const dd of P.decisiones){ const o=dd.opciones.find(x=>x.id===id); if(o) return o.codigo; } return ''; }

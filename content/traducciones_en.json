@@ -178,12 +178,12 @@
           }
         },
         "cl-columnas": {
-          "pregunta": "Tibial plateau · Schatzker as modified by Kfuri: which columns?",
+          "pregunta": "Tibial plateau · Schatzker as modified by Kfuri: which quadrants are broken?",
           "opciones": {
-            "col-lat": "Lateral column",
-            "col-med": "Medial column",
-            "col-post-med": "Posteromedial column",
-            "col-post-lat": "Posterolateral column"
+            "col-antero-lat": "Anterolateral",
+            "col-antero-med": "Anteromedial",
+            "col-post-lat": "Posterolateral",
+            "col-post-med": "Posteromedial"
           }
         },
         "cl-garden": {
