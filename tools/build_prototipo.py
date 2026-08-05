@@ -1666,7 +1666,9 @@ def main():
     ni sustituye el juicio del cirujano responsable ni los protocolos de la institución. Contenido basado en
     el libro «Los 10 pasos para resolver cualquier fractura» y en el documento «Politrauma — Reanimación y
     Decisión Quirúrgica», ambos del Dr. Michael David Kushner Shrem. Versión de contenido: {version}.
-    Clasificación AO/OTA 2018 reproducida con fines educativos.
+    Clasificación AO/OTA 2018 reproducida con fines educativos. © 2026 M. D. Kushner Shrem ·
+    contenido bajo licencia CC BY-NC-SA 4.0, código bajo MIT: libre para enseñar y adaptar citando
+    la fuente, no para uso comercial.
   </p>
 </div>
 

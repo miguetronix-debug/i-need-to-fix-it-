@@ -93,7 +93,7 @@
       "tira_trabajo_faltan": "faltan tornillos a un lado",
       "sw_sin_conexion": "El modo sin conexión no está disponible:",
       "aviso_b": "Aviso.",
-      "aviso": "Prototipo con fines educativos y de apoyo metodológico. No constituye indicación clínica ni sustituye el juicio del cirujano responsable ni los protocolos de la institución. Contenido basado en el libro «Los 10 pasos para resolver cualquier fractura» y en el documento «Politrauma — Reanimación y Decisión Quirúrgica», ambos del Dr. Michael David Kushner Shrem. Versión de contenido: {version}. Clasificación AO/OTA 2018 reproducida con fines educativos.",
+      "aviso": "Prototipo con fines educativos y de apoyo metodológico. No constituye indicación clínica ni sustituye el juicio del cirujano responsable ni los protocolos de la institución. Contenido basado en el libro «Los 10 pasos para resolver cualquier fractura» y en el documento «Politrauma — Reanimación y Decisión Quirúrgica», ambos del Dr. Michael David Kushner Shrem. Versión de contenido: {version}. Clasificación AO/OTA 2018 reproducida con fines educativos. © 2026 M. D. Kushner Shrem · contenido bajo licencia CC BY-NC-SA 4.0, código bajo MIT: libre para enseñar y adaptar citando la fuente, no para uso comercial.",
       "banner_es": "",
       "pasos_titulos": [
         "La evaluación inicial",
@@ -220,7 +220,7 @@
       "tira_trabajo_faltan": "screws missing on one side",
       "sw_sin_conexion": "Offline mode is not available:",
       "aviso_b": "Notice.",
-      "aviso": "A prototype for education and methodical support. It is not a clinical indication and does not replace the judgement of the responsible surgeon or the protocols of the institution. Content based on the book «The 10 steps to fix any fracture» and on the document «Polytrauma — Resuscitation and Surgical Decision», both by Dr. Michael David Kushner Shrem. Content version: {version}. AO/OTA 2018 classification reproduced for educational purposes.",
+      "aviso": "A prototype for education and methodical support. It is not a clinical indication and does not replace the judgement of the responsible surgeon or the protocols of the institution. Content based on the book «The 10 steps to fix any fracture» and on the document «Polytrauma — Resuscitation and Surgical Decision», both by Dr. Michael David Kushner Shrem. Content version: {version}. AO/OTA 2018 classification reproduced for educational purposes. © 2026 M. D. Kushner Shrem · content licensed CC BY-NC-SA 4.0, code MIT: free to teach with and adapt provided you cite the source, not for commercial use.",
       "banner_es": "",
       "pasos_titulos": [
         "Initial assessment",

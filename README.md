@@ -60,3 +60,16 @@ cd sitio && python3 -m http.server 8000
 Material con fines educativos y de apoyo metodológico. No constituye indicación clínica ni sustituye el juicio del cirujano responsable ni los protocolos de cada institución.
 
 La clasificación AO/OTA y sus figuras se reproducen con fines educativos. La OTA y la AO autorizan su reproducción para investigación, docencia o uso médico sin solicitar permiso; **el uso comercial o con ánimo de lucro requiere autorización del editor**, así que este proyecto se distribuye de forma gratuita.
+
+## Licencia
+
+Dos licencias, porque hay dos cosas distintas dentro:
+
+- **Contenido** (`content/`, `manual/`, la documentación): **CC BY-NC-SA 4.0**. Libre para enseñar, copiar, traducir y adaptar citando la fuente; sin uso comercial; las adaptaciones llevan la misma licencia. Ver [`LICENSE`](LICENSE).
+- **Código** (`tools/`, `sw.js`, `manifest.webmanifest`): **MIT**. Ver [`tools/LICENSE`](tools/LICENSE).
+
+El detalle y el porqué de la combinación, en [`LICENCIA.md`](LICENCIA.md).
+
+Cita sugerida:
+
+> Kushner Shrem MD. *Los 10 pasos para resolver cualquier fractura* — I Need To Fix It. https://ineedtofixit.vercel.app · CC BY-NC-SA 4.0

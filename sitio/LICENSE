@@ -1,0 +1,89 @@
+CONTENIDO / CONTENT LICENSE
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+(CC BY-NC-SA 4.0)
+
+Copyright (c) 2026 Michael David Kushner Shrem
+
+Este fichero cubre el CONTENIDO de «I Need To Fix It» / «Los 10 pasos para
+resolver cualquier fractura»: los ficheros de content/, manual/ y la
+documentación en la raiz del repositorio. El codigo (tools/, sw.js,
+manifest.webmanifest) se licencia por separado bajo MIT: ver tools/LICENSE.
+El HTML publicado combina ambos.
+
+This file covers the CONTENT of the project: everything under content/,
+manual/, and the documentation at the repository root. The code (tools/,
+sw.js, manifest.webmanifest) is licensed separately under MIT: see
+tools/LICENSE. The published HTML combines the two.
+
+--------------------------------------------------------------------------
+EL TEXTO LEGAL COMPLETO / FULL LEGAL CODE
+--------------------------------------------------------------------------
+
+La licencia que rige es el texto legal integro publicado por Creative
+Commons, incorporado aqui por referencia:
+
+    https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.es   (es)
+    https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode      (en)
+
+Resumen para lectores humanos:
+
+    https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es
+
+--------------------------------------------------------------------------
+RESUMEN (no sustituye al texto legal)
+--------------------------------------------------------------------------
+
+Eres libre de:
+
+  COMPARTIR  — copiar y redistribuir el material en cualquier medio o
+               formato.
+  ADAPTAR    — remezclar, transformar y construir a partir del material.
+
+Bajo estas condiciones:
+
+  BY  ATRIBUCION      Debes dar credito de manera adecuada, indicar si se
+                      han hecho cambios y enlazar a la licencia. Cita
+                      sugerida: Kushner Shrem MD. «Los 10 pasos para
+                      resolver cualquier fractura» — I Need To Fix It.
+                      CC BY-NC-SA 4.0.
+
+  NC  NO COMERCIAL    No puedes usar el material con fines comerciales ni
+                      con animo de lucro. Ensenar con el dentro de una
+                      institucion no es uso comercial; cobrar por el acceso
+                      al material si lo es.
+
+  SA  COMPARTIR IGUAL Si remezclas o transformas el material, debes
+                      distribuir tu contribucion bajo esta misma licencia.
+
+No hay restricciones adicionales: no puedes aplicar terminos legales ni
+medidas tecnologicas que restrinjan a otros hacer lo que la licencia
+permite.
+
+--------------------------------------------------------------------------
+NOTA SOBRE LA CLASIFICACION AO/OTA
+--------------------------------------------------------------------------
+
+El app reproduce la clasificacion AO/OTA 2018 (compendio de fracturas). Su
+licencia autoriza la reproduccion con fines de investigacion, educativos o
+medicos sin solicitar permiso, pero exige autorizacion del editor para el
+uso comercial o con animo de lucro. La clausula NC de esta licencia es, en
+parte, consecuencia de eso: el autor no puede ceder un permiso comercial
+sobre material que no le pertenece.
+
+Para uso comercial hace falta permiso escrito del autor Y del editor de la
+clasificacion AO/OTA.
+
+--------------------------------------------------------------------------
+SIN GARANTIA / NO WARRANTY
+--------------------------------------------------------------------------
+
+Material educativo y de apoyo metodologico. No constituye indicacion
+clinica ni sustituye el juicio del cirujano responsable ni los protocolos
+de la institucion. Se ofrece TAL CUAL, sin garantias de ningun tipo,
+expresas o implicitas. El autor no responde de decisiones clinicas tomadas
+a partir de este material.
+
+Educational and methodological support material. It is not a clinical
+indication and does not replace the judgement of the responsible surgeon or
+the protocols of the institution. Provided AS IS, without warranty of any
+kind.
