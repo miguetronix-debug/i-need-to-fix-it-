@@ -53,7 +53,15 @@ HEADERS = """# manifest.webmanifest tiene que llegar con su tipo propio: si el s
 # Vercel y Netlify sirven estáticos sin configuración; esto solo añade caché
 # larga para las figuras, que no cambian nunca, y ninguna para el HTML.
 VERCEL = """{
+  "cleanUrls": false,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" }
+  ],
   "headers": [
+    {
+      "source": "/",
+      "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+    },
     {
       "source": "/content/figuras/(.*)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
