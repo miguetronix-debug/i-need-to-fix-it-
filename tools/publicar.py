@@ -25,6 +25,7 @@ SITIO = RAIZ / "sitio"
 
 ROBOTS = """User-agent: *
 Allow: /
+Sitemap: https://ineedtofixit.vercel.app/sitemap.xml
 """
 
 # Lo mismo que vercel.json, en el formato que entiende Netlify. Hace falta
@@ -95,6 +96,10 @@ def main():
     destino = SITIO / "content" / "figuras"
     shutil.copytree(RAIZ / "content" / "figuras", destino, dirs_exist_ok=True)
 
+    (SITIO / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+        '<url><loc>https://ineedtofixit.vercel.app/</loc></url></urlset>\n', encoding="utf-8")
     (SITIO / "robots.txt").write_text(ROBOTS, encoding="utf-8")
     (SITIO / "vercel.json").write_text(VERCEL, encoding="utf-8")
     (SITIO / "_headers").write_text(HEADERS, encoding="utf-8")
