@@ -116,4 +116,62 @@ test('Todos los manejadores generados son JavaScript válido',()=>{
   assert.doesNotThrow(()=>new Function('event',code),code);
  }
 });
+test('Radio y cúbito conservan códigos, lado y notas independientes',()=>{
+ const b=app();b.run('irACodigo("2R2A1");ladoLesion("derecho");guardarNota("justificacion","Plan del radio");agregarLesion("h-2U")');
+ assert.equal(b.run('S.lesiones.length'),2);assert.equal(b.run('S.dec.hueso'),'h-2U');
+ assert.equal(b.run('S.dec.segmento'),undefined); // no se supone el mismo nivel
+ b.run('irACodigo("2U2B2");ladoLesion("derecho");guardarNota("justificacion","Plan del cubito");seleccionarLesion(0)');
+ assert.equal(b.run('conContexto(2,codigoCanonico)'),'2R2A1');assert.equal(b.run('notaPaso(2).justificacion'),'Plan del radio');
+ b.run('seleccionarLesion(1)');assert.equal(b.run('conContexto(2,codigoCanonico)'),'2U2B2');assert.equal(b.run('notaPaso(2).justificacion'),'Plan del cubito');
+});
+test('Tibia y peroné mantienen clasificaciones diferentes en el plan conjunto',()=>{
+ const b=app();b.run('irACodigo("42B2");guardarNota("datos","Datos tibia");agregarLesion("h-4F");irACodigo("4F2A");guardarNota("datos","Datos perone")');
+ const before=b.run('JSON.stringify(S.porPaso)');b.run('verResumen()');
+ const text=b.run('planTexto()');assert.match(text,/42B2/);assert.match(text,/4F2A/);assert.match(text,/Datos tibia/);assert.match(text,/Datos perone/);
+ assert.equal((b.nodes.vistaresumen.innerHTML.match(/id="bcopiar"/g)||[]).length,1);
+ assert.equal((b.nodes.vistaresumen.innerHTML.match(/id="share-status"/g)||[]).length,1);
+ assert.equal(b.run('JSON.stringify(S.porPaso)'),before);assert.equal(b.run('S.dec===S.porPaso[S.paso]'),true);
+ b.run('editarLesionPaso(0,3)');assert.equal(b.run('S.lesionActiva'),0);assert.equal(b.run('S.paso'),3);
+});
+test('Las alertas y la revisión de pasos no se mezclan entre lesiones',()=>{
+ const b=app();b.run('cargarCaso(CASOS[0].id,"error")');const alerts=b.run('JSON.stringify(alertas())');
+ b.run('guardarNota("datos","Nota original");agregarLesion("h-2U");irACodigo("2U2A1");irPaso(6);guardarNota("datos","Implante cubito");irPaso(2);pick("tipo","t-2U2B")');
+ assert.equal(b.run('S.revisar[6]'),true);b.run('seleccionarLesion(0)');
+ assert.equal(b.run('JSON.stringify(alertas())'),alerts);assert.equal(b.run('!!S.revisar[6]'),false);
+});
+test('Una recarga conserva todas las lesiones y la selección activa',()=>{
+ const b=app();b.run('irACodigo("42B2");guardarNota("datos","Tibia privada");agregarLesion("h-4F");irACodigo("4F2A");guardarNota("datos","Perone privado")');
+ const c=app(b.mem,b.loc.hash);assert.equal(c.run('S.lesiones.length'),2);assert.equal(c.run('S.lesionActiva'),1);
+ assert.equal(c.run('notaPaso(2).datos'),'Perone privado');c.run('seleccionarLesion(0)');assert.equal(c.run('notaPaso(2).datos'),'Tibia privada');
+});
+test('El enlace comparte todas las clasificaciones y ningún texto libre',()=>{
+ const b=app();b.run('irACodigo("2R2A1");guardarContexto("Contexto privado");guardarNota("datos","Nota privada");ladoLesion("izquierdo");agregarLesion("h-2U");irACodigo("2U2B2")');
+ assert.doesNotMatch(decodeURIComponent(b.loc.hash),/privad/);
+ const c=app({},b.loc.hash);assert.equal(c.run('S.lesiones.length'),2);assert.equal(c.run('S.contextoCaso'),'');
+ c.run('seleccionarLesion(0)');assert.equal(c.run('S.lado'),'izquierdo');assert.equal(c.run('tieneNotas(2)'),false);assert.equal(c.run('conContexto(2,codigoCanonico)'),'2R2A1');
+ const injected='#fx='+encodeURIComponent(JSON.stringify({v:2,lesiones:[{porPaso:{2:{hueso:'h-4'}},notas:{2:{datos:'inyectado'}},contextoCaso:'inyectado'}]}));
+ const d=app({},injected);assert.equal(d.run('tieneNotas(2)'),false);
+});
+test('Casos antiguos se migran a una lesión y enlaces malformados no rompen la app',()=>{
+ const b=app({'infi-caso-v1':JSON.stringify({paso:2,porPaso:{2:{hueso:'h-4',segmento:'s-42'}}})});
+ assert.equal(b.run('S.lesiones.length'),1);assert.equal(b.run('S.dec.segmento'),'s-42');
+ for(const hash of ['#fx=%ZZ','#fx=null','#fx='+encodeURIComponent('{"v":2,"lesiones":[null,{},7],"lesionActiva":999}')])assert.doesNotThrow(()=>app({},hash));
+});
+test('Eliminar una lesión conserva las demás y cancelar no borra nada',()=>{
+ const b=app();b.run('irACodigo("42B2");guardarNota("datos","Conservar tibia");agregarLesion("h-4F");irACodigo("4F2A")');
+ const c=app(b.mem,b.loc.hash,false);c.run('eliminarLesion()');assert.equal(c.run('S.lesiones.length'),2);
+ b.run('eliminarLesion()');assert.equal(b.run('S.lesiones.length'),1);assert.equal(b.run('notaPaso(2).datos'),'Conservar tibia');assert.equal(b.run('conContexto(2,codigoCanonico)'),'42B2');
+});
+test('El nuevo caso limpia todas las lesiones y cargar un ejemplo reemplaza el conjunto',()=>{
+ const b=app();b.run('irACodigo("42B2");agregarLesion("h-4F");nuevoCaso()');assert.equal(b.run('S.lesiones.length'),1);assert.equal(b.run('hayCaso()'),false);
+ b.run('agregarLesion("h-4F");cargarCaso(CASOS[0].id,"error")');assert.equal(b.run('S.lesiones.length'),1);
+});
+test('Una lesión vacía activa no oculta los datos guardados en otra',()=>{
+ const b=app();b.run('irACodigo("42B2");agregarLesion()');assert.equal(b.run('hayCaso()'),true);assert.match(b.run('planTexto()'),/42B2/);
+});
+test('Los accesos asociados y la interfaz multilesión se traducen',()=>{
+ const b=app();b.run('irACodigo("2R2A1")');assert.match(b.nodes.lesiones.innerHTML,/Añadir cúbito asociado/);
+ b.run('idioma("en")');assert.match(b.nodes.lesiones.innerHTML,/Add associated ulna/);
+ b.run('agregarLesion("h-2U");verResumen()');assert.match(b.nodes.vistaresumen.innerHTML,/Combined injury plan/);
+});
 console.log('\n'+checks+' pruebas de experiencia correctas.');

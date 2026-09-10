@@ -485,21 +485,22 @@ function aplicarIdioma(){
    abrir hay hash manda el hash (alguien te compartió un caso); si no, se
    recupera lo último que estabas haciendo. */
 function guardar(){
+  sincronizarLesion();
   escribirHash();
   try{ localStorage.setItem(CLAVE, JSON.stringify({porPaso:S.porPaso,paso:S.paso,modo:S.modo,
-    notas:S.notas,pendientes:S.pendientes,revisar:S.revisar,contextoCaso:S.contextoCaso,hashCaso:location.hash}));S.guardado=true;
+    notas:S.notas,pendientes:S.pendientes,revisar:S.revisar,contextoCaso:S.contextoCaso,lesiones:S.lesiones,lesionActiva:S.lesionActiva,lado:S.lado,hashCaso:location.hash}));S.guardado=true;
   }catch(e){S.guardado=false;}
 }
 function restaurar(){
   const delHash=leerHash(),guardado=objetoGuardado(CLAVE);
   // Una recarga de la URL propia conserva notas; un enlace distinto trae solo opciones.
   const propio=delHash&&guardado.hashCaso===location.hash;
-  Object.assign(S,normalizarCaso(delHash&&!propio?delHash:guardado));
+  Object.assign(S,normalizarEpisodio(delHash&&!propio?delHash:guardado));
   S.dec=S.porPaso[S.paso];P=pasoDe(S.paso);
   if(delHash)S.vista='paso';
   return hayCaso();
 }
-function hayCaso(){ return !!S.contextoCaso || DISPONIBLES.some(n=>Object.keys(S.porPaso[n]||{}).length||tieneNotas(n)||Object.values(S.pendientes[n]||{}).some(Boolean)); }
+function hayCaso(){ return !!S.contextoCaso||lesionesDelCaso().some(lesionTieneDatos); }
 
 /* El hash guarda solo lo elegido, en un formato corto y legible:
    #p=3&2=hueso:h-4,segmento:s-42&3=zonas:z-unica,palancas:p-longitud|p-span   */
@@ -512,7 +513,7 @@ function escribirHash(){
       .map(k=>k+':'+(Array.isArray(d[k])?'*'+d[k].join('|'):d[k]));
     if(pares.length) trozos.push(n+'='+pares.join(','));
   }
-  const h = trozos.length? '#p='+S.paso+'&'+trozos.join('&') : '';
+  const h = S.lesiones.length>1||S.lado ? hashLesiones() : trozos.length? '#p='+S.paso+'&'+trozos.join('&') : '';
   if(location.hash===h) return;
   // en file:// algunos navegadores rechazan replaceState
   try{ history.replaceState(null,'',location.pathname+location.search+h); }
@@ -520,6 +521,7 @@ function escribirHash(){
 }
 function leerHash(){
   const h=location.hash.replace(/^#/,''); if(!h) return null;
+  if(h.startsWith('fx='))return leerLesionesHash(h);
   const out={porPaso:{},paso:1};
   for(const parte of h.split('&')){
     const i=parte.indexOf('='); if(i<0) continue;
@@ -1019,7 +1021,7 @@ function render(){
 
   document.getElementById('estudio').classList.toggle('oculto',S.modo!=='estudio');
   document.getElementById('estudio2').classList.toggle('oculto',S.modo!=='estudio');
-  pintarRazonamiento(); pintarEstudio();
+  pintarLesiones(); pintarRazonamiento(); pintarEstudio();
   pintarBarra();
 }
 
@@ -1086,11 +1088,14 @@ function irACodigo(cod){
   const decs={}; for(const d of p2.decisiones) decs[d.id]=d;
   const elige=(id,pred)=>{ const d=decs[id]; if(!d) return null;
     const o=d.opciones.find(pred); if(o){ S.porPaso[2]=S.porPaso[2]||{}; S.porPaso[2][id]=o.id; } return o; };
-  const base=cod.replace(/([A-Z]).*$/,'');            // 42B2.1 → 42
-  const m=cod.match(/([A-Z])([0-9])?(?:\\.([0-9]))?/); // tipo, grupo, subgrupo
-  const segCod=base.replace(/\\.$/,'');
+  cod=String(cod).trim().toUpperCase();
+  // R/U/F son parte del segmento (2R2, 2U2, 4F2), no el tipo de fractura.
+  const segmento=decs.segmento.opciones.filter(o=>o.codigo&&cod.startsWith(o.codigo)&&
+    (cod===o.codigo||/^[ABC]/.test(cod.slice(o.codigo.length)))).sort((a,b)=>b.codigo.length-a.codigo.length)[0];
+  if(!segmento)return;
+  const m=cod.slice(segmento.codigo.length).match(/^([ABC])([0-9])?(?:\\.([0-9]))?/);
   S.porPaso[2]={};
-  const s=elige('segmento',o=>o.codigo===segCod);
+  const s=elige('segmento',o=>o.id===segmento.id);
   if(s&&s.soloSi&&s.soloSi.hueso) S.porPaso[2].hueso=s.soloSi.hueso[0];
   if(m){
     elige('tipo',o=>o.codigo===m[1]&&(!o.soloSi||!o.soloSi.segmento||o.soloSi.segmento.indexOf(s&&s.id)>=0));
@@ -1179,7 +1184,7 @@ function planCompleto(){
       pendientes:[...new Set(e.faltan.concat(e.inciertas).map(d=>d.pregunta))]};
   }));
 }
-function planTexto(){
+function planTextoLesion(){
   const L=[TR('txt_plan_titulo'),
            TR('txt_generado',{fecha:new Date().toLocaleDateString(S.idioma,{day:'numeric',month:'long',year:'numeric'})}),TR('ex_source',{version:VERSION}),TR('ex_plan_note'),''];
   if(S.contextoCaso)L.push(TR('ex_case'),S.contextoCaso,'');
@@ -1237,6 +1242,7 @@ function alertasDe(estado, n){
 function cargarCaso(id, cual){
   const c=CASOS.find(x=>x.id===id); if(!c) return;
   if(hayCaso()&&typeof confirm==='function'&&!confirm(TR('ex_load_confirm')))return;
+  S.lesiones=[];S.lesionActiva=0;S.lado='';
   S.notas={};S.pendientes={};S.revisar={};S.contextoCaso=c.resumen||'';S.modo='consulta';
   const est = cual==='correcto'? c.estadoCorrecto : c.estadoError;
   S.porPaso={}; for(const k in est) S.porPaso[k]=JSON.parse(JSON.stringify(est[k]));
@@ -1296,7 +1302,7 @@ function pintarCaso(){
     '</div>';
 }
 
-function pintarResumen(){
+function pintarResumenLesion(enGrupo=false){
   const bloques=planCompleto();
   const hechos=bloques.filter(b=>b.completo).length;
   let h='<div class="resumen"><h1>'+esc(TR('plan_h1'))+'</h1>'+
@@ -1304,8 +1310,9 @@ function pintarResumen(){
     '<div class="racc"><button class="pri" id="bcopiar" onclick="copiarPlan()">'+esc(TR('b_copiar'))+'</button>'+
     '<button onclick="window.print()">'+esc(TR('b_imprimir'))+'</button>'+
     '<button onclick="verPaso()">Volver al Paso '+S.paso+'</button></div>';
+  if(enGrupo)h='<div class="resumen">';
   h+='<p class="ex-muted">'+esc(TR('ex_plan_note'))+'</p><p class="ex-reference">'+esc(TR('ex_source',{version:VERSION}))+'</p>'+
-    '<div class="ex-row"><button class="ex-button" onclick="copiarEnlace()">'+esc(TR('ex_share'))+'</button><span id="share-status" role="status"></span></div><p class="ex-muted">'+esc(TR('ex_share_note'))+'</p>';
+    (enGrupo?'':'<div class="ex-row"><button class="ex-button" onclick="copiarEnlace()">'+esc(TR('ex_share'))+'</button><span id="share-status" role="status"></span></div><p class="ex-muted">'+esc(TR('ex_share_note'))+'</p>');
   if(S.contextoCaso)h+='<h2>'+esc(TR('ex_case'))+'</h2><p class="ex-note">'+esc(S.contextoCaso)+'</p>';
   if(!bloques.some(b=>b.tocado)) h+='<p class="vacio" style="margin-top:20px">'+esc(TR('plan_vacio'))+'</p>';
   for(const b of bloques){
@@ -1317,7 +1324,7 @@ function pintarResumen(){
     for(const a of b.crit) h+='<div class="alerta a-'+a.severidad+'"><b>'+esc(a.titulo)+'</b><p>'+esc(a.texto)+'</p></div>';
     h+='<p class="ex-status">'+esc(etiquetaEstado(b.estado))+'</p>'+notasResumen(b.n);
     if(b.pendientes.length)h+='<h4>'+esc(TR('ex_pending_questions'))+'</h4><p class="ex-note">'+b.pendientes.map(esc).join(' · ')+'</p>';
-    h+='<button class="ex-button" onclick="irPaso('+b.n+')">'+esc(TR('ex_edit',{n:b.n}))+'</button></div>';
+    h+='<button class="ex-button" onclick="editarLesionPaso('+S.lesionActiva+','+b.n+')">'+esc(TR('ex_edit',{n:b.n}))+'</button></div>';
   }
   const faltan=bloques.filter(b=>!b.completo).map(b=>b.n);
   if(faltan.length) h+='<p class="vacio">'+esc(faltan.length===1
@@ -1659,6 +1666,7 @@ def main():
 
   <div id="estudio" class="oculto"><section id="objetivos"></section></div>
 
+  <div id="lesiones"></div>
   <div id="razonamiento"></div>
   <div id="principio"></div>
   <div id="decs"></div>
@@ -1704,7 +1712,7 @@ def main():
 </div>
 
 <script>const DATA={data};</script>
-<script>{JS.replace("/*__EXPERIENCIA__*/", (RAIZ / "tools" / "experiencia.js").read_text(encoding="utf-8"))}</script>
+<script>{JS.replace("/*__EXPERIENCIA__*/", (RAIZ / "tools" / "experiencia.js").read_text(encoding="utf-8") + (RAIZ / "tools" / "lesiones.js").read_text(encoding="utf-8"))}</script>
 </body>
 </html>
 """

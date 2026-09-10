@@ -49,7 +49,7 @@ node tools/probar_sw.js
 node tools/probar_experiencia.js
 ```
 
-`probar_experiencia.js` contiene 18 pruebas de regresión de recuperación, cancelación, incertidumbre, revisión, búsqueda, idioma, persistencia e historial. Evalúa el JavaScript generado y los manejadores de interacción. Estas son pruebas automáticas con DOM simulado; no sustituyen una revisión visual en dispositivos reales.
+`probar_experiencia.js` contiene 28 pruebas de regresión de recuperación, cancelación, incertidumbre, revisión, búsqueda, idioma, persistencia e historial. Evalúa el JavaScript generado y los manejadores de interacción. Estas son pruebas automáticas con DOM simulado; no sustituyen una revisión visual en dispositivos reales.
 
 ## Alcance y siguiente iteración
 
@@ -57,10 +57,22 @@ node tools/probar_experiencia.js
 2. **Casos progresivos:** redactar y revisar casos que revelen información por etapas. Requiere definir qué datos y respuestas se aceptan en cada etapa. Esta entrega no convierte las respuestas originales en nuevas reglas clínicas.
 3. **Imágenes interactivas:** reutilizar imágenes revisadas y autorizadas con anotaciones e identificación de hallazgos. Las imágenes originales permanecen disponibles; no se agregan radiografías ficticias ni nuevas anotaciones médicas.
 4. **Evaluación del razonamiento:** añadir explicaciones por distractor y admitir alternativas justificadas mediante una rúbrica revisada por el autor. La entrega reutiliza la explicación global existente de cada pregunta.
-5. **Repetición espaciada y varios casos:** añadir una agenda de repaso y un archivo de casos educativos. Actualmente se guarda un caso activo, notas y el historial de aprendizaje en el navegador.
+5. **Repetición espaciada y varios casos:** añadir una agenda de repaso y un archivo de casos educativos. Actualmente se guarda un caso activo con varias lesiones, sus notas y el historial de aprendizaje en el navegador.
 6. **Alcance docente:** preparar un caso de demostración para clases, enlaces o QR hacia contenidos revisados y una guía para profesores. Los enlaces actuales comparten selecciones, no imágenes ni notas.
 7. **Páginas públicas por tema:** crear páginas ES/EN con URL propia, contenido revisado y enlaces internos. El sitemap actual describe solo la portada; no representa cada paso como una página independiente.
 8. **Sincronización:** decidir si se necesitan cuentas y acceso entre dispositivos antes de incorporar un servicio de datos. El almacenamiento actual puede borrarse al limpiar el navegador y no ofrece copia remota.
 9. **Uso sin conexión:** se conserva el mecanismo existente. Las imágenes se guardan al consultarlas; no se promete que toda la biblioteca visual esté descargada desde la primera visita.
 
 La propuesta se entrega como cambios revisables en GitHub. La web de Vercel se actualizará cuando estos cambios se integren en la rama conectada a su despliegue.
+
+
+## Corrección: varias fracturas en el mismo caso
+
+- El panel **Lesiones de este caso**, visible durante el recorrido de los pasos, permite añadir fracturas y cambiar la lesión activa.
+- Al clasificar radio, cúbito, tibia o peroné aparece un acceso para añadir su hueso asociado. Solo se preselecciona el hueso: el usuario elige el segmento y el patrón de cada fractura.
+- Cada lesión conserva por separado lado, clasificación, decisiones de los diez pasos, notas y pendientes. El contexto escrito del caso es común. La evaluación inicial también pertenece a cada lesión; no se copian decisiones automáticamente.
+- El plan conjunto reúne las lesiones e incluye enlaces para editar el paso de cada una. Copia e impresión incluyen todas las lesiones; el enlace docente comparte únicamente opciones y lado.
+- Los casos guardados en la versión anterior se recuperan como una sola lesión. Eliminar una lesión pide confirmación y conserva las demás.
+- Las alertas se calculan con el contexto de la lesión activa. Esta entrega no introduce reglas sobre interacciones entre lesiones ni genera una estrategia conjunta automática.
+- Se corrige el buscador para reconocer segmentos con letras (2R2, 2U2, 4F2); antes se cortaban en la primera letra.
+- Diez regresiones nuevas verifican radio/cúbito, tibia/peroné, aislamiento de alertas y notas, restauración, migración, borrado, enlaces docentes y traducción. Son 28 pruebas de experiencia en total.

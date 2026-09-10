@@ -60,3 +60,10 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 @media print{.ex-nav,.ex-journal,.ex-study,.ex-unknown,.ex-button,.ex-live,.skip{display:none}.ex-note{white-space:pre-wrap}.ex-fields{display:block}}
+/* Selector de lesiones del mismo caso. */
+#lesiones{margin:20px 0;padding:16px;background:var(--card);border:1px solid var(--line2);border-radius:12px}
+.fx-lado{font-size:13px;color:var(--ink2)}
+.fx-lado select{font:inherit;background:var(--bg);color:var(--ink);border:1px solid var(--line2);border-radius:7px;padding:8px;min-height:44px}
+.fx-resumen{border-top:2px solid var(--acc);padding-top:16px}
+.fx-resumen>h2{font-size:16px;text-transform:none;color:var(--acc)}
+@media print{#lesiones{display:none}.fx-resumen{break-before:page}.fx-resumen:first-of-type{break-before:auto}}

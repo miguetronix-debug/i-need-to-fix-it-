@@ -16,7 +16,7 @@ No es un árbol de decisión ni un catálogo de técnicas. Es un modelo del razo
 
 ## Experiencia de uso
 
-La portada ofrece **Resolver un caso**, **Estudiar el método** y **Autoevaluarme**. El caso incluye notas de razonamiento y preguntas pendientes, y el mapa distingue las decisiones registradas de los pasos que requieren revisión. El progreso de lectura y examen se conserva en el navegador; no se sincroniza entre dispositivos ni equivale a una evaluación de competencia.
+La portada ofrece **Resolver un caso**, **Estudiar el método** y **Autoevaluarme**. El caso permite registrar varias fracturas —por ejemplo, radio y cúbito o tibia y peroné— con clasificación, lado y plan independientes. Incluye notas de razonamiento y preguntas pendientes, y el mapa distingue las decisiones registradas de los pasos que requieren revisión. El progreso de lectura y examen se conserva en el navegador; no se sincroniza entre dispositivos ni equivale a una evaluación de competencia.
 
 La biblioteca permite buscar conceptos y tablas de los diez pasos. El plan reúne las decisiones y notas para revisar, copiar o imprimir. El enlace docente comparte solo las opciones elegidas.
 

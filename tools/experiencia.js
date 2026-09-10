@@ -97,7 +97,7 @@ function irInicio(){S.vista='inicio';render();window.scrollTo(0,0);}
 function continuarCaso(){S.modo='consulta';irPaso(S.paso);}
 function nuevoCaso(){
   if(hayCaso()&&!confirm(TR('ex_reset_confirm')))return;
-  Object.assign(S,normalizarCaso({}));S.dec=S.porPaso[1];S.resp={};S.caso=null;S.vista='paso';guardar();irPaso(1);
+  Object.assign(S,normalizarEpisodio({}));S.dec=S.porPaso[1];S.resp={};S.caso=null;S.vista='paso';guardar();irPaso(1);
 }
 function iniciarEstudio(){S.modo='estudio';irPaso(S.paso);}
 function mapaPasos(accion){
