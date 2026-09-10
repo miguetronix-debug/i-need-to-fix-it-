@@ -14,6 +14,14 @@ No es un árbol de decisión ni un catálogo de técnicas. Es un modelo del razo
 - **Plan quirúrgico consolidado**, que se copia o se imprime.
 - **94 preguntas de autoevaluación** con puntuación y repaso de lo fallado.
 
+## Experiencia de uso
+
+La portada ofrece **Resolver un caso**, **Estudiar el método** y **Autoevaluarme**. El caso permite registrar varias fracturas —por ejemplo, radio y cúbito o tibia y peroné— con clasificación, lado y plan independientes. Incluye notas de razonamiento y preguntas pendientes, y el mapa distingue las decisiones registradas de los pasos que requieren revisión. El progreso de lectura y examen se conserva en el navegador; no se sincroniza entre dispositivos ni equivale a una evaluación de competencia.
+
+La biblioteca permite buscar conceptos y tablas de los diez pasos. El plan reúne las decisiones y notas para revisar, copiar o imprimir. El enlace docente comparte solo las opciones elegidas.
+
+Detalle de implementación, validación y mejoras siguientes: [MEJORAS_UX.md](MEJORAS_UX.md).
+
 ## Cómo se construye
 
 ```bash
@@ -41,6 +49,7 @@ python3 tools/validar.py          # integridad del contenido: sin errores
 node tools/probar.js              # 60 casos clínicos sobre el motor
 node tools/probar_render.js       # que cada pieza de la interfaz se pinta
 node tools/probar_descripcion.js  # encadenado de las descripciones AO
+node tools/probar_experiencia.js   # notas, recuperación, progreso y recorridos
 ```
 
 `validar.py` audita que ninguna condición apunte a una opción inexistente, que ninguna alerta sea inalcanzable y que los casos por fallo disparen de verdad su error. Nada se da por bueno sin pasar estas cuatro.

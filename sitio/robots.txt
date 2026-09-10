@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://ineedtofixit.vercel.app/sitemap.xml
